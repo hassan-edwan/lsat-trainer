@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { STATUSES, TRAP_TAGS, journalPatterns, toCSV, toMarkdown } from '../lib/journal.js';
-import { typeLabel } from '../lib/taxonomy.js';
+import { CATEGORY_GROUPS, categoriesOf, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { download, today } from '../lib/download.js';
 import QuestionReview from '../components/QuestionReview.jsx';
 
@@ -36,6 +36,7 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
           <strong>{entry.testName}</strong> · {entry.sectionTitle} Q{entry.number}
           <div className="chips">
             {entry.types.map((t) => <span key={t} className="chip">{typeLabel(t)}</span>)}
+            {categoriesOf(entry).filter((c) => !c.startsWith('family:')).map((c) => <span key={c} className="chip cat">{categoryLabel(c)}</span>)}
             {entry.traps.map((t) => <span key={t} className="chip trap">{t}</span>)}
           </div>
         </div>
@@ -80,20 +81,24 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
 }
 
 export default function Journal() {
-  const { journal, saveJournalEntry, deleteJournalEntry } = useStore();
+  const { journal, index, saveJournalEntry, deleteJournalEntry } = useStore();
   const [status, setStatus] = useState('open');
   const [type, setType] = useState('');
   const [trap, setTrap] = useState('');
   const [q, setQ] = useState('');
 
-  const all = useMemo(() => Object.values(journal).sort((a, b) => b.addedAt.localeCompare(a.addedAt)), [journal]);
+  // Entries saved before categories existed get their tags from the library.
+  const all = useMemo(() => Object.values(journal)
+    .map((e) => (e.tags ? e : { ...e, tags: index[e.qid]?.question.tags || [] }))
+    .sort((a, b) => b.addedAt.localeCompare(a.addedAt)), [journal, index]);
   const entries = all.filter((e) =>
     (status === 'all' || (status === 'open' ? e.status !== 'mastered' : e.status === status))
-    && (!type || e.types.includes(type))
+    && (!type || e.types.includes(type) || categoriesOf(e).includes(type))
     && (!trap || e.traps.includes(trap))
     && (!q || `${e.stimulus} ${e.stem} ${e.myReasoning} ${e.tricky} ${e.takeaway} ${e.testName}`.toLowerCase().includes(q.toLowerCase())));
   const patterns = journalPatterns(all.filter((e) => e.status !== 'mastered'));
   const allTypes = [...new Set(all.flatMap((e) => e.types))];
+  const allCats = new Set(all.flatMap((e) => categoriesOf(e)));
 
   return (
     <div className="stack">
@@ -118,10 +123,20 @@ export default function Journal() {
               {STATUSES.map((s) => <option key={s} value={s}>{s}</option>)}
             </select>
           </label>
-          <label>Type
+          <label>Type or category
             <select value={type} onChange={(e) => setType(e.target.value)}>
               <option value="">All types</option>
-              {allTypes.map((t) => <option key={t} value={t}>{typeLabel(t)}</option>)}
+              <optgroup label="Question type">
+                {allTypes.map((t) => <option key={t} value={t}>{typeLabel(t)}</option>)}
+              </optgroup>
+              {CATEGORY_GROUPS.map((g) => {
+                const keys = Object.keys(g.entries).map((id) => `${g.id}:${id}`).filter((k) => allCats.has(k));
+                return keys.length ? (
+                  <optgroup key={g.id} label={g.label}>
+                    {keys.map((k) => <option key={k} value={k}>{categoryLabel(k)}</option>)}
+                  </optgroup>
+                ) : null;
+              })}
             </select>
           </label>
           <label>Trap
@@ -137,10 +152,14 @@ export default function Journal() {
       {all.length > 0 && (patterns.types.length > 0) && (
         <section className="card">
           <h2>Patterns in what you miss</h2>
-          <div className="two-col">
+          <div className="three-col">
             <div>
               <h3>Types</h3>
               {patterns.types.slice(0, 6).map(([t, n]) => <div key={t} className="pattern-row"><span>{typeLabel(t)}</span><span>{n}</span></div>)}
+            </div>
+            <div>
+              <h3>Reasoning &amp; flaw patterns</h3>
+              {patterns.categories.slice(0, 6).map(([c, n]) => <div key={c} className="pattern-row"><span>{categoryLabel(c)}</span><span>{n}</span></div>)}
             </div>
             <div>
               <h3>Traps</h3>

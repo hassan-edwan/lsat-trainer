@@ -1,9 +1,9 @@
 import { Fragment, useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
-import { OUTCOMES, buildDrill, formatMs, outcome, scaledScore, typeStats } from '../lib/analytics.js';
+import { OUTCOMES, buildDrill, categoryStats, formatMs, outcome, scaledScore, typeStats } from '../lib/analytics.js';
 import { makeEntry } from '../lib/journal.js';
-import { typeLabel } from '../lib/taxonomy.js';
+import { CATEGORY_GROUPS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { createDrillSession } from '../lib/session.js';
 import QuestionReview from '../components/QuestionReview.jsx';
 
@@ -23,6 +23,10 @@ export default function Results({ session }) {
 
   const sessionAttempts = attempts.filter((a) => a.sessionId === session.id);
   const byType = Object.values(typeStats(sessionAttempts)).sort((a, b) => a.firstAccuracy - b.firstAccuracy);
+  // Families are already summarized by the type table, so list the other groups.
+  const byCategory = Object.values(categoryStats(sessionAttempts))
+    .filter((c) => !c.type.startsWith('family:'))
+    .sort((a, b) => a.firstAccuracy - b.firstAccuracy || b.n - a.n);
   const shown = rows.filter((row) => filter === 'all' || row.oc === filter || (filter === 'missed' && row.oc !== 'correct'));
 
   const scaled = scaledScore(test, s.firstCorrect);
@@ -99,6 +103,24 @@ export default function Results({ session }) {
           </tbody>
         </table>
       </section>
+
+      {byCategory.length > 0 && (
+        <section className="card">
+          <h2>By category</h2>
+          <table className="table">
+            <thead><tr><th>Category</th><th>Group</th><th>Questions</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th></tr></thead>
+            <tbody>
+              {byCategory.map((c) => (
+                <tr key={c.type}>
+                  <td>{categoryLabel(c.type)}</td>
+                  <td className="muted">{CATEGORY_GROUPS.find((g) => c.type.startsWith(`${g.id}:`))?.label}</td>
+                  <td>{c.n}</td><td>{c.firstCorrect}/{c.n}</td><td>{c.brCorrect}/{c.n}</td><td>{c.wrongTwice || ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
 
       <section className="card">
         <div className="row spread">

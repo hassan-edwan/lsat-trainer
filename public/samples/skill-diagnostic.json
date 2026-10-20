@@ -27,14 +27,15 @@
             "must-be-true"
           ],
           "tags": [
-            "ladder:conditional",
-            "conditional"
+            "ladder:conditional"
           ],
           "difficulty": 1,
           "explanation": "Core move: one conditional plus its contrapositive. The rule is ‘humidity above 85% → telescope closed’; since the telescope was never closed, the contrapositive gives ‘humidity never rose above 85%’ (C). The tempting trap is A, which reverses the rule into ‘closed → humidity above 85%’; it sounds like the same rule, but the telescope could be closed for other reasons (clouds, maintenance), so it does not follow. D is a reversal of a different kind (low humidity guaranteeing access), and B and E bring in matters the rule says nothing about.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -52,14 +53,15 @@
             "must-be-true"
           ],
           "tags": [
-            "ladder:conditional",
-            "conditional"
+            "ladder:conditional"
           ],
           "difficulty": 2,
           "explanation": "Core move: chaining two links and running the chain backward with the contrapositive. Crown fitting → scan → screening; Mira lacks the screening, so she has had no scan at Larchmont, and so she is not scheduled for a crown fitting (E). The most tempting trap is A, which reverses the second link: ‘only on patients who have completed a screening’ makes screening necessary for a scan, not sufficient, so finishing a screening guarantees nothing. C makes the same reversal on the first link, and D overextends the rule to all treatment.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -77,14 +79,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:conditional",
-            "conditional"
+            "ladder:conditional"
           ],
           "difficulty": 3,
           "explanation": "Core move: translating ‘no X without Y’ (built → contract), ‘only if’ (contract → mill/quarry nearby), and ‘unless’ in the answer. The chain gives Elsby → contract → mill or quarry nearby, so the gap is ‘mill or quarry nearby → subsidy’. ‘Not M unless S’ translates to ‘M → S’, which is exactly what A says. The strongest trap is E (and C, which is the same statement in contrapositive dress): both say subsidy → contract, which runs the wrong way and so cannot carry Elsby from its contract to a subsidy. B also reverses the needed link, and D’s ‘some’ is too weak to guarantee anything about Elsby.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -102,14 +104,15 @@
             "must-be-false"
           ],
           "tags": [
-            "ladder:conditional",
-            "conditional"
+            "ladder:conditional"
           ],
           "difficulty": 4,
           "explanation": "Core move: combining a conditional chain with ‘most’, then separating ‘must be false’ from ‘must be true’ and ‘could be true’. Heather → monthly inspection → no summer treatment, and most hives produced heather honey, so most hives were not treated; therefore fewer than half were treated, and D cannot be true. The top trap is B: it is attractive because it is clearly established by the chain, but that makes it must-be-true, the opposite of what the stem asks. A tempts students who reverse the first link (inspected → heather); in fact non-heather hives may also have been inspected, so A could be true, as could C and E.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -127,14 +130,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:conditional",
-            "conditional"
+            "ladder:conditional"
           ],
           "difficulty": 5,
           "explanation": "Core move: a multi-step chain with ‘no…except’, an either/or, and a missing link supplied in contrapositive form. Digitized → cleared → (public domain OR waiver); the Brannoch recording is pre-1960, so no waiver, so it is excluded from digitization only if it is also not in the public domain. B (public domain → not commercial) is the contrapositive of commercial → not public domain, which closes that last gap and makes the argument valid. The most tempting trap is A, which uses the same two terms but in the reverse direction (not public domain → commercial), so it says nothing about whether a commercial recording is in the public domain; C is the near-miss quantifier trap, since ‘some’ commercial recordings lacking public-domain status leaves the Brannoch recording undetermined. The concession about other pre-1960 digitized recordings is consistent with the argument: those are the public-domain ones.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         }
       ]
     },
@@ -160,14 +163,14 @@
             "point-at-issue"
           ],
           "tags": [
-            "ladder:debate",
-            "debate"
+            "ladder:debate"
           ],
           "difficulty": 1,
           "explanation": "Core move: finding the claim one speaker asserts and the other explicitly denies. Ilse concludes the retreat is accelerating; Tobias opens by saying it is not, so D is the point at issue. The tempting trap is A, because the 40-meter figure is the evidence the dialogue turns on, but Tobias never disputes it; he explains it away. B is asserted only by Tobias, and C and E are addressed by neither speaker.",
           "skills": [
             "debate"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -185,13 +188,17 @@
             "flaw"
           ],
           "tags": [
-            "ladder:debate",
-            "debate"
+            "ladder:debate"
           ],
           "difficulty": 2,
           "explanation": "Core move: locating the flaw in the second speaker’s reply rather than in the first speaker’s argument. Gideon shows that circulation can fall without a paywall and concludes that the paywall contributes nothing to the Courier’s decline; a decline having one possible cause does not rule out another, which is B. The tempting trap is A: it is a fair criticism of Renata’s argument, but the stem asks about Gideon’s. C is also Renata’s presumption, D misdescribes Gideon (he accepts the figures), and nothing indicates the Ledger’s size (E).",
           "skills": [
-            "debate"
+            "debate",
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
           ]
         },
         {
@@ -210,14 +217,15 @@
             "point-at-issue"
           ],
           "tags": [
-            "ladder:debate",
-            "debate"
+            "ladder:debate"
           ],
           "difficulty": 3,
           "explanation": "Core move: seeing that the speakers disagree about a premise, not the conclusion. Corwin explicitly endorses Anneliese’s conclusion (‘switching to faster games is the right decision’) while rejecting her premise, so both are committed to E. The tempting traps are claims only one speaker addresses: B is Anneliese’s supporting claim, and Corwin never says whether online players would enjoy faster games (he only disputes how many there are); C is Corwin’s alone. A is the actual point of disagreement, and D is at most an unstated principle behind Anneliese’s reasoning.",
           "skills": [
-            "debate"
-          ]
+            "debate",
+            "plan"
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -235,16 +243,16 @@
             "method"
           ],
           "tags": [
-            "ladder:debate",
-            "debate",
-            "conditional"
+            "ladder:debate"
           ],
           "difficulty": 4,
           "explanation": "Core move: describing how the reply works, abstractly. Vasquez treats a necessary feature of lensing (lensing → symmetry) as if it were sufficient (symmetry → lensing); Okafor grants the conditional but shows that symmetry also occurs without any lens, so the observed feature does not single out lensing (A). The strongest trap is B: Okafor mentions flare stars, but explicitly declines to say Halvren-9 is one, so he offers no rival explanation of this event. C is wrong because he expressly accepts that premise, and D is too strong, since the flare stars undermine the inference without showing the conclusion false.",
           "skills": [
             "debate",
-            "conditional"
-          ]
+            "conditional",
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -262,14 +270,15 @@
             "point-at-issue"
           ],
           "tags": [
-            "ladder:debate",
-            "debate"
+            "ladder:debate"
           ],
           "difficulty": 5,
           "explanation": "Core move: seeing past the headline issue to the narrow sub-claim actually in dispute. Hollis says buses did not reach the valley until 1914; Priya says a regular bus service ran along the valley road by 1910, while the railway (closed 1912) was still running, so they disagree about C. The most tempting trap is A, the headline issue: Hollis denies it, but Priya never commits to it, and in fact she calls the quarry decisive and the passenger income minor. B is accepted by both (Priya: ‘I don’t deny’), while D and E are claims only Priya makes; Hollis says nothing about passenger receipts or fares.",
           "skills": [
-            "debate"
-          ]
+            "debate",
+            "causal"
+          ],
+          "flaws": []
         }
       ]
     },
@@ -299,7 +308,13 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: spotting an ad hominem. The argument rejects Varga's proposal only because of her tastes and a possible financial motive, which says nothing about whether the change would actually benefit the choir, so (C) is correct. The most tempting trap is (D), because treating one person's view as representative is a familiar overgeneralization; but the argument never infers the choir's views from Varga's. It dismisses her views instead. (A) names a consideration that would support the argument's conclusion, so leaving it out is not a flaw.",
-          "skills": []
+          "skills": [
+            "authority",
+            "plan"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ]
         },
         {
           "number": 2,
@@ -321,7 +336,13 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: correlation vs. causation, here in the form of possible reverse causation. The survey shows only that gravel walking and fewer injuries go together. (A) points out that the cause could run the other way: if owners steer injury-prone dogs away from gravel, the same pattern would appear without gravel toughening anything. The most tempting trap is (B), since sampling flaws are common, but 400 owners is a reasonable sample, and a bigger one would not fix the real problem of interpreting the correlation. (E) fails because Osei explicitly limits her recommendation to injury-prone dogs.",
-          "skills": []
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 3,
@@ -339,13 +360,15 @@
             "flaw"
           ],
           "tags": [
-            "ladder:flaw",
-            "conditional"
+            "ladder:flaw"
           ],
           "difficulty": 3,
           "explanation": "Core move: necessary vs. sufficient. The 'only if' premise makes passing the tensile test a requirement for certification, yet Reyes concludes that every bolt that passed was certified. That treats a necessary condition as a sufficient one, as (E) says. The most tempting trap is (A), a sampling-style flaw. It fails because both of Reyes's conclusions concern last month only, so the argument never generalizes beyond the month it sampled. (B) describes something the argument never denies: Reyes claims that every denied bolt came from the older looms, not that no older-loom bolt was certified.",
           "skills": [
             "conditional"
+          ],
+          "flaws": [
+            "necessary-sufficient"
           ]
         },
         {
@@ -368,7 +391,13 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: percentage vs. absolute number, stated abstractly. Agriculture's share rose from 30 to 34 percent, but if the cooperative's total lending shrank enough, 34 percent of the new total could be less money than 30 percent of the old. The argument takes for granted that a larger share means a larger amount, as (B) says. The strongest trap is (A), which plays off the concession; but any farmers who stopped applying are already reflected in the 34 percent figure, so the argument does not need to assume they kept applying. (D) is tempting as a sampling complaint, but the conclusion compares only now with five years ago, so the intervening years do not matter.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "rebuttal"
+          ],
+          "flaws": [
+            "percent-number"
+          ]
         },
         {
           "number": 5,
@@ -390,7 +419,12 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: absence of evidence treated as evidence of absence, in a subtle form. The satellite registers only patches of open water larger than four square meters, so finding none shows only that no large patches existed. The argument concludes that there was no open water at all, though mosquitoes could breed in small pools, which is the gap (D) describes. (A) is the most tempting trap because it names a real-sounding gap in the satellite record, but the argument closes it: water in the basin would persist for weeks, longer than the nine days between passes. (B) is also a real-sounding flaw, but the first premise rules it out, and (C) fails because the conclusion concerns only the northern basin, not the wetland as a whole.",
-          "skills": []
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ]
         }
       ]
     },
@@ -420,7 +454,10 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: find the obvious bridge between premise and conclusion. The prediction links removing the shrubs to less honey, which works only if those shrubs actually supplied nectar the bees used. Negate (B), so that the shrubs supplied none of that nectar, and their removal gives no reason to expect less honey. The tempting trap is (C): it would strengthen the argument, but it is far too strong, since the bees could also use nectar from flower beds or other plants and the prediction would still hold. (E) is not required either, because honey production could fall even if some shrubs were replanted late in the year.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -442,7 +479,11 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: a defender assumption that blocks one way the plan could fail. The conclusion concerns total repair time along that part of the ridge, so if the crew still had to repair the closed old section as often as it does now (the negation of D), adding even slow-eroding new trail would not reduce the total. The tempting trap is (B), which would guarantee that the new section needs no repair but is far stronger than required; the argument needs only that the new section erodes more slowly, as the premise says. (E) is irrelevant because the conclusion concerns erosion repair on this section, not erosion's rank among the crew's problems.",
-          "skills": []
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -464,7 +505,11 @@
           ],
           "difficulty": 3,
           "explanation": "Core move: a 'does not completely offset' assumption. The new system saves two fills per batch but adds a weekly flush, so a net reduction requires that the flush not use up or exceed the savings, which is what (A) states. Negate it and switching saves nothing. The most tempting trap is (C), which sounds like a sensible cost comparison but is too strong: the flush happens once a week while savings accrue on every batch, so it could use more water than one rinse and the system would still come out ahead. (D) is likewise unnecessary, since even a somewhat larger single fill could use less than three ordinary ones, and (B) concerns rinse quality, which the argument about water use never relies on.",
-          "skills": []
+          "skills": [
+            "plan",
+            "statistical"
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -486,7 +531,11 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: a minimal 'not nearly all' defender assumption. The gap between 910 surveyed hives and 640 registered ones could be explained by licensed beekeepers who simply neglected to register some hives. The conclusion about unlicensed keepers requires that such hives not account for nearly all of the gap, which (E) states; negate it and the conclusion collapses. (B) is the strongest trap: it would make the argument airtight, but it is too strong, since a few licensed keepers with an unregistered hive or two would leave the conclusion intact. (A) and (C) are also too strong: a few double-counted hives would not undermine the conclusion, and a survey that missed hives would only make the unregistered count larger.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "rebuttal"
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -508,7 +557,13 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: a defender assumption that rules out an alternative the stimulus never raises, namely that the measured loss is partly an artifact of measurement. The argument eliminates the shrimp ponds and concludes that the sea accounts for the bulk of the loss. If differences in how the two sets of images were recorded or classified produced most of the measured decline (the negation of C), most of that 'loss' would not be due to the sea at all. (A) is the most tempting trap: together with the premises it would prove the conclusion, but it is not required, because other factors could exist as long as they are minor. (B) differs from (C) by one quantifier and is too strong, since a small measurement artifact would leave the 'bulk' conclusion untouched, and (D) concerns clearing before 2015, which is irrelevant to a decline measured from 2015 onward.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         }
       ]
     },
@@ -534,14 +589,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:sufficient-assumption",
-            "conditional"
+            "ladder:sufficient-assumption"
           ],
           "difficulty": 1,
           "explanation": "Core move: supply the single missing link in a two-step chain. The premises establish that Felinor passed a two-year safety trial; the conclusion needs 'passed the trial → safe for kittens,' which is exactly (D). The tempting trap is (B), which uses the same two terms but reverses the conditional: knowing that every kitten-safe vaccine passed a trial says nothing about whether a vaccine that passed one is kitten-safe. (E) has the right direction but is too weak, since 'most' leaves room for Felinor to be an exception.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -559,14 +614,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:sufficient-assumption",
-            "conditional"
+            "ladder:sufficient-assumption"
           ],
           "difficulty": 2,
           "explanation": "Core move: link a negated premise to a negated conclusion. The premises give 'rebuild → grant → completed review'; to get 'not rebuilt' from 'no surveyor hired,' we need 'completed review → surveyor hired.' Then no surveyor means no review, no grant, and no bridge, and (B) supplies that link. The tempting trap is (A), which reverses it: a surveyor being enough for a review tells us nothing about what happens without one. (C) restates what the 'only if' premise already establishes, and (D) reverses the grant condition.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -584,14 +639,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:sufficient-assumption",
-            "conditional"
+            "ladder:sufficient-assumption"
           ],
           "difficulty": 3,
           "explanation": "Core move: a conditional whose contrapositive finishes the chain. Lumen Aeternum requires the tenors to rehearse with the accompanist, so by the contrapositive of the second premise it is not sung a cappella. (E) says every chapel piece is sung a cappella, and its contrapositive (any piece not sung a cappella is not performed at the chapel) yields the conclusion. The main competitor is (A), which uses the same terms in the reverse direction: knowing that a cappella pieces will be performed at the chapel says nothing about pieces that are not sung a cappella. (C) only restates what the premises already imply and never mentions the chapel, and (B) is too weak because 'some' organ pieces need not include Lumen Aeternum.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -609,14 +664,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:sufficient-assumption",
-            "conditional"
+            "ladder:sufficient-assumption"
           ],
           "difficulty": 4,
           "explanation": "Core move: a 'no X is Y' link whose contrapositive closes a chain built on 'unless.' Voting shows that Okonkwo holds a share, and a shareholder gets the dividend unless he has a loan in default, so the conclusion needs Okonkwo to have no defaulted loan. (C) supplies this indirectly: no one with a defaulted loan may vote, and Okonkwo voted, so he has no defaulted loan. (E) is the strongest trap, the reversed conditional ('not permitted to vote → default'), which says nothing about members who did vote. (B) is a necessary-but-not-sufficient bridge that already follows from the premises and leaves the default question open, and (D) fails because Okonkwo may hold only one share.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -634,14 +689,14 @@
             "sufficient-assumption"
           ],
           "tags": [
-            "ladder:sufficient-assumption",
-            "conditional"
+            "ladder:sufficient-assumption"
           ],
           "difficulty": 5,
           "explanation": "Core move: a 'no X is Y' statement that, through an 'unless' premise, completes a chain to a conclusion stated first. The premises say that any Ilmar translation this year whose translator lacks a certificate in the source language was made from a relay text, and relay translations are ineligible. So the conclusion follows if no Vessk-certified translator did any of Ilmar's Vessk poetry, as (A) says. (B) is the near-miss: it differs by one quantifier, and 'most' leaves room for some Vessk poetry by certified translators, which could be eligible. (C) is tempting because it reads 'unless' as a biconditional and echoes the concession, but even if certified translators always work directly from the source, nothing yet shows that none of the Vessk poetry was done by one. (D) reverses the eligibility rule, and (E) merely restates the premise about uncertified translators.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         }
       ]
     },
@@ -671,7 +726,12 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: find the choice that directly supports the causal conclusion by showing the same cause produces the same effect elsewhere. C does exactly that: repeated cases in which permeable paving was followed by similar drops in storm peaks make it more likely that the paving, not chance, explains Pell's drop. The tempting trap is B, which also mentions other towns, but it tells us only that the installer was busy, not what happened to any creek. E is the wrong-direction trap: gentler storms are an alternative explanation for lower peaks, so it weakens the argument.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 2,
@@ -693,7 +753,12 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: strengthen a before-and-after causal claim by ruling out an alternative cause. A shows the whole early-reader market did not grow, so the 30 percent rise cannot be explained by a general boom and is more plausibly due to Fernhollow's change. The most tempting trap is D, because it is about the redesign's features, but the conclusion is about appeal to buyers, not about whether the illustrations teach reading well; a disagreement among specialists bears on neither. B is a weakener, offering advertising as a rival cause.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 3,
@@ -715,7 +780,14 @@
           ],
           "difficulty": 3,
           "explanation": "Core move: strengthen by confirming that the samples being compared are comparable, so the change in the numbers reflects a change in the birds rather than in the sampling. E rules out the possibility that moved nets or shifted dates caught a different mix of ages this year than a decade ago. The tempting trap is A, which is about sampling bias and so feels on point; but a bias that is the same every year affects both figures alike and cannot explain why the share of young birds fell. C mentions a change at the station, but more volunteers banding the same nets would not change the age mix.",
-          "skills": []
+          "skills": [
+            "sampling",
+            "statistical",
+            "comparison"
+          ],
+          "flaws": [
+            "sampling"
+          ]
         },
         {
           "number": 4,
@@ -737,7 +809,13 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: strengthen by supplying the mechanism that links the specific feature named in the conclusion (the tendon) to the effect. The premises at most show the Corin technique helps; B explains how cutting the tendon would delay walking by about the observed amount, which makes the tendon, rather than some other feature of the technique, the likely cause. The strongest trap is A: it supports the concession about age, which the argument already answered with the under-sixty comparison, so it adds nothing to the conclusion and if anything highlights a confound. D supports a different conclusion (that the technique is better overall), and C offers a rival feature, so it weakens.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 5,
@@ -759,7 +837,14 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: strengthen a comparison by establishing a baseline, an answer that looks like irrelevant history on first read. D shows that when both halves of the city were measured the same way, they looked the same; so the current gap appeared with the change in method, which supports both that the gap is not about sanitation (despite the older buildings) and that eastern numbers would rise under the new method. The main trap is A: it feels like strong support, but it only restates a premise the argument already gives (scheduled inspections understate violations because restaurants prepare), and it says nothing about how large the understatement is relative to the gap. B supports a different conclusion, a policy recommendation the author never makes, and C strengthens the conceded alternative, so it weakens.",
-          "skills": []
+          "skills": [
+            "comparison",
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         }
       ]
     },
@@ -789,7 +874,12 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: weaken a causal conclusion by giving a different cause for the observed effect. If most of the bats died of disease, the presence of carcasses under the turbines no longer shows the blades killed them. The tempting trap is E, because it is about dead bats at wind farms and so feels relevant; but it is consistent with turbines killing bats and, if anything, strengthens the conclusion. A merely supports the premise that bats pass by during migration.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 2,
@@ -811,7 +901,12 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: weaken a before-and-after argument by identifying a simultaneous change that could explain the result. Due-date reminders are an independent reason late returns would fall, so the decline no longer points to the fine policy. The tempting traps are A, which attacks the policy on a ground (revenue) the director never claims anything about, and C, which tries to cast doubt on the 15 percent figure, a premise we must accept as given. B actually strengthens the director's proposed mechanism.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 3,
@@ -833,7 +928,13 @@
           ],
           "difficulty": 3,
           "explanation": "Core move: weaken a correlation-to-causation leap by showing the supposed cause is a marker for a hidden factor. If cars with records are simply better cars, the 12 percent premium reflects condition, and a seller who merely gathers paperwork for an ordinary car would not capture it. The most tempting trap is D, which attacks whether assembling records is worthwhile, a claim the analysts never make; their claim is only about the price increase. B is tempting as a representativeness worry, but a different price level across venues says nothing about the size of the percentage premium, and C strengthens.",
-          "skills": []
+          "skills": [
+            "causal",
+            "statistical"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 4,
@@ -855,7 +956,13 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: weaken by separating the factor the conclusion credits (breeding) from another feature of the same treatment (tank conditioning). The data show nursery corals survived better, but E supplies a non-genetic reason they would, so the result no longer shows the breeding program produced more heat-resistant corals. Two traps are strong: B attacks a claim the biologists never make (that the corals are better overall), and C tries to weaken the survival data, which are given as premises; besides, a counting difficulty applies to both groups and gives no reason to think the gap is exaggerated. A strengthens by showing the comparison group was typical.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 5,
@@ -877,7 +984,14 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: weaken by undermining the comparison through its base rate. The argument treats the 18-versus-7 gap as the effect of rush tickets, but C shows Marlow's young share was already 16 percent before the program, so nearly all of the gap predates the discount and gives little reason to expect a program to transform Venn's numbers. The sneakiest trap is B, which hinges on a quantifier: if most young Marlow buyers paid full price, the discount would look irrelevant, but some paying full price is fully compatible with the program driving attendance. A strengthens, D attacks the program's finances (a claim never made), and E attacks the board's old belief, which the board has already abandoned.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison",
+            "analogy"
+          ],
+          "flaws": [
+            "causation"
+          ]
         }
       ]
     },
@@ -907,7 +1021,11 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: reconcile two facts by finding the missing variable that links them; here revenue depends on price as well as quantity. D shows that a smaller summer output sells at a much higher price, so summer revenue can exceed winter revenue. The tempting trap is B, which explains higher winter costs, but costs do not affect revenue, and the stimulus already says winter output is highest. C is irrelevant because turbines run on wind, not daylight.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "statistical"
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -929,7 +1047,11 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: find the one fact that connects the two trends, so that the rise in one actually produces the fall in the other. If families who once borrowed medal winners now buy them, the award drives sales up and library checkouts down simultaneously. The tempting trap is A: it explains the jump in bookstore sales but leaves the library decline unexplained. E concerns only a few books and explains neither trend.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -951,7 +1073,12 @@
           ],
           "difficulty": 3,
           "explanation": "Core move: resolve a conflict between a local result and a general finding by showing the local comparison groups differ. If Westmere's early-surgery group is made up of the hardest cases, it can have more complications even though, for any given patient, delay is harmful, so both facts stand. The most tempting trap is A, which explains why delay is generally harmful but does nothing to explain Westmere's reverse pattern. C is tempting because it hints Westmere is different, but hospital size alone gives no reason early surgery would go worse there.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "comparison",
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -973,7 +1100,11 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: choose the answer that explains both facts at once and fits every detail of the stimulus, while traps explain only one side. A explains why coral cover rose (a fast-growing species spread) and why fish diversity fell (that spread destroyed the complex habitat many species need). B is the strongest trap, a natural explanation for fewer fish, but the stimulus already rules it out by noting that untargeted species declined just as steeply. C explains only the coral increase, and D at most weakens the ecologists' expectation without explaining why diversity actually declined.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -995,7 +1126,11 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: in an EXCEPT explain question, eliminate the four choices that resolve the discrepancy and find the one that only seems to. C sounds like an explanation because it is about relative price, but it only shows Halvorsen became even more expensive relative to rivals, which deepens the puzzle of why its sales rose while theirs fell. The most tempting trap is A, which looks odd enough to pick as the EXCEPT, but if patrons read high prices as a signal of quality, the price increase itself could draw buyers, so it does explain. B, D, and E each give patrons a reason to shift from the rivals to Halvorsen, explaining both Halvorsen's gain and the rivals' losses.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": []
         }
       ]
     },
@@ -1025,7 +1160,12 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: an evaluate question asks for the information whose answer would change how strong the argument is, and the obvious candidate is a rival cause. If rainfall was unusually low, drought could explain the drop and the argument weakens; if rainfall was normal, the household-use explanation gains ground. The tempting trap is E, since it concerns the town's growth, but future growth says nothing about what caused this summer's drop. B concerns a possible remedy, not the cause.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 2,
@@ -1047,7 +1187,12 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: test the official's mechanism directly. If inspection scores rose, there is independent evidence that hygiene improved, supporting the argument; if scores stayed flat, the drop in illness likely has some other cause, weakening it. The tempting trap is B, which is about grade posting, but how other cities publish grades says nothing about what happened in Corvel. D is tempting as a possible confound, but a seasonal pattern recurs every year and so cannot explain a year-over-year decline.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 3,
@@ -1069,7 +1214,13 @@
           ],
           "difficulty": 3,
           "explanation": "Core move: profit per car depends on both selling price and cost, so the useful question is the one that tests whether the profit gain came from the customer side at all. If Hartwell's purchase costs fell, the higher profit could have come from cheaper inventory, not higher prices paid by customers, weakening the argument; if costs held steady, the gain must come from what customers paid, supporting it. The tempting trap is A, but the argument concerns profit per car, and total volume does not tell us whether each customer paid more. C concerns staff preferences, not customer behavior.",
-          "skills": []
+          "skills": [
+            "causal",
+            "statistical"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 4,
@@ -1091,7 +1242,13 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: find the question whose two possible answers point in opposite directions on the claimed mechanism. If most new applications came in after 6 p.m., the extended hours plausibly drew new users; if most came in during the old daytime hours, those applicants could have visited before, and the director's explanation weakens. The strongest trap is A, which revisits the concession, but the argument has already set the complex aside as accounting for only a small share, so its residents' habits cannot decide the issue. C sounds relevant because it compares evening and daytime visitors, but borrowing habits say nothing about who newly applied for cards.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 5,
@@ -1113,7 +1270,14 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: the argument controls for age and size but never shows the gap appeared after the turbines arrived, so the key question is the pre-existing base rate. If nearby homes already sold for less before the farm existed, the 4 percent gap reflects something about the location and the argument collapses; if they sold at par, the turbines become the likely cause. The near-miss trap is C, which differs from D only in its time frame: the past three years fall after the farm was built, and the stimulus already answers that question with the 4 percent figure, so knowing it adds nothing. A only cuts one way (complaints would support the conclusion, but their absence would not undermine it, since turbines could depress prices for visual reasons), B bears on the proposed farm rather than this argument, and E is already conceded in the stimulus.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ]
         }
       ]
     },
@@ -1139,14 +1303,15 @@
             "must-be-true"
           ],
           "tags": [
-            "ladder:inference",
-            "conditional"
+            "ladder:inference"
           ],
           "difficulty": 1,
           "explanation": "Core move: combine two facts directly. The bowls used only cooperative glazes, and every cooperative glaze is certified food-safe, so every glaze on the bowls is certified (C). The tempting trap is A, because the stimulus mentions uncertified glazes from other suppliers; but it says only that at least one of them is uncertified, so 'none' is far too strong. B reverses the relationship: all cooperative glazes are certified, but certified glazes could also come from elsewhere, and D overreads 'mainly.'",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -1164,14 +1329,15 @@
             "most-strongly-supported"
           ],
           "tags": [
-            "ladder:inference",
-            "conditional"
+            "ladder:inference"
           ],
           "difficulty": 2,
           "explanation": "Core move: apply a strong-but-not-universal pattern ('nearly every reported case') to a matching instance, which yields a 'probably' conclusion (E). The tempting trap is A: the Brisa appears to meet both listed conditions, but the code states them only as necessary ('only if'), not as sufficient, so nothing establishes entitlement. B turns 'nearly every' into 'any', C invents a link between contracts and peril, and D draws a statistic about all claims from data about one kind of case.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -1189,14 +1355,15 @@
             "must-be-false"
           ],
           "tags": [
-            "ladder:inference",
-            "conditional"
+            "ladder:inference"
           ],
           "difficulty": 3,
           "explanation": "Core move: chain three statements: high risk today, so the expert Corniche is closed today, so it is not groomed today; A therefore cannot be true. The tempting trap is B: if the resort operates today, the Larch Run is groomed and so cannot be closed, but nothing says the resort is operating today, so B could be true. C is allowed by the patrol's discretion, and D and E concern other days, when the risk may not be high.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -1218,7 +1385,14 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: combine three facts (adopters also added a nurse; nurse-only clinics improved just as much; clinics that did neither did not improve) to see that the cause is confounded, which supports only the modest, indirect D. The most tempting trap is E, which reads as the natural lesson of the nurse-only comparison, but it is a confident counterfactual; the data are consistent with the system also cutting waits on its own. A is the same overreach stated generally, which the evidence does not show. C turns the concession into an unsupported comparison, and B brings in cost, which the stimulus never discusses.",
-          "skills": []
+          "skills": [
+            "causal",
+            "fact-set",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ]
         },
         {
           "number": 5,
@@ -1236,14 +1410,15 @@
             "must-be-true"
           ],
           "tags": [
-            "ladder:inference",
-            "conditional"
+            "ladder:inference"
           ],
           "difficulty": 5,
           "explanation": "Core move: 'most + most' within the same group (the string section) guarantees at least one overlap, so some string player is both Wexley-trained and has perfect pitch; the conditional then puts that player in the chamber series, which gives B. The most tempting trap is A, which differs from B by one quantifier: the overlap is guaranteed to be at least one person, not a majority of the perfect-pitch players, and the perfect-pitch players who are not from Wexley might never have performed. C and E could both be false if every Wexley-trained string player has perfect pitch, and if every perfect-pitch string player trained at Wexley. D is unsupported because the number of wind performers is not given.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": []
         }
       ]
     },
@@ -1273,7 +1448,10 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: match the principle's trigger (data collected for a purpose, and that purpose fully served) to its result (delete). In B the address was collected only for delivery and returns, both finished, so deletion follows. The tempting trap is C, which sounds privacy-friendly and concerns using data for its original purpose, but the principle is about how long data is kept, not what it may be used for. A deletes data that is still needed for the open loan, D contradicts the principle, and E goes far beyond it.",
-          "skills": []
+          "skills": [
+            "principle"
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -1295,7 +1473,10 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: find the principle whose conditions match the argument's premises (the rule's goal is appearance, the cheaper material looks the same, the mandated material costs much more) and whose result is the conclusion (don't mandate it). D does exactly that. The tempting trap is C, which shares the topic of cost and tradition, but its condition (equal cost) is not met here, so it cannot produce the conclusion. A points toward the opposite conclusion, and B and E bring in factors the argument never mentions.",
-          "skills": []
+          "skills": [
+            "principle"
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -1313,14 +1494,15 @@
             "principle-apply"
           ],
           "tags": [
-            "ladder:principle",
-            "conditional"
+            "ladder:principle"
           ],
           "difficulty": 3,
           "explanation": "Core move: the guideline gives a sufficient condition for negligence (allowing a client to eat a mushroom the guide did not identify), and E satisfies it exactly; 'regardless of how the mushroom affects the client' makes the harmless outcome irrelevant. The most tempting trap is A, which denies the sufficient condition and concludes no negligence; but the guideline names only one way to be negligent, not the only way, so it is silent on Bram. B reasons backward from a bad outcome to a missing identification, which the guideline never links. C finds negligence on grounds the guideline doesn't address, and D contradicts it.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -1338,14 +1520,15 @@
             "principle-strengthen"
           ],
           "tags": [
-            "ladder:principle",
-            "conditional"
+            "ladder:principle"
           ],
           "difficulty": 4,
           "explanation": "Core move: to justify NOT releasing, the principle must make independent checking a necessary condition for release; the chart fails that condition, so release is ruled out, and A's 'even if' clause also neutralizes the concession. The most tempting trap is B, which uses the right idea backward: it makes independent checking sufficient for release, so it says nothing about an unchecked chart. E is the subtler trap: it states a necessary condition that this revision arguably satisfies (it corrects depth errors), and meeting a necessary condition does not require or forbid release. D concerns how charts are compiled, not whether this one may be released, and C points toward the opposite conclusion.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -1363,14 +1546,15 @@
             "principle-apply"
           ],
           "tags": [
-            "ladder:principle",
-            "conditional"
+            "ladder:principle"
           ],
           "difficulty": 5,
           "explanation": "Core move: 'X must not play unless E1 and E2' means that if either exception condition fails, the musician is barred; if both hold, the rule simply stops requiring a bar and does not grant a right to play. C triggers the exception precisely (a real emergency AND notice before the rehearsal) and draws only the limited conclusion that the rule does not require exclusion. The most tempting trap is E: it describes the same exception-triggering facts but concludes that the rule REQUIRES that Yuki be allowed to play, turning an exception into a guarantee the rule never gives (A makes the same mistake for a musician who attended). B and D each satisfy only one of the two exception conditions (an emergency but late notice; early notice but no emergency), so the rule actually requires barring those musicians.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": []
         }
       ]
     },
@@ -1396,14 +1580,14 @@
             "parallel"
           ],
           "tags": [
-            "ladder:parallel",
-            "conditional"
+            "ladder:parallel"
           ],
           "difficulty": 1,
           "explanation": "Core move: identify the pattern: if A and B, then not C; this case has A and B; so not C. D matches it exactly, including both conditions and the negative result. The most tempting trap is C, which looks similar but concludes after only one of the two required conditions is met (we don't know the Marlow carries cargo). B is a valid argument with a different pattern (it infers backward from a result that did not happen), A infers the condition from the result, and E reasons from 'most' to 'probably' rather than from a conditional.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -1421,13 +1605,15 @@
             "parallel-flaw"
           ],
           "tags": [
-            "ladder:parallel",
-            "conditional"
+            "ladder:parallel"
           ],
           "difficulty": 2,
           "explanation": "Core move: the argument treats a necessary condition ('only if slate or copper') as sufficient, and A makes the same error with the same 'either/or' necessary condition. The most tempting trap is B, which shares the topic and vocabulary, but its flaw is different: it assumes that failing a sufficient condition guarantees failure. C and D are valid uses of 'only if' (C denies the necessary condition; D infers the necessary condition from the outcome). E's error is overstating a 'most' statement, not confusing necessary and sufficient conditions.",
           "skills": [
             "conditional"
+          ],
+          "flaws": [
+            "necessary-sufficient"
           ]
         },
         {
@@ -1446,14 +1632,14 @@
             "parallel"
           ],
           "tags": [
-            "ladder:parallel",
-            "conditional"
+            "ladder:parallel"
           ],
           "difficulty": 3,
           "explanation": "Core move: match a quantified chain: all A are B; no B is C; therefore no A is C (valid). C has the identical structure and quantifiers. The most tempting trap is B, which is also valid and chains in the same direction, but it begins with 'most' and so concludes with 'most,' which is a different pattern. D is a valid all-all chain with a positive conclusion, while A and E are invalid chains that negate the wrong term.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -1471,13 +1657,15 @@
             "parallel-flaw"
           ],
           "tags": [
-            "ladder:parallel",
-            "conditional"
+            "ladder:parallel"
           ],
           "difficulty": 4,
           "explanation": "Core move: the flaw is chaining two 'most' statements (most A are B; most B are C; so most A are C), which fails because the A's that are B may fall among the B's that are not C. E repeats exactly that chain. The strongest trap is B, which is also flawed, but its first premise is 'every' rather than 'most', so it differs by one quantifier and is a different pattern. A (most + most over the same group gives some overlap) and C (most + all gives most) are valid, which makes them attractive to anyone who matches only surface quantifiers, and D's conclusion reverses the terms instead of chaining them.",
           "skills": [
             "conditional"
+          ],
+          "flaws": [
+            "quantifier"
           ]
         },
         {
@@ -1496,13 +1684,15 @@
             "parallel-flaw"
           ],
           "tags": [
-            "ladder:parallel",
-            "conditional"
+            "ladder:parallel"
           ],
           "difficulty": 5,
           "explanation": "Core move: diagram the stimulus as A->B, B->C; C is true; therefore B (an intermediate conclusion that affirms the consequent), therefore A (affirming the consequent again). B reproduces both reversed steps link for link, despite its unrelated topic. The most tempting trap is E, which copies the wording and two-step shape but has one link reversed (the fire-zone premise runs C->B, not B->C), so its first inference is valid and only its second is flawed; that is a different pattern. A, C and D deliberately share the stimulus's data-privacy vocabulary, but A is a valid forward chain, D is a valid contrapositive chain, and C commits a different flaw (denying the antecedent).",
           "skills": [
             "conditional"
+          ],
+          "flaws": [
+            "necessary-sufficient"
           ]
         }
       ]
@@ -1533,7 +1723,10 @@
           ],
           "difficulty": 1,
           "explanation": "Core move: identifying a conclusion stated in the first sentence, with the support following it. Everything after the first sentence gives reasons (speed, no extra training, trial results) for offering the varnish, so B is the conclusion. The tempting trap is C, the most striking piece of evidence; it is tempting because it sounds like a finding, but it is offered to support the recommendation, not drawn from it. A is also a premise, D distorts it, and E is far stronger than anything stated.",
-          "skills": []
+          "skills": [
+            "plan"
+          ],
+          "flaws": []
         },
         {
           "number": 2,
@@ -1555,7 +1748,11 @@
           ],
           "difficulty": 2,
           "explanation": "Core move: finding a conclusion placed mid-paragraph after an opposing view, then classifying a claim relative to it. The main conclusion is the second sentence (the Herald should keep the contract); the claim about the website is one of the reasons offered for it, so D. The tempting trap is B, because the website is first raised by the council members; but their view is that the town no longer needs a paper, and the claim in question is the author’s own point against them. Nothing in the argument supports the claim (ruling out C), and it is a criticism of the website, not a concession (E).",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "plan"
+          ],
+          "flaws": []
         },
         {
           "number": 3,
@@ -1577,7 +1774,11 @@
           ],
           "difficulty": 3,
           "explanation": "Core move: describing an argument whose conclusion follows ‘however’ and rejects a stated opposing view. The author prefers the dust explanation because ash would leave glass shards (absent) and because band spacing matches drought years (fits), which is E. The tempting trap is A: the argument does reject the glaciologists’ view, but it never disputes their evidence (the icefield really is downwind of volcanoes); it argues that other evidence outweighs it. D misstates both the strength (‘cannot’ vs ‘more likely’) and the reasoning, since the absence of shards is positive evidence, not mere lack of proof.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": []
         },
         {
           "number": 4,
@@ -1599,7 +1800,11 @@
           ],
           "difficulty": 4,
           "explanation": "Core move: separating a mid-paragraph main conclusion from an intermediate conclusion that comes last. ‘These coaches have the order of instruction backward’ is the claim everything else supports, and A restates it. The strongest trap is B, the final sentence flagged by ‘therefore’: it is a conclusion, but it is drawn in order to show the coaches’ ordering is wrong, so it is intermediate. C is a premise supporting B, D is a concession, and E is too strong, since the argument objects only to putting openings first.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "causal"
+          ],
+          "flaws": []
         },
         {
           "number": 5,
@@ -1621,7 +1826,11 @@
           ],
           "difficulty": 5,
           "explanation": "Core move: locating a main conclusion stated as a rhetorical question (the extension gives no reason to expect new works) and then classifying a concession. ‘To be sure’ introduces an effect the author grants, and the next sentence neutralizes it: enriching holders of existing titles cannot have induced those titles’ creation, so it is not the predicted spur to new works (C). The most tempting trap is A, which correctly identifies the main conclusion but wrongly treats the concession as support; enriching publishers does nothing to show new works won’t be spurred, which is why the author must answer it. B imputes a motive the argument never discusses, D reverses the relationship (the ‘already exist’ point answers the claim rather than supporting it), and E is wrong because the advocates claim new works will be spurred, not that publishers will be enriched.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "causal"
+          ],
+          "flaws": []
         }
       ]
     },
@@ -1634,27 +1843,32 @@
         {
           "id": "p1",
           "title": "Marrowfield's Four-Day School Week",
-          "text": "Three years ago, the school district in the town of Marrowfield moved from a five-day to a four-day school week. Students now attend Monday through Thursday, and each school day has been lengthened by seventy minutes so that total instructional time is nearly unchanged. The district's main motive was financial: by closing its buildings on Fridays, it expected to save on heating, transportation, and substitute teachers.\n\nBy most measures, the change has worked. The district saved roughly six percent of its operating budget in the first year, and it used much of that money to raise teacher salaries, which had lagged behind those in neighboring districts. Teacher turnover, which had been the highest in the region, fell by nearly half. Test scores have stayed about where they were before the switch, neither rising nor falling noticeably.\n\nThe change has not been costless, however. Families in which every parent works on Fridays have had to find child care for that day, and for lower-income households this expense can consume a large share of the family budget. A town survey found that these families were far less satisfied with the new schedule than other families were. Marrowfield should therefore keep the four-day week but use part of its savings to fund supervised Friday programs at its schools, so that the benefits of the change are not purchased at the expense of the families least able to absorb its costs."
+          "text": "Three years ago, the school district in the town of Marrowfield moved from a five-day to a four-day school week. Students now attend Monday through Thursday, and each school day has been lengthened by seventy minutes so that total instructional time is nearly unchanged. The district's main motive was financial: by closing its buildings on Fridays, it expected to save on heating, transportation, and substitute teachers.\n\nBy most measures, the change has worked. The district saved roughly six percent of its operating budget in the first year, and it used much of that money to raise teacher salaries, which had lagged behind those in neighboring districts. Teacher turnover, which had been the highest in the region, fell by nearly half. Test scores have stayed about where they were before the switch, neither rising nor falling noticeably.\n\nThe change has not been costless, however. Families in which every parent works on Fridays have had to find child care for that day, and for lower-income households this expense can consume a large share of the family budget. A town survey found that these families were far less satisfied with the new schedule than other families were. Marrowfield should therefore keep the four-day week but use part of its savings to fund supervised Friday programs at its schools, so that the benefits of the change are not purchased at the expense of the families least able to absorb its costs.",
+          "subject": "social-science"
         },
         {
           "id": "p2",
           "title": "The Sculptor Ilse Varnholt",
-          "text": "For the first two decades of her career, the sculptor Ilse Varnholt worked almost exclusively in marble. Her pieces from this period—smooth, heavy torsos and slowly folding abstract forms—were carved over many months in a studio outside the port town of Kessling, and collectors prized them for their polish and their permanence. Varnholt herself described the work as an effort to “hold still” forms that seemed to her always on the verge of moving.\n\nIn 1994 a flood swept through her studio, destroying most of her tools and several unfinished pieces. When she resumed working two years later, she had abandoned stone entirely. Her new sculptures were built from unfired river clay and placed outdoors, along the very riverbank that had flooded, where rain and current gradually wore them away. Some lasted a season; a few dissolved within weeks. Varnholt photographed each piece at regular intervals until nothing of it remained.\n\nMost critics treated this shift as a rupture, a renunciation of everything her marble work had stood for. Yet that reading overlooks how much the two bodies of work share. The marble pieces were never really about permanence: their surfaces were carved to suggest motion arrested mid-gesture, and Varnholt left visible chisel marks on many of them as a record of the hours of labor they contained. The clay works simply reverse the direction of the same inquiry. Rather than recording the time that went into making a form, they record the time it takes for a form to be unmade. What changed after the flood was not Varnholt's subject but the role she assigned to time—from something the sculptor spends on the work to something the world spends on it."
+          "text": "For the first two decades of her career, the sculptor Ilse Varnholt worked almost exclusively in marble. Her pieces from this period—smooth, heavy torsos and slowly folding abstract forms—were carved over many months in a studio outside the port town of Kessling, and collectors prized them for their polish and their permanence. Varnholt herself described the work as an effort to “hold still” forms that seemed to her always on the verge of moving.\n\nIn 1994 a flood swept through her studio, destroying most of her tools and several unfinished pieces. When she resumed working two years later, she had abandoned stone entirely. Her new sculptures were built from unfired river clay and placed outdoors, along the very riverbank that had flooded, where rain and current gradually wore them away. Some lasted a season; a few dissolved within weeks. Varnholt photographed each piece at regular intervals until nothing of it remained.\n\nMost critics treated this shift as a rupture, a renunciation of everything her marble work had stood for. Yet that reading overlooks how much the two bodies of work share. The marble pieces were never really about permanence: their surfaces were carved to suggest motion arrested mid-gesture, and Varnholt left visible chisel marks on many of them as a record of the hours of labor they contained. The clay works simply reverse the direction of the same inquiry. Rather than recording the time that went into making a form, they record the time it takes for a form to be unmade. What changed after the flood was not Varnholt's subject but the role she assigned to time—from something the sculptor spends on the work to something the world spends on it.",
+          "subject": "humanities"
         },
         {
           "id": "p3",
           "title": "Legal Rights in Digital Avatars",
-          "text": "As online platforms allow users to build detailed digital avatars—animated figures that may reproduce a user's face, voice, and mannerisms—courts and legislatures have begun to confront a question that existing law did not anticipate: who holds rights in an avatar? Platforms have generally answered through their terms of service, which typically grant the platform a broad license to use, modify, and retain anything users create on it. Under this contractual approach, a user who leaves a platform may find that a replica of her own face continues to appear in its promotional materials.\n\nTwo alternatives have been proposed. The first treats an avatar as property belonging to the user who created it, much as a manuscript belongs to its author. Advocates of this view argue that it would let users transfer, sell, or delete their avatars as they choose. But the property model fits awkwardly with how avatars are actually made. Most avatars are assembled from templates, textures, and animation routines supplied by the platform, so the user's creative contribution is often slight; a property claim grounded in authorship would frequently give the user little or nothing.\n\nThe second alternative extends the right of publicity—the long-standing legal right of individuals to control commercial use of their name and likeness—to cover avatars that resemble their users. This approach does not depend on who authored an avatar's components; it protects the person the avatar depicts. Its proponents note that it would forbid precisely the practice that most troubles users: commercial exploitation of their likenesses after they have left a platform.\n\nThe publicity approach is the more promising of the two, but it has a limit its proponents rarely acknowledge. Many users deliberately build avatars that look nothing like themselves—a dragon, a cartoon fox, an idealized stranger. Such an avatar may carry a user's reputation as surely as a face does, especially in a community where the user has been known for years only by that figure; yet because it does not depict the user's likeness, the right of publicity as traditionally understood would not reach it. Any adequate legal regime will need some way of protecting identities that are built rather than inherited."
+          "text": "As online platforms allow users to build detailed digital avatars—animated figures that may reproduce a user's face, voice, and mannerisms—courts and legislatures have begun to confront a question that existing law did not anticipate: who holds rights in an avatar? Platforms have generally answered through their terms of service, which typically grant the platform a broad license to use, modify, and retain anything users create on it. Under this contractual approach, a user who leaves a platform may find that a replica of her own face continues to appear in its promotional materials.\n\nTwo alternatives have been proposed. The first treats an avatar as property belonging to the user who created it, much as a manuscript belongs to its author. Advocates of this view argue that it would let users transfer, sell, or delete their avatars as they choose. But the property model fits awkwardly with how avatars are actually made. Most avatars are assembled from templates, textures, and animation routines supplied by the platform, so the user's creative contribution is often slight; a property claim grounded in authorship would frequently give the user little or nothing.\n\nThe second alternative extends the right of publicity—the long-standing legal right of individuals to control commercial use of their name and likeness—to cover avatars that resemble their users. This approach does not depend on who authored an avatar's components; it protects the person the avatar depicts. Its proponents note that it would forbid precisely the practice that most troubles users: commercial exploitation of their likenesses after they have left a platform.\n\nThe publicity approach is the more promising of the two, but it has a limit its proponents rarely acknowledge. Many users deliberately build avatars that look nothing like themselves—a dragon, a cartoon fox, an idealized stranger. Such an avatar may carry a user's reputation as surely as a face does, especially in a community where the user has been known for years only by that figure; yet because it does not depict the user's likeness, the right of publicity as traditionally understood would not reach it. Any adequate legal regime will need some way of protecting identities that are built rather than inherited.",
+          "subject": "law"
         },
         {
           "id": "p4",
           "title": "The Color of Lake Teskel",
-          "text": "For most of the twentieth century, Lake Teskel, a small alpine lake fed by the Orvald Glacier, was a pale, milky turquoise. Over the past fifteen years it has turned a deep blue-green. Two research groups have offered competing explanations for the change, and their dispute has become a minor proxy for a larger disagreement about how mountain lakes respond to a warming climate.\n\nThe hydrologist Mara Brandt and her colleagues attribute the change to the retreat of the Orvald Glacier. Glaciers grind bedrock into an extremely fine sediment, often called glacial flour, which meltwater carries into lakes; suspended in the water, these particles scatter light and produce the characteristic milky turquoise of glacier-fed lakes. As the Orvald has shrunk and its meltwater stream has shifted course, Brandt's group reports, the concentration of suspended sediment in Teskel has fallen by more than half. On their account, the lake is simply taking on the color that clear mountain water would have anyway.\n\nThe limnologist Tomas Ehrlund disputes this. Clear water, he notes, would be blue rather than blue-green; the green tint indicates phytoplankton, and his group's samples show chlorophyll concentrations roughly triple their levels of the 1990s. Ehrlund attributes the growth to warmer surface temperatures, which lengthen the season in which algae can multiply. Brandt's group, in reply, points out that the tripled concentrations are still low by the standards of lowland lakes and doubts that they could account for so marked a change in color.\n\nEach side, it seems to me, has been too quick to treat the other's explanation as a rival rather than a partner. Glacial flour does more than tint the water: by scattering and absorbing light near the surface, it limits how deeply sunlight penetrates, and thus how much of the water column can support photosynthesis. A sharp decline in sediment would therefore by itself tend to promote algal growth, warming or no warming. If so, much of the chlorophyll increase Ehrlund documents may be a consequence of the very change Brandt identifies. This does not make warming irrelevant—Ehrlund's seasonal data suggest that it has lengthened the growing season—but it does mean that his chlorophyll measurements cannot, by themselves, establish warming as an independent cause of the change in color.\n\nAdmittedly, neither group has yet measured light penetration in the lake directly, and until someone does, this reconciliation remains a hypothesis rather than a finding. But it has the virtue of explaining both the loss of milkiness and the appearance of green, which neither account, taken alone, manages to do."
+          "text": "For most of the twentieth century, Lake Teskel, a small alpine lake fed by the Orvald Glacier, was a pale, milky turquoise. Over the past fifteen years it has turned a deep blue-green. Two research groups have offered competing explanations for the change, and their dispute has become a minor proxy for a larger disagreement about how mountain lakes respond to a warming climate.\n\nThe hydrologist Mara Brandt and her colleagues attribute the change to the retreat of the Orvald Glacier. Glaciers grind bedrock into an extremely fine sediment, often called glacial flour, which meltwater carries into lakes; suspended in the water, these particles scatter light and produce the characteristic milky turquoise of glacier-fed lakes. As the Orvald has shrunk and its meltwater stream has shifted course, Brandt's group reports, the concentration of suspended sediment in Teskel has fallen by more than half. On their account, the lake is simply taking on the color that clear mountain water would have anyway.\n\nThe limnologist Tomas Ehrlund disputes this. Clear water, he notes, would be blue rather than blue-green; the green tint indicates phytoplankton, and his group's samples show chlorophyll concentrations roughly triple their levels of the 1990s. Ehrlund attributes the growth to warmer surface temperatures, which lengthen the season in which algae can multiply. Brandt's group, in reply, points out that the tripled concentrations are still low by the standards of lowland lakes and doubts that they could account for so marked a change in color.\n\nEach side, it seems to me, has been too quick to treat the other's explanation as a rival rather than a partner. Glacial flour does more than tint the water: by scattering and absorbing light near the surface, it limits how deeply sunlight penetrates, and thus how much of the water column can support photosynthesis. A sharp decline in sediment would therefore by itself tend to promote algal growth, warming or no warming. If so, much of the chlorophyll increase Ehrlund documents may be a consequence of the very change Brandt identifies. This does not make warming irrelevant—Ehrlund's seasonal data suggest that it has lengthened the growing season—but it does mean that his chlorophyll measurements cannot, by themselves, establish warming as an independent cause of the change in color.\n\nAdmittedly, neither group has yet measured light penetration in the lake directly, and until someone does, this reconciliation remains a hypothesis rather than a finding. But it has the virtue of explaining both the loss of milkiness and the appearance of green, which neither account, taken alone, manages to do.",
+          "subject": "natural-science"
         },
         {
           "id": "p5",
           "title": "Counterfactuals as Historical Evidence",
-          "text": "Historians routinely make claims about what would have happened had things gone otherwise: that a treaty, if signed a year earlier, would have averted a war; that a dynasty would have remained secure had a harvest not failed. The philosopher Henrike Lasz has argued that such claims, however useful as rhetoric, can never function as evidence. Evidence, on her view, must be something that could in principle be observed, and a course of events that did not occur is by its nature unobservable. A counterfactual can thus be the conclusion of a historical argument—something one infers—but never a premise that lends support to some further claim.\n\nDefenders of counterfactual history have generally replied by pointing to formal models. The economic historian Dov Arranz, for instance, has estimated what a region's grain output would have been without a particular canal by modeling transport costs, and he treats the resulting figure as evidence of the canal's importance. Lasz's response is that Arranz's figure is only as good as the assumptions built into his model, and that those assumptions have never been tested against any observation of a world without the canal.\n\nLasz is right about this, but less follows from it than she supposes. Every inference from evidence relies on assumptions not tested against the very case at hand: a historian who dates a manuscript by its ink relies on assumptions about how inks age that were established on other documents. That Arranz's assumptions are untested against the counterfactual world is therefore not what distinguishes his figure from ordinary evidence. What does distinguish it is subtler. The ink-dating historian's assumptions were tested on cases in which the outcome they predict was eventually observed; Arranz's model, by contrast, can be calibrated only against the world in which the canal was built.\n\nThis suggests that the dispute has been mislocated. The question is not whether counterfactuals may serve as premises—once adequately supported, any claim may—but whether the support for a given counterfactual ever reaches beyond the single history we have. Where a counterfactual rests on regularities observed across many comparable cases—how harvest failures have affected many dynasties, say—it can carry genuine evidential weight, not because it describes something observed but because the regularity it applies was observed. Where it rests only on a model fitted to the one case under study, it adds nothing that the model's inputs did not already contain, and treating it as independent evidence counts the same information twice.\n\nNone of this vindicates counterfactual history wholesale, and Arranz's canal estimate, as it happens, falls on the wrong side of the line. But Lasz's criterion, which would disqualify every counterfactual alike, cannot distinguish the cases in which historians are genuinely learning something from those in which they are merely restating their assumptions."
+          "text": "Historians routinely make claims about what would have happened had things gone otherwise: that a treaty, if signed a year earlier, would have averted a war; that a dynasty would have remained secure had a harvest not failed. The philosopher Henrike Lasz has argued that such claims, however useful as rhetoric, can never function as evidence. Evidence, on her view, must be something that could in principle be observed, and a course of events that did not occur is by its nature unobservable. A counterfactual can thus be the conclusion of a historical argument—something one infers—but never a premise that lends support to some further claim.\n\nDefenders of counterfactual history have generally replied by pointing to formal models. The economic historian Dov Arranz, for instance, has estimated what a region's grain output would have been without a particular canal by modeling transport costs, and he treats the resulting figure as evidence of the canal's importance. Lasz's response is that Arranz's figure is only as good as the assumptions built into his model, and that those assumptions have never been tested against any observation of a world without the canal.\n\nLasz is right about this, but less follows from it than she supposes. Every inference from evidence relies on assumptions not tested against the very case at hand: a historian who dates a manuscript by its ink relies on assumptions about how inks age that were established on other documents. That Arranz's assumptions are untested against the counterfactual world is therefore not what distinguishes his figure from ordinary evidence. What does distinguish it is subtler. The ink-dating historian's assumptions were tested on cases in which the outcome they predict was eventually observed; Arranz's model, by contrast, can be calibrated only against the world in which the canal was built.\n\nThis suggests that the dispute has been mislocated. The question is not whether counterfactuals may serve as premises—once adequately supported, any claim may—but whether the support for a given counterfactual ever reaches beyond the single history we have. Where a counterfactual rests on regularities observed across many comparable cases—how harvest failures have affected many dynasties, say—it can carry genuine evidential weight, not because it describes something observed but because the regularity it applies was observed. Where it rests only on a model fitted to the one case under study, it adds nothing that the model's inputs did not already contain, and treating it as independent evidence counts the same information twice.\n\nNone of this vindicates counterfactual history wholesale, and Arranz's canal estimate, as it happens, falls on the wrong side of the line. But Lasz's criterion, which would disqualify every counterfactual alike, cannot distinguish the cases in which historians are genuinely learning something from those in which they are merely restating their assumptions.",
+          "subject": "humanities"
         }
       ],
       "questions": [

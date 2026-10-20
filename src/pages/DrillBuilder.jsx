@@ -3,7 +3,7 @@ import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { allocate, buildDrill, shuffle, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
-import { SECTION_KINDS, SKILLS, typeLabel, typesForKind } from '../lib/taxonomy.js';
+import { CATEGORY_GROUPS, SECTION_KINDS, categoriesOf, categoryLabel, typeLabel, typesForKind } from '../lib/taxonomy.js';
 
 const PACES = [
   ['80', 'Test pace (1:20 per question)'],
@@ -17,7 +17,7 @@ export default function DrillBuilder() {
   const [mode, setMode] = useState('smart');
   const [kinds, setKinds] = useState(['LR']);
   const [types, setTypes] = useState([]);
-  const [skills, setSkills] = useState([]);
+  const [cats, setCats] = useState([]);
   const [count, setCount] = useState(10);
   const [pace, setPace] = useState('80');
   const [blindReview, setBlindReview] = useState(true);
@@ -32,11 +32,12 @@ export default function DrillBuilder() {
     [questions, saveFresh, takenTests, minDifficulty],
   );
 
+  // Counts of questions per type and per category, within the chosen sections.
   const typeCounts = useMemo(() => {
     const c = {};
-    pool.forEach((q) => [...q.types, ...(q.tags || [])].forEach((t) => { c[t] = (c[t] || 0) + 1; }));
+    pool.filter((q) => kinds.includes(q.kind)).forEach((q) => [...q.types, ...categoriesOf(q)].forEach((t) => { c[t] = (c[t] || 0) + 1; }));
     return c;
-  }, [pool]);
+  }, [pool, kinds]);
 
   const weakness = useMemo(() => {
     const available = new Set(pool.filter((q) => kinds.includes(q.kind)).flatMap((q) => q.types));
@@ -56,8 +57,8 @@ export default function DrillBuilder() {
         .map(({ question, section, test }) => ({ ...question, kind: section.kind, testId: test.id }))).slice(0, count);
       title = 'Mistake journal retry';
     } else {
-      picked = buildDrill(pool, attempts, journal, { mode, types, skills, kinds, count });
-      title = mode === 'smart' ? 'Smart drill' : `Drill: ${[...skills.map((k) => SKILLS[k]), ...types.map(typeLabel)].join(', ')}`;
+      picked = buildDrill(pool, attempts, journal, { mode, types, categories: cats, kinds, count });
+      title = mode === 'smart' ? 'Smart drill' : `Drill: ${[...cats.map(categoryLabel), ...types.map(typeLabel)].join(', ')}`;
     }
     if (!picked.length) {
       alert('No matching questions. Import more tests or change the filters.');
@@ -68,14 +69,14 @@ export default function DrillBuilder() {
   };
 
   const toggle = (list, setList, v) => setList(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
-  const canStart = mode === 'journal' ? journalOpen.length > 0 : kinds.length > 0 && (mode !== 'types' || types.length > 0 || skills.length > 0);
+  const canStart = mode === 'journal' ? journalOpen.length > 0 : kinds.length > 0 && (mode !== 'types' || types.length > 0 || cats.length > 0);
 
   return (
     <div className="stack">
       <section className="card">
         <h1>Drills</h1>
         <div className="tabs">
-          {[['smart', 'Smart drill'], ['types', 'By question type'], ['journal', 'Retry journal questions']].map(([m, l]) => (
+          {[['smart', 'Smart drill'], ['types', 'By type or category'], ['journal', 'Retry journal questions']].map(([m, l]) => (
             <button key={m} className={mode === m ? 'tab active' : 'tab'} onClick={() => setMode(m)}>{l}</button>
           ))}
         </div>
@@ -106,19 +107,31 @@ export default function DrillBuilder() {
         )}
 
         {mode === 'types' && (
-          <div className="type-grid">
-            <h3>Skills (across question types)</h3>
-            {Object.entries(SKILLS).map(([id, label]) => (
-              <label key={id} className={typeCounts[id] ? '' : 'disabled'}>
-                <input type="checkbox" disabled={!typeCounts[id]} checked={skills.includes(id)} onChange={() => toggle(skills, setSkills, id)} />
-                {label} <span className="muted">({typeCounts[id] || 0})</span>
-              </label>
-            ))}
-          </div>
+          <p className="muted">
+            Pick any mix of question types and categories; a question qualifies if it matches any of them.
+          </p>
         )}
+        {mode === 'types' && CATEGORY_GROUPS.map((g) => {
+          const entries = Object.entries(g.entries).filter(([id]) => typeCounts[`${g.id}:${id}`]);
+          if (!entries.length) return null;
+          return (
+            <div key={g.id} className="type-grid">
+              <h3>{g.label}</h3>
+              {entries.map(([id, label]) => {
+                const key = `${g.id}:${id}`;
+                return (
+                  <label key={key}>
+                    <input type="checkbox" checked={cats.includes(key)} onChange={() => toggle(cats, setCats, key)} />
+                    {label} <span className="muted">({typeCounts[key]})</span>
+                  </label>
+                );
+              })}
+            </div>
+          );
+        })}
         {mode === 'types' && kinds.map((k) => (
           <div key={k} className="type-grid">
-            <h3>{SECTION_KINDS[k]}</h3>
+            <h3>{SECTION_KINDS[k]} question types</h3>
             {typesForKind(k).map((t) => (
               <label key={t.id} className={typeCounts[t.id] ? '' : 'disabled'}>
                 <input type="checkbox" disabled={!typeCounts[t.id]} checked={types.includes(t.id)} onChange={() => toggle(types, setTypes, t.id)} />

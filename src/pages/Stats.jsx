@@ -1,9 +1,9 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
-import { buildDrill, formatMs, weaknessScores } from '../lib/analytics.js';
+import { buildDrill, categoryStats, formatMs, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
-import { SECTION_KINDS, typeLabel } from '../lib/taxonomy.js';
+import { CATEGORY_GROUPS, SECTION_KINDS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 
 const pct = (x) => `${Math.round(x * 100)}%`;
 
@@ -18,6 +18,19 @@ export default function Stats() {
     const br = list.filter((a) => a.br === a.answer).length;
     return { kind, rows, n: list.length, first, br };
   }), [attempts]);
+
+  const [group, setGroup] = useState('reasoning');
+  const cats = useMemo(() => categoryStats(attempts), [attempts]);
+  // Weakest first; a category needs a few attempts before its rate means much.
+  const weakestCats = Object.values(cats).filter((c) => c.n >= 3).sort((a, b) => a.firstAccuracy - b.firstAccuracy || b.n - a.n).slice(0, 8);
+  const groupRows = Object.values(cats).filter((c) => c.type.startsWith(`${group}:`)).sort((a, b) => a.firstAccuracy - b.firstAccuracy);
+
+  const drillCategory = async (key) => {
+    const picked = buildDrill(questions, attempts, journal, { mode: 'types', categories: [key], kinds: ['LR', 'RC'], count: 10 });
+    if (!picked.length) { alert('No questions in this category in your library.'); return; }
+    const s = await saveSession(createDrillSession(picked, { title: `Drill: ${categoryLabel(key)}` }));
+    navigate(`/session/${s.id}`);
+  };
 
   const drillType = async (type, kind) => {
     const picked = buildDrill(questions, attempts, journal, { mode: 'types', types: [type], kinds: [kind], count: 10 });
@@ -65,6 +78,55 @@ export default function Stats() {
           <div className="legend"><span className="key first" /> Timed <span className="key br" /> Blind review</div>
         </section>
       )}
+
+      {weakestCats.length > 0 && (
+        <section className="card">
+          <h2>Weakest categories</h2>
+          <p className="muted">Across question families, reasoning types, flaw patterns, and RC subjects, ranked by timed accuracy (categories with at least 3 attempts).</p>
+          <table className="table">
+            <thead><tr><th>Category</th><th>Group</th><th>Attempts</th><th>Timed</th><th>Blind review</th><th /></tr></thead>
+            <tbody>
+              {weakestCats.map((c) => (
+                <tr key={c.type}>
+                  <td>{categoryLabel(c.type)}</td>
+                  <td className="muted">{CATEGORY_GROUPS.find((g) => c.type.startsWith(`${g.id}:`))?.label}</td>
+                  <td>{c.n}</td>
+                  <td><div className="acc"><div className="bar"><div style={{ width: pct(c.firstAccuracy) }} /></div>{pct(c.firstAccuracy)}</div></td>
+                  <td>{pct(c.brAccuracy)}</td>
+                  <td className="right"><button className="small" onClick={() => drillCategory(c.type)}>Drill 10</button></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+
+      <section className="card">
+        <h2>By category</h2>
+        <div className="tabs">
+          {CATEGORY_GROUPS.map((g) => (
+            <button key={g.id} className={group === g.id ? 'tab active' : 'tab'} onClick={() => setGroup(g.id)}>{g.label}</button>
+          ))}
+        </div>
+        {groupRows.length === 0 ? <p className="muted">No attempts in this group yet.</p> : (
+          <table className="table">
+            <thead><tr><th>Category</th><th>Attempts</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th><th>Avg time</th><th /></tr></thead>
+            <tbody>
+              {groupRows.map((c) => (
+                <tr key={c.type}>
+                  <td>{categoryLabel(c.type)}</td>
+                  <td>{c.n}</td>
+                  <td><div className="acc"><div className="bar"><div style={{ width: pct(c.firstAccuracy) }} /></div>{pct(c.firstAccuracy)}</div></td>
+                  <td>{pct(c.brAccuracy)}</td>
+                  <td>{c.wrongTwice || ''}</td>
+                  <td>{formatMs(c.avgTimeMs)}</td>
+                  <td className="right"><button className="small" onClick={() => drillCategory(c.type)}>Drill 10</button></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </section>
 
       {byKind.filter((k) => k.rows.length).map((k) => (
         <section className="card" key={k.kind}>

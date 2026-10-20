@@ -119,23 +119,144 @@ export function stemFeatureTags(stem) {
   return tags;
 }
 
-// Skills cut across question types: a Flaw or SA question can both hinge on
-// conditional logic. Tagged on questions as plain tags.
-export const SKILLS = {
-  conditional: 'Conditional reasoning',
-  debate: 'Debate & dialogue',
+// ---------------------------------------------------------------------------
+// Standard categories beyond question type. A question's categories are
+// keys like "family:assumption", "reasoning:causal", "flaw:sampling",
+// "subject:law". Families are derived from the type; the rest are tags
+// (reasoning tags are stored bare, e.g. "conditional", for compatibility).
+
+// LR families as commonly taught (7Sage, LSAT Lab): Assumption, Inference,
+// Structure, Explanation. RC: global, specific, and extended questions.
+export const FAMILIES = {
+  assumption: { label: 'Assumption family', kind: 'LR', types: ['necessary-assumption', 'sufficient-assumption', 'strengthen', 'weaken', 'flaw', 'parallel-flaw', 'evaluate', 'principle-strengthen'] },
+  inference: { label: 'Inference family', kind: 'LR', types: ['must-be-true', 'most-strongly-supported', 'must-be-false', 'principle-apply', 'point-at-issue'] },
+  structure: { label: 'Structure family', kind: 'LR', types: ['main-conclusion', 'role', 'method', 'parallel'] },
+  explanation: { label: 'Explanation (paradox)', kind: 'LR', types: ['explain'] },
+  'rc-global': { label: 'RC global (main point, structure, attitude)', kind: 'RC', types: ['rc-main-point', 'rc-structure', 'rc-author-attitude'] },
+  'rc-specific': { label: 'RC specific (detail, function)', kind: 'RC', types: ['rc-detail', 'rc-function'] },
+  'rc-extended': { label: 'RC extended (inference, analogy, strengthen/weaken)', kind: 'RC', types: ['rc-inference', 'rc-analogy', 'rc-strengthen-weaken', 'rc-comparative'] },
 };
 
+export function familiesOf(types) {
+  return Object.entries(FAMILIES).filter(([, f]) => types.some((t) => f.types.includes(t))).map(([id]) => id);
+}
+
+export const REASONING = {
+  conditional: 'Conditional & formal logic',
+  causal: 'Causal reasoning',
+  statistical: 'Numbers & statistics',
+  sampling: 'Studies, surveys & samples',
+  analogy: 'Analogy',
+  comparison: 'Comparisons',
+  principle: 'Principles & value judgments',
+  plan: 'Plans & proposals',
+  authority: 'Experts, sources & authority',
+  rebuttal: 'Counterarguments & rebuttals',
+  debate: 'Debate & dialogue',
+  'fact-set': 'Fact sets (no argument)',
+};
+// Older name, kept for the diagnostic's skill drills.
+export const SKILLS = REASONING;
+
+export const FLAWS = {
+  causation: 'Correlation vs. causation',
+  'necessary-sufficient': 'Necessary vs. sufficient',
+  sampling: 'Unrepresentative sample',
+  'percent-number': 'Percentages vs. numbers',
+  equivocation: 'Term shift (equivocation)',
+  'part-whole': 'Part vs. whole',
+  'absence-of-evidence': 'Lack of evidence as proof',
+  'ad-hominem': 'Attacks the source',
+  'bad-authority': 'Bad appeal to authority/popularity',
+  circular: 'Circular reasoning',
+  'false-choice': 'False choice',
+  'possibility-certainty': 'Possible treated as certain',
+  'straw-man': 'Straw man',
+  'flawed-analogy': 'Flawed analogy',
+  quantifier: 'Quantifier error (most/some chains)',
+  'scope-shift': 'Conclusion overreaches (scope shift)',
+};
+
+export const SUBJECTS = {
+  law: 'Law',
+  'natural-science': 'Natural science',
+  'social-science': 'Social science',
+  humanities: 'Humanities',
+};
+
+export const CATEGORY_GROUPS = [
+  { id: 'family', label: 'Question family', entries: Object.fromEntries(Object.entries(FAMILIES).map(([k, v]) => [k, v.label])) },
+  { id: 'reasoning', label: 'Reasoning type', entries: REASONING },
+  { id: 'flaw', label: 'Flaw pattern', entries: FLAWS },
+  { id: 'subject', label: 'RC passage subject', entries: SUBJECTS },
+];
+
+/** Every category key for a question, e.g. ["family:assumption", "reasoning:causal", "flaw:sampling"]. */
+export function categoriesOf(question) {
+  const out = familiesOf(question.types || []).map((f) => `family:${f}`);
+  for (const t of question.tags || []) {
+    if (REASONING[t]) out.push(`reasoning:${t}`);
+    else if (t.startsWith('flaw:') || t.startsWith('subject:')) out.push(t);
+  }
+  return out;
+}
+
+export function categoryLabel(key) {
+  const [group, id] = key.split(':');
+  return CATEGORY_GROUPS.find((g) => g.id === group)?.entries[id] ?? key;
+}
+
+/** True if the question belongs to the category key. */
+export function inCategory(question, key) {
+  return categoriesOf(question).includes(key);
+}
+
+// ---- detection for imported questions (best effort; files can set tags) ----
 const SPEAKER = /^[A-Z][A-Za-z.' -]{1,40}:\s/;
 const CONDITIONAL_CUES = /\b(if|unless|whenever|without|requires?|necessary|sufficient|all|every|each|none|no|any|only|must|cannot)\b/gi;
+const REASONING_CUES = {
+  causal: /\b(caus\w*|because of|result(s|ed)? in|leads? to|led to|effect|due to|responsible for|contribut\w*)\b/i,
+  statistical: /(%|\bpercent\w*|\b(rate|proportion|average|ratio|per capita)\b)/i,
+  sampling: /\b(survey\w*|poll\w*|respondents|sample\w*|study|studies|experiment\w*|participants)\b/i,
+  principle: /\b(should|ought|morally|ethical\w*|unjust\w*|fair(ness)?|obligat\w*|justified)\b/i,
+  plan: /\b(plan|proposal|proposed|program|policy|in order to)\b/i,
+  rebuttal: /\b(critics|opponents|some (people|argue|claim)|it has been (argued|claimed))\b/i,
+};
 
-/** Guess skill tags from a question's text. */
+/** Guess reasoning tags from a question's text. */
 export function detectSkills(stimulus = '', stem = '', kind = 'LR') {
   if (kind !== 'LR') return [];
+  const text = String(stimulus);
   const skills = [];
-  const paras = String(stimulus).split(/\n\s*\n/).filter((x) => x.trim());
+  const paras = text.split(/\n\s*\n/).filter((x) => x.trim());
   if (paras.length >= 2 && paras.filter((x) => SPEAKER.test(x.trim())).length >= 2) skills.push('debate');
-  const cues = (String(stimulus).match(CONDITIONAL_CUES) || []).length;
-  if (cues >= 4) skills.push('conditional');
+  if ((text.match(CONDITIONAL_CUES) || []).length >= 4) skills.push('conditional');
+  for (const [tag, re] of Object.entries(REASONING_CUES)) if (re.test(text)) skills.push(tag);
   return skills;
+}
+
+const FLAW_CUES = [
+  ['sampling', /representative|typical of|sample|generaliz/i],
+  ['necessary-sufficient', /necessary|sufficient|required for|ensure|guarantee/i],
+  ['percent-number', /percentage|proportion|number of|total|rate/i],
+  ['causation', /caus|correlat|coinciden/i],
+  ['equivocation', /different sense|two different|ambiguous|shifts? (the )?meaning|same term/i],
+  ['part-whole', /as a whole|each (of the )?(part|member)|group as|individual members/i],
+  ['absence-of-evidence', /not been (shown|proven|established)|lack of evidence|no evidence|absence of/i],
+  ['ad-hominem', /character|motives|source of|person (who|making)|rather than (the|its) (argument|reasoning)/i],
+  ['bad-authority', /authority|expert|popular|most people believe/i],
+  ['circular', /presuppos|assumes what|restates|circular/i],
+  ['false-choice', /only (two|alternatives|options)|mutually exclusive|other alternatives/i],
+  ['possibility-certainty', /could|possib|might|will (definitely|certainly)/i],
+  ['straw-man', /distort|misrepresent|position .* (not|never) (held|taken)/i],
+  ['flawed-analogy', /analog|relevantly (similar|different)|comparison between/i],
+  ['quantifier', /\bmost\b.*\bmost\b|\bsome\b.*\ball\b/i],
+];
+
+/** Guess the flaw pattern of a Flaw / Parallel Flaw question from its correct answer. */
+export function detectFlaws(question) {
+  if (!(question.types || []).some((t) => t === 'flaw' || t === 'parallel-flaw')) return [];
+  const correct = question.choices?.['ABCDE'.indexOf(question.answer)] || '';
+  const hit = FLAW_CUES.find(([, re]) => re.test(correct));
+  return hit ? [hit[0]] : [];
 }

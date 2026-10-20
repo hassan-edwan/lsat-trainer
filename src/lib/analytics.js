@@ -1,7 +1,7 @@
 // Scoring, per-type statistics, weakness scoring, and drill selection.
 // Everything here is pure so it can be unit-tested without a browser.
 
-import { QUESTION_TYPES } from './taxonomy.js';
+import { QUESTION_TYPES, inCategory } from './taxonomy.js';
 
 export const OUTCOMES = {
   'correct': { label: 'Correct', short: '✓' },
@@ -34,11 +34,20 @@ function recencyWeight(at, now) {
  * attempts: [{ qid, types, kind, first, br, answer, timeMs, at }]
  */
 export function typeStats(attempts, now = Date.now()) {
+  return statsBy(attempts, (a) => a.types || [], now);
+}
+
+/** Same as typeStats, keyed by category ("reasoning:causal", ...); attempts need `categories`. */
+export function categoryStats(attempts, now = Date.now()) {
+  return statsBy(attempts, (a) => a.categories || [], now);
+}
+
+function statsBy(attempts, keysOf, now) {
   const stats = {};
   for (const a of attempts) {
     const oc = outcome(a.first, a.br, a.answer);
     const w = recencyWeight(a.at, now);
-    for (const t of a.types || []) {
+    for (const t of keysOf(a)) {
       const s = (stats[t] ||= {
         type: t, n: 0, firstCorrect: 0, brCorrect: 0, wrongTwice: 0, timeMs: 0, timed: 0,
         wN: 0, wFirstWrong: 0, wWrongTwice: 0,
@@ -138,7 +147,7 @@ export function prioritize(questions, { attemptsByQid = {}, journal = {}, rng = 
  * opts.mode: 'types' (use opts.types) or 'smart' (weakness-weighted)
  */
 export function buildDrill(questions, attempts, journal, opts) {
-  const { mode = 'smart', types = [], skills = [], kinds = ['LR'], count = 10, difficulty = null, rng = Math.random } = opts;
+  const { mode = 'smart', types = [], skills = [], categories = [], kinds = ['LR'], count = 10, difficulty = null, rng = Math.random } = opts;
   const attemptsByQid = groupBy(attempts, (a) => a.qid);
   const pool = questions.filter(
     (q) => kinds.includes(q.kind) && (!difficulty || q.difficulty == null || difficulty.includes(q.difficulty)),
@@ -157,7 +166,10 @@ export function buildDrill(questions, attempts, journal, opts) {
   };
 
   if (mode === 'types') {
-    take(pool.filter((q) => q.types.some((t) => types.includes(t)) || (q.tags || []).some((t) => skills.includes(t))), count);
+    const matches = (q) => q.types.some((t) => types.includes(t))
+      || (q.tags || []).some((t) => skills.includes(t))
+      || categories.some((c) => inCategory(q, c));
+    take(pool.filter(matches), count);
   } else {
     const available = new Set(pool.flatMap((q) => q.types));
     const scores = weaknessScores(attempts, { kinds }).filter((r) => available.has(r.type));

@@ -4,6 +4,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { db } from './lib/db.js';
 import { buildIndex, finalizeSession, flatQuestions } from './lib/session.js';
+import { categoriesOf } from './lib/taxonomy.js';
 
 const StoreContext = createContext(null);
 
@@ -36,7 +37,7 @@ export function StoreProvider({ children }) {
   const diagnosticQuestions = useMemo(() => allQuestions.filter((q) => q.purpose === 'diagnostic'), [allQuestions]);
   // Use each question's current tags, so retagging updates past stats too.
   const taggedAttempts = useMemo(
-    () => attempts.map((a) => (index[a.qid] ? { ...a, types: index[a.qid].question.types } : a)),
+    () => attempts.map((a) => (index[a.qid] ? { ...a, types: index[a.qid].question.types, categories: categoriesOf(index[a.qid].question) } : a)),
     [attempts, index],
   );
 

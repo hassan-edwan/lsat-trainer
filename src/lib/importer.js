@@ -4,7 +4,7 @@
 // have the right to use, either as JSON (see docs/FORMAT.md) or as plain
 // text that `parseTestText` converts.
 
-import { QUESTION_TYPES, classifyStem, detectSkills, stemFeatureTags } from './taxonomy.js';
+import { FLAWS, QUESTION_TYPES, SUBJECTS, classifyStem, detectFlaws, detectSkills, stemFeatureTags } from './taxonomy.js';
 
 export const FORMAT_ID = 'lsat-trainer/v1';
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
@@ -43,6 +43,7 @@ export function normalizeTest(raw) {
       id: String(p.id || `p${pi + 1}`),
       title: p.title ? String(p.title) : '',
       text: String(p.text || ''),
+      ...(p.subject ? { subject: String(p.subject) } : {}),
     }));
     const passageIds = new Set(passages.map((p) => p.id));
     if (!Array.isArray(s.questions) || s.questions.length === 0) {
@@ -64,9 +65,13 @@ export function normalizeTest(raw) {
       let types = Array.isArray(q.types) ? q.types.filter((t) => QUESTION_TYPES[t]) : [];
       const autoTagged = types.length === 0;
       if (autoTagged) types = classifyStem(q.stem, kind);
+      const passage = q.passageId != null ? passages.find((p) => p.id === String(q.passageId)) : null;
       const tags = Array.from(new Set([...(q.tags || []), ...stemFeatureTags(q.stem),
-        // An explicit `skills` array (even empty) means a person reviewed it; otherwise guess.
-        ...(Array.isArray(q.skills) ? q.skills : detectSkills(q.stimulus, q.stem, kind))]));
+        // An explicit array (even empty) means a person reviewed it; otherwise guess.
+        ...(Array.isArray(q.skills) ? q.skills : detectSkills(q.stimulus, q.stem, kind)),
+        ...(Array.isArray(q.flaws) ? q.flaws : detectFlaws({ types, choices, answer })).filter((f) => FLAWS[f]).map((f) => `flaw:${f}`),
+        ...(passage?.subject && SUBJECTS[passage.subject] ? [`subject:${passage.subject}`] : []),
+      ]));
       const difficulty = q.difficulty == null ? null : Math.max(1, Math.min(5, Number(q.difficulty)));
       return {
         id: questionId(id, sectionId, number),

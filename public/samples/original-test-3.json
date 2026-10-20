@@ -28,7 +28,12 @@
           ],
           "difficulty": 2,
           "explanation": "The argument's main point is that the proposal is unlikely to achieve its aim of reducing injuries (B). D is the tempting trap: it appears in the last sentence, but it is an intermediate conclusion offered in support of B. A is a premise, E is a concession, and C is never asserted.",
-          "skills": []
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 2,
@@ -47,7 +52,13 @@
           ],
           "difficulty": 2,
           "explanation": "The argument infers causation simply because the decline followed the redesign, ignoring other changes (different ballot length, voter outreach, a different electorate) that could explain it, so D is correct. E is tempting, but the argument concerns only ballots rejected for improper marking and makes no assumption about other grounds for rejection. A is inaccurate because both elections were in Marrow County.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 3,
@@ -66,7 +77,13 @@
           ],
           "difficulty": 3,
           "explanation": "A directly tests the hypothesized function: removing the hairs speeds water loss, as the hypothesis predicts. C is the main trap: a cooler leaf might lose less water, but C points to a different mechanism (reflecting sunlight) and so offers a rival account of why bluff plants have denser hairs, rather than supporting the humid-air hypothesis. D likewise suggests sun protection as the reason for denser hairs, and B and E do not bear on the hairs' function.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 4,
@@ -86,8 +103,11 @@
           "difficulty": 2,
           "explanation": "Each recalled Halvorsen heater passed the tip-over test and so has a shutoff switch; since no recalled heater had both a switch and an overheat sensor, those recalled heaters must lack an overheat sensor, so E must be true. B is too strong: only the recalled heaters must lack the sensor. A reverses the stated conditional, and C and D go beyond the information given.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 5,
@@ -108,7 +128,9 @@
           "explanation": "Rhee says accommodating already collected data is no test at all, while Lindqvist says explaining previously known observations can be a genuine test, so they disagree about C. A is a point both would likely accept; Lindqvist does not deny that successful novel predictions earn confidence. Neither speaker addresses B, D, or E.",
           "skills": [
             "debate"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -127,7 +149,14 @@
           ],
           "difficulty": 2,
           "explanation": "The researchers claimed only that pale blue surroundings tend to calm people; one agitated painter cannot refute a claim about an average tendency, so A is correct. C is tempting because it names a real weakness of the study, but the arguer's reasoning does not depend on the accuracy of the mood reports; the arguer's error lies in the anecdotal counterexample.",
-          "skills": []
+          "skills": [
+            "sampling",
+            "causal"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "tags": []
         },
         {
           "number": 7,
@@ -146,7 +175,12 @@
           ],
           "difficulty": 3,
           "explanation": "If few juvenile cod are currently caught in trawl nets, letting them pass through would not increase juvenile survival, and the argument collapses; so it requires D. A is attractive but too strong: the regulation could help even if trawling were only one of several causes of the decline. B is also too strong, since the argument needs only that more juveniles survive than before, not that most of those escaping do.",
-          "skills": []
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -165,7 +199,12 @@
           ],
           "difficulty": 3,
           "explanation": "B identifies a feature of the newer buildings that would increase heat transfer enough to outweigh their extra insulation, explaining their higher energy use. C is tempting, but retrofitting some older buildings would at most bring their insulation closer to that of newer ones; it would not explain why the newer buildings use more energy. D only deepens the puzzle, and A and E affect old and new buildings alike.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 9,
@@ -184,7 +223,14 @@
           ],
           "difficulty": 4,
           "explanation": "E weakens the argument by showing the comparison groups were unlike from the start: players prone to injury were steered away from the sleeves, so the sleeve wearers may have missed fewer games simply because they were less injury-prone. A is the main trap but points the wrong way: if wearers had injury records similar to non-wearers before adopting the sleeves, that rules out exactly this selection effect and strengthens the argument. D also strengthens it, since wearers had more exposure to injury yet missed fewer games.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 10,
@@ -203,7 +249,12 @@
           ],
           "difficulty": 4,
           "explanation": "The hiring of additional workers is conceded ('Admittedly') because it could explain the absence of longer lines and so weaken the evidence; the argument then explains why it does not, matching C. D is the trap: the argument never disputes that the workers were hired, only that the hiring accounts for the result. The main conclusion is that the concern is overstated, so A is wrong.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 11,
@@ -223,8 +274,11 @@
           "difficulty": 4,
           "explanation": "The premises chain together to show that Dendra pallida depends on a single fungus and lacks long-dormant seeds, and so is vulnerable to soil disturbance. A, phrased negatively, says any vulnerable species should not be excluded, that is, should be included, which completes the argument. D is the main trap: it makes vulnerability necessary for inclusion, not sufficient, so it does not yield the conclusion. C reverses the needed conditional, B describes plants unlike Dendra pallida, and E merely restates something already derivable.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "principle"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 12,
@@ -243,7 +297,12 @@
           ],
           "difficulty": 3,
           "explanation": "Recall was better whenever the test room matched the learning room, regardless of which room it was, which strongly supports E. A and D compare the rooms themselves, which the results do not address. B is far too strong, and C claims an absence of any effect that the data cannot show.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 13,
@@ -262,7 +321,13 @@
           ],
           "difficulty": 4,
           "explanation": "The premises show at most that the scientific method reliably corrects errors; that is compatible with current theories also being overturned later, so the argument illegitimately concludes they are likely true (B). D is a trap: that inference belongs to the critics, which the philosopher rejects rather than commits. A is wrong because the argument states as a premise that every overturned theory was overturned by the scientific method, and accepting a premise is not a flaw.",
-          "skills": []
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "tags": []
         },
         {
           "number": 14,
@@ -282,8 +347,11 @@
           "difficulty": 4,
           "explanation": "In D the hazard could cause serious injury and cannot reasonably be discovered by consumers, so both conditions are met and the obligation to warn applies. E is the strongest trap: both conditions are met, but the principle requires only a prompt warning, not a recall. C is also tempting, but whether the ladder is still sold is irrelevant; both conditions are met, so a warning was obligatory. In A the hazard is not serious, and in B it is readily discoverable.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 15,
@@ -302,7 +370,14 @@
           ],
           "difficulty": 3,
           "explanation": "If salmon returns rose similarly in nearby rivers that stayed open, some regional factor rather than the closure probably explains the increase; if they did not, the director's conclusion gains support. So C is the most useful to know. B is tempting but concerns only the history of the decline, not what caused the recent increase; A, D, and E are irrelevant to the causal claim.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 16,
@@ -323,7 +398,9 @@
           "explanation": "The original states two necessary conditions for an outcome, shows that the subject meets one but fails the other, and validly concludes the outcome will not occur; A matches this exactly. C looks similar but treats the two conditions as sufficient, so concluding failure from missing one is a flawed denial of a sufficient condition. B and E wrongly infer the outcome from its necessary conditions, and D infers a condition from the outcome.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 17,
@@ -342,7 +419,14 @@
           ],
           "difficulty": 5,
           "explanation": "A deliberate optical design would produce a smooth taper, whereas abrupt shifts at the boundaries between crews' sections are just what section-by-section measurement error would produce, so E strengthens the historian's view. C is the subtlest trap: it looks like confirming evidence about the taper, but a steady, uniform narrowing is the signature of a planned design and therefore weakens the argument. D likewise supports the rival optical-illusion explanation, and A and B also tend to weaken the argument.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 18,
@@ -361,7 +445,12 @@
           ],
           "difficulty": 4,
           "explanation": "The researcher derives a prediction from the colleague's hypothesis (a broader sample would eliminate the effect), tests it, and reports that it failed, which is B. E is the trap: the hypothesis conflicts with the result of the new replication, not with the original finding, which it was designed to explain away. The researcher does not offer a rival explanation of the finding (C) or attack the colleague's qualifications (A).",
-          "skills": []
+          "skills": [
+            "sampling",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 19,
@@ -380,7 +469,14 @@
           ],
           "difficulty": 5,
           "explanation": "If far more ballots in the county were actually signed by someone other than the voter, genuine mismatches rather than outdated signatures would explain the high rejection rate, so the argument requires D. B is too specific: the argument needs only that neighboring counties ask for updates, not how often. E is too strong; the argument does not require that the rate fall below that of neighboring counties.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 20,
@@ -399,7 +495,14 @@
           ],
           "difficulty": 4,
           "explanation": "If half the boats were removed and each boat's catch stayed constant, the halving of the harvest is fully explained by reduced fishing effort, not by fewer lobsters, which severely weakens the argument (C). A is attractive but shows only that something else can cause declines elsewhere; it says nothing about the cause at Brennick Island. B concerns adults, whereas the argument relies on larval survival.",
-          "skills": []
+          "skills": [
+            "causal",
+            "statistical"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 21,
@@ -418,7 +521,11 @@
           ],
           "difficulty": 5,
           "explanation": "The advocate concludes that Kelby should delay release because a credible, untested hazard has not been investigated, despite regulatory compliance; E states exactly that principle. C is the closest trap, but it applies only once overheating has been confirmed, and Kelby has not confirmed anything, which is the advocate's very point. A addresses what regulators should do, not Kelby, and B and D point toward releasing the battery.",
-          "skills": []
+          "skills": [
+            "principle"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 22,
@@ -437,7 +544,12 @@
           ],
           "difficulty": 5,
           "explanation": "Lessia fixes its flower proportions before any bumblebees have emerged, yet the proportions track bumblebee scarcity, so the plants must be responding to some other cue, such as spring conditions; this supports A. D is the main trap: the passage says only that cold, late springs reliably precede bumblebee scarcity, not that they cause it. B is too strong, and C and E are not addressed.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 23,
@@ -458,7 +570,9 @@
           "explanation": "The premises establish that the tower as proposed exceeds six stories and cannot receive a variance (it would eliminate parking), so it could not lawfully be built as proposed; B links that to its not being built as proposed. E is a trap because it is already derivable from the premises and does not connect unlawfulness to what will be built. D is tempting, but the conclusion concerns the plan as proposed, so possible revisions are beside the point. C ignores the parking restriction and, in any case, does not close the gap.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 24,
@@ -479,7 +593,11 @@
           "explanation": "The original chains two 'most' statements (most A are B; most B are C) to conclude that most A are C, which does not follow; D repeats this exact pattern. C is the strongest trap, since it also chains overlapping groups invalidly, but it uses 'some' rather than 'most' and so is less similar. A and E are valid, and B commits a different error about the overlap of two groups.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "tags": []
         },
         {
           "number": 25,
@@ -500,7 +618,11 @@
           "explanation": "The criterion states only a necessary condition ('only if'), but the argument concludes that meeting it makes the hypothesis scientific, treating the necessary condition as sufficient (C). A is tempting, but the conclusion is explicitly limited to what follows 'by that criterion,' so the argument does not assume the criterion is correct. B is irrelevant because falsifiability depends on what could be observed, not on what has been found.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         }
       ]
     },
@@ -513,22 +635,26 @@
         {
           "id": "p1",
           "title": "Output restriction at a seasonal cannery",
-          "text": "For much of the past half century, labor historians have treated the deliberate restriction of output by piece-rate workers as a form of quiet resistance. Workers paid by the unit, the account runs, learned that whenever their earnings rose noticeably, management would lower the rate paid per piece, and so they agreed among themselves to cap production at a level that would not invite a cut. Output restriction was thus understood as a defensive bargain struck against employers, and its prevalence was read as evidence of a solidarity that cut across ethnic and craft divisions within the workforce.\n\nThe historian Tamsin Reyval has challenged this interpretation using the unusually complete payroll ledgers of the Orlen Bay cannery, which processed fish along a northern coast between 1898 and 1931. The ledgers confirm that informal output ceilings were widespread. Yet the cannery’s posted piece rates were almost never reduced during the period, even in years when average earnings climbed sharply. One might reply that workers feared cuts regardless, having heard of them at other plants; a threat need not materialize to shape behavior. But Reyval observes that ceilings at Orlen Bay loosened precisely in the years of unusually heavy runs—the years in which earnings, and so presumably the danger of a cut, were greatest. Workers anxious about rates would have done the reverse.\n\nReyval’s alternative turns on the seasonal character of the work. The cannery operated only while the fish were running, and it laid off its workers as soon as the season’s catch had been processed. Any worker who produced quickly was therefore shortening the period during which she and her coworkers would be paid. Ceilings were most rigid late in the season, when the remaining catch was small, and loosened in heavy-run years, when no amount of speed could exhaust the supply before the season’s natural close. Restriction, on this reading, was less a contest with management over the price of labor than an arrangement among workers to stretch a fixed quantity of work across as many paid days as possible.\n\nReyval does not claim that her findings overturn the older view everywhere; plants with year-round production and a record of rate cuts may well have fostered the defensive restriction earlier historians described. Her more general point is methodological: historians inferred motives from the bare fact of restriction and then read those motives back into the evidence. That point seems to me well taken, though her own account is open to a version of the same objection. Ledgers record what workers did, not why, and the pattern Reyval finds shows that the seasonal motive was operative, not that it was the only one. Her study thus establishes less than she sometimes suggests. It nonetheless establishes something the older consensus never allowed for: that identical conduct can answer to quite different pressures, so that the meaning of a practice cannot be settled until the conditions under which it arose have been reconstructed."
+          "text": "For much of the past half century, labor historians have treated the deliberate restriction of output by piece-rate workers as a form of quiet resistance. Workers paid by the unit, the account runs, learned that whenever their earnings rose noticeably, management would lower the rate paid per piece, and so they agreed among themselves to cap production at a level that would not invite a cut. Output restriction was thus understood as a defensive bargain struck against employers, and its prevalence was read as evidence of a solidarity that cut across ethnic and craft divisions within the workforce.\n\nThe historian Tamsin Reyval has challenged this interpretation using the unusually complete payroll ledgers of the Orlen Bay cannery, which processed fish along a northern coast between 1898 and 1931. The ledgers confirm that informal output ceilings were widespread. Yet the cannery’s posted piece rates were almost never reduced during the period, even in years when average earnings climbed sharply. One might reply that workers feared cuts regardless, having heard of them at other plants; a threat need not materialize to shape behavior. But Reyval observes that ceilings at Orlen Bay loosened precisely in the years of unusually heavy runs—the years in which earnings, and so presumably the danger of a cut, were greatest. Workers anxious about rates would have done the reverse.\n\nReyval’s alternative turns on the seasonal character of the work. The cannery operated only while the fish were running, and it laid off its workers as soon as the season’s catch had been processed. Any worker who produced quickly was therefore shortening the period during which she and her coworkers would be paid. Ceilings were most rigid late in the season, when the remaining catch was small, and loosened in heavy-run years, when no amount of speed could exhaust the supply before the season’s natural close. Restriction, on this reading, was less a contest with management over the price of labor than an arrangement among workers to stretch a fixed quantity of work across as many paid days as possible.\n\nReyval does not claim that her findings overturn the older view everywhere; plants with year-round production and a record of rate cuts may well have fostered the defensive restriction earlier historians described. Her more general point is methodological: historians inferred motives from the bare fact of restriction and then read those motives back into the evidence. That point seems to me well taken, though her own account is open to a version of the same objection. Ledgers record what workers did, not why, and the pattern Reyval finds shows that the seasonal motive was operative, not that it was the only one. Her study thus establishes less than she sometimes suggests. It nonetheless establishes something the older consensus never allowed for: that identical conduct can answer to quite different pressures, so that the meaning of a practice cannot be settled until the conditions under which it arose have been reconstructed.",
+          "subject": "social-science"
         },
         {
           "id": "p2",
           "title": "Early leaf shedding in drought",
-          "text": "Passage A\n\nDuring severe droughts, the pale ridge oak, a deciduous tree of dry upland forests, often drops much of its foliage weeks before the usual autumn leaf fall. Many observers have taken this as a sign of distress, but I believe it is better understood as a defensive strategy. A tree loses water chiefly through its leaves, and as soil moisture declines, the tension in the water columns inside the xylem—the tissue that conducts water upward—increases. Past a certain threshold, air bubbles form in the conducting vessels and block them. Such embolisms in the trunk and major branches are difficult to repair and can kill a tree outright. By shedding leaves, the oak sharply reduces the water it loses, easing the tension on the vessels of its stem.\n\nLeaves, in this view, act as a kind of hydraulic fuse: an inexpensive, replaceable part sacrificed to protect an expensive, irreplaceable one. My colleagues and I monitored two hundred pale ridge oaks through the driest summer of the past decade. Trees that shed more than half their leaves before midsummer had, on average, far fewer blocked vessels in their trunks than trees that retained their foliage, and they were substantially more likely to leaf out normally the following spring. Admittedly, in the most extreme droughts some leaves surely wither and fall because they have failed outright; but a response that is sometimes overwhelmed is not thereby shown to be no response at all.\n\nPassage B\n\nThat drought-stressed trees such as the pale ridge oak drop leaves early is not in dispute; what is disputed is whether shedding is a strategy or a consequence. Leaves typically have narrower margins of hydraulic safety than stems, meaning that their conducting vessels become blocked at lower levels of tension. When we measured water flow in the leaves of pale ridge oaks shortly before they fell, we found that most had already lost the large majority of their conducting capacity. Shedding, then, generally follows hydraulic failure in the leaf rather than preventing it. That the stem benefits from reduced water loss once the leaves are gone is real enough, but a benefit that follows from damage is not evidence that the damage was a design.\n\nI do not doubt that early-shedding trees often look healthier the following spring. But a single year’s survival is not a reliable measure of a trait’s value. A tree that discards its canopy in midsummer forgoes weeks of photosynthesis and must draw on stored carbohydrates to build new leaves. In our long-term plots, oaks that shed early in two or more consecutive drought years showed steadily declining reserves of stored starch, and many died within five years—not from blocked vessels but from what appears to be carbon starvation. Whether early leaf loss helps a tree, therefore, depends on how often drought returns, and as droughts in the region become more frequent, a response that once bought time may increasingly exhaust it."
+          "text": "Passage A\n\nDuring severe droughts, the pale ridge oak, a deciduous tree of dry upland forests, often drops much of its foliage weeks before the usual autumn leaf fall. Many observers have taken this as a sign of distress, but I believe it is better understood as a defensive strategy. A tree loses water chiefly through its leaves, and as soil moisture declines, the tension in the water columns inside the xylem—the tissue that conducts water upward—increases. Past a certain threshold, air bubbles form in the conducting vessels and block them. Such embolisms in the trunk and major branches are difficult to repair and can kill a tree outright. By shedding leaves, the oak sharply reduces the water it loses, easing the tension on the vessels of its stem.\n\nLeaves, in this view, act as a kind of hydraulic fuse: an inexpensive, replaceable part sacrificed to protect an expensive, irreplaceable one. My colleagues and I monitored two hundred pale ridge oaks through the driest summer of the past decade. Trees that shed more than half their leaves before midsummer had, on average, far fewer blocked vessels in their trunks than trees that retained their foliage, and they were substantially more likely to leaf out normally the following spring. Admittedly, in the most extreme droughts some leaves surely wither and fall because they have failed outright; but a response that is sometimes overwhelmed is not thereby shown to be no response at all.\n\nPassage B\n\nThat drought-stressed trees such as the pale ridge oak drop leaves early is not in dispute; what is disputed is whether shedding is a strategy or a consequence. Leaves typically have narrower margins of hydraulic safety than stems, meaning that their conducting vessels become blocked at lower levels of tension. When we measured water flow in the leaves of pale ridge oaks shortly before they fell, we found that most had already lost the large majority of their conducting capacity. Shedding, then, generally follows hydraulic failure in the leaf rather than preventing it. That the stem benefits from reduced water loss once the leaves are gone is real enough, but a benefit that follows from damage is not evidence that the damage was a design.\n\nI do not doubt that early-shedding trees often look healthier the following spring. But a single year’s survival is not a reliable measure of a trait’s value. A tree that discards its canopy in midsummer forgoes weeks of photosynthesis and must draw on stored carbohydrates to build new leaves. In our long-term plots, oaks that shed early in two or more consecutive drought years showed steadily declining reserves of stored starch, and many died within five years—not from blocked vessels but from what appears to be carbon starvation. Whether early leaf loss helps a tree, therefore, depends on how often drought returns, and as droughts in the region become more frequent, a response that once bought time may increasingly exhaust it.",
+          "subject": "natural-science"
         },
         {
           "id": "p3",
           "title": "The shared-shortage rule",
-          "text": "Under the doctrine of prior appropriation, which governs water in much of the arid western United States, the first person to divert water and put it to beneficial use acquires a right senior to those of all later claimants. In a shortage, senior holders take their full allotment before junior holders receive anything. The doctrine’s defenders have long praised its clarity: every user knows exactly where he or she stands in line, and the security of senior rights encourages long-term investment in farms and towns. Its critics reply that the same clarity can be ruinous, since in a dry year a junior user may lose all access to water while a nearby senior user irrigates as usual.\n\nIn 1958 the water authority of the Tessaly River basin attempted a compromise. Under what came to be called the shared-shortage rule, any shortfall in a given year was divided among all rights holders in proportion to their allotments, with a single exception: rights used for household drinking water were exempt from reduction. Priority dates were retained, but they were consulted only to settle disputes over the size of allotments, not to determine who would bear a shortage. The rule’s architects argued that spreading losses would prevent the sudden collapse of junior farms and that the predictability seniors valued would survive, since every user could still calculate any shortfall in advance.\n\nA growing body of commentary now contends that the rule’s effects have been less benign than its architects anticipated. Because no user ever loses all of his or her water, the rule removed the strongest incentive junior users had to invest in storage or conservation: a farmer facing a twenty percent cut can usually absorb it by fallowing a field, while one facing a total cutoff must find another source or go out of business. Meanwhile, senior holders, who under strict priority would have been largely insulated from shortage, found their rights exposed to reduction in every dry year. The uncertainty this introduced made those rights harder to value, and transfers of water to growing municipalities, which depend on reliable valuation, slowed considerably. The result, critics argue, is a basin that uses water much as it did in 1958, though its economy has changed dramatically.\n\nDefenders of the rule reply that these criticisms measure it against a standard it was never meant to meet. The rule was designed to distribute hardship fairly, not to maximize the efficiency of water use, and on its own terms it has largely succeeded: no community in the basin has lost its farms in a single season. This is not a trivial achievement, and nothing in the critics’ case shows that a return to strict priority would be wise. Yet the defenders’ reply concedes more than its proponents may intend. A rule that preserves existing patterns of use by softening every shortage may simply defer the reckoning that strict priority would force, leaving the basin less prepared when a drought arrives that no proportional cut can absorb."
+          "text": "Under the doctrine of prior appropriation, which governs water in much of the arid western United States, the first person to divert water and put it to beneficial use acquires a right senior to those of all later claimants. In a shortage, senior holders take their full allotment before junior holders receive anything. The doctrine’s defenders have long praised its clarity: every user knows exactly where he or she stands in line, and the security of senior rights encourages long-term investment in farms and towns. Its critics reply that the same clarity can be ruinous, since in a dry year a junior user may lose all access to water while a nearby senior user irrigates as usual.\n\nIn 1958 the water authority of the Tessaly River basin attempted a compromise. Under what came to be called the shared-shortage rule, any shortfall in a given year was divided among all rights holders in proportion to their allotments, with a single exception: rights used for household drinking water were exempt from reduction. Priority dates were retained, but they were consulted only to settle disputes over the size of allotments, not to determine who would bear a shortage. The rule’s architects argued that spreading losses would prevent the sudden collapse of junior farms and that the predictability seniors valued would survive, since every user could still calculate any shortfall in advance.\n\nA growing body of commentary now contends that the rule’s effects have been less benign than its architects anticipated. Because no user ever loses all of his or her water, the rule removed the strongest incentive junior users had to invest in storage or conservation: a farmer facing a twenty percent cut can usually absorb it by fallowing a field, while one facing a total cutoff must find another source or go out of business. Meanwhile, senior holders, who under strict priority would have been largely insulated from shortage, found their rights exposed to reduction in every dry year. The uncertainty this introduced made those rights harder to value, and transfers of water to growing municipalities, which depend on reliable valuation, slowed considerably. The result, critics argue, is a basin that uses water much as it did in 1958, though its economy has changed dramatically.\n\nDefenders of the rule reply that these criticisms measure it against a standard it was never meant to meet. The rule was designed to distribute hardship fairly, not to maximize the efficiency of water use, and on its own terms it has largely succeeded: no community in the basin has lost its farms in a single season. This is not a trivial achievement, and nothing in the critics’ case shows that a return to strict priority would be wise. Yet the defenders’ reply concedes more than its proponents may intend. A rule that preserves existing patterns of use by softening every shortage may simply defer the reckoning that strict priority would force, leaving the basin less prepared when a drought arrives that no proportional cut can absorb.",
+          "subject": "law"
         },
         {
           "id": "p4",
           "title": "Reduction and ornament in tonal analysis",
-          "text": "Among the most influential methods for analyzing tonal music is what may broadly be called reductive analysis. The analyst begins with the full musical surface—every note in the score—and proceeds by stages to strip away those notes judged to be embellishments: passing tones, neighbor notes, suspensions, and the like. What remains at each stage is a simpler progression, and at the final stage a skeleton of a few structurally essential pitches and harmonies is said to underlie the entire work. The appeal of the method is considerable. It explains how a long movement can be heard as a coherent whole, and it gives precise content to the intuition that some notes matter more than others.\n\nYet the method rests on a decision it rarely examines: the decision about which notes count as embellishment. In many cases the decision seems obvious; a brief note moving stepwise between two chord tones is almost universally heard as decorative. But in many others it is not, and here analysts typically appeal to the very structure that the reduction is supposed to reveal. A note is classified as ornamental because it does not belong to the underlying progression, and the underlying progression is identified by setting aside the notes classified as ornamental. The circle is not necessarily vicious—interpretation often proceeds by such mutual adjustment—but it means that the skeleton the analyst uncovers is partly a product of the analyst’s prior expectations about what a skeleton should look like.\n\nA further difficulty concerns the status of ornament itself. Reductive analysis treats embellishment as, by definition, inessential: the work would remain recognizably the same work were the ornaments removed. In several performance traditions, however, ornaments were not fixed by the composer but supplied by performers, who varied them from one performance to the next, and listeners in these traditions often judged a performance chiefly by the inventiveness of its ornamentation. For such music, to call ornament inessential is not a neutral analytic observation but a substantive claim about where the music’s value lies—one that the music’s original audiences might well have rejected.\n\nNone of this requires abandoning reduction. The method remains an illuminating way of describing one dimension of tonal coherence. What it requires is a more modest account of what reduction achieves. Rather than revealing the structure of a work, a reduction offers one hearing of it, shaped by choices that could have been made otherwise. Analysts who present their reductions in this way—stating, wherever the classification of a note is contested, why they classified it as they did—would sacrifice some of the method’s apparent authority. They would gain, in exchange, an account of musical structure that acknowledges the listener’s part in making it."
+          "text": "Among the most influential methods for analyzing tonal music is what may broadly be called reductive analysis. The analyst begins with the full musical surface—every note in the score—and proceeds by stages to strip away those notes judged to be embellishments: passing tones, neighbor notes, suspensions, and the like. What remains at each stage is a simpler progression, and at the final stage a skeleton of a few structurally essential pitches and harmonies is said to underlie the entire work. The appeal of the method is considerable. It explains how a long movement can be heard as a coherent whole, and it gives precise content to the intuition that some notes matter more than others.\n\nYet the method rests on a decision it rarely examines: the decision about which notes count as embellishment. In many cases the decision seems obvious; a brief note moving stepwise between two chord tones is almost universally heard as decorative. But in many others it is not, and here analysts typically appeal to the very structure that the reduction is supposed to reveal. A note is classified as ornamental because it does not belong to the underlying progression, and the underlying progression is identified by setting aside the notes classified as ornamental. The circle is not necessarily vicious—interpretation often proceeds by such mutual adjustment—but it means that the skeleton the analyst uncovers is partly a product of the analyst’s prior expectations about what a skeleton should look like.\n\nA further difficulty concerns the status of ornament itself. Reductive analysis treats embellishment as, by definition, inessential: the work would remain recognizably the same work were the ornaments removed. In several performance traditions, however, ornaments were not fixed by the composer but supplied by performers, who varied them from one performance to the next, and listeners in these traditions often judged a performance chiefly by the inventiveness of its ornamentation. For such music, to call ornament inessential is not a neutral analytic observation but a substantive claim about where the music’s value lies—one that the music’s original audiences might well have rejected.\n\nNone of this requires abandoning reduction. The method remains an illuminating way of describing one dimension of tonal coherence. What it requires is a more modest account of what reduction achieves. Rather than revealing the structure of a work, a reduction offers one hearing of it, shaped by choices that could have been made otherwise. Analysts who present their reductions in this way—stating, wherever the classification of a note is contested, why they classified it as they did—would sacrifice some of the method’s apparent authority. They would gain, in exchange, an account of musical structure that acknowledges the listener’s part in making it.",
+          "subject": "humanities"
         }
       ],
       "questions": [
@@ -1071,7 +1197,12 @@
           ],
           "difficulty": 2,
           "explanation": "The argument’s point is that the council’s prediction of lower rents is unlikely to come true, which C restates; everything else is offered in support of that. A is a premise supporting the conclusion, and B is a concession. D goes further than the argument, which never says the restrictions should stay in place.",
-          "skills": []
+          "skills": [
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 2,
@@ -1090,7 +1221,13 @@
           ],
           "difficulty": 2,
           "explanation": "If sage stands are scattered across nearly the whole valley, almost any spot would lie within 200 meters of one, so the correlation reveals nothing about the bees’ choice of sites (A). B is the trap, but the survey was thorough and the conclusion is limited to the valley, so representativeness is not the problem. D is irrelevant, since nearness to other plants would not show that sage plays no role.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 3,
@@ -1109,7 +1246,13 @@
           ],
           "difficulty": 3,
           "explanation": "The meteorologist’s proposed mechanism depends on the lift carrying moist air uphill; if storms fail to follow the lift precisely when the lowland air is dry, that is just what the mechanism predicts (E). C weakens the argument by suggesting that season, not the lift, explains the correlation. A is compatible with the argument, since the lift need not be the only cause of storms.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 4,
@@ -1129,8 +1272,11 @@
           "difficulty": 2,
           "explanation": "Imogen says the editors were right to exclude strict-form poems; Teodor says the exclusion misrepresents the field and so was a mistake (B). Teodor never disputes A (‘whatever readers’ tastes may be’), and Imogen never addresses C. Neither speaker discusses D or E.",
           "skills": [
-            "debate"
-          ]
+            "debate",
+            "principle"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 5,
@@ -1150,8 +1296,11 @@
           "difficulty": 3,
           "explanation": "Any drug approved for elderly patients raised no one’s blood pressure and therefore did not reduce inflammation; since some such drugs exist and most of them were approved for children, at least one child-approved drug did not reduce inflammation (D). A is the trap: drugs approved for children but not for elderly patients are unconstrained, so some could have reduced inflammation. E need not hold, since perhaps no drug reduced inflammation and none raised blood pressure.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -1170,7 +1319,16 @@
           ],
           "difficulty": 3,
           "explanation": "If the department’s staff grew by 20 percent while output grew by only 15 percent, output per employee actually fell, so the rise in completed projects does not show that remote work boosted productivity (B). D rules out an alternative explanation and so slightly strengthens the argument. A and E have little bearing on whether the policy raised productivity.",
-          "skills": []
+          "skills": [
+            "causal",
+            "plan",
+            "statistical"
+          ],
+          "flaws": [
+            "percent-number",
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 7,
@@ -1189,7 +1347,12 @@
           ],
           "difficulty": 3,
           "explanation": "The argument moves from less demand for grid power to less reliance on coal; if reduced demand were met entirely by cutting output from other sources, coal use would not fall, so E is required. A is too strong: the argument needs only that some homeowners install panels because of the credit. D is also not needed, since coal could lose its majority and still have its output reduced.",
-          "skills": []
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -1208,7 +1371,13 @@
           ],
           "difficulty": 2,
           "explanation": "The puzzle is why eliminating fines would make lateness more common but permanent non-return less common. A explains it: fines had deterred people from ever returning badly overdue books, so removing them brought those books back late rather than never. B explains only the rise in late returns, and D would, if anything, increase both figures rather than explain why one fell.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal",
+            "statistical"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 9,
@@ -1227,7 +1396,14 @@
           ],
           "difficulty": 4,
           "explanation": "Each ingredient was tested only alone; the ingredients might interact to raise blood pressure when combined, so what holds of each part need not hold of the whole (C). B is the main trap, but studying patients with poorly controlled blood pressure makes the evidence stronger rather than weaker for other patients. D contradicts a premise the argument states, namely that the fillers are inert.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "causal"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "tags": []
         },
         {
           "number": 10,
@@ -1247,8 +1423,13 @@
           "difficulty": 4,
           "explanation": "The principle states two necessary conditions for crediting an individual; in D, Dalton’s contribution was not greater than Pereira’s, so crediting Dalton violated the principle and the judgment of impropriety conforms. B is the trap: the principle gives only necessary conditions for crediting someone, so it never requires crediting anyone and cannot show Hale acted improperly. A and C approve credit when one of the conditions fails, and E concerns team credit, which the principle does not address.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         },
         {
           "number": 11,
@@ -1268,8 +1449,12 @@
           "difficulty": 3,
           "explanation": "More cloud cover means the ground cools less at night, and with humidity unchanged, the air will reach its dew point less often, so fog has probably become less frequent (A). B is too strong, since clouds only slow cooling and do not prevent it. C and D make claims about relative importance and about causes that the passage does not address.",
           "skills": [
+            "fact-set",
+            "causal",
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 12,
@@ -1290,7 +1475,9 @@
           "explanation": "E says that losing effect aloud or running over ten pages each rules a poem out; the non-prose poems lose effect aloud and the prose poems run over ten pages, so every poem is ruled out. A is the trap: it rules out the enjambed poems but says nothing about the prose poems. B reverses the conditional, giving conditions for suitability rather than for unsuitability, and D is only a ‘most’ claim about length.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 13,
@@ -1309,7 +1496,12 @@
           ],
           "difficulty": 4,
           "explanation": "The equal decline inside a reserve where pesticides are banned shows that the pesticide hypothesis, which the argument rejects, cannot account for the decline (B). D is the trap: the rise in nighttime light in both places is established by a separate, later claim, and the claim in question says nothing about light. The claim is a premise, not the main conclusion (A) or a hypothesis (C).",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 14,
@@ -1328,7 +1520,14 @@
           ],
           "difficulty": 4,
           "explanation": "C attacks the comparison rather than the conclusion: if developers rushed applications into the period just before the rule took effect, the baseline is inflated and much of the 40 percent drop reflects shifted timing rather than a real slowdown. B is a tempting trap but actually strengthens the argument, since unregulated building kept growing. E concerns completion time, which does not affect the count of applications filed.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 15,
@@ -1347,7 +1546,12 @@
           ],
           "difficulty": 3,
           "explanation": "The archivist applies the opponents’ reasoning to buildings and photographs, notes that the resulting conclusion is clearly unacceptable, and so rejects the original reasoning (D). C is tempting, but the building case is an analogy, not a manuscript that contradicts a generalization. The archivist never claims scans are inaccurate (B) or discusses motives (A).",
-          "skills": []
+          "skills": [
+            "analogy",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 16,
@@ -1368,7 +1572,9 @@
           "explanation": "The original: every member of a group with feature X has feature Y unless exception Z; this member lacks Y and lacks Z; so it lacks X. E matches every element. A is the main trap but never rules out the exception (the loan), so its conclusion does not follow. C is valid but never eliminates the exception, so it reaches a disjunctive conclusion instead; B and D reverse the logic.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 17,
@@ -1388,8 +1594,13 @@
           "difficulty": 4,
           "explanation": "Cutting fuel purchases reduces operating costs only if the wind farm does not add other operating costs, such as maintenance and transmission, that exceed the fuel savings (A). B is the trap: the argument uses the regulation correctly, moving from costs not increasing to rates not rising, which is a valid contrapositive. E is not needed, since fuel can lose its top ranking and the argument is unaffected.",
           "skills": [
-            "conditional"
-          ]
+            "rebuttal",
+            "statistical"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "tags": []
         },
         {
           "number": 18,
@@ -1408,7 +1619,13 @@
           ],
           "difficulty": 5,
           "explanation": "The worry is that the taste tipped patients off and their expectations, not the drug, reduced the migraines. Patients who never noticed the taste had no such cue, so their equal improvement points to the drug itself (C). B is the most tempting trap, but without a placebo comparison a before-and-after improvement could reflect expectation or natural variation. D does not help, because expectations formed in the early weeks could persist after the taste fades, and A weakens the argument.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 19,
@@ -1427,7 +1644,14 @@
           ],
           "difficulty": 5,
           "explanation": "The teams that would newly hold meetings would do so only under compulsion; if meetings held that way did nothing, the overall rate would not fall, so B is required. C is the strongest trap: the argument needs the meetings to account for some of the difference, not all of it, so ‘entirely’ makes C stronger than necessary. A and D are likewise more than the argument needs.",
-          "skills": []
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 20,
@@ -1447,8 +1671,11 @@
           "difficulty": 5,
           "explanation": "A high above 12°C on March 10 means the pressure fell by more than 5 millibars on March 11, which means rain on March 12, which means March 12’s high could not exceed 12°C; so D is impossible. A is the main trap, but the chain from March 10 constrains only March 12, so March 11 can also be warm. C is possible because the rules constrain the day after a pressure drop, not the day of the drop, and E is consistent as long as each warm day is followed by a cooler day with a pressure drop.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 21,
@@ -1467,7 +1694,13 @@
           ],
           "difficulty": 4,
           "explanation": "The argument rejects removal despite objections to the book’s themes, on the grounds that qualified evaluators judged it appropriate for teenagers; E connects exactly those elements. C is the trap: it hinges on literary quality, but the panel judged the book’s appropriateness for teenagers, not its quality. A would support removal, and B and D concern acquiring books rather than removing them.",
-          "skills": []
+          "skills": [
+            "principle",
+            "authority",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 22,
@@ -1488,7 +1721,9 @@
           "explanation": "With A, the chain runs: uses the process, so emits below the limit, so is certified, so qualifies for the credit. Since Tessaly does not qualify, it cannot use the process. B reverses the needed link and so leaves the chain broken. D tells us only about plants above the limit, and E compares Tessaly to certified plants without tying it to the sulfur limit, so neither guarantees the conclusion. C, if anything, conflicts with the chain the argument needs.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 23,
@@ -1507,7 +1742,12 @@
           ],
           "difficulty": 4,
           "explanation": "Varomex misses mites in sealed brood cells, and early-summer treatment, when brood rearing is substantial, worked much less well than late-summer treatment; the best explanation is that many mites are sheltered in brood cells in early summer (C). A is too strong, since early-summer treatment produced smaller reductions, not none. D and E go well beyond the information given.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 24,
@@ -1528,7 +1768,11 @@
           "explanation": "The original chains two ‘most’ statements: most A are B, most B are C, so most A are C. This is invalid because the A’s that are B might fall among the B’s that are not C. B commits exactly this error. A and D are valid arguments (all-all and most-none), C uses ‘some’ with a hedged conclusion, and E commits a different error by inferring a group’s makeup from who its strongest supporters are.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "tags": []
         },
         {
           "number": 25,
@@ -1547,7 +1791,14 @@
           ],
           "difficulty": 4,
           "explanation": "A falling share of sales to in-state buyers is compatible with a rising number of such sales if total sales grew enough; 75 percent of a much larger market can exceed 90 percent of a smaller one (D). B is a trap, since the argument draws no causal conclusion about competition at all. E is tempting but irrelevant, because the conclusion concerns who the buyers were when the homes were sold.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "rebuttal"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "tags": []
         }
       ]
     }

@@ -28,7 +28,12 @@
           ],
           "difficulty": 3,
           "explanation": "The editor's position, supported by the final sentence about accountability and credibility, is that anonymity should be a last resort, which is (C). (B) is the tempting trap: it rebuts the reporters' evidence, but that rebuttal only clears the way for the editor's own claim and is not itself what the argument is ultimately trying to establish. (A) is the opponents' premise, which the editor concedes, and (E) overstates the editor's view.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "principle"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 2,
@@ -47,7 +52,13 @@
           ],
           "difficulty": 3,
           "explanation": "A rise in sorghum's share of cropland does not guarantee more sorghum acres, because total cropland may have shrunk; (A) identifies this percentage-versus-amount error. (D) is the trap: yield per acre has no bearing on how many acres are planted. (E) describes a confusion the argument never makes, since both figures concern cropland.",
-          "skills": []
+          "skills": [
+            "statistical"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "tags": []
         },
         {
           "number": 3,
@@ -66,7 +77,12 @@
           ],
           "difficulty": 2,
           "explanation": "(E) explains both facts: screening finds more cancers, raising the number of diagnoses, and finds them early, when treatment works better, lowering deaths. (B) is the trap: it offers a reason diagnoses might rise everywhere but does nothing to explain why deaths in Marbury fell.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 4,
@@ -85,7 +101,14 @@
           ],
           "difficulty": 2,
           "explanation": "(B) suggests the correlation runs the other way: students with good rhythm choose the metronome, rather than the metronome producing good rhythm, so requiring it may not help. (A) mentions an alternative factor but only for 'some' students, which is far too weak to undermine the comparison.",
-          "skills": []
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 5,
@@ -105,8 +128,11 @@
           "difficulty": 2,
           "explanation": "Ilsa says the observatory should make the replacement and Tomas says doing so would undermine its mission, so they disagree about (D). Tomas explicitly concedes (A), and neither speaker takes a position on both sides of (B), (C), or (E).",
           "skills": [
-            "debate"
-          ]
+            "debate",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -125,7 +151,14 @@
           ],
           "difficulty": 3,
           "explanation": "The argument relies on Arden being a good model for Velmont; if Velmont's businesses depended far more on last-minute scheduling, Arden's experience would say little about Velmont, so (A) is required. (D) is tempting, but the argument does not need perfect enforcement, and (E) is far stronger than the claim that costs are not heavy.",
-          "skills": []
+          "skills": [
+            "analogy",
+            "rebuttal"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "tags": []
         },
         {
           "number": 7,
@@ -144,7 +177,11 @@
           ],
           "difficulty": 3,
           "explanation": "Since the technique was not invented twice in the region and older examples exist at Varro Creek, the Tessin Hill potters very likely learned it from elsewhere, supporting (C). (A) and (E) name one specific means of transmission that the evidence does not single out, and (D) makes a claim about all pottery in the region, including pottery not yet discovered.",
-          "skills": []
+          "skills": [
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -164,8 +201,13 @@
           "difficulty": 2,
           "explanation": "(E) matches the principle exactly: the ad implies an undemonstrated benefit, so it is misleading even though its statement is accurate. (A) and (D) conclude that ads are not misleading, but the principle gives only a condition sufficient for being misleading, not one for avoiding that label; (B) concerns a false statement, which the principle does not address.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         },
         {
           "number": 9,
@@ -184,7 +226,14 @@
           ],
           "difficulty": 3,
           "explanation": "The critic moves from the reporters having a party preference (a feature of the producers) to the coverage being biased (a feature of the product), assuming the preference shapes the work; (B) describes this abstractly. (E) is the trap: the conclusion does not require every reporter to share the preference, and nothing suggests the survey sample in (A) was unrepresentative.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "tags": []
         },
         {
           "number": 10,
@@ -203,7 +252,14 @@
           ],
           "difficulty": 4,
           "explanation": "The argument infers from a correlation that adding hedgerows would cut damage; (D) shows that when orchards gained hedgerows, their own damage fell, which rules out preexisting differences between orchards as the explanation. (A) is the most tempting trap, but it merely repeats the premise that wildflowers attract wasps and does not address whether other differences explain the lower damage. (E) is irrelevant to a conditional conclusion, and (C) weakens.",
-          "skills": []
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 11,
@@ -222,7 +278,12 @@
           ],
           "difficulty": 4,
           "explanation": "The claim is inferred ('therefore') from the wobble premises and then helps establish the main conclusion, stated in the second sentence, that a dust cloud better explains the dimming; so (E) is correct. (A) is the trap set by the word 'therefore', but the argument's ultimate point is the dust-cloud explanation. (D) misidentifies what the claim supports: the dust cloud's lack of gravitational pull is asserted independently.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 12,
@@ -243,7 +304,9 @@
           "explanation": "The premises establish that Dana is certified and therefore not on the packaging line; (A) says eligibility requires being on the packaging line, so Dana is ineligible. (B) reverses that conditional, and (D) is the subtle trap: it states a requirement Dana already meets (certification), so it cannot rule her out. (E) builds on the irrelevant first premise and is consistent with Dana being eligible.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 13,
@@ -262,7 +325,12 @@
           ],
           "difficulty": 3,
           "explanation": "The argument infers lower consumption from lower in-town sales; if residents simply buy the drinks in neighboring towns, consumption may not have fallen, so the answer to (C) bears directly on the argument. (B) concerns the health significance of these drinks, not whether consumption declined.",
-          "skills": []
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 14,
@@ -282,8 +350,11 @@
           "difficulty": 4,
           "explanation": "A jazz ensemble member who had studied orchestration would have to have studied improvisation, but none has, so no ensemble member has studied orchestration; since most counterpoint students have studied orchestration, most counterpoint students are outside the ensemble, which is (B). (A) is the trap: seminar students are only some of the counterpoint students and could all fall in the minority who never studied orchestration. (D) reverses the 'most' relationship.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 15,
@@ -302,7 +373,14 @@
           ],
           "difficulty": 4,
           "explanation": "The argument assumes Seaside Wheat would respond to packaging as Orchard Crisp did; (D) shows a relevant difference, since eye-catching packaging matters for impulse purchases but little for buyers who already seek out a brand. (B) is the trap: a general rise in cracker sales would weaken the argument only if it were large enough to account for the 18 percent increase, and 2 percent is not. (C) tends to strengthen.",
-          "skills": []
+          "skills": [
+            "analogy",
+            "causal"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "tags": []
         },
         {
           "number": 16,
@@ -321,7 +399,12 @@
           ],
           "difficulty": 4,
           "explanation": "The columnist shows that the critics' rule would have blocked the famine photographs, whose effects were clearly good, which is (B). (A) is the closest trap but is too strong: the columnist concludes only that the rule should not be adopted 'without qualification,' not that it should be rejected entirely. (C) is wrong because the famine case counters a proposed rule, not a claim about what newspapers have done.",
-          "skills": []
+          "skills": [
+            "principle",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 17,
@@ -340,7 +423,13 @@
           ],
           "difficulty": 4,
           "explanation": "'Nearby' means anywhere in the galaxy in the first premise but within a few dozen light-years in the second, and the conclusion requires treating them as the same; (E) names this equivocation. (C) is tempting because the argument involves a condition for ozone loss, but the problem is not a necessary-sufficient reversal, and (A) fails because the conclusion itself says only 'roughly' once a century.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "equivocation"
+          ],
+          "tags": []
         },
         {
           "number": 18,
@@ -361,7 +450,9 @@
           "explanation": "The argument's form is: all A are B; all B that are C are D; so any A that is C is D. (C) has exactly this form despite its different wording ('only if,' 'interviewed and admitted'). (E) is the most tempting trap: it has the same premises but drops the restricting condition from the conclusion, making it invalid; (D) is a valid but simpler chain with no restricting condition, and (A) and (B) reverse the inference.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 19,
@@ -380,7 +471,13 @@
           ],
           "difficulty": 4,
           "explanation": "The argument takes the absence of querns in earlier houses as evidence that no grinding was done there; if earlier querns had been carried off and reused in later houses, their absence would prove nothing, so (A) is required. (E) is the most tempting trap, but the argument concerns what Okrana's residents did, whoever their ancestors were; (D) is not needed and is at odds with the claim that ground grain came from elsewhere.",
-          "skills": []
+          "skills": [
+            "comparison"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "tags": []
         },
         {
           "number": 20,
@@ -399,7 +496,12 @@
           ],
           "difficulty": 5,
           "explanation": "The firms showing no decline were self-selected for suitability, and firms required to adopt the schedule mostly saw declines, so the survey cannot be generalized to a typical firm, as (D) says. (A) is the attractive overstatement: the evidence undermines the optimistic generalization but does not show that most firms would lose output, especially given how few contract-bound firms were studied. (B) is a second trap: the evidence suggests suitability, not the voluntariness of the decision itself, explains the difference, so nothing indicates those firms would have fared better by choosing the change.",
-          "skills": []
+          "skills": [
+            "sampling",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 21,
@@ -419,8 +521,11 @@
           "difficulty": 5,
           "explanation": "The software's errors cannot be diagnosed and it is only slightly more accurate than the nurses, so by (E) it should not be adopted. (D) is the most tempting trap: it targets nondisclosure, but it applies only when the current method is at least as accurate, and here the nurses are less accurate. (A) gives a condition for adopting tools whose errors can be diagnosed, which this software's cannot, and (C) is satisfied by the software's trials.",
           "skills": [
-            "conditional"
-          ]
+            "principle",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 22,
@@ -439,7 +544,11 @@
           ],
           "difficulty": 4,
           "explanation": "A key gap is that another composer, perhaps one whose other works are lost, could have learned and imitated Marsh's progressions; (B) makes that much less likely. (D) is the trap: a copy made by someone else could still record a work Marsh composed, so it does not bear on authorship, while (A) is only weakly relevant and (C) weakens the watermark evidence.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 23,
@@ -460,7 +569,9 @@
           "explanation": "Chaining the contrapositives: a program not designed by an outside vendor does not have sale-discount-only rewards, so it does not increase visits mainly through bargain hunters, so by the first premise it raises revenue; (C) supplies the needed fact. (A) is the trap that reverses the last conditional and so establishes nothing about Pemberly; (D) is too weak, since a program can work mainly through bargain hunters even if some members are not bargain hunters.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 24,
@@ -479,7 +590,14 @@
           ],
           "difficulty": 5,
           "explanation": "The one-third of adults who already walk would see no further reduction, so even if everyone else cut their risk by 40 percent, the county-wide rate would fall by less than 40 percent; (A) identifies this error. (B) is the tempting trap, but the conclusion is explicitly conditional on residents changing their habits, so it does not assume they would. (D) misreads the scope: the conclusion concerns only Ostrava County.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "causal"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "tags": []
         },
         {
           "number": 25,
@@ -500,7 +618,11 @@
           "explanation": "The argument reasons: most A are B, most B are C, so most A are C, which is invalid because the two majorities need not overlap enough. (D) commits exactly this error. (B) is also flawed but in a different way, drawing a 'most' conclusion about the overlap of two groups from two 'most' statements about a single group, while (A), (C), and (E) are valid.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "tags": []
         }
       ]
     },
@@ -513,22 +635,26 @@
         {
           "id": "p1",
           "title": "Authenticating Machine-Enhanced Recordings",
-          "text": "Before a court will admit a recording into evidence, the party offering it must show that the recording is what it purports to be. Traditionally, this requirement has been satisfied by a witness with personal knowledge who testifies that the recording fairly and accurately depicts the events in question. Software that enhances recordings—sharpening blurred images, filtering out noise, filling in lost frames—raises the question of how this standard should apply to altered material. Many trial courts have simply treated enhanced recordings like any others: if a witness will attest that the enhanced version accurately depicts what happened, it is admitted.\n\nCritics of this approach, most prominently the legal scholar Mirela Vance, argue that what she calls the witness-fidelity standard fails precisely when enhancement matters most. If a witness clearly saw the detail an enhancement brings out, the enhancement adds little; but when enhancement reveals something no one observed, such as the features of a face in grainy security footage, no witness is in a position to vouch for it. Generative enhancement software does not merely clarify information already present in a recording; it predicts plausible content on the basis of patterns in the material on which it was trained. An enhanced face may thus reflect the training material as much as the person filmed. Vance proposes that courts require the proponent of an enhanced recording to disclose the software's method and to show that it has been validated on comparable material—a requirement she calls process transparency.\n\nDefenders of the traditional approach respond that process transparency would impose heavy burdens, since many enhancement tools are proprietary and their developers resist disclosure. Cross-examination and cautionary jury instructions, they argue, are adequate to expose any weaknesses. They also point out that courts routinely admit photographs taken by cameras whose internal processing—automatic sharpening, color correction—no one in the courtroom understands.\n\nThe burden of disclosure is real, but the camera analogy is less persuasive than it first appears. Routine in-camera processing operates uniformly and modestly, and its output has been compared against reality countless times; generative enhancement, by contrast, is designed to supply detail that is absent, and its errors are by their nature plausible-looking, which makes them difficult for jurors to detect however vigorous the cross-examination. Yet Vance draws her own line in the wrong place. Not every enhancement that reveals unobserved detail invents it: software that reverses a known optical blur recovers information that, though no one saw it, the recording did capture. The relevant distinction is therefore not between what a witness observed and what no one observed, but between information a recording contains and information a program supplies. For the former, authenticating the original recording and identifying the adjustment made should suffice; the heightened showing belongs to the latter alone. Such a rule would place the burden where the risk lies without disrupting the admission of ordinary recordings."
+          "text": "Before a court will admit a recording into evidence, the party offering it must show that the recording is what it purports to be. Traditionally, this requirement has been satisfied by a witness with personal knowledge who testifies that the recording fairly and accurately depicts the events in question. Software that enhances recordings—sharpening blurred images, filtering out noise, filling in lost frames—raises the question of how this standard should apply to altered material. Many trial courts have simply treated enhanced recordings like any others: if a witness will attest that the enhanced version accurately depicts what happened, it is admitted.\n\nCritics of this approach, most prominently the legal scholar Mirela Vance, argue that what she calls the witness-fidelity standard fails precisely when enhancement matters most. If a witness clearly saw the detail an enhancement brings out, the enhancement adds little; but when enhancement reveals something no one observed, such as the features of a face in grainy security footage, no witness is in a position to vouch for it. Generative enhancement software does not merely clarify information already present in a recording; it predicts plausible content on the basis of patterns in the material on which it was trained. An enhanced face may thus reflect the training material as much as the person filmed. Vance proposes that courts require the proponent of an enhanced recording to disclose the software's method and to show that it has been validated on comparable material—a requirement she calls process transparency.\n\nDefenders of the traditional approach respond that process transparency would impose heavy burdens, since many enhancement tools are proprietary and their developers resist disclosure. Cross-examination and cautionary jury instructions, they argue, are adequate to expose any weaknesses. They also point out that courts routinely admit photographs taken by cameras whose internal processing—automatic sharpening, color correction—no one in the courtroom understands.\n\nThe burden of disclosure is real, but the camera analogy is less persuasive than it first appears. Routine in-camera processing operates uniformly and modestly, and its output has been compared against reality countless times; generative enhancement, by contrast, is designed to supply detail that is absent, and its errors are by their nature plausible-looking, which makes them difficult for jurors to detect however vigorous the cross-examination. Yet Vance draws her own line in the wrong place. Not every enhancement that reveals unobserved detail invents it: software that reverses a known optical blur recovers information that, though no one saw it, the recording did capture. The relevant distinction is therefore not between what a witness observed and what no one observed, but between information a recording contains and information a program supplies. For the former, authenticating the original recording and identifying the adjustment made should suffice; the heightened showing belongs to the latter alone. Such a rule would place the burden where the risk lies without disrupting the admission of ordinary recordings.",
+          "subject": "law"
         },
         {
           "id": "p2",
           "title": "Overwintering Russet Dart Moths",
-          "text": "Each autumn, russet dart moths in the northern part of their range fly several hundred kilometers south to overwinter, returning in spring to breed. Over the past three decades, however, entomologists surveying the Tarrow Valley have recorded growing numbers of adults that remain through the winter, entering diapause—a dormant state in which development and metabolism slow dramatically—rather than migrating. Two explanations for this change have been proposed.\n\nThe first, favored by ecologist Ilse Marrow and her colleagues, holds that the change is a direct response to milder winters. On this view, every russet dart possesses the capacity to enter diapause, and whether a given moth migrates or stays depends on the temperature cues it experiences as it matures. Warmer autumns would therefore tip more individuals toward diapause, and warmer winters would allow more of them to survive until spring. In support of this hypothesis, Marrow's group has shown that the proportion of resident moths in a given year correlates closely with that year's autumn temperatures. Marrow concedes that the correlation is imperfect, but she attributes the remaining variation to differences in winter severity, which affect survival only after the decision to stay has been made.\n\nA second hypothesis, advanced by Dariusz Pell, holds that the shift reflects heritable change. Migration is costly and dangerous; if Tarrow winters have become survivable, moths with an inherited predisposition to remain would leave more offspring than those inclined to migrate, and the predisposition would spread. To test this, Pell's group collected eggs from Tarrow residents and from migrants and reared the larvae under identical temperature and day-length conditions. Offspring of residents proved far more likely to enter diapause than offspring of migrants. Because the rearing environment was held constant, Pell argues, the difference must reflect inheritance. As Pell acknowledges, however, his selective argument presupposes that residents now survive Tarrow winters at least as well as migrants survive the journey south—a comparison no one has yet measured directly.\n\nThe two hypotheses are not mutually exclusive. Marrow's correlation shows that temperature matters in any given year, but not that temperature is the only factor; Pell's experiment reveals a heritable component but leaves open whether temperature modulates its expression. A plausible synthesis is that warming has acted in two ways at once: immediately, by tipping marginal individuals toward diapause, and over generations, by favoring moths inclined to stay. This synthesis yields a testable prediction. If heritable change has occurred, then a given autumn temperature should now send a higher proportion of moths into diapause than it did thirty years ago. A preliminary reanalysis of the valley's autumn survey records suggests that it does, although the records from the earliest years are too sparse to settle the matter."
+          "text": "Each autumn, russet dart moths in the northern part of their range fly several hundred kilometers south to overwinter, returning in spring to breed. Over the past three decades, however, entomologists surveying the Tarrow Valley have recorded growing numbers of adults that remain through the winter, entering diapause—a dormant state in which development and metabolism slow dramatically—rather than migrating. Two explanations for this change have been proposed.\n\nThe first, favored by ecologist Ilse Marrow and her colleagues, holds that the change is a direct response to milder winters. On this view, every russet dart possesses the capacity to enter diapause, and whether a given moth migrates or stays depends on the temperature cues it experiences as it matures. Warmer autumns would therefore tip more individuals toward diapause, and warmer winters would allow more of them to survive until spring. In support of this hypothesis, Marrow's group has shown that the proportion of resident moths in a given year correlates closely with that year's autumn temperatures. Marrow concedes that the correlation is imperfect, but she attributes the remaining variation to differences in winter severity, which affect survival only after the decision to stay has been made.\n\nA second hypothesis, advanced by Dariusz Pell, holds that the shift reflects heritable change. Migration is costly and dangerous; if Tarrow winters have become survivable, moths with an inherited predisposition to remain would leave more offspring than those inclined to migrate, and the predisposition would spread. To test this, Pell's group collected eggs from Tarrow residents and from migrants and reared the larvae under identical temperature and day-length conditions. Offspring of residents proved far more likely to enter diapause than offspring of migrants. Because the rearing environment was held constant, Pell argues, the difference must reflect inheritance. As Pell acknowledges, however, his selective argument presupposes that residents now survive Tarrow winters at least as well as migrants survive the journey south—a comparison no one has yet measured directly.\n\nThe two hypotheses are not mutually exclusive. Marrow's correlation shows that temperature matters in any given year, but not that temperature is the only factor; Pell's experiment reveals a heritable component but leaves open whether temperature modulates its expression. A plausible synthesis is that warming has acted in two ways at once: immediately, by tipping marginal individuals toward diapause, and over generations, by favoring moths inclined to stay. This synthesis yields a testable prediction. If heritable change has occurred, then a given autumn temperature should now send a higher proportion of moths into diapause than it did thirty years ago. A preliminary reanalysis of the valley's autumn survey records suggests that it does, although the records from the earliest years are too sparse to settle the matter.",
+          "subject": "natural-science"
         },
         {
           "id": "p3",
           "title": "Irregularity in Kestel Strip Weaving",
-          "text": "For much of the twentieth century, collectors who prized the strip-woven cloths of the Kestel highlands described them in terms that emphasized spontaneity. These cloths are made of narrow bands woven separately and then sewn together edge to edge, and the bands rarely align: a stripe in one band stops short of its counterpart in the next, and motifs that might be expected to form a continuous line across the cloth instead jump and stagger. Dealers' catalogues attributed these misalignments to the weavers' indifference to precision, praising the cloths as artless expressions of a culture untouched by the discipline of the workshop.\n\nThis account has been challenged by textile historians, who point out that Kestel weavers were capable of exact alignment when they chose. Cloths made for funerals, which survive in smaller numbers, are almost perfectly matched across their seams. Moreover, the instructions recorded from the last generation of practicing weavers include specific terms for different kinds of offset—one for a stagger of half a motif, another for a full reversal of a motif's direction—suggesting that offsets were planned and named, not merely tolerated.\n\nRecognizing that the misalignments were deliberate, however, is only a first step; it does not tell us what they meant. Some historians have proposed that each type of offset carried a fixed symbolic meaning, much as a word does. The evidence for this is thin. The weavers' terms for offsets describe their visual form rather than anything they might stand for, and the same offset appears on cloths made for very different occasions. To be sure, this does not rule the view out: the recorded instructions were gathered to teach technique, and meanings reserved for ritual settings may never have been spoken to outsiders. A more plausible view is that the offsets functioned less like a vocabulary than like rhythm in music: what mattered was not what any single offset signified but the pattern of expectation and variation that the offsets created across the whole cloth. On this view, the near-perfect alignment of funeral cloths is significant precisely as an absence of rhythm—a stillness suited to mourning.\n\nThe collectors' error, then, was not simply a factual one. By treating irregularity as a lack of control, they assumed that the proper standard for judging cloth was the uniformity achieved by the industrial loom, and that the Kestel weavers had fallen short of it. Their praise for the cloths' artlessness was thus a backhanded compliment, admiring the weavers for a failure they had not committed. The weavers were working toward a different standard entirely, one in which variation was the very medium of the art rather than evidence of an inability to master it."
+          "text": "For much of the twentieth century, collectors who prized the strip-woven cloths of the Kestel highlands described them in terms that emphasized spontaneity. These cloths are made of narrow bands woven separately and then sewn together edge to edge, and the bands rarely align: a stripe in one band stops short of its counterpart in the next, and motifs that might be expected to form a continuous line across the cloth instead jump and stagger. Dealers' catalogues attributed these misalignments to the weavers' indifference to precision, praising the cloths as artless expressions of a culture untouched by the discipline of the workshop.\n\nThis account has been challenged by textile historians, who point out that Kestel weavers were capable of exact alignment when they chose. Cloths made for funerals, which survive in smaller numbers, are almost perfectly matched across their seams. Moreover, the instructions recorded from the last generation of practicing weavers include specific terms for different kinds of offset—one for a stagger of half a motif, another for a full reversal of a motif's direction—suggesting that offsets were planned and named, not merely tolerated.\n\nRecognizing that the misalignments were deliberate, however, is only a first step; it does not tell us what they meant. Some historians have proposed that each type of offset carried a fixed symbolic meaning, much as a word does. The evidence for this is thin. The weavers' terms for offsets describe their visual form rather than anything they might stand for, and the same offset appears on cloths made for very different occasions. To be sure, this does not rule the view out: the recorded instructions were gathered to teach technique, and meanings reserved for ritual settings may never have been spoken to outsiders. A more plausible view is that the offsets functioned less like a vocabulary than like rhythm in music: what mattered was not what any single offset signified but the pattern of expectation and variation that the offsets created across the whole cloth. On this view, the near-perfect alignment of funeral cloths is significant precisely as an absence of rhythm—a stillness suited to mourning.\n\nThe collectors' error, then, was not simply a factual one. By treating irregularity as a lack of control, they assumed that the proper standard for judging cloth was the uniformity achieved by the industrial loom, and that the Kestel weavers had fallen short of it. Their praise for the cloths' artlessness was thus a backhanded compliment, admiring the weavers for a failure they had not committed. The weavers were working toward a different standard entirely, one in which variation was the very medium of the art rather than evidence of an inability to master it.",
+          "subject": "humanities"
         },
         {
           "id": "p4",
           "title": "Mixed-Income Housing and Social Networks",
-          "text": "Passage A\n\nMixed-income housing has been promoted on the theory that when households of different incomes live side by side, lower-income residents will gain access to social networks that carry information about jobs and other opportunities. The evidence for this mechanism is discouraging. In a five-year study of the Linden Court development, sociologist Tomas Arquero found that residents formed friendships overwhelmingly within their own income group; conversations across groups were mostly brief and concerned practical matters such as parking and noise. Advocates reply that five years is too short a time for trust to develop across lines of class. Arquero grants the point in principle, but notes that the few cross-group friendships he did observe had all formed within the first year, and that none formed thereafter. Similar patterns have been reported elsewhere. Residents of different incomes also tend to use different spaces: higher-income tenants often drive to stores outside the neighborhood and enroll their children in private schools, while lower-income tenants rely on neighborhood shops, schools, and clinics.\n\nProximity alone, it seems, does not produce the ties that the policy's advocates anticipated. People form relationships through repeated, purposeful contact, and sharing an address provides little of that. If the goal is to widen the networks of low-income households, resources might be better directed toward programs that create such contact directly—mentoring programs, job-placement partnerships, cooperative workplaces—than toward costly construction projects whose social benefits rest on an unrealistic picture of how neighbors interact.\n\nPassage B\n\nCritics of mixed-income housing often measure its success by counting friendships across income lines, and by that measure it frequently disappoints. But this standard misconstrues how residential settings shape opportunity. Much of what neighbors provide one another flows not through close relationships but through weak ties: a passing remark that a hospital is hiring, a familiar face who can vouch for a job applicant. Such exchanges are easily missed by surveys that ask residents to name their friends.\n\nMore important, the influence of a mixed neighborhood operates largely through institutions rather than through individual relationships. Higher-income households tend to press local officials, often successfully, for well-maintained parks, safer streets, and more responsive public services, and lower-income residents share in these improvements whether or not they ever speak to their wealthier neighbors. Researchers studying the Harrow Street redevelopment found that the arrival of higher-income tenants was followed within three years by expanded bus service and a renovated public library—improvements that longtime residents had requested for a decade without success. None of this shows that mixed-income housing is the most efficient way to secure such improvements; a city could in principle provide them directly. In practice, however, officials respond most readily to residents who vote, organize, and complain effectively, and mixing incomes changes who is doing the asking. Gains of this kind are real, even though they would never appear in a tally of cross-class friendships, and any fair assessment of mixed-income housing must take them into account."
+          "text": "Passage A\n\nMixed-income housing has been promoted on the theory that when households of different incomes live side by side, lower-income residents will gain access to social networks that carry information about jobs and other opportunities. The evidence for this mechanism is discouraging. In a five-year study of the Linden Court development, sociologist Tomas Arquero found that residents formed friendships overwhelmingly within their own income group; conversations across groups were mostly brief and concerned practical matters such as parking and noise. Advocates reply that five years is too short a time for trust to develop across lines of class. Arquero grants the point in principle, but notes that the few cross-group friendships he did observe had all formed within the first year, and that none formed thereafter. Similar patterns have been reported elsewhere. Residents of different incomes also tend to use different spaces: higher-income tenants often drive to stores outside the neighborhood and enroll their children in private schools, while lower-income tenants rely on neighborhood shops, schools, and clinics.\n\nProximity alone, it seems, does not produce the ties that the policy's advocates anticipated. People form relationships through repeated, purposeful contact, and sharing an address provides little of that. If the goal is to widen the networks of low-income households, resources might be better directed toward programs that create such contact directly—mentoring programs, job-placement partnerships, cooperative workplaces—than toward costly construction projects whose social benefits rest on an unrealistic picture of how neighbors interact.\n\nPassage B\n\nCritics of mixed-income housing often measure its success by counting friendships across income lines, and by that measure it frequently disappoints. But this standard misconstrues how residential settings shape opportunity. Much of what neighbors provide one another flows not through close relationships but through weak ties: a passing remark that a hospital is hiring, a familiar face who can vouch for a job applicant. Such exchanges are easily missed by surveys that ask residents to name their friends.\n\nMore important, the influence of a mixed neighborhood operates largely through institutions rather than through individual relationships. Higher-income households tend to press local officials, often successfully, for well-maintained parks, safer streets, and more responsive public services, and lower-income residents share in these improvements whether or not they ever speak to their wealthier neighbors. Researchers studying the Harrow Street redevelopment found that the arrival of higher-income tenants was followed within three years by expanded bus service and a renovated public library—improvements that longtime residents had requested for a decade without success. None of this shows that mixed-income housing is the most efficient way to secure such improvements; a city could in principle provide them directly. In practice, however, officials respond most readily to residents who vote, organize, and complain effectively, and mixing incomes changes who is doing the asking. Gains of this kind are real, even though they would never appear in a tally of cross-class friendships, and any fair assessment of mixed-income housing must take them into account.",
+          "subject": "social-science"
         }
       ],
       "questions": [
@@ -1070,7 +1196,12 @@
           ],
           "difficulty": 2,
           "explanation": "The conclusion appears in the first sentence: the proposal should be abandoned, and every later sentence gives a reason for that, so C is correct. B is the most tempting trap: it is itself supported (by the claim about storm surge), but it is offered as a reason for abandoning the proposal, not as the point being argued for; A is a concession, and D restates a supporting premise.",
-          "skills": []
+          "skills": [
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 2,
@@ -1089,7 +1220,14 @@
           ],
           "difficulty": 2,
           "explanation": "The argument dismisses Ferro's reasoning solely by pointing to his financial interest, never engaging his evidence, so A is correct. D is the tempting trap: the argument concludes only that Ferro's argument should be rejected, not that the proposal should be adopted; C describes a possible weakness in Ferro's reasoning, not in the argument being evaluated.",
-          "skills": []
+          "skills": [
+            "authority",
+            "rebuttal"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ],
+          "tags": []
         },
         {
           "number": 3,
@@ -1108,7 +1246,12 @@
           ],
           "difficulty": 2,
           "explanation": "If each aircraft now takes much longer to de-ice, fewer icing days could still produce more delayed departures, so D resolves the puzzle. E points the wrong way: cancellations this past winter would lower the count of delayed departures, deepening the discrepancy; C merely shows that the puzzle also exists elsewhere.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 4,
@@ -1127,7 +1270,13 @@
           ],
           "difficulty": 2,
           "explanation": "The survey shows only a correlation; B supplies a randomized intervention in which adding fermented vegetables was followed by lower marker levels, directly supporting causation. C is the tempting trap: it hints at a mechanism, but 'may affect the digestive system' says nothing about inflammation; A weakens the argument by offering an alternative cause.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 5,
@@ -1147,8 +1296,11 @@
           "difficulty": 3,
           "explanation": "The protected Tavish nesters winter on the mainland coast and, being protected, do not forage in salt marshes; a mainland-wintering species that does not forage in salt marshes cannot feed primarily on insects, so E follows. D is the trap: Tavish nesters that do forage in salt marshes (and are unprotected) may feed on insects. A fails because protected insect-eaters that never winter on the mainland coast are not ruled out.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -1167,7 +1319,13 @@
           ],
           "difficulty": 3,
           "explanation": "If the examination had become substantially easier, the rise would be explained without the planning time, so the argument requires C. A is the tempting trap: planning time spent on general instruction could still raise mathematics scores, so A is not required. E is the opposite of what the argument needs.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 7,
@@ -1188,7 +1346,9 @@
           "explanation": "Okafor says the late works are weaker; Halvorsen says they are her finest achievements, so they disagree about A. C is the most tempting trap: Halvorsen asserts the sprawl is deliberate, but Okafor never says it was accidental, so Okafor's view on C is unknown. B fails because Halvorsen accepts the description of sprawl.",
           "skills": [
             "debate"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -1207,7 +1367,14 @@
           ],
           "difficulty": 3,
           "explanation": "Drivers who volunteer for a monitor may already be more cautious, and matching the groups on age and vehicle value does not address that, so E identifies the flaw. C is the trap: the conclusion concerns the number of claims, not their cost, so the argument makes no such assumption; D is a minor concern that does not touch the self-selection gap.",
-          "skills": []
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 9,
@@ -1226,7 +1393,12 @@
           ],
           "difficulty": 3,
           "explanation": "Complex singers spend more time singing, which cuts into foraging, and in lean years they ended the season in poorer condition, which supports B's modest claim of a cost under some conditions. E is the tempting trap: poorer condition need not mean fewer offspring, and offspring are never mentioned. C is unsupported because no reversal in mating timing is reported.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 10,
@@ -1245,7 +1417,12 @@
           ],
           "difficulty": 4,
           "explanation": "The projection assumes residents will keep requesting pickups at last year's rate once they must pay; D shows that most of them have a free alternative, so demand, and thus revenue, is likely to fall well short. C is the tempting trap: added administrative costs reduce the city's net gain but not the revenue the fee brings in, which is all the projection addresses; A and B, if anything, support the projection.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 11,
@@ -1265,8 +1442,13 @@
           "difficulty": 4,
           "explanation": "The principle lists only necessary conditions; in A the information was never requested, so a necessary condition fails and the denial was not justified, exactly as the principle requires. C is the main trap: it treats the three conditions as sufficient for justification, which an 'only if' principle never establishes. B and E each call a denial justified even though a necessary condition (an effect on the premium in B, a specific request in E) is missing, so they contradict the principle.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         },
         {
           "number": 12,
@@ -1287,7 +1469,9 @@
           "explanation": "Purchase requires certification, which requires engines that passed the test; if no Varro engine can pass, the Halcyon 400 cannot be certified and so will not be bought, making C sufficient. D is the most tempting trap: it merely restates the contrapositive of a premise and never establishes that the Halcyon's engines fail; A and E reverse the stated conditionals.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 13,
@@ -1306,7 +1490,12 @@
           ],
           "difficulty": 4,
           "explanation": "The sonnet comparison supports the claim about constraints, and that claim in turn supports the final 'Thus' sentence about serialized novels, so it is an intermediate conclusion, as E says. A is the main trap: the claim is a conclusion, but not the overall one, which is the final sentence; C describes the 'It is true that' sentence, and D reverses the direction of support between the principle and the sonnet example.",
-          "skills": []
+          "skills": [
+            "analogy",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 14,
@@ -1325,7 +1514,14 @@
           ],
           "difficulty": 4,
           "explanation": "A non-significant result means only that the trial failed to show an effect, not that there is none, yet the researcher concludes the diet does not lower blood pressure; B describes this. C is the tempting trap, but the argument never relies on a claim about 'most participants' and generalizes from no such subgroup; D describes something that is not a flaw, since using an opponent's own evidence is legitimate, and E is wrong because the conclusion concerns only blood pressure.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "tags": []
         },
         {
           "number": 15,
@@ -1344,7 +1540,14 @@
           ],
           "difficulty": 4,
           "explanation": "D supplies a controlled comparison: where the predator survived under similar conditions, urchins did not explode, which supports singling out the predator's loss as the main cause. C is the tempting trap: it bolsters the premise that sea stars prey on urchins but does nothing to rule out other causes or show the loss was the main cause. B offers a rival cause and weakens the argument.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 16,
@@ -1365,7 +1568,9 @@
           "explanation": "The original is valid: being on the squad requires honors rhetoric, which requires a GPA above 3.5; some juniors are on the squad, so some juniors meet the GPA requirement. C chains two necessary conditions the same way and draws the same 'some' conclusion. A is the trap: it is also valid, but it reasons from an 'all' premise to an 'all' conclusion, so its pattern differs; B and D reverse necessary conditions, and E treats a necessary condition as sufficient.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 17,
@@ -1384,7 +1589,12 @@
           ],
           "difficulty": 3,
           "explanation": "The ban covers only the spawning months; if little shrimp trawling happened then, the croaker caught in those months would come mainly from directed fishing, which the ban removes, so the argument needs A. C and E are the tempting traps: each would make the ban look less useful, but the argument's reasoning rests on bycatch and does not depend on them; B and D concern what else might be done, not whether this ban helps.",
-          "skills": []
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 18,
@@ -1404,8 +1614,11 @@
           "difficulty": 4,
           "explanation": "A homeowner's claim over $50,000 is reviewed by a senior adjuster and so audited; but an out-of-state claim can be audited only if it was filed under a commercial policy, which a homeowner's policy never is, so E is impossible. B is the trap: out-of-state claims filed under commercial policies can be audited, so senior adjusters may well have reviewed some; A, C, and D are each consistent with the statements.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 19,
@@ -1424,7 +1637,14 @@
           ],
           "difficulty": 5,
           "explanation": "If skill was measured in the very simulator the new course used, its graduates may have scored better simply from familiarity with the device, so the ratings may not reflect superior recovery skill; B undermines the evidence itself. D is the strongest trap: it questions how well simulators mirror real flight, but nothing says the ratings were done in a simulator, and slight differences would not explain the gap between the groups. C actually makes the simulator course's success more impressive, and E strengthens the argument by ruling out self-selection.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 20,
@@ -1443,7 +1663,12 @@
           ],
           "difficulty": 4,
           "explanation": "The superintendent shows that the critics' reasoning implies afternoon classes are worthless, a position their own opposition to cutting those classes rejects; D describes this. C is the most tempting trap: the inconsistency alleged is between the critics' argument and their other positions, not between their conclusion and their evidence. E fails because no harm to students is claimed, and no evidence about fatigue is offered, ruling out A.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 21,
@@ -1462,7 +1687,12 @@
           ],
           "difficulty": 5,
           "explanation": "The conservationist cites a threat to the crane's survival and the availability of alternative sites without such risk; C makes exactly those two facts sufficient for rejecting the expansion. B is the subtle trap: the argument says nothing about whether the other sites are equally cheap, so B's condition is not shown to be met. A's condition is satisfied by the farm's record and so cannot support opposing expansion, and D concerns economic interests the argument never mentions.",
-          "skills": []
+          "skills": [
+            "principle",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 22,
@@ -1481,7 +1711,13 @@
           ],
           "difficulty": 5,
           "explanation": "That readers mention consolation does not show that consolation is the whole of their enjoyment; they could be consoled and also respond to the poems' artistry, which the argument ignores, as A says. D is the most tempting trap: the argument does not infer that Hellen's poems lack artistic merit because greeting cards do; it uses the examples only to show that consolation can occur without art, which is legitimate. C fails because the argument relies on readers only for reports of their own reactions, and E overstates the examples, which say only that they 'need' have no merit.",
-          "skills": []
+          "skills": [
+            "analogy"
+          ],
+          "flaws": [
+            "false-choice"
+          ],
+          "tags": []
         },
         {
           "number": 23,
@@ -1502,7 +1738,9 @@
           "explanation": "Taking effect requires referendum approval, a referendum requires a Fendale election month, and a Fendale election month requires a state election month; if the state holds no election before next November, the expansion cannot take effect before then, so E suffices. B is the subtle trap: it reverses the final conditional and does nothing to rule out an early election; D concerns the past rather than the coming months, and C leaves open that a referendum could still be scheduled.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 24,
@@ -1523,7 +1761,11 @@
           "explanation": "The nutritionist chains two 'most' statements into a 'most' conclusion, which is invalid because the sugary cereals could fall among the minority of sugary foods not marketed to children; B makes exactly this move with club members and Ardley car owners. D is the strongest trap: it is flawed too, but it uses a 'some' premise and a 'some' conclusion, a different pattern; E commits a different error by reversing terms, and A and C are valid.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "tags": []
         },
         {
           "number": 25,
@@ -1542,7 +1784,12 @@
           ],
           "difficulty": 5,
           "explanation": "Starling collisions fell, every other species except gulls held roughly constant, and the total still rose, so gull collisions must have risen by more than starling collisions fell: D. B is the subtle trap: a gull increase larger than the starling decrease says nothing about whether gulls now outnumber starlings, since the starting numbers are unknown. A posits an unsupported causal link, and E overgeneralizes from one airport.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         }
       ]
     }

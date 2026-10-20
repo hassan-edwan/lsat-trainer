@@ -283,3 +283,6 @@ mark.hl-orange { background: var(--hl-orange); }
 .lc-br-fixed { background: var(--warn-soft); color: var(--warn); }
 .lc-wrong { background: var(--bad-soft); color: var(--bad); }
 .lc-untried { background: var(--bg); color: var(--muted); }
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 800px) { .three-col { grid-template-columns: 1fr; } }
+.chip.cat { background: var(--br-soft); }

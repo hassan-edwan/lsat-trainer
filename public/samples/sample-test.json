@@ -26,7 +26,16 @@
             "flaw"
           ],
           "difficulty": 2,
-          "explanation": "The argument generalizes from the neighborhoods that chose streetlights to every neighborhood. If those neighborhoods differ (e.g., they had a lighting problem the others don't), the result may not carry over."
+          "explanation": "The argument generalizes from the neighborhoods that chose streetlights to every neighborhood. If those neighborhoods differ (e.g., they had a lighting problem the others don't), the result may not carry over.",
+          "skills": [
+            "causal",
+            "sampling",
+            "plan"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "tags": []
         },
         {
           "number": 2,
@@ -44,7 +53,12 @@
             "necessary-assumption"
           ],
           "difficulty": 2,
-          "explanation": "Negate B: the disease kills too few frogs to affect the population. Then it cannot explain the decline, and the argument collapses. A, C, and E are stronger than the argument needs; D is irrelevant."
+          "explanation": "Negate B: the disease kills too few frogs to affect the population. Then it cannot explain the decline, and the argument collapses. A, C, and E are stronger than the argument needs; D is irrelevant.",
+          "skills": [
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 3,
@@ -62,7 +76,14 @@
             "strengthen"
           ],
           "difficulty": 1,
-          "explanation": "The argument moves from correlation to causation. A randomized study isolates breakfast as the cause. B and A raise alternative causes (weakeners)."
+          "explanation": "The argument moves from correlation to causation. A randomized study isolates breakfast as the cause. B and A raise alternative causes (weakeners).",
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 4,
@@ -80,7 +101,16 @@
             "weaken"
           ],
           "difficulty": 2,
-          "explanation": "Productivity is output per employee. Staff grew 20% while output grew only 15%, so output per employee actually fell. E rules out an alternative explanation, which strengthens."
+          "explanation": "Productivity is output per employee. Staff grew 20% while output grew only 15%, so output per employee actually fell. E rules out an alternative explanation, which strengthens.",
+          "skills": [
+            "causal",
+            "statistical"
+          ],
+          "flaws": [
+            "causation",
+            "percent-number"
+          ],
+          "tags": []
         },
         {
           "number": 5,
@@ -98,7 +128,12 @@
             "sufficient-assumption"
           ],
           "difficulty": 1,
-          "explanation": "Chain: east wing → acquired before 1950 → restored. Placing the Ravel in the east wing completes the chain. C reverses the second conditional."
+          "explanation": "Chain: east wing → acquired before 1950 → restored. Placing the Ravel in the east wing completes the chain. C reverses the second conditional.",
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -116,7 +151,13 @@
             "must-be-true"
           ],
           "difficulty": 3,
-          "explanation": "Most winners had 3+ books, and all winners lacked prior awards, so at least some 3+-book novelists won without prior awards. D reverses 'most'; E is about later awards, which the stimulus never mentions."
+          "explanation": "Most winners had 3+ books, and all winners lacked prior awards, so at least some 3+-book novelists won without prior awards. D reverses 'most'; E is about later awards, which the stimulus never mentions.",
+          "skills": [
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 7,
@@ -134,7 +175,13 @@
             "most-strongly-supported"
           ],
           "difficulty": 1,
-          "explanation": "Same wine, different beliefs, different ratings and different brain activity. E says only 'can', which is all the evidence supports. C and A are too strong; D contradicts the imaging evidence."
+          "explanation": "Same wine, different beliefs, different ratings and different brain activity. E says only 'can', which is all the evidence supports. C and A are too strong; D contradicts the imaging evidence.",
+          "skills": [
+            "causal",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -152,7 +199,16 @@
             "explain"
           ],
           "difficulty": 1,
-          "explanation": "If traffic doubled, the accident count can rise even if the light lowered the accident rate. B deepens the puzzle instead of resolving it."
+          "explanation": "If traffic doubled, the accident count can rise even if the light lowered the accident rate. B deepens the puzzle instead of resolving it.",
+          "skills": [
+            "causal",
+            "statistical",
+            "fact-set"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "tags": []
         },
         {
           "number": 9,
@@ -170,7 +226,13 @@
             "main-conclusion"
           ],
           "difficulty": 1,
-          "explanation": "'Therefore' marks the conclusion. A is a premise that supports it, and B is background that the critic argues against."
+          "explanation": "'Therefore' marks the conclusion. A is a premise that supports it, and B is background that the critic argues against.",
+          "skills": [
+            "principle",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 10,
@@ -188,7 +250,13 @@
             "point-at-issue"
           ],
           "difficulty": 2,
-          "explanation": "Alicia endorses eliminating fees; Benjamin's 'But' objects to it. Benjamin never addresses B, and Alicia never addresses D, so neither is a point of disagreement."
+          "explanation": "Alicia endorses eliminating fees; Benjamin's 'But' objects to it. Benjamin never addresses B, and Alicia never addresses D, so neither is a point of disagreement.",
+          "skills": [
+            "debate",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         }
       ]
     },
@@ -201,7 +269,8 @@
         {
           "id": "p1",
           "title": "Dendrochronology and panel paintings",
-          "text": "For centuries, art historians attributed and dated Northern European panel paintings chiefly by stylistic analysis—comparing brushwork, composition, and iconography with those of securely documented works. Such judgments, however expert, are inherently contestable, and disputes over whether a panel was painted by a master or by a later imitator could persist for generations. Over the past several decades, dendrochronology, the dating of wood by the pattern of its annual growth rings, has offered a means of anchoring these debates in physical evidence.\n\nMany such paintings were executed on oak panels, and because the width of an oak's annual rings varies with climatic conditions, a sequence of rings from a panel can be matched against regional master chronologies compiled from timbers of known date. When the match is secure, the analyst can identify the year in which the outermost surviving ring grew. Yet that year is not the date of the painting. Panel makers trimmed away the sapwood—the outer, softer rings—and the wood was typically seasoned for some years before use. Analysts therefore estimate an earliest plausible date of creation by adding a statistically derived allowance for missing sapwood and a minimum seasoning period.\n\nThe resulting date establishes when a painting could first have been made, not when it was made. Dendrochronology thus excels at exclusion. A panel whose wood was felled decades after a master's death cannot be that master's work, whatever its stylistic merits. But a panel whose dating is consistent with an attribution does not thereby confirm it, since imitators active in the same period would have drawn on the same timber supplies. The technique, in short, does not replace connoisseurship; it disciplines it, narrowing the range of hypotheses that stylistic analysis must adjudicate."
+          "text": "For centuries, art historians attributed and dated Northern European panel paintings chiefly by stylistic analysis—comparing brushwork, composition, and iconography with those of securely documented works. Such judgments, however expert, are inherently contestable, and disputes over whether a panel was painted by a master or by a later imitator could persist for generations. Over the past several decades, dendrochronology, the dating of wood by the pattern of its annual growth rings, has offered a means of anchoring these debates in physical evidence.\n\nMany such paintings were executed on oak panels, and because the width of an oak's annual rings varies with climatic conditions, a sequence of rings from a panel can be matched against regional master chronologies compiled from timbers of known date. When the match is secure, the analyst can identify the year in which the outermost surviving ring grew. Yet that year is not the date of the painting. Panel makers trimmed away the sapwood—the outer, softer rings—and the wood was typically seasoned for some years before use. Analysts therefore estimate an earliest plausible date of creation by adding a statistically derived allowance for missing sapwood and a minimum seasoning period.\n\nThe resulting date establishes when a painting could first have been made, not when it was made. Dendrochronology thus excels at exclusion. A panel whose wood was felled decades after a master's death cannot be that master's work, whatever its stylistic merits. But a panel whose dating is consistent with an attribution does not thereby confirm it, since imitators active in the same period would have drawn on the same timber supplies. The technique, in short, does not replace connoisseurship; it disciplines it, narrowing the range of hypotheses that stylistic analysis must adjudicate.",
+          "subject": "humanities"
         }
       ],
       "questions": [

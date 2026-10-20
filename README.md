@@ -18,6 +18,21 @@ It runs entirely in your browser. There's no account and no server, and your dat
   automatically. Each entry has fields for your thought process, what was tricky, why the right answer is
   right, and your takeaway, plus trap tags ("scope shift", "reversed conditional", …). Download them as
   Markdown, CSV, or JSON, with the full question text included.
+- **Standard categories:** besides its type, every question is tagged the way LSAT prep courses categorize
+  questions, so you can see what you're weak at from several angles:
+  - *Question family:* Assumption, Inference, Structure, and Explanation for LR; global, specific, and extended
+    questions for RC (derived from the type).
+  - *Reasoning type:* conditional/formal logic, causal, numbers & statistics, studies & samples, analogy,
+    comparisons, principles, plans, authority, counterarguments, debate, and fact sets.
+  - *Flaw pattern:* correlation vs. causation, necessary vs. sufficient, unrepresentative samples, percentages
+    vs. numbers, equivocation, part vs. whole, lack of evidence as proof, attacking the source, bad appeals to
+    authority, circular reasoning, false choice, possible-as-certain, straw man, flawed analogy, quantifier
+    errors, and overreaching conclusions.
+  - *RC passage subject:* law, natural science, social science, humanities.
+
+  Analytics ranks your weakest categories and shows accuracy for each; results pages break each session down
+  by category; the journal shows which reasoning types and flaw patterns you miss most; and every category can
+  be drilled directly.
 - **Question-type tagging:** every question is tagged with its type (Flaw, Necessary Assumption, MSS, RC
   Inference, …). Tags come from the test file or are guessed from the wording of the question stem, and you
   can change any of them.

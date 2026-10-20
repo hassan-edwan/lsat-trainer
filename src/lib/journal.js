@@ -3,7 +3,7 @@
 // Each entry snapshots the question text so exports stay complete even if
 // the source test is later removed.
 
-import { typeLabel } from './taxonomy.js';
+import { categoriesOf, categoryLabel, typeLabel } from './taxonomy.js';
 
 export const TRAP_TAGS = [
   'Misread the stimulus',
@@ -37,6 +37,7 @@ export function makeEntry(question, ctx, { first, br, source = 'auto', sessionId
     number: question.number,
     kind: ctx.kind,
     types: [...question.types],
+    tags: [...(question.tags || [])],
     passage: ctx.passageText || '',
     stimulus: question.stimulus,
     stem: question.stem,
@@ -89,6 +90,8 @@ export function toMarkdown(entries) {
     out.push(`## ${e.testName} — ${e.sectionTitle} Q${e.number}`);
     out.push('');
     out.push(`**Type:** ${e.types.map(typeLabel).join(', ')}  `);
+    const cats = categoriesOf(e).filter((c) => !c.startsWith('family:'));
+    if (cats.length) out.push(`**Categories:** ${cats.map(categoryLabel).join(', ')}  `);
     out.push(`**Your answer:** ${e.first ?? '—'} (timed), ${e.br ?? '—'} (blind review) · **Correct:** ${e.answer}  `);
     out.push(`**Status:** ${e.status} · **Missed ${e.occurrences.length}×**${e.traps.length ? ` · **Traps:** ${e.traps.join('; ')}` : ''}`);
     out.push('');
@@ -117,7 +120,7 @@ function csvCell(v) {
 export function toCSV(entries) {
   const cols = [
     ['Test', (e) => e.testName], ['Section', (e) => e.sectionTitle], ['Q', (e) => e.number],
-    ['Types', (e) => e.types.map(typeLabel)], ['Timed answer', (e) => e.first], ['BR answer', (e) => e.br],
+    ['Types', (e) => e.types.map(typeLabel)], ['Categories', (e) => categoriesOf(e).map(categoryLabel)], ['Timed answer', (e) => e.first], ['BR answer', (e) => e.br],
     ['Correct', (e) => e.answer], ['Times missed', (e) => e.occurrences.length], ['Status', (e) => e.status],
     ['Traps', (e) => e.traps], ['My thought process', (e) => e.myReasoning], ['What was tricky', (e) => e.tricky],
     ['Why right answer is right', (e) => e.correctReasoning], ['Takeaway', (e) => e.takeaway],
@@ -128,14 +131,16 @@ export function toCSV(entries) {
   return rows.join('\n');
 }
 
-/** Count trap tags and types across entries, most common first. */
+/** Count trap tags, types, and categories across entries, most common first. */
 export function journalPatterns(entries) {
   const traps = {};
   const types = {};
+  const categories = {};
   for (const e of entries) {
     for (const t of e.traps) traps[t] = (traps[t] || 0) + 1;
     for (const t of e.types) types[t] = (types[t] || 0) + 1;
+    for (const c of categoriesOf(e)) if (!c.startsWith('family:')) categories[c] = (categories[c] || 0) + 1;
   }
   const sort = (o) => Object.entries(o).sort((a, b) => b[1] - a[1]);
-  return { traps: sort(traps), types: sort(types) };
+  return { traps: sort(traps), types: sort(types), categories: sort(categories) };
 }

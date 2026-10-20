@@ -47,8 +47,8 @@ test('diagnostic order goes level by level across ladders', () => {
 });
 
 test('detects dialogue questions and dense conditional stimuli', () => {
-  assert.deepEqual(detectSkills('Ana: We should do X.\n\nBen: But X costs too much.', 'Ana and Ben disagree over whether'), ['debate']);
-  assert.deepEqual(detectSkills('No student may join unless enrolled in rhetoric, and only students with high grades may enroll. Every member is a junior.', ''), ['conditional']);
+  assert.ok(detectSkills('Ana: We should do X.\n\nBen: But X costs too much.', 'Ana and Ben disagree over whether').includes('debate'));
+  assert.ok(detectSkills('No student may join unless enrolled in rhetoric, and only students with high grades may enroll. Every member is a junior.', '').includes('conditional'));
   assert.deepEqual(detectSkills('Sales rose after the campaign, so the campaign worked.', ''), []);
   assert.deepEqual(detectSkills('Ana: x\n\nBen: y', '', 'RC'), []);
 });

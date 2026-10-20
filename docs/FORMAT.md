@@ -63,7 +63,9 @@ Keep private test files out of git: the repo's `.gitignore` already ignores `pri
 | `questions[].types` | no | Question type ids (below). If omitted, they're guessed from the stem and marked "auto". |
 | `questions[].difficulty` | no | 1–5. |
 | `questions[].tags` | no | Free-form strings. `except` / `least` are added automatically. |
-| `questions[].skills` | no | Cross-cutting skills: `conditional`, `debate`. If omitted, they're guessed from the stimulus; an explicit array (even `[]`) turns the guess off. |
+| `questions[].skills` | no | Reasoning types: `conditional`, `causal`, `statistical`, `sampling`, `analogy`, `comparison`, `principle`, `plan`, `authority`, `rebuttal`, `debate`, `fact-set`. If omitted, they're guessed from the stimulus; an explicit array (even `[]`) turns the guess off. |
+| `questions[].flaws` | no | Flaw patterns the question is built around: `causation`, `necessary-sufficient`, `sampling`, `percent-number`, `equivocation`, `part-whole`, `absence-of-evidence`, `ad-hominem`, `bad-authority`, `circular`, `false-choice`, `possibility-certainty`, `straw-man`, `flawed-analogy`, `quantifier`, `scope-shift`. If omitted on a Flaw or Parallel Flaw question, it's guessed from the correct answer. |
+| `passages[].subject` | no | RC passage subject: `law`, `natural-science`, `social-science`, `humanities`. |
 | `purpose` | no | `"diagnostic"` marks a skill-diagnostic test: it appears on the Diagnostic page instead of the library and is kept out of drills. Its questions carry a `ladder:<skill id>` tag and `difficulty` = ladder level (1–5); see `src/lib/diagnostic.js` for the skill ids. |
 | `scoreConversion` | no | Raw score → scaled score. If present, results show scaled scores. |
 

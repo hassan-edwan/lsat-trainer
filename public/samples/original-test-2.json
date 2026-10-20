@@ -28,7 +28,12 @@
           ],
           "difficulty": 2,
           "explanation": "The argument concedes one point and then gives two reasons for rejecting the lava-lake hypothesis; that rejection (C) is the conclusion. E is the trap: the argument concedes that the columns' height fits slow cooling and rejects only the claim that a lava lake was involved, so E overstates the conclusion. A is the concession, and B and D are premises.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 2,
@@ -47,7 +52,14 @@
           ],
           "difficulty": 2,
           "explanation": "The manager compares winter months with spring months, and demand for exterior paint plausibly rises in spring regardless of price, so a seasonal pattern could explain the increase (A). C is the trap: the manager rules out a change in advertising, and nothing suggests the same advertising worked differently in the two periods. D fails because the conclusion is only about this store, and B and E describe errors the argument does not make.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 3,
@@ -67,8 +79,11 @@
           "difficulty": 2,
           "explanation": "Ames favors rezoning the yard for apartments, while Perez says the yard is the wrong site for housing and should be rezoned for light industry, so they disagree about D. B is the trap: both councilors favor rezoning the yard and differ only over what use it should be rezoned for. Perez agrees about the housing shortage (A), and Ames takes no position on contamination or cleanup (C, E).",
           "skills": [
-            "debate"
-          ]
+            "debate",
+            "plan"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 4,
@@ -87,7 +102,14 @@
           ],
           "difficulty": 3,
           "explanation": "B supplies a control group: the part of town that did not receive water from the new well saw no increase, which points to the new well as the source. E is tempting because it concerns the bacterium, but it suggests the old reservoir could harbor it too, which if anything weakens the argument. A, C, and D also weaken or are neutral.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 5,
@@ -107,8 +129,11 @@
           "difficulty": 3,
           "explanation": "With no sworn testimony, no judge could have found probable cause beforehand, so any warrant was invalid; valid consent, which must precede the search, is the only remaining route to admission, so admission requires such consent (E). A is the trap: nothing rules out Mirov's having consented before the search. C reverses the conditional, since valid consent is necessary, not sufficient. D fails because an invalid warrant may have been issued, and B is not established.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -127,7 +152,13 @@
           ],
           "difficulty": 3,
           "explanation": "The evidence is the number of bug reports, not the number of bugs; C gives a reason that reports would drop even if the software were no less buggy, so the evidence no longer tracks the conclusion. B is tempting, but the severity of the reported bugs says nothing about whether there are fewer of them. E is consistent with mandatory review making a large difference, and A and D are irrelevant.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 7,
@@ -146,7 +177,11 @@
           ],
           "difficulty": 2,
           "explanation": "If the filmmakers re-created the breakwater, the scenes could have been shot in the village last year after all, and the argument collapses; so the argument must assume A. C is the trap: the conclusion holds whether the scenes were shot in another village or come from older footage, so it does not matter whether another village has a similar breakwater. B, D, and E are irrelevant.",
-          "skills": []
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -165,7 +200,12 @@
           ],
           "difficulty": 3,
           "explanation": "E identifies a strong, continuing incentive for Darnesian families to keep their language alive at home, which explains why the usual pattern does not hold for them. A is the most tempting wrong answer, but shared vocabulary would make the regional language easier to adopt and gives no reason Darnesian would persist. B and D only deepen the puzzle, and C is irrelevant.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 9,
@@ -186,7 +226,11 @@
           "explanation": "The premises show that major quakes have always followed swarms, not that swarms have always been followed by major quakes; if swarms like this one often fade without a major quake, the conclusion fails (B). C is the main trap: the argument treats swarms only as a warning sign, and its reasoning would be equally flawed whether or not swarms cause quakes. A is tempting, but a longer record would not repair the logical gap, and D and E misdescribe the argument.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         },
         {
           "number": 10,
@@ -206,8 +250,13 @@
           "difficulty": 3,
           "explanation": "The principle states a necessary condition for extending a stop; Pratt observed nothing specific, so the condition was not met and the extension was improper (D). E is the trap: Sato's observation meets the necessary condition, but the principle never says that meeting it makes an extension proper. A relies on category information, B on what was learned afterward, and C concerns an obligation to extend, which the principle never imposes.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         },
         {
           "number": 11,
@@ -226,7 +275,13 @@
           ],
           "difficulty": 4,
           "explanation": "Eye-level placement typically raises unit sales by about 30 percent, yet the cereal gained only 5 percent, so something, most plausibly the price increase, held sales down; without it, sales would probably have risen more (C). B is the strongest trap, but it turns one item's result into a precise rule for all items. D is unsupported: with a higher price and more units sold, revenue very likely rose. A and E go beyond the information.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "causal",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 12,
@@ -247,7 +302,9 @@
           "explanation": "By contraposition, E means no one can make the required shadow showing for an 18-meter structure; since the tower is not a public utility, it cannot get a variance and so cannot be built. A is the strongest trap, but what the board has done in the past does not guarantee what it may do now. B is a true conditional whose condition is never established, C merely restates the code, and D is irrelevant.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 13,
@@ -266,7 +323,12 @@
           ],
           "difficulty": 3,
           "explanation": "Introduced by 'Admittedly,' the national decline is a concession that might suggest a broader trend rather than the campaign explains the county's decline (A). E is the trap: the argument accepts that cases fell nationwide and rejects only the inference drawn from that fact. C reverses the claim's bearing, and the claim is neither the main nor a subsidiary conclusion (B, D).",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 14,
@@ -285,7 +347,12 @@
           ],
           "difficulty": 4,
           "explanation": "The executive assumes that new premium auditoriums would earn what the existing ones earn; if current premium capacity already meets demand, added premium screenings would largely draw patrons away from standard ones or go unfilled (D). A is the trap: the comparison already concerns the very same films in both formats, so the films' popularity cannot explain the difference. C describes only a temporary loss, B concerns only some patrons, and E's effect is unclear.",
-          "skills": []
+          "skills": [
+            "plan",
+            "statistical"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 15,
@@ -304,7 +371,11 @@
           ],
           "difficulty": 4,
           "explanation": "The argument shows that the cited similarity supports Talesh borrowing from Orvic just as well as the reverse, so it cannot decide between them (B). C is the trap: the argument concludes only that similarity cannot establish the direction of borrowing, not that Orvic did not borrow from Talesh. A misreads the argument, which grants the similarity and never appeals to chance, and the argument neither generalizes (D) nor disputes the data (E).",
-          "skills": []
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 16,
@@ -323,7 +394,13 @@
           ],
           "difficulty": 4,
           "explanation": "The components presumably have to be made to work together, so rewriting the whole can take longer than rewriting each part in isolation; the manager ignores this, along with the engineers' six-month estimate (E). C is the trap but reverses the error: the manager reasons from parts to a whole, not from a group to its members. A attacks the source rather than the reasoning, and B and D describe reasoning the manager never uses.",
-          "skills": []
+          "skills": [
+            "plan"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "tags": []
         },
         {
           "number": 17,
@@ -342,7 +419,13 @@
           ],
           "difficulty": 4,
           "explanation": "The argument takes thinner layers as a sign of less rain; if seepage into the cave depends on other things, such as vegetation or soil above the cave, those could have changed four centuries ago and thinned the layers without any drop in rainfall (C). B is the trap: a recent wet spell would barely affect a four-century average and would not show whether the layers track rainfall. A concerns other caves, the researchers have already addressed temperature (E), and D merely restates what the premises already grant.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 18,
@@ -361,7 +444,14 @@
           ],
           "difficulty": 4,
           "explanation": "A shows, under controlled conditions where witness memory cannot explain the result, that an administrator's knowledge alone can steer witnesses toward a designated person, which is the mechanism the researchers propose. C is the trap: longer delays could weaken witnesses' memories and account for more filler picks without any steering, so C weakens the argument. B, D, and E do not bear on why the pattern of identifications changed.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 19,
@@ -382,7 +472,11 @@
           "explanation": "The analyst chains two 'most' statements whose middle groups differ (most A are B; most B are C), which does not guarantee any overlap between A and C, since the B's that are A may be exactly the B's that are not C; D repeats this error. A is the main trap: both of its 'most' statements are about the same group of pruned trees, so the two majorities must overlap and the reasoning is valid. B is also valid, C commits a different error (reversing 'most'), and E turns 'most' into certainty.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "tags": []
         },
         {
           "number": 20,
@@ -401,7 +495,14 @@
           ],
           "difficulty": 4,
           "explanation": "The objection works only if the age gap could account for at least part of the difference in heart disease rates; if older commuters were at no greater risk, the younger age of the cyclists would not bias the result in the researchers' favor (B). C is the main trap: to show the conclusion unwarranted, the argument needs age to be a possible explanation, not the complete one. A is likewise too strong, since the argument does not claim cycling has no benefit, and D and E are not needed.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 21,
@@ -421,8 +522,11 @@
           "difficulty": 5,
           "explanation": "E's contrapositive says that when a use meets an important need that cannot be met elsewhere and imposes no substantial costs, the permit should not be denied, which matches the argument's premises and yields its conclusion. C is the hardest trap: when no other site is available, it removes one requirement to deny, but it never says the permit should be granted. B does not apply because the argument concedes some decline in property values is likely, and A and D do not connect the premises to the conclusion.",
           "skills": [
-            "conditional"
-          ]
+            "principle",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 22,
@@ -442,8 +546,11 @@
           "difficulty": 5,
           "explanation": "Mainland borrowings are stressed on the first syllable in every Kessavan dialect, and 'tamesh' was stressed on the second syllable in the Ollo dialect, so in that dialect it is not a mainland borrowing (C). A is the main trap: 'tamesh' could have been borrowed from some third language, which the stimulus says nothing about. B fails for the same reason, since the stress pattern of words from other sources, or in other dialects, is unknown. D overreaches (stress could fall on a later syllable), and E ignores native words with long first vowels.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 23,
@@ -464,7 +571,9 @@
           "explanation": "The Gilded Gate was restored either by the Calder process or by the archive's laboratory. The Calder branch already means lost color, and A, by contraposition, says every film the laboratory restored has also lost color, so either way the film is excluded. D is the closest trap, but 'most' leaves open that The Gilded Gate is a laboratory restoration that kept all its color. E reverses the needed conditional, B is irrelevant, and C does not say whether the laboratory's process loses color.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 24,
@@ -483,7 +592,13 @@
           ],
           "difficulty": 5,
           "explanation": "If, say, 90 percent of Halvern's laptops run the older version, then their accounting for 80 percent of breaches would make them, if anything, less likely to be breached; the argument confuses share of breaches with rate of breaches (D). A is the main trap: the conclusion says only that older-version laptops are more likely to be involved in breaches, not why, so it makes no causal claim about the software's design. B is tempting, but a single year's data does not make the comparison itself invalid, C ignores that the conclusion concerns only Halvern, and E is not in the argument.",
-          "skills": []
+          "skills": [
+            "statistical"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "tags": []
         },
         {
           "number": 25,
@@ -504,7 +619,9 @@
           "explanation": "The geologist validly reasons that garnet-bearing Tellis samples must show high-pressure metamorphism, no quarry sample does, and so no Tellis sample from the quarry contains garnet; B matches this exactly. D is the main trap: its conclusion covers all eastern-marsh birds, but its premise covers only Pellam birds, so unlike the original it does not limit the conclusion to the overlapping group. A denies the sufficient condition, C affirms the necessary one, and E treats 'some' as if it were 'all.'",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         }
       ]
     },
@@ -517,22 +634,26 @@
         {
           "id": "p1",
           "title": "Repetition in Malek’s The Salt Ledger",
-          "text": "When Teodora Malek’s final novel, The Salt Ledger, appeared in English, reviewers were nearly unanimous in their complaint: the book repeats itself. Entire sentences recur, sometimes verbatim, sometimes with a single word altered; characters are introduced with the same epithet each time they appear; and the narrator returns, at intervals that seem arbitrary, to a description of the harbor at low tide. Most critics attributed these features to the fatigue of an aging writer or to an editorial process too deferential to correct them. Such explanations, however, assume that Malek was attempting the kind of novel her earlier books had been—densely plotted, psychologically intimate realism—and fell short. A more productive assumption is that she was attempting something else entirely.\n\nMalek grew up in the fishing villages of the Dravan coast, where, as she recounts in her memoir, evenings were given over to the recitation of long communal narratives. Those narratives were never fixed texts. A teller rebuilt each one from a stock of formulaic phrases and recurring scenes, and listeners, who already knew the outline of the story, judged a performance by how artfully the teller varied the familiar. Repetition in this setting was not redundancy but structure: a recurring phrase signaled to the audience where they stood in the tale, and a small change in a phrase they knew by heart carried more weight than any new sentence could.\n\nRead in this light, the repetitions in The Salt Ledger become legible. The harbor passage, for instance, recurs seven times, and each recurrence alters one detail—a boat missing, a mooring line frayed—that registers the losses the village has suffered since the last telling. A reader who skims the passage as filler misses some of the novel’s most important events, which Malek deliberately refuses to narrate directly. The epithets work similarly: when the widow Anka, called “the patient one” throughout, is finally called “the patient one, still,” the single added word conveys a judgment the narrator never voices. Not every repetition yields to this reading. A few sentences in the middle chapters recur unaltered and seem to do no work at all, and it is possible that these, at least, are the lapses the critics took the whole book to be. But an interpretation need not redeem every sentence to be preferable to one that redeems none.\n\nThe English translation obscured much of this. Its translator, evidently treating the repetitions as lapses, varied the wording of recurring passages to avoid monotony, so that Malek’s small, deliberate alterations are lost among many incidental ones. It would be too much to say that the critics’ verdict was produced entirely by the translation; some reviewers who read the original voiced the same complaint. But a reader of the English edition was given little chance to notice that the book’s apparent flaws follow a pattern. What looks like a novelist losing control of her material may instead be a novelist returning, at the end of her career, to the oldest form of control she knew."
+          "text": "When Teodora Malek’s final novel, The Salt Ledger, appeared in English, reviewers were nearly unanimous in their complaint: the book repeats itself. Entire sentences recur, sometimes verbatim, sometimes with a single word altered; characters are introduced with the same epithet each time they appear; and the narrator returns, at intervals that seem arbitrary, to a description of the harbor at low tide. Most critics attributed these features to the fatigue of an aging writer or to an editorial process too deferential to correct them. Such explanations, however, assume that Malek was attempting the kind of novel her earlier books had been—densely plotted, psychologically intimate realism—and fell short. A more productive assumption is that she was attempting something else entirely.\n\nMalek grew up in the fishing villages of the Dravan coast, where, as she recounts in her memoir, evenings were given over to the recitation of long communal narratives. Those narratives were never fixed texts. A teller rebuilt each one from a stock of formulaic phrases and recurring scenes, and listeners, who already knew the outline of the story, judged a performance by how artfully the teller varied the familiar. Repetition in this setting was not redundancy but structure: a recurring phrase signaled to the audience where they stood in the tale, and a small change in a phrase they knew by heart carried more weight than any new sentence could.\n\nRead in this light, the repetitions in The Salt Ledger become legible. The harbor passage, for instance, recurs seven times, and each recurrence alters one detail—a boat missing, a mooring line frayed—that registers the losses the village has suffered since the last telling. A reader who skims the passage as filler misses some of the novel’s most important events, which Malek deliberately refuses to narrate directly. The epithets work similarly: when the widow Anka, called “the patient one” throughout, is finally called “the patient one, still,” the single added word conveys a judgment the narrator never voices. Not every repetition yields to this reading. A few sentences in the middle chapters recur unaltered and seem to do no work at all, and it is possible that these, at least, are the lapses the critics took the whole book to be. But an interpretation need not redeem every sentence to be preferable to one that redeems none.\n\nThe English translation obscured much of this. Its translator, evidently treating the repetitions as lapses, varied the wording of recurring passages to avoid monotony, so that Malek’s small, deliberate alterations are lost among many incidental ones. It would be too much to say that the critics’ verdict was produced entirely by the translation; some reviewers who read the original voiced the same complaint. But a reader of the English edition was given little chance to notice that the book’s apparent flaws follow a pattern. What looks like a novelist losing control of her material may instead be a novelist returning, at the end of her career, to the oldest form of control she knew.",
+          "subject": "humanities"
         },
         {
           "id": "p2",
           "title": "Contracts made by software agents",
-          "text": "Passage A\n\nSoftware agents now routinely negotiate and conclude transactions on behalf of the people who deploy them: they reorder supplies, book travel, and bid in auctions, often without any human reviewing the particular terms. When such an agent strikes a bargain its user later regrets, courts must decide whether the user is bound. The answer should be yes, in nearly every case.\n\nThe traditional requirement of mutual assent is not offended by this conclusion. A person who sets an agent loose in a marketplace has manifested, by that very act, a willingness to be bound by the transactions it concludes, just as a merchant who installs a vending machine has manifested a willingness to sell at the posted price to anyone who inserts the coins. The assent is general rather than particular, but contract law has long recognized general assent; no one supposes that the vending-machine owner must approve each sale. It may be objected that a user cannot assent to a term she could not foresee. But contract law has never required foresight of every term: a person who signs a lengthy standard form without reading it is bound by provisions that surprise her.\n\nThere is also a practical argument. The counterparty to an automated transaction usually cannot see how the agent was configured or what limits its user intended to impose. The user, by contrast, chose the agent, set its parameters, and can monitor its conduct. If losses from an agent’s unexpected bargains must fall on someone, they should fall on the party best positioned to prevent them. A rule permitting users to disown inconvenient transactions would invite strategic repudiation and would make counterparties reluctant to deal with agents at all, sacrificing the efficiencies that make such agents valuable.\n\nPassage B\n\nProposals to hold users strictly bound by whatever their software agents agree to rest on a misleading picture of how these agents work. A vending machine executes a fixed offer its owner composed in advance; the owner knows every transaction it can conclude. Contemporary agents, by contrast, generate terms their users never contemplated, sometimes by combining provisions in ways no one designed. To say that a user “assented” to such terms by deploying the agent stretches the notion of assent until it means nothing more than causation.\n\nA better model already exists in the law of agency. A human agent binds the principal only when acting within the authority the principal conferred, or when the principal’s own conduct led the other party reasonably to believe such authority existed. Applied to software, this framework would bind users to transactions within the parameters they set—a spending ceiling, a list of approved vendors—and to transactions a counterparty reasonably believed were authorized, given the representations the user made about the agent. Transactions outside both categories would not bind the user.\n\nThis approach preserves the incentive that strict liability is meant to create: users who wish to be bound broadly can say so, and users who describe their agents carelessly will bear the consequences. But it also recognizes that some transactions are malfunctions rather than bargains, and that a counterparty who accepts terms no reasonable user would authorize—an order for ten thousand times the customary quantity, say—is not an innocent party deserving protection."
+          "text": "Passage A\n\nSoftware agents now routinely negotiate and conclude transactions on behalf of the people who deploy them: they reorder supplies, book travel, and bid in auctions, often without any human reviewing the particular terms. When such an agent strikes a bargain its user later regrets, courts must decide whether the user is bound. The answer should be yes, in nearly every case.\n\nThe traditional requirement of mutual assent is not offended by this conclusion. A person who sets an agent loose in a marketplace has manifested, by that very act, a willingness to be bound by the transactions it concludes, just as a merchant who installs a vending machine has manifested a willingness to sell at the posted price to anyone who inserts the coins. The assent is general rather than particular, but contract law has long recognized general assent; no one supposes that the vending-machine owner must approve each sale. It may be objected that a user cannot assent to a term she could not foresee. But contract law has never required foresight of every term: a person who signs a lengthy standard form without reading it is bound by provisions that surprise her.\n\nThere is also a practical argument. The counterparty to an automated transaction usually cannot see how the agent was configured or what limits its user intended to impose. The user, by contrast, chose the agent, set its parameters, and can monitor its conduct. If losses from an agent’s unexpected bargains must fall on someone, they should fall on the party best positioned to prevent them. A rule permitting users to disown inconvenient transactions would invite strategic repudiation and would make counterparties reluctant to deal with agents at all, sacrificing the efficiencies that make such agents valuable.\n\nPassage B\n\nProposals to hold users strictly bound by whatever their software agents agree to rest on a misleading picture of how these agents work. A vending machine executes a fixed offer its owner composed in advance; the owner knows every transaction it can conclude. Contemporary agents, by contrast, generate terms their users never contemplated, sometimes by combining provisions in ways no one designed. To say that a user “assented” to such terms by deploying the agent stretches the notion of assent until it means nothing more than causation.\n\nA better model already exists in the law of agency. A human agent binds the principal only when acting within the authority the principal conferred, or when the principal’s own conduct led the other party reasonably to believe such authority existed. Applied to software, this framework would bind users to transactions within the parameters they set—a spending ceiling, a list of approved vendors—and to transactions a counterparty reasonably believed were authorized, given the representations the user made about the agent. Transactions outside both categories would not bind the user.\n\nThis approach preserves the incentive that strict liability is meant to create: users who wish to be bound broadly can say so, and users who describe their agents carelessly will bear the consequences. But it also recognizes that some transactions are malfunctions rather than bargains, and that a counterparty who accepts terms no reasonable user would authorize—an order for ten thousand times the customary quantity, say—is not an innocent party deserving protection.",
+          "subject": "law"
         },
         {
           "id": "p3",
           "title": "The Tabrin Basin polygons",
-          "text": "Across the floor of the Tabrin Basin, an arid lowland far from any present-day glacier, the ground is divided into a network of low ridges that outline polygons, most of them between fifteen and thirty meters across. Beneath each ridge lies a narrow, wedge-shaped body of sand that tapers downward to a depth of three or four meters. Two explanations for these features have been proposed, and the dispute between them has implications for the region’s climate history.\n\nThe first explanation holds that the polygons are giant desiccation cracks. When a layer of wet, clay-rich sediment dries, it shrinks, and the resulting stress is relieved by cracks that join into polygonal networks; windblown sand can then fill the cracks. The Tabrin Basin is known to have held a lake during wetter periods, and the drying of that lake would have left exactly the kind of clay layer in which such cracks form. Proponents note that desiccation polygons of considerable size have been documented on other dried lakebeds.\n\nThe second explanation holds that the polygons are relics of permafrost. In very cold climates, frozen ground contracts in winter and cracks; meltwater or windblown sediment enters the cracks, and over many centuries the repeated process builds vertical wedges that push the adjacent ground up into ridges. When the climate warms, any ice in the wedges melts and the space fills with sediment, leaving a “cast” of the former wedge. On this view, the Tabrin Basin was once far colder than any current reconstruction of its climate allows.\n\nThe size and depth of the features favor the second explanation. Desiccation cracks penetrate only about as deep as the drying layer, and the polygons they form are typically a few meters across at most; the large dried-lake examples are exceptional, and even they are bounded by cracks that rarely exceed a meter in depth. Wedges three meters deep would require a drying clay layer of comparable thickness, yet the clay deposits in the basin are nowhere more than half a meter thick. Moreover, much of the sand in the Tabrin wedges is arranged in thin vertical laminae, the pattern produced when sediment trickles repeatedly into a crack that reopens year after year—a hallmark of seasonal thermal contraction rather than of a single episode of drying. Proponents of the desiccation hypothesis have yet to explain these laminae. Admittedly, the permafrost explanation carries a cost its rival does not: it requires a cold interval for which no independent evidence has yet been found, and a hypothesis that demands revising a region’s climate record ought to meet a higher burden than one that does not. But a higher burden is not an insurmountable one, and unless the laminae can be otherwise explained, the basin’s polygons are best read as evidence of a cold interval that climate reconstructions have so far missed."
+          "text": "Across the floor of the Tabrin Basin, an arid lowland far from any present-day glacier, the ground is divided into a network of low ridges that outline polygons, most of them between fifteen and thirty meters across. Beneath each ridge lies a narrow, wedge-shaped body of sand that tapers downward to a depth of three or four meters. Two explanations for these features have been proposed, and the dispute between them has implications for the region’s climate history.\n\nThe first explanation holds that the polygons are giant desiccation cracks. When a layer of wet, clay-rich sediment dries, it shrinks, and the resulting stress is relieved by cracks that join into polygonal networks; windblown sand can then fill the cracks. The Tabrin Basin is known to have held a lake during wetter periods, and the drying of that lake would have left exactly the kind of clay layer in which such cracks form. Proponents note that desiccation polygons of considerable size have been documented on other dried lakebeds.\n\nThe second explanation holds that the polygons are relics of permafrost. In very cold climates, frozen ground contracts in winter and cracks; meltwater or windblown sediment enters the cracks, and over many centuries the repeated process builds vertical wedges that push the adjacent ground up into ridges. When the climate warms, any ice in the wedges melts and the space fills with sediment, leaving a “cast” of the former wedge. On this view, the Tabrin Basin was once far colder than any current reconstruction of its climate allows.\n\nThe size and depth of the features favor the second explanation. Desiccation cracks penetrate only about as deep as the drying layer, and the polygons they form are typically a few meters across at most; the large dried-lake examples are exceptional, and even they are bounded by cracks that rarely exceed a meter in depth. Wedges three meters deep would require a drying clay layer of comparable thickness, yet the clay deposits in the basin are nowhere more than half a meter thick. Moreover, much of the sand in the Tabrin wedges is arranged in thin vertical laminae, the pattern produced when sediment trickles repeatedly into a crack that reopens year after year—a hallmark of seasonal thermal contraction rather than of a single episode of drying. Proponents of the desiccation hypothesis have yet to explain these laminae. Admittedly, the permafrost explanation carries a cost its rival does not: it requires a cold interval for which no independent evidence has yet been found, and a hypothesis that demands revising a region’s climate record ought to meet a higher burden than one that does not. But a higher burden is not an insurmountable one, and unless the laminae can be otherwise explained, the basin’s polygons are best read as evidence of a cold interval that climate reconstructions have so far missed.",
+          "subject": "natural-science"
         },
         {
           "id": "p4",
           "title": "Why rotating savings associations persist",
-          "text": "In many parts of the world, small groups of people pool their savings through rotating associations: each member contributes a fixed sum at every meeting, and the entire pot goes to one member in turn until everyone has received it once. For several decades, the prevailing interpretation among economists, associated most closely with the work of Hollis Brandt, treated these associations as a substitute for banking. Members, on this view, lack access to formal financial institutions and so improvise a crude mechanism for accumulating lump sums. The prediction followed naturally: as banks extend their reach, the associations should wither.\n\nThat prediction has fared poorly. In a survey of market vendors in the city of Merovale, conducted a decade after a national program brought bank branches to nearly every district, the anthropologist Ines Valdora found that more than half of the vendors who held bank accounts also belonged to at least one rotating association, and many contributed more to their associations than they deposited in their accounts. Nor could the persistence be attributed to mere habit: new associations were forming at roughly the same rate as before the branches opened. Nor did members appear to distrust banks: association members were no more likely than nonmembers to describe banks as unsafe, and almost none had closed an account.\n\nValdora’s interviews suggest why. Vendors repeatedly described the associations not as a way to obtain savings services they otherwise lacked but as a way to protect their savings from themselves and from others. Money in a bank account can be withdrawn whenever a relative asks for help or a tempting purchase appears; a contribution owed to the association at the next meeting cannot be postponed without public embarrassment. The association thus supplies something a bank account does not: an obligation, enforced by the regard of one’s neighbors, to keep saving. Some vendors added that a pot received from the association was easier to refuse to share than a bank balance, because it was understood to be earmarked for a purpose announced to the group in advance.\n\nNone of this implies that Brandt was simply wrong. Where banks were absent, the associations surely did serve as substitutes, and the earlier interpretation helps explain why they were once so widespread. Its error was to infer, from the circumstances in which the associations flourished, the full set of needs they meet. Valdora’s sample, drawn from the vendors of a single city, cannot by itself show that the same needs sustain associations elsewhere; it is enough, however, to show that the substitution account is incomplete. A practice adopted for one reason may persist for another, and only by observing what happens when the original reason disappears can the two be separated."
+          "text": "In many parts of the world, small groups of people pool their savings through rotating associations: each member contributes a fixed sum at every meeting, and the entire pot goes to one member in turn until everyone has received it once. For several decades, the prevailing interpretation among economists, associated most closely with the work of Hollis Brandt, treated these associations as a substitute for banking. Members, on this view, lack access to formal financial institutions and so improvise a crude mechanism for accumulating lump sums. The prediction followed naturally: as banks extend their reach, the associations should wither.\n\nThat prediction has fared poorly. In a survey of market vendors in the city of Merovale, conducted a decade after a national program brought bank branches to nearly every district, the anthropologist Ines Valdora found that more than half of the vendors who held bank accounts also belonged to at least one rotating association, and many contributed more to their associations than they deposited in their accounts. Nor could the persistence be attributed to mere habit: new associations were forming at roughly the same rate as before the branches opened. Nor did members appear to distrust banks: association members were no more likely than nonmembers to describe banks as unsafe, and almost none had closed an account.\n\nValdora’s interviews suggest why. Vendors repeatedly described the associations not as a way to obtain savings services they otherwise lacked but as a way to protect their savings from themselves and from others. Money in a bank account can be withdrawn whenever a relative asks for help or a tempting purchase appears; a contribution owed to the association at the next meeting cannot be postponed without public embarrassment. The association thus supplies something a bank account does not: an obligation, enforced by the regard of one’s neighbors, to keep saving. Some vendors added that a pot received from the association was easier to refuse to share than a bank balance, because it was understood to be earmarked for a purpose announced to the group in advance.\n\nNone of this implies that Brandt was simply wrong. Where banks were absent, the associations surely did serve as substitutes, and the earlier interpretation helps explain why they were once so widespread. Its error was to infer, from the circumstances in which the associations flourished, the full set of needs they meet. Valdora’s sample, drawn from the vendors of a single city, cannot by itself show that the same needs sustain associations elsewhere; it is enough, however, to show that the substitution account is incomplete. A practice adopted for one reason may persist for another, and only by observing what happens when the original reason disappears can the two be separated.",
+          "subject": "social-science"
         }
       ],
       "questions": [
@@ -1075,7 +1196,11 @@
           ],
           "difficulty": 2,
           "explanation": "The curator's main claim, stated in the third sentence, is that the rotation is justified regardless of its effect on attendance; the dye and conservation facts support it, so C is correct. E is the claim that most directly supports the conclusion, not the conclusion itself. B echoes the concession, which the curator grants but does not argue for.",
-          "skills": []
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 2,
@@ -1094,7 +1219,13 @@
           ],
           "difficulty": 2,
           "explanation": "Controlling for age and caffeine does not rule out every common cause; a factor such as stress could drive both the choice of activity and sleep speed, which A identifies. C is wrong because the survey included phone users as well as readers. D misdescribes the argument, which says nothing about other activities being ineffective.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 3,
@@ -1114,8 +1245,11 @@
           "difficulty": 3,
           "explanation": "The Glass Orchard has no orchestra, so it is not a musical; there are no revivals this season, so it is not a revival; hence it cannot run longer than four weeks, which is D. B reverses a conditional: an orchestra is required for musicals, not limited to them. A is tempting because its first half must be true, but nothing says every other production is a new drama.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 4,
@@ -1134,7 +1268,14 @@
           ],
           "difficulty": 2,
           "explanation": "B supplies a comparison group: routes without the extension saw no daytime gain, which makes it less likely that a citywide factor caused Route 9's increase. A is the tempting trap, but a 2 percent trend explains only a small part of a 12 percent rise and, if anything, slightly weakens the argument. E concerns late-night riders, not why daytime ridership rose.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 5,
@@ -1153,7 +1294,12 @@
           ],
           "difficulty": 3,
           "explanation": "The sediment evidence supports the claim, and the claim in turn supports the conclusion that the find gives little support to the pack-hunting hypothesis, so it is an intermediate conclusion, as E says. D is the main trap: the argument never concludes that Ostranax did not hunt in packs, only that this find does not support the idea. A is wrong because the overall conclusion is the final sentence.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 6,
@@ -1172,7 +1318,12 @@
           ],
           "difficulty": 3,
           "explanation": "For low-income households not to be worse off, their savings from the subsidies must at least match what they pay in the tax; if the savings were smaller, the conclusion would fail, so C is required. E is tempting but not necessary: even if low-income households paid most of the tax, they could still recoup it through the subsidies. A and D are not needed by the argument.",
-          "skills": []
+          "skills": [
+            "statistical",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 7,
@@ -1191,7 +1342,12 @@
           ],
           "difficulty": 2,
           "explanation": "B gives a reason Kenrite becomes less effective at higher temperature, explaining why the catalyzed reaction is slower at 40°C despite the general trend. A merely restates part of the puzzle. D and E point the other way, making the result even more surprising.",
-          "skills": []
+          "skills": [
+            "causal",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 8,
@@ -1210,7 +1366,14 @@
           ],
           "difficulty": 3,
           "explanation": "D shows that the crews could not have advanced the project in February anyway, so the steel delay, not the reassignment, explains the late finish. E suggests the supplier is often late but does not show that its lateness caused this delay. A is about other contracts and, if anything, supports the arbitrator.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 9,
@@ -1229,7 +1392,16 @@
           ],
           "difficulty": 4,
           "explanation": "The critic rules out the modern setting as a cause of this success merely because it did not produce success in another production, ignoring that it could work in combination with other features here; A describes this. C is the most tempting trap, but that possibility would support the critic's conclusion rather than expose a flaw in it. D overstates the critic's conclusion, which rejects only one explanation and does not claim the success is unexplained.",
-          "skills": []
+          "skills": [
+            "causal",
+            "analogy",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation",
+            "flawed-analogy"
+          ],
+          "tags": []
         },
         {
           "number": 10,
@@ -1248,7 +1420,12 @@
           ],
           "difficulty": 4,
           "explanation": "Twenty-minute nappers still lagged on recalling event order, and longer nappers did no better than twenty-minute nappers, so no nap of twenty minutes or more reversed that impairment; E follows closely. C is the trap: shorter naps were never tested, and longer naps were equally good, so 'most beneficial' is unsupported. A overstates, since longer naps were no better, not worse.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "comparison"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 11,
@@ -1268,8 +1445,11 @@
           "difficulty": 4,
           "explanation": "The principle requires both congestion reduction and affordability under the current budget. B, stated as a contrapositive, means any line cheaper than Northgate can be built within the current budget, which completes the argument. E is the strongest trap but concerns the budget at the time Northgate was built, not the current one. C reverses the principle's conditional.",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "principle"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 12,
@@ -1289,8 +1469,13 @@
           "difficulty": 4,
           "explanation": "The principle states only necessary conditions for excusal. A rainy season that began at its usual time was foreseeable, so the landscaper fails a necessary condition and should not be excused, as C says. A is the main trap: the caterer meets both conditions, but under an 'only if' principle that does not establish that excusal is warranted. D excuses a party whose failure stemmed from foreseeable circumstances, and E treats unforeseeability as a reason against excusal.",
           "skills": [
+            "principle",
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "tags": []
         },
         {
           "number": 13,
@@ -1310,8 +1495,11 @@
           "difficulty": 3,
           "explanation": "Ilse says museums should display reproductions instead of fragile originals; Tomas says the originals can be shown and should not be replaced, so they disagree about E. C is a trap: Tomas does not deny that copies convey the same information, only that information is all visitors gain. Both agree on A, and Ilse says nothing about D.",
           "skills": [
-            "debate"
-          ]
+            "debate",
+            "principle"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 14,
@@ -1330,7 +1518,12 @@
           ],
           "difficulty": 4,
           "explanation": "The argument notes that deliberate addition predicts uniform tint, observes that tint is not uniform, and proposes that copper came from the clay, which fits the observed variation, as A describes. C is the closest trap, but the argument does not claim its alternative is the only possible one or that it must be true; it says 'most likely' and supports it with the clay-content evidence. E is wrong because the argument does not dispute the chemists' evidence.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 15,
@@ -1349,7 +1542,14 @@
           ],
           "difficulty": 4,
           "explanation": "Revenue rising after the cut does not show the cut failed to reduce revenue relative to what it would otherwise have been, perhaps because of general economic growth; D identifies this overlooked possibility. B is the trap: relocation spurred by the cut would mean the cut raised revenue, supporting the economist rather than exposing a flaw. C is wrong because the economist draws no conclusion beyond Ardell.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 16,
@@ -1368,7 +1568,14 @@
           ],
           "difficulty": 5,
           "explanation": "If drying caused the fires, then drying would be the underlying cause of the shift, and the argument's contrast between fires and drying would collapse; so the argument requires B. D is the main trap but is too strong: the argument claims only that fires were the primary cause, which is compatible with some drying having occurred. A, C, and E concern matters the argument need not address.",
-          "skills": []
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 17,
@@ -1388,8 +1595,11 @@
           "difficulty": 5,
           "explanation": "An actor who did not appear in The Tollkeeper must have appeared in Mariner, and so trained at Calder and was not under 25; thus E cannot be true. D is the trap, but it actually must be true by the same reasoning. A is a second trap: nothing restricts the Ines Workshop to actors under 25, so a Mariner actor over 25 could have trained at both schools. B and C are consistent with the statements (C holds if no actor was under 25).",
           "skills": [
-            "conditional"
-          ]
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 18,
@@ -1408,7 +1618,13 @@
           ],
           "difficulty": 4,
           "explanation": "C shows that the sleep advantage disappears when window desks receive little daylight, tying the effect to light exposure rather than to anything else about window desks. D is the trap: it links light and sleep, but concerns evening artificial light, not daytime natural light. B weakens the argument, and A offers another difference between the groups that could itself explain the gap.",
-          "skills": []
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "tags": []
         },
         {
           "number": 19,
@@ -1429,7 +1645,9 @@
           "explanation": "A matches the structure exactly: if X then Y or Z; not Z unless W; not W; so if X then Y. C is the trap: it uses the same disjunction-elimination step but lacks the opening conditional and draws an unconditional conclusion. B and D conclude the eliminable disjunct from an affirmed condition, and E uses a conjunction and concludes by denying the antecedent.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 20,
@@ -1448,7 +1666,15 @@
           ],
           "difficulty": 4,
           "explanation": "D shows that the comparison is between different populations: app users are self-selected and likely more interested to begin with, so the increase may not reflect any change the app produced. C is the trap; it actually strengthens the argument by ruling out a museum-wide trend. E, if anything, suggests a reason the app might increase engagement, and B concerns the number of visitors rather than how long each stays.",
-          "skills": []
+          "skills": [
+            "causal",
+            "comparison",
+            "sampling"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "tags": []
         },
         {
           "number": 21,
@@ -1469,7 +1695,9 @@
           "explanation": "The argument needs R7 to be stable at room temperature. Under E, since R7 does not react with water it contains no nitro group (contrapositive), and as an Oduya compound without a nitro group it is stable, so the conclusion follows. A and B are the traps: each supplies only half of this chain. C would still require knowing that R7 lacks a nitro group, and D reverses the first conditional.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 22,
@@ -1488,7 +1716,12 @@
           ],
           "difficulty": 5,
           "explanation": "Because footprints and skeletons are best preserved in different settings, the contrasting patterns for the two species suggest that where each species spent time or died affected what was preserved, which supports the hedged claim in B. C is the main trap: the stimulus says only where footprints and skeletons are best preserved and gives river channels merely as an example of rapid burial, so it does not establish that both kinds of deposit are present. D overstates by turning a tendency into a guarantee, and A ignores that preservation, not population size, may explain the pattern.",
-          "skills": []
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 23,
@@ -1507,7 +1740,14 @@
           ],
           "difficulty": 5,
           "explanation": "The attorney moves from the claim that a reasonable buyer would feel some concern to the conclusion that the inspection was unsatisfactory, without showing that mere concern makes an inspection unsatisfactory; C describes this gap. D is tempting because the attorney and seller understand 'satisfactory' differently, but the attorney's own argument uses the term in only one sense, so there is no equivocation within it. E fails because the attorney's argument is compatible with the house being structurally sound overall.",
-          "skills": []
+          "skills": [
+            "rebuttal",
+            "principle"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "tags": []
         },
         {
           "number": 24,
@@ -1526,7 +1766,13 @@
           ],
           "difficulty": 3,
           "explanation": "The columnist argues that a cheaper rebate would help low-income residents at least as much without the service cuts, so the exemption should be rejected; A captures exactly this reasoning. D is tempting but too broad, and it would also rule out the rebate the columnist favors. B supports the exemption rather than opposing it.",
-          "skills": []
+          "skills": [
+            "principle",
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [],
+          "tags": []
         },
         {
           "number": 25,
@@ -1547,7 +1793,11 @@
           "explanation": "The original chains two 'most' statements (most A are B; most B are C; so most A are C), ignoring that the A's may be among the B's that are not C. D commits the same error. E also combines two 'most' claims, but both describe the same group and the flaw concerns overlap within it, a different structure. A and B are valid, and C reverses a single 'most' statement.",
           "skills": [
             "conditional"
-          ]
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "tags": []
         }
       ]
     }
