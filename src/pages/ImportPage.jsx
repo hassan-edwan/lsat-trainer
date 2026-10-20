@@ -3,7 +3,7 @@ import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { normalizeImport, parseTestText } from '../lib/importer.js';
 import { typeLabel } from '../lib/taxonomy.js';
-import { loadSampleTest } from './Home.jsx';
+import { loadBundledTests } from './Home.jsx';
 
 const TEXT_EXAMPLE = `# My Practice Test 1
 ## Section: LR | 35
@@ -130,9 +130,9 @@ export default function ImportPage() {
       )}
 
       <section className="card">
-        <h2>No tests yet?</h2>
-        <p>Load the sample test of original questions to try the interface.</p>
-        <button onClick={async () => { await loadSampleTest(addTests); navigate('/'); }}>Load sample test</button>
+        <h2>Built-in practice tests</h2>
+        <p>Load (or reload, after an update) the original practice tests that come with the app. Your history is kept.</p>
+        <button onClick={async () => { await loadBundledTests(addTests); navigate('/'); }}>Load the practice tests</button>
       </section>
     </div>
   );

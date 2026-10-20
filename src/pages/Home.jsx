@@ -5,9 +5,12 @@ import { normalizeImport } from '../lib/importer.js';
 import { createPTSession } from '../lib/session.js';
 import { scaledScore } from '../lib/analytics.js';
 
-export async function loadSampleTest(addTests) {
-  const res = await fetch(`${import.meta.env.BASE_URL}samples/sample-test.json`);
-  await addTests(normalizeImport(await res.json()));
+// Loads every bundled test listed in public/samples/index.json.
+export async function loadBundledTests(addTests) {
+  const base = `${import.meta.env.BASE_URL}samples/`;
+  const files = await (await fetch(`${base}index.json`)).json();
+  const tests = await Promise.all(files.map(async (f) => normalizeImport(await (await fetch(base + f)).json())));
+  await addTests(tests.flat());
 }
 
 function scoreText(session, test) {
@@ -42,12 +45,13 @@ export default function Home() {
             and keep a journal of the questions you miss twice.
           </p>
           <p className="muted">
-            This app doesn't include official LSAC PrepTests, because they're copyrighted. Import tests you have
-            the right to use (see <a href="#/import">Import</a>), or try the sample test of original questions.
+            The built-in tests are original, LSAT-style practice tests written for this project. This app
+            doesn't include official LSAC PrepTests, because they're copyrighted, but you can import tests you
+            have the right to use (see <a href="#/import">Import</a>).
           </p>
           <div className="row">
-            <button className="primary" disabled={busy} onClick={async () => { setBusy(true); await loadSampleTest(addTests); setBusy(false); }}>
-              Load sample test
+            <button className="primary" disabled={busy} onClick={async () => { setBusy(true); await loadBundledTests(addTests); setBusy(false); }}>
+              Load the practice tests
             </button>
             <a className="button" href="#/import">Import tests</a>
           </div>
