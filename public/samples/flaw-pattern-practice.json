@@ -1,0 +1,1510 @@
+{
+  "format": "lsat-trainer/v1",
+  "id": "flaw-pattern-practice",
+  "name": "Flaw Pattern Practice Set",
+  "number": 4,
+  "source": "Original LR questions written for LSAT Trainer, five per flaw pattern at difficulty 2–5. Not LSAC material. MIT licensed.",
+  "sections": [
+    {
+      "id": "patterns-a",
+      "kind": "LR",
+      "title": "Flaw Patterns: Term Shift, False Choice, Circular, Straw Man",
+      "timeLimitMinutes": 28,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "In 600 playtest games of the board game Saltmarsh, each of the four starting factions won very nearly a quarter of the time. Reviewer Dana Okafor has nonetheless complained that Saltmarsh is unbalanced, because a player who falls behind in the first few rounds almost never catches up. But the playtest results show that no faction enjoys an advantage over any other. Saltmarsh is therefore balanced, and Okafor's complaint is mistaken.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "dismisses the reviewer's complaint by questioning her motives rather than addressing her reasons",
+            "presumes that what is true of each faction individually must be true of the game as a whole",
+            "treats evidence that the game is balanced in one sense as showing that it is not unbalanced in a different sense",
+            "fails to establish that a player who falls behind early can never catch up",
+            "concludes that the complaint is false merely because it has not been proven true"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "statistical",
+            "rebuttal"
+          ],
+          "flaws": [
+            "equivocation"
+          ],
+          "explanation": "Equivocation: the playtest data show balance among factions (each wins about equally often), but Okafor's complaint concerns balance within a game (whether a trailing player can recover). Using the first sense to refute a claim made in the second sense is the flaw (C). The tempting trap is (B), but the argument never moves from a property of each faction to the game; its error is a shift in what 'balanced' means. (E) fails because the argument cites positive evidence rather than a mere lack of proof."
+        },
+        {
+          "number": 2,
+          "stimulus": "Harlow Marine Insurance offers a reduced premium to cargo vessels that are classed as seaworthy by the Tessaly Register. Analysts at Harlow argue that the freighter Merin Star should receive the reduced premium. Last month an independent marine surveyor examined the Merin Star's hull, engines, and safety equipment and pronounced the vessel seaworthy, and independent surveyors' inspections are, if anything, more thorough than the Tessaly Register's.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Harlow's reduced premium requires a current Tessaly classification, which a vessel can lack even when it is physically sound.",
+            "Some independent marine surveyors are paid by the owners of the very vessels whose condition they are hired to inspect.",
+            "The Tessaly Register has occasionally classed as seaworthy vessels that were later lost at sea in ordinary weather.",
+            "The Merin Star underwent extensive repairs to its engines two months before the independent survey took place.",
+            "Most of the vessels that Harlow insures are inspected by the Tessaly Register rather than by independent surveyors."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "principle",
+            "authority"
+          ],
+          "flaws": [
+            "equivocation"
+          ],
+          "explanation": "Equivocation: Harlow's discount applies to vessels 'classed as seaworthy by the Tessaly Register,' a formal status, while the surveyor's verdict concerns physical soundness. (A) shows the two senses come apart, so the surveyor's finding does not qualify the ship. The tempting trap is (B): it hints at surveyor bias, but 'some' surveyors says nothing about this one, and even an honest verdict of physical soundness would not confer Tessaly classification. (C) criticizes the Register, which, if anything, fits the analysts' point that independent surveys are more thorough."
+        },
+        {
+          "number": 3,
+          "stimulus": "The Kessling Children's Dental Plan waives the copayment for every procedure that the plan's fee schedule classifies as preventive. Mr. Liao argues that the plan should therefore waive the copayment for his son's orthodontic retainer. After all, the orthodontist who fitted it explained that the retainer is preventive: by holding the boy's newly straightened teeth in place, it prevents them from drifting back out of alignment.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Any building that the Orland Historical Commission designates a landmark is exempt from the city's property tax. Faro's Bakery is exempt from the property tax. So the commission must have designated Faro's Bakery a landmark.",
+            "Every brick in the old Orland warehouse was fired more than a century ago, and the Orland Historical Commission protects buildings that are over a century old. So the commission should protect the warehouse.",
+            "Most residents of Orland regard Faro's Bakery as historically important. So the Orland Historical Commission, which protects historically important buildings, should designate the bakery a landmark.",
+            "The Orland Historical Commission exempts from property tax every building it has designated a landmark, and it has designated Faro's Bakery a landmark. So Faro's Bakery is exempt from the property tax.",
+            "The Orland Historical Commission exempts from property tax every building it has designated a landmark. Faro's Bakery should therefore be exempt, since residents all call it a landmark: it is the spot everyone uses when giving directions."
+          ],
+          "answer": "E",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "principle"
+          ],
+          "flaws": [
+            "equivocation"
+          ],
+          "explanation": "Equivocation: a rule applies to things that an official body classifies as 'preventive,' and the argument applies it to something called 'preventive' in an everyday sense. (E) does the same with 'landmark': the commission's formal designation versus the townspeople's informal use of the word. The strongest trap is (C), which also involves an official category, but its flaw is treating popular opinion as proof (an appeal to popularity), not a shift in a term's meaning. (A) reverses a conditional, (B) moves from parts to the whole, and (D) is valid."
+        },
+        {
+          "number": 4,
+          "stimulus": "Station WKRV's charter requires that at least half of its broadcast hours be devoted to local programming. Critics charge that WKRV now violates its charter, since its new overnight block, which accounts for a third of its broadcast hours, consists entirely of syndicated music shows produced in other states. But the station manager points out that WKRV's audience research shows its overnight listeners to be overwhelmingly residents of the station's own county. The overnight block is thus local programming, and the critics' charge fails.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Most of the programming that WKRV broadcasts during daytime hours is produced in the station's own county.",
+            "The charter's requirement concerning local programming is not restricted to programming produced in the station's own area.",
+            "A program does not count as local programming unless most of its listeners live in the station's own area.",
+            "The critics who brought the charge against WKRV do not themselves live in the station's listening area.",
+            "Syndicated shows produced in other states are rarely of particular interest to listeners in WKRV's county."
+          ],
+          "answer": "B",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "principle",
+            "rebuttal"
+          ],
+          "flaws": [
+            "equivocation"
+          ],
+          "explanation": "Equivocation: the manager calls the block 'local' because of who listens to it, while the charter may mean programming that is locally produced. The argument depends on (B): if the charter's term covered only locally produced shows, the syndicated block would not count, and the rebuttal would collapse. The strongest trap is (C), which also links 'local' to the audience, but it makes a local audience necessary, while the argument needs a local audience to be sufficient; negating (C) does not hurt the argument. (A) and (E) are not needed, and (E) points the wrong way."
+        },
+        {
+          "number": 5,
+          "stimulus": "The Lirran Glassmakers' Guild has pledged to award its seal to any submitted piece that is clear, a standard its inspectors apply with a jeweler's loupe. Three appraisers, each with decades of experience grading art glass, examined the Ostrava workshop's newest vases under gallery lighting and judged them exceptionally clear. Admittedly, the guild's inspectors found tiny seed bubbles in every vase, but they conceded that none of the bubbles can be seen with the naked eye. Since the vases are clear, the guild's refusal to award them its seal breaks its own pledge.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "treats a condition that guarantees that a piece will receive the seal as though it were a condition that every sealed piece must meet",
+            "relies on the judgment of appraisers without establishing that they are qualified to assess the quality of glass",
+            "presumes that an assessment made under gallery lighting is more reliable than one made with the aid of magnification",
+            "takes evidence that a standard is satisfied in one sense as establishing that it is satisfied in the sense in which it is actually applied",
+            "draws a conclusion about all of the workshop's glass on the basis of an examination of only its newest vases"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "principle",
+            "authority"
+          ],
+          "flaws": [
+            "equivocation"
+          ],
+          "explanation": "Equivocation: the guild's pledge uses 'clear' in the loupe-tested sense, but the argument's evidence shows the vases are clear only to the naked eye. (D) describes this abstractly. The most tempting trap is (C), since gallery lighting and magnification seem to be in competition, but the argument never disputes the inspectors' findings; it accepts that the bubbles exist and simply switches to a different sense of 'clear.' (A) names a necessary-versus-sufficient confusion the argument does not make: it uses the pledge correctly, as a sufficient condition. (B) fails because the appraisers' long experience is stated, and (E) fails because the conclusion concerns only the newest vases."
+        },
+        {
+          "number": 6,
+          "stimulus": "Carrow Province must decide where to house the refugee families arriving this year. It could house them in the provincial capital, where jobs are plentiful but rents are high, or in the rural towns of the interior, where housing is cheap but jobs are scarce. Housing all of the families in the capital would exhaust the province's resettlement budget within six months. Therefore, the province must house the arriving families in the rural towns, despite the shortage of jobs there.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "assumes without justification that employment matters more to the families than affordable housing does",
+            "overlooks the possibility that the province has housing options other than the two it considers",
+            "fails to consider whether housing the families in rural towns might eventually exhaust the budget as well",
+            "relies on a projection about the budget without identifying who prepared that projection",
+            "concludes that one option is preferable merely because it costs less than the other option"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "plan"
+          ],
+          "flaws": [
+            "false-choice"
+          ],
+          "explanation": "False choice: the argument rules out housing all of the families in the capital and concludes the province 'must' use the rural towns, ignoring options such as mid-sized cities or housing some families in the capital and some elsewhere. That is (B). The tempting trap is (E): the argument's reason is not that the rural option is merely cheaper but that the capital option is unaffordable, so its error lies in treating the two options as the only ones. (A) misreads the argument, which actually gives up job access."
+        },
+        {
+          "number": 7,
+          "stimulus": "Amateur astronomer Ilse Moreau considered two explanations for a faint streak in one of her photographs of Comet Varrick: a disconnection event, in which part of the comet's ion tail breaks away, or a reflection artifact produced inside her telescope. Reflection artifacts appear in the same position on every frame taken with the same setup, yet the streak appears on only one of her twelve frames. Moreover, Comet Varrick was crossing a boundary in the solar wind that night, which is when disconnection events occur. Moreau concludes that the streak records a genuine disconnection event.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Disconnection events have been photographed in several other comets at times when those comets were crossing boundaries in the solar wind.",
+            "Reflection artifacts are considerably more common in small telescopes of the type Moreau uses than in larger professional instruments.",
+            "Moreau's telescope has produced reflection artifacts in a number of photographs that she took of other objects on earlier occasions.",
+            "Satellite trails and meteors, the only other common sources of faint streaks in such photographs, cannot produce a streak shaped like Moreau's.",
+            "Comet Varrick crossed boundaries in the solar wind several times during the month in which Moreau's photograph was taken."
+          ],
+          "answer": "D",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "false-choice"
+          ],
+          "explanation": "False choice: Moreau reaches her conclusion by eliminating one of only two explanations she considered, so the argument is vulnerable to any third explanation. (D) rules out the remaining common alternatives and so closes the gap. The tempting trap is (A): it makes disconnection events seem plausible in general, but the stimulus already says they occur at such boundaries, and (A) does nothing to exclude explanations Moreau never considered. (C) slightly weakens the argument by making an artifact more likely."
+        },
+        {
+          "number": 8,
+          "stimulus": "The studio behind the card game Ironvale had high hopes for its revised scoring rules, which were meant to shorten games and reward bold play. Yet playtest groups who tried the revised rules did not report enjoying the game any more than groups who played under the original rules. So the revision made Ironvale less enjoyable, and the studio should restore the original scoring rules before the game's next printing.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "The new irrigation schedule at the Delmont orchards did not produce a larger apple harvest than the old schedule had. So the new schedule reduced the harvest, and the orchards should return to the old schedule next season.",
+            "The Delmont orchards' apple harvest grew larger in the season after the new irrigation schedule was adopted. So the new schedule caused the larger harvest, and the orchards should keep it next season.",
+            "Three of the Delmont orchards that adopted the new irrigation schedule produced larger harvests this year. So the new schedule will increase the harvest at any orchard that adopts it.",
+            "If the new irrigation schedule had increased the Delmont orchards' harvest, their profits would have risen. Their profits did rise. So the new schedule increased the harvest.",
+            "The new irrigation schedule at the Delmont orchards either increased the apple harvest or left it unchanged. It did not leave the harvest unchanged. So it increased the harvest, and the orchards should keep it."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [
+            "false-choice"
+          ],
+          "explanation": "False choice: the argument moves from 'not more enjoyable' to 'less enjoyable,' overlooking a third possibility, that the revision made no difference. (A) makes the same move from 'not larger' to 'reduced.' The strongest trap is (E), which also has an either/or form, but there the two options are given as premises and one is eliminated, so the reasoning is valid. (B) infers cause from sequence, (C) generalizes from a small sample, and (D) affirms the consequent."
+        },
+        {
+          "number": 9,
+          "stimulus": "Officials in the Westlake parks district have debated two responses to the emerald ash borer, an insect that kills ash trees. One is to inject every ash tree in the district with insecticide each year, at a cost the district cannot sustain for more than three years; once the injections stopped, the borers would kill the trees anyway. The other is to remove all of the district's ash trees now and replant with species the borer does not attack. Since the injections would merely postpone the trees' loss at great expense, the district should remove and replant all of its ash trees now.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Replanting the district with other species would cost less than three years of insecticide injections for every ash tree.",
+            "None of the species that would replace the ash trees will ever be seriously threatened by an invasive insect.",
+            "The district's budget for tree care will not increase substantially at any time within the next three years.",
+            "Every ash tree in the district that has not yet been attacked by the borer will be attacked within three years.",
+            "Treating some of the ash trees while replacing the rest would not serve the district better than replacing all of them now."
+          ],
+          "answer": "E",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "plan"
+          ],
+          "flaws": [
+            "false-choice"
+          ],
+          "explanation": "False choice: the argument compares only two all-or-nothing responses and concludes for one of them, so it depends on there being no better middle course. Negate (E) and a mixed approach would serve the district better, so the conclusion that it should remove all of its ash trees now collapses. The tempting trap is (A), but the argument's reason is that injections only postpone the loss, not that replanting is cheaper; the argument survives even if replanting costs more. (C) is not needed because the premise already fixes how long the district can afford injections, and (B) and (D) are far stronger than the argument requires."
+        },
+        {
+          "number": 10,
+          "stimulus": "Some underwriters at Prellwood Mutual argue that it should stop insuring wooden-hulled fishing boats, citing the boats' high claim rate. But consider the consequences. If Prellwood drops these boats, their owners will turn to Gannet Re, whose thin reserves have left claimants unpaid after major storms. If Prellwood keeps them, it must either raise their premiums, which the owners cannot afford, or absorb continued losses. Admittedly, absorbing the losses will reduce this year's dividend. Still, since dropping the boats would leave their owners with an unreliable insurer and raising premiums would price them out of coverage, Prellwood should keep insuring the boats and absorb the losses.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "misrepresents the underwriters as proposing to leave the boats' owners without any insurance at all",
+            "relies on a claim rate without establishing the absolute number of claims that the boats generate",
+            "takes for granted that the responses it considers are the only ones available to the insurer",
+            "treats a reduction in a single year's dividend as though that reduction would be permanent",
+            "fails to consider that the boats might generate fewer claims in future years than they do now"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [
+            "false-choice"
+          ],
+          "explanation": "False choice: once Prellwood keeps the boats, the argument assumes it must either raise premiums or absorb losses, ignoring other responses such as higher deductibles, required safety upgrades, or reinsurance. (C) states this abstractly. The tempting trap is (B), which names a real percent-versus-number flaw, but the argument never relies on the claim rate; only the underwriters do. (A) names a straw man that does not occur, since the argument says the owners would turn to another insurer, not that they would go uninsured. (E) names a possibility that would only help the argument's conclusion."
+        },
+        {
+          "number": 11,
+          "stimulus": "KBLR news director: Our listeners can be sure that every news report KBLR has broadcast has been accurate. All of our reports are written by our staff reporters, and every one of our staff reporters is thoroughly reliable. How, you may ask, do we know that our reporters are so reliable? Simple: every single report that KBLR has broadcast has been accurate.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "attacks the credibility of those who might doubt the accuracy of the station's reports",
+            "relies on the testimony of a source who has an interest in the station's reputation",
+            "generalizes from the reliability of a few reporters to the reliability of the entire staff",
+            "treats a condition that is necessary for accurate reporting as if it were sufficient",
+            "takes for granted the very claim that it offers its reasoning in order to support"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "authority"
+          ],
+          "flaws": [
+            "circular"
+          ],
+          "explanation": "Circular reasoning: the director concludes that every report has been accurate, supports this with the reporters' reliability, and then supports their reliability with the claim that every report has been accurate. The argument assumes what it sets out to prove (E). The tempting trap is (B): the director does have an interest, but the argument is his own reasoning rather than testimony it relies on, and dismissing it because of his interest would itself be an ad hominem. (C) fails because the director makes a claim about every reporter and generalizes from no sample."
+        },
+        {
+          "number": 12,
+          "stimulus": "The orbit for Comet Teague published by the Halvorsen Sky Survey is more accurate than the one published by the Durrel Observatory. When the Halvorsen team compared each orbit's predicted positions for the comet with the positions recorded in the Halvorsen Sky Catalog over the past year, the Durrel orbit's predictions were off by as much as two arcminutes, whereas the Halvorsen orbit's predictions matched the recorded positions to within a few arcseconds.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "The Durrel Observatory has published inaccurate orbits for other comets in the past.",
+            "No orbit for Comet Teague more accurate than the Halvorsen orbit has been published.",
+            "The positions recorded in the Halvorsen Sky Catalog were not simply calculated from the Halvorsen orbit.",
+            "An error of two arcminutes is larger than the errors typical of published cometary orbits.",
+            "The team compared the orbits' predictions with the catalog on every night the comet was observed."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "comparison"
+          ],
+          "flaws": [
+            "circular"
+          ],
+          "explanation": "Circular reasoning: if the catalog's 'recorded' positions had simply been calculated from the Halvorsen orbit, the close match would show only that the orbit agrees with itself, and the test would assume the very accuracy it claims to show. So the argument depends on (C). The tempting trap is (B), but the conclusion is only that Halvorsen's orbit beats Durrel's, so other orbits are irrelevant. (A) and (D) might add color but are not required, and (E) demands more thoroughness than the comparison needs."
+        },
+        {
+          "number": 13,
+          "stimulus": "Pediatric dentist Dr. Rosa Navarro maintains that her 'circle-and-sweep' technique is the best way to teach young children to brush. In a study at her clinic, children taught circle-and-sweep earned much higher brushing scores than children taught other techniques. And the scoring in that study was rigorous: each child's brushing was videotaped and graded on how closely the child's motions matched the motions that the circle-and-sweep technique prescribes.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Pellam School students who volunteered for after-school reading tutoring scored higher on the district reading assessment than other Pellam students. So the tutoring program would improve the reading of every student in the district.",
+            "Pellam School's reading curriculum is the best in the district, since Pellam students score highest on the district's reading assessment, which grades each student on how closely the student follows the decoding steps that Pellam's curriculum teaches.",
+            "Pellam School's reading curriculum is the best in the district, since Pellam students score highest on a reading assessment designed by an independent testing board, and Pellam is the only school in the district that uses the curriculum.",
+            "Pellam School's reading specialist, who has decades of classroom experience, considers the school's reading curriculum the best in the district. So it must be the best curriculum in the district.",
+            "If a reading curriculum is the best in the district, the students who use it will score highest on the district's reading assessment. Pellam students score highest on that assessment. So Pellam's curriculum is the best."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "comparison",
+            "causal"
+          ],
+          "flaws": [
+            "circular"
+          ],
+          "explanation": "Circular reasoning: Navarro's evidence that her technique is best is a score that measures how closely children follow her technique, so the measure presupposes the conclusion. (B) has the same structure: the assessment rewards following Pellam's own steps. The strongest trap is (C), which shares the comparison and the conclusion, but its measure is designed independently; its flaw is overlooking other causes of Pellam's high scores, not question-begging. (A) is a self-selected sample, (D) an appeal to authority, and (E) affirms the consequent."
+        },
+        {
+          "number": 14,
+          "stimulus": "Art historian: The six goblets in the Corvel Museum's Brannock collection were made by the master glassblower Tamsin Brannock herself, not by any of her apprentices. Specialists who examined the goblets found that every one has a stem with the distinctive triple twist, a technique that, as historians of glass agree, Brannock alone in her workshop ever mastered. Pieces from her workshop that lack the triple twist are generally attributed to her apprentices.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "The specialists who examined the goblets had all been trained at a school that Brannock's own workshop helped to found.",
+            "Brannock signed some, but not all, of the pieces that historians of glass are confident she made herself.",
+            "The triple twist is difficult to produce and was rarely even attempted by the glassblowers of Brannock's era.",
+            "The belief that Brannock alone mastered the triple twist rests mainly on the attribution of the Corvel goblets to her.",
+            "Several present-day glassblowers have learned to reproduce the triple twist by closely studying Brannock's surviving work."
+          ],
+          "answer": "D",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "authority",
+            "conditional"
+          ],
+          "flaws": [
+            "circular"
+          ],
+          "explanation": "Circular reasoning exposed: if historians believe only Brannock mastered the triple twist mainly because they credited these very goblets to her, then using that belief to attribute the goblets to her assumes the attribution in question. (D) shows this, removing the argument's independent support. The tempting trap is (E): it shows others can master the twist, but present-day glassblowers are not her apprentices, so it says nothing about who in her workshop could make it. (A) suggests possible sympathy, but the twist is an observable feature, and (C) slightly strengthens the argument."
+        },
+        {
+          "number": 15,
+          "stimulus": "Minister: Critics charge that the families placed in Elmsted by the resettlement program have not been accepted by their neighbors, noting that few of the families attend neighborhood association meetings. Admittedly, attendance is low. Nevertheless, the critics are mistaken. The program's caseworkers rated every one of the families as well integrated at the six-month review, and there is no reason to doubt those ratings. A caseworker rates a family as well integrated only if the family's neighbors accept it, and Elmsted's residents plainly do accept these families, given how well integrated the families are.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "takes the trustworthiness of a source to be established by a claim for which that source provides the only support",
+            "treats the absence of evidence that the neighbors reject the families as proof that the neighbors accept them",
+            "misrepresents the critics as claiming that every one of the families has been rejected by its neighbors",
+            "treats a condition that must be met for a favorable rating as though meeting it guaranteed a favorable rating",
+            "infers that the families as a group are accepted from the fact that each family individually was rated favorably"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "authority",
+            "rebuttal",
+            "conditional"
+          ],
+          "flaws": [
+            "circular"
+          ],
+          "explanation": "Circular reasoning: the minister defends the ratings' reliability by saying the neighbors accept the families, but the only support for that acceptance is 'how well integrated the families are,' which is just the ratings again. (A) describes this abstractly. The most tempting trap is (D), because the stimulus contains a conditional, but the argument uses it in the valid direction (a favorable rating requires acceptance, so a rating indicates acceptance) and never treats acceptance as guaranteeing a rating. (C) names a straw man the minister does not commit, since the critics are reported accurately, and (B) names an appeal to ignorance, but the minister cites positive, though circular, evidence."
+        },
+        {
+          "number": 16,
+          "stimulus": "City forester Priya Lund has proposed that Ashgrove supplement its practice of pruning street trees in response to residents' complaints by also inspecting, every two years, all trees that overhang playgrounds. Councilor Dane objects. If the city abandons complaint-based pruning, he argues, residents will have no way to alert it to a cracked or dangling limb, and a city that ignores its residents' warnings invites both accidents and lawsuits. Dane concludes that the council should reject Lund's proposal.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "presumes that accidents involving street trees are more common near playgrounds than elsewhere",
+            "fails to consider that residents might also welcome routine inspections of trees near playgrounds",
+            "concludes that a new practice is unnecessary merely because it has never been tried in Ashgrove",
+            "objects to a proposal to add a practice as though it were a proposal to discontinue an existing one",
+            "takes for granted that any lawsuits brought against the city over fallen limbs would succeed"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [
+            "straw-man"
+          ],
+          "explanation": "Straw man: Lund proposes adding playground inspections to complaint-based pruning, but Dane attacks a plan to abandon complaint-based pruning, a plan nobody proposed. That is (D). The tempting trap is (E): Dane says ignoring warnings 'invites' lawsuits, a modest claim that does not assume any suit would succeed, and in any case his real error is attacking the wrong proposal. (B) names a consideration that would favor Lund, so omitting it is not Dane's flaw."
+        },
+        {
+          "number": 17,
+          "stimulus": "The Calder Dental Association is considering a recommendation that every child's first dental visit take place by the child's first birthday. Pediatric dentist Lena Hoyt opposes the recommendation. Most one-year-olds, she notes, cannot sit still through a full cleaning and a set of X-rays, so such visits would be distressing for the children and of little clinical value. The association, Hoyt concludes, should not adopt the recommendation.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "The recommendation calls for a brief examination with the child on a parent's lap, not a cleaning or X-rays.",
+            "Some one-year-olds are able to sit still through a full dental cleaning without becoming visibly distressed.",
+            "Hoyt sees considerably fewer infant patients each year than most of the association's other members do.",
+            "The radiation from routine dental X-rays poses very little risk to the health of young children.",
+            "Children who are distressed at an early dental visit usually become more cooperative over later visits."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [
+            "straw-man"
+          ],
+          "explanation": "Straw man exposed: Hoyt's objection targets visits involving a full cleaning and X-rays; if the recommendation actually calls for a brief lap examination, she has attacked a version of the proposal that is not on the table, and both her 'distressing' and 'little value' points lose their basis (A). The tempting trap is (E): it softens the distress worry, but it leaves her 'little clinical value' point untouched and accepts her account of what the visits involve. (B) concerns only some children, and (C) attacks Hoyt rather than her reasoning."
+        },
+        {
+          "number": 18,
+          "stimulus": "Station board member: A group of volunteers has proposed shortening WMRL's Saturday folk program from four hours to three in order to make room for a youth call-in show. But folk music has been the heart of this station for forty years, and a station that drops its folk programming abandons the very listeners who built it. We must not abandon those listeners. The volunteers' proposal should therefore be rejected.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Hillview School's recess should remain thirty minutes long, because thirty minutes is the appropriate length for recess, and it is appropriate precisely because it is the length that recess ought to be.",
+            "Hillview School must either keep its thirty-minute recess or cancel recess altogether. Canceling recess would harm students' health. So the school should keep its thirty-minute recess.",
+            "Some parents have asked Hillview School to cut recess on testing days from thirty minutes to twenty. But children need time to play, and a school that eliminates recess harms its students' health. The school must not harm its students' health, so it should refuse the parents' request.",
+            "Some parents have asked Hillview School to cancel recess on testing days. But children need time to play, and a school that eliminates recess, even for a day, harms its students' health. The school must not harm its students' health, so it should refuse the parents' request.",
+            "Some parents have asked Hillview School to cut recess on testing days, but those parents are the ones whose children have the lowest test scores. So the school should refuse the parents' request."
+          ],
+          "answer": "C",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "principle",
+            "rebuttal"
+          ],
+          "flaws": [
+            "straw-man"
+          ],
+          "explanation": "Straw man: the board member treats a proposal to shorten the folk program as a proposal to drop it, then rejects it for consequences of dropping it. (C) does the same, treating a request to shorten recess as one to eliminate it. The strongest trap is (D), which shares (C)'s wording, but there the parents really did ask to cancel recess, so the reply addresses their actual request and is not a straw man. (B) asserts a dichotomy as a premise (false choice), (A) is circular, and (E) is an ad hominem."
+        },
+        {
+          "number": 19,
+          "stimulus": "Some advocates have urged the city of Marlow to require newly arrived refugee families to complete a twelve-week language course before they receive housing assistance. Housing officer Teo Brandt argues against the proposal. Making shelter conditional on language study, he says, would leave families without a roof for months, and perhaps indefinitely for elderly relatives who struggle to learn a new language. Since no responsible policy can make families' shelter depend on their language study, Brandt concludes that the city should reject the advocates' proposal.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Some refugee families would be unable to complete the language course within the twelve weeks allotted.",
+            "Language courses are ineffective for most adults who are learning a new language late in life.",
+            "Families who complete a language course find employment more quickly than families who do not.",
+            "Brandt would not personally benefit in any way from the city's rejection of the advocates' proposal.",
+            "Under the proposal, families yet to complete the course would not be given shelter through some other form of assistance."
+          ],
+          "answer": "E",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "principle",
+            "plan",
+            "rebuttal"
+          ],
+          "flaws": [
+            "straw-man"
+          ],
+          "explanation": "Straw man: the advocates tie 'housing assistance' to the course, but Brandt attacks them as making shelter itself depend on language study. His argument therefore requires (E); if families still in the course would be sheltered through some other means, he has attacked a position the advocates do not hold, and his argument fails. The tempting trap is (A), which seems to support his 'perhaps indefinitely' point, but even families who finish on time would go without shelter for months under his reading, so the argument does not need anyone to fail. (D) concerns Brandt's motives, which are irrelevant to whether the argument works."
+        },
+        {
+          "number": 20,
+          "stimulus": "Astronomer Kesha Odum has argued that Comet Lorne's sudden brightening last spring cannot be fully explained by the comet's approach to the Sun, and that an outburst from a pocket of buried ice probably contributed. Her colleague Arvo Varga disagrees. Odum, he says, would have us believe that solar heating played no part in Lorne's brightening. Yet every comet brightens as it nears the Sun, and Lorne was then at perihelion, its closest point to the Sun. Admittedly, outbursts do sometimes occur. But to deny that the Sun heated Lorne is to deny basic physics, and so Odum's outburst hypothesis should be rejected.",
+          "stem": "Varga's reasoning is most vulnerable to criticism on the grounds that it",
+          "choices": [
+            "dismisses a hypothesis by questioning the competence of the scientist who proposed it rather than by examining the hypothesis itself",
+            "rebuts a more extreme claim than the one its opponent advanced and treats that rebuttal as defeating the opponent's actual position",
+            "treats a condition that is sufficient for a comet's brightening as though it were necessary for any such brightening to occur",
+            "infers from the fact that an event of a certain kind sometimes occurs that such an event occurred in a particular case",
+            "generalizes about the behavior of all comets on the basis of observations of the behavior of a single comet"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "straw-man"
+          ],
+          "explanation": "Straw man: Odum claimed only that solar heating cannot fully explain the brightening and that an outburst probably contributed; Varga recasts this as the claim that solar heating played no part, refutes that, and rejects her real hypothesis. (B) describes this abstractly. The most tempting trap is (A), because 'to deny basic physics' sounds like a personal jab, but Varga's charge is aimed at the (misstated) position, not at Odum's competence. (C) names a necessary-versus-sufficient confusion Varga does not commit, since he treats nearing the Sun only as sufficient for brightening; (D) describes Odum's kind of inference, not Varga's; and (E) reverses Varga's direction, since he applies a general claim to one comet."
+        }
+      ]
+    },
+    {
+      "id": "patterns-b",
+      "kind": "LR",
+      "title": "Flaw Patterns: Authority, Ad Hominem, Possible vs. Certain, Part vs. Whole",
+      "timeLimitMinutes": 28,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Marisol Ferrante, the celebrated winemaker whose Cabernets from the Tessaro Valley have won dozens of international tasting awards, recently stated that copper-based sprays are ineffective against the leafhoppers now spreading through the valley's vineyards. Ferrante's palate is unmatched, and her wines are a testament to her deep understanding of what makes a great vintage. Therefore, growers in the valley would be wise to abandon copper sprays and seek some other method of controlling leafhoppers.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "attacks the motives of growers who continue to use copper sprays rather than addressing their reasons for doing so",
+            "fails to consider that leafhoppers may be spreading through the valley for reasons unrelated to the sprays growers use",
+            "relies on the judgment of someone whose acknowledged expertise lies in a field other than the one at issue",
+            "draws a conclusion about every vineyard in the region from evidence concerning only a few vineyards",
+            "presumes, without justification, that a method of pest control that works in one valley will work in all valleys"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "authority"
+          ],
+          "flaws": [
+            "bad-authority"
+          ],
+          "explanation": "Bad authority: Ferrante's credentials are in tasting and winemaking, yet the argument treats her as authoritative on whether a pesticide controls an insect, which is a separate matter of entomology and crop protection. C names exactly this. B is the most tempting trap because it raises a causal-sounding concern, but the argument never claims the sprays explain why leafhoppers are spreading; its only evidence is Ferrante's say-so on their effectiveness."
+        },
+        {
+          "number": 2,
+          "stimulus": "Brennick's water board is considering replacing chlorine disinfection with an ultraviolet (UV) system. Council member Ostrow argues against the change, noting that Dr. Ilse Varga, a renowned cardiologist who lives in Brennick, has publicly stated that UV systems leave drinking water less safe than chlorine does. Since Dr. Varga has devoted her entire career to protecting human health, Ostrow concludes, her assessment should settle the matter: Brennick should not adopt UV disinfection.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Water-treatment engineers find that, for source water like Brennick's, UV systems kill pathogens at least as well as chlorine does.",
+            "Dr. Varga has publicly endorsed several local public-health initiatives that the Brennick council later adopted with good results.",
+            "UV disinfection systems typically cost more to install than chlorine systems of comparable capacity.",
+            "Most Brennick residents who were surveyed could not tell the difference in taste between UV-treated and chlorinated water.",
+            "Cardiologists routinely advise their patients about the cardiovascular health risks posed by contaminants in drinking water."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "authority",
+            "plan"
+          ],
+          "flaws": [
+            "bad-authority"
+          ],
+          "explanation": "The argument rests entirely on a cardiologist's authority about water-treatment safety, a field outside her specialty (bad authority). A weakens it by showing that the people with the relevant expertise reach the opposite verdict. E is the tempting trap: it concerns her expertise, but it bolsters her standing on the topic and so strengthens rather than weakens. C gives a different reason to avoid UV, which does nothing to undercut the safety claim the argument relies on."
+        },
+        {
+          "number": 3,
+          "stimulus": "Proponents of the new Kessler dance notation argue that the older Arnaud system records partnered lifts too imprecisely to serve the needs of choreographic archives. Admittedly, Kessler notation is now taught at two conservatories. But the Arnaud system has been the archival standard for over a century, and nearly every major dance company still files its scores in it. A system that so many companies have relied on for so long would hardly have survived if it recorded lifts too imprecisely for archival use. So the proponents' claim is mistaken.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "draws a general conclusion about the training offered at conservatories from evidence concerning only two of them",
+            "attacks the motives of the notation's proponents rather than the evidence they offer",
+            "concludes that one notation system is superior to another in every respect on the basis of evidence about a single respect",
+            "presupposes the truth of the very claim about lifts that it sets out to establish",
+            "treats the long-standing, widespread use of a practice as proof that the practice is not deficient in a particular respect"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "authority",
+            "rebuttal"
+          ],
+          "flaws": [
+            "bad-authority"
+          ],
+          "explanation": "The argument rebuts a specific claim about lift notation by appealing to tradition and popularity: because the Arnaud system has long been widely used, it must not be too imprecise. E describes that inappropriate appeal in abstract terms. C is the tempting trap because it names a real-sounding scope flaw, but the conclusion concerns only the lift-recording claim, not superiority in every respect. A misreads the role of the two conservatories, which are a concession and not the basis for any generalization."
+        },
+        {
+          "number": 4,
+          "stimulus": "Tobias Wren is the most widely respected appraiser of antique clocks in the country; collectors and auction houses accept his valuations without question, and dealers routinely quote his estimates in their catalogues. Wren has said that lubricating the fusee chain of an antique clock with modern synthetic oil slowly corrodes the chain. Therefore, restorers should avoid using synthetic oils on fusee chains.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "A clockmaker warned that a mainspring could snap if it is overwound. The mainspring in this carriage clock has been overwound. Therefore, the mainspring in this carriage clock will snap.",
+            "Imelda Rusk is the region's most sought-after auditor of credit unions; boards accept her financial findings without dispute. Rusk has said that the carpet chosen for the new branch office will wear through within five years. So the credit union should choose a different carpet.",
+            "Most members of the Fallon Hospice volunteer association, who have worked closely with patients' families for years, believe that evening visiting hours should be extended. Therefore, evening visiting hours at Fallon Hospice should be extended.",
+            "Petra Lund, a volcanologist who has monitored gas emissions at the Askar caldera for thirty years and whose forecasts are widely trusted, says that the recent changes in emissions there indicate rising magma below the caldera. Therefore, the evacuation plan for nearby villages should be reviewed.",
+            "Coach Dalby argues that the esports league's new ranking formula is unfair to young teams, but Dalby's own team, which has many young players, is ranked poorly under that formula. Therefore, the ranking formula is fair to young teams."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "authority"
+          ],
+          "flaws": [
+            "bad-authority"
+          ],
+          "explanation": "The original cites an authority who is renowned for one competence (appraising value) as decisive on a different matter (the chemistry of lubricants and metal), then recommends action. B mirrors this exactly: an auditor's financial authority is used to settle a question about carpet durability. D is the tempting surface match, but Lund speaks within her own field, so its reasoning is not flawed in the same way. C appeals to popular opinion rather than misplaced expertise, and E is ad hominem; A treats a possibility as a certainty."
+        },
+        {
+          "number": 5,
+          "stimulus": "Tiltmeters on the summit of Mount Orrin have recorded steady ground inflation for six weeks, a pattern that at other volcanoes has often preceded eruptions. The regional monitoring board nonetheless left Orrin's alert level unchanged, citing the view of Dr. Kalen Mott that the readings reflect frost heave in the instrument housings rather than actual ground deformation. Dr. Mott is the world's foremost authority on the chemistry of volcanic gases. The board's decision was therefore well founded.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Dr. Mott has never misjudged the significance of the monitoring data from any of the volcanoes she has studied over her long career at observatories around the world.",
+            "Frost heave is the most frequent cause of spurious tiltmeter readings at volcanoes with cold summits.",
+            "Dr. Mott has no personal or professional stake in whether the monitoring board decides to raise Orrin's alert level.",
+            "Judging whether tiltmeter readings reflect ground deformation does not require expertise that a volcanic-gas chemist would ordinarily lack.",
+            "The volcanoes at which steady inflation preceded eruptions are representative of volcanoes in general."
+          ],
+          "answer": "D",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "authority"
+          ],
+          "flaws": [
+            "bad-authority"
+          ],
+          "explanation": "The only support for the board's decision is Mott's authority, but her expertise is in gas chemistry while the question concerns instrument readings of ground deformation; the argument needs her expertise to be relevant (bad authority). D states that requirement in negated form: if judging tiltmeter data did require expertise she lacks, citing her would give the decision no support. C is the most tempting trap. It addresses bias, a different flaw, and while a stake might cast doubt on her, the argument does not depend on her being disinterested. A is far too strong, B would strengthen but is not required, and E concerns evidence the argument sets aside rather than relies on."
+        },
+        {
+          "number": 6,
+          "stimulus": "At the annual meeting of the Larchmont Teachers Credit Union, member Pavel Oduya proposed that the credit union stop charging overdraft fees. Board chair Renata Lisk urged members to reject the proposal without further discussion. Oduya, she pointed out, has paid more in overdraft fees over the past year than any other member, so he is plainly motivated by self-interest rather than by concern for the institution.",
+          "stem": "The argument is flawed in that it",
+          "choices": [
+            "presumes that a policy benefiting some members must harm the credit union as a whole",
+            "rejects a proposal on the basis of a claim about the motives of the person who made it",
+            "treats the board chair's position as sufficient evidence that her judgment is correct",
+            "fails to consider that overdraft fees may be an important source of revenue for the credit union",
+            "generalizes from the behavior of one member to the behavior of all members"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "authority",
+            "rebuttal"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ],
+          "explanation": "Lisk never addresses the merits of eliminating overdraft fees; she dismisses the proposal by pointing to Oduya's personal interest in it, a classic ad hominem. B describes this. D is the tempting trap because it sounds like a sensible objection to the proposal, but it is a consideration that would support Lisk's conclusion, so overlooking it is not a flaw in her reasoning. C is wrong because Lisk relies on a claim about Oduya, not on her own position as chair."
+        },
+        {
+          "number": 7,
+          "stimulus": "Dr. Imani Royce has published research indicating that patients at the Fairhollow Hospice who received music therapy reported significantly less pain over a three-month period than comparable patients who did not. However, Dr. Royce's research was funded by the Harmonia Foundation, an organization that promotes music therapy programs. Hospice administrators should therefore disregard her findings when deciding whether to adopt music therapy.",
+          "stem": "Which one of the following is an assumption required by the argument?",
+          "choices": [
+            "Music therapy is not effective at reducing the pain experienced by patients in hospice care.",
+            "The Harmonia Foundation funds research only by scientists who were already known to favor music therapy before applying.",
+            "The patients who received music therapy at Fairhollow were representative of hospice patients generally.",
+            "Dr. Royce's funding from the Harmonia Foundation gives some reason to doubt the accuracy of her reported findings.",
+            "No other published study has found that music therapy reduces the pain experienced by hospice patients."
+          ],
+          "answer": "D",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "authority"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ],
+          "explanation": "The argument dismisses Royce's findings solely because of who funded her, so it must assume that the funding source bears on the findings' reliability (the gap in a circumstantial ad hominem). If the funding gave no reason at all for doubt, D's negation, the argument collapses. A is the tempting trap, but the argument concludes only that the findings should be disregarded, not that music therapy is ineffective. B is far stronger than needed, C would support Royce rather than the argument, and E is not required."
+        },
+        {
+          "number": 8,
+          "stimulus": "Critics of the Vantor Pro League's new anti-cheating software claim that it frequently flags legitimate players as cheaters. But nearly all of these critics are players whose own accounts the software has flagged. Players who were caught cheating obviously have every reason to discredit the system that caught them, so their complaints tell us nothing. Hence the software must rarely, if ever, flag legitimate players.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Most flagged players who appealed were reinstated after independent reviewers found no evidence that they had cheated.",
+            "Several of the critics have publicly objected to other league policies, including its rules on player transfers.",
+            "The company that developed the anti-cheating software has a financial interest in the league's continuing to use that software.",
+            "Cheating in professional esports leagues has become considerably more common over the past several years.",
+            "Few players whose accounts have never been flagged by the software have complained to the league about it."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "authority",
+            "rebuttal"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ],
+          "explanation": "The argument dismisses the critics because they were flagged, assuming that being flagged means they were caught cheating and so have a motive to lie (ad hominem). A undercuts this: independent review cleared most appellants, so many flagged critics were legitimate players, which is exactly what the critics allege. C is the most tempting trap; it turns the same motive-based attack on the developer, but the argument does not rely on any claim by the developer, so C does not weaken it. E strengthens the argument, and B and D are irrelevant."
+        },
+        {
+          "number": 9,
+          "stimulus": "Engineer Tomas Brill contends that the Westmere water plant's aging filtration membranes should be replaced this year, since they now remove too few contaminants to meet the city's standards. But Brill works for the company that manufactures the replacement membranes, so of course he wants the city to buy them. Clearly, then, the membranes do not need to be replaced this year.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Each section of the Larch Valley vineyard has excellent drainage. Therefore, the vineyard as a whole has excellent drainage, and it is unlikely to suffer from root rot.",
+            "Rowena Pike, a dealer in antique clocks, contends that a rare bracket clock is worth more than its asking price. Since Pike profits from sales of such clocks, her claim should be checked by an independent appraiser before any collector agrees to buy the clock at that price.",
+            "Most of the Sarnia Esports League's fans prefer longer matches. Therefore, longer matches would be best for the league.",
+            "A seismologist warned that the Halden fault could produce a major earthquake. Therefore, a major earthquake will occur on the Halden fault.",
+            "Hospice administrator Lena Corso argues that the hospice should hire two more night nurses. But Corso's sister is a nurse who is looking for night work, so Corso clearly has a personal reason to want new hires. It follows that the hospice does not need additional night nurses."
+          ],
+          "answer": "E",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "authority"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ],
+          "explanation": "The original rejects a claim because its proponent has a personal interest in it, and then concludes that the claim is false (ad hominem). E matches both steps: Corso's personal stake is taken to show that the hospice does not need more nurses. B is the tempting trap because it also notes a speaker's financial interest, but it reasonably concludes only that her claim should be independently verified, which is not flawed. A is a part-to-whole inference, C an appeal to popularity, and D treats a possibility as a certainty."
+        },
+        {
+          "number": 10,
+          "stimulus": "Choreographer Anouk Selten has argued that dance companies should record every new work in full notation rather than relying solely on video, on the grounds that video fails to capture a dancer's shifts of weight unambiguously. Selten's argument may sound persuasive, but it should be rejected. Of the eleven works she has created in the past decade, she has had only two fully notated; the rest exist only on video. Someone who does not follow her own recommendation cannot be taken seriously when she makes it.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "draws a conclusion about all of Selten's choreographic works on the basis of a sample of only eleven of them",
+            "attributes to Selten the view that video recordings of dance have no value",
+            "takes a discrepancy between a person's recommendation and her own practice as a reason to reject the recommendation",
+            "fails to address the possibility that video recordings capture some aspects of a live performance that notation cannot",
+            "confuses the claim that full notation is sufficient for preserving a dance work with the claim that it is necessary"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "authority",
+            "rebuttal"
+          ],
+          "flaws": [
+            "ad-hominem"
+          ],
+          "explanation": "The argument never engages Selten's reason (that video records weight shifts ambiguously); it rejects her argument because her own practice is inconsistent with it, a 'you too' form of ad hominem. C states this abstractly. D is the most tempting trap: it sounds like a weakness, but it is a consideration that would count against Selten and thus for the argument's conclusion, so failing to mention it is not what makes the reasoning flawed. B describes a straw man the argument does not commit, since it never restates Selten's view, and A and E name flaws absent from the reasoning."
+        },
+        {
+          "number": 11,
+          "stimulus": "Researchers have found that the Dorrel leaf beetle, which was recently discovered in a vineyard just across the county line, is capable of carrying Kestine blight, a bacterial disease that kills grapevines. The beetle can fly several kilometers in a single season. Therefore, unless the vineyards of Allard County begin spraying for the beetle immediately, their vines will be killed by Kestine blight.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "relies on findings from researchers who may have a financial interest in the sale of the pesticides used against the beetle",
+            "assumes that a disease capable of killing grapevines will also harm the other crops grown in Allard County",
+            "generalizes from a single vineyard to all vineyards in the state",
+            "treats the mere possibility that the beetle will spread the blight to the county's vines as though it were certain",
+            "fails to consider that spraying for the beetle might also kill insects that protect the county's vines from other pests"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "possibility-certainty"
+          ],
+          "explanation": "The premises establish only that the beetle can carry the blight and has been found nearby; the conclusion asserts that, without spraying, the vines will be killed. D identifies this jump from possibility to certainty. E is the tempting trap because it is a reasonable concern about spraying, but the argument makes no claim about spraying's side effects, so ignoring them does not weaken its inference. A speculates about motives the passage never mentions."
+        },
+        {
+          "number": 12,
+          "stimulus": "Member of the Pinecrest Credit Union: Our board plans to approve a merger with Halden Savings, and members should oppose it. Under the merger terms, the combined institution would be permitted, though not required, to close any branch whose annual transaction volume falls below a set threshold. Our Elm Street branch has fallen below that threshold in two of the last five years. So if the merger goes through, the Elm Street branch will be closed.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Several other Pinecrest branches have also fallen below the transaction threshold in recent years.",
+            "Members who use the Elm Street branch are, on average, older than members who use Pinecrest's other branches.",
+            "The merger terms would allow the combined institution to close branches below the threshold but would not require it to close them.",
+            "Closing a branch generally reduces a financial institution's operating costs.",
+            "In its previous mergers, Halden Savings agreed to identical closure terms but closed none of the branches that became eligible."
+          ],
+          "answer": "E",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [
+            "possibility-certainty"
+          ],
+          "explanation": "The argument treats permission to close a branch as a guarantee that it will be closed (possibility taken as certainty). E weakens it by showing that, under identical terms, Halden has not actually closed eligible branches, making closure less likely. C is the tempting trap: it points at the gap but merely restates what the premise already says ('permitted, though not required'), adding no reason to think closure is unlikely. D, if anything, supplies a motive for closure."
+        },
+        {
+          "number": 13,
+          "stimulus": "Geologists are confident that Mount Tavel will erupt at some point in the next century. Even small amounts of volcanic ash can damage jet engines. An eruption of Mount Tavel could send enough ash across the Serin Valley to force the valley's airport to close. Thus the Serin Valley airport will be closed by volcanic ash at some point in the next century.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "The Linden Ballet will adopt Kessler notation next season. Adopting a new notation system could slow a company's rehearsals. Thus the Linden Ballet's rehearsals might be slowed next season.",
+            "The Rowan Hospice will certainly expand its nursing staff next year. Expanding a nursing staff could produce scheduling conflicts among nurses. Thus the Rowan Hospice will experience scheduling conflicts among its nurses next year.",
+            "Whenever the Kellan reservoir drops below its minimum level, the water plant must switch to its backup supply. The reservoir will drop below its minimum level this summer. Thus the plant will switch to its backup supply this summer.",
+            "Most esports teams that change coaches in midseason fail to make the playoffs. Thus changing coaches in midseason causes teams to miss the playoffs.",
+            "Each gear in this clock movement was cut by a master craftsman. Thus the movement as a whole is a masterpiece of craftsmanship."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "possibility-certainty"
+          ],
+          "explanation": "The original moves from a certain event and a consequence that event could have to the claim that the consequence will occur (possibility treated as certainty). B has the same structure: a certain staff expansion plus a possible effect yields 'will experience conflicts.' A is the tempting trap because its structure is nearly identical, but its conclusion says only that rehearsals 'might' be slowed, which follows; it is not flawed. C is a valid conditional argument, D infers causation from correlation, and E reasons from parts to whole."
+        },
+        {
+          "number": 14,
+          "stimulus": "The Corvel water authority plans to replace chlorine disinfection with a new ozone system. Opponents point out that ozone treatment can, under certain conditions, produce bromate, a compound that is regulated as a drinking-water contaminant. Since Corvel's source water contains bromide, the substance from which bromate forms, the opponents conclude that switching to ozone will cause Corvel's drinking water to exceed the legal limit for bromate.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Ozone treatment produces bromate in excess of the legal limit whenever the water it treats contains any bromide at all.",
+            "Chlorine disinfection does not produce any compounds that are regulated as drinking-water contaminants.",
+            "Corvel's source water does not contain so little bromide that ozone treatment could not push bromate above the legal limit.",
+            "The opponents of the ozone system have no financial ties to suppliers of chlorine.",
+            "Most of the water systems that have switched from chlorine to ozone have subsequently exceeded the legal limit for bromate."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "possibility-certainty"
+          ],
+          "explanation": "The opponents move from 'ozone can produce bromate under certain conditions' and 'Corvel's water contains some bromide' to the certainty that the legal limit will be exceeded. At a minimum they must assume that Corvel's bromide level is not too low for an exceedance even to be possible; negate C and the conclusion cannot hold. A is the most tempting trap, but it is stronger than needed and still would not guarantee exceeding the limit, so the argument does not depend on it. D raises bias, a different flaw the argument never invokes, and B and E are not required."
+        },
+        {
+          "number": 15,
+          "stimulus": "Conservator: The dial of this longcase clock, attributed to the eighteenth-century maker Josiah Pell, uses only pigments that were available in Pell's era, and the gearing of its movement matches a design Pell is known to have used. Admittedly, other makers of that period used the same pigments, and Pell's gearing design was widely copied. Still, these findings show that the clock could well have come from Pell's workshop. So the clock is a genuine Pell and should be catalogued as such.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "moves from evidence establishing only that a claim might be true to the conclusion that the claim is true",
+            "relies on the testimony of a source concerning a matter that lies outside that source's field of expertise",
+            "generalizes from the features of a single clock to all clocks attributed to the same maker",
+            "uses its acknowledgment of a counterconsideration as though that acknowledgment provided support for its conclusion",
+            "presupposes in its premises that the clock was made in Pell's workshop"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [
+            "possibility-certainty"
+          ],
+          "explanation": "The conservator's own intermediate conclusion is that the clock 'could well' be Pell's, yet she concludes that it is a genuine Pell; that is a shift from possibility to certainty, as A states. D is the most tempting trap: the concession does undercut the evidence, but the argument does not use it as support, it sets it aside with 'Still.' E names a circular flaw that is not present, since matching a known Pell design does not presuppose Pell's authorship. B and C describe bad-authority and sampling flaws the argument does not commit."
+        },
+        {
+          "number": 16,
+          "stimulus": "The Corran Esports League ranks individual players on the basis of their performance in league matches over the past two seasons. Each of the five players on the Ironvale Wolves currently ranks among the league's top twenty individual players, and two of them rank in the top five. So the Ironvale Wolves must be one of the strongest teams in the league.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "relies on rankings that may have been compiled by biased observers",
+            "treats rankings from one league as though they applied to another league",
+            "confuses a condition necessary for a team's success with a condition sufficient for it",
+            "fails to consider that other teams in the league might also have players who rank among the league's top twenty",
+            "presumes that a team composed of individually excellent players must itself be an excellent team"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "comparison"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "explanation": "The argument attributes a property of the parts (individual excellence) to the whole (the team), ignoring factors such as coordination; this is composition, as E says. D is the tempting trap, but even if other teams have strong players, that would not show the Wolves are not among the strongest; the core problem is the inference from individuals to the team. C names a different, real-sounding flaw, but the argument states no necessary condition that it then treats as sufficient."
+        },
+        {
+          "number": 17,
+          "stimulus": "The Calloway Regional Hospice network received the highest family-satisfaction score of any hospice network in the state last year, eight points above the state average. The score was based on surveys completed by more than three thousand families. Therefore, families of patients who stayed at Brierwood House, one of the network's eleven facilities, were very likely highly satisfied with the care their relatives received.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Brierwood House is the newest of the network's eleven facilities.",
+            "The survey response rate among families at Brierwood House was similar to the response rates at the network's other ten facilities.",
+            "Family-satisfaction scores at each of the network's facilities differed only slightly from the network's overall score.",
+            "Families' satisfaction with hospice care is closely correlated with the number of nurses per patient.",
+            "Several other hospice networks in the state received scores only slightly lower than Calloway's."
+          ],
+          "answer": "C",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "statistical"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "explanation": "The argument infers that a property of the whole network (a high overall score) holds of one of its parts, a division inference that fails if facility scores vary widely. C closes that gap by showing the facilities' scores cluster tightly around the network's score. B is the tempting trap: similar response rates make the survey comparable across facilities, but they say nothing about whether Brierwood's actual score was high. E compares the network with other networks and does not address Brierwood at all."
+        },
+        {
+          "number": 18,
+          "stimulus": "Dance archivist: Every individual symbol in the Velde notation system can be learned by a novice in well under an hour, and none of the symbols requires any prior training in music or dance. Admittedly, the system contains several hundred symbols, and complete scores combine them in intricate ways. Even so, it follows that the Velde system as a whole is easy for novices to master.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "generalizes from the experiences of a small group of novice dancers to the experiences of all novices",
+            "confuses the absolute number of symbols in the system with the proportion of those symbols that are difficult to learn",
+            "relies on the judgment of an archivist about a question of teaching that lies outside her area of expertise",
+            "infers that a whole has a certain property merely because each of its parts, taken individually, has that property",
+            "treats the absence of evidence that any symbol is difficult for novices to learn as proof that none of them is"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "explanation": "From the ease of learning each symbol taken singly, the archivist concludes that the whole system is easy to master, even while conceding that there are hundreds of symbols combined intricately; this is composition, as D says. E is a tempting trap naming a different flaw, but the argument offers a positive premise that every symbol is quickly learnable rather than relying on a lack of contrary evidence. B is tempting because numbers appear, but the argument never draws an inference from a proportion. A and C describe sampling and bad-authority flaws the argument does not commit."
+        },
+        {
+          "number": 19,
+          "stimulus": "Each of three biological control agents (a parasitic wasp, a predatory mite, and a fungal spray) has been shown in field trials to reduce mealybug populations in vineyards without harming the vines. The Sarno Vineyard therefore plans to release all three agents at once, expecting the combination to reduce its mealybug population more than any one of the agents would on its own.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "The predatory mite readily feeds on the larvae of the parasitic wasp, and the fungal spray is lethal to the mite.",
+            "The field trials were all conducted in vineyards whose climate is considerably warmer than that of the Sarno Vineyard.",
+            "Mealybugs can transmit a virus that reduces the sugar content of grapes.",
+            "Releasing all three agents costs the vineyard considerably more than releasing any one of them would.",
+            "In the field trials, the fungal spray reduced mealybug populations more than either of the other two agents did."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal",
+            "plan"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "explanation": "The plan assumes that because each agent works individually, the combination will work at least as well as any one of them, overlooking interactions among the parts (part-whole). A shows that the agents interfere with one another, so the combination could perform worse than one agent alone. B is the tempting trap, a representativeness worry, but a cooler climate would affect all of the agents, so it gives no reason to think the combination would underperform a single agent; it does not touch the comparative prediction. D concerns cost, not effectiveness."
+        },
+        {
+          "number": 20,
+          "stimulus": "The Tarrow Credit Union's loan portfolio, taken as a whole, carries a lower risk of default than the portfolio of any other lender in the region, a record that Tarrow's managers attribute to its long-standing lending standards. Therefore, the mortgage that Tarrow recently issued to the Delacroix family carries a lower risk of default than most mortgages issued by other lenders in the region.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Every musician in the Fennick String Quartet has won a major international competition. Therefore, the Fennick String Quartet is among the finest string quartets performing today.",
+            "The Halberd volcano-monitoring network, taken as a whole, detects tremors more reliably than any other network in the country. Therefore, the seismometer the network recently installed on Mount Esk detects tremors more reliably than most seismometers in other networks.",
+            "Every bottle in this shipment came from the Corran winery, and all of the wines that the Corran winery produces are aged in oak barrels for at least a year. Therefore, the bottle on the top shelf, which came from this shipment last week, contains wine that was aged in oak.",
+            "The average length of a patient's stay at the Linwood Hospice is shorter than the average stay at any other hospice in the county. Therefore, the Linwood Hospice admits fewer patients each year than does any other hospice in the county.",
+            "Restorers agree that the repaired regulator in this antique bracket clock could keep accurate time for at least a decade without adjustment. Therefore, the clock will keep accurate time for the next decade."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "statistical",
+            "comparison"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "explanation": "The original attributes a property of a whole (the portfolio's low overall risk) to one of its parts (a particular mortgage), the division form of the part-whole flaw. B does the same, moving from the network's overall reliability to that of one seismometer. A is the most tempting trap because it is also a part-whole flaw, but it runs in the opposite direction (parts to whole, composition). C shares B's surface shape but is valid, because the property is stated to hold of every member. D confuses averages with totals, and E treats a possibility as a certainty."
+        }
+      ]
+    },
+    {
+      "id": "patterns-c",
+      "kind": "LR",
+      "title": "Flaw Patterns: Lack of Evidence, Sampling, Analogy, Overreaching",
+      "timeLimitMinutes": 28,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Last summer, ecologists surveying the Harrow Fells searched for the crustose lichen Lecanora ferrisii, which a botanical survey recorded there in large numbers forty years ago. The survey teams examined more than two hundred boulders scattered across the fells' lower and middle slopes and found no trace of the lichen anywhere. Since the species went undetected despite so extensive a search, the ecologists concluded that it must now be extinct in the Harrow Fells.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Several other lichen species recorded in the Harrow Fells forty years ago were also absent from last summer's survey.",
+            "Air pollution, which harms many species of crustose lichen, rose sharply in the region surrounding the Harrow Fells during the 1990s and has remained high since.",
+            "Lecanora ferrisii grows almost exclusively on the faces of high cliffs, which the survey teams did not examine because of safety restrictions.",
+            "Lecanora ferrisii has recently been found in abundance in the Corran Hills, a range that lies about thirty kilometers from the Harrow Fells.",
+            "The ecologists who led last summer's survey had previously conducted similar lichen surveys in several other upland regions."
+          ],
+          "answer": "C",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "sampling"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "explanation": "Absence of evidence: the ecologists treat a failure to find the lichen as proof that it is gone. C shows that the search never covered the habitat where the lichen would actually be, so not finding it there says little about whether it survives in the fells. D is the tempting trap, but the conclusion concerns only the Harrow Fells; the lichen's presence in another range does nothing to show it persists there. B and E, if anything, support the conclusion."
+        },
+        {
+          "number": 2,
+          "stimulus": "Critics of the Westbury small-claims court allege that its magistrates favor landlords over tenants in disputes about security deposits. But the court's oversight board recently reviewed every complaint of bias filed against Westbury magistrates over the past five years, and it found that none of those complaints contained documentation sufficient to establish that the magistrate involved had been biased. Therefore, the magistrates of the Westbury court do not favor landlords over tenants.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "treats the failure of the complaints to establish that bias exists as proof that no bias exists",
+            "attacks the motives of the court's critics rather than addressing the substance of their allegation",
+            "relies on the findings of a board whose members might be unfamiliar with landlord-tenant law",
+            "presumes without justification that tenants file more complaints of bias than landlords do",
+            "infers from the fact that some magistrates are unbiased that all of the magistrates are unbiased"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "rebuttal",
+            "authority"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "explanation": "Absence of evidence: complaints that lacked enough documentation to prove bias do not show that the magistrates are unbiased, yet the argument treats them as if they did. A describes exactly this. C is the most tempting trap, but the argument's problem would remain even if the board were expert, because its finding was only that bias was not established. B describes an attack the argument never makes, and E describes a premise the argument does not contain."
+        },
+        {
+          "number": 3,
+          "stimulus": "Some historians have argued that the photographer Oda Marlin staged several of her celebrated street scenes, posing friends as passersby. Yet no letter, diary entry, or eyewitness account describing any such staging has ever come to light. We can therefore conclude that Marlin did not stage any of her street scenes, and that her photographs are faithful records of the moments they appear to capture.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "The cargo manifest of the schooner Annick, which by law listed every item the ship carried, contains no mention of rifles. So the Annick was not carrying rifles as cargo on that voyage.",
+            "Several historians believe the mapmaker Ilse Dorn copied her coastal charts from earlier naval surveys of the northern coast. Since these historians are the leading experts on the period, Dorn must have copied her charts.",
+            "A survey of members of the Ardent Rowing Club found that they report greater well-being than most adults. So rowing must be what gives the club's members their greater sense of well-being.",
+            "Some residents claim that the Varo Company dumped solvent into Mill Creek. But inspectors who examined the company's records found nothing indicating any such dumping. So the company never dumped solvent there.",
+            "The novelist Rena Hall insists that her latest book owes nothing to earlier works. But Hall would profit from readers' believing that claim, so the book must in fact draw heavily on earlier works."
+          ],
+          "answer": "D",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "explanation": "The argument commits the absence-of-evidence flaw: because no record of staging has surfaced, it concludes that no staging occurred, though staging is just the sort of thing that might go unrecorded. D matches: records that would not necessarily mention illegal dumping are taken to prove there was none. A is the most tempting trap, but its inference is sound, since a manifest that by law lists every item is exactly where rifle cargo would appear. B (appeal to authority), C (correlation taken as causation), and E (attack on the source's motives) commit different flaws."
+        },
+        {
+          "number": 4,
+          "stimulus": "Breeders in the Kestle Valley have long claimed that some local honeybee colonies carry hyg-3, an allele that confers partial resistance to varroa mites. To test the claim, geneticists collected a total of 600 drones, drawn from every apiary in the valley, and screened tissue from each drone using the standard hyg-3 assay. None of the samples tested positive. The geneticists therefore concluded that the breeders' claim is false: no honeybee colony in the Kestle Valley carries hyg-3.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "No honeybee colony anywhere outside the Kestle Valley carries the hyg-3 allele.",
+            "The standard hyg-3 assay does not routinely fail to detect the allele in tissue that contains it.",
+            "The breeders who claimed that local colonies carry hyg-3 had no financial motive for doing so.",
+            "Any varroa resistance found in Kestle Valley colonies is not due to an allele other than hyg-3.",
+            "Every honeybee colony in the Kestle Valley contributed at least one drone to the geneticists' sample."
+          ],
+          "answer": "B",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "sampling"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "explanation": "The geneticists infer that the allele is absent because their screening did not find it, which works only if the screening could have found it. Negate B: if the assay routinely misses hyg-3 in tissue that contains it, the negative results say nothing about whether the allele is present, and the argument collapses. E is the most tempting trap, but it is too strong; a representative sample can support the conclusion without including every colony. C raises a question about motive that the geneticists' argument never relies on, and D concerns resistance rather than the allele itself."
+        },
+        {
+          "number": 5,
+          "stimulus": "Opponents of the proposed Garrow Point desalination plant argue that its brine discharge would raise salinity at the bay's seagrass beds above the level known to damage seagrass. Admittedly, brine discharge has damaged seagrass near some other plants. But an independent two-year review modeled the Garrow Point discharge plume and was unable to establish that salinity at any seagrass bed would rise above that level. So the opponents' concern is unfounded: the plant's discharge will not push salinity at any of the bay's seagrass beds past the damaging level.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "relies on a review that may have been influenced by parties who stand to benefit financially from the plant's approval",
+            "generalizes from damage observed at some other plants to a conclusion about the Garrow Point plant",
+            "takes for granted that damage to seagrass is the only environmental harm a desalination plant could cause",
+            "confuses a level of salinity sufficient for seagrass damage with a level necessary for such damage",
+            "treats a failure to demonstrate that a predicted outcome will occur as a demonstration that it will not occur"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "rebuttal",
+            "causal"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "explanation": "Absence of evidence: the review could not establish that salinity would exceed the threshold, but that is not the same as showing that it will not. The model may simply have been inconclusive. E states this abstractly. A is the tempting trap because it names a familiar flaw, but the review is described as independent and the argument's problem would remain even if it were neutral. B describes a generalization the argument concedes and sets aside rather than makes, C misreads a conclusion that concerns only salinity at the seagrass beds, and D invents a conditional confusion the argument never relies on."
+        },
+        {
+          "number": 6,
+          "stimulus": "To learn whether parents approve of its new animated series Pip and the Lantern, the Brightwave network posted a poll on the show's official fan website asking visitors whether they considered the program suitable for young children. Of the 2,400 parents who responded, 91 percent said that they did. Clearly, then, the vast majority of parents nationwide regard Pip and the Lantern as suitable for young children.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "fails to consider that some of the parents who responded may not have young children of their own",
+            "draws a conclusion about parents in general from parents likely to favor the program more than most parents do",
+            "confuses the percentage of respondents who approved of the program with the number of parents who approved of it",
+            "presumes without justification that the network conducted its poll in a deliberately misleading manner",
+            "relies on a sample far too small to support any conclusion about the views of parents across the nation"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "sampling",
+            "statistical"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "explanation": "Sampling: the respondents were parents visiting the show's own fan website, a group likely to be fonder of the program than parents generally. B identifies this self-selection. E is the tempting trap, but 2,400 respondents is not too small in itself; the problem is who they were, not how many. C names a percentage-versus-number confusion the argument does not make, since its conclusion is itself about proportions."
+        },
+        {
+          "number": 7,
+          "stimulus": "In September, a transportation researcher interviewed 500 people locking bicycles at racks in downtown Halvern on weekday mornings. Seventy percent of them said that they cycle to work at least three days a week throughout the winter. From these interviews the researcher concluded that most of Halvern's bicycle commuters continue to cycle to work regularly during the winter months, and that the city's winter maintenance of bicycle lanes is well used.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Most of the people interviewed had lived in Halvern for more than five years at the time of the interviews.",
+            "The city clears snow from downtown bicycle lanes far more promptly than it clears lanes in outlying neighborhoods.",
+            "Some of the people locking bicycles at the downtown racks declined to answer the researcher's questions.",
+            "People who cycle to downtown jobs are typical of Halvern's bicycle commuters in how often they cycle in winter.",
+            "In several cities comparable to Halvern, most bicycle commuters stop cycling to work once winter begins."
+          ],
+          "answer": "D",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "sampling"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "explanation": "Sampling: the researcher generalizes from cyclists at downtown racks to all of Halvern's bicycle commuters. D strengthens the argument by establishing that the downtown group is representative on exactly the trait being measured. B is the tempting trap, but it points the wrong way: if downtown lanes are cleared sooner, downtown cyclists may ride in winter more than other commuters do, which weakens the generalization. E also weakens, and A is irrelevant to representativeness."
+        },
+        {
+          "number": 8,
+          "stimulus": "Northline, a regional airline, wanted to know whether its passengers would pay an extra fee for assigned seating. It surveyed passengers on its Friday-evening flights between Corvale and the capital, flights used mostly by business travelers whose employers reimburse their fares. Eighty percent of the respondents said they would pay the fee. Northline concluded that most of its passengers would be willing to pay extra for assigned seating.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "To estimate how many county residents own fishing gear, a researcher interviewed shoppers at the county's largest sporting-goods store on the opening weekend of trout season. Most owned gear, so most residents do.",
+            "A library drew 1,000 names at random from its complete list of cardholders and asked each whether they had borrowed an e-book. Sixty percent had, so probably most of its cardholders have borrowed an e-book at least once.",
+            "A survey of members of the Tarrow Cycling Club found that they report fewer sick days than other adults do. So cycling regularly must be what keeps the club's members from falling ill as often.",
+            "The share of complaints the Linden Clinic received about waiting times fell this year. So fewer of the clinic's patients were dissatisfied with waiting times this year than were dissatisfied last year.",
+            "Every player on the Granby hockey team is among the most skilled in the league. So the Granby team as a whole must be among the most skilled teams in the league."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "sampling"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "explanation": "Northline generalizes to all its passengers from a subgroup chosen in a way that tilts it toward the answer (business travelers whose fares are reimbursed). A does the same: shoppers at a sporting-goods store on opening weekend are far likelier than residents generally to own fishing gear. B is the most tempting trap because it also generalizes from a survey, but its random sample from the full list is representative, so its reasoning is sound. C uses a survey but commits a causal flaw, D confuses a share of complaints with the number of dissatisfied patients, and E reasons from parts to the whole."
+        },
+        {
+          "number": 9,
+          "stimulus": "The Morrow Historical Society holds about 40,000 photographic prints made between 1880 and 1920. To assess their condition, the conservator Ines Faber examined the 400 prints that researchers had requested most often over the past decade and found that only 5 percent of them showed significant fading. Faber concluded that the collection as a whole is in good condition, and that the costly preservation program some board members have proposed is therefore unnecessary.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Frequent handling by researchers tends to accelerate the deterioration of photographic prints made during this period.",
+            "In comparable collections of prints from the same period, about 5 percent typically show significant fading.",
+            "Faber has argued on several previous occasions that the society spends too much on conservation.",
+            "Prints made between 1880 and 1920 are generally less prone to fading than prints made after 1950.",
+            "Prints often requested by researchers are kept in climate-controlled cabinets; the rest are stored in an unheated attic."
+          ],
+          "answer": "E",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "sampling",
+            "plan"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "explanation": "Sampling: Faber generalizes from the 400 most-requested prints to the whole collection. E shows that this subgroup was stored under far better conditions than the rest, so its low rate of fading probably understates the damage elsewhere. A is the most tempting trap, but it points the wrong way: if handling accelerates deterioration, the sampled prints should be in worse shape than average, which makes Faber's finding more reassuring. C attacks Faber's motives rather than her reasoning, and B and D, if anything, support her."
+        },
+        {
+          "number": 10,
+          "stimulus": "A study of the Ferrin County small-claims court examined every case filed over three years in which a plaintiff who had initially hired a lawyer later chose to proceed without one. Those plaintiffs won 72 percent of their cases, slightly more than the 68 percent won by plaintiffs who kept their lawyers throughout. The study's authors concluded that small-claims plaintiffs generally fare at least as well without lawyers as with them, and that the county's program subsidizing lawyers for such plaintiffs should be ended.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "confuses the rate at which plaintiffs won their cases with the number of cases plaintiffs won",
+            "presupposes that the subsidy program is the only means by which plaintiffs could obtain legal help",
+            "generalizes from a self-selected group whose reason for selecting itself may also affect the outcome measured",
+            "treats the absence of evidence that lawyers help such plaintiffs as evidence that lawyers do not help them",
+            "recommends ending a program solely on the grounds that the program costs the county more than it is worth"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "sampling",
+            "statistical",
+            "plan"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "explanation": "Sampling, through self-selection: plaintiffs who dropped their lawyers probably did so because they judged their cases strong, and case strength also drives win rates, so this group tells us little about plaintiffs in general. C describes this abstractly. D is the most tempting trap because it names a real flaw, but the authors rely on positive evidence (a comparison of win rates), not on a mere lack of evidence. A is wrong because the argument reasons entirely from rates, and E attributes to the argument a cost rationale it never offers."
+        },
+        {
+          "number": 11,
+          "stimulus": "Councilor Brandt: Ostrava Falls requires every resident who drives a car to register it with the city and display a registration sticker. Bicycles, like cars, are vehicles that share the city's streets, and riders of bicycles, like drivers of cars, must obey the city's traffic signals. So, to be consistent, the city should likewise require every resident who commutes by bicycle to register the bicycle with the city and display a sticker.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "fails to consider that many residents who commute by bicycle to work also own and regularly drive cars",
+            "takes for granted that every bicycle commuter would comply with a registration requirement",
+            "presumes without justification that most residents of Ostrava Falls drive cars",
+            "relies on similarities between cars and bicycles without showing they are alike in respects that justify registration",
+            "assumes that whatever rule the city legally requires of its residents is also something they are morally obligated to do"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "analogy",
+            "principle"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "explanation": "Flawed analogy: Brandt notes that bicycles and cars both use streets and obey signals, but never shows that these shared features are the reasons cars must be registered (rather than, say, their speed, mass, or taxation). D identifies this. A is the tempting trap, but whether bicycle commuters also drive has no bearing on whether the comparison supports registering bicycles. B and C describe assumptions the argument does not need, and E introduces a moral claim it never makes."
+        },
+        {
+          "number": 12,
+          "stimulus": "The coastal town of Merrin is considering building a reverse-osmosis desalination plant. Supporters point to Sallow Cove, a town about 300 kilometers to the south, which built a similar plant ten years ago and has since enjoyed a reliable supply of drinking water at a price its residents consider reasonable. Because Merrin and Sallow Cove are similar in population and both draw their seawater from the same ocean, supporters conclude that a plant in Merrin would likewise provide reliable water at a reasonable cost.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "The engineering firm that designed and built the Sallow Cove plant has since gone out of business entirely.",
+            "Residents of Sallow Cove now pay considerably more for their water than they did before their desalination plant was built.",
+            "Merrin's population is expected to grow slightly faster than Sallow Cove's over the next decade.",
+            "Several other towns along the same coast have built desalination plants that supply their residents with water reliably.",
+            "Seawater off Merrin holds far more silt than that off Sallow Cove, and silt sharply raises the cost of running reverse-osmosis plants."
+          ],
+          "answer": "E",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "analogy",
+            "plan"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "explanation": "Flawed analogy: the supporters rest their prediction on similarities between the two towns. E reveals a difference in exactly the respect that matters to a desalination plant's cost and reliability, the quality of the intake water, so Sallow Cove's success is a poor guide for Merrin. B is the tempting trap, but paying more than before is compatible with residents still finding the price reasonable, which is all the premise claims. C names a difference too slight to matter, and D supports the supporters' view."
+        },
+        {
+          "number": 13,
+          "stimulus": "Breeding queens for gentleness has succeeded in the apiaries of the Varn Islands, where nearly every colony is now docile. Our mainland apiaries keep the same species of honeybee as the islands' apiaries, house their colonies in the same design of hive, and feed them the same supplemental syrup in winter. So if we adopt the islands' breeding program, our colonies will become docile as well.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Since the Eastvale apiaries switched to a new winter feed, their honey yields have risen every year. So the new winter feed must be responsible for the higher honey yields in the Eastvale apiaries.",
+            "A tutoring method raised reading scores at Elmhurst School. Brookside uses the same reading textbooks and has classrooms of the same size as Elmhurst's. So the method will raise reading scores at Brookside too.",
+            "A drainage design prevented flooding on Route 9. Route 12 matches Route 9 in soil, slope, and rainfall, the factors that determine whether such a design works. So the design will prevent flooding on Route 12 too.",
+            "Each structural component of the Tarn footbridge passed its load test. So the Tarn footbridge as a whole would pass a load test, since it is made up entirely of components that have passed.",
+            "The twelve beekeepers who answered the cooperative's newsletter survey all favor the new labeling rules. So the cooperative's beekeepers in general must favor the new labeling rules."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "analogy",
+            "plan"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "explanation": "Flawed analogy: the argument predicts that a program will work in a second setting because that setting shares features (species, hive design, feed) never shown to be what made the program work. B has the same structure: shared textbooks and classroom size are not shown to explain why tutoring succeeded. C is the most tempting trap, but its argument says outright that the shared features determine whether the design works, so its analogy is sound. A shares the subject matter but commits a causal flaw, D reasons from parts to the whole, and E generalizes from a self-selected sample."
+        },
+        {
+          "number": 14,
+          "stimulus": "Educational psychologists found that preschoolers who played the board game Number Trail for twenty minutes a day markedly improved their counting skills within a month. The producers of the children's television program Count with Kip have adapted the game's puzzles into on-screen segments, in which the host works through each puzzle step by step. Therefore, preschoolers who watch twenty minutes of Count with Kip a day should improve their counting skills just as markedly.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "More preschoolers watch Count with Kip each day than play Number Trail.",
+            "Preschoolers who watch Count with Kip will enjoy the program as much as the children in the study enjoyed Number Trail.",
+            "The benefit of Number Trail did not depend mainly on children moving pieces and counting aloud themselves.",
+            "Count with Kip's segments reproduce the puzzles of Number Trail without any alteration to their content.",
+            "The preschoolers in the psychologists' study came from a broad range of economic backgrounds."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "analogy",
+            "causal"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "explanation": "Flawed analogy: the argument assumes that watching puzzles worked on screen is relevantly like playing them. Negate C: if the gains came mainly from children handling the pieces and counting aloud themselves, which viewers do not do, then the analogy fails and the conclusion loses its support. D is the most tempting trap, but it is too strong; minor changes to the puzzles would not undermine the argument. E raises a sampling concern the argument does not depend on, and A and B are not required."
+        },
+        {
+          "number": 15,
+          "stimulus": "Lichenologist: Critics of our plan to move the lichen communities on the Brannock quarry walls to the protected Tolley cliffs before the quarry is blasted say that such transplants usually fail. Admittedly, relocated lichens often die. But mosses that were moved from this same quarry to the Tolley cliffs five years ago are thriving today. Mosses, like lichens, lack true roots and absorb water and nutrients directly from the air and rain. So the lichens, too, will thrive on the Tolley cliffs.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "infers that one kind of organism will fare as another did because of a shared trait, without showing that the trait explains the other's success",
+            "attacks the critics' motives for opposing the relocation plan rather than responding to the evidence on which their objection is actually based",
+            "applies to each individual lichen community on the quarry walls a generalization that holds only for relocated lichens taken as a group",
+            "concludes that an outcome will occur merely because no one has shown that the outcome is impossible under the circumstances",
+            "overlooks the possibility that the lichen communities could survive in the quarry even after the blasting has taken place"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "analogy",
+            "rebuttal"
+          ],
+          "flaws": [
+            "flawed-analogy"
+          ],
+          "explanation": "Flawed analogy: the lichenologist concedes that relocated lichens often die, then relies on the success of mosses, citing only that both lack roots. She never shows that lacking roots is why the mosses thrived, and lichens may differ in other relevant ways. A states this abstractly. D is the most tempting trap because it names a real flaw, but the argument rests on positive evidence (the mosses' success), not on a lack of disproof. C describes a part-whole error the argument does not make, and B and E describe moves it never makes."
+        },
+        {
+          "number": 16,
+          "stimulus": "Last spring, Skyhop, a regional airline, replaced the aging turboprops on its Dunmore-Kessel route with new regional jets. Since then, the share of flights on that route arriving on time has risen from 71 percent to 88 percent, and passenger complaints about the route have fallen by half. Both improvements are due to the new jets' greater speed and mechanical reliability. Clearly, then, the new jets were the best choice Skyhop could have made for the Dunmore-Kessel route.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "confuses a percentage-point increase in on-time arrivals with an increase in the absolute number of on-time flights",
+            "presumes without justification that the new jets, rather than some other factor, caused the improvements on the route",
+            "relies on complaints from passengers who may not be representative of everyone who flies the route",
+            "assumes that what was true of the Dunmore-Kessel route must also be true of every other route Skyhop flies",
+            "infers that an option was the best one available merely from evidence that it produced improvements"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "statistical",
+            "comparison"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "Scope shift: the evidence shows the jets were an improvement over the old turboprops, but the conclusion claims they were the best of all possible choices, though other options might have done even better. E identifies this. B is the tempting trap, but the stimulus states as a premise that the improvements are due to the jets, so the argument does not presume causation without support. D misdescribes a conclusion that is limited to one route."
+        },
+        {
+          "number": 17,
+          "stimulus": "Three years ago, the Delmar County small-claims court began requiring the parties in every dispute to attend a mediation session before any trial. Since then, the average time from filing to resolution has dropped from five months to seven weeks, a drop that an independent audit attributed entirely to the mediation requirement. Court administrators therefore conclude that the mediation requirement has made the court better at serving the people who bring their disputes to it.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Most people who bring disputes to the court prefer resolving them through mediation rather than at trial.",
+            "The mediation requirement did not lengthen the time needed to resolve the cases that still went to trial afterward.",
+            "Any decline in the fairness of outcomes since mediation began is not great enough to outweigh faster resolution.",
+            "No other small-claims court in the region has achieved a comparable reduction in time to resolution.",
+            "Mediation sessions cost the court considerably less to administer than full trials before a magistrate do."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "causal",
+            "statistical"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "Scope shift: the evidence concerns only speed, but the conclusion claims the court now serves people better overall. Negate C: if outcomes became so much less fair that this outweighs the gain in speed, the court is not serving people better, and the argument fails. B is the tempting trap, but the average already fell sharply, so the argument does not need trial-bound cases to be unaffected. A is too strong, and D and E are irrelevant to whether the people served are better off."
+        },
+        {
+          "number": 18,
+          "stimulus": "Digitizing the Lantry Archive's collection of glass-plate negatives would make thousands of historically important images available to researchers anywhere in the world, many of whom cannot travel to the archive. Moreover, a digital copy would preserve each image even if the fragile original plate were later broken. Hence, digitizing the negatives is the best use the archive could make of this year's limited conservation budget.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "A frost-resistant pear variety would survive Orlen Valley winters better than the cooperative's current variety, and it ripens earlier. So replanting with it is the wisest investment the cooperative could make this decade.",
+            "Digitizing the Pell Archive's maps would help researchers, and researchers are the archive's principal users. So digitizing the maps would help the archive's principal users, whatever else it might accomplish.",
+            "When the Corrin Museum digitized its photographs, visits to its website tripled. The Dunley Museum is about the same size as the Corrin Museum, so digitizing its photographs will triple visits to its website too.",
+            "Any archive that receives a Halsey grant must have a fireproof vault. The Tamsin Archive has just installed a fireproof vault. So the Tamsin Archive will receive a Halsey grant this year.",
+            "No one has shown that the Vell Library's rare-book room is at risk of flooding. So spending money to protect that room from flooding would be a waste of the library's limited resources."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "plan"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "Scope shift: the argument cites benefits of digitizing and concludes that digitizing is the best use of the budget, ignoring alternatives that might be better still. A shifts the same way, from a variety's advantages to the claim that it is the wisest possible investment. B is the most tempting trap because it shares the subject, but its conclusion follows validly from its premises. C relies on a flawed analogy, D confuses a necessary condition with a sufficient one, and E treats an absence of evidence as proof."
+        },
+        {
+          "number": 19,
+          "stimulus": "In a year-long study, four-year-olds who were randomly assigned to watch the program Wordling Way for half an hour each weekday learned significantly more new vocabulary words than comparable children assigned to watch other programs. Because random assignment ruled out pre-existing differences between the groups, the program's producers concluded that watching Wordling Way improves the overall language development of young children.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Some children in both groups of the study also watched other educational programs at home on weekends during the study.",
+            "Vocabulary gains in young children are not reliably accompanied by gains in sentence construction, comprehension, or other aspects of language.",
+            "The words taught on Wordling Way are drawn from the vocabulary lists used in many kindergarten curricula across the country.",
+            "The study of Wordling Way was funded by the program's own producers, who stood to profit from any favorable results the study produced.",
+            "Most of the children assigned to watch Wordling Way said that they liked it better than the other programs they watched at home."
+          ],
+          "answer": "B",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "Scope shift: the study measured only vocabulary, but the producers conclude that the program improves overall language development. B weakens the argument by showing that vocabulary gains are not a reliable sign of gains in the other components of language development. D is the most tempting trap, but it only questions the source; given random assignment, it gives no reason to doubt the study's finding or to think the inference from vocabulary to overall development is any weaker. A affects both groups alike, and C and E are irrelevant to the gap."
+        },
+        {
+          "number": 20,
+          "stimulus": "Desalination engineer: Critics claim that the Rennet Bay plant uses too much energy to be sustainable. Yet in each of its first three years of operation, the plant used less energy per liter of fresh water produced than the regional average for water treatment facilities of every kind. Granted, those three years brought unusually warm seawater, and warm water reduces the energy that reverse osmosis requires. Still, the record speaks for itself: the plant's energy use per liter will remain below that regional average throughout its planned forty-year life.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "rests on a comparison between the plant and facilities that treat water by different methods and from different sources",
+            "attacks the critics' motives for questioning the plant's sustainability instead of addressing the evidence for their claim",
+            "confuses the plant's energy use per liter of fresh water with the total amount of energy the plant uses each year",
+            "projects onto an entire future period a pattern observed under conditions it acknowledges to be atypical",
+            "treats the absence of evidence that the plant is unsustainable as proof that the plant is sustainable"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "rebuttal",
+            "statistical"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "Scope shift: the engineer extends a three-year record to a forty-year forecast, even after conceding that those three years had unusually warm seawater, which lowers energy needs. D describes this abstractly. E is the most tempting trap because it names a familiar flaw, but the engineer cites positive evidence (measured energy use), not a mere lack of evidence. A is wrong because the conclusion is itself a comparison with the regional average, so using that benchmark is not a flaw, and C invents a confusion the argument, which reasons only about per-liter use, never makes."
+        }
+      ]
+    }
+  ]
+}

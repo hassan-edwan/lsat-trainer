@@ -67,6 +67,10 @@ What's included instead is **original** material written for this project:
   passages each, 231 questions). They are deliberately **harder than the real test**: about a quarter of
   the questions are rated level 5, with dense stimuli, stacked conditionals, indirect correct answers, and
   near-miss traps. Every section was solved blind by a separate checker to confirm the answer key.
+- **A Flaw Pattern Practice Set** of 60 LR questions: five for each of twelve flaw patterns (equivocation,
+  false choice, circular reasoning, straw man, bad authority, ad hominem, possible-as-certain, part vs. whole,
+  lack of evidence, sampling, flawed analogy, overreaching conclusions), at difficulty 2 through 5, so every
+  standard flaw pattern has enough questions to measure and drill.
 - **The skill diagnostic** described above.
 - A short sample test. To practice with other material you have the right to use, import it:
 [docs/FORMAT.md](docs/FORMAT.md) describes the JSON format and a plain-text format that's easy to produce from
