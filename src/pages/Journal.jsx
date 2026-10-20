@@ -70,7 +70,7 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
             </div>
           </div>
           <div className="row spread">
-            <span className="muted small-text">Added {new Date(entry.addedAt).toLocaleDateString()} ({entry.source === 'auto' ? 'wrong twice' : 'added by hand'})</span>
+            <span className="muted small-text">Added {new Date(entry.addedAt).toLocaleDateString()} ({{ auto: 'wrong twice', diagnostic: 'missed in diagnostic', manual: 'added by hand' }[entry.source] || entry.source})</span>
             <button className="danger small" onClick={() => confirm('Remove this question from your journal?') && onDelete(entry.qid)}>Remove</button>
           </div>
         </div>

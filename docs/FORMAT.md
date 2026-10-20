@@ -63,6 +63,8 @@ Keep private test files out of git: the repo's `.gitignore` already ignores `pri
 | `questions[].types` | no | Question type ids (below). If omitted, they're guessed from the stem and marked "auto". |
 | `questions[].difficulty` | no | 1–5. |
 | `questions[].tags` | no | Free-form strings. `except` / `least` are added automatically. |
+| `questions[].skills` | no | Cross-cutting skills: `conditional`, `debate`. If omitted, they're guessed from the stimulus; an explicit array (even `[]`) turns the guess off. |
+| `purpose` | no | `"diagnostic"` marks a skill-diagnostic test: it appears on the Diagnostic page instead of the library and is kept out of drills. Its questions carry a `ladder:<skill id>` tag and `difficulty` = ladder level (1–5); see `src/lib/diagnostic.js` for the skill ids. |
 | `scoreConversion` | no | Raw score → scaled score. If present, results show scaled scores. |
 
 Use `\n\n` between paragraphs in `stimulus` and passage `text`.

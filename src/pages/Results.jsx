@@ -52,7 +52,14 @@ export default function Results({ session }) {
             </button>
           ))}
         </div>
-        {(s.outcomes['wrong-twice'] || 0) > 0 && (
+        {session.kind === 'diagnostic' && (
+          <p>
+            Every question you missed on the timed pass is now in your <a href="#/journal">mistake journal</a>. Write
+            down your thought process for each, then check the <a href="#/diagnostic">diagnostic grid</a> to see where
+            each skill breaks.
+          </p>
+        )}
+        {session.kind !== 'diagnostic' && (s.outcomes['wrong-twice'] || 0) > 0 && (
           <p>
             {s.outcomes['wrong-twice']} question{s.outcomes['wrong-twice'] === 1 ? ' was' : 's were'} wrong in both the timed pass and blind review and {s.outcomes['wrong-twice'] === 1 ? 'is' : 'are'} now in your{' '}
             <a href="#/journal">mistake journal</a>. Write down your thought process while it's fresh.

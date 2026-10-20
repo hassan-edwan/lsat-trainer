@@ -3,7 +3,7 @@ import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { allocate, buildDrill, shuffle, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
-import { SECTION_KINDS, typeLabel, typesForKind } from '../lib/taxonomy.js';
+import { SECTION_KINDS, SKILLS, typeLabel, typesForKind } from '../lib/taxonomy.js';
 
 const PACES = [
   ['80', 'Test pace (1:20 per question)'],
@@ -13,10 +13,11 @@ const PACES = [
 ];
 
 export default function DrillBuilder() {
-  const { questions, attempts, journal, sessions, saveSession } = useStore();
+  const { questions, index, attempts, journal, sessions, saveSession } = useStore();
   const [mode, setMode] = useState('smart');
   const [kinds, setKinds] = useState(['LR']);
   const [types, setTypes] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [count, setCount] = useState(10);
   const [pace, setPace] = useState('80');
   const [blindReview, setBlindReview] = useState(true);
@@ -33,7 +34,7 @@ export default function DrillBuilder() {
 
   const typeCounts = useMemo(() => {
     const c = {};
-    pool.forEach((q) => q.types.forEach((t) => { c[t] = (c[t] || 0) + 1; }));
+    pool.forEach((q) => [...q.types, ...(q.tags || [])].forEach((t) => { c[t] = (c[t] || 0) + 1; }));
     return c;
   }, [pool]);
 
@@ -50,12 +51,13 @@ export default function DrillBuilder() {
     let picked;
     let title;
     if (mode === 'journal') {
-      const ids = new Set(journalOpen.map((e) => e.qid));
-      picked = shuffle(questions.filter((q) => ids.has(q.id))).slice(0, count);
+      // Use the index rather than `questions` so diagnostic misses can be retried too.
+      picked = shuffle(journalOpen.map((e) => index[e.qid]).filter(Boolean)
+        .map(({ question, section, test }) => ({ ...question, kind: section.kind, testId: test.id }))).slice(0, count);
       title = 'Mistake journal retry';
     } else {
-      picked = buildDrill(pool, attempts, journal, { mode, types, kinds, count });
-      title = mode === 'smart' ? 'Smart drill' : `Drill: ${types.map(typeLabel).join(', ')}`;
+      picked = buildDrill(pool, attempts, journal, { mode, types, skills, kinds, count });
+      title = mode === 'smart' ? 'Smart drill' : `Drill: ${[...skills.map((k) => SKILLS[k]), ...types.map(typeLabel)].join(', ')}`;
     }
     if (!picked.length) {
       alert('No matching questions. Import more tests or change the filters.');
@@ -66,7 +68,7 @@ export default function DrillBuilder() {
   };
 
   const toggle = (list, setList, v) => setList(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
-  const canStart = mode === 'journal' ? journalOpen.length > 0 : kinds.length > 0 && (mode !== 'types' || types.length > 0);
+  const canStart = mode === 'journal' ? journalOpen.length > 0 : kinds.length > 0 && (mode !== 'types' || types.length > 0 || skills.length > 0);
 
   return (
     <div className="stack">
@@ -103,6 +105,17 @@ export default function DrillBuilder() {
           </div>
         )}
 
+        {mode === 'types' && (
+          <div className="type-grid">
+            <h3>Skills (across question types)</h3>
+            {Object.entries(SKILLS).map(([id, label]) => (
+              <label key={id} className={typeCounts[id] ? '' : 'disabled'}>
+                <input type="checkbox" disabled={!typeCounts[id]} checked={skills.includes(id)} onChange={() => toggle(skills, setSkills, id)} />
+                {label} <span className="muted">({typeCounts[id] || 0})</span>
+              </label>
+            ))}
+          </div>
+        )}
         {mode === 'types' && kinds.map((k) => (
           <div key={k} className="type-grid">
             <h3>{SECTION_KINDS[k]}</h3>

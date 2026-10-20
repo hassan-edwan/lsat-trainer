@@ -29,6 +29,8 @@ export default function Home() {
   const active = all.filter((s) => s.phase !== 'done');
   const done = all.filter((s) => s.phase === 'done');
   const testById = Object.fromEntries(tests.map((t) => [t.id, t]));
+  const practiceTests = tests.filter((t) => t.purpose !== 'diagnostic');
+  const hasDiagnostic = tests.length > practiceTests.length;
 
   const start = async (test) => {
     const session = await saveSession(createPTSession(test));
@@ -79,6 +81,16 @@ export default function Home() {
         </section>
       )}
 
+      {hasDiagnostic && (
+        <section className="card row spread">
+          <div>
+            <h2>Skill diagnostic</h2>
+            <p className="muted">Find the difficulty level where each question type starts to break down for you.</p>
+          </div>
+          <a className="button primary" href="#/diagnostic">Open diagnostic</a>
+        </section>
+      )}
+
       {tests.length > 0 && (
         <section className="card">
           <div className="row spread">
@@ -90,7 +102,7 @@ export default function Home() {
               <tr><th>Test</th><th>Sections</th><th>Questions</th><th>Taken</th><th>Last score</th><th /></tr>
             </thead>
             <tbody>
-              {tests.map((t) => {
+              {practiceTests.map((t) => {
                 const taken = done.filter((s) => s.kind === 'pt' && s.testId === t.id);
                 return (
                   <tr key={t.id}>
@@ -120,7 +132,7 @@ export default function Home() {
               {done.slice(0, 30).map((s) => (
                 <tr key={s.id}>
                   <td>{s.title}</td>
-                  <td>{s.kind === 'pt' ? 'Test' : 'Drill'}</td>
+                  <td>{s.kind === 'pt' ? 'Test' : s.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'}</td>
                   <td className="muted">{new Date(s.finishedAt || s.updatedAt).toLocaleString()}</td>
                   <td>{scoreText(s, testById[s.testId])}</td>
                   <td className="right"><a className="button small" href={`#/session/${s.id}`}>Review</a></td>

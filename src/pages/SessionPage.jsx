@@ -28,7 +28,7 @@ export default function SessionPage({ id }) {
       <div className="app">
         <header className="topnav">
           <a className="brand" href="#/">LSAT Trainer</a>
-          <nav><a href="#/">Library</a><a href="#/drill">Drills</a><a href="#/journal">Mistake Journal</a><a href="#/stats">Analytics</a></nav>
+          <nav><a href="#/">Library</a><a href="#/diagnostic">Diagnostic</a><a href="#/drill">Drills</a><a href="#/journal">Mistake Journal</a><a href="#/stats">Analytics</a></nav>
         </header>
         <main className="page"><Results session={session} /></main>
       </div>

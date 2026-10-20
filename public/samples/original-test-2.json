@@ -1,0 +1,1469 @@
+{
+  "format": "lsat-trainer/v1",
+  "id": "original-practice-test-2",
+  "name": "Original Practice Test 2",
+  "number": 2,
+  "source": "Original LSAT-style questions written for LSAT Trainer (harder than the real test). Not LSAC material. MIT licensed.",
+  "sections": [
+    {
+      "id": "lr1",
+      "kind": "LR",
+      "title": "Logical Reasoning",
+      "timeLimitMinutes": 35,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Some geologists hold that the basalt columns at Varrow Ridge formed when a large lava lake cooled slowly in place. Admittedly, the columns' unusual height is just what one would expect from very slow cooling. But the lava-lake hypothesis must nonetheless be rejected. Columns that form in a cooling lava lake are nearly always vertical, perpendicular to the lake's cooling surface, whereas most of the Varrow columns are steeply tilted. Moreover, a lake large enough to produce columns of this height would have left a thick layer of glassy crust at its upper surface, and no trace of such a layer has been found anywhere on the ridge.",
+          "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+          "choices": [
+            "The unusual height of the Varrow columns is consistent with their having cooled very slowly.",
+            "Columns that form in a cooling lava lake are nearly always oriented vertically.",
+            "The basalt columns at Varrow Ridge did not form from a large lava lake cooling slowly in place.",
+            "No layer of glassy crust of the kind a large lava lake would leave has been found at Varrow Ridge.",
+            "The basalt columns at Varrow Ridge did not form through a process of slow cooling."
+          ],
+          "answer": "C",
+          "types": [
+            "main-conclusion"
+          ],
+          "difficulty": 2,
+          "explanation": "The argument concedes one point and then gives two reasons for rejecting the lava-lake hypothesis; that rejection (C) is the conclusion. E is the trap: the argument concedes that the columns' height fits slow cooling and rejects only the claim that a lava lake was involved, so E overstates the conclusion. A is the concession, and B and D are premises."
+        },
+        {
+          "number": 2,
+          "stimulus": "Store manager: In early March, we lowered the price of our house-brand exterior paint by 15 percent. Total paint sales at our store from April through June were nearly 20 percent higher than they had been from January through March. We did not increase our advertising or change our store hours during either period, and no competing store in the area closed. Clearly, then, the price reduction is responsible for the increase in our paint sales.",
+          "stem": "The reasoning in the store manager's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "fails to consider that people may be more inclined to buy exterior paint in spring than in winter, whatever its price",
+            "takes for granted that the price reduction was larger than any reduction offered by competing stores",
+            "overlooks the possibility that the store's advertising was more effective in one period than in the other",
+            "draws a conclusion about hardware stores in general from evidence concerning only a single store",
+            "treats an increase in the store's paint sales as though it were an increase in the store's overall sales"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "explanation": "The manager compares winter months with spring months, and demand for exterior paint plausibly rises in spring regardless of price, so a seasonal pattern could explain the increase (A). C is the trap: the manager rules out a change in advertising, and nothing suggests the same advertising worked differently in the two periods. D fails because the conclusion is only about this store, and B and E describe errors the argument does not make."
+        },
+        {
+          "number": 3,
+          "stimulus": "Councilor Ames: The proposal to rezone the Delmont rail yard for apartment construction should be approved. The city's housing shortage is severe, and the yard has sat vacant for over a decade.\n\nCouncilor Perez: The city certainly needs housing, but the rail yard is the wrong site for it. Its soil is contaminated with industrial solvents, and cleaning it to residential standards would cost more than any developer will pay. Rezoning the yard for light industry, which requires far less cleanup, would actually get the land used.",
+          "stem": "Ames and Perez disagree over whether",
+          "choices": [
+            "the city is experiencing a shortage of housing",
+            "the Delmont rail yard should be rezoned",
+            "the soil at the Delmont rail yard is contaminated with industrial solvents",
+            "the Delmont rail yard should be rezoned for apartment construction",
+            "light industry requires less cleanup of contaminated soil than residential use does"
+          ],
+          "answer": "D",
+          "types": [
+            "point-at-issue"
+          ],
+          "difficulty": 2,
+          "explanation": "Ames favors rezoning the yard for apartments, while Perez says the yard is the wrong site for housing and should be rezoned for light industry, so they disagree about D. B is the trap: both councilors favor rezoning the yard and differ only over what use it should be rezoned for. Perez agrees about the housing shortage (A), and Ames takes no position on contamination or cleanup (C, E)."
+        },
+        {
+          "number": 4,
+          "stimulus": "In the town of Halbrook, cases of a certain gastrointestinal illness rose sharply in the two weeks after a new municipal well began supplying water to the town's eastern district. The illness is caused by a bacterium that can survive for long periods in groundwater. Investigators have therefore concluded that water from the new well is the source of the recent increase in cases.",
+          "stem": "Which one of the following, if true, most strengthens the investigators' argument?",
+          "choices": [
+            "The new well passed every water-quality test that the state required before it was put into service.",
+            "During those two weeks, the western district, which continued to receive water only from the old reservoir, had about the same number of cases as in the preceding month.",
+            "Many residents of Halbrook's eastern district drink bottled water rather than tap water.",
+            "Outbreaks of gastrointestinal illness occur in Halbrook several times each decade.",
+            "The bacterium that causes the illness is also commonly found in surface water such as reservoirs and streams."
+          ],
+          "answer": "B",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 3,
+          "explanation": "B supplies a control group: the part of town that did not receive water from the new well saw no increase, which points to the new well as the source. E is tempting because it concerns the bacterium, but it suggests the old reservoir could harbor it too, which if anything weakens the argument. A, C, and D also weaken or are neutral."
+        },
+        {
+          "number": 5,
+          "stimulus": "In the jurisdiction of Corland, evidence obtained through a search may be introduced at trial only if the search was conducted under a valid warrant or the defendant gave valid consent to it. A warrant is valid only if a judge found probable cause before the search was conducted, and a judge may find probable cause only on the basis of sworn testimony. Consent is valid only if it is given before the search begins. Police searched a storage unit rented by Viktor Mirov and found stolen equipment. The only testimony about the unit given to any judge before the search was unsworn.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "The stolen equipment cannot be introduced as evidence at Mirov's trial.",
+            "Mirov did not consent to the search before it began.",
+            "If Mirov consented to the search before it began, the stolen equipment will be introduced at his trial.",
+            "No warrant was issued for the search of Mirov's storage unit.",
+            "If the stolen equipment is introduced at Mirov's trial, then Mirov consented to the search before it began."
+          ],
+          "answer": "E",
+          "types": [
+            "must-be-true"
+          ],
+          "difficulty": 3,
+          "explanation": "With no sworn testimony, no judge could have found probable cause beforehand, so any warrant was invalid; valid consent, which must precede the search, is the only remaining route to admission, so admission requires such consent (E). A is the trap: nothing rules out Mirov's having consented before the search. C reverses the conditional, since valid consent is necessary, not sufficient. D fails because an invalid warrant may have been issued, and B is not established."
+        },
+        {
+          "number": 6,
+          "stimulus": "Last year the development team at Ostrander Systems adopted mandatory code review: no change to the company's software can be merged until a second engineer has examined and approved it. Since then, the number of bugs reported by customers each month has fallen by 40 percent, even though the number of customers using the software has held steady. The team lead concludes that mandatory code review has substantially reduced the number of bugs in the company's software.",
+          "stem": "Which one of the following, if true, most seriously weakens the team lead's argument?",
+          "choices": [
+            "Code review is widely practiced among software firms of Ostrander's size.",
+            "The bugs that customers reported this year were, on average, more severe than those reported the year before.",
+            "Shortly before code review became mandatory, Ostrander replaced its simple bug-report e-mail address with a lengthy online form that customers must complete to report any problem.",
+            "Engineers at Ostrander report that reviewing others' code now takes up a significant portion of their workweek.",
+            "Before review became mandatory, Ostrander engineers sometimes informally asked colleagues to look over their code."
+          ],
+          "answer": "C",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "explanation": "The evidence is the number of bug reports, not the number of bugs; C gives a reason that reports would drop even if the software were no less buggy, so the evidence no longer tracks the conclusion. B is tempting, but the severity of the reported bugs says nothing about whether there are fewer of them. E is consistent with mandatory review making a large difference, and A and D are irrelevant."
+        },
+        {
+          "number": 7,
+          "stimulus": "Film critic: The director Lena Varga has repeatedly claimed that every scene in her film Tidewater was shot in the coastal village it depicts, during her production last year. But several scenes show the village harbor with a large stone breakwater in the background, and that breakwater was demolished three years before Varga began filming. So Varga's claim is false: at least some of the film was not shot in that village during last year's production.",
+          "stem": "Which one of the following is an assumption on which the critic's argument depends?",
+          "choices": [
+            "The breakwater visible in those scenes is not a replica or digital re-creation produced by Varga's filmmakers.",
+            "Varga has made misleading claims about the production of her earlier films.",
+            "No other village on that coast has a stone breakwater resembling the demolished one.",
+            "The scenes in which the breakwater appears are essential to the film's plot.",
+            "Most viewers of Tidewater would recognize the breakwater shown in those scenes."
+          ],
+          "answer": "A",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 2,
+          "explanation": "If the filmmakers re-created the breakwater, the scenes could have been shot in the village last year after all, and the argument collapses; so the argument must assume A. C is the trap: the conclusion holds whether the scenes were shot in another village or come from older footage, so it does not matter whether another village has a similar breakwater. B, D, and E are irrelevant."
+        },
+        {
+          "number": 8,
+          "stimulus": "Linguists studying immigrant communities in the Pell Valley have found that when immigrant children become fluent in the regional language at an early age, their families' ancestral language typically disappears from the home within two generations. Children of families who immigrated from Darnesia almost always become fluent in the regional language before age ten. Yet in most Darnesian families in the valley, Darnesian is still spoken at home three or more generations after immigration.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "The regional language and Darnesian share a substantial portion of their vocabulary.",
+            "Children from most other immigrant groups in the valley also become fluent in the regional language before age ten.",
+            "Immigration from Darnesia to the valley began earlier than immigration from most other countries.",
+            "Many Darnesian families in the valley use the regional language when speaking with their neighbors.",
+            "Religious and civic life in the valley's Darnesian community is conducted almost entirely in Darnesian, so that taking part in it requires fluency in that language."
+          ],
+          "answer": "E",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 3,
+          "explanation": "E identifies a strong, continuing incentive for Darnesian families to keep their language alive at home, which explains why the usual pattern does not hold for them. A is the most tempting wrong answer, but shared vocabulary would make the regional language easier to adopt and gives no reason Darnesian would persist. B and D only deepen the puzzle, and C is irrelevant."
+        },
+        {
+          "number": 9,
+          "stimulus": "Geologist: Every major earthquake recorded along the Sarn Fault in the past century was preceded, in the weeks before it struck, by a swarm of small tremors. Over the past two weeks, monitoring stations have detected a swarm along the Sarn Fault that closely matches those earlier swarms in both the frequency and the intensity of its tremors. Since the current swarm is in every measurable respect like those that came before major earthquakes, a major earthquake along the fault is imminent.",
+          "stem": "The reasoning in the geologist's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "relies on a record of the fault's activity that is too short to reveal its behavior over geological time",
+            "takes the fact that every event of one kind was preceded by an event of a second kind to show that events of the second kind are reliably followed by events of the first kind",
+            "presumes, without providing justification, that swarms of small tremors are what cause major earthquakes along the fault",
+            "fails to consider that earthquakes along other faults might not be preceded by swarms of small tremors",
+            "draws a conclusion about the timing of an earthquake from evidence that bears only on its likely magnitude"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "The premises show that major quakes have always followed swarms, not that swarms have always been followed by major quakes; if swarms like this one often fade without a major quake, the conclusion fails (B). C is the main trap: the argument treats swarms only as a warning sign, and its reasoning would be equally flawed whether or not swarms cause quakes. A is tempting, but a longer record would not repair the logical gap, and D and E misdescribe the argument."
+        },
+        {
+          "number": 10,
+          "stimulus": "Legal scholar: A police officer who stops a vehicle for a traffic violation may extend the stop to investigate some other crime only if, during the stop, the officer observes something that specifically indicates that the particular vehicle or its occupants are involved in that crime. Information that merely describes a category of people or vehicles does not meet this standard, nor does anything the officer learns only after the stop has been extended.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated by the legal scholar?",
+          "choices": [
+            "Officer Holt extended a traffic stop to search for contraband because the car was a model frequently used by smugglers in the region; the extension was proper.",
+            "Officer Ruiz extended a traffic stop without observing anything suspicious, but the subsequent search turned up stolen property; the extension was therefore proper.",
+            "Officer Lind stopped a car for a broken taillight and released the driver after issuing a ticket, even though she had seen a weapon on the seat; Lind acted improperly.",
+            "Officer Pratt extended a traffic stop solely because he had a strong feeling that the driver was hiding something, though nothing he observed indicated this; the extension was improper.",
+            "Officer Sato extended a traffic stop after noticing a strong smell of a controlled substance coming from the car; because of this observation, the extension was proper."
+          ],
+          "answer": "D",
+          "types": [
+            "principle-apply"
+          ],
+          "difficulty": 3,
+          "explanation": "The principle states a necessary condition for extending a stop; Pratt observed nothing specific, so the condition was not met and the extension was improper (D). E is the trap: Sato's observation meets the necessary condition, but the principle never says that meeting it makes an extension proper. A relies on category information, B on what was learned afterward, and C concerns an obligation to extend, which the principle never imposes."
+        },
+        {
+          "number": 11,
+          "stimulus": "At Brightway grocery stores, items placed on shelves at eye level sell, on average, about 30 percent more units than identical items placed on the bottom shelf. Brightway charges outside suppliers a fee for eye-level placement of their products. Last year, Brightway raised the price of its own store-brand oat cereal by 10 percent and at the same time moved the cereal from the bottom shelf to eye level. Unit sales of the cereal for the year were 5 percent higher than for the previous year.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Suppliers who pay Brightway for eye-level placement gain more from the placement than they pay in fees.",
+            "At Brightway, raising the price of an item by 10 percent typically reduces its unit sales by about 25 percent.",
+            "Had Brightway moved its store-brand cereal to eye level without raising its price, the cereal's unit sales would probably have risen by more than 5 percent.",
+            "The price increase caused Brightway's revenue from its store-brand cereal to fall last year.",
+            "Customers who buy Brightway's store-brand cereal are less sensitive to price than customers who buy other brands of cereal."
+          ],
+          "answer": "C",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 4,
+          "explanation": "Eye-level placement typically raises unit sales by about 30 percent, yet the cereal gained only 5 percent, so something, most plausibly the price increase, held sales down; without it, sales would probably have risen more (C). B is the strongest trap, but it turns one item's result into a precise rule for all items. D is unsupported: with a higher price and more units sold, revenue very likely rose. A and E go beyond the information."
+        },
+        {
+          "number": 12,
+          "stimulus": "Under the Fenwick zoning code, no structure taller than 12 meters may be built in a residential district unless the zoning board grants it a variance. The board may grant a variance only to a structure that either is a public utility or has been shown by its applicant to cast no shadow on any neighboring property for more than two hours per day. Grace Hill Chapel, which is in a residential district, has applied to build an 18-meter bell tower, which is not a public utility. Therefore, the chapel will not be permitted to build the tower.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "The zoning board has never granted a variance to any structure taller than 15 meters.",
+            "If the bell tower would cast a shadow on a neighboring property for more than two hours per day, the board will not grant it a variance.",
+            "Only public utilities may be granted variances without a showing about the shadows they cast.",
+            "Some of the chapel's neighbors have objected that the tower would shade their homes for much of the day.",
+            "If an applicant can show that a structure will cast no shadow on any neighboring property for more than two hours per day, then that structure is no more than 15 meters tall."
+          ],
+          "answer": "E",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 4,
+          "explanation": "By contraposition, E means no one can make the required shadow showing for an 18-meter structure; since the tower is not a public utility, it cannot get a variance and so cannot be built. A is the strongest trap, but what the board has done in the past does not guarantee what it may do now. B is a true conditional whose condition is never established, C merely restates the code, and D is irrelevant."
+        },
+        {
+          "number": 13,
+          "stimulus": "Public health officials in Merrow County attribute this year's decline in measles cases in the county to the vaccination campaign they launched last winter. Admittedly, the number of measles cases nationwide has also declined this year, which might suggest that the county's decline merely reflects a broader trend. But the county's decline began within a month of the campaign's launch and was nearly three times as steep as the national decline. So the officials' attribution is probably correct.",
+          "stem": "Which one of the following most accurately describes the role played in the argument by the claim that the number of measles cases nationwide has also declined this year?",
+          "choices": [
+            "It is cited as a consideration that might be taken to count against the argument's conclusion.",
+            "It is the conclusion that the argument as a whole is intended to support.",
+            "It is offered as evidence that directly supports the officials' attribution.",
+            "It is a subsidiary conclusion that is used to support the argument's main conclusion.",
+            "It is a claim that the argument ultimately attempts to show is false."
+          ],
+          "answer": "A",
+          "types": [
+            "role"
+          ],
+          "difficulty": 3,
+          "explanation": "Introduced by 'Admittedly,' the national decline is a concession that might suggest a broader trend rather than the campaign explains the county's decline (A). E is the trap: the argument accepts that cases fell nationwide and rejects only the inference drawn from that fact. C reverses the claim's bearing, and the claim is neither the main nor a subsidiary conclusion (B, D)."
+        },
+        {
+          "number": 14,
+          "stimulus": "Studio executive: Over the past year, screenings in our chain's few premium large-format auditoriums have generated far more revenue per screening than screenings of the very same films in our standard auditoriums. Premium screenings cost little more to run than standard ones. So if we convert half of our standard auditoriums to the premium large format, our total box-office revenue will increase substantially.",
+          "stem": "Which one of the following, if true, most seriously weakens the executive's argument?",
+          "choices": [
+            "The films shown in the chain's premium auditoriums are almost all major releases, which draw large audiences in any format.",
+            "Some moviegoers prefer standard auditoriums because they find large-format screens uncomfortably bright.",
+            "Converting a standard auditorium to the premium large format requires closing it for several weeks.",
+            "Demand for premium large-format screenings is already nearly fully met by the chain's existing premium auditoriums, which seldom sell out.",
+            "Several competing theater chains have recently converted some of their auditoriums to the premium large format."
+          ],
+          "answer": "D",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "The executive assumes that new premium auditoriums would earn what the existing ones earn; if current premium capacity already meets demand, added premium screenings would largely draw patrons away from standard ones or go unfilled (D). A is the trap: the comparison already concerns the very same films in both formats, so the films' popularity cannot explain the difference. C describes only a temporary loss, B concerns only some patrons, and E's effect is unclear."
+        },
+        {
+          "number": 15,
+          "stimulus": "Some linguists claim that the Orvic language must have borrowed its words for metals from the neighboring Talesh language, because the Orvic and Talesh words for 'iron,' 'copper,' and 'tin' are strikingly similar. But similarity runs in both directions. If the similarity of these words shows that Orvic borrowed them from Talesh, it shows equally well that Talesh borrowed them from Orvic. Similarity alone, therefore, cannot establish which language did the borrowing.",
+          "stem": "The argument proceeds by",
+          "choices": [
+            "arguing that the similarity of the words is more likely the result of chance than of borrowing",
+            "pointing out that the evidence offered for a claim would equally support a competing claim",
+            "arguing that the linguists' claim is false on the grounds that the evidence offered for it is inadequate",
+            "drawing a general conclusion about all languages from the features of only two of them",
+            "questioning the accuracy of the data the linguists used in comparing the two languages"
+          ],
+          "answer": "B",
+          "types": [
+            "method"
+          ],
+          "difficulty": 4,
+          "explanation": "The argument shows that the cited similarity supports Talesh borrowing from Orvic just as well as the reverse, so it cannot decide between them (B). C is the trap: the argument concludes only that similarity cannot establish the direction of borrowing, not that Orvic did not borrow from Talesh. A misreads the argument, which grants the similarity and never appeals to chance, and the argument neither generalizes (D) nor disputes the data (E)."
+        },
+        {
+          "number": 16,
+          "stimulus": "Project manager: Our engineers estimate that rewriting the billing module in a newer programming language would take a team six months. But the module consists of twelve components, and the engineers agree that any one of those components could be rewritten by a single engineer in about two weeks. So if we assign a different engineer to each of the twelve components, the entire rewrite should take only about two weeks.",
+          "stem": "The reasoning in the project manager's argument is flawed in that it",
+          "choices": [
+            "relies on estimates made by engineers who may have an interest in the outcome of the project",
+            "presumes without justification that the newer programming language is superior to the current one",
+            "presumes that what is true of the engineers as a group must be true of each engineer individually",
+            "takes for granted that a rewrite should be undertaken if it can be completed quickly",
+            "fails to consider that rewriting a whole may require work beyond rewriting each of its parts separately"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "The components presumably have to be made to work together, so rewriting the whole can take longer than rewriting each part in isolation; the manager ignores this, along with the engineers' six-month estimate (E). C is the trap but reverses the error: the manager reasons from parts to a whole, not from a group to its members. A attacks the source rather than the reasoning, and B and D describe reasoning the manager never uses."
+        },
+        {
+          "number": 17,
+          "stimulus": "The cave at Morrin Hollow contains stalagmites whose growth layers record past rainfall: layers formed during wetter periods are thicker than those formed during drier periods. The researchers studying the cave confirmed that its air temperature has stayed essentially constant for at least a thousand years. Because the layers formed over the most recent four centuries are on average much thinner than those formed in the preceding centuries, the researchers conclude that the region has been considerably drier during the past four hundred years than it was before.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the researchers' argument?",
+          "choices": [
+            "whether the temperature inside other caves in the region has also remained constant",
+            "whether the region has become wetter during the most recent few decades",
+            "whether the amount of water that seeps into the cave from the surface depends on anything other than the amount of rain that falls",
+            "whether thick growth layers have been found in stalagmites from caves in wetter regions",
+            "whether wetter periods in the region have also tended to be warmer than drier periods"
+          ],
+          "answer": "C",
+          "types": [
+            "evaluate"
+          ],
+          "difficulty": 4,
+          "explanation": "The argument takes thinner layers as a sign of less rain; if seepage into the cave depends on other things, such as vegetation or soil above the cave, those could have changed four centuries ago and thinned the layers without any drop in rainfall (C). B is the trap: a recent wet spell would barely affect a four-century average and would not show whether the layers track rainfall. A concerns other caves, the researchers have already addressed temperature (E), and D merely restates what the premises already grant."
+        },
+        {
+          "number": 18,
+          "stimulus": "In the state of Varnell, eyewitnesses used to view police lineups administered by the detective investigating the case. Five years ago the state began requiring that lineups be administered by an officer who does not know which person in the lineup is the suspect. Since then, the proportion of eyewitnesses who pick a 'filler', a lineup member known to be innocent, has risen, while the proportion who pick the suspect has fallen. Researchers conclude that under the old procedure, detectives' knowledge was subtly steering witnesses toward the suspect.",
+          "stem": "Which one of the following, if true, most strengthens the researchers' argument?",
+          "choices": [
+            "In laboratory studies using lineups in which no member had committed the staged crime, witnesses more often chose the member designated as the suspect when the administrator knew of that designation than when the administrator did not.",
+            "Detectives in Varnell generally opposed the new requirement when it was first proposed.",
+            "Over the past five years, the average time between a crime and the lineup at which a witness views a suspect has increased substantially in Varnell.",
+            "Witnesses who pick a filler from a lineup are rarely called to testify at trial.",
+            "Several other states adopted the same requirement at around the same time Varnell did."
+          ],
+          "answer": "A",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 4,
+          "explanation": "A shows, under controlled conditions where witness memory cannot explain the result, that an administrator's knowledge alone can steer witnesses toward a designated person, which is the mechanism the researchers propose. C is the trap: longer delays could weaken witnesses' memories and account for more filler picks without any steering, so C weakens the argument. B, D, and E do not bear on why the pattern of identifications changed."
+        },
+        {
+          "number": 19,
+          "stimulus": "Retail analyst: Our review of the Calloway grocery chain's results for last year shows two things. Most of the Calloway chain's stores that introduced a customer loyalty program last year saw their profits rise. And most of the chain's stores whose profits rose last year are located in suburban shopping centers. It follows that at least some of the Calloway stores that introduced a loyalty program last year are located in suburban shopping centers.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the analyst's argument?",
+          "choices": [
+            "Most of the orchard's trees that were pruned in winter produced heavy crops, and most of the orchard's trees that were pruned in winter are apple trees. So at least some of the orchard's apple trees produced heavy crops.",
+            "Most of the library branches that extended their hours saw circulation rise, and no downtown branch saw circulation rise. So at least some of the branches that extended their hours are not downtown.",
+            "Most of the paintings the museum restored last year are landscapes. So most of the landscapes in the museum were restored last year.",
+            "Most of the guild's apprentices who completed the advanced course passed the certification exam, and most of the guild's apprentices who passed the exam later opened their own workshops. So at least some apprentices who completed the advanced course later opened their own workshops.",
+            "Most of the restaurants on Fell Street that serve breakfast are profitable. The Juniper restaurant on Fell Street serves breakfast. So the Juniper restaurant must be profitable."
+          ],
+          "answer": "D",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "The analyst chains two 'most' statements whose middle groups differ (most A are B; most B are C), which does not guarantee any overlap between A and C, since the B's that are A may be exactly the B's that are not C; D repeats this error. A is the main trap: both of its 'most' statements are about the same group of pruned trees, so the two majorities must overlap and the reasoning is valid. B is also valid, C commits a different error (reversing 'most'), and E turns 'most' into certainty."
+        },
+        {
+          "number": 20,
+          "stimulus": "A study of commuters in the city of Arlow found that those who regularly cycled to work had significantly lower rates of heart disease than those who drove to work. The researchers adjusted their results for differences in income and smoking habits and concluded that cycling to work reduces the risk of heart disease. But this conclusion is not warranted, since the cyclists in the study were, on average, considerably younger than the drivers, and the researchers made no adjustment for age.",
+          "stem": "Which one of the following is an assumption required by the argument?",
+          "choices": [
+            "Cycling to work does nothing to reduce a commuter's risk of heart disease.",
+            "Among Arlow commuters, greater age is associated with at least some increase in the risk of heart disease.",
+            "The difference in average age between the cyclists and the drivers is large enough to account for the entire difference in their rates of heart disease.",
+            "Age has a greater effect on the risk of heart disease than either income or smoking habits does.",
+            "The cyclists in the study had not been cycling to work long enough for it to affect their health."
+          ],
+          "answer": "B",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "explanation": "The objection works only if the age gap could account for at least part of the difference in heart disease rates; if older commuters were at no greater risk, the younger age of the cyclists would not bias the result in the researchers' favor (B). C is the main trap: to show the conclusion unwarranted, the argument needs age to be a possible explanation, not the complete one. A is likewise too strong, since the argument does not claim cycling has no benefit, and D and E are not needed."
+        },
+        {
+          "number": 21,
+          "stimulus": "The Linden Park neighborhood association argues that the city should deny a permit for a homeless shelter on Cobb Street because property values near shelters sometimes decline. But the shelter would meet a pressing public need that cannot be met elsewhere: no other available site in the city lies within walking distance of both the public hospital and the central transit hub, on which the shelter's residents depend. And any decline in nearby property values would likely be small. So the city should grant the permit.",
+          "stem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+          "choices": [
+            "A city should never deny a permit for a proposed land use merely because nearby residents object to it.",
+            "A city should grant a permit for a proposed land use whenever that use would impose no costs on nearby property owners.",
+            "A permit should be denied whenever a proposed land use would lower nearby property values, unless the need that the use serves could not be met at any other site.",
+            "Facilities that serve the public should, whenever possible, be located within walking distance of hospitals and transit hubs.",
+            "A city should deny a permit for a proposed land use that meets an important public need only if that need could be met at another site or the use would impose substantial costs on nearby property owners."
+          ],
+          "answer": "E",
+          "types": [
+            "principle-strengthen"
+          ],
+          "difficulty": 5,
+          "explanation": "E's contrapositive says that when a use meets an important need that cannot be met elsewhere and imposes no substantial costs, the permit should not be denied, which matches the argument's premises and yields its conclusion. C is the hardest trap: when no other site is available, it removes one requirement to deny, but it never says the permit should be granted. B does not apply because the argument concedes some decline in property values is likely, and A and D do not connect the premises to the conclusion."
+        },
+        {
+          "number": 22,
+          "stimulus": "In every dialect spoken on the Kessavan islands, words borrowed from the mainland language are always stressed on the first syllable, whatever their stress in the mainland language. Native Kessavan words, by contrast, are stressed on the first syllable only when that syllable contains a long vowel. A linguist recorded a lifelong resident of Ollo, one of the Kessavan islands, speaking the Ollo dialect. The speaker pronounced the word 'tamesh' with stress on the second syllable. The first syllable of 'tamesh' contains a short vowel.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "'Tamesh' is a native Kessavan word.",
+            "'Tamesh' is not stressed on its first syllable in any Kessavan dialect.",
+            "'Tamesh,' as used in the Ollo dialect, is not a word that the dialect borrowed from the mainland language.",
+            "Every native Kessavan word whose first syllable contains a short vowel is stressed on the second syllable.",
+            "Any Kessavan word that is stressed on the first syllable is a word borrowed from the mainland language."
+          ],
+          "answer": "C",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 5,
+          "explanation": "Mainland borrowings are stressed on the first syllable in every Kessavan dialect, and 'tamesh' was stressed on the second syllable in the Ollo dialect, so in that dialect it is not a mainland borrowing (C). A is the main trap: 'tamesh' could have been borrowed from some third language, which the stimulus says nothing about. B fails for the same reason, since the stress pattern of words from other sources, or in other dialects, is unknown. D overreaches (stress could fall on a later syllable), and E ignores native words with long first vowels."
+        },
+        {
+          "number": 23,
+          "stimulus": "Film archivist: Any film restored using the Calder process has lost some of its original color information. No film can be included in our archive's 'authentic presentation' series unless it retains all of its original color information. Every nitrate film in the Vantor collection was restored either by the Calder process or by our archive's own laboratory. The Gilded Gate is one of the nitrate films in the Vantor collection. Therefore, The Gilded Gate cannot be included in the authentic presentation series.",
+          "stem": "Which one of the following, if assumed, enables the archivist's conclusion to be properly drawn?",
+          "choices": [
+            "Any film that retains all of its original color information was not restored by the archive's own laboratory.",
+            "Every film that has been restored using the Calder process is a nitrate film.",
+            "The archive's own laboratory restores films using some process other than the Calder process.",
+            "Most films restored by the archive's own laboratory have lost some of their original color information.",
+            "Every film that has lost some of its original color information was restored either by the Calder process or by the archive's own laboratory."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "The Gilded Gate was restored either by the Calder process or by the archive's laboratory. The Calder branch already means lost color, and A, by contraposition, says every film the laboratory restored has also lost color, so either way the film is excluded. D is the closest trap, but 'most' leaves open that The Gilded Gate is a laboratory restoration that kept all its color. E reverses the needed conditional, B is irrelevant, and C does not say whether the laboratory's process loses color."
+        },
+        {
+          "number": 24,
+          "stimulus": "Security analyst: Of the security breaches at Halvern Corporation last year, 80 percent involved employee laptops running the older version of the company's operating system, while only 20 percent involved laptops running the new version. Clearly, then, Halvern's laptops that run the older version are much more likely to be involved in a security breach than are Halvern's laptops that run the new version.",
+          "stem": "The reasoning in the security analyst's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "presumes, without justification, that the design of the older version is what makes the laptops that run it vulnerable to breaches",
+            "relies on data from a single year, which may not reflect the company's long-term pattern of breaches",
+            "draws a conclusion about companies in general on the basis of evidence about a single company",
+            "treats the share of incidents that involve members of a group as though it indicated how often members of that group are involved in incidents",
+            "treats the occurrence of a breach as evidence that the breach was caused by an employee's carelessness"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "If, say, 90 percent of Halvern's laptops run the older version, then their accounting for 80 percent of breaches would make them, if anything, less likely to be breached; the argument confuses share of breaches with rate of breaches (D). A is the main trap: the conclusion says only that older-version laptops are more likely to be involved in breaches, not why, so it makes no causal claim about the software's design. B is tempting, but a single year's data does not make the comparison itself invalid, C ignores that the conclusion concerns only Halvern, and E is not in the argument."
+        },
+        {
+          "number": 25,
+          "stimulus": "Geologist: Any rock sample from the Tellis formation that contains garnet must have been metamorphosed at high pressure. Analysis has shown that none of the rock samples collected at the quarry site was metamorphosed at high pressure. So none of the quarry-site samples that come from the Tellis formation contains garnet, though samples from other formations at the site might.",
+          "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the geologist's argument?",
+          "choices": [
+            "Every apprentice at Dunmore Builders who has completed safety training is permitted to operate the table saw. None of the workers on the Elm Street project has completed safety training. So none of the Dunmore apprentices on the Elm Street project is permitted to operate the table saw.",
+            "Every painting in the Ashby collection that is signed was authenticated by the museum's conservator. None of the paintings on loan to the Rook Gallery was authenticated by the conservator. So none of the Ashby paintings on loan to the Rook Gallery is signed.",
+            "Every seedling at the Corvo nursery that was grown from a cutting is genetically identical to its parent plant. All of the seedlings in the greenhouse are genetically identical to their parent plants. So all of the Corvo seedlings in the greenhouse were grown from cuttings.",
+            "Every bird in the Pellam reserve that nests on the ground is vulnerable to foxes. None of the birds in the eastern marsh is vulnerable to foxes. So none of the birds in the eastern marsh nests on the ground.",
+            "Some of the bridges in Ralston County that were built before 1960 need structural repairs. None of the bridges on Route 9 needs structural repairs. So none of the Ralston County bridges on Route 9 was built before 1960."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel"
+          ],
+          "difficulty": 5,
+          "explanation": "The geologist validly reasons that garnet-bearing Tellis samples must show high-pressure metamorphism, no quarry sample does, and so no Tellis sample from the quarry contains garnet; B matches this exactly. D is the main trap: its conclusion covers all eastern-marsh birds, but its premise covers only Pellam birds, so unlike the original it does not limit the conclusion to the overlapping group. A denies the sufficient condition, C affirms the necessary one, and E treats 'some' as if it were 'all.'"
+        }
+      ]
+    },
+    {
+      "id": "rc1",
+      "kind": "RC",
+      "title": "Reading Comprehension",
+      "timeLimitMinutes": 35,
+      "passages": [
+        {
+          "id": "p1",
+          "title": "Repetition in Malek’s The Salt Ledger",
+          "text": "When Teodora Malek’s final novel, The Salt Ledger, appeared in English, reviewers were nearly unanimous in their complaint: the book repeats itself. Entire sentences recur, sometimes verbatim, sometimes with a single word altered; characters are introduced with the same epithet each time they appear; and the narrator returns, at intervals that seem arbitrary, to a description of the harbor at low tide. Most critics attributed these features to the fatigue of an aging writer or to an editorial process too deferential to correct them. Such explanations, however, assume that Malek was attempting the kind of novel her earlier books had been—densely plotted, psychologically intimate realism—and fell short. A more productive assumption is that she was attempting something else entirely.\n\nMalek grew up in the fishing villages of the Dravan coast, where, as she recounts in her memoir, evenings were given over to the recitation of long communal narratives. Those narratives were never fixed texts. A teller rebuilt each one from a stock of formulaic phrases and recurring scenes, and listeners, who already knew the outline of the story, judged a performance by how artfully the teller varied the familiar. Repetition in this setting was not redundancy but structure: a recurring phrase signaled to the audience where they stood in the tale, and a small change in a phrase they knew by heart carried more weight than any new sentence could.\n\nRead in this light, the repetitions in The Salt Ledger become legible. The harbor passage, for instance, recurs seven times, and each recurrence alters one detail—a boat missing, a mooring line frayed—that registers the losses the village has suffered since the last telling. A reader who skims the passage as filler misses some of the novel’s most important events, which Malek deliberately refuses to narrate directly. The epithets work similarly: when the widow Anka, called “the patient one” throughout, is finally called “the patient one, still,” the single added word conveys a judgment the narrator never voices. Not every repetition yields to this reading. A few sentences in the middle chapters recur unaltered and seem to do no work at all, and it is possible that these, at least, are the lapses the critics took the whole book to be. But an interpretation need not redeem every sentence to be preferable to one that redeems none.\n\nThe English translation obscured much of this. Its translator, evidently treating the repetitions as lapses, varied the wording of recurring passages to avoid monotony, so that Malek’s small, deliberate alterations are lost among many incidental ones. It would be too much to say that the critics’ verdict was produced entirely by the translation; some reviewers who read the original voiced the same complaint. But a reader of the English edition was given little chance to notice that the book’s apparent flaws follow a pattern. What looks like a novelist losing control of her material may instead be a novelist returning, at the end of her career, to the oldest form of control she knew."
+        },
+        {
+          "id": "p2",
+          "title": "Contracts made by software agents",
+          "text": "Passage A\n\nSoftware agents now routinely negotiate and conclude transactions on behalf of the people who deploy them: they reorder supplies, book travel, and bid in auctions, often without any human reviewing the particular terms. When such an agent strikes a bargain its user later regrets, courts must decide whether the user is bound. The answer should be yes, in nearly every case.\n\nThe traditional requirement of mutual assent is not offended by this conclusion. A person who sets an agent loose in a marketplace has manifested, by that very act, a willingness to be bound by the transactions it concludes, just as a merchant who installs a vending machine has manifested a willingness to sell at the posted price to anyone who inserts the coins. The assent is general rather than particular, but contract law has long recognized general assent; no one supposes that the vending-machine owner must approve each sale. It may be objected that a user cannot assent to a term she could not foresee. But contract law has never required foresight of every term: a person who signs a lengthy standard form without reading it is bound by provisions that surprise her.\n\nThere is also a practical argument. The counterparty to an automated transaction usually cannot see how the agent was configured or what limits its user intended to impose. The user, by contrast, chose the agent, set its parameters, and can monitor its conduct. If losses from an agent’s unexpected bargains must fall on someone, they should fall on the party best positioned to prevent them. A rule permitting users to disown inconvenient transactions would invite strategic repudiation and would make counterparties reluctant to deal with agents at all, sacrificing the efficiencies that make such agents valuable.\n\nPassage B\n\nProposals to hold users strictly bound by whatever their software agents agree to rest on a misleading picture of how these agents work. A vending machine executes a fixed offer its owner composed in advance; the owner knows every transaction it can conclude. Contemporary agents, by contrast, generate terms their users never contemplated, sometimes by combining provisions in ways no one designed. To say that a user “assented” to such terms by deploying the agent stretches the notion of assent until it means nothing more than causation.\n\nA better model already exists in the law of agency. A human agent binds the principal only when acting within the authority the principal conferred, or when the principal’s own conduct led the other party reasonably to believe such authority existed. Applied to software, this framework would bind users to transactions within the parameters they set—a spending ceiling, a list of approved vendors—and to transactions a counterparty reasonably believed were authorized, given the representations the user made about the agent. Transactions outside both categories would not bind the user.\n\nThis approach preserves the incentive that strict liability is meant to create: users who wish to be bound broadly can say so, and users who describe their agents carelessly will bear the consequences. But it also recognizes that some transactions are malfunctions rather than bargains, and that a counterparty who accepts terms no reasonable user would authorize—an order for ten thousand times the customary quantity, say—is not an innocent party deserving protection."
+        },
+        {
+          "id": "p3",
+          "title": "The Tabrin Basin polygons",
+          "text": "Across the floor of the Tabrin Basin, an arid lowland far from any present-day glacier, the ground is divided into a network of low ridges that outline polygons, most of them between fifteen and thirty meters across. Beneath each ridge lies a narrow, wedge-shaped body of sand that tapers downward to a depth of three or four meters. Two explanations for these features have been proposed, and the dispute between them has implications for the region’s climate history.\n\nThe first explanation holds that the polygons are giant desiccation cracks. When a layer of wet, clay-rich sediment dries, it shrinks, and the resulting stress is relieved by cracks that join into polygonal networks; windblown sand can then fill the cracks. The Tabrin Basin is known to have held a lake during wetter periods, and the drying of that lake would have left exactly the kind of clay layer in which such cracks form. Proponents note that desiccation polygons of considerable size have been documented on other dried lakebeds.\n\nThe second explanation holds that the polygons are relics of permafrost. In very cold climates, frozen ground contracts in winter and cracks; meltwater or windblown sediment enters the cracks, and over many centuries the repeated process builds vertical wedges that push the adjacent ground up into ridges. When the climate warms, any ice in the wedges melts and the space fills with sediment, leaving a “cast” of the former wedge. On this view, the Tabrin Basin was once far colder than any current reconstruction of its climate allows.\n\nThe size and depth of the features favor the second explanation. Desiccation cracks penetrate only about as deep as the drying layer, and the polygons they form are typically a few meters across at most; the large dried-lake examples are exceptional, and even they are bounded by cracks that rarely exceed a meter in depth. Wedges three meters deep would require a drying clay layer of comparable thickness, yet the clay deposits in the basin are nowhere more than half a meter thick. Moreover, much of the sand in the Tabrin wedges is arranged in thin vertical laminae, the pattern produced when sediment trickles repeatedly into a crack that reopens year after year—a hallmark of seasonal thermal contraction rather than of a single episode of drying. Proponents of the desiccation hypothesis have yet to explain these laminae. Admittedly, the permafrost explanation carries a cost its rival does not: it requires a cold interval for which no independent evidence has yet been found, and a hypothesis that demands revising a region’s climate record ought to meet a higher burden than one that does not. But a higher burden is not an insurmountable one, and unless the laminae can be otherwise explained, the basin’s polygons are best read as evidence of a cold interval that climate reconstructions have so far missed."
+        },
+        {
+          "id": "p4",
+          "title": "Why rotating savings associations persist",
+          "text": "In many parts of the world, small groups of people pool their savings through rotating associations: each member contributes a fixed sum at every meeting, and the entire pot goes to one member in turn until everyone has received it once. For several decades, the prevailing interpretation among economists, associated most closely with the work of Hollis Brandt, treated these associations as a substitute for banking. Members, on this view, lack access to formal financial institutions and so improvise a crude mechanism for accumulating lump sums. The prediction followed naturally: as banks extend their reach, the associations should wither.\n\nThat prediction has fared poorly. In a survey of market vendors in the city of Merovale, conducted a decade after a national program brought bank branches to nearly every district, the anthropologist Ines Valdora found that more than half of the vendors who held bank accounts also belonged to at least one rotating association, and many contributed more to their associations than they deposited in their accounts. Nor could the persistence be attributed to mere habit: new associations were forming at roughly the same rate as before the branches opened. Nor did members appear to distrust banks: association members were no more likely than nonmembers to describe banks as unsafe, and almost none had closed an account.\n\nValdora’s interviews suggest why. Vendors repeatedly described the associations not as a way to obtain savings services they otherwise lacked but as a way to protect their savings from themselves and from others. Money in a bank account can be withdrawn whenever a relative asks for help or a tempting purchase appears; a contribution owed to the association at the next meeting cannot be postponed without public embarrassment. The association thus supplies something a bank account does not: an obligation, enforced by the regard of one’s neighbors, to keep saving. Some vendors added that a pot received from the association was easier to refuse to share than a bank balance, because it was understood to be earmarked for a purpose announced to the group in advance.\n\nNone of this implies that Brandt was simply wrong. Where banks were absent, the associations surely did serve as substitutes, and the earlier interpretation helps explain why they were once so widespread. Its error was to infer, from the circumstances in which the associations flourished, the full set of needs they meet. Valdora’s sample, drawn from the vendors of a single city, cannot by itself show that the same needs sustain associations elsewhere; it is enough, however, to show that the substitution account is incomplete. A practice adopted for one reason may persist for another, and only by observing what happens when the original reason disappears can the two be separated."
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "The English translation of The Salt Ledger introduced repetitions that critics mistakenly attributed to Malek’s declining powers.",
+            "Much of the repetition in The Salt Ledger that critics took as a sign of decline is better understood as a deliberate use of techniques from the oral tradition in which Malek was raised.",
+            "Every repetition in The Salt Ledger serves a structural purpose that critics overlooked because they read the novel in translation.",
+            "Oral storytellers on the Dravan coast valued artful variation on familiar material more highly than the invention of new stories.",
+            "The Salt Ledger should be judged by the standards of oral performance rather than those of the realist novel, since Malek intended it to be read aloud."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 2,
+          "explanation": "The passage argues that the repetitions critics treated as lapses mostly follow the logic of the Dravan coast oral narratives, and (B)’s ‘much of’ matches the author’s concession that a few repetitions may be lapses. (C) is the main trap: it overstates both the scope, since the author grants that some sentences ‘seem to do no work at all,’ and the role of translation, since some reviewers of the original had the same complaint. (A) gets the translator’s effect backwards: the translator varied the repetitions rather than introducing them."
+        },
+        {
+          "number": 2,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "According to the passage, listeners to the communal narratives of the Dravan coast judged a performance primarily by",
+          "choices": [
+            "how many of the familiar formulaic phrases the teller managed to include",
+            "the teller’s faithfulness to the traditional wording of the tale",
+            "how closely the teller’s version followed an outline the listeners already knew",
+            "how skillfully the teller varied material the listeners already knew",
+            "how much new material the teller could introduce without losing the audience"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "The second paragraph says listeners ‘judged a performance by how artfully the teller varied the familiar,’ which is (D). (C) is the trap: the passage says listeners already knew the outline, but knowing the outline was the background to their judgment, not its standard. (B) is contradicted by the statement that the narratives ‘were never fixed texts.’"
+        },
+        {
+          "number": 3,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that a reader of the English edition of The Salt Ledger who attended closely to every recurrence of the harbor passage would most likely",
+          "choices": [
+            "have difficulty determining which of the differences between recurrences register the village’s losses",
+            "find that the recurrences differ from one another less than they do in the original",
+            "find the recurrences identical to one another, as many reviewers complained",
+            "be able to reconstruct Malek’s original wording from the pattern of the translator’s variations",
+            "conclude that Malek had chosen to narrate the village’s losses directly elsewhere in the novel"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 3,
+          "explanation": "The third paragraph says each recurrence of the harbor passage alters one detail that registers a loss. The fourth says the translator’s rewording buries Malek’s deliberate alterations ‘among many incidental ones.’ Together these support (A). (B) reverses the translator’s effect, since varying the wording makes the recurrences differ more, and (C) is wrong for the same reason. (E) contradicts the claim that Malek refuses to narrate these events directly."
+        },
+        {
+          "number": 4,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author mentions the widow Anka primarily in order to",
+          "choices": [
+            "show that Malek’s narrator states judgments of characters more openly than the critics recognized",
+            "demonstrate that the translator’s alterations did the most damage in the case of epithets",
+            "provide evidence that the novel’s repetitions are concentrated in its treatment of minor characters",
+            "suggest that the novel’s epithets, unlike its harbor passage, derive from Malek’s earlier realist practice",
+            "illustrate how a slight alteration to a recurring phrase can convey a judgment the narrative never makes explicit"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 3,
+          "explanation": "Adding ‘still’ to Anka’s fixed epithet ‘conveys a judgment the narrator never voices.’ The example therefore shows the technique described in (E). (A) is the trap: it borrows the passage’s language about judgment but reverses the relationship, since the point is that the narrator does not state the judgment. Nothing supports (B), (C), or (D)."
+        },
+        {
+          "number": 5,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately describes the author’s position regarding the claim that the repetitions in The Salt Ledger are lapses?",
+          "choices": [
+            "The author rejects the claim categorically, holding that every repetition in the novel can be traced to the oral tradition.",
+            "The author accepts the claim as applied to the English edition but rejects it as applied to the original.",
+            "The author rejects the claim as an account of the novel’s repetition in general, while allowing that it may hold for a few recurring sentences.",
+            "The author regards the claim as plausible but finds that the critics who advanced it offered too little evidence for it.",
+            "The author considers the claim correct as to the middle chapters but irrelevant to an evaluation of the novel as a whole."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "difficulty": 4,
+          "explanation": "The author offers an alternative account of the repetitions but concedes that a few unaltered sentences may be ‘the lapses the critics took the whole book to be.’ That partial rejection is (C). (E) is the closest trap, but it overstates the concession: the author says only that it is ‘possible’ those sentences are lapses, not that the claim is correct for them, and never calls the claim irrelevant. (A) ignores the concession, and (B) misreads the translation discussion."
+        },
+        {
+          "number": 6,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following is most analogous to the function that the passage attributes to recurring phrases in helping Dravan coast audiences keep track of where they were in a performance?",
+          "choices": [
+            "a footnote in a scholarly book that identifies the source of a quotation",
+            "a refrain in a long ballad that lets listeners recognize which part of the song has been reached",
+            "a summary on a book’s cover that tells prospective readers what the story concerns",
+            "a recurring melody in a film score that is varied slightly to show that a character has changed",
+            "a revised edition of a textbook that corrects errors in an earlier edition"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-analogy"
+          ],
+          "difficulty": 3,
+          "explanation": "The stem asks about orientation: a recurring phrase ‘signaled to the audience where they stood in the tale.’ A ballad refrain that marks progress through the song does the same, as in (B). (D) is the trap: it is analogous to the other function the passage mentions, in which a small change to a known phrase carries meaning, but that is not the orienting function the stem asks about. (C) orients the reader only once, before the work begins."
+        },
+        {
+          "number": 7,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author would be most likely to agree with which one of the following statements about the English translation of The Salt Ledger?",
+          "choices": [
+            "It was responsible for the unfavorable verdict of those reviewers who did not read the original.",
+            "It eliminated the deliberate alterations that Malek made to her recurring passages.",
+            "It made the novel appear more repetitive than the original actually is.",
+            "It made it harder for readers to tell Malek’s intentional variations from incidental ones.",
+            "It was produced by a translator unfamiliar with the oral traditions of the Dravan coast."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "The translator’s rewording means that Malek’s alterations ‘are lost among many incidental ones,’ so readers of the translation would struggle to tell which changes were deliberate, which is (D). (B) is the trap: ‘lost among’ means hidden, not removed. (A) overstates what the author claims, since some reviewers of the original voiced the same complaint, and (C) reverses the translator’s effect of reducing repetition."
+        },
+        {
+          "number": 8,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of passage B?",
+          "choices": [
+            "Rather than binding users to every transaction their software agents conclude, the law should bind them only to transactions within the agents’ actual or reasonably apparent authority.",
+            "Software agents are too unpredictable to be used for concluding contracts unless a human reviews the terms of each transaction.",
+            "Users of software agents should never be held responsible for contract terms that they did not personally contemplate.",
+            "Transactions concluded by software agents should bind users only when those transactions fall within parameters the users themselves specified.",
+            "Counterparties who deal with software agents should bear all of the losses that result from agent malfunctions."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 2,
+          "explanation": "Passage B rejects strict binding and proposes the agency-law test of conferred or reasonably apparent authority, which is (A). (D) is the trap: it captures only the first of passage B’s two categories and leaves out transactions that a counterparty reasonably believed were authorized. (C) is too strong for the same reason."
+        },
+        {
+          "number": 9,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Both passages are primarily concerned with answering which one of the following questions?",
+          "choices": [
+            "Should users be required to review the terms of transactions their software agents conclude?",
+            "Is the law of agency the appropriate source of rules governing automated transactions?",
+            "Under what circumstances should users be bound by transactions their software agents conclude?",
+            "What representations should users make to counterparties about the capabilities of their agents?",
+            "Should the law of agency be replaced by a new body of law governing automated transactions?"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-comparative"
+          ],
+          "difficulty": 3,
+          "explanation": "Passage A answers that users should be bound in nearly every case, and passage B answers that they should be bound only within actual or apparent authority, so both address (C). (B) is the trap: agency law is central to passage B but never mentioned in passage A. (D) also concerns only passage B, and neither passage proposes the review requirement in (A)."
+        },
+        {
+          "number": 10,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "According to passage A, a rule permitting users to disown transactions concluded by their software agents would",
+          "choices": [
+            "require courts to examine how each agent was configured",
+            "place losses on the party best positioned to prevent them",
+            "be inconsistent with the traditional requirement of mutual assent",
+            "encourage users to configure their agents with less care",
+            "make counterparties reluctant to transact with software agents"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 3,
+          "explanation": "Passage A states that such a rule ‘would make counterparties reluctant to deal with agents at all,’ which is (E). (D) is the trap: passage A says the rule would ‘invite strategic repudiation,’ which concerns disowning transactions after the fact, not careless configuration. (B) reverses the passage’s point, and (C) is never claimed; passage A argues only that its own rule is consistent with mutual assent."
+        },
+        {
+          "number": 11,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author of passage B would be most likely to respond to the vending-machine analogy in passage A by pointing out that",
+          "choices": [
+            "a vending machine’s owner, unlike a software agent’s user, has an opportunity to approve each sale before it occurs",
+            "the analogy holds only if the deploying party fixed in advance the range of transactions that could result, which contemporary agents do not allow",
+            "vending-machine owners are generally not bound by sales made while their machines are malfunctioning",
+            "general assent, though recognized for vending machines, has never been recognized in the law governing human agents",
+            "the analogy, properly understood, shows that the user rather than the counterparty is best positioned to prevent losses"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-comparative",
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "Passage B distinguishes a vending machine, which ‘executes a fixed offer its owner composed in advance,’ from agents that ‘generate terms their users never contemplated.’ That disanalogy is (B). (C) is attractive because passage B discusses malfunctions, but it makes no claim about how the law treats malfunctioning machines. (A) contradicts passage A’s accurate premise that the owner need not approve each sale, and (E) argues for passage A’s side."
+        },
+        {
+          "number": 12,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author of passage A mentions that the counterparty to an automated transaction ‘usually cannot see how the agent was configured’ primarily in order to",
+          "choices": [
+            "rebut the objection that users cannot assent to terms they did not foresee",
+            "explain why counterparties are already reluctant to deal with software agents",
+            "show that mutual assent is absent from most automated transactions",
+            "support the claim that losses from an agent’s unexpected bargains should fall on its user",
+            "suggest that users should be required to disclose the parameters of their agents"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 4,
+          "explanation": "The remark sets up a contrast with the user, who ‘chose the agent, set its parameters, and can monitor its conduct,’ and supports the conclusion that losses belong with the party best positioned to prevent them, the user. That is (D). (A) is the trap: passage A does rebut that objection, but in the previous paragraph and with the standard-form analogy, not with this remark. (E) is a policy passage A never proposes, and (B) treats a predicted consequence of a different rule as a present fact."
+        },
+        {
+          "number": 13,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately describes the relationship between passage A and passage B?",
+          "choices": [
+            "Passage B rejects the conception of assent on which passage A partly relies and offers a rule meant to secure the incentive passage A values while sparing users some losses passage A would impose.",
+            "Passage B rejects passage A’s account of assent but accepts its conclusion that users should be bound by nearly all of their agents’ transactions.",
+            "Passage B argues that the transactions on which passage A’s argument depends occur far less often than passage A assumes.",
+            "Passage A defends a rule on grounds of efficiency, and passage B argues that efficiency is an inappropriate basis for contract doctrine.",
+            "Passage B agrees with passage A that users should bear losses from agent malfunctions but disputes the reasoning passage A offers for that view."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-comparative"
+          ],
+          "difficulty": 5,
+          "explanation": "Passage B says passage A’s notion of assent collapses into ‘causation.’ It then proposes an agency-law rule that ‘preserves the incentive that strict liability is meant to create’ while freeing users from malfunctions outside their actual or apparent authority. That is (A). (D) is the strongest trap: passage B does depart from passage A’s efficiency-driven rule, but it explicitly keeps the incentive rationale rather than rejecting efficiency as a basis. (B) and (E) misstate passage B’s conclusion, since passage B would not bind users to malfunctions outside those categories."
+        },
+        {
+          "number": 14,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "The Tabrin features provide conclusive evidence of a cold interval in the basin’s history that climate reconstructions have missed.",
+            "Because desiccation and thermal contraction both produce polygonal networks, the origin of the Tabrin features cannot yet be determined.",
+            "The dimensions and internal structure of the Tabrin features favor a permafrost origin, despite the higher burden that explanation must meet.",
+            "Climate reconstructions of the Tabrin Basin are unreliable because they fail to account for the lake that once occupied it.",
+            "The desiccation hypothesis fails because the Tabrin Basin did not contain enough clay to produce polygons of the observed size."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 3,
+          "explanation": "The final paragraph argues from size, depth, and laminae that the permafrost origin is better supported, while conceding that this explanation must meet a higher burden. (C) captures both. (A) is the trap: the author says the polygons are ‘best read’ as such evidence ‘unless the laminae can be otherwise explained,’ which is not conclusive. (E) misplaces the problem: the issue is the depth of the clay, not the size of the polygons, and the depth argument is only part of the case."
+        },
+        {
+          "number": 15,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "According to the passage, the clay deposits in the Tabrin Basin",
+          "choices": [
+            "were laid down during an interval when the ground was permanently frozen",
+            "contain thin vertical laminae of windblown sand",
+            "are thicker beneath the ridges than at the centers of the polygons",
+            "extend to a depth of three or four meters in places",
+            "are no more than half a meter thick anywhere in the basin"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "The fourth paragraph says the clay deposits ‘are nowhere more than half a meter thick,’ which is (E). (D) is the trap: three or four meters is the depth of the sand wedges, not of the clay. (B) also attributes a feature of the wedges to the clay."
+        },
+        {
+          "number": 16,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that, in order to answer the author’s objections, proponents of the desiccation hypothesis would most need to establish that",
+          "choices": [
+            "the Tabrin Basin held a lake during at least one wetter period of its history",
+            "cracks produced by drying can extend several meters below a thin clay layer and reopen repeatedly",
+            "desiccation polygons on some other dried lakebeds are more than fifteen meters across",
+            "independent evidence of a cold interval in the region’s history is unlikely ever to be found",
+            "windblown sand was abundant in the basin at the time the lake dried"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "The author objects that the wedges are far deeper than the thin clay layer allows and that their laminae indicate repeated reopening, and (B) answers both. (C) is the main trap: the author already grants that large desiccation polygons exist, so width is not in dispute. The objection concerns depth and lamination. (D) would at most bear on the permafrost explanation’s burden; it would do nothing to explain the depth or the laminae, which the author says must be explained."
+        },
+        {
+          "number": 17,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The author mentions that large desiccation polygons on other dried lakebeds ‘are bounded by cracks that rarely exceed a meter in depth’ primarily in order to",
+          "choices": [
+            "counter a possible objection based on evidence that proponents of the desiccation hypothesis have cited",
+            "concede that drying can produce polygons as large as those in the Tabrin Basin",
+            "suggest that the other dried lakebeds were once underlain by permafrost",
+            "explain why the sand in the Tabrin wedges is arranged in vertical laminae",
+            "establish that the lake that once occupied the Tabrin Basin was unusually shallow"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 4,
+          "explanation": "Proponents cite large desiccation polygons on other lakebeds. The author replies that even those have shallow cracks, so they do not match the three-meter Tabrin wedges. That is (A). (B) is the trap: the clause does acknowledge that such polygons exist, but its purpose is to neutralize the proponents’ evidence, not to concede a point. The concession appears earlier in the same sentence, in ‘the large dried-lake examples are exceptional.’"
+        },
+        {
+          "number": 18,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following, if true, would most seriously weaken the author’s argument for the permafrost explanation?",
+          "choices": [
+            "Polygons formed by ice wedges in present-day cold regions are commonly between ten and forty meters across and are outlined by low ridges.",
+            "The laminae in the Tabrin wedges are somewhat thinner and less regular than those typically found in sand wedges in present-day permafrost.",
+            "Climate reconstructions for the Tabrin Basin rest largely on pollen records, which are sparse for several long intervals of the basin’s history.",
+            "Where clay is repeatedly rewetted by rising groundwater, drying cracks have been observed to reopen along the same lines each season and to deepen well below the clay.",
+            "Large desiccation polygons have been documented on several more dried lakebeds since the desiccation hypothesis was first proposed."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-strengthen-weaken"
+          ],
+          "difficulty": 5,
+          "explanation": "The author’s case rests on two claims: drying cannot crack deeper than the thin clay layer, and laminae require seasonal thermal contraction. (D) describes a non-freezing process that produces deep cracks reopening every season, which undercuts both claims at once, and the basin is known to have been wet. (B) is the most tempting trap, but a modest difference from typical permafrost laminae provides no alternative mechanism and leaves the depth argument untouched. (E) adds evidence about polygon width, which the author already concedes. (A) and (C) strengthen the argument."
+        },
+        {
+          "number": 19,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "If the author’s explanation of the Tabrin features is correct, which one of the following can most reasonably be inferred about the sand that fills the wedges?",
+          "choices": [
+            "All of it was deposited after the climate of the basin had warmed.",
+            "Most of it was derived from the clay deposits left by the former lake.",
+            "Some of it was deposited during the period in which the ground was repeatedly cracking.",
+            "It was deposited in a single episode following the melting of the wedges’ ice.",
+            "It accumulated more rapidly once the lake had dried than while the ground was frozen."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "The author reads the vertical laminae as sediment that entered ‘a crack that reopens year after year.’ On the author’s view, then, at least some sand arrived while seasonal cracking was still going on, which is (C). (A) and (D) are the traps. They come from the third paragraph’s account of a cast filling after warming, but they conflict with the laminae evidence the author relies on in the fourth paragraph. (E) mixes elements of the two rival explanations."
+        },
+        {
+          "number": 20,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The author’s attitude toward the permafrost explanation can most accurately be described as",
+          "choices": [
+            "confident that the dimensions of the wedges establish it beyond reasonable doubt",
+            "tentatively favorable, but unwilling to accept it until the laminae have been explained",
+            "skeptical of it, because no independent evidence of a cold interval has been found",
+            "convinced that it is correct for the deepest wedges but not for the basin as a whole",
+            "persuaded that it is better supported than its rival, while acknowledging that it must meet a heavier burden"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "difficulty": 5,
+          "explanation": "The author says the evidence ‘favor[s]’ the permafrost explanation, concedes that it ‘ought to meet a higher burden,’ and holds that the burden ‘is not an insurmountable one.’ That is (E). (B) is the strongest trap: it reverses the role of the laminae, which are evidence for the permafrost view, not a puzzle it must solve. It is the desiccation hypothesis that has ‘yet to explain these laminae.’ (C) turns a conceded cost into a reason for skepticism that the author explicitly rejects, and (A) ignores the conditional ‘unless the laminae can be otherwise explained.’"
+        },
+        {
+          "number": 21,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "The persistence of rotating savings associations after banks became available shows that they meet needs beyond substituting for banking, though the earlier view correctly identified one of their functions.",
+            "The earlier interpretation of rotating savings associations was mistaken in claiming that the associations ever functioned as substitutes for banks.",
+            "Rotating savings associations everywhere serve chiefly as devices for protecting savings rather than as substitutes for banks.",
+            "The persistence of associations in Merovale shows that their role as substitutes for banking was overstated even before banks were available.",
+            "The expansion of banking in Merovale changed the purposes for which vendors join rotating savings associations."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 5,
+          "explanation": "The passage uses Valdora’s findings to show that the substitution account is incomplete, and it grants that the associations did serve as substitutes where banks were absent. That is (A). (C) is the strongest trap: it overgeneralizes, since the author says the single-city sample ‘cannot by itself show that the same needs sustain associations elsewhere.’ (D) contradicts the concession that the associations ‘surely did serve as substitutes,’ and (E) says banking created new purposes, which the passage never claims."
+        },
+        {
+          "number": 22,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "According to the passage, Valdora found that in Merovale",
+          "choices": [
+            "association members were more likely than nonmembers to describe banks as unsafe",
+            "vendors with bank accounts contributed less to associations than they had before the branches opened",
+            "the number of rotating associations declined gradually after bank branches opened",
+            "new associations continued to form at about the same rate as before the branches opened",
+            "vendors preferred bank accounts for savings that were earmarked for a particular purpose"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 3,
+          "explanation": "The second paragraph states that ‘new associations were forming at roughly the same rate as before the branches opened,’ which is (D). (A) reverses the finding that members were ‘no more likely than nonmembers’ to call banks unsafe. (E) reverses the point that earmarked association pots were easier to protect than bank balances."
+        },
+        {
+          "number": 23,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that the vendors Valdora interviewed would be most likely to regard which one of the following as a disadvantage of a bank account relative to a rotating association?",
+          "choices": [
+            "Money held in a bank account is at greater risk of being lost through the failure of the institution.",
+            "Money in a bank account is harder to withhold from relatives who ask for help.",
+            "A bank account does not allow a saver to receive a lump sum before having saved the full amount.",
+            "Bank branches are located too far from the markets where the vendors work.",
+            "A bank account requires a minimum balance that many vendors cannot maintain."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "The vendors said bank money ‘can be withdrawn whenever a relative asks for help’ and that association pots were ‘easier to refuse to share,’ which supports (B). (C) is the most tempting trap because it describes a real feature of rotating associations, but the passage never mentions it, and the vendors stress protecting savings, not getting money early. (A) is ruled out by the finding that members were no more likely than nonmembers to call banks unsafe, and (D) is ruled out by the branches reaching ‘nearly every district.’"
+        },
+        {
+          "number": 24,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "The author mentions that new associations were forming at roughly the same rate as before the bank branches opened primarily in order to",
+          "choices": [
+            "show that the national banking program failed to reach many vendors",
+            "suggest that the associations have become more popular since the banks arrived",
+            "establish that association members do not distrust banks",
+            "explain why vendors contribute more to associations than to bank accounts",
+            "rule out one alternative explanation for the persistence of the associations"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 4,
+          "explanation": "The sentence opens ‘Nor could the persistence be attributed to mere habit,’ and new associations forming shows active choice, not inertia. That is (E). (C) is the trap: ruling out distrust is the job of the next sentence, which cites different evidence. (B) overstates the point, since a steady rate shows continued demand, not growing popularity."
+        },
+        {
+          "number": 25,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately describes the organization of the passage?",
+          "choices": [
+            "A prevailing interpretation is described; evidence against it is presented; the interpretation is rejected in favor of an alternative the author argues applies generally.",
+            "A theory is described; evidence confirming the theory is presented; the theory is extended to a domain it did not originally address.",
+            "A prevailing interpretation and its prediction are described; evidence contrary to the prediction is presented and explained; the interpretation is credited with partial accuracy and its error identified.",
+            "A prediction is stated; the methods used to test it are criticized; an alternative method of testing it is proposed and applied.",
+            "Two competing interpretations are described; evidence bearing on each is presented; the author concludes that neither can be evaluated without further study."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-structure"
+          ],
+          "difficulty": 4,
+          "explanation": "The passage sets out Brandt’s interpretation and prediction, then presents and explains Valdora’s contrary evidence, then grants what Brandt got right while identifying his mistake. That is (C). (A) is the trap: the author does not reject the earlier interpretation outright, and declines to claim that the new account applies beyond Merovale. (E) misdescribes the passage, which presents only one interpretation in detail and reaches a definite conclusion."
+        },
+        {
+          "number": 26,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following situations is most analogous to the point made in the last sentence of the passage?",
+          "choices": [
+            "A town built a seawall to guard against storm surges; after a new offshore breakwater made the wall unnecessary for that purpose, residents kept maintaining it because it had become a valued promenade.",
+            "A company adopted a new accounting system because its old one was unreliable; when the new system also proved unreliable, the company returned to the old one.",
+            "A school introduced uniforms to reduce clothing costs for families; when uniform prices rose sharply, the school dropped its uniform requirement.",
+            "One species of bird migrates south each winter because food becomes scarce in the north; a related species that finds ample winter food in the north does not migrate.",
+            "A city banned cars from its central square to reduce air pollution; pollution in the square then fell, confirming that cars had been its main source."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-analogy"
+          ],
+          "difficulty": 5,
+          "explanation": "The last sentence says a practice adopted for one reason may persist for another, and that the second reason becomes visible only when the first disappears. In (A), the storm threat is removed, the wall is kept, and a second value is revealed. (D) is the strongest trap because it links a behavior to its reason, but it compares two species instead of showing one practice outliving its original rationale. (E) is a test that confirms the original reason rather than revealing a different one, and in (C) the practice is dropped rather than kept."
+        },
+        {
+          "number": 27,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "According to the passage, some vendors said that a pot received from a rotating association",
+          "choices": [
+            "could not be spent before the next meeting without public embarrassment",
+            "was earmarked for a purpose that the group itself had chosen",
+            "was more likely to be spent on tempting purchases than a bank balance",
+            "was easier to decline to share because it was understood to be designated for a previously announced purpose",
+            "had to be returned to the association if it was not used for its announced purpose"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 4,
+          "explanation": "The third paragraph reports that some vendors found a pot ‘easier to refuse to share than a bank balance, because it was understood to be earmarked for a purpose announced to the group in advance,’ which is (D). (A) uses the passage’s own words in the wrong relationship: public embarrassment attaches to postponing a contribution, not to spending a pot. (B) misreads ‘announced to the group’ as ‘chosen by the group,’ and (E) adds an enforcement rule the passage never mentions."
+        }
+      ]
+    },
+    {
+      "id": "lr2",
+      "kind": "LR",
+      "title": "Logical Reasoning",
+      "timeLimitMinutes": 35,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Curator: Critics have called the Halvorsen Museum's plan to rotate its textile collection every six months a gimmick designed to boost attendance. Admittedly, the rotation may well draw repeat visitors, and the museum's marketing office has said as much. But the rotation schedule is justified regardless of its effect on attendance. Many of the museum's textiles are colored with plant dyes that fade measurably even under low gallery lighting, and conservators recommend that such textiles be displayed for no more than six months in any two-year period. A six-month rotation is the only way the museum can display these textiles at all while honoring that recommendation.",
+          "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the curator's argument?",
+          "choices": [
+            "Many of the museum's textiles are colored with plant dyes that fade under low gallery lighting.",
+            "The rotation plan will probably attract repeat visitors to the museum.",
+            "The plan to rotate the textile collection is warranted whether or not it boosts attendance.",
+            "Conservators' recommendations should determine how long any museum object is placed on display.",
+            "The museum cannot display its plant-dyed textiles at all unless it rotates them every six months."
+          ],
+          "answer": "C",
+          "types": [
+            "main-conclusion"
+          ],
+          "difficulty": 2,
+          "explanation": "The curator's main claim, stated in the third sentence, is that the rotation is justified regardless of its effect on attendance; the dye and conservation facts support it, so C is correct. E is the claim that most directly supports the conclusion, not the conclusion itself. B echoes the concession, which the curator grants but does not argue for."
+        },
+        {
+          "number": 2,
+          "stimulus": "In a survey of 400 adults, those who reported reading a printed book in bed before going to sleep also reported falling asleep faster, on average, than did those who reported using a phone in bed before going to sleep. The difference persisted even after the researchers took into account the respondents' ages and caffeine consumption. Clearly, then, reading a printed book at bedtime causes people to fall asleep faster than they otherwise would.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "overlooks the possibility that some factor not taken into account, such as a person's general level of stress, influences both the choice of bedtime activity and how quickly the person falls asleep",
+            "presumes without justification that every adult who uses a phone in bed has difficulty falling asleep",
+            "draws a conclusion about adults in general from a survey limited to adults who read printed books",
+            "takes for granted that reading a printed book is the only bedtime activity that helps people fall asleep",
+            "confuses a condition that is necessary for falling asleep quickly with one that is sufficient for doing so"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "explanation": "Controlling for age and caffeine does not rule out every common cause; a factor such as stress could drive both the choice of activity and sleep speed, which A identifies. C is wrong because the survey included phone users as well as readers. D misdescribes the argument, which says nothing about other activities being ineffective."
+        },
+        {
+          "number": 3,
+          "stimulus": "At the Larkspur Playhouse, every production that runs longer than four weeks is either a musical or a revival. No musical at the Playhouse is staged without a live orchestra. A revival is staged at the Playhouse only if the Playhouse's board approves it, and this season the board approved no revivals. This season, the Playhouse's production of The Glass Orchard is being staged without a live orchestra.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "The Glass Orchard is neither a musical nor a revival, so it is a new drama.",
+            "Every production staged at the Playhouse this season with a live orchestra is a musical.",
+            "Every musical staged at the Playhouse this season runs longer than four weeks.",
+            "The Glass Orchard does not run longer than four weeks this season.",
+            "If The Glass Orchard had been a revival, it would have run longer than four weeks."
+          ],
+          "answer": "D",
+          "types": [
+            "must-be-true"
+          ],
+          "difficulty": 3,
+          "explanation": "The Glass Orchard has no orchestra, so it is not a musical; there are no revivals this season, so it is not a revival; hence it cannot run longer than four weeks, which is D. B reverses a conditional: an orchestra is required for musicals, not limited to them. A is tempting because its first half must be true, but nothing says every other production is a new drama."
+        },
+        {
+          "number": 4,
+          "stimulus": "Transit officials in the city of Corvale extended bus service on Route 9 so that it runs until 1 a.m. instead of 10 p.m. In the six months after the change, ridership on Route 9 during the original daytime hours rose by 12 percent. The officials concluded that the extended evening service made Route 9 more attractive even for daytime trips, presumably because riders who go out during the day can now count on a late ride home.",
+          "stem": "Which one of the following, if true, most strengthens the officials' argument?",
+          "choices": [
+            "Before the extension, Route 9's daytime ridership had been rising by roughly 2 percent every six months.",
+            "During the same six months, daytime ridership on Corvale bus routes whose hours were not extended remained essentially unchanged.",
+            "Corvale raised fares on all of its bus routes shortly before Route 9's hours were extended.",
+            "Several other cities have extended the hours of bus routes without seeing any increase in ridership.",
+            "Most riders who used Route 9 after 10 p.m. were commuting to or from night-shift jobs."
+          ],
+          "answer": "B",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 2,
+          "explanation": "B supplies a comparison group: routes without the extension saw no daytime gain, which makes it less likely that a citywide factor caused Route 9's increase. A is the tempting trap, but a 2 percent trend explains only a small part of a 12 percent rise and, if anything, slightly weakens the argument. E concerns late-night riders, not why daytime ridership rose."
+        },
+        {
+          "number": 5,
+          "stimulus": "Paleontologist: Some researchers argue that the small theropod Ostranax hunted in packs, citing the discovery of several Ostranax skeletons together at the Dunmore quarry. But the fact that the skeletons were found together does not by itself establish that the animals lived together. Sediment analysis shows that the Dunmore site was a river bend where flowing water routinely deposited carcasses carried from many miles upstream, and bodies that accumulated in such a place could easily have come from animals that lived and died apart. So the Dunmore find provides little support for the pack-hunting hypothesis.",
+          "stem": "Which one of the following most accurately describes the role played in the argument by the claim that the fact that the skeletons were found together does not by itself establish that the animals lived together?",
+          "choices": [
+            "It is the argument's overall conclusion.",
+            "It is the hypothesis that the argument is attempting to refute.",
+            "It is a premise that the researchers offer in support of the pack-hunting hypothesis.",
+            "It is offered as evidence that Ostranax did not hunt in packs.",
+            "It is supported by evidence in the argument and is in turn used to support the argument's overall conclusion."
+          ],
+          "answer": "E",
+          "types": [
+            "role"
+          ],
+          "difficulty": 3,
+          "explanation": "The sediment evidence supports the claim, and the claim in turn supports the conclusion that the find gives little support to the pack-hunting hypothesis, so it is an intermediate conclusion, as E says. D is the main trap: the argument never concludes that Ostranax did not hunt in packs, only that this find does not support the idea. A is wrong because the overall conclusion is the final sentence."
+        },
+        {
+          "number": 6,
+          "stimulus": "Legislator: The proposed state tax on sugary beverages would raise the price of a typical soda by about 15 percent. Opponents argue that the tax would fall most heavily on low-income households. But all revenue from the tax is earmarked for subsidizing fresh produce sold in neighborhood groceries, which low-income households use disproportionately. Therefore, low-income households as a group would not be made financially worse off by the tax.",
+          "stem": "Which one of the following is an assumption on which the legislator's argument depends?",
+          "choices": [
+            "Low-income households purchase more sugary beverages than other households do.",
+            "The tax would reduce the consumption of sugary beverages among low-income households.",
+            "The amount low-income households as a group would save through the produce subsidies is not less than the amount they would pay in the new tax.",
+            "Fresh produce provides greater nutritional benefit than sugary beverages do.",
+            "Most of the revenue from the tax would be collected from households that are not low-income."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "explanation": "For low-income households not to be worse off, their savings from the subsidies must at least match what they pay in the tax; if the savings were smaller, the conclusion would fail, so C is required. E is tempting but not necessary: even if low-income households paid most of the tax, they could still recoup it through the subsidies. A and D are not needed by the argument."
+        },
+        {
+          "number": 7,
+          "stimulus": "Chemists found that compound Z breaks down in water faster in the presence of the catalyst Kenrite at 20°C than in the presence of Kenrite at 40°C. This result is surprising, because for nearly all chemical reactions, including the breakdown of compound Z when no catalyst is present, the reaction rate increases as temperature rises.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "Without a catalyst, compound Z breaks down faster at 40°C than at 20°C.",
+            "Above about 30°C, Kenrite particles clump together in water, greatly reducing the surface area available to interact with compound Z.",
+            "Kenrite is more expensive to produce than other catalysts that speed the breakdown of compound Z.",
+            "Many catalysts are more effective at higher temperatures than at lower temperatures.",
+            "Compound Z dissolves in water more slowly at 20°C than it does at 40°C."
+          ],
+          "answer": "B",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 2,
+          "explanation": "B gives a reason Kenrite becomes less effective at higher temperature, explaining why the catalyzed reaction is slower at 40°C despite the general trend. A merely restates part of the puzzle. D and E point the other way, making the result even more surprising."
+        },
+        {
+          "number": 8,
+          "stimulus": "Arbitrator: Brellin Construction agreed to finish renovating the Oakfield community center by March 1 but did not finish until April 12. Brellin claims the delay resulted from its supplier's late delivery of steel beams. But Brellin's own records show that its crews were working on a different project for most of February. Clearly, then, the delay was caused by Brellin's diverting its crews to another project, not by the late delivery of steel.",
+          "stem": "Which one of the following, if true, most seriously weakens the arbitrator's argument?",
+          "choices": [
+            "Brellin has failed to meet completion deadlines on two other contracts in the past five years.",
+            "The contract specified a monetary penalty for each day the renovation remained unfinished after March 1.",
+            "The other project on which Brellin's crews worked in February was completed on schedule.",
+            "No work on the community center beyond what had been finished by February could proceed until the steel beams were installed, and the beams did not arrive until late March.",
+            "Brellin's steel supplier has delivered materials late to several other contractors in the region."
+          ],
+          "answer": "D",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "explanation": "D shows that the crews could not have advanced the project in February anyway, so the steel delay, not the reassignment, explains the late finish. E suggests the supplier is often late but does not show that its lateness caused this delay. A is about other contracts and, if anything, supports the arbitrator."
+        },
+        {
+          "number": 9,
+          "stimulus": "Theater critic: The Fenwick Repertory's new production of an eighteenth-century comedy has played to sold-out houses for three weeks. Some commentators attribute this success to the director's decision to reset the play in a modern corporate office. But this cannot be right. The Fenwick's previous production, which also reset a classic play in a modern setting, drew sparse audiences throughout its run.",
+          "stem": "The reasoning in the critic's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "presumes that a factor that failed to bring about a certain result in one case cannot have contributed to that result in another case",
+            "takes for granted that sold-out houses indicate that a production has been well received by critics",
+            "overlooks the possibility that the new production would have sold out even if it had kept its original setting",
+            "infers that the new production's success has no explanation from the fact that one proposed explanation for it is inadequate",
+            "attacks the commentators who made the attribution rather than addressing the attribution itself"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "The critic rules out the modern setting as a cause of this success merely because it did not produce success in another production, ignoring that it could work in combination with other features here; A describes this. C is the most tempting trap, but that possibility would support the critic's conclusion rather than expose a flaw in it. D overstates the critic's conclusion, which rejects only one explanation and does not claim the success is unexplained."
+        },
+        {
+          "number": 10,
+          "stimulus": "In a study at the Marlow Sleep Institute, participants deprived of sleep for one night performed worse on a memory test the next day than participants who had slept normally. Among the sleep-deprived participants, however, those who took a twenty-minute nap in the afternoon before the test performed as well as the well-rested participants on recalling facts, though not on recalling the order in which events occurred. Sleep-deprived participants who napped for longer than twenty minutes performed no better on either measure than those who napped for twenty minutes.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Naps longer than twenty minutes impair the memory of people who have been deprived of sleep.",
+            "Recalling the order in which events occurred depends on a stage of sleep that does not occur during short naps.",
+            "A twenty-minute nap is the most beneficial length of nap for people who have been deprived of sleep.",
+            "Sleep deprivation impairs the ability to recall facts more than it impairs the ability to recall the order of events.",
+            "Not every memory impairment caused by a night of sleep deprivation is reversed by an afternoon nap of twenty minutes or longer."
+          ],
+          "answer": "E",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 4,
+          "explanation": "Twenty-minute nappers still lagged on recalling event order, and longer nappers did no better than twenty-minute nappers, so no nap of twenty minutes or more reversed that impairment; E follows closely. C is the trap: shorter naps were never tested, and longer naps were equally good, so 'most beneficial' is unsupported. A overstates, since longer naps were no better, not worse."
+        },
+        {
+          "number": 11,
+          "stimulus": "Transit planner: Any proposed rail line that can be built within the city's current budget and that would reduce downtown traffic congestion deserves the city's support. The proposed Eastside light-rail line would reduce downtown congestion, since it would draw many commuters who now drive downtown. And the Eastside line's projected construction cost is lower than the cost of the recently completed Northgate line. So the Eastside line deserves the city's support.",
+          "stem": "The conclusion of the transit planner's argument follows logically if which one of the following is assumed?",
+          "choices": [
+            "Since its completion, the Northgate line has reduced downtown traffic congestion.",
+            "No rail line that the city's current budget is insufficient to build has a construction cost lower than that of the Northgate line.",
+            "Every rail line that deserves the city's support can be built within the city's current budget.",
+            "Most of the commuters who now drive downtown would switch to the Eastside line if it were built.",
+            "The Northgate line was built within the budget that the city had at the time of its construction."
+          ],
+          "answer": "B",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 4,
+          "explanation": "The principle requires both congestion reduction and affordability under the current budget. B, stated as a contrapositive, means any line cheaper than Northgate can be built within the current budget, which completes the argument. E is the strongest trap but concerns the budget at the time Northgate was built, not the current one. C reverses the principle's conditional."
+        },
+        {
+          "number": 12,
+          "stimulus": "A party to a contract who fails to perform an obligation should be excused from liability for that failure only if the failure resulted from circumstances that the party could not reasonably have foreseen when the contract was signed and the party took reasonable steps to limit the resulting harm.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
+          "choices": [
+            "A caterer that failed to deliver food for a banquet because of a sudden road closure, and that tried every available alternate route, should be excused from liability.",
+            "A printer that missed a deadline because its press broke down unexpectedly should be excused from liability, since the breakdown could not have been foreseen.",
+            "A landscaper that failed to finish a job by the agreed date because the region's rainy season began at its usual time should not be excused from liability.",
+            "A supplier whose deliveries were late because of a strike announced months before the contract was signed should be excused, since it hired replacement drivers promptly.",
+            "A musician who canceled a contracted performance because of a sudden illness should not be excused from liability, since the illness could not have been foreseen."
+          ],
+          "answer": "C",
+          "types": [
+            "principle-apply"
+          ],
+          "difficulty": 4,
+          "explanation": "The principle states only necessary conditions for excusal. A rainy season that began at its usual time was foreseeable, so the landscaper fails a necessary condition and should not be excused, as C says. A is the main trap: the caterer meets both conditions, but under an 'only if' principle that does not establish that excusal is warranted. D excuses a party whose failure stemmed from foreseeable circumstances, and E treats unforeseeability as a reason against excusal."
+        },
+        {
+          "number": 13,
+          "stimulus": "Ilse: Museums should display skilled reproductions of fragile artifacts rather than the originals. Visitors come to museums to learn about the past, and a skilled reproduction conveys the same information as the original while sparing the original from deterioration.\n\nTomas: Visitors gain something from standing before an actual object that no copy can provide: a sense of direct connection to the people who made it. Fragile originals must of course be protected, but they can be shown under controlled conditions for limited periods rather than being replaced by copies.",
+          "stem": "Ilse and Tomas disagree over whether",
+          "choices": [
+            "fragile artifacts need to be protected from deterioration",
+            "visitors come to museums primarily to learn about the past",
+            "a skilled reproduction can convey the same information as the original artifact",
+            "displaying fragile originals under controlled conditions is sufficient to protect them",
+            "museums should display reproductions of fragile artifacts in place of the originals"
+          ],
+          "answer": "E",
+          "types": [
+            "point-at-issue"
+          ],
+          "difficulty": 3,
+          "explanation": "Ilse says museums should display reproductions instead of fragile originals; Tomas says the originals can be shown and should not be replaced, so they disagree about E. C is a trap: Tomas does not deny that copies convey the same information, only that information is all visitors gain. Both agree on A, and Ilse says nothing about D."
+        },
+        {
+          "number": 14,
+          "stimulus": "Some chemists have claimed that the green tint in the glaze of ancient Torvan pottery came from copper that potters added deliberately. But if the copper had been added deliberately, we would expect the tint to be roughly uniform among pots from the same workshop, since Torvan potters followed fixed glaze recipes. In fact, pots from a single workshop vary widely in tint, and the variation closely tracks the copper content of the local clay deposits from which each batch of clay was dug. Thus the copper most likely entered the glaze unintentionally, from the clay itself.",
+          "stem": "The argument proceeds by",
+          "choices": [
+            "showing that a consequence to be expected if a hypothesis were true is not borne out, and offering an alternative explanation that fits the evidence",
+            "questioning the expertise of the chemists who proposed a hypothesis in order to cast doubt on that hypothesis",
+            "arguing that a hypothesis must be false because one of its predictions fails, and concluding that the only possible alternative hypothesis must therefore be true",
+            "drawing a general conclusion about all ancient pottery from evidence concerning a single workshop",
+            "demonstrating that the evidence the chemists cited in support of their hypothesis is inaccurate"
+          ],
+          "answer": "A",
+          "types": [
+            "method"
+          ],
+          "difficulty": 4,
+          "explanation": "The argument notes that deliberate addition predicts uniform tint, observes that tint is not uniform, and proposes that copper came from the clay, which fits the observed variation, as A describes. C is the closest trap, but the argument does not claim its alternative is the only possible one or that it must be true; it says 'most likely' and supports it with the clay-content evidence. E is wrong because the argument does not dispute the chemists' evidence."
+        },
+        {
+          "number": 15,
+          "stimulus": "Economist: When the province of Ardell cut its tax rate on corporate profits last year, opponents of the cut predicted that it would reduce the province's revenue from corporate taxes. Yet in the year following the cut, Ardell's total revenue from corporate taxes actually rose. So the opponents' prediction was mistaken: the tax cut did not reduce the province's corporate tax revenue.",
+          "stem": "The reasoning in the economist's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "takes for granted that the opponents of the tax cut had no reasonable basis for their prediction",
+            "overlooks the possibility that revenue rose because corporations relocated to Ardell in response to the lower rate",
+            "draws a conclusion about tax policy in general from evidence concerning a single province",
+            "fails to consider that the province's corporate tax revenue might have risen even more had the tax rate not been cut",
+            "attacks the motives of those who opposed the tax cut rather than the substance of their prediction"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "Revenue rising after the cut does not show the cut failed to reduce revenue relative to what it would otherwise have been, perhaps because of general economic growth; D identifies this overlooked possibility. B is the trap: relocation spurred by the cut would mean the cut raised revenue, supporting the economist rather than exposing a flaw. C is wrong because the economist draws no conclusion beyond Ardell."
+        },
+        {
+          "number": 16,
+          "stimulus": "Fossil pollen from a lake bed in the Serrin Basin shows that the region's forest gave way to grassland about 8,000 years ago. Charcoal layers in the same lake bed show that frequent fires began about 8,300 years ago. Some researchers conclude that a drying climate caused the shift to grassland. But the fires began before the forest declined, and frequent fires are known to prevent forest regrowth. Therefore, it was the fires, rather than climatic drying, that were primarily responsible for the shift to grassland.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Grasslands are less susceptible to fire than are forests.",
+            "Climatic drying was not the principal reason that fires became frequent in the Serrin Basin about 8,300 years ago.",
+            "Fires have remained frequent in the Serrin Basin ever since the forest was replaced by grassland.",
+            "No significant climatic drying occurred in the Serrin Basin around the time the forest gave way to grassland.",
+            "No region other than the Serrin Basin experienced a shift from forest to grassland about 8,000 years ago."
+          ],
+          "answer": "B",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "If drying caused the fires, then drying would be the underlying cause of the shift, and the argument's contrast between fires and drying would collapse; so the argument requires B. D is the main trap but is too strong: the argument claims only that fires were the primary cause, which is compatible with some drying having occurred. A, C, and E concern matters the argument need not address."
+        },
+        {
+          "number": 17,
+          "stimulus": "Every actor in the Brightwater Players' spring season appeared in at least one of its two productions, Mariner and The Tollkeeper, and no actor appeared in both. All of the actors in Mariner had trained at the Calder Studio, as had some of the actors in The Tollkeeper. None of the actors who trained at the Calder Studio was under 25 years old. Every actor in the season who was under 25 had trained at either the Calder Studio or the Ines Workshop.",
+          "stem": "If the statements above are true, which one of the following CANNOT be true?",
+          "choices": [
+            "Some actor in Mariner had trained at the Ines Workshop.",
+            "Every actor in The Tollkeeper had trained at the Calder Studio.",
+            "No actor in the spring season had trained at the Ines Workshop.",
+            "Every actor in the spring season who was under 25 appeared in The Tollkeeper.",
+            "Some actor in the spring season who was under 25 did not appear in The Tollkeeper."
+          ],
+          "answer": "E",
+          "types": [
+            "must-be-false"
+          ],
+          "difficulty": 5,
+          "explanation": "An actor who did not appear in The Tollkeeper must have appeared in Mariner, and so trained at Calder and was not under 25; thus E cannot be true. D is the trap, but it actually must be true by the same reasoning. A is a second trap: nothing restricts the Ines Workshop to actors under 25, so a Mariner actor over 25 could have trained at both schools. B and C are consistent with the statements (C holds if no actor was under 25)."
+        },
+        {
+          "number": 18,
+          "stimulus": "Researchers at Penwick University found that office workers whose desks were next to windows slept, on average, 40 minutes longer per night than coworkers whose desks were in windowless interior areas. The researchers hypothesize that daytime exposure to natural light helps regulate the body's internal clock, thereby improving nighttime sleep.",
+          "stem": "Which one of the following, if true, most strengthens the researchers' argument?",
+          "choices": [
+            "Workers with desks next to windows reported higher job satisfaction than did workers with interior desks.",
+            "Desks next to windows were assigned mostly to senior employees, who tend to work shorter hours than other employees.",
+            "Workers whose desks were next to north-facing windows that admitted little daylight slept no longer, on average, than workers with interior desks.",
+            "Exposure to bright artificial light in the evening is known to make it harder for people to fall asleep.",
+            "Most of the workers studied slept longer on weekend nights than on weeknights."
+          ],
+          "answer": "C",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 4,
+          "explanation": "C shows that the sleep advantage disappears when window desks receive little daylight, tying the effect to light exposure rather than to anything else about window desks. D is the trap: it links light and sleep, but concerns evening artificial light, not daytime natural light. B weakens the argument, and A offers another difference between the groups that could itself explain the gap."
+        },
+        {
+          "number": 19,
+          "stimulus": "If the Kessling ferry service adds a midday crossing, then it will either hire another pilot or reduce its evening service. The ferry service will not reduce its evening service unless the regional council approves the reduction, and the council will not approve it. So if the ferry service adds a midday crossing, it will hire another pilot.",
+          "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+          "choices": [
+            "If Dana enrolls in the summer course, she will either quit her part-time job or take out a loan. She will not take out a loan unless her parents cosign it, and they will not cosign it. So if Dana enrolls in the summer course, she will quit her part-time job.",
+            "If the library extends its hours, it will either hire new staff or move current staff to evenings. It will move staff to evenings only if the union agrees, and the union will agree. So if the library extends its hours, it will move current staff to evenings.",
+            "The orchard will either hire seasonal pickers or leave some fruit unharvested. It will not leave fruit unharvested unless prices fall, and prices will not fall. So the orchard will hire seasonal pickers.",
+            "If the museum renovates its west wing, it will either close the wing or move its exhibits. It will not close the wing unless attendance drops, and attendance will drop. So the museum will close the west wing.",
+            "If the band tours in the spring, it will both rent a bus and hire a driver. It will not hire a driver unless its label pays for one, and the label will not pay. So the band will not tour in the spring."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel"
+          ],
+          "difficulty": 4,
+          "explanation": "A matches the structure exactly: if X then Y or Z; not Z unless W; not W; so if X then Y. C is the trap: it uses the same disjunction-elimination step but lacks the opening conditional and draws an unconditional conclusion. B and D conclude the eliminable disjunct from an affirmed condition, and E uses a conjunction and concludes by denying the antecedent."
+        },
+        {
+          "number": 20,
+          "stimulus": "Museum director: Last year we replaced the printed wall labels in our ceramics gallery with a free smartphone app that provides far more detailed information about each piece. Our data show that the average time visitors spend in that gallery has since increased from 6 minutes to 11 minutes. Clearly, the app has made visitors more engaged with the ceramics on display.",
+          "stem": "Which one of the following, if true, most seriously weakens the museum director's argument?",
+          "choices": [
+            "In a survey, most visitors who used the app said they preferred it to the printed labels.",
+            "Overall attendance at the museum rose slightly last year.",
+            "The average time visitors spend in the museum's other galleries did not change last year.",
+            "The 11-minute figure comes from the app's own usage logs and so reflects only visitors who chose to download the app, whereas the 6-minute figure was based on a sample of all visitors to the gallery.",
+            "The app offers information in six languages, whereas the printed labels were available in only one."
+          ],
+          "answer": "D",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "D shows that the comparison is between different populations: app users are self-selected and likely more interested to begin with, so the increase may not reflect any change the app produced. C is the trap; it actually strengthens the argument by ruling out a museum-wide trend. E, if anything, suggests a reason the app might increase engagement, and B concerns the number of visitors rather than how long each stays."
+        },
+        {
+          "number": 21,
+          "stimulus": "Any compound that is stable at room temperature and does not react with water can be stored safely in the laboratory's general cabinet. Compound R7 does not react with water. Moreover, every compound synthesized by the Oduya method is stable at room temperature unless it contains a nitro group. Therefore, compound R7 can be stored safely in the general cabinet.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Every compound that contains a nitro group reacts with water.",
+            "Compound R7 was synthesized by the Oduya method.",
+            "Any compound that does not react with water and contains no nitro group is stable at room temperature.",
+            "Every compound that can be stored safely in the general cabinet is stable at room temperature.",
+            "Compound R7 was synthesized by the Oduya method, and no compound that contains a nitro group fails to react with water."
+          ],
+          "answer": "E",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "The argument needs R7 to be stable at room temperature. Under E, since R7 does not react with water it contains no nitro group (contrapositive), and as an Oduya compound without a nitro group it is stable, so the conclusion follows. A and B are the traps: each supplies only half of this chain. C would still require knowing that R7 lacks a nitro group, and D reverses the first conditional."
+        },
+        {
+          "number": 22,
+          "stimulus": "Fossil footprints of the dinosaur Merrovar are common in the Callan Formation, but Merrovar skeletal remains have rarely been found there. By contrast, skeletal remains of the plant-eater Tessaurus are abundant in the formation, while Tessaurus footprints are almost entirely absent. Footprints are best preserved in moist mudflats, whereas skeletons are best preserved where carcasses are rapidly buried in sediment, as in river channels during floods.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Fewer Merrovar than Tessaurus lived in the region where the Callan Formation was deposited.",
+            "The relative numbers of a species' footprints and skeletal remains in a fossil deposit may depend partly on the environments in which members of that species lived or died.",
+            "The Callan Formation contains deposits that formed both in moist mudflats and in river channels.",
+            "If Merrovar had frequented river channels during floods, Merrovar skeletal remains would be abundant in the Callan Formation.",
+            "Most dinosaur species are better represented in the fossil record by skeletons than by footprints."
+          ],
+          "answer": "B",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 5,
+          "explanation": "Because footprints and skeletons are best preserved in different settings, the contrasting patterns for the two species suggest that where each species spent time or died affected what was preserved, which supports the hedged claim in B. C is the main trap: the stimulus says only where footprints and skeletons are best preserved and gives river channels merely as an example of rapid burial, so it does not establish that both kinds of deposit are present. D overstates by turning a tendency into a guarantee, and A ignores that preservation, not population size, may explain the pattern."
+        },
+        {
+          "number": 23,
+          "stimulus": "Attorney: My client, Ms. Reyes, contracted to buy the Halden Street house 'subject to a satisfactory inspection.' The inspector found a hairline crack in the foundation, and Ms. Reyes withdrew from the purchase. The seller contends that the inspection was satisfactory, since the inspector's report concluded that the house is 'structurally sound overall.' But an inspection that reveals a cracked foundation cannot be considered satisfactory. After all, any reasonable buyer would feel some concern on learning that a house's foundation is cracked.",
+          "stem": "The reasoning in the attorney's argument is flawed in that it",
+          "choices": [
+            "relies on the seller's interpretation of the contract's language while claiming to reject it",
+            "attempts to discredit the seller's position by questioning the seller's motives",
+            "treats a finding's being a reasonable cause for some concern as though that alone established that the contract's condition was not met",
+            "uses the term 'satisfactory' in one sense in a premise and in a different sense in the conclusion",
+            "presumes that the inspector's overall conclusion about the house's structural soundness was false"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "The attorney moves from the claim that a reasonable buyer would feel some concern to the conclusion that the inspection was unsatisfactory, without showing that mere concern makes an inspection unsatisfactory; C describes this gap. D is tempting because the attorney and seller understand 'satisfactory' differently, but the attorney's own argument uses the term in only one sense, so there is no equivocation within it. E fails because the attorney's argument is compatible with the house being structurally sound overall."
+        },
+        {
+          "number": 24,
+          "stimulus": "Columnist: The town of Bramwell is considering exempting groceries from its sales tax. Supporters point out that low-income residents spend a larger share of their income on groceries than other residents do. But the exemption would also reduce grocery taxes for wealthy residents, and the lost revenue would come largely out of the town's library and park budgets, on which low-income residents rely heavily. A direct rebate to low-income residents would help them at least as much at a fraction of the cost. So Bramwell should not adopt the grocery exemption.",
+          "stem": "Which one of the following principles, if valid, most helps to justify the columnist's reasoning?",
+          "choices": [
+            "A government should not adopt a measure intended to benefit a particular group if a less costly alternative would benefit that group at least as much without reducing services the group depends on.",
+            "A sales tax should never be imposed on goods that are necessities for most residents of a community.",
+            "A proposed change in tax policy should be evaluated solely according to its effect on a government's total revenue.",
+            "A town government should give funding for libraries and parks priority over providing tax relief to any group of residents.",
+            "A town should adopt whichever tax policy is favored by the majority of its low-income residents."
+          ],
+          "answer": "A",
+          "types": [
+            "principle-strengthen"
+          ],
+          "difficulty": 3,
+          "explanation": "The columnist argues that a cheaper rebate would help low-income residents at least as much without the service cuts, so the exemption should be rejected; A captures exactly this reasoning. D is tempting but too broad, and it would also rule out the rebate the columnist favors. B supports the exemption rather than opposing it."
+        },
+        {
+          "number": 25,
+          "stimulus": "Most of the commuters who ride the Linden tram line live in the Harbor district. Most residents of the Harbor district do not own cars. Therefore, most of the commuters who ride the Linden tram line do not own cars.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Most of the paleontologists at the Ressler Institute study vertebrate fossils. Everyone at the institute who studies vertebrate fossils has done fieldwork abroad. Therefore, most of the paleontologists at the Ressler Institute have done fieldwork abroad.",
+            "Most plays staged at the Corbin Theater are comedies, and most comedies staged at the Corbin were written by local playwrights. Therefore, at least some plays staged at the Corbin were written by local playwrights.",
+            "Most of the chemists in the Hollis laboratory wear protective gloves while working. Therefore, most of the people in the Hollis laboratory who wear protective gloves while working are chemists.",
+            "Most of the documents in the Vell archive were written in Latin. Most documents written in Latin during that era were legal records. Therefore, most of the documents in the Vell archive are legal records.",
+            "Most of the plays at the Arden festival were dramas, and most of the plays at the festival sold out. Therefore, most of the dramas at the Arden festival sold out."
+          ],
+          "answer": "D",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "The original chains two 'most' statements (most A are B; most B are C; so most A are C), ignoring that the A's may be among the B's that are not C. D commits the same error. E also combines two 'most' claims, but both describe the same group and the flaw concerns overlap within it, a different structure. A and B are valid, and C reverses a single 'most' statement."
+        }
+      ]
+    }
+  ]
+}

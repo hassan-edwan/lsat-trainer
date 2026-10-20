@@ -8,6 +8,7 @@ import DrillBuilder from './pages/DrillBuilder.jsx';
 import Journal from './pages/Journal.jsx';
 import Stats from './pages/Stats.jsx';
 import Settings from './pages/Settings.jsx';
+import Diagnostic from './pages/Diagnostic.jsx';
 
 function useHashRoute() {
   const read = () => window.location.hash.replace(/^#/, '') || '/';
@@ -22,6 +23,7 @@ function useHashRoute() {
 
 const NAV = [
   ['/', 'Library'],
+  ['/diagnostic', 'Diagnostic'],
   ['/drill', 'Drills'],
   ['/journal', 'Mistake Journal'],
   ['/stats', 'Analytics'],
@@ -44,6 +46,7 @@ function Shell() {
   else if (section === 'import') page = <ImportPage />;
   else if (section === 'test' && id) page = <TestDetail id={decodeURIComponent(id)} />;
   else if (section === 'drill') page = <DrillBuilder />;
+  else if (section === 'diagnostic') page = <Diagnostic />;
   else if (section === 'journal') page = <Journal />;
   else if (section === 'stats') page = <Stats />;
   else if (section === 'settings') page = <Settings />;

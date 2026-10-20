@@ -23,7 +23,7 @@ export function buildIndex(tests) {
 
 /** Flat list for drill building: question fields plus section kind. */
 export function flatQuestions(tests) {
-  return tests.flatMap((t) => t.sections.flatMap((s) => s.questions.map((q) => ({ ...q, kind: s.kind, testId: t.id }))));
+  return tests.flatMap((t) => t.sections.flatMap((s) => s.questions.map((q) => ({ ...q, kind: s.kind, testId: t.id, purpose: t.purpose || 'test' }))));
 }
 
 function blankResponse() {
@@ -49,7 +49,7 @@ export function createPTSession(test, { sectionIds = null, blindReview = true, t
   });
 }
 
-export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true } = {}) {
+export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill' } = {}) {
   // RC questions from the same passage are kept together so the passage is read once.
   const ordered = [];
   const seen = new Set();
@@ -60,7 +60,7 @@ export function createDrillSession(questions, { title = 'Drill', secondsPerQuest
   }
   const kinds = new Set(ordered.map((q) => q.kind));
   return baseSession({
-    kind: 'drill',
+    kind,
     title,
     sections: [{
       title,
@@ -124,10 +124,13 @@ export function finalizeSession(session, index, journal) {
 
       const existing = journal[qid];
       const ctx = { testName: test.name, sectionTitle: section.title, kind: section.kind, passageText: passage?.text };
-      if (oc === 'wrong-twice') {
+      // A diagnostic is about finding weak spots, so every timed miss goes
+      // to the journal for a write-up, not only misses that survive BR.
+      const missed = oc === 'wrong-twice' || (session.kind === 'diagnostic' && r.first !== question.answer);
+      if (missed) {
         journalPuts.push(existing
           ? recordRepeat(recordRetry(existing, { correct: false, at }), { first: r.first, br, sessionId: session.id, at })
-          : makeEntry(question, ctx, { first: r.first, br, sessionId: session.id, at }));
+          : makeEntry(question, ctx, { first: r.first, br, sessionId: session.id, at, source: session.kind === 'diagnostic' ? 'diagnostic' : 'auto' }));
       } else if (existing) {
         journalPuts.push(recordRetry(existing, { correct: r.first === question.answer, at }));
       }

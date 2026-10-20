@@ -118,3 +118,24 @@ export function stemFeatureTags(stem) {
   if (/\bLEAST\b/.test(stem || '')) tags.push('least');
   return tags;
 }
+
+// Skills cut across question types: a Flaw or SA question can both hinge on
+// conditional logic. Tagged on questions as plain tags.
+export const SKILLS = {
+  conditional: 'Conditional reasoning',
+  debate: 'Debate & dialogue',
+};
+
+const SPEAKER = /^[A-Z][A-Za-z.' -]{1,40}:\s/;
+const CONDITIONAL_CUES = /\b(if|unless|whenever|without|requires?|necessary|sufficient|all|every|each|none|no|any|only|must|cannot)\b/gi;
+
+/** Guess skill tags from a question's text. */
+export function detectSkills(stimulus = '', stem = '', kind = 'LR') {
+  if (kind !== 'LR') return [];
+  const skills = [];
+  const paras = String(stimulus).split(/\n\s*\n/).filter((x) => x.trim());
+  if (paras.length >= 2 && paras.filter((x) => SPEAKER.test(x.trim())).length >= 2) skills.push('debate');
+  const cues = (String(stimulus).match(CONDITIONAL_CUES) || []).length;
+  if (cues >= 4) skills.push('conditional');
+  return skills;
+}

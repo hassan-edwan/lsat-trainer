@@ -138,7 +138,7 @@ export function prioritize(questions, { attemptsByQid = {}, journal = {}, rng = 
  * opts.mode: 'types' (use opts.types) or 'smart' (weakness-weighted)
  */
 export function buildDrill(questions, attempts, journal, opts) {
-  const { mode = 'smart', types = [], kinds = ['LR'], count = 10, difficulty = null, rng = Math.random } = opts;
+  const { mode = 'smart', types = [], skills = [], kinds = ['LR'], count = 10, difficulty = null, rng = Math.random } = opts;
   const attemptsByQid = groupBy(attempts, (a) => a.qid);
   const pool = questions.filter(
     (q) => kinds.includes(q.kind) && (!difficulty || q.difficulty == null || difficulty.includes(q.difficulty)),
@@ -157,7 +157,7 @@ export function buildDrill(questions, attempts, journal, opts) {
   };
 
   if (mode === 'types') {
-    take(pool.filter((q) => q.types.some((t) => types.includes(t))), count);
+    take(pool.filter((q) => q.types.some((t) => types.includes(t)) || (q.tags || []).some((t) => skills.includes(t))), count);
   } else {
     const available = new Set(pool.flatMap((q) => q.types));
     const scores = weaknessScores(attempts, { kinds }).filter((r) => available.has(r.type));

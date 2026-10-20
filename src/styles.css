@@ -275,3 +275,11 @@ mark.hl-orange { background: var(--hl-orange); }
 .big-timer { font-size: 3rem; font-weight: 700; margin: 1rem 0; font-variant-numeric: tabular-nums; }
 .modal-backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); display: flex; align-items: center; justify-content: center; z-index: 10; padding: 1rem; }
 .modal { background: var(--surface); border-radius: var(--radius); padding: 1.25rem 1.5rem; max-width: 440px; }
+
+/* ---- diagnostic ladder grid -------------------------------------------- */
+.table .center { text-align: center; }
+.ladder-cell { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border-radius: 6px; font-weight: 700; }
+.lc-correct { background: var(--good-soft); color: var(--good); }
+.lc-br-fixed { background: var(--warn-soft); color: var(--warn); }
+.lc-wrong { background: var(--bad-soft); color: var(--bad); }
+.lc-untried { background: var(--bg); color: var(--muted); }

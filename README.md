@@ -21,11 +21,17 @@ It runs entirely in your browser. There's no account and no server, and your dat
 - **Question-type tagging:** every question is tagged with its type (Flaw, Necessary Assumption, MSS, RC
   Inference, …). Tags come from the test file or are guessed from the wording of the question stem, and you
   can change any of them.
+- **Skill diagnostic:** every skill (17 of them, including conditional reasoning and debate/dialogue
+  questions) has a ladder of questions from level 1 (easier than the LSAT) to level 5 (harder and sneakier
+  than almost anything on it). A grid shows the level where each skill breaks, and every miss goes to the
+  journal so you can write up your thinking. Each skill links to a drill that starts just below its breaking
+  point.
 - **Drills:**
   - *Smart drill* gives more questions to the types you miss most, especially ones you still miss after blind
     review. It's weighted by how often each type appears on the LSAT, and recent results count more than old
     ones.
-  - *By type* lets you pick the types yourself.
+  - *By type* lets you pick the types yourself, or cross-cutting skills: *conditional reasoning* (any
+    question whose crux is formal logic) and *debate & dialogue*. You can also limit drills to hard questions.
   - *Journal retry* re-tests questions you've missed. A question counts as mastered after two correct timed
     retries in a row.
   - Drills keep RC passage questions together, and you can limit them to tests you've already taken so fresh
@@ -40,8 +46,14 @@ It runs entirely in your browser. There's no account and no server, and your dat
 be bundled with or redistributed through an open-source project. The official way to practice with them is
 [LSAC LawHub](https://www.lsac.org/lawhub).
 
-What's included is a sample test of **original** questions (10 LR and one RC passage with 5 questions) so you
-can try everything right away. To practice with other material you have the right to use, import it:
+What's included instead is **original** material written for this project:
+
+- **Three full practice tests** in the current LSAT format (two LR sections of 25 and one RC section with four
+  passages each, 231 questions). They are deliberately **harder than the real test**: about a quarter of
+  the questions are rated level 5, with dense stimuli, stacked conditionals, indirect correct answers, and
+  near-miss traps. Every section was solved blind by a separate checker to confirm the answer key.
+- **The skill diagnostic** described above.
+- A short sample test. To practice with other material you have the right to use, import it:
 [docs/FORMAT.md](docs/FORMAT.md) describes the JSON format and a plain-text format that's easy to produce from
 copied text.
 

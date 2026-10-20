@@ -1,0 +1,1469 @@
+{
+  "format": "lsat-trainer/v1",
+  "id": "original-practice-test-3",
+  "name": "Original Practice Test 3",
+  "number": 3,
+  "source": "Original LSAT-style questions written for LSAT Trainer (harder than the real test). Not LSAC material. MIT licensed.",
+  "sections": [
+    {
+      "id": "lr1",
+      "kind": "LR",
+      "title": "Logical Reasoning",
+      "timeLimitMinutes": 35,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Coach Varela has proposed shortening matches in the Ridgefield youth soccer league from sixty minutes to fifty in order to reduce player injuries. Admittedly, shorter matches would mean less total time on the field. Her proposal is nonetheless unlikely to achieve its aim. League records show that the large majority of injuries occur within the first twenty minutes of play, when players' muscles are not yet fully warmed up, and a shorter match would trim time only from the end of play. So the change would leave untouched the very period in which most injuries occur.",
+          "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+          "choices": [
+            "Most injuries in the Ridgefield league occur within the first twenty minutes of play, before players are fully warmed up.",
+            "Reducing the length of matches is not likely to bring about a meaningful reduction in injuries in the Ridgefield league.",
+            "The Ridgefield league should adopt measures to ensure that players are warmed up before play begins.",
+            "Shortening matches would leave untouched the period of play in which most injuries in the Ridgefield league occur.",
+            "Shorter matches would reduce the total amount of time that Ridgefield players spend on the field."
+          ],
+          "answer": "B",
+          "types": [
+            "main-conclusion"
+          ],
+          "difficulty": 2,
+          "explanation": "The argument's main point is that the proposal is unlikely to achieve its aim of reducing injuries (B). D is the tempting trap: it appears in the last sentence, but it is an intermediate conclusion offered in support of B. A is a premise, E is a concession, and C is never asserted."
+        },
+        {
+          "number": 2,
+          "stimulus": "Last year, Marrow County election officials replaced the county's ballot with a redesigned version featuring larger type and simplified marking instructions. In the election that followed, the proportion of ballots rejected because they were improperly marked fell from 3 percent to under 1 percent. Clearly, then, the redesign must be responsible for this decline in rejected ballots.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "relies on a comparison between elections that were held in different jurisdictions",
+            "treats one feature of the redesign as though it were the only feature that changed",
+            "draws a conclusion about all voters from a sample of ballots that may be unrepresentative",
+            "overlooks the possibility that some other difference between the two elections brought about the decline",
+            "takes for granted that improper marking is the only reason a ballot can be rejected"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "explanation": "The argument infers causation simply because the decline followed the redesign, ignoring other changes (different ballot length, voter outreach, a different electorate) that could explain it, so D is correct. E is tempting, but the argument concerns only ballots rejected for improper marking and makes no assumption about other grounds for rejection. A is inaccurate because both elections were in Marrow County."
+        },
+        {
+          "number": 3,
+          "stimulus": "The leaves of the coastal shrub Fenwick's sage are covered with fine hairs. Botanist Ilse Moravec hypothesizes that these hairs help the plant conserve water by trapping a layer of humid air against the leaf surface, thereby slowing evaporation. In support of her hypothesis, she notes that Fenwick's sage plants growing on dry, exposed bluffs have considerably denser leaf hairs than do plants of the same species growing in sheltered, moist ravines.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "When the hairs were removed from leaves of Fenwick's sage, those leaves lost water significantly faster than comparable leaves whose hairs were left intact.",
+            "Several other coastal shrubs whose leaves lack hairs grow abundantly on the same dry, exposed bluffs as Fenwick's sage.",
+            "Leaf hairs on Fenwick's sage reflect a substantial portion of incoming sunlight, keeping the leaf surface cooler than it would otherwise be.",
+            "Fenwick's sage plants on exposed bluffs receive substantially more direct sunlight than do those growing in ravines.",
+            "Fenwick's sage grows more slowly in moist ravines than it does on dry, exposed bluffs."
+          ],
+          "answer": "A",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 3,
+          "explanation": "A directly tests the hypothesized function: removing the hairs speeds water loss, as the hypothesis predicts. C is the main trap: a cooler leaf might lose less water, but C points to a different mechanism (reflecting sunlight) and so offers a rival account of why bluff plants have denser hairs, rather than supporting the humid-air hypothesis. D likewise suggests sun protection as the reason for denser hairs, and B and E do not bear on the hairs' function."
+        },
+        {
+          "number": 4,
+          "stimulus": "Every space heater sold by Halvorsen Appliances has passed the industry's tip-over test, and any heater that passes the tip-over test is equipped with an automatic shutoff switch. Several heaters sold by Halvorsen were recalled last year following customer complaints. However, according to the industry safety board, no heater that was equipped with both an automatic shutoff switch and an overheat sensor was recalled last year.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "Every heater equipped with an automatic shutoff switch has passed the tip-over test.",
+            "No heater sold by Halvorsen Appliances is equipped with an overheat sensor.",
+            "Some heaters that have passed the tip-over test were not sold by Halvorsen Appliances.",
+            "Every heater that was recalled last year was sold by Halvorsen Appliances.",
+            "At least one heater sold by Halvorsen Appliances lacks an overheat sensor."
+          ],
+          "answer": "E",
+          "types": [
+            "must-be-true"
+          ],
+          "difficulty": 2,
+          "explanation": "Each recalled Halvorsen heater passed the tip-over test and so has a shutoff switch; since no recalled heater had both a switch and an overheat sensor, those recalled heaters must lack an overheat sensor, so E must be true. B is too strong: only the recalled heaters must lack the sensor. A reverses the stated conditional, and C and D go beyond the information given."
+        },
+        {
+          "number": 5,
+          "stimulus": "Rhee: A scientific theory earns our confidence only by making predictions that could have turned out to be false and did not. A theory that merely accommodates data that had already been collected, however elegantly it does so, has not yet been tested at all.\n\nLindqvist: That standard is too strict. When a theory accounts for a large body of previously puzzling observations using fewer assumptions than its rivals, that achievement is itself a genuine test the theory has passed, even if the observations were known before the theory was formulated.",
+          "stem": "Rhee and Lindqvist disagree over whether",
+          "choices": [
+            "a theory that makes successful predictions of new observations deserves some degree of confidence",
+            "simpler theories are generally more likely to be true than more complex ones",
+            "a theory's accounting for observations made before it was formulated can count as a test of that theory",
+            "most scientific theories are formulated only after the observations relevant to them have been made",
+            "a theory that makes even one false prediction should be abandoned"
+          ],
+          "answer": "C",
+          "types": [
+            "point-at-issue"
+          ],
+          "difficulty": 3,
+          "explanation": "Rhee says accommodating already collected data is no test at all, while Lindqvist says explaining previously known observations can be a genuine test, so they disagree about C. A is a point both would likely accept; Lindqvist does not deny that successful novel predictions earn confidence. Neither speaker addresses B, D, or E."
+        },
+        {
+          "number": 6,
+          "stimulus": "In a recent study, volunteers rated their mood after spending an hour in either a room painted pale blue or a room painted bright orange. On average, those who had been in the blue room reported calmer moods than those who had been in the orange room. The researchers concluded that pale blue surroundings tend to have a calming effect on people. But this conclusion is plainly mistaken. A painter I know has worked in a pale blue studio for years, and she is one of the most agitated people I have ever met.",
+          "stem": "The reasoning in the argument is flawed in that it",
+          "choices": [
+            "treats a single case as sufficient to refute a claim about a general tendency",
+            "attacks the researchers' character rather than the reasoning behind their conclusion",
+            "fails to consider that the volunteers' reports of their own moods may have been inaccurate",
+            "presupposes the truth of the very conclusion it is trying to establish",
+            "confuses a condition sufficient for calmness with a condition necessary for it"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "explanation": "The researchers claimed only that pale blue surroundings tend to calm people; one agitated painter cannot refute a claim about an average tendency, so A is correct. C is tempting because it names a real weakness of the study, but the arguer's reasoning does not depend on the accuracy of the mood reports; the arguer's error lies in the anecdotal counterexample."
+        },
+        {
+          "number": 7,
+          "stimulus": "The cod population of Tessaly Bay has fallen sharply over the past decade. To reverse this decline, regulators plan to increase the minimum mesh size of trawl nets used in the bay. The larger mesh will allow most juvenile cod that encounter the nets to pass through them unharmed. Since an increase in the number of juvenile cod that survive to reproductive age will boost the population, the new regulation will help reverse the decline.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "The decline in Tessaly Bay's cod population was caused primarily by trawling.",
+            "Most juvenile cod that pass through the larger mesh will survive to reproductive age.",
+            "No other regulation would reverse the decline more quickly than the new mesh requirement.",
+            "At present, a significant number of juvenile cod in Tessaly Bay are caught in trawl nets.",
+            "Fishers in Tessaly Bay will not object to the new mesh size requirement."
+          ],
+          "answer": "D",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "explanation": "If few juvenile cod are currently caught in trawl nets, letting them pass through would not increase juvenile survival, and the argument collapses; so it requires D. A is attractive but too strong: the regulation could help even if trawling were only one of several causes of the decline. B is also too strong, since the argument needs only that more juveniles survive than before, not that most of those escaping do."
+        },
+        {
+          "number": 8,
+          "stimulus": "Building codes in the city of Calder require that buildings constructed after 1990 have far more insulation than was required for buildings constructed earlier. Yet a survey of Calder's office buildings found that, on average, those constructed after 1990 use more energy per square meter for heating and cooling than do those constructed before 1990.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "The cost of insulation materials has declined substantially since 1990.",
+            "Calder office buildings constructed after 1990 typically have extensive glass facades, which let far more heat pass through than do the masonry walls typical of older buildings.",
+            "Some Calder office buildings constructed before 1990 have since been retrofitted with additional insulation.",
+            "Residential buildings in Calder constructed after 1990 use less energy for heating than do older residential buildings.",
+            "Energy prices in Calder have risen steadily since 1990."
+          ],
+          "answer": "B",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 3,
+          "explanation": "B identifies a feature of the newer buildings that would increase heat transfer enough to outweigh their extra insulation, explaining their higher energy use. C is tempting, but retrofitting some older buildings would at most bring their insulation closer to that of newer ones; it would not explain why the newer buildings use more energy. D only deepens the puzzle, and A and E affect old and new buildings alike."
+        },
+        {
+          "number": 9,
+          "stimulus": "Sports analyst: Over the past five seasons, Northern League basketball players who wore the new Strata compression sleeves missed, on average, 30 percent fewer games due to injury than did players who did not wear them. This difference is too large to be a matter of chance. Clearly, then, wearing Strata sleeves substantially reduces a player's risk of injury.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Players who began wearing Strata sleeves had missed about as many games to injury in the preceding season as had players who never wore them.",
+            "Some players who wore Strata sleeves nonetheless missed many games due to injury.",
+            "Compression sleeves of various brands have been shown to increase blood flow to the muscles they cover.",
+            "Players who wore Strata sleeves played, on average, more minutes per game than did players who did not wear them.",
+            "Northern League trainers generally discouraged players with a history of recurring injuries from using any unproven equipment, including Strata sleeves."
+          ],
+          "answer": "E",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "E weakens the argument by showing the comparison groups were unlike from the start: players prone to injury were steered away from the sleeves, so the sleeve wearers may have missed fewer games simply because they were less injury-prone. A is the main trap but points the wrong way: if wearers had injury records similar to non-wearers before adopting the sleeves, that rules out exactly this selection effect and strengthens the argument. D also strengthens it, since wearers had more exposure to injury yet missed fewer games."
+        },
+        {
+          "number": 10,
+          "stimulus": "Some election administrators argue that allowing voters to register on election day will overwhelm polling-place staff and lengthen lines. This concern is understandable but overstated. In the three states that most recently adopted same-day registration, average waiting times at polling places did not increase measurably in the first election after adoption. Admittedly, those states also hired additional poll workers for that election. But the number of workers they added was small relative to the number of same-day registrants, so the added staff cannot by itself account for the absence of longer lines.",
+          "stem": "Which one of the following most accurately describes the role played in the argument by the claim that those states also hired additional poll workers for that election?",
+          "choices": [
+            "It is the argument's main conclusion.",
+            "It is offered as direct evidence that the administrators' concern is overstated.",
+            "It acknowledges a fact that might seem to undermine the argument's evidence, which the argument then contends does not do so.",
+            "It is a claim that the argument attempts to show is false.",
+            "It is a premise offered in support of the claim that the number of added workers was small."
+          ],
+          "answer": "C",
+          "types": [
+            "role"
+          ],
+          "difficulty": 4,
+          "explanation": "The hiring of additional workers is conceded ('Admittedly') because it could explain the absence of longer lines and so weaken the evidence; the argument then explains why it does not, matching C. D is the trap: the argument never disputes that the workers were hired, only that the hiring accounts for the result. The main conclusion is that the concern is overstated, so A is wrong."
+        },
+        {
+          "number": 11,
+          "stimulus": "Conservation biologist: The orchid Dendra pallida, which is native to the Pellam Highlands, can germinate only in the presence of one particular species of soil fungus. Any plant whose germination depends on a single fungal species is vulnerable to soil disturbance unless its seeds can remain dormant for more than a decade, and no orchid native to the Pellam Highlands produces seeds that can remain dormant that long. Hence Dendra pallida should be included in the regional conservation registry.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "No plant species should be excluded from the regional conservation registry if it is vulnerable to soil disturbance.",
+            "Any plant whose germination depends on a single fungal species and whose seeds can remain dormant for more than a decade should be included in the registry.",
+            "Every plant species included in the regional conservation registry is vulnerable to soil disturbance.",
+            "Only plant species that are vulnerable to soil disturbance should be included in the regional conservation registry.",
+            "The seeds of Dendra pallida cannot remain dormant for more than a decade."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 4,
+          "explanation": "The premises chain together to show that Dendra pallida depends on a single fungus and lacks long-dormant seeds, and so is vulnerable to soil disturbance. A, phrased negatively, says any vulnerable species should not be excluded, that is, should be included, which completes the argument. D is the main trap: it makes vulnerability necessary for inclusion, not sufficient, so it does not yield the conclusion. C reverses the needed conditional, B describes plants unlike Dendra pallida, and E merely restates something already derivable."
+        },
+        {
+          "number": 12,
+          "stimulus": "In an experiment, participants memorized a list of words while seated either in a quiet room or in a room filled with recorded café noise. A day later, each participant was tested for recall in one of the two rooms. Participants who were tested in the same room in which they had memorized the words recalled more words, on average, than participants who were tested in the other room. This was true both for those who had memorized the words in the quiet room and for those who had memorized them in the noisy room.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Quiet surroundings are better suited to memorization than noisy surroundings are.",
+            "People who study in noisy surroundings should always be tested in noisy surroundings.",
+            "Background noise has no effect on recall when learning and testing take place in the same room.",
+            "Most participants recalled more words when they were tested in the quiet room.",
+            "Whether the conditions of testing match the conditions of learning can affect how much learned material is recalled."
+          ],
+          "answer": "E",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 3,
+          "explanation": "Recall was better whenever the test room matched the learning room, regardless of which room it was, which strongly supports E. A and D compare the rooms themselves, which the results do not address. B is far too strong, and C claims an absence of any effect that the data cannot show."
+        },
+        {
+          "number": 13,
+          "stimulus": "Philosopher: Some critics argue that because scientific theories have repeatedly been overturned in the past, we should expect our current theories to be overturned as well. But every theory that has been overturned was overturned by scientists applying the scientific method. So the history of overturned theories, far from undermining science, shows that the scientific method is reliable. We may therefore conclude that our current scientific theories are likely to be true.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "fails to consider that some theories may have been overturned by means other than the scientific method",
+            "moves from a claim about the reliability of a method for correcting theories to a conclusion about the truth of the theories that method currently supports",
+            "relies on the authority of scientists rather than on evidence about the theories themselves",
+            "treats the fact that past theories have been overturned as evidence that current theories will also be overturned",
+            "draws a conclusion that merely restates one of the premises offered in its support"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "The premises show at most that the scientific method reliably corrects errors; that is compatible with current theories also being overturned later, so the argument illegitimately concludes they are likely true (B). D is a trap: that inference belongs to the critics, which the philosopher rejects rather than commits. A is wrong because the argument states as a premise that every overturned theory was overturned by the scientific method, and accepting a premise is not a flaw."
+        },
+        {
+          "number": 14,
+          "stimulus": "A manufacturer that learns of a hazard in one of its products is obligated to warn consumers promptly if the hazard could cause serious injury and consumers could not reasonably be expected to discover the hazard on their own. If either of these conditions is not met, the manufacturer may decide whether to issue a warning on the basis of other considerations.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
+          "choices": [
+            "Pinewood Furniture learned that the finish on one of its chairs can cause a mild, temporary rash, a hazard consumers could not detect in advance. So Pinewood was obligated to warn consumers promptly.",
+            "Marlo Housewares learned that the handle of one of its kettles can get hot enough to cause serious burns, a fact made evident before use by a prominent label and by steam that visibly vents beside the handle. So Marlo was obligated to warn consumers promptly.",
+            "Ostrander Ladders learned that rungs on one of its ladders can crack without any visible sign, risking serious falls. Since Ostrander had already stopped selling that ladder, it was not obligated to warn consumers.",
+            "Trevlan Tools learned that the blade guard on one of its saws can detach, risking severe cuts, and that the loosening cannot be detected without disassembling the saw. So Trevlan was obligated to warn consumers promptly.",
+            "Quella Toys learned that small magnets in one of its toys could cause serious internal injuries if swallowed, a hazard consumers could not detect. So Quella was obligated to recall the toy."
+          ],
+          "answer": "D",
+          "types": [
+            "principle-apply"
+          ],
+          "difficulty": 4,
+          "explanation": "In D the hazard could cause serious injury and cannot reasonably be discovered by consumers, so both conditions are met and the obligation to warn applies. E is the strongest trap: both conditions are met, but the principle requires only a prompt warning, not a recall. C is also tempting, but whether the ladder is still sold is irrelevant; both conditions are met, so a warning was obligatory. In A the hazard is not serious, and in B it is readily discoverable."
+        },
+        {
+          "number": 15,
+          "stimulus": "To protect the declining population of salmon in the Arden River, the regional fisheries board closed the river's lower reaches to recreational fishing three years ago. Since then, the number of adult salmon returning to the Arden River to spawn has risen by 40 percent. The board's director concludes that the fishing closure is responsible for this increase.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the argument?",
+          "choices": [
+            "whether most recreational fishers in the region support the closure",
+            "whether the Arden River salmon population had been declining for more than a decade before the closure",
+            "whether the number of adult salmon returning to spawn in nearby rivers that remained open to fishing also rose over the same period",
+            "whether salmon are the species most sought by recreational fishers on the Arden River",
+            "whether the fisheries board intends to extend the closure to the river's upper reaches"
+          ],
+          "answer": "C",
+          "types": [
+            "evaluate"
+          ],
+          "difficulty": 3,
+          "explanation": "If salmon returns rose similarly in nearby rivers that stayed open, some regional factor rather than the closure probably explains the increase; if they did not, the director's conclusion gains support. So C is the most useful to know. B is tempting but concerns only the history of the decline, not what caused the recent increase; A, D, and E are irrelevant to the causal claim."
+        },
+        {
+          "number": 16,
+          "stimulus": "Race official: Every cyclist who receives a starting position in the Barrow Classic must both have registered by Friday and have completed at least two regional races this season. Ilona registered on Thursday, but she has completed only one regional race this season. Therefore, Ilona will not receive a starting position in the Barrow Classic.",
+          "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+          "choices": [
+            "Any building approved for the historic tax credit must both have been built before 1920 and retain its original facade. The Marston Building was built in 1905, but its facade was replaced in 1980. So the Marston Building will not be approved for the credit.",
+            "Every applicant hired by the firm must both hold a degree and have two years of experience. Petra holds a degree and has two years of experience. So Petra will be hired by the firm.",
+            "If a student both attends every lecture and completes every problem set, she will pass the course. Dara attended every lecture but did not complete every problem set. So Dara will not pass the course.",
+            "Only residents who have lived in the town for a year and own property there may vote on the levy. Gerald has voted on the levy. So Gerald must own property in the town.",
+            "Every successful bakery in the city both uses local flour and opens before 7 a.m. The Copper Loaf uses local flour and opens before 7 a.m. So the Copper Loaf is successful."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel"
+          ],
+          "difficulty": 4,
+          "explanation": "The original states two necessary conditions for an outcome, shows that the subject meets one but fails the other, and validly concludes the outcome will not occur; A matches this exactly. C looks similar but treats the two conditions as sufficient, so concluding failure from missing one is a flawed denial of a sufficient condition. B and E wrongly infer the outcome from its necessary conditions, and D infers a condition from the outcome."
+        },
+        {
+          "number": 17,
+          "stimulus": "Architectural historian: The nave of the cathedral at Vessan is about two meters wider at its western end than at its eastern end. Some scholars attribute this to deliberate design: the narrowing would make the nave appear longer to someone entering through the main doors at the west. More likely, however, the tapering resulted from measurement error. The nave was built over sixty years by successive crews, beginning at the eastern end, and builders of that era commonly laid out foundations section by section using ropes that stretched in humid weather.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Ropes used by builders of that era were often made of fibers that stretch less than most other fibers available at the time.",
+            "Several cathedrals built in the same era were deliberately designed to create optical illusions for visitors.",
+            "Careful measurements show that the nave of the Vessan cathedral narrows at a steady, uniform rate along its entire length from west to east.",
+            "When viewed from the western doors, the nave of the Vessan cathedral does appear noticeably longer than it actually is.",
+            "The width of the nave does not change gradually but shifts abruptly at several points that coincide with the boundaries between sections built by different crews."
+          ],
+          "answer": "E",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 5,
+          "explanation": "A deliberate optical design would produce a smooth taper, whereas abrupt shifts at the boundaries between crews' sections are just what section-by-section measurement error would produce, so E strengthens the historian's view. C is the subtlest trap: it looks like confirming evidence about the taper, but a steady, uniform narrowing is the signature of a planned design and therefore weakens the argument. D likewise supports the rival optical-illusion explanation, and A and B also tend to weaken the argument."
+        },
+        {
+          "number": 18,
+          "stimulus": "Researcher: A colleague claims that our finding, namely that people who are told a task is difficult persist at it longer than people who are told it is easy, is merely an artifact of our having used university students as participants. But if that were so, then repeating the experiment with participants drawn from a broader population should have eliminated the effect. We conducted exactly such a repetition, with participants recruited from community centers in three cities, and the effect was, if anything, stronger.",
+          "stem": "The researcher's argument proceeds by",
+          "choices": [
+            "questioning the colleague's qualifications to evaluate the experiment",
+            "showing that the colleague's hypothesis implies a prediction that, when tested, turned out to be false",
+            "offering an alternative explanation of the finding that the colleague failed to consider",
+            "arguing that because the colleague's claim has not been proven, it must be false",
+            "showing that the colleague's hypothesis is inconsistent with the original finding it was proposed to explain"
+          ],
+          "answer": "B",
+          "types": [
+            "method"
+          ],
+          "difficulty": 4,
+          "explanation": "The researcher derives a prediction from the colleague's hypothesis (a broader sample would eliminate the effect), tests it, and reports that it failed, which is B. E is the trap: the hypothesis conflicts with the result of the new replication, not with the original finding, which it was designed to explain away. The researcher does not offer a rival explanation of the finding (C) or attack the colleague's qualifications (A)."
+        },
+        {
+          "number": 19,
+          "stimulus": "Election commissioner: In our county, voters who cast ballots by mail must sign the return envelope, and that signature is compared with the one on file. In the last election, 2 percent of mail ballots here were rejected for signature mismatches, far more than in neighboring counties. Our staff are no less careful than staff elsewhere, so the high rejection rate is most likely due to the age of the signatures on file: a person's signature often changes over time, and unlike neighboring counties, we never ask voters to update their signatures.",
+          "stem": "Which one of the following is an assumption required by the argument?",
+          "choices": [
+            "The signatures of older voters change more over time than do those of younger voters.",
+            "Neighboring counties ask voters to update their signatures on file at least once a year.",
+            "Most voters in the commissioner's county cast their ballots by mail.",
+            "The proportion of mail ballots in the commissioner's county that were signed by someone other than the voter is not much greater than it is in neighboring counties.",
+            "If the county began asking voters to update their signatures, its rejection rate would fall below that of neighboring counties."
+          ],
+          "answer": "D",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "If far more ballots in the county were actually signed by someone other than the voter, genuine mismatches rather than outdated signatures would explain the high rejection rate, so the argument requires D. B is too specific: the argument needs only that neighboring counties ask for updates, not how often. E is too strong; the argument does not require that the rate fall below that of neighboring counties."
+        },
+        {
+          "number": 20,
+          "stimulus": "Marine biologist: Lobster harvests off the coast of Brennick Island have fallen by half over the past eight years. During the same period, the water temperature off the island has risen by about 1.5 degrees Celsius. Laboratory studies show that lobster larvae raised in water 1.5 degrees warmer than the island's historical average have markedly lower survival rates. So the warming of the island's waters is the main cause of the decline in the lobster harvest.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Lobster harvests have also declined in some regions where water temperatures have remained stable.",
+            "Adult lobsters can tolerate increases in water temperature considerably larger than 1.5 degrees Celsius.",
+            "Eight years ago, the number of boats licensed to harvest lobster off Brennick Island was cut in half, and the catch per boat has remained nearly constant since then.",
+            "Water temperatures off Brennick Island have fluctuated considerably over previous centuries.",
+            "Lobster larvae that survive to adulthood off Brennick Island grow somewhat faster in warmer water."
+          ],
+          "answer": "C",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "If half the boats were removed and each boat's catch stayed constant, the halving of the harvest is fully explained by reduced fishing effort, not by fewer lobsters, which severely weakens the argument (C). A is attractive but shows only that something else can cause declines elsewhere; it says nothing about the cause at Brennick Island. B concerns adults, whereas the argument relies on larval survival."
+        },
+        {
+          "number": 21,
+          "stimulus": "Consumer advocate: The Kelby company's new electric bicycle battery has passed every safety test that regulators currently require. Nevertheless, Kelby should delay releasing it. Independent engineers have identified a plausible mechanism by which the battery could overheat during prolonged charging in hot weather, a condition that the required tests do not simulate, and Kelby has not yet investigated whether this overheating actually occurs.",
+          "stem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+          "choices": [
+            "Regulators should revise their required safety tests whenever engineers identify a hazard that those tests do not simulate.",
+            "A product that has passed all required safety tests should be presumed safe unless it has been shown to cause harm.",
+            "A company should delay releasing a product whenever it has confirmed that the product can overheat under conditions that required safety tests do not simulate.",
+            "A company should delay releasing a product only if it has confirmed that the product poses a hazard to consumers.",
+            "A company should not release a product while a credible potential hazard not addressed by required tests remains uninvestigated, even if the product meets all regulatory requirements."
+          ],
+          "answer": "E",
+          "types": [
+            "principle-strengthen"
+          ],
+          "difficulty": 5,
+          "explanation": "The advocate concludes that Kelby should delay release because a credible, untested hazard has not been investigated, despite regulatory compliance; E states exactly that principle. C is the closest trap, but it applies only once overheating has been confirmed, and Kelby has not confirmed anything, which is the advocate's very point. A addresses what regulators should do, not Kelby, and B and D point toward releasing the battery."
+        },
+        {
+          "number": 22,
+          "stimulus": "In the alpine meadows of the Corvin range, the wildflower Lessia nivalis produces two kinds of flowers: showy flowers that must be pollinated by bumblebees, and small closed flowers that pollinate themselves. In years when bumblebees are scarce, Lessia plants produce a higher proportion of closed flowers. Researchers have found that Lessia plants fix the proportion of each flower type within the first two weeks after snowmelt, whereas bumblebees in the Corvin range do not emerge from hibernation until at least a month after snowmelt. Years of bumblebee scarcity in the range are reliably preceded by cold, late springs.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "The proportion of closed flowers that a Lessia plant produces is probably determined by some cue other than the presence of bumblebees in the meadow that season.",
+            "In years when bumblebees are plentiful, Lessia plants in the Corvin range produce no closed flowers.",
+            "Lessia plants grown from the seeds of closed flowers produce fewer showy flowers than do other Lessia plants.",
+            "A cold, late spring causes bumblebee populations in the Corvin range to decline.",
+            "Showy Lessia flowers produce more seeds per flower than closed Lessia flowers do."
+          ],
+          "answer": "A",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 5,
+          "explanation": "Lessia fixes its flower proportions before any bumblebees have emerged, yet the proportions track bumblebee scarcity, so the plants must be responding to some other cue, such as spring conditions; this supports A. D is the main trap: the passage says only that cold, late springs reliably precede bumblebee scarcity, not that they cause it. B is too strong, and C and E are not addressed."
+        },
+        {
+          "number": 23,
+          "stimulus": "City planner: No building in the Harrow district may exceed six stories unless it has received a variance from the zoning board. The board grants variances only to projects that include ground-floor retail space, and it grants no variance to any project that would reduce the number of on-street parking spaces. The proposed Linwood Tower, in the Harrow district, would exceed six stories and would include ground-floor retail space, but its loading dock would eliminate four on-street parking spaces. Therefore, the Linwood Tower will not be built as proposed.",
+          "stem": "Which one of the following, if assumed, enables the conclusion to be properly drawn?",
+          "choices": [
+            "Most projects that the zoning board has denied a variance were later revised and then approved.",
+            "No building will be built as proposed if, as proposed, it could not lawfully be built in the Harrow district.",
+            "The zoning board grants a variance to every project that includes ground-floor retail space.",
+            "The developers of the Linwood Tower will not revise their plans in order to preserve the four parking spaces.",
+            "The Linwood Tower will not receive a variance from the zoning board."
+          ],
+          "answer": "B",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "The premises establish that the tower as proposed exceeds six stories and cannot receive a variance (it would eliminate parking), so it could not lawfully be built as proposed; B links that to its not being built as proposed. E is a trap because it is already derivable from the premises and does not connect unlawfulness to what will be built. D is tempting, but the conclusion concerns the plan as proposed, so possible revisions are beside the point. C ignores the parking restriction and, in any case, does not close the gap."
+        },
+        {
+          "number": 24,
+          "stimulus": "Sports journalist: Most of the players on the Kestrel Rovers' current roster are over thirty years old, and most players in the league who are over thirty have suffered a serious injury at some point in their careers. It follows that most of the Rovers' current players have suffered a serious injury at some point in their careers.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "All members of the Fenwick hiking club are over thirty, and all people over thirty in the region have hiked the coastal trail. So all members of the Fenwick hiking club have hiked the coastal trail.",
+            "Most residents of Pell Street own a dog, and most residents of Pell Street walk at least an hour a day. So most of the residents of Pell Street who own a dog walk at least an hour a day.",
+            "Some employees of Darrow Consulting speak French, and some people who speak French have lived abroad. So some employees of Darrow Consulting have lived abroad.",
+            "Most residents of Pell Street own a dog, and most dog owners in the city walk at least an hour a day. So most residents of Pell Street walk at least an hour a day.",
+            "Most of the paintings in the Ostrow Gallery are oil paintings, and every oil painting in the gallery was donated. So most of the paintings in the Ostrow Gallery were donated."
+          ],
+          "answer": "D",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "The original chains two 'most' statements (most A are B; most B are C) to conclude that most A are C, which does not follow; D repeats this exact pattern. C is the strongest trap, since it also chains overlapping groups invalidly, but it uses 'some' rather than 'most' and so is less similar. A and E are valid, and B commits a different error about the overlap of two groups."
+        },
+        {
+          "number": 25,
+          "stimulus": "Philosopher: According to a widely accepted criterion, a hypothesis counts as scientific only if some possible observation would show it to be false. Dr. Amsel's hypothesis about the formation of the Tarvo crater clearly satisfies this requirement, since she has specified precisely which mineral deposits, if they were discovered at the site, would refute her hypothesis. So, by that criterion, Amsel's hypothesis qualifies as scientific.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "presumes that a criterion is correct merely because it is widely accepted",
+            "fails to establish that the mineral deposits Amsel specified have not in fact been found at the site",
+            "treats a condition that the criterion requires of a scientific hypothesis as if it were enough to make a hypothesis scientific",
+            "takes for granted that a hypothesis that could be refuted is likely to be refuted",
+            "relies on Amsel's own description of her hypothesis without considering how other scientists would describe it"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "The criterion states only a necessary condition ('only if'), but the argument concludes that meeting it makes the hypothesis scientific, treating the necessary condition as sufficient (C). A is tempting, but the conclusion is explicitly limited to what follows 'by that criterion,' so the argument does not assume the criterion is correct. B is irrelevant because falsifiability depends on what could be observed, not on what has been found."
+        }
+      ]
+    },
+    {
+      "id": "rc1",
+      "kind": "RC",
+      "title": "Reading Comprehension",
+      "timeLimitMinutes": 35,
+      "passages": [
+        {
+          "id": "p1",
+          "title": "Output restriction at a seasonal cannery",
+          "text": "For much of the past half century, labor historians have treated the deliberate restriction of output by piece-rate workers as a form of quiet resistance. Workers paid by the unit, the account runs, learned that whenever their earnings rose noticeably, management would lower the rate paid per piece, and so they agreed among themselves to cap production at a level that would not invite a cut. Output restriction was thus understood as a defensive bargain struck against employers, and its prevalence was read as evidence of a solidarity that cut across ethnic and craft divisions within the workforce.\n\nThe historian Tamsin Reyval has challenged this interpretation using the unusually complete payroll ledgers of the Orlen Bay cannery, which processed fish along a northern coast between 1898 and 1931. The ledgers confirm that informal output ceilings were widespread. Yet the cannery’s posted piece rates were almost never reduced during the period, even in years when average earnings climbed sharply. One might reply that workers feared cuts regardless, having heard of them at other plants; a threat need not materialize to shape behavior. But Reyval observes that ceilings at Orlen Bay loosened precisely in the years of unusually heavy runs—the years in which earnings, and so presumably the danger of a cut, were greatest. Workers anxious about rates would have done the reverse.\n\nReyval’s alternative turns on the seasonal character of the work. The cannery operated only while the fish were running, and it laid off its workers as soon as the season’s catch had been processed. Any worker who produced quickly was therefore shortening the period during which she and her coworkers would be paid. Ceilings were most rigid late in the season, when the remaining catch was small, and loosened in heavy-run years, when no amount of speed could exhaust the supply before the season’s natural close. Restriction, on this reading, was less a contest with management over the price of labor than an arrangement among workers to stretch a fixed quantity of work across as many paid days as possible.\n\nReyval does not claim that her findings overturn the older view everywhere; plants with year-round production and a record of rate cuts may well have fostered the defensive restriction earlier historians described. Her more general point is methodological: historians inferred motives from the bare fact of restriction and then read those motives back into the evidence. That point seems to me well taken, though her own account is open to a version of the same objection. Ledgers record what workers did, not why, and the pattern Reyval finds shows that the seasonal motive was operative, not that it was the only one. Her study thus establishes less than she sometimes suggests. It nonetheless establishes something the older consensus never allowed for: that identical conduct can answer to quite different pressures, so that the meaning of a practice cannot be settled until the conditions under which it arose have been reconstructed."
+        },
+        {
+          "id": "p2",
+          "title": "Early leaf shedding in drought",
+          "text": "Passage A\n\nDuring severe droughts, the pale ridge oak, a deciduous tree of dry upland forests, often drops much of its foliage weeks before the usual autumn leaf fall. Many observers have taken this as a sign of distress, but I believe it is better understood as a defensive strategy. A tree loses water chiefly through its leaves, and as soil moisture declines, the tension in the water columns inside the xylem—the tissue that conducts water upward—increases. Past a certain threshold, air bubbles form in the conducting vessels and block them. Such embolisms in the trunk and major branches are difficult to repair and can kill a tree outright. By shedding leaves, the oak sharply reduces the water it loses, easing the tension on the vessels of its stem.\n\nLeaves, in this view, act as a kind of hydraulic fuse: an inexpensive, replaceable part sacrificed to protect an expensive, irreplaceable one. My colleagues and I monitored two hundred pale ridge oaks through the driest summer of the past decade. Trees that shed more than half their leaves before midsummer had, on average, far fewer blocked vessels in their trunks than trees that retained their foliage, and they were substantially more likely to leaf out normally the following spring. Admittedly, in the most extreme droughts some leaves surely wither and fall because they have failed outright; but a response that is sometimes overwhelmed is not thereby shown to be no response at all.\n\nPassage B\n\nThat drought-stressed trees such as the pale ridge oak drop leaves early is not in dispute; what is disputed is whether shedding is a strategy or a consequence. Leaves typically have narrower margins of hydraulic safety than stems, meaning that their conducting vessels become blocked at lower levels of tension. When we measured water flow in the leaves of pale ridge oaks shortly before they fell, we found that most had already lost the large majority of their conducting capacity. Shedding, then, generally follows hydraulic failure in the leaf rather than preventing it. That the stem benefits from reduced water loss once the leaves are gone is real enough, but a benefit that follows from damage is not evidence that the damage was a design.\n\nI do not doubt that early-shedding trees often look healthier the following spring. But a single year’s survival is not a reliable measure of a trait’s value. A tree that discards its canopy in midsummer forgoes weeks of photosynthesis and must draw on stored carbohydrates to build new leaves. In our long-term plots, oaks that shed early in two or more consecutive drought years showed steadily declining reserves of stored starch, and many died within five years—not from blocked vessels but from what appears to be carbon starvation. Whether early leaf loss helps a tree, therefore, depends on how often drought returns, and as droughts in the region become more frequent, a response that once bought time may increasingly exhaust it."
+        },
+        {
+          "id": "p3",
+          "title": "The shared-shortage rule",
+          "text": "Under the doctrine of prior appropriation, which governs water in much of the arid western United States, the first person to divert water and put it to beneficial use acquires a right senior to those of all later claimants. In a shortage, senior holders take their full allotment before junior holders receive anything. The doctrine’s defenders have long praised its clarity: every user knows exactly where he or she stands in line, and the security of senior rights encourages long-term investment in farms and towns. Its critics reply that the same clarity can be ruinous, since in a dry year a junior user may lose all access to water while a nearby senior user irrigates as usual.\n\nIn 1958 the water authority of the Tessaly River basin attempted a compromise. Under what came to be called the shared-shortage rule, any shortfall in a given year was divided among all rights holders in proportion to their allotments, with a single exception: rights used for household drinking water were exempt from reduction. Priority dates were retained, but they were consulted only to settle disputes over the size of allotments, not to determine who would bear a shortage. The rule’s architects argued that spreading losses would prevent the sudden collapse of junior farms and that the predictability seniors valued would survive, since every user could still calculate any shortfall in advance.\n\nA growing body of commentary now contends that the rule’s effects have been less benign than its architects anticipated. Because no user ever loses all of his or her water, the rule removed the strongest incentive junior users had to invest in storage or conservation: a farmer facing a twenty percent cut can usually absorb it by fallowing a field, while one facing a total cutoff must find another source or go out of business. Meanwhile, senior holders, who under strict priority would have been largely insulated from shortage, found their rights exposed to reduction in every dry year. The uncertainty this introduced made those rights harder to value, and transfers of water to growing municipalities, which depend on reliable valuation, slowed considerably. The result, critics argue, is a basin that uses water much as it did in 1958, though its economy has changed dramatically.\n\nDefenders of the rule reply that these criticisms measure it against a standard it was never meant to meet. The rule was designed to distribute hardship fairly, not to maximize the efficiency of water use, and on its own terms it has largely succeeded: no community in the basin has lost its farms in a single season. This is not a trivial achievement, and nothing in the critics’ case shows that a return to strict priority would be wise. Yet the defenders’ reply concedes more than its proponents may intend. A rule that preserves existing patterns of use by softening every shortage may simply defer the reckoning that strict priority would force, leaving the basin less prepared when a drought arrives that no proportional cut can absorb."
+        },
+        {
+          "id": "p4",
+          "title": "Reduction and ornament in tonal analysis",
+          "text": "Among the most influential methods for analyzing tonal music is what may broadly be called reductive analysis. The analyst begins with the full musical surface—every note in the score—and proceeds by stages to strip away those notes judged to be embellishments: passing tones, neighbor notes, suspensions, and the like. What remains at each stage is a simpler progression, and at the final stage a skeleton of a few structurally essential pitches and harmonies is said to underlie the entire work. The appeal of the method is considerable. It explains how a long movement can be heard as a coherent whole, and it gives precise content to the intuition that some notes matter more than others.\n\nYet the method rests on a decision it rarely examines: the decision about which notes count as embellishment. In many cases the decision seems obvious; a brief note moving stepwise between two chord tones is almost universally heard as decorative. But in many others it is not, and here analysts typically appeal to the very structure that the reduction is supposed to reveal. A note is classified as ornamental because it does not belong to the underlying progression, and the underlying progression is identified by setting aside the notes classified as ornamental. The circle is not necessarily vicious—interpretation often proceeds by such mutual adjustment—but it means that the skeleton the analyst uncovers is partly a product of the analyst’s prior expectations about what a skeleton should look like.\n\nA further difficulty concerns the status of ornament itself. Reductive analysis treats embellishment as, by definition, inessential: the work would remain recognizably the same work were the ornaments removed. In several performance traditions, however, ornaments were not fixed by the composer but supplied by performers, who varied them from one performance to the next, and listeners in these traditions often judged a performance chiefly by the inventiveness of its ornamentation. For such music, to call ornament inessential is not a neutral analytic observation but a substantive claim about where the music’s value lies—one that the music’s original audiences might well have rejected.\n\nNone of this requires abandoning reduction. The method remains an illuminating way of describing one dimension of tonal coherence. What it requires is a more modest account of what reduction achieves. Rather than revealing the structure of a work, a reduction offers one hearing of it, shaped by choices that could have been made otherwise. Analysts who present their reductions in this way—stating, wherever the classification of a note is contested, why they classified it as they did—would sacrifice some of the method’s apparent authority. They would gain, in exchange, an account of musical structure that acknowledges the listener’s part in making it."
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Reyval’s study of the Orlen Bay ledgers shows that the older account of output restriction as a defense against rate cuts was mistaken.",
+            "Labor historians have overstated the degree to which piece-rate workers shared a solidarity that cut across ethnic and craft divisions.",
+            "Reyval’s evidence undercuts the rate-cut explanation of output restriction at Orlen Bay and supports her methodological claim, even though it does not show that seasonal pressure was the workers’ sole motive.",
+            "Output restriction among piece-rate workers was generally a response to seasonal layoffs rather than to the threat of reduced piece rates.",
+            "Because ledgers record only what workers did, Reyval’s account of output restriction at Orlen Bay is no better supported than the account it seeks to replace."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 2,
+          "explanation": "The passage presents Reyval’s case against the rate-cut explanation at Orlen Bay, endorses her methodological point, and qualifies her account as establishing less than she suggests; C captures all three. A is the main trap: it generalizes beyond Orlen Bay, although the last paragraph says Reyval does not claim to overturn the older view everywhere. E overstates the author’s reservation, since the author says her study establishes something the older consensus never allowed for."
+        },
+        {
+          "number": 2,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "According to the passage, the Orlen Bay ledgers show that",
+          "choices": [
+            "output ceilings loosened in years when the fish runs were unusually heavy",
+            "output ceilings were most strictly observed in the years when earnings were highest",
+            "workers who exceeded informal output ceilings were laid off before their coworkers",
+            "posted piece rates were lowered at the close of seasons with unusually heavy runs",
+            "output ceilings were most rigidly observed early in the canning season"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "Both the second and third paragraphs state that ceilings loosened in heavy-run years, so A is correct. B is the trap: heavy-run years were the years of highest earnings, and the passage says ceilings loosened, not tightened, then. E reverses the statement that ceilings were most rigid late in the season."
+        },
+        {
+          "number": 3,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that Reyval would most likely agree with which one of the following?",
+          "choices": [
+            "Output restriction at plants with year-round production was motivated chiefly by solidarity among workers of different crafts.",
+            "Workers at Orlen Bay were unaware that piece rates at the cannery were seldom lowered.",
+            "At a year-round plant with a record of rate cuts, output ceilings would tend to loosen in years of unusually high earnings.",
+            "The payroll ledgers of plants with year-round production are less complete than those of the Orlen Bay cannery.",
+            "At a cannery whose season ended on a fixed date no matter how quickly the catch was processed, the motive for restriction she identifies would be weaker."
+          ],
+          "answer": "E",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 3,
+          "explanation": "Reyval’s seasonal motive depends on fast work exhausting the catch and so hastening layoffs, and the ledgers show restriction loosening when speed could not end the season early; with a fixed end date, speed would not shorten paid work, so E follows. C is the trap: it borrows the heavy-run pattern from Orlen Bay, but Reyval argues that workers anxious about rates would have done the reverse, tightening ceilings when earnings rose."
+        },
+        {
+          "number": 4,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author mentions the possibility that workers ‘feared cuts regardless, having heard of them at other plants’ primarily in order to",
+          "choices": [
+            "support the older consensus with evidence drawn from plants other than Orlen Bay",
+            "raise an objection to one step in Reyval’s reasoning that the passage then reports her answering",
+            "suggest that Orlen Bay workers were better informed about other plants than earlier historians assumed",
+            "introduce the reservation about Reyval’s account that the author develops in the final paragraph",
+            "explain why the posted piece rates at Orlen Bay were almost never reduced"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 3,
+          "explanation": "The sentence anticipates a reply to Reyval’s point that rates were rarely cut, and the next sentences give her answer based on the heavy-run years, so B is correct. D is tempting because the author does voice a reservation later, but that reservation concerns whether the seasonal motive was the only one, not fear of rate cuts, and the author treats the objection here as answered. A is wrong because the sentence is offered hypothetically, not as evidence."
+        },
+        {
+          "number": 5,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author’s attitude toward Reyval’s study is best described as",
+          "choices": [
+            "skeptical, regarding its conclusions as no better supported than those of the consensus it challenges",
+            "admiring of its methodological point but doubtful that its evidence bears on workers’ motives at all",
+            "enthusiastic, accepting both its critique of the older view and its implication that seasonal pressure fully explains restriction at Orlen Bay",
+            "largely favorable, while holding that it supports a narrower conclusion than its author sometimes implies",
+            "neutral, reporting its claims and evidence without evaluating them"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "difficulty": 4,
+          "explanation": "The author calls Reyval’s methodological point ‘well taken’ and says the study establishes something important, but also that it ‘establishes less than she sometimes suggests,’ which is D. B is the strongest trap, but it goes too far: the author grants that the pattern shows the seasonal motive was operative, so the evidence does bear on motives. C ignores the author’s point that the seasonal motive need not have been the only one."
+        },
+        {
+          "number": 6,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author’s claim that Reyval’s account ‘is open to a version of the same objection’ most strongly suggests that the author believes",
+          "choices": [
+            "Reyval inferred workers’ motives from the bare fact of restriction without consulting the ledgers",
+            "the ledger evidence, though it reveals a pattern in workers’ conduct, cannot by itself exclude motives other than the one Reyval identifies",
+            "Reyval’s evidence concerning heavy-run years is consistent with the view that restriction was a defense against rate cuts",
+            "earlier historians were correct about the motives of workers at plants with year-round production",
+            "Reyval read her own preferences into the evidence in order to discredit the older consensus"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 3,
+          "explanation": "The objection was that historians read motives into behavior; the author explains that ledgers record what workers did, not why, and show the seasonal motive was operative but not that it was the only one, which is B. C is tempting because the author does criticize Reyval, but the author never disputes her answer to the rate-cut reply. A misreads the parallel: the objection is a ‘version’ of the earlier one, not an accusation that she ignored her evidence."
+        },
+        {
+          "number": 7,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately describes the relationship between passage A and passage B?",
+          "choices": [
+            "Passage B rejects passage A’s interpretation of a phenomenon and denies that the phenomenon confers any benefit on the trees that exhibit it.",
+            "Passage A proposes a hypothesis that passage B supports with additional, longer-term evidence.",
+            "Passage A presents data that passage B argues were improperly collected and therefore unreliable.",
+            "Passage A interprets a phenomenon as adaptive; passage B argues that the evidence for that interpretation fits a different account and that the phenomenon’s benefits may be temporary.",
+            "Passage A and passage B offer competing explanations of why droughts in a region have become more frequent."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-comparative",
+            "rc-main-point"
+          ],
+          "difficulty": 3,
+          "explanation": "Passage A calls early shedding a defensive strategy; passage B argues that shedding usually follows leaf failure, so the stem’s benefit does not show design, and that repeated shedding can exhaust a tree’s reserves. That is D. A is the trap: passage B explicitly grants that the stem’s benefit is ‘real enough’ and that early-shedding trees often look healthier the next spring, so it does not deny any benefit."
+        },
+        {
+          "number": 8,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "According to passage A, the trees in the author’s study that shed more than half their leaves before midsummer",
+          "choices": [
+            "were more likely than other trees to leaf out normally the following spring",
+            "had fewer blocked vessels in their leaves than trees that retained their foliage",
+            "died at higher rates than other trees within five years",
+            "retained larger reserves of stored starch than trees that kept their foliage",
+            "drew more water from the soil than trees that kept their foliage"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "Passage A reports that the early-shedding trees were substantially more likely to leaf out normally the next spring, so A is correct. B is the trap: the reported difference in blocked vessels concerns trunks, not leaves. C borrows passage B’s finding about trees that shed in consecutive drought years."
+        },
+        {
+          "number": 9,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author of passage B would be most likely to agree with which one of the following?",
+          "choices": [
+            "Early leaf shedding in the pale ridge oak is not a product of natural selection.",
+            "Trunk embolisms kill more pale ridge oaks over the long term than carbon starvation does.",
+            "In a region where severe droughts occurred only rarely, early leaf shedding might on balance help pale ridge oaks survive.",
+            "Measurements of water flow in leaves are less reliable than counts of blocked vessels in trunks.",
+            "Pale ridge oaks that keep their leaves during drought suffer fewer trunk embolisms than those that shed them."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "Passage B says whether early leaf loss helps ‘depends on how often drought returns’ and that it ‘once bought time,’ and it grants a real short-term benefit to the stem; so with rare droughts the response could be net beneficial, as C says. A is the trap: passage B argues only that a benefit following from damage is not evidence of design, which is weaker than asserting that the trait did not evolve by selection. B contradicts B’s report that the oaks died of apparent carbon starvation rather than blocked vessels."
+        },
+        {
+          "number": 10,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Both authors would be most likely to agree that",
+          "choices": [
+            "early leaf shedding in the pale ridge oak is an evolved defensive strategy",
+            "a benefit that follows from a trait does not show that the trait arose because of that benefit",
+            "the conducting vessels of leaves are less vulnerable to blockage than those of stems",
+            "the cost of regrowing a canopy is small compared with the cost of trunk embolism",
+            "losing its leaves reduces the amount of water a tree loses during drought"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-comparative"
+          ],
+          "difficulty": 3,
+          "explanation": "Passage A says shedding sharply reduces water loss, and passage B grants that the stem benefits from reduced water loss once the leaves are gone, so E is common ground. B and D each express only one author’s view (B’s and A’s respectively); indeed, passage B’s carbon-starvation findings suggest its author would doubt D. C reverses passage B’s claim about safety margins."
+        },
+        {
+          "number": 11,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author of passage B mentions that leaves have narrower margins of hydraulic safety than stems primarily in order to",
+          "choices": [
+            "explain why embolisms in the trunk are difficult for trees to repair",
+            "help account for the finding that leaves had largely failed hydraulically before they were shed",
+            "suggest that the pale ridge oak is more vulnerable to drought than other tree species",
+            "support the claim that shedding leaves depletes a tree’s reserves of stored carbohydrates",
+            "concede that passage A’s description of leaves as a hydraulic fuse is correct in most cases"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 4,
+          "explanation": "If leaf vessels block at lower tension than stem vessels, leaves will fail first, which explains why the measured leaves had already lost most of their conductivity before falling, so B is correct. E is the trap: ‘fuse’ language might seem to fit a part that fails first, but passage B uses the point to argue that shedding follows failure rather than being a protective design, which undercuts rather than concedes A’s view."
+        },
+        {
+          "number": 12,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following, if true, would most strengthen the position taken in passage A against the objection raised in the first paragraph of passage B?",
+          "choices": [
+            "In several other oak species, trees that retain their foliage through drought suffer more trunk embolisms than trees that shed it.",
+            "Leaves of pale ridge oaks that have lost most of their conducting capacity cannot regain it even if rainfall resumes before autumn.",
+            "Pale ridge oaks that shed leaves early in drought years regrow their canopies more slowly the following spring than other upland oaks do.",
+            "Drought-stressed pale ridge oaks expend energy forming a separation layer at the base of each leaf stalk, a process that begins before the leaves’ conductivity starts to decline.",
+            "The drought studied by the author of passage A was more severe than any recorded in the region in the preceding century."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-strengthen-weaken"
+          ],
+          "difficulty": 5,
+          "explanation": "Passage B’s first-paragraph objection is not that shedding fails to help the stem—it grants that benefit—but that shedding merely follows leaf failure and so is a consequence, not a strategy. D shows the tree actively initiating shedding before failure begins, which directly counters that objection. A is the most tempting trap, but it supports only the stem benefit that passage B already concedes and says nothing about whether shedding is initiated or merely follows damage; B and C, if anything, help passage B."
+        },
+        {
+          "number": 13,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author of passage B would be most likely to regard the findings reported in the second paragraph of passage A as",
+          "choices": [
+            "reliable as far as they go, but unable to settle either whether shedding is a strategy or whether it benefits trees across repeated droughts",
+            "reliable, and sufficient to show that shedding is a strategy, though not that it benefits trees across repeated droughts",
+            "unreliable, because the trees that shed early had in fact lost most of their trunk conductivity",
+            "irrelevant to the dispute, because any benefit to the stem arises only after the leaves have already failed",
+            "persuasive evidence that carbon starvation is less common than trunk embolism among drought-stressed oaks"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-comparative"
+          ],
+          "difficulty": 4,
+          "explanation": "Passage B accepts that early-shedding trees often look healthier the next spring and that the stem benefit is real, but argues that a benefit following damage does not show design and that one year’s survival is not a reliable measure, which is A. B is the closest trap; it accepts half of B’s position but contradicts B’s explicit claim that such a benefit is not evidence of design. D overstates: B treats the findings as showing a real but limited benefit, not as irrelevant."
+        },
+        {
+          "number": 14,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Because the shared-shortage rule has distributed the hardship of drought fairly, criticisms of its effects on the efficiency of water use are misplaced.",
+            "Although the shared-shortage rule has spared the basin sudden losses, it may have discouraged adaptations that strict priority would have compelled, leaving the basin less prepared for severe drought.",
+            "The shared-shortage rule should be abandoned in favor of strict priority, since only the threat of total cutoffs induces users to adapt.",
+            "The Tessaly River basin adopted the shared-shortage rule chiefly in order to protect household drinking water from reduction during shortages.",
+            "Critics of the shared-shortage rule have failed to recognize that the rule was never intended to maximize the efficiency of water use."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 4,
+          "explanation": "The passage grants that the rule has prevented sudden losses but concludes that by softening every shortage it may defer a reckoning and leave the basin unprepared, which is B. C is the main trap: the author explicitly says nothing in the critics’ case shows a return to strict priority would be wise. A and E express the defenders’ reply, which the author says concedes more than intended."
+        },
+        {
+          "number": 15,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "According to the passage, under the shared-shortage rule priority dates were",
+          "choices": [
+            "abolished in favor of allotments proportional to past use",
+            "used to determine which rights would be exempt from reduction",
+            "consulted to determine the order in which users would bear a shortage",
+            "retained only for rights used for household drinking water",
+            "used to resolve disputes over the size of users’ allotments"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "The second paragraph says priority dates were consulted only to settle disputes over the size of allotments, so E is correct. C is the trap: it describes exactly the role the passage says priority dates no longer played. B confuses priority with the exemption, which depended on household drinking use."
+        },
+        {
+          "number": 16,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that a junior user under strict prior appropriation would be",
+          "choices": [
+            "less likely than a senior user to suffer any reduction during a shortage",
+            "less likely than a junior user under the shared-shortage rule to lose his or her farm in a single dry season",
+            "more likely than a junior user under the shared-shortage rule to invest in water storage",
+            "exempt from reduction during a shortage if the water were used for household drinking",
+            "unable to calculate in advance how much water he or she would lose in a shortage"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "Critics say the shared-shortage rule removed junior users’ strongest incentive to invest in storage—the threat of a total cutoff, which exists only under strict priority—so a junior user under strict priority would have the stronger incentive, as C says. B is the trap: it compares the right two users but in the wrong direction, since strict priority is what exposes junior farms to sudden collapse. D imports the shared-shortage rule’s exemption into strict priority, and E is false because a junior user under strict priority can foresee a total cutoff."
+        },
+        {
+          "number": 17,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The author mentions a farmer facing a twenty percent cut primarily in order to",
+          "choices": [
+            "illustrate the clarity that defenders of prior appropriation have praised",
+            "show that the shared-shortage rule imposes greater hardship on junior users than strict priority does",
+            "provide evidence that fallowing fields is the most efficient form of water conservation",
+            "illustrate why proportional reductions create weaker incentives to adapt than total cutoffs do",
+            "suggest that junior users have generally opposed the adoption of the shared-shortage rule"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 3,
+          "explanation": "The contrast between a farmer who can absorb a partial cut by fallowing a field and one who must find a new source or fail explains why the rule weakened incentives to invest, which is D. B reverses the comparison, since a partial cut is less harsh than a total cutoff. C misreads fallowing, which the passage presents as a way of absorbing a cut without adapting, not as efficient conservation."
+        },
+        {
+          "number": 18,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following is most analogous to the effect that critics attribute to the shared-shortage rule’s treatment of junior users?",
+          "choices": [
+            "A company that responds to every decline in sales by reducing all employees’ hours slightly, instead of closing its weakest division, finds that none of its divisions has been pressed to modernize.",
+            "A city that assigns scarce parking permits by annual lottery rather than by seniority finds that residents who lose the lottery are less likely to buy cars.",
+            "A school that grades every course on a fixed curve finds that its students compete more intensely, and cooperate less, in pursuit of the highest marks.",
+            "An insurer that sharply raises premiums for drivers who have had accidents finds that its customers, on the whole, begin driving more carefully.",
+            "A fishery that assigns catch quotas according to each boat’s historical catch finds that newly built boats, however efficient, cannot profitably enter the market."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-analogy"
+          ],
+          "difficulty": 5,
+          "explanation": "Critics claim that by spreading every loss thinly the rule removed the pressure that would have forced junior users to adapt; A likewise spreads a loss so that no unit faces the pressure that would compel change, with the result that nothing modernizes. E is the most tempting trap because allocation by historical catch resembles allocation by seniority, but it corresponds to strict priority’s exclusion of newcomers, not to the rule’s blunting of incentives. D concerns a penalty that creates an incentive, the reverse of the mechanism."
+        },
+        {
+          "number": 19,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The author of the passage would be most likely to agree with which one of the following?",
+          "choices": [
+            "Strict priority would serve the Tessaly River basin better than the shared-shortage rule does.",
+            "The exemption for household drinking water is the shared-shortage rule’s principal weakness.",
+            "The aim of distributing hardship fairly was a legitimate one, but it is an aim the shared-shortage rule has failed to achieve.",
+            "The rule’s defenders are mistaken in claiming that no community in the basin has lost its farms in a single season.",
+            "The success that the rule’s defenders cite is consistent with the criticisms that have been made of the rule."
+          ],
+          "answer": "E",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "The author says the defenders’ reply ‘concedes more than its proponents may intend’: the very softening of every shortage that prevents sudden losses is what may defer the reckoning, so the cited success and the criticisms are compatible, as E says. C is the strongest trap: the author does call the achievement ‘not trivial,’ but never says the rule failed to distribute hardship fairly, and does not dispute the defenders on that point. A is ruled out by the statement that nothing in the critics’ case shows a return to strict priority would be wise."
+        },
+        {
+          "number": 20,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "According to the passage, defenders of prior appropriation have praised the doctrine on the grounds that",
+          "choices": [
+            "it distributes the burden of shortages evenly among all users",
+            "the security of senior rights encourages long-term investment",
+            "it prevents the sudden collapse of farms held by junior users",
+            "it exempts water used for household drinking from reduction",
+            "it makes the transfer of water to growing municipalities easier"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 3,
+          "explanation": "The first paragraph says defenders praise the doctrine’s clarity and the way the security of senior rights encourages long-term investment, which is B. A and C are aims of the shared-shortage rule, not merits claimed for strict priority. E is tempting because the third paragraph links the shared-shortage rule to slowed transfers, but the passage never attributes this praise to prior appropriation’s defenders."
+        },
+        {
+          "number": 21,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Reductive analysis should be abandoned because its classification of notes as ornamental is circular.",
+            "Ornamentation is the most valuable element of tonal music and should be the primary focus of its analysis.",
+            "Reductive analysis remains valuable, but because its results depend on contestable choices, a reduction should be presented as one hearing of a work rather than as the work’s structure.",
+            "Performance traditions in which ornaments were improvised show that tonal music lacks any underlying structural coherence.",
+            "Although reductive analysis relies on circular reasoning, that circularity is harmless, so its results may be accepted as revealing the structure of tonal works."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 4,
+          "explanation": "After raising two problems, the author concludes that reduction should be retained but understood more modestly, as one hearing shaped by choices, which is C. E is the trap: the author does say the circle is ‘not necessarily vicious,’ but then argues that because of it the skeleton is partly a product of the analyst’s expectations, so reductions should not be presented as revealing the structure. A contradicts the statement that none of this requires abandoning reduction."
+        },
+        {
+          "number": 22,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following best describes the organization of the passage?",
+          "choices": [
+            "A method is described, its origins are traced, and it is shown to have been superseded by a newer method.",
+            "Two competing methods are compared, and one is shown to be superior on the basis of two considerations.",
+            "A method is criticized on two grounds, those criticisms are shown to be unfounded, and the method is endorsed.",
+            "A method is described and its appeal acknowledged, two problems with it are raised, and a revised understanding of what it achieves is proposed.",
+            "A problem of interpretation is identified, a method for resolving it is introduced, and the method’s limitations are dismissed as minor."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-structure"
+          ],
+          "difficulty": 4,
+          "explanation": "The first paragraph describes reduction and its appeal, the second and third raise the circularity and ornament problems, and the fourth proposes a more modest account of what reduction achieves, which is D. C is the trap because the method is retained, but the author never shows the criticisms to be unfounded; the revised account accepts them. E misdescribes the final paragraph, which takes the limitations seriously enough to change how reductions should be presented."
+        },
+        {
+          "number": 23,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that the author would most likely agree with which one of the following?",
+          "choices": [
+            "Some notes’ classification as ornamental does not depend on the analyst’s expectations about the underlying progression.",
+            "Any reduction whose classifications rely on the underlying progression is for that reason invalid.",
+            "The skeleton an analyst uncovers is entirely a product of the analyst’s prior expectations.",
+            "In traditions where performers supplied the ornaments, reductive analysis cannot be applied at all.",
+            "In analysis, the pitches a composer notated should always take precedence over notes added by performers."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "The author says that in many cases the classification seems obvious—a brief stepwise note between chord tones is almost universally heard as decorative—and that analysts appeal to the underlying structure only in the cases that are not obvious; so some classifications do not rest on the analyst’s expectations about the progression, which is A. C is the key degree trap: the author says the skeleton is ‘partly’ such a product, not entirely. B contradicts ‘not necessarily vicious,’ and D overstates the third paragraph, which challenges a claim about ornament’s value without saying reduction is inapplicable."
+        },
+        {
+          "number": 24,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "The author’s stance toward the claim that a reduction reveals the structure of a musical work is best described as",
+          "choices": [
+            "rejection of the claim together with rejection of reductive analysis as a method",
+            "acceptance of the claim, with reservations only about how analysts classify certain notes",
+            "agnosticism, on the ground that the considerations for and against the claim are evenly balanced",
+            "acceptance of the claim for music with fixed ornaments, but rejection of it for music with improvised ornaments",
+            "rejection of the claim as stated, combined with endorsement of a weaker claim about what reduction offers"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "difficulty": 5,
+          "explanation": "The final paragraph says that ‘rather than revealing the structure of a work, a reduction offers one hearing of it,’ rejecting the strong claim while endorsing a weaker one, which is E. D is the most sophisticated trap: the ornament argument does apply specially to improvised traditions, but the circularity argument in the second paragraph applies to reduction generally, and the author’s conclusion is not limited to improvised music. A is wrong because the author says none of this requires abandoning reduction."
+        },
+        {
+          "number": 25,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following is most analogous to the circularity described in the second paragraph of the passage?",
+          "choices": [
+            "A translator renders each of a poem’s idioms word for word, so that the finished translation is literally faithful to the original but awkward to read.",
+            "A historian assumes, without examining the matter, that the most recent document in an archive is the most reliable account of the event it describes.",
+            "An editor reconstructs an author’s original text by discarding readings judged to be copyists’ errors, and judges readings to be errors because they do not fit the text as reconstructed.",
+            "A critic evaluates a novel solely by comparing it with the other novels its author has written, ignoring the work of the author’s contemporaries.",
+            "A mapmaker leaves the minor roads off a regional map so that travelers can more easily see the major highways connecting its cities."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-analogy"
+          ],
+          "difficulty": 5,
+          "explanation": "In the passage, ornament is identified as what does not belong to the underlying progression, while the progression is identified by setting aside ornament; C has the same mutual dependence between the errors and the reconstructed text. E is the attractive trap because it involves simplifying by stripping away lesser details, but the mapmaker’s judgment of which roads are minor does not depend on the map that results, so there is no circle. B involves an unexamined assumption but not mutual dependence."
+        },
+        {
+          "number": 26,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "The author refers to performance traditions in which performers supplied the ornaments primarily in order to",
+          "choices": [
+            "show that reductive analysis cannot explain how long movements are heard as coherent wholes",
+            "challenge the assumption that ornamentation is by its nature inessential to a musical work",
+            "provide an example of a case in which classifying a note as ornamental is obvious",
+            "argue that performers rather than composers should be regarded as the authors of tonal works",
+            "illustrate the circular reasoning described in the second paragraph"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 4,
+          "explanation": "Because listeners in those traditions judged performances chiefly by their ornamentation, treating ornament as inessential becomes a substantive and possibly mistaken claim about value, so the example challenges that assumption, as B says. E is the trap: the example follows the discussion of circularity, but the third paragraph introduces it as a ‘further difficulty,’ distinct from the circle. D overstates a point about where value lies into a claim about authorship."
+        },
+        {
+          "number": 27,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "According to the passage, the author recommends that analysts who use reduction",
+          "choices": [
+            "state their reasons for every note they classify as ornamental",
+            "give up the search for a skeleton that underlies an entire work",
+            "study the performance practices of a work’s original audiences before analyzing it",
+            "explain why they classified a note as they did wherever that classification is in dispute",
+            "present several alternative reductions of each work so that listeners can choose among them"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 5,
+          "explanation": "The final paragraph recommends stating, ‘wherever the classification of a note is contested, why they classified it as they did,’ which is D. A is the key trap: it uses the passage’s own idea but broadens it from contested classifications to every classification, which the author does not recommend and which the second paragraph’s point about obvious cases makes unnecessary. E is a plausible extension of ‘one hearing’ but is never recommended."
+        }
+      ]
+    },
+    {
+      "id": "lr2",
+      "kind": "LR",
+      "title": "Logical Reasoning",
+      "timeLimitMinutes": 35,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Darvale’s housing council predicts that relaxing the city’s restrictions on backyard cottages will noticeably lower rents. This prediction is unlikely to be borne out. Admittedly, any new housing adds to supply, and added supply tends to restrain prices. But in cities that have already relaxed such restrictions, most new backyard cottages have been occupied by the owners’ relatives or listed as short-term vacation rentals. Units used in these ways do little to expand the stock of housing available to ordinary long-term renters.",
+          "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+          "choices": [
+            "Units occupied by owners’ relatives or used as vacation rentals do little to expand the housing available to long-term renters.",
+            "Adding to the supply of housing generally tends to restrain the prices of housing.",
+            "Relaxing Darvale’s restrictions on backyard cottages probably will not noticeably lower the city’s rents.",
+            "Darvale’s housing council should not relax the city’s restrictions on backyard cottages.",
+            "Most backyard cottages built in Darvale will be occupied by the owners’ relatives."
+          ],
+          "answer": "C",
+          "types": [
+            "main-conclusion"
+          ],
+          "difficulty": 2,
+          "explanation": "The argument’s point is that the council’s prediction of lower rents is unlikely to come true, which C restates; everything else is offered in support of that. A is a premise supporting the conclusion, and B is a concession. D goes further than the argument, which never says the restrictions should stay in place."
+        },
+        {
+          "number": 2,
+          "stimulus": "Entomologist: In a thorough survey of the Pellam Valley, we located 340 hives of the blue mason bee, and every one of them was within 200 meters of a stand of wild sage. Since wild sage grows in scattered stands across nearly the entire valley floor, the bees evidently have no trouble finding sites near it. Plainly, then, in the Pellam Valley it is the presence of wild sage that determines where blue mason bees build their hives.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "fails to establish that the bees’ hive sites are any closer to wild sage than randomly chosen locations in the valley would be",
+            "draws a conclusion about the valley’s bees from a sample of hives that may not be representative of them",
+            "presupposes the truth of the very conclusion that it is attempting to establish",
+            "fails to consider that some hives may also have been located near plants other than wild sage",
+            "treats a condition that is necessary for hive building as though it were sufficient for it"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "explanation": "If sage stands are scattered across nearly the whole valley, almost any spot would lie within 200 meters of one, so the correlation reveals nothing about the bees’ choice of sites (A). B is the trap, but the survey was thorough and the conclusion is limited to the valley, so representativeness is not the problem. D is irrelevant, since nearness to other plants would not show that sage plays no role."
+        },
+        {
+          "number": 3,
+          "stimulus": "Over the past decade, forecasters at the Hollin weather station have noted that mornings with a southerly wind pattern known locally as the ‘lift’ are followed by afternoon thunderstorms far more often than are other mornings. The station’s lead meteorologist contends that the lift itself produces these storms: it pushes warm, moist air from the lowlands up the slopes of the nearby hills, where the air cools and its moisture condenses into storm clouds.",
+          "stem": "Which one of the following, if true, most strengthens the meteorologist’s argument?",
+          "choices": [
+            "Afternoon thunderstorms also occur near Hollin on some days when the lift has not occurred that morning.",
+            "Weather stations in other regions rarely record a morning wind pattern resembling the lift.",
+            "The lift is most common in midsummer, when afternoon thunderstorms near Hollin are most common in general.",
+            "Forecasts issued by the Hollin station have become more accurate over the past decade.",
+            "On mornings when the lift occurs but the lowland air is unusually dry, afternoon thunderstorms near Hollin are rare."
+          ],
+          "answer": "E",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 3,
+          "explanation": "The meteorologist’s proposed mechanism depends on the lift carrying moist air uphill; if storms fail to follow the lift precisely when the lowland air is dry, that is just what the mechanism predicts (E). C weakens the argument by suggesting that season, not the lift, explains the correlation. A is compatible with the argument, since the lift need not be the only cause of storms."
+        },
+        {
+          "number": 4,
+          "stimulus": "Imogen: The editors of the new anthology were right to exclude poems written in strict traditional forms. Most readers today find the sonnet and the villanelle stiff and artificial, and an anthology aimed at a general audience ought to feature work that its readers will find natural and engaging.\n\nTeodor: An anthology that presents itself as a survey of contemporary poetry has an obligation to represent that poetry accurately, and several of the most admired poets working today write in strict forms. Whatever readers’ tastes may be, leaving such poems out misrepresents the field.",
+          "stem": "Imogen and Teodor disagree over whether",
+          "choices": [
+            "most readers today find traditional poetic forms stiff and artificial",
+            "the anthology’s editors were justified in excluding poems written in strict traditional forms",
+            "several of the most admired contemporary poets write in strict forms",
+            "an anthology aimed at a general audience should include at least some poems in free verse",
+            "poems in strict traditional forms are more difficult to write than poems in free verse"
+          ],
+          "answer": "B",
+          "types": [
+            "point-at-issue"
+          ],
+          "difficulty": 2,
+          "explanation": "Imogen says the editors were right to exclude strict-form poems; Teodor says the exclusion misrepresents the field and so was a mistake (B). Teodor never disputes A (‘whatever readers’ tastes may be’), and Imogen never addresses C. Neither speaker discusses D or E."
+        },
+        {
+          "number": 5,
+          "stimulus": "Each drug tested in the Corvane trial that reduced inflammation also raised blood pressure in at least some of the patients who took it. No drug tested in the trial was later approved for use in elderly patients unless it raised blood pressure in none of the patients who took it. Some of the drugs tested in the trial were later approved for use in elderly patients, and most of those drugs were also approved for use in children.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "None of the drugs tested in the trial that were approved for use in children reduced inflammation.",
+            "Some of the drugs tested in the trial that were approved for elderly patients reduced inflammation.",
+            "Most of the drugs tested in the trial that raised no patient’s blood pressure were approved for elderly patients.",
+            "At least one drug tested in the trial that was approved for use in children did not reduce inflammation.",
+            "At least one drug tested in the trial raised blood pressure in some of the patients who took it."
+          ],
+          "answer": "D",
+          "types": [
+            "must-be-true"
+          ],
+          "difficulty": 3,
+          "explanation": "Any drug approved for elderly patients raised no one’s blood pressure and therefore did not reduce inflammation; since some such drugs exist and most of them were approved for children, at least one child-approved drug did not reduce inflammation (D). A is the trap: drugs approved for children but not for elderly patients are unconstrained, so some could have reduced inflammation. E need not hold, since perhaps no drug reduced inflammation and none raised blood pressure."
+        },
+        {
+          "number": 6,
+          "stimulus": "Manager: Last year our firm began allowing employees in its design department to work from home two days a week. Since then, the number of projects the design department completes each month has risen by 15 percent. Clearly, allowing employees to work from home increases their productivity, so we should extend the policy to every department in the firm.",
+          "stem": "Which one of the following, if true, most seriously weakens the manager’s argument?",
+          "choices": [
+            "A few employees in the design department chose not to work from home even after the policy took effect.",
+            "Shortly after the policy took effect, the design department hired four additional designers, enlarging its staff by 20 percent.",
+            "Employees in several of the firm’s other departments have said that they would like to work from home.",
+            "The projects completed by the design department last year were, on average, no smaller than those completed the year before.",
+            "Some of the firm’s managers believe that remote work makes employees more difficult to supervise."
+          ],
+          "answer": "B",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "explanation": "If the department’s staff grew by 20 percent while output grew by only 15 percent, output per employee actually fell, so the rise in completed projects does not show that remote work boosted productivity (B). D rules out an alternative explanation and so slightly strengthens the argument. A and E have little bearing on whether the policy raised productivity."
+        },
+        {
+          "number": 7,
+          "stimulus": "Legislator: The proposed tax credit for residential rooftop solar panels will reduce our state’s reliance on coal-fired power. The credit will lead many homeowners to install solar panels, and the electricity those panels generate will replace electricity the homeowners would otherwise have drawn from the power grid. At present, coal-fired plants supply the majority of the electricity on our state’s grid.",
+          "stem": "Which one of the following is an assumption on which the legislator’s argument depends?",
+          "choices": [
+            "Most homeowners who install solar panels after the credit takes effect would not have installed them without it.",
+            "Electricity from rooftop solar panels is less expensive to produce than electricity from coal-fired plants.",
+            "The tax credit will not significantly reduce the revenue available to the state government.",
+            "Coal-fired plants will continue to supply the majority of the electricity on the state’s grid for at least the next decade.",
+            "A reduction in the demand for electricity from the grid would lead to at least some reduction in the output of coal-fired plants."
+          ],
+          "answer": "E",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "explanation": "The argument moves from less demand for grid power to less reliance on coal; if reduced demand were met entirely by cutting output from other sources, coal use would not fall, so E is required. A is too strong: the argument needs only that some homeowners install panels because of the credit. D is also not needed, since coal could lose its majority and still have its output reduced."
+        },
+        {
+          "number": 8,
+          "stimulus": "Two years ago, the Fernhill Public Library eliminated the fines it had charged for overdue books. Since then, the percentage of borrowed books that are returned after their due date has increased slightly. Over the same period, however, the number of borrowed books that are never returned at all has dropped substantially, even though the library has not changed its other policies for recovering unreturned books.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "Many borrowers who used to keep overdue books indefinitely did so to avoid paying the large fines that had accumulated on them.",
+            "Other libraries in the region that have eliminated overdue fines have also seen an increase in late returns.",
+            "The Fernhill Public Library has hired additional staff to process returned books more quickly.",
+            "The number of people borrowing books from the Fernhill Public Library has increased since fines were eliminated.",
+            "The fines the library had charged for overdue books had generated a substantial portion of its revenue."
+          ],
+          "answer": "A",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 2,
+          "explanation": "The puzzle is why eliminating fines would make lateness more common but permanent non-return less common. A explains it: fines had deterred people from ever returning badly overdue books, so removing them brought those books back late rather than never. B explains only the rise in late returns, and D would, if anything, increase both figures rather than explain why one fell."
+        },
+        {
+          "number": 9,
+          "stimulus": "Pharmacist: Some physicians have warned patients with high blood pressure to avoid the cold remedy Brevane. This warning, however, is unwarranted. Brevane contains three active ingredients, and in controlled studies each of them, taken alone at the dose found in Brevane, produced no measurable rise in blood pressure, even among patients whose blood pressure was poorly controlled. Since Brevane consists of nothing more than these three ingredients plus inert fillers, it too poses no risk to such patients.",
+          "stem": "The reasoning in the pharmacist’s argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "rejects the physicians’ warning on the basis of their presumed motives rather than its merits",
+            "generalizes to all patients with high blood pressure from studies of patients whose blood pressure was poorly controlled",
+            "presumes that because each component of a product is harmless when taken in isolation, the product as a whole is harmless",
+            "overlooks the possibility that the fillers in Brevane, though inert, could themselves raise blood pressure",
+            "mistakes a factor that is merely associated with high blood pressure for a cause of it"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "Each ingredient was tested only alone; the ingredients might interact to raise blood pressure when combined, so what holds of each part need not hold of the whole (C). B is the main trap, but studying patients with poorly controlled blood pressure makes the evidence stronger rather than weaker for other patients. D contradicts a premise the argument states, namely that the fillers are inert."
+        },
+        {
+          "number": 10,
+          "stimulus": "Principle: A manager should publicly credit an individual employee for a team’s success only if that employee’s contribution was both essential to the success and substantially greater than that of any other member of the team.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
+          "choices": [
+            "Okafor acted properly in publicly crediting Lin for the success of the product launch, since Lin’s work was essential to it, even though two other team members contributed just as much.",
+            "Hale acted improperly in failing to publicly credit Marsh for the success of the audit, since Marsh’s contribution was essential and far exceeded that of any other team member.",
+            "Brandt acted properly in publicly crediting Yusuf for the success of the merger, since Yusuf contributed far more than anyone else, even though the merger would have succeeded without that contribution.",
+            "Ruiz acted improperly in publicly crediting Dalton for the success of the campaign, since although Dalton’s work was indispensable, Pereira’s contribution was equally large.",
+            "Singh acted improperly in publicly crediting the entire team, rather than any single member, for the success of the redesign."
+          ],
+          "answer": "D",
+          "types": [
+            "principle-apply"
+          ],
+          "difficulty": 4,
+          "explanation": "The principle states two necessary conditions for crediting an individual; in D, Dalton’s contribution was not greater than Pereira’s, so crediting Dalton violated the principle and the judgment of impropriety conforms. B is the trap: the principle gives only necessary conditions for crediting someone, so it never requires crediting anyone and cannot show Hale acted improperly. A and C approve credit when one of the conditions fails, and E concerns team credit, which the principle does not address."
+        },
+        {
+          "number": 11,
+          "stimulus": "In the Marrow Basin, fog forms only on nights when the ground cools enough that the air just above it reaches its dew point, the temperature at which water vapor condenses. Cloud cover at night slows the cooling of the ground by trapping heat radiated from the surface. Over the past twenty years, the average amount of nighttime cloud cover over the basin has increased substantially, while the average humidity of the basin’s air has remained essentially unchanged.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Over the past twenty years, nights on which fog forms in the Marrow Basin have probably become less frequent.",
+            "Fog never forms in the Marrow Basin on nights when there is substantial cloud cover.",
+            "The humidity of the air is the most important factor in determining whether fog forms in the Marrow Basin.",
+            "The increase in nighttime cloud cover over the Marrow Basin has been caused by changes in the region’s climate.",
+            "Days following foggy nights in the Marrow Basin tend to be cooler than days following clear nights."
+          ],
+          "answer": "A",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 3,
+          "explanation": "More cloud cover means the ground cools less at night, and with humidity unchanged, the air will reach its dew point less often, so fog has probably become less frequent (A). B is too strong, since clouds only slow cooling and do not prevent it. C and D make claims about relative importance and about causes that the passage does not address."
+        },
+        {
+          "number": 12,
+          "stimulus": "Critic: Every poem in Halloran’s new collection, except the prose poems, relies heavily on enjambment, the running of a sentence past the end of a line without a pause. Any poem that relies heavily on enjambment loses much of its effect when read aloud, because listeners cannot hear where the lines end. And each of the collection’s prose poems runs longer than ten pages. It follows that none of the poems in Halloran’s new collection is suitable for a public reading.",
+          "stem": "The critic’s conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Any poem that loses much of its effect when read aloud is unsuitable for a public reading.",
+            "A poem is suitable for a public reading if it neither loses much of its effect when read aloud nor runs longer than ten pages.",
+            "No prose poem that runs longer than ten pages relies heavily on enjambment.",
+            "Most poems that run longer than ten pages lose much of their effect when read aloud.",
+            "A poem is suitable for a public reading only if it does not lose much of its effect when read aloud and does not run longer than ten pages."
+          ],
+          "answer": "E",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 4,
+          "explanation": "E says that losing effect aloud or running over ten pages each rules a poem out; the non-prose poems lose effect aloud and the prose poems run over ten pages, so every poem is ruled out. A is the trap: it rules out the enjambed poems but says nothing about the prose poems. B reverses the conditional, giving conditions for suitability rather than for unsuitability, and D is only a ‘most’ claim about length."
+        },
+        {
+          "number": 13,
+          "stimulus": "Some researchers attribute the recent decline of the Ashby firefly to pesticide runoff from nearby farms. This explanation, however, is inadequate. The firefly has declined just as sharply within the Ashby nature reserve, where pesticides have been banned for decades, as on the surrounding farmland. A more likely culprit is artificial light. Ashby fireflies locate mates by means of their flashes, and both the reserve and the farmland have seen a dramatic increase in nighttime light from nearby housing developments over the same period.",
+          "stem": "Which one of the following most accurately describes the role played in the argument by the claim that the firefly has declined just as sharply within the reserve as on the surrounding farmland?",
+          "choices": [
+            "It is the main conclusion of the argument.",
+            "It is used to undermine a rival hypothesis by showing that the decline occurs even where the factor that hypothesis cites is absent.",
+            "It is a hypothesis that the argument considers and ultimately endorses.",
+            "It is presented as evidence that the factor the argument favors is at work in both the reserve and the farmland.",
+            "It is a claim that the argument concedes but maintains is irrelevant to its conclusion."
+          ],
+          "answer": "B",
+          "types": [
+            "role"
+          ],
+          "difficulty": 4,
+          "explanation": "The equal decline inside a reserve where pesticides are banned shows that the pesticide hypothesis, which the argument rejects, cannot account for the decline (B). D is the trap: the rise in nighttime light in both places is established by a separate, later claim, and the claim in question says nothing about light. The claim is a premise, not the main conclusion (A) or a hypothesis (C)."
+        },
+        {
+          "number": 14,
+          "stimulus": "Economist: In Brayton, the new rule requiring that 15 percent of the units in large new apartment buildings be rented at below-market rates has caused a slowdown in residential construction. In the two years since the rule took effect, applications for permits to build large apartment buildings in Brayton have fallen by 40 percent compared with the two years before the rule took effect.",
+          "stem": "Which one of the following, if true, most seriously weakens the economist’s argument?",
+          "choices": [
+            "Several developers who build large apartment buildings in Brayton have publicly criticized the rule.",
+            "Permit applications for small apartment buildings, which are exempt from the rule, have increased in Brayton since the rule took effect.",
+            "The rule was announced well before it took effect, and developers rushed to file applications before the effective date so that their projects would be exempt.",
+            "Apartments rented at below-market rates in Brayton have long waiting lists of prospective tenants.",
+            "Large apartment buildings in Brayton typically take more than two years to complete once a permit application has been filed."
+          ],
+          "answer": "C",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "C attacks the comparison rather than the conclusion: if developers rushed applications into the period just before the rule took effect, the baseline is inflated and much of the 40 percent drop reflects shifted timing rather than a real slowdown. B is a tempting trap but actually strengthens the argument, since unregulated building kept growing. E concerns completion time, which does not affect the count of applications filed."
+        },
+        {
+          "number": 15,
+          "stimulus": "Archivist: Some people argue that because digital scans make the contents of fragile manuscripts widely accessible, libraries no longer need to devote resources to preserving the original documents. But if this reasoning were sound, then the existence of detailed photographs of a historic building would mean that there was no need to preserve the building itself. No one would accept that conclusion, since a building, like a manuscript, contains information about its materials, its construction, and its history of use that no image can fully capture.",
+          "stem": "The archivist’s argument proceeds by",
+          "choices": [
+            "questioning the motives of those who advance the view being criticized",
+            "offering evidence that digital scans of manuscripts are frequently inaccurate",
+            "presenting a single counterexample to a generalization about all manuscripts",
+            "showing that similar reasoning, applied to an analogous case, would lead to an unacceptable conclusion",
+            "demonstrating that the opposing view’s conclusion contradicts one of its own premises"
+          ],
+          "answer": "D",
+          "types": [
+            "method"
+          ],
+          "difficulty": 3,
+          "explanation": "The archivist applies the opponents’ reasoning to buildings and photographs, notes that the resulting conclusion is clearly unacceptable, and so rejects the original reasoning (D). C is tempting, but the building case is an analogy, not a manuscript that contradicts a generalization. The archivist never claims scans are inaccurate (B) or discusses motives (A)."
+        },
+        {
+          "number": 16,
+          "stimulus": "Every house in the Ostrand historic district that was built before 1920 has a slate roof, unless it was substantially rebuilt after a fire. The Whitcomb house stands in the Ostrand district and does not have a slate roof, but it has never been substantially rebuilt after a fire. Therefore, the Whitcomb house was not built before 1920.",
+          "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+          "choices": [
+            "Every painting in the Harrow collection that was acquired before 1900 has been restored, unless it is on long-term loan. The portrait of Ada Venn is in the Harrow collection and has not been restored. Therefore, it was not acquired before 1900.",
+            "Every tenor in the Greenleaf choir attends the Thursday rehearsal, unless excused by the director. Paulo, a member of the choir, attends the Thursday rehearsal and has not been excused. Therefore, Paulo sings tenor.",
+            "Every bridge in Dunmore County that was built before 1950 has been inspected this year, unless it is closed to traffic. The Mill Road bridge is in Dunmore County and has not been inspected this year. Therefore, it either was not built before 1950 or is closed to traffic.",
+            "No vehicle in the city fleet that runs on diesel is more than ten years old, unless it has been overhauled. The street sweeper is in the fleet, is more than ten years old, and has been overhauled. Therefore, it runs on diesel.",
+            "Every restaurant on Cole Street that opened last year serves breakfast, unless it lacks a full kitchen. The Bluebird Café is on Cole Street and does not serve breakfast, but it has a full kitchen. Therefore, the Bluebird Café did not open last year."
+          ],
+          "answer": "E",
+          "types": [
+            "parallel"
+          ],
+          "difficulty": 5,
+          "explanation": "The original: every member of a group with feature X has feature Y unless exception Z; this member lacks Y and lacks Z; so it lacks X. E matches every element. A is the main trap but never rules out the exception (the loan), so its conclusion does not follow. C is valid but never eliminates the exception, so it reaches a disjunctive conclusion instead; B and D reverse the logic."
+        },
+        {
+          "number": 17,
+          "stimulus": "Utility spokesperson: Critics of the proposed Grisham Ridge wind farm claim that it will force the utility to raise its electricity rates. But under state regulations, the utility may raise its rates only if its operating costs increase, and the wind farm will reduce those costs. After all, wind turbines require no fuel, and fuel purchases are by far the largest component of the utility’s current operating costs. So the critics’ claim is mistaken.",
+          "stem": "The reasoning in the spokesperson’s argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "takes for granted that savings in one component of a total will not be offset by increases in its other components",
+            "treats a condition that is necessary for the utility to raise its rates as though it were sufficient",
+            "rejects the critics’ claim on the basis of the critics’ presumed motives rather than its merits",
+            "fails to consider that the state might revise its regulations governing electricity rates",
+            "assumes that fuel purchases will remain the largest component of the utility’s costs after the wind farm is built"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "Cutting fuel purchases reduces operating costs only if the wind farm does not add other operating costs, such as maintenance and transmission, that exceed the fuel savings (A). B is the trap: the argument uses the regulation correctly, moving from costs not increasing to rates not rising, which is a valid contrapositive. E is not needed, since fuel can lose its top ranking and the argument is unaffected."
+        },
+        {
+          "number": 18,
+          "stimulus": "Researchers gave patients who suffer from chronic migraines either the drug Tolvarin or a placebo for six months. Patients receiving Tolvarin reported 40 percent fewer migraines than those receiving the placebo. Tolvarin, however, produces a distinctive metallic taste that most patients notice within a few days. Nevertheless, the researchers conclude that Tolvarin reduces the frequency of migraines through its pharmacological action and not merely through patients’ expectations about the drug.",
+          "stem": "Which one of the following, if true, most strengthens the researchers’ argument?",
+          "choices": [
+            "Most patients in the Tolvarin group correctly guessed, partway through the study, that they were receiving the drug.",
+            "In an earlier study using a taste-masked form of Tolvarin, patients reported fewer migraines after six months than before treatment began.",
+            "Patients in the Tolvarin group who never noticed the metallic taste reported reductions in migraines as large as those reported by patients who noticed it.",
+            "The metallic taste produced by Tolvarin fades for most patients after the first few weeks of treatment.",
+            "Tolvarin is chemically similar to a drug that is widely used to lower blood pressure."
+          ],
+          "answer": "C",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 5,
+          "explanation": "The worry is that the taste tipped patients off and their expectations, not the drug, reduced the migraines. Patients who never noticed the taste had no such cue, so their equal improvement points to the drug itself (C). B is the most tempting trap, but without a placebo comparison a before-and-after improvement could reflect expectation or natural variation. D does not help, because expectations formed in the early weeks could persist after the taste fades, and A weakens the argument."
+        },
+        {
+          "number": 19,
+          "stimulus": "Consultant: At Pelham Logistics, warehouse teams whose members hold a brief meeting at the start of each shift have markedly lower error rates than teams that skip such meetings. Currently, about half of Pelham’s warehouse teams hold these meetings voluntarily. Therefore, if Pelham’s management requires every warehouse team to hold a start-of-shift meeting, the company’s overall warehouse error rate will decline.",
+          "stem": "Which one of the following is an assumption required by the consultant’s argument?",
+          "choices": [
+            "Teams that hold start-of-shift meetings have lower error rates than other teams on every type of warehouse task.",
+            "Start-of-shift meetings would reduce errors at least somewhat even among teams that hold them only because they are required to.",
+            "The lower error rates of teams that hold start-of-shift meetings are due entirely to the meetings and not to any other difference between those teams and the rest.",
+            "Start-of-shift meetings are the most effective means available to Pelham for reducing warehouse errors.",
+            "Pelham’s overall warehouse error rate is higher than that of comparable logistics companies."
+          ],
+          "answer": "B",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "The teams that would newly hold meetings would do so only under compulsion; if meetings held that way did nothing, the overall rate would not fall, so B is required. C is the strongest trap: the argument needs the meetings to account for some of the difference, not all of it, so ‘entirely’ makes C stronger than necessary. A and D are likewise more than the argument needs."
+        },
+        {
+          "number": 20,
+          "stimulus": "At the Kestrel Point weather station, every day last March on which the barometric pressure fell by more than 5 millibars was immediately followed by a day on which measurable rain fell. On no day last March on which measurable rain fell did the high temperature at Kestrel Point exceed 12°C. Moreover, every day last March that immediately followed a day with a high temperature above 12°C was a day on which the barometric pressure fell by more than 5 millibars.",
+          "stem": "If the statements above are true, which one of the following CANNOT be true?",
+          "choices": [
+            "The high temperatures at Kestrel Point on both March 10 and March 11 exceeded 12°C.",
+            "Measurable rain fell at Kestrel Point on March 20, and the high temperature there on March 21 exceeded 12°C.",
+            "On March 31, the pressure at Kestrel Point fell by more than 5 millibars, and the high temperature there that day was 14°C.",
+            "The high temperatures at Kestrel Point on both March 10 and March 12 exceeded 12°C.",
+            "On every day last March on which the high temperature exceeded 12°C, the pressure fell by less than 5 millibars."
+          ],
+          "answer": "D",
+          "types": [
+            "must-be-false"
+          ],
+          "difficulty": 5,
+          "explanation": "A high above 12°C on March 10 means the pressure fell by more than 5 millibars on March 11, which means rain on March 12, which means March 12’s high could not exceed 12°C; so D is impossible. A is the main trap, but the chain from March 10 constrains only March 12, so March 11 can also be warm. C is possible because the rules constrain the day after a pressure drop, not the day of the drop, and E is consistent as long as each warm day is followed by a cooler day with a pressure drop."
+        },
+        {
+          "number": 21,
+          "stimulus": "The Westbrook Library board should not remove the novel Gallows Field from the library’s young-adult section, even though several parents have complained that the book’s themes are too dark for teenagers. A panel of teachers and librarians, all experienced in evaluating literature for young readers, reviewed the novel at the board’s request and unanimously judged it appropriate for teenage readers.",
+          "stem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+          "choices": [
+            "A library should give the judgments of parents priority over those of other community members when deciding which books to offer to young readers.",
+            "A library should acquire the books that are most frequently requested by the patrons it is intended to serve.",
+            "A library should keep in its young-adult section any book that qualified evaluators have judged to be of high literary quality.",
+            "A library board should consult teachers before acquiring any new book for its young-adult section.",
+            "A library should not remove a book on account of objections to its themes if qualified evaluators have judged it appropriate for the readers for whom it is shelved."
+          ],
+          "answer": "E",
+          "types": [
+            "principle-strengthen"
+          ],
+          "difficulty": 4,
+          "explanation": "The argument rejects removal despite objections to the book’s themes, on the grounds that qualified evaluators judged it appropriate for teenagers; E connects exactly those elements. C is the trap: it hinges on literary quality, but the panel judged the book’s appropriateness for teenagers, not its quality. A would support removal, and B and D concern acquiring books rather than removing them."
+        },
+        {
+          "number": 22,
+          "stimulus": "Energy analyst: Under state law, any power plant that the Varden Commission certifies as low-emission qualifies for the state’s carbon credit, and the Tessaly power plant does not qualify for that credit. Moreover, every plant that uses the new oxide-scrubbing process emits less sulfur than the state limit allows. So we can conclude that the Tessaly plant does not use the new oxide-scrubbing process.",
+          "stem": "Which one of the following, if assumed, enables the analyst’s conclusion to be properly drawn?",
+          "choices": [
+            "The Varden Commission certifies as low-emission every power plant that emits less sulfur than the state limit allows.",
+            "Every power plant that the Varden Commission certifies as low-emission emits less sulfur than the state limit allows.",
+            "Some power plants that use the new oxide-scrubbing process do not qualify for the state’s carbon credit.",
+            "No power plant that emits more sulfur than the state limit allows qualifies for the state’s carbon credit.",
+            "The Tessaly plant emits more sulfur than does any power plant that the Varden Commission has certified as low-emission."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "With A, the chain runs: uses the process, so emits below the limit, so is certified, so qualifies for the credit. Since Tessaly does not qualify, it cannot use the process. B reverses the needed link and so leaves the chain broken. D tells us only about plants above the limit, and E compares Tessaly to certified plants without tying it to the sulfur limit, so neither guarantees the conclusion. C, if anything, conflicts with the chain the argument needs."
+        },
+        {
+          "number": 23,
+          "stimulus": "At the Linden apiary, honeybee colonies whose hives were treated with the miticide Varomex had far fewer parasitic mites by autumn than untreated colonies. Varomex kills mites riding on adult bees, but it does not reach mites developing inside sealed brood cells, where young bees mature. Colonies treated in late summer, when the rearing of young bees is minimal, showed much larger reductions in mites by autumn than did colonies treated in early summer.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Treating a colony with Varomex in early summer does not reduce the colony’s mite population by autumn.",
+            "Untreated colonies at the Linden apiary had more mites by autumn because they reared more young bees.",
+            "In early summer, a substantial proportion of the mites in a colony are inside sealed brood cells.",
+            "Mites can reproduce only inside the sealed brood cells of a honeybee colony.",
+            "Treating colonies with Varomex in both early and late summer would eliminate their mites entirely."
+          ],
+          "answer": "C",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 4,
+          "explanation": "Varomex misses mites in sealed brood cells, and early-summer treatment, when brood rearing is substantial, worked much less well than late-summer treatment; the best explanation is that many mites are sheltered in brood cells in early summer (C). A is too strong, since early-summer treatment produced smaller reductions, not none. D and E go well beyond the information given."
+        },
+        {
+          "number": 24,
+          "stimulus": "Most of the poets who won the Larkspur Prize during the past decade studied at the Avenell Writers’ Workshop. And most of the poets who have studied at the Avenell Writers’ Workshop write primarily in free verse. So most of the poets who won the Larkspur Prize during the past decade write primarily in free verse.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "All of the houses on Birch Lane were built by Ostler Homes, and all houses built by Ostler Homes have finished basements. So all of the houses on Birch Lane have finished basements.",
+            "Most of the tenants in the Calloway building own pets, and most pet owners in the city prefer ground-floor apartments. So most of the tenants in the Calloway building prefer ground-floor apartments.",
+            "Most of the dishes on the restaurant’s menu contain garlic, and some dishes that contain garlic are spicy. So some of the dishes on the restaurant’s menu are probably spicy.",
+            "Most of the members of the hiking club are retired, and no one who is retired works full-time. So most of the members of the hiking club do not work full-time.",
+            "Most voters in the district support the school levy, and the levy’s strongest supporters are homeowners. So most voters in the district are homeowners."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "The original chains two ‘most’ statements: most A are B, most B are C, so most A are C. This is invalid because the A’s that are B might fall among the B’s that are not C. B commits exactly this error. A and D are valid arguments (all-all and most-none), C uses ‘some’ with a hedged conclusion, and E commits a different error by inferring a group’s makeup from who its strongest supporters are."
+        },
+        {
+          "number": 25,
+          "stimulus": "Real estate analyst: In Carrow County, the proportion of home sales in which the buyer came from out of state rose from 10 percent in 2020 to 25 percent in 2024. Some observers have dismissed this as a statistical blip, but a change of this size, sustained over four years, cannot be dismissed so easily. It follows that fewer homes in Carrow County were sold to in-state buyers in 2024 than in 2020.",
+          "stem": "The reasoning in the analyst’s argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "takes for granted that out-of-state buyers pay higher prices for homes than in-state buyers do",
+            "presumes without justification that the rise in out-of-state buyers was caused by competition with in-state buyers",
+            "relies on data from too short a period to establish a trend in the county’s housing market",
+            "overlooks the possibility that the total number of home sales in the county increased substantially",
+            "fails to consider that some out-of-state buyers may have moved to Carrow County after buying homes there"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "A falling share of sales to in-state buyers is compatible with a rising number of such sales if total sales grew enough; 75 percent of a much larger market can exceed 90 percent of a smaller one (D). B is a trap, since the argument draws no causal conclusion about competition at all. E is tempting but irrelevant, because the conclusion concerns who the buyers were when the homes were sold."
+        }
+      ]
+    }
+  ]
+}

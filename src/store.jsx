@@ -30,7 +30,10 @@ export function StoreProvider({ children }) {
   useEffect(() => { reload(); }, [reload]);
 
   const index = useMemo(() => buildIndex(tests), [tests]);
-  const questions = useMemo(() => flatQuestions(tests), [tests]);
+  const allQuestions = useMemo(() => flatQuestions(tests), [tests]);
+  // Diagnostic questions are kept out of drills so retakes stay fresh.
+  const questions = useMemo(() => allQuestions.filter((q) => q.purpose !== 'diagnostic'), [allQuestions]);
+  const diagnosticQuestions = useMemo(() => allQuestions.filter((q) => q.purpose === 'diagnostic'), [allQuestions]);
   // Use each question's current tags, so retagging updates past stats too.
   const taggedAttempts = useMemo(
     () => attempts.map((a) => (index[a.qid] ? { ...a, types: index[a.qid].question.types } : a)),
@@ -85,7 +88,7 @@ export function StoreProvider({ children }) {
     },
   }), [reload, index, journal, attempts]);
 
-  const value = { loaded, tests, sessions, attempts: taggedAttempts, journal, index, questions, ...actions };
+  const value = { loaded, tests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, ...actions };
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
 
