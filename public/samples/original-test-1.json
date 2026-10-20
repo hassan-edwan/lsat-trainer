@@ -27,7 +27,8 @@
             "main-conclusion"
           ],
           "difficulty": 3,
-          "explanation": "The editor's position, supported by the final sentence about accountability and credibility, is that anonymity should be a last resort, which is (C). (B) is the tempting trap: it rebuts the reporters' evidence, but that rebuttal only clears the way for the editor's own claim and is not itself what the argument is ultimately trying to establish. (A) is the opponents' premise, which the editor concedes, and (E) overstates the editor's view."
+          "explanation": "The editor's position, supported by the final sentence about accountability and credibility, is that anonymity should be a last resort, which is (C). (B) is the tempting trap: it rebuts the reporters' evidence, but that rebuttal only clears the way for the editor's own claim and is not itself what the argument is ultimately trying to establish. (A) is the opponents' premise, which the editor concedes, and (E) overstates the editor's view.",
+          "skills": []
         },
         {
           "number": 2,
@@ -45,7 +46,8 @@
             "flaw"
           ],
           "difficulty": 3,
-          "explanation": "A rise in sorghum's share of cropland does not guarantee more sorghum acres, because total cropland may have shrunk; (A) identifies this percentage-versus-amount error. (D) is the trap: yield per acre has no bearing on how many acres are planted. (E) describes a confusion the argument never makes, since both figures concern cropland."
+          "explanation": "A rise in sorghum's share of cropland does not guarantee more sorghum acres, because total cropland may have shrunk; (A) identifies this percentage-versus-amount error. (D) is the trap: yield per acre has no bearing on how many acres are planted. (E) describes a confusion the argument never makes, since both figures concern cropland.",
+          "skills": []
         },
         {
           "number": 3,
@@ -63,7 +65,8 @@
             "explain"
           ],
           "difficulty": 2,
-          "explanation": "(E) explains both facts: screening finds more cancers, raising the number of diagnoses, and finds them early, when treatment works better, lowering deaths. (B) is the trap: it offers a reason diagnoses might rise everywhere but does nothing to explain why deaths in Marbury fell."
+          "explanation": "(E) explains both facts: screening finds more cancers, raising the number of diagnoses, and finds them early, when treatment works better, lowering deaths. (B) is the trap: it offers a reason diagnoses might rise everywhere but does nothing to explain why deaths in Marbury fell.",
+          "skills": []
         },
         {
           "number": 4,
@@ -81,7 +84,8 @@
             "weaken"
           ],
           "difficulty": 2,
-          "explanation": "(B) suggests the correlation runs the other way: students with good rhythm choose the metronome, rather than the metronome producing good rhythm, so requiring it may not help. (A) mentions an alternative factor but only for 'some' students, which is far too weak to undermine the comparison."
+          "explanation": "(B) suggests the correlation runs the other way: students with good rhythm choose the metronome, rather than the metronome producing good rhythm, so requiring it may not help. (A) mentions an alternative factor but only for 'some' students, which is far too weak to undermine the comparison.",
+          "skills": []
         },
         {
           "number": 5,
@@ -99,7 +103,10 @@
             "point-at-issue"
           ],
           "difficulty": 2,
-          "explanation": "Ilsa says the observatory should make the replacement and Tomas says doing so would undermine its mission, so they disagree about (D). Tomas explicitly concedes (A), and neither speaker takes a position on both sides of (B), (C), or (E)."
+          "explanation": "Ilsa says the observatory should make the replacement and Tomas says doing so would undermine its mission, so they disagree about (D). Tomas explicitly concedes (A), and neither speaker takes a position on both sides of (B), (C), or (E).",
+          "skills": [
+            "debate"
+          ]
         },
         {
           "number": 6,
@@ -117,7 +124,8 @@
             "necessary-assumption"
           ],
           "difficulty": 3,
-          "explanation": "The argument relies on Arden being a good model for Velmont; if Velmont's businesses depended far more on last-minute scheduling, Arden's experience would say little about Velmont, so (A) is required. (D) is tempting, but the argument does not need perfect enforcement, and (E) is far stronger than the claim that costs are not heavy."
+          "explanation": "The argument relies on Arden being a good model for Velmont; if Velmont's businesses depended far more on last-minute scheduling, Arden's experience would say little about Velmont, so (A) is required. (D) is tempting, but the argument does not need perfect enforcement, and (E) is far stronger than the claim that costs are not heavy.",
+          "skills": []
         },
         {
           "number": 7,
@@ -135,7 +143,8 @@
             "most-strongly-supported"
           ],
           "difficulty": 3,
-          "explanation": "Since the technique was not invented twice in the region and older examples exist at Varro Creek, the Tessin Hill potters very likely learned it from elsewhere, supporting (C). (A) and (E) name one specific means of transmission that the evidence does not single out, and (D) makes a claim about all pottery in the region, including pottery not yet discovered."
+          "explanation": "Since the technique was not invented twice in the region and older examples exist at Varro Creek, the Tessin Hill potters very likely learned it from elsewhere, supporting (C). (A) and (E) name one specific means of transmission that the evidence does not single out, and (D) makes a claim about all pottery in the region, including pottery not yet discovered.",
+          "skills": []
         },
         {
           "number": 8,
@@ -153,7 +162,10 @@
             "principle-apply"
           ],
           "difficulty": 2,
-          "explanation": "(E) matches the principle exactly: the ad implies an undemonstrated benefit, so it is misleading even though its statement is accurate. (A) and (D) conclude that ads are not misleading, but the principle gives only a condition sufficient for being misleading, not one for avoiding that label; (B) concerns a false statement, which the principle does not address."
+          "explanation": "(E) matches the principle exactly: the ad implies an undemonstrated benefit, so it is misleading even though its statement is accurate. (A) and (D) conclude that ads are not misleading, but the principle gives only a condition sufficient for being misleading, not one for avoiding that label; (B) concerns a false statement, which the principle does not address.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 9,
@@ -171,7 +183,8 @@
             "flaw"
           ],
           "difficulty": 3,
-          "explanation": "The critic moves from the reporters having a party preference (a feature of the producers) to the coverage being biased (a feature of the product), assuming the preference shapes the work; (B) describes this abstractly. (E) is the trap: the conclusion does not require every reporter to share the preference, and nothing suggests the survey sample in (A) was unrepresentative."
+          "explanation": "The critic moves from the reporters having a party preference (a feature of the producers) to the coverage being biased (a feature of the product), assuming the preference shapes the work; (B) describes this abstractly. (E) is the trap: the conclusion does not require every reporter to share the preference, and nothing suggests the survey sample in (A) was unrepresentative.",
+          "skills": []
         },
         {
           "number": 10,
@@ -189,7 +202,8 @@
             "strengthen"
           ],
           "difficulty": 4,
-          "explanation": "The argument infers from a correlation that adding hedgerows would cut damage; (D) shows that when orchards gained hedgerows, their own damage fell, which rules out preexisting differences between orchards as the explanation. (A) is the most tempting trap, but it merely repeats the premise that wildflowers attract wasps and does not address whether other differences explain the lower damage. (E) is irrelevant to a conditional conclusion, and (C) weakens."
+          "explanation": "The argument infers from a correlation that adding hedgerows would cut damage; (D) shows that when orchards gained hedgerows, their own damage fell, which rules out preexisting differences between orchards as the explanation. (A) is the most tempting trap, but it merely repeats the premise that wildflowers attract wasps and does not address whether other differences explain the lower damage. (E) is irrelevant to a conditional conclusion, and (C) weakens.",
+          "skills": []
         },
         {
           "number": 11,
@@ -207,7 +221,8 @@
             "role"
           ],
           "difficulty": 4,
-          "explanation": "The claim is inferred ('therefore') from the wobble premises and then helps establish the main conclusion, stated in the second sentence, that a dust cloud better explains the dimming; so (E) is correct. (A) is the trap set by the word 'therefore', but the argument's ultimate point is the dust-cloud explanation. (D) misidentifies what the claim supports: the dust cloud's lack of gravitational pull is asserted independently."
+          "explanation": "The claim is inferred ('therefore') from the wobble premises and then helps establish the main conclusion, stated in the second sentence, that a dust cloud better explains the dimming; so (E) is correct. (A) is the trap set by the word 'therefore', but the argument's ultimate point is the dust-cloud explanation. (D) misidentifies what the claim supports: the dust cloud's lack of gravitational pull is asserted independently.",
+          "skills": []
         },
         {
           "number": 12,
@@ -225,7 +240,10 @@
             "sufficient-assumption"
           ],
           "difficulty": 4,
-          "explanation": "The premises establish that Dana is certified and therefore not on the packaging line; (A) says eligibility requires being on the packaging line, so Dana is ineligible. (B) reverses that conditional, and (D) is the subtle trap: it states a requirement Dana already meets (certification), so it cannot rule her out. (E) builds on the irrelevant first premise and is consistent with Dana being eligible."
+          "explanation": "The premises establish that Dana is certified and therefore not on the packaging line; (A) says eligibility requires being on the packaging line, so Dana is ineligible. (B) reverses that conditional, and (D) is the subtle trap: it states a requirement Dana already meets (certification), so it cannot rule her out. (E) builds on the irrelevant first premise and is consistent with Dana being eligible.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 13,
@@ -243,7 +261,8 @@
             "evaluate"
           ],
           "difficulty": 3,
-          "explanation": "The argument infers lower consumption from lower in-town sales; if residents simply buy the drinks in neighboring towns, consumption may not have fallen, so the answer to (C) bears directly on the argument. (B) concerns the health significance of these drinks, not whether consumption declined."
+          "explanation": "The argument infers lower consumption from lower in-town sales; if residents simply buy the drinks in neighboring towns, consumption may not have fallen, so the answer to (C) bears directly on the argument. (B) concerns the health significance of these drinks, not whether consumption declined.",
+          "skills": []
         },
         {
           "number": 14,
@@ -261,7 +280,10 @@
             "must-be-true"
           ],
           "difficulty": 4,
-          "explanation": "A jazz ensemble member who had studied orchestration would have to have studied improvisation, but none has, so no ensemble member has studied orchestration; since most counterpoint students have studied orchestration, most counterpoint students are outside the ensemble, which is (B). (A) is the trap: seminar students are only some of the counterpoint students and could all fall in the minority who never studied orchestration. (D) reverses the 'most' relationship."
+          "explanation": "A jazz ensemble member who had studied orchestration would have to have studied improvisation, but none has, so no ensemble member has studied orchestration; since most counterpoint students have studied orchestration, most counterpoint students are outside the ensemble, which is (B). (A) is the trap: seminar students are only some of the counterpoint students and could all fall in the minority who never studied orchestration. (D) reverses the 'most' relationship.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 15,
@@ -279,7 +301,8 @@
             "weaken"
           ],
           "difficulty": 4,
-          "explanation": "The argument assumes Seaside Wheat would respond to packaging as Orchard Crisp did; (D) shows a relevant difference, since eye-catching packaging matters for impulse purchases but little for buyers who already seek out a brand. (B) is the trap: a general rise in cracker sales would weaken the argument only if it were large enough to account for the 18 percent increase, and 2 percent is not. (C) tends to strengthen."
+          "explanation": "The argument assumes Seaside Wheat would respond to packaging as Orchard Crisp did; (D) shows a relevant difference, since eye-catching packaging matters for impulse purchases but little for buyers who already seek out a brand. (B) is the trap: a general rise in cracker sales would weaken the argument only if it were large enough to account for the 18 percent increase, and 2 percent is not. (C) tends to strengthen.",
+          "skills": []
         },
         {
           "number": 16,
@@ -297,7 +320,8 @@
             "method"
           ],
           "difficulty": 4,
-          "explanation": "The columnist shows that the critics' rule would have blocked the famine photographs, whose effects were clearly good, which is (B). (A) is the closest trap but is too strong: the columnist concludes only that the rule should not be adopted 'without qualification,' not that it should be rejected entirely. (C) is wrong because the famine case counters a proposed rule, not a claim about what newspapers have done."
+          "explanation": "The columnist shows that the critics' rule would have blocked the famine photographs, whose effects were clearly good, which is (B). (A) is the closest trap but is too strong: the columnist concludes only that the rule should not be adopted 'without qualification,' not that it should be rejected entirely. (C) is wrong because the famine case counters a proposed rule, not a claim about what newspapers have done.",
+          "skills": []
         },
         {
           "number": 17,
@@ -315,7 +339,8 @@
             "flaw"
           ],
           "difficulty": 4,
-          "explanation": "'Nearby' means anywhere in the galaxy in the first premise but within a few dozen light-years in the second, and the conclusion requires treating them as the same; (E) names this equivocation. (C) is tempting because the argument involves a condition for ozone loss, but the problem is not a necessary-sufficient reversal, and (A) fails because the conclusion itself says only 'roughly' once a century."
+          "explanation": "'Nearby' means anywhere in the galaxy in the first premise but within a few dozen light-years in the second, and the conclusion requires treating them as the same; (E) names this equivocation. (C) is tempting because the argument involves a condition for ozone loss, but the problem is not a necessary-sufficient reversal, and (A) fails because the conclusion itself says only 'roughly' once a century.",
+          "skills": []
         },
         {
           "number": 18,
@@ -333,7 +358,10 @@
             "parallel"
           ],
           "difficulty": 5,
-          "explanation": "The argument's form is: all A are B; all B that are C are D; so any A that is C is D. (C) has exactly this form despite its different wording ('only if,' 'interviewed and admitted'). (E) is the most tempting trap: it has the same premises but drops the restricting condition from the conclusion, making it invalid; (D) is a valid but simpler chain with no restricting condition, and (A) and (B) reverse the inference."
+          "explanation": "The argument's form is: all A are B; all B that are C are D; so any A that is C is D. (C) has exactly this form despite its different wording ('only if,' 'interviewed and admitted'). (E) is the most tempting trap: it has the same premises but drops the restricting condition from the conclusion, making it invalid; (D) is a valid but simpler chain with no restricting condition, and (A) and (B) reverse the inference.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 19,
@@ -351,7 +379,8 @@
             "necessary-assumption"
           ],
           "difficulty": 4,
-          "explanation": "The argument takes the absence of querns in earlier houses as evidence that no grinding was done there; if earlier querns had been carried off and reused in later houses, their absence would prove nothing, so (A) is required. (E) is the most tempting trap, but the argument concerns what Okrana's residents did, whoever their ancestors were; (D) is not needed and is at odds with the claim that ground grain came from elsewhere."
+          "explanation": "The argument takes the absence of querns in earlier houses as evidence that no grinding was done there; if earlier querns had been carried off and reused in later houses, their absence would prove nothing, so (A) is required. (E) is the most tempting trap, but the argument concerns what Okrana's residents did, whoever their ancestors were; (D) is not needed and is at odds with the claim that ground grain came from elsewhere.",
+          "skills": []
         },
         {
           "number": 20,
@@ -369,7 +398,8 @@
             "most-strongly-supported"
           ],
           "difficulty": 5,
-          "explanation": "The firms showing no decline were self-selected for suitability, and firms required to adopt the schedule mostly saw declines, so the survey cannot be generalized to a typical firm, as (D) says. (A) is the attractive overstatement: the evidence undermines the optimistic generalization but does not show that most firms would lose output, especially given how few contract-bound firms were studied. (B) is a second trap: the evidence suggests suitability, not the voluntariness of the decision itself, explains the difference, so nothing indicates those firms would have fared better by choosing the change."
+          "explanation": "The firms showing no decline were self-selected for suitability, and firms required to adopt the schedule mostly saw declines, so the survey cannot be generalized to a typical firm, as (D) says. (A) is the attractive overstatement: the evidence undermines the optimistic generalization but does not show that most firms would lose output, especially given how few contract-bound firms were studied. (B) is a second trap: the evidence suggests suitability, not the voluntariness of the decision itself, explains the difference, so nothing indicates those firms would have fared better by choosing the change.",
+          "skills": []
         },
         {
           "number": 21,
@@ -387,7 +417,10 @@
             "principle-strengthen"
           ],
           "difficulty": 5,
-          "explanation": "The software's errors cannot be diagnosed and it is only slightly more accurate than the nurses, so by (E) it should not be adopted. (D) is the most tempting trap: it targets nondisclosure, but it applies only when the current method is at least as accurate, and here the nurses are less accurate. (A) gives a condition for adopting tools whose errors can be diagnosed, which this software's cannot, and (C) is satisfied by the software's trials."
+          "explanation": "The software's errors cannot be diagnosed and it is only slightly more accurate than the nurses, so by (E) it should not be adopted. (D) is the most tempting trap: it targets nondisclosure, but it applies only when the current method is at least as accurate, and here the nurses are less accurate. (A) gives a condition for adopting tools whose errors can be diagnosed, which this software's cannot, and (C) is satisfied by the software's trials.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 22,
@@ -405,7 +438,8 @@
             "strengthen"
           ],
           "difficulty": 4,
-          "explanation": "A key gap is that another composer, perhaps one whose other works are lost, could have learned and imitated Marsh's progressions; (B) makes that much less likely. (D) is the trap: a copy made by someone else could still record a work Marsh composed, so it does not bear on authorship, while (A) is only weakly relevant and (C) weakens the watermark evidence."
+          "explanation": "A key gap is that another composer, perhaps one whose other works are lost, could have learned and imitated Marsh's progressions; (B) makes that much less likely. (D) is the trap: a copy made by someone else could still record a work Marsh composed, so it does not bear on authorship, while (A) is only weakly relevant and (C) weakens the watermark evidence.",
+          "skills": []
         },
         {
           "number": 23,
@@ -423,7 +457,10 @@
             "sufficient-assumption"
           ],
           "difficulty": 5,
-          "explanation": "Chaining the contrapositives: a program not designed by an outside vendor does not have sale-discount-only rewards, so it does not increase visits mainly through bargain hunters, so by the first premise it raises revenue; (C) supplies the needed fact. (A) is the trap that reverses the last conditional and so establishes nothing about Pemberly; (D) is too weak, since a program can work mainly through bargain hunters even if some members are not bargain hunters."
+          "explanation": "Chaining the contrapositives: a program not designed by an outside vendor does not have sale-discount-only rewards, so it does not increase visits mainly through bargain hunters, so by the first premise it raises revenue; (C) supplies the needed fact. (A) is the trap that reverses the last conditional and so establishes nothing about Pemberly; (D) is too weak, since a program can work mainly through bargain hunters even if some members are not bargain hunters.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 24,
@@ -441,7 +478,8 @@
             "flaw"
           ],
           "difficulty": 5,
-          "explanation": "The one-third of adults who already walk would see no further reduction, so even if everyone else cut their risk by 40 percent, the county-wide rate would fall by less than 40 percent; (A) identifies this error. (B) is the tempting trap, but the conclusion is explicitly conditional on residents changing their habits, so it does not assume they would. (D) misreads the scope: the conclusion concerns only Ostrava County."
+          "explanation": "The one-third of adults who already walk would see no further reduction, so even if everyone else cut their risk by 40 percent, the county-wide rate would fall by less than 40 percent; (A) identifies this error. (B) is the tempting trap, but the conclusion is explicitly conditional on residents changing their habits, so it does not assume they would. (D) misreads the scope: the conclusion concerns only Ostrava County.",
+          "skills": []
         },
         {
           "number": 25,
@@ -459,7 +497,10 @@
             "parallel-flaw"
           ],
           "difficulty": 5,
-          "explanation": "The argument reasons: most A are B, most B are C, so most A are C, which is invalid because the two majorities need not overlap enough. (D) commits exactly this error. (B) is also flawed but in a different way, drawing a 'most' conclusion about the overlap of two groups from two 'most' statements about a single group, while (A), (C), and (E) are valid."
+          "explanation": "The argument reasons: most A are B, most B are C, so most A are C, which is invalid because the two majorities need not overlap enough. (D) commits exactly this error. (B) is also flawed but in a different way, drawing a 'most' conclusion about the overlap of two groups from two 'most' statements about a single group, while (A), (C), and (E) are valid.",
+          "skills": [
+            "conditional"
+          ]
         }
       ]
     },
@@ -1028,7 +1069,8 @@
             "main-conclusion"
           ],
           "difficulty": 2,
-          "explanation": "The conclusion appears in the first sentence: the proposal should be abandoned, and every later sentence gives a reason for that, so C is correct. B is the most tempting trap: it is itself supported (by the claim about storm surge), but it is offered as a reason for abandoning the proposal, not as the point being argued for; A is a concession, and D restates a supporting premise."
+          "explanation": "The conclusion appears in the first sentence: the proposal should be abandoned, and every later sentence gives a reason for that, so C is correct. B is the most tempting trap: it is itself supported (by the claim about storm surge), but it is offered as a reason for abandoning the proposal, not as the point being argued for; A is a concession, and D restates a supporting premise.",
+          "skills": []
         },
         {
           "number": 2,
@@ -1046,7 +1088,8 @@
             "flaw"
           ],
           "difficulty": 2,
-          "explanation": "The argument dismisses Ferro's reasoning solely by pointing to his financial interest, never engaging his evidence, so A is correct. D is the tempting trap: the argument concludes only that Ferro's argument should be rejected, not that the proposal should be adopted; C describes a possible weakness in Ferro's reasoning, not in the argument being evaluated."
+          "explanation": "The argument dismisses Ferro's reasoning solely by pointing to his financial interest, never engaging his evidence, so A is correct. D is the tempting trap: the argument concludes only that Ferro's argument should be rejected, not that the proposal should be adopted; C describes a possible weakness in Ferro's reasoning, not in the argument being evaluated.",
+          "skills": []
         },
         {
           "number": 3,
@@ -1064,7 +1107,8 @@
             "explain"
           ],
           "difficulty": 2,
-          "explanation": "If each aircraft now takes much longer to de-ice, fewer icing days could still produce more delayed departures, so D resolves the puzzle. E points the wrong way: cancellations this past winter would lower the count of delayed departures, deepening the discrepancy; C merely shows that the puzzle also exists elsewhere."
+          "explanation": "If each aircraft now takes much longer to de-ice, fewer icing days could still produce more delayed departures, so D resolves the puzzle. E points the wrong way: cancellations this past winter would lower the count of delayed departures, deepening the discrepancy; C merely shows that the puzzle also exists elsewhere.",
+          "skills": []
         },
         {
           "number": 4,
@@ -1082,7 +1126,8 @@
             "strengthen"
           ],
           "difficulty": 2,
-          "explanation": "The survey shows only a correlation; B supplies a randomized intervention in which adding fermented vegetables was followed by lower marker levels, directly supporting causation. C is the tempting trap: it hints at a mechanism, but 'may affect the digestive system' says nothing about inflammation; A weakens the argument by offering an alternative cause."
+          "explanation": "The survey shows only a correlation; B supplies a randomized intervention in which adding fermented vegetables was followed by lower marker levels, directly supporting causation. C is the tempting trap: it hints at a mechanism, but 'may affect the digestive system' says nothing about inflammation; A weakens the argument by offering an alternative cause.",
+          "skills": []
         },
         {
           "number": 5,
@@ -1100,7 +1145,10 @@
             "must-be-true"
           ],
           "difficulty": 3,
-          "explanation": "The protected Tavish nesters winter on the mainland coast and, being protected, do not forage in salt marshes; a mainland-wintering species that does not forage in salt marshes cannot feed primarily on insects, so E follows. D is the trap: Tavish nesters that do forage in salt marshes (and are unprotected) may feed on insects. A fails because protected insect-eaters that never winter on the mainland coast are not ruled out."
+          "explanation": "The protected Tavish nesters winter on the mainland coast and, being protected, do not forage in salt marshes; a mainland-wintering species that does not forage in salt marshes cannot feed primarily on insects, so E follows. D is the trap: Tavish nesters that do forage in salt marshes (and are unprotected) may feed on insects. A fails because protected insect-eaters that never winter on the mainland coast are not ruled out.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 6,
@@ -1118,7 +1166,8 @@
             "necessary-assumption"
           ],
           "difficulty": 3,
-          "explanation": "If the examination had become substantially easier, the rise would be explained without the planning time, so the argument requires C. A is the tempting trap: planning time spent on general instruction could still raise mathematics scores, so A is not required. E is the opposite of what the argument needs."
+          "explanation": "If the examination had become substantially easier, the rise would be explained without the planning time, so the argument requires C. A is the tempting trap: planning time spent on general instruction could still raise mathematics scores, so A is not required. E is the opposite of what the argument needs.",
+          "skills": []
         },
         {
           "number": 7,
@@ -1136,7 +1185,10 @@
             "point-at-issue"
           ],
           "difficulty": 3,
-          "explanation": "Okafor says the late works are weaker; Halvorsen says they are her finest achievements, so they disagree about A. C is the most tempting trap: Halvorsen asserts the sprawl is deliberate, but Okafor never says it was accidental, so Okafor's view on C is unknown. B fails because Halvorsen accepts the description of sprawl."
+          "explanation": "Okafor says the late works are weaker; Halvorsen says they are her finest achievements, so they disagree about A. C is the most tempting trap: Halvorsen asserts the sprawl is deliberate, but Okafor never says it was accidental, so Okafor's view on C is unknown. B fails because Halvorsen accepts the description of sprawl.",
+          "skills": [
+            "debate"
+          ]
         },
         {
           "number": 8,
@@ -1154,7 +1206,8 @@
             "flaw"
           ],
           "difficulty": 3,
-          "explanation": "Drivers who volunteer for a monitor may already be more cautious, and matching the groups on age and vehicle value does not address that, so E identifies the flaw. C is the trap: the conclusion concerns the number of claims, not their cost, so the argument makes no such assumption; D is a minor concern that does not touch the self-selection gap."
+          "explanation": "Drivers who volunteer for a monitor may already be more cautious, and matching the groups on age and vehicle value does not address that, so E identifies the flaw. C is the trap: the conclusion concerns the number of claims, not their cost, so the argument makes no such assumption; D is a minor concern that does not touch the self-selection gap.",
+          "skills": []
         },
         {
           "number": 9,
@@ -1172,7 +1225,8 @@
             "most-strongly-supported"
           ],
           "difficulty": 3,
-          "explanation": "Complex singers spend more time singing, which cuts into foraging, and in lean years they ended the season in poorer condition, which supports B's modest claim of a cost under some conditions. E is the tempting trap: poorer condition need not mean fewer offspring, and offspring are never mentioned. C is unsupported because no reversal in mating timing is reported."
+          "explanation": "Complex singers spend more time singing, which cuts into foraging, and in lean years they ended the season in poorer condition, which supports B's modest claim of a cost under some conditions. E is the tempting trap: poorer condition need not mean fewer offspring, and offspring are never mentioned. C is unsupported because no reversal in mating timing is reported.",
+          "skills": []
         },
         {
           "number": 10,
@@ -1190,7 +1244,8 @@
             "weaken"
           ],
           "difficulty": 4,
-          "explanation": "The projection assumes residents will keep requesting pickups at last year's rate once they must pay; D shows that most of them have a free alternative, so demand, and thus revenue, is likely to fall well short. C is the tempting trap: added administrative costs reduce the city's net gain but not the revenue the fee brings in, which is all the projection addresses; A and B, if anything, support the projection."
+          "explanation": "The projection assumes residents will keep requesting pickups at last year's rate once they must pay; D shows that most of them have a free alternative, so demand, and thus revenue, is likely to fall well short. C is the tempting trap: added administrative costs reduce the city's net gain but not the revenue the fee brings in, which is all the projection addresses; A and B, if anything, support the projection.",
+          "skills": []
         },
         {
           "number": 11,
@@ -1208,7 +1263,10 @@
             "principle-apply"
           ],
           "difficulty": 4,
-          "explanation": "The principle lists only necessary conditions; in A the information was never requested, so a necessary condition fails and the denial was not justified, exactly as the principle requires. C is the main trap: it treats the three conditions as sufficient for justification, which an 'only if' principle never establishes. B and E each call a denial justified even though a necessary condition (an effect on the premium in B, a specific request in E) is missing, so they contradict the principle."
+          "explanation": "The principle lists only necessary conditions; in A the information was never requested, so a necessary condition fails and the denial was not justified, exactly as the principle requires. C is the main trap: it treats the three conditions as sufficient for justification, which an 'only if' principle never establishes. B and E each call a denial justified even though a necessary condition (an effect on the premium in B, a specific request in E) is missing, so they contradict the principle.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 12,
@@ -1226,7 +1284,10 @@
             "sufficient-assumption"
           ],
           "difficulty": 4,
-          "explanation": "Purchase requires certification, which requires engines that passed the test; if no Varro engine can pass, the Halcyon 400 cannot be certified and so will not be bought, making C sufficient. D is the most tempting trap: it merely restates the contrapositive of a premise and never establishes that the Halcyon's engines fail; A and E reverse the stated conditionals."
+          "explanation": "Purchase requires certification, which requires engines that passed the test; if no Varro engine can pass, the Halcyon 400 cannot be certified and so will not be bought, making C sufficient. D is the most tempting trap: it merely restates the contrapositive of a premise and never establishes that the Halcyon's engines fail; A and E reverse the stated conditionals.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 13,
@@ -1244,7 +1305,8 @@
             "role"
           ],
           "difficulty": 4,
-          "explanation": "The sonnet comparison supports the claim about constraints, and that claim in turn supports the final 'Thus' sentence about serialized novels, so it is an intermediate conclusion, as E says. A is the main trap: the claim is a conclusion, but not the overall one, which is the final sentence; C describes the 'It is true that' sentence, and D reverses the direction of support between the principle and the sonnet example."
+          "explanation": "The sonnet comparison supports the claim about constraints, and that claim in turn supports the final 'Thus' sentence about serialized novels, so it is an intermediate conclusion, as E says. A is the main trap: the claim is a conclusion, but not the overall one, which is the final sentence; C describes the 'It is true that' sentence, and D reverses the direction of support between the principle and the sonnet example.",
+          "skills": []
         },
         {
           "number": 14,
@@ -1262,7 +1324,8 @@
             "flaw"
           ],
           "difficulty": 4,
-          "explanation": "A non-significant result means only that the trial failed to show an effect, not that there is none, yet the researcher concludes the diet does not lower blood pressure; B describes this. C is the tempting trap, but the argument never relies on a claim about 'most participants' and generalizes from no such subgroup; D describes something that is not a flaw, since using an opponent's own evidence is legitimate, and E is wrong because the conclusion concerns only blood pressure."
+          "explanation": "A non-significant result means only that the trial failed to show an effect, not that there is none, yet the researcher concludes the diet does not lower blood pressure; B describes this. C is the tempting trap, but the argument never relies on a claim about 'most participants' and generalizes from no such subgroup; D describes something that is not a flaw, since using an opponent's own evidence is legitimate, and E is wrong because the conclusion concerns only blood pressure.",
+          "skills": []
         },
         {
           "number": 15,
@@ -1280,7 +1343,8 @@
             "strengthen"
           ],
           "difficulty": 4,
-          "explanation": "D supplies a controlled comparison: where the predator survived under similar conditions, urchins did not explode, which supports singling out the predator's loss as the main cause. C is the tempting trap: it bolsters the premise that sea stars prey on urchins but does nothing to rule out other causes or show the loss was the main cause. B offers a rival cause and weakens the argument."
+          "explanation": "D supplies a controlled comparison: where the predator survived under similar conditions, urchins did not explode, which supports singling out the predator's loss as the main cause. C is the tempting trap: it bolsters the premise that sea stars prey on urchins but does nothing to rule out other causes or show the loss was the main cause. B offers a rival cause and weakens the argument.",
+          "skills": []
         },
         {
           "number": 16,
@@ -1298,7 +1362,10 @@
             "parallel"
           ],
           "difficulty": 4,
-          "explanation": "The original is valid: being on the squad requires honors rhetoric, which requires a GPA above 3.5; some juniors are on the squad, so some juniors meet the GPA requirement. C chains two necessary conditions the same way and draws the same 'some' conclusion. A is the trap: it is also valid, but it reasons from an 'all' premise to an 'all' conclusion, so its pattern differs; B and D reverse necessary conditions, and E treats a necessary condition as sufficient."
+          "explanation": "The original is valid: being on the squad requires honors rhetoric, which requires a GPA above 3.5; some juniors are on the squad, so some juniors meet the GPA requirement. C chains two necessary conditions the same way and draws the same 'some' conclusion. A is the trap: it is also valid, but it reasons from an 'all' premise to an 'all' conclusion, so its pattern differs; B and D reverse necessary conditions, and E treats a necessary condition as sufficient.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 17,
@@ -1316,7 +1383,8 @@
             "necessary-assumption"
           ],
           "difficulty": 3,
-          "explanation": "The ban covers only the spawning months; if little shrimp trawling happened then, the croaker caught in those months would come mainly from directed fishing, which the ban removes, so the argument needs A. C and E are the tempting traps: each would make the ban look less useful, but the argument's reasoning rests on bycatch and does not depend on them; B and D concern what else might be done, not whether this ban helps."
+          "explanation": "The ban covers only the spawning months; if little shrimp trawling happened then, the croaker caught in those months would come mainly from directed fishing, which the ban removes, so the argument needs A. C and E are the tempting traps: each would make the ban look less useful, but the argument's reasoning rests on bycatch and does not depend on them; B and D concern what else might be done, not whether this ban helps.",
+          "skills": []
         },
         {
           "number": 18,
@@ -1334,7 +1402,10 @@
             "must-be-false"
           ],
           "difficulty": 4,
-          "explanation": "A homeowner's claim over $50,000 is reviewed by a senior adjuster and so audited; but an out-of-state claim can be audited only if it was filed under a commercial policy, which a homeowner's policy never is, so E is impossible. B is the trap: out-of-state claims filed under commercial policies can be audited, so senior adjusters may well have reviewed some; A, C, and D are each consistent with the statements."
+          "explanation": "A homeowner's claim over $50,000 is reviewed by a senior adjuster and so audited; but an out-of-state claim can be audited only if it was filed under a commercial policy, which a homeowner's policy never is, so E is impossible. B is the trap: out-of-state claims filed under commercial policies can be audited, so senior adjusters may well have reviewed some; A, C, and D are each consistent with the statements.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 19,
@@ -1352,7 +1423,8 @@
             "weaken"
           ],
           "difficulty": 5,
-          "explanation": "If skill was measured in the very simulator the new course used, its graduates may have scored better simply from familiarity with the device, so the ratings may not reflect superior recovery skill; B undermines the evidence itself. D is the strongest trap: it questions how well simulators mirror real flight, but nothing says the ratings were done in a simulator, and slight differences would not explain the gap between the groups. C actually makes the simulator course's success more impressive, and E strengthens the argument by ruling out self-selection."
+          "explanation": "If skill was measured in the very simulator the new course used, its graduates may have scored better simply from familiarity with the device, so the ratings may not reflect superior recovery skill; B undermines the evidence itself. D is the strongest trap: it questions how well simulators mirror real flight, but nothing says the ratings were done in a simulator, and slight differences would not explain the gap between the groups. C actually makes the simulator course's success more impressive, and E strengthens the argument by ruling out self-selection.",
+          "skills": []
         },
         {
           "number": 20,
@@ -1370,7 +1442,8 @@
             "method"
           ],
           "difficulty": 4,
-          "explanation": "The superintendent shows that the critics' reasoning implies afternoon classes are worthless, a position their own opposition to cutting those classes rejects; D describes this. C is the most tempting trap: the inconsistency alleged is between the critics' argument and their other positions, not between their conclusion and their evidence. E fails because no harm to students is claimed, and no evidence about fatigue is offered, ruling out A."
+          "explanation": "The superintendent shows that the critics' reasoning implies afternoon classes are worthless, a position their own opposition to cutting those classes rejects; D describes this. C is the most tempting trap: the inconsistency alleged is between the critics' argument and their other positions, not between their conclusion and their evidence. E fails because no harm to students is claimed, and no evidence about fatigue is offered, ruling out A.",
+          "skills": []
         },
         {
           "number": 21,
@@ -1388,7 +1461,8 @@
             "principle-strengthen"
           ],
           "difficulty": 5,
-          "explanation": "The conservationist cites a threat to the crane's survival and the availability of alternative sites without such risk; C makes exactly those two facts sufficient for rejecting the expansion. B is the subtle trap: the argument says nothing about whether the other sites are equally cheap, so B's condition is not shown to be met. A's condition is satisfied by the farm's record and so cannot support opposing expansion, and D concerns economic interests the argument never mentions."
+          "explanation": "The conservationist cites a threat to the crane's survival and the availability of alternative sites without such risk; C makes exactly those two facts sufficient for rejecting the expansion. B is the subtle trap: the argument says nothing about whether the other sites are equally cheap, so B's condition is not shown to be met. A's condition is satisfied by the farm's record and so cannot support opposing expansion, and D concerns economic interests the argument never mentions.",
+          "skills": []
         },
         {
           "number": 22,
@@ -1406,7 +1480,8 @@
             "flaw"
           ],
           "difficulty": 5,
-          "explanation": "That readers mention consolation does not show that consolation is the whole of their enjoyment; they could be consoled and also respond to the poems' artistry, which the argument ignores, as A says. D is the most tempting trap: the argument does not infer that Hellen's poems lack artistic merit because greeting cards do; it uses the examples only to show that consolation can occur without art, which is legitimate. C fails because the argument relies on readers only for reports of their own reactions, and E overstates the examples, which say only that they 'need' have no merit."
+          "explanation": "That readers mention consolation does not show that consolation is the whole of their enjoyment; they could be consoled and also respond to the poems' artistry, which the argument ignores, as A says. D is the most tempting trap: the argument does not infer that Hellen's poems lack artistic merit because greeting cards do; it uses the examples only to show that consolation can occur without art, which is legitimate. C fails because the argument relies on readers only for reports of their own reactions, and E overstates the examples, which say only that they 'need' have no merit.",
+          "skills": []
         },
         {
           "number": 23,
@@ -1424,7 +1499,10 @@
             "sufficient-assumption"
           ],
           "difficulty": 5,
-          "explanation": "Taking effect requires referendum approval, a referendum requires a Fendale election month, and a Fendale election month requires a state election month; if the state holds no election before next November, the expansion cannot take effect before then, so E suffices. B is the subtle trap: it reverses the final conditional and does nothing to rule out an early election; D concerns the past rather than the coming months, and C leaves open that a referendum could still be scheduled."
+          "explanation": "Taking effect requires referendum approval, a referendum requires a Fendale election month, and a Fendale election month requires a state election month; if the state holds no election before next November, the expansion cannot take effect before then, so E suffices. B is the subtle trap: it reverses the final conditional and does nothing to rule out an early election; D concerns the past rather than the coming months, and C leaves open that a referendum could still be scheduled.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 24,
@@ -1442,7 +1520,10 @@
             "parallel-flaw"
           ],
           "difficulty": 5,
-          "explanation": "The nutritionist chains two 'most' statements into a 'most' conclusion, which is invalid because the sugary cereals could fall among the minority of sugary foods not marketed to children; B makes exactly this move with club members and Ardley car owners. D is the strongest trap: it is flawed too, but it uses a 'some' premise and a 'some' conclusion, a different pattern; E commits a different error by reversing terms, and A and C are valid."
+          "explanation": "The nutritionist chains two 'most' statements into a 'most' conclusion, which is invalid because the sugary cereals could fall among the minority of sugary foods not marketed to children; B makes exactly this move with club members and Ardley car owners. D is the strongest trap: it is flawed too, but it uses a 'some' premise and a 'some' conclusion, a different pattern; E commits a different error by reversing terms, and A and C are valid.",
+          "skills": [
+            "conditional"
+          ]
         },
         {
           "number": 25,
@@ -1460,7 +1541,8 @@
             "most-strongly-supported"
           ],
           "difficulty": 5,
-          "explanation": "Starling collisions fell, every other species except gulls held roughly constant, and the total still rose, so gull collisions must have risen by more than starling collisions fell: D. B is the subtle trap: a gull increase larger than the starling decrease says nothing about whether gulls now outnumber starlings, since the starting numbers are unknown. A posits an unsupported causal link, and E overgeneralizes from one airport."
+          "explanation": "Starling collisions fell, every other species except gulls held roughly constant, and the total still rose, so gull collisions must have risen by more than starling collisions fell: D. B is the subtle trap: a gull increase larger than the starling decrease says nothing about whether gulls now outnumber starlings, since the starting numbers are unknown. A posits an unsupported causal link, and E overgeneralizes from one airport.",
+          "skills": []
         }
       ]
     }
