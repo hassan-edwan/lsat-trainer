@@ -1,0 +1,2104 @@
+{
+  "format": "lsat-trainer/v1",
+  "id": "skill-diagnostic",
+  "name": "Skill Diagnostic",
+  "purpose": "diagnostic",
+  "source": "Original difficulty-ladder questions written for LSAT Trainer. Not LSAC material. MIT licensed.",
+  "sections": [
+    {
+      "id": "conditional",
+      "kind": "LR",
+      "title": "Conditional Reasoning",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Kestrel Ridge Observatory follows a strict rule to protect the mirror of its main telescope: whenever the humidity inside the dome rises above 85 percent, the main telescope is closed for the rest of the night. The rule has no exceptions, not even for rare events such as comets or eclipses. Last Tuesday, a visiting team of students used the main telescope from dusk until dawn, and the observatory’s logs confirm that the telescope was never closed at any point that night.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "On any night when the main telescope at Kestrel Ridge is closed, the humidity inside the dome has risen above 85 percent.",
+            "The visiting students did not observe any comets or eclipses last Tuesday night.",
+            "The humidity inside the dome did not rise above 85 percent at any point last Tuesday night.",
+            "If the humidity inside the dome stays at or below 85 percent, students are permitted to use the main telescope.",
+            "The main telescope is the only instrument at Kestrel Ridge whose use is restricted by humidity."
+          ],
+          "answer": "C",
+          "types": [
+            "must-be-true"
+          ],
+          "tags": [
+            "ladder:conditional",
+            "conditional"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: one conditional plus its contrapositive. The rule is ‘humidity above 85% → telescope closed’; since the telescope was never closed, the contrapositive gives ‘humidity never rose above 85%’ (C). The tempting trap is A, which reverses the rule into ‘closed → humidity above 85%’; it sounds like the same rule, but the telescope could be closed for other reasons (clouds, maintenance), so it does not follow. D is a reversal of a different kind (low humidity guaranteeing access), and B and E bring in matters the rule says nothing about.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 2,
+          "stimulus": "At the Larchmont Dental Clinic, every patient who is scheduled for a crown fitting has already received a digital impression scan at the clinic. The clinic, in turn, performs digital impression scans only on patients who have completed a periodontal screening there. Last month several new patients joined the clinic, among them Mira Okonkwo, who has never completed a periodontal screening at Larchmont.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "If Mira Okonkwo completes a periodontal screening at Larchmont, she will receive a digital impression scan there.",
+            "Some of the patients who joined Larchmont last month have completed a periodontal screening there.",
+            "Every Larchmont patient who has received a digital impression scan there is scheduled for a crown fitting.",
+            "Mira Okonkwo cannot receive any dental treatment at Larchmont until she completes a periodontal screening.",
+            "Mira Okonkwo is not scheduled for a crown fitting at the Larchmont Dental Clinic."
+          ],
+          "answer": "E",
+          "types": [
+            "must-be-true"
+          ],
+          "tags": [
+            "ladder:conditional",
+            "conditional"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: chaining two links and running the chain backward with the contrapositive. Crown fitting → scan → screening; Mira lacks the screening, so she has had no scan at Larchmont, and so she is not scheduled for a crown fitting (E). The most tempting trap is A, which reverses the second link: ‘only on patients who have completed a screening’ makes screening necessary for a scan, not sufficient, so finishing a screening guarantees nothing. C makes the same reversal on the first link, and D overextends the rule to all treatment.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 3,
+          "stimulus": "Railway historians agree on two facts about the Varnholt Valley in the late nineteenth century. First, no branch line in the valley was built without a guaranteed freight contract. Second, a branch line was granted a guaranteed freight contract only if a mill or quarry lay within five miles of its proposed route. It follows that the Elsby branch, a Varnholt Valley branch line built in 1887, must have received a government subsidy.",
+          "stem": "Which one of the following, if assumed, enables the conclusion to be properly drawn?",
+          "choices": [
+            "A Varnholt Valley branch line did not have a mill or quarry within five miles of its proposed route unless it received a government subsidy.",
+            "Every Varnholt Valley branch line that received a government subsidy had a mill or quarry within five miles of its proposed route.",
+            "Any Varnholt Valley branch line that lacked a guaranteed freight contract was denied a government subsidy.",
+            "Some Varnholt Valley branch lines that had guaranteed freight contracts also received government subsidies.",
+            "A Varnholt Valley branch line received a government subsidy only if it was granted a guaranteed freight contract."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:conditional",
+            "conditional"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: translating ‘no X without Y’ (built → contract), ‘only if’ (contract → mill/quarry nearby), and ‘unless’ in the answer. The chain gives Elsby → contract → mill or quarry nearby, so the gap is ‘mill or quarry nearby → subsidy’. ‘Not M unless S’ translates to ‘M → S’, which is exactly what A says. The strongest trap is E (and C, which is the same statement in contrapositive dress): both say subsidy → contract, which runs the wrong way and so cannot carry Elsby from its contract to a subsidy. B also reverses the needed link, and D’s ‘some’ is too weak to guarantee anything about Elsby.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "Throughout last year, the following held for the hives of the Halloway Apiarists’ Cooperative. Every hive producing heather honey was inspected for varroa mites every month. No hive inspected every month was treated with oxalic acid during the summer. Most of the cooperative’s hives produced heather honey. Records also show that some of the cooperative’s hives were treated with oxalic acid last summer.",
+          "stem": "If the statements above are true, which one of the following CANNOT be true?",
+          "choices": [
+            "Some hives that were inspected for varroa mites every month did not produce heather honey.",
+            "None of the hives treated with oxalic acid last summer produced heather honey.",
+            "Some hives that did not produce heather honey were not treated with oxalic acid last summer.",
+            "At least half of the cooperative’s hives were treated with oxalic acid last summer.",
+            "Every hive in the cooperative that did not produce heather honey was treated with oxalic acid last summer."
+          ],
+          "answer": "D",
+          "types": [
+            "must-be-false"
+          ],
+          "tags": [
+            "ladder:conditional",
+            "conditional"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: combining a conditional chain with ‘most’, then separating ‘must be false’ from ‘must be true’ and ‘could be true’. Heather → monthly inspection → no summer treatment, and most hives produced heather honey, so most hives were not treated; therefore fewer than half were treated, and D cannot be true. The top trap is B: it is attractive because it is clearly established by the chain, but that makes it must-be-true, the opposite of what the stem asks. A tempts students who reverse the first link (inspected → heather); in fact non-heather hives may also have been inspected, so A could be true, as could C and E.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 5,
+          "stimulus": "Under the Torvane Arts Council’s archive policy, no recording is digitized except those whose copyright status has been cleared, and a recording’s copyright status is cleared only if the recording either has entered the public domain or is covered by a signed performer waiver. No recording made before 1960 is covered by a signed performer waiver. Admittedly, some recordings made before 1960 have been digitized. Nevertheless, the council’s 1954 recording of the Brannoch Quartet will not be digitized, since it was produced by a commercial label.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Every recording that has not entered the public domain was produced by a commercial label.",
+            "No recording that has entered the public domain was produced by a commercial label.",
+            "Some recordings produced by commercial labels have not entered the public domain.",
+            "Every recording made before 1960 that was produced by a noncommercial label has been digitized.",
+            "A recording produced by a noncommercial label can have its copyright cleared only if it has entered the public domain."
+          ],
+          "answer": "B",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:conditional",
+            "conditional"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: a multi-step chain with ‘no…except’, an either/or, and a missing link supplied in contrapositive form. Digitized → cleared → (public domain OR waiver); the Brannoch recording is pre-1960, so no waiver, so it is excluded from digitization only if it is also not in the public domain. B (public domain → not commercial) is the contrapositive of commercial → not public domain, which closes that last gap and makes the argument valid. The most tempting trap is A, which uses the same two terms but in the reverse direction (not public domain → commercial), so it says nothing about whether a commercial recording is in the public domain; C is the near-miss quantifier trap, since ‘some’ commercial recordings lacking public-domain status leaves the Brannoch recording undetermined. The concession about other pre-1960 digitized recordings is consistent with the argument: those are the public-domain ones.",
+          "skills": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debate",
+      "kind": "LR",
+      "title": "Debate & Dialogue",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Ilse: The Morvath Glacier’s terminus retreated 40 meters last year, more than in any previous year on record. This shows that the glacier’s retreat is accelerating.\n\nTobias: The glacier’s retreat is not accelerating. Most of last year’s retreat came from a single calving event, when one enormous block of ice broke away at once. Apart from that event, the terminus retreated last year by about the same distance as in each of the previous ten years.",
+          "stem": "Ilse and Tobias disagree over whether",
+          "choices": [
+            "the Morvath Glacier’s terminus retreated 40 meters last year",
+            "calving events can cause a glacier’s terminus to retreat suddenly",
+            "the Morvath Glacier’s terminus has retreated every year on record",
+            "the retreat of the Morvath Glacier is accelerating",
+            "other glaciers in the region are retreating at a steady pace"
+          ],
+          "answer": "D",
+          "types": [
+            "point-at-issue"
+          ],
+          "tags": [
+            "ladder:debate",
+            "debate"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: finding the claim one speaker asserts and the other explicitly denies. Ilse concludes the retreat is accelerating; Tobias opens by saying it is not, so D is the point at issue. The tempting trap is A, because the 40-meter figure is the evidence the dialogue turns on, but Tobias never disputes it; he explains it away. B is asserted only by Tobias, and C and E are addressed by neither speaker.",
+          "skills": [
+            "debate"
+          ]
+        },
+        {
+          "number": 2,
+          "stimulus": "Renata: The Pellham Courier’s circulation has fallen every year since it began charging readers for online access. The paywall is driving readers away, so the Courier should remove it.\n\nGideon: That’s not right. The Harwick Ledger, a paper in the neighboring county, has never had a paywall, and its circulation has fallen just as steadily. So the Courier’s paywall cannot be responsible for any part of the Courier’s decline.",
+          "stem": "Gideon’s response to Renata is most vulnerable to criticism on the grounds that it",
+          "choices": [
+            "treats a correlation between the paywall and falling circulation as proof that the paywall caused the decline",
+            "takes for granted that, because circulation can decline without a paywall, a paywall cannot be one cause of a decline",
+            "presumes, without justification, that removing the paywall would reverse the Courier’s loss of readers",
+            "rejects the circulation figures that Renata cites without giving any reason to doubt their accuracy",
+            "relies on a comparison with a newspaper that is much larger than the Pellham Courier"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "tags": [
+            "ladder:debate",
+            "debate"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: locating the flaw in the second speaker’s reply rather than in the first speaker’s argument. Gideon shows that circulation can fall without a paywall and concludes that the paywall contributes nothing to the Courier’s decline; a decline having one possible cause does not rule out another, which is B. The tempting trap is A: it is a fair criticism of Renata’s argument, but the stem asks about Gideon’s. C is also Renata’s presumption, D misdescribes Gideon (he accepts the figures), and nothing indicates the Ledger’s size (E).",
+          "skills": [
+            "debate"
+          ]
+        },
+        {
+          "number": 3,
+          "stimulus": "Anneliese: Our chess club should switch its weekly tournament to a faster time control. Most of our members now play primarily online, where fast games are the norm, so they would enjoy faster games more.\n\nCorwin: Switching to faster games is the right decision, but your reason for it is wrong. Most of our members still play mainly over the board; only a minority play primarily online. The real reason is that our venue now closes at nine o’clock, and under the current time control many games are still unfinished when we have to leave.",
+          "stem": "Anneliese and Corwin are committed to agreeing that",
+          "choices": [
+            "most of the club’s members play chess primarily online",
+            "members who play primarily online would enjoy faster games more than slower ones",
+            "the venue’s nine o’clock closing time leaves many tournament games unfinished",
+            "a club’s time control should match the format its members play most often",
+            "the club should switch its weekly tournament to a faster time control"
+          ],
+          "answer": "E",
+          "types": [
+            "point-at-issue"
+          ],
+          "tags": [
+            "ladder:debate",
+            "debate"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: seeing that the speakers disagree about a premise, not the conclusion. Corwin explicitly endorses Anneliese’s conclusion (‘switching to faster games is the right decision’) while rejecting her premise, so both are committed to E. The tempting traps are claims only one speaker addresses: B is Anneliese’s supporting claim, and Corwin never says whether online players would enjoy faster games (he only disputes how many there are); C is Corwin’s alone. A is the actual point of disagreement, and D is at most an unstated principle behind Anneliese’s reasoning.",
+          "skills": [
+            "debate"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "Dr. Vasquez: The faint brightening of the star Halvren-9 recorded last spring was almost certainly caused by a passing planet acting as a gravitational lens. The brightening’s light curve was perfectly symmetrical, and lensing events always produce symmetrical light curves.\n\nDr. Okafor: I don’t dispute that every lensing event yields a symmetrical light curve. But the young flare stars of the Ostrava cluster regularly brighten in perfectly symmetrical pulses, and no lens is involved in any of them. Whether Halvren-9 resembles those stars, we don’t yet know.",
+          "stem": "Dr. Okafor responds to Dr. Vasquez’s argument by",
+          "choices": [
+            "noting that the feature on which Dr. Vasquez’s conclusion rests is also displayed by events that arise in a different way",
+            "proposing that the brightening of Halvren-9 was more likely caused by stellar flaring than by gravitational lensing",
+            "challenging the claim that gravitational lensing events always produce symmetrical light curves",
+            "arguing that Dr. Vasquez’s conclusion must be false because a counterexample to it has been observed",
+            "questioning whether the brightening of Halvren-9 was measured accurately enough to support any conclusion"
+          ],
+          "answer": "A",
+          "types": [
+            "method"
+          ],
+          "tags": [
+            "ladder:debate",
+            "debate",
+            "conditional"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: describing how the reply works, abstractly. Vasquez treats a necessary feature of lensing (lensing → symmetry) as if it were sufficient (symmetry → lensing); Okafor grants the conditional but shows that symmetry also occurs without any lens, so the observed feature does not single out lensing (A). The strongest trap is B: Okafor mentions flare stars, but explicitly declines to say Halvren-9 is one, so he offers no rival explanation of this event. C is wrong because he expressly accepts that premise, and D is too strong, since the flare stars undermine the inference without showing the conclusion false.",
+          "skills": [
+            "debate",
+            "conditional"
+          ]
+        },
+        {
+          "number": 5,
+          "stimulus": "Hollis: People say competition from motor buses closed the Calder Valley Railway in 1912. Nonsense. Buses did not reach the valley until 1914, two years after the closure. The line closed because its main customer, the Dunmere slate quarry, shut in 1911, and without the slate traffic the line could not pay its way.\n\nPriya: I don’t deny that the quarry’s closure was decisive. But your timeline is mistaken: the Fenwick company was running a regular bus service along the valley road by 1910, and the railway’s passenger receipts fell by a third between 1910 and 1912. Even so, passenger fares were never more than a small share of the railway’s income.",
+          "stem": "Hollis and Priya disagree over whether",
+          "choices": [
+            "competition from motor buses was what caused the Calder Valley Railway to close",
+            "the loss of traffic from the Dunmere quarry was decisive in the railway’s closure",
+            "the Calder Valley had a regular motor bus service at a time when the railway was still operating",
+            "the railway’s passenger receipts fell substantially in the two years before it closed",
+            "passenger fares provided only a small portion of the railway’s income"
+          ],
+          "answer": "C",
+          "types": [
+            "point-at-issue"
+          ],
+          "tags": [
+            "ladder:debate",
+            "debate"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: seeing past the headline issue to the narrow sub-claim actually in dispute. Hollis says buses did not reach the valley until 1914; Priya says a regular bus service ran along the valley road by 1910, while the railway (closed 1912) was still running, so they disagree about C. The most tempting trap is A, the headline issue: Hollis denies it, but Priya never commits to it, and in fact she calls the quarry decisive and the passenger income minor. B is accepted by both (Priya: ‘I don’t deny’), while D and E are claims only Priya makes; Hollis says nothing about passenger receipts or fares.",
+          "skills": [
+            "debate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flaw",
+      "kind": "LR",
+      "title": "Flaw",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Conductor Ilse Varga has proposed that the Merriton Community Choir replace its annual oratorio performance with a program of newly commissioned works. But Varga has admitted in interviews that she finds Baroque oratorio tedious to rehearse, and she would receive a commissioning fee if one of the new works were her own. Clearly, then, the proposed change would not benefit the choir, and the board should reject it.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "fails to consider that the choir's regular audience might prefer oratorio to unfamiliar new works",
+            "presumes, without justification, that newly commissioned works are harder to perform than oratorio",
+            "rejects a proposal on the basis of the proposer's personal preferences and possible motives rather than on the proposal's merits",
+            "treats the opinion of a single conductor as representative of the views of the entire choir",
+            "assumes that music that is tedious to rehearse must also be tedious for an audience to hear"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "tags": [
+            "ladder:flaw"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: spotting an ad hominem. The argument rejects Varga's proposal only because of her tastes and a possible financial motive, which says nothing about whether the change would actually benefit the choir, so (C) is correct. The most tempting trap is (D), because treating one person's view as representative is a familiar overgeneralization; but the argument never infers the choir's views from Varga's. It dismisses her views instead. (A) names a consideration that would support the argument's conclusion, so leaving it out is not a flaw.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "A survey of 400 dog owners in Calder County found that dogs walked on gravel trails at least three times a week had markedly fewer paw-pad injuries over the past year than dogs walked mainly on pavement. Veterinarian Dr. Amara Osei concludes that walking on gravel toughens a dog's paw pads and thereby protects them from injury. She therefore recommends that owners of dogs prone to paw-pad injuries switch to walking them on gravel trails.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "overlooks the possibility that owners whose dogs have already suffered paw-pad injuries tend to avoid walking them on gravel",
+            "relies on a sample of dog owners that is too small to support any conclusion about dogs in general",
+            "fails to establish that gravel trails are readily accessible to every dog owner in Calder County",
+            "presumes that paw-pad injuries are the most serious health risk that dogs face",
+            "treats a recommendation that is appropriate for some dogs as though it applied to all dogs"
+          ],
+          "answer": "A",
+          "types": [
+            "flaw"
+          ],
+          "tags": [
+            "ladder:flaw"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: correlation vs. causation, here in the form of possible reverse causation. The survey shows only that gravel walking and fewer injuries go together. (A) points out that the cause could run the other way: if owners steer injury-prone dogs away from gravel, the same pattern would appear without gravel toughening anything. The most tempting trap is (B), since sampling flaws are common, but 400 owners is a reasonable sample, and a bigger one would not fix the real problem of interpreting the correlation. (E) fails because Osei explicitly limits her recommendation to injury-prone dogs.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "At the Halloway textile mill, a bolt of linen can be certified as export grade only if it passes the mill's tensile-strength test. Last month every bolt woven on the mill's new Delmar looms passed that test, whereas nearly ten percent of the bolts woven on the older looms failed it. Plant manager Reyes concludes that all of last month's Delmar-woven bolts must have been certified as export grade, and that bolts from the older looms account for every bolt denied certification last month.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "treats one month's production as representative of the looms' performance over a longer period",
+            "fails to consider that some bolts woven on the older looms may have been certified as export grade",
+            "presumes that the Delmar looms produced more bolts last month than the older looms did",
+            "compares two kinds of looms that may differ in ways other than their test results",
+            "treats passing the tensile-strength test as though it ensured certification rather than merely being required for it"
+          ],
+          "answer": "E",
+          "types": [
+            "flaw"
+          ],
+          "tags": [
+            "ladder:flaw",
+            "conditional"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: necessary vs. sufficient. The 'only if' premise makes passing the tensile test a requirement for certification, yet Reyes concludes that every bolt that passed was certified. That treats a necessary condition as a sufficient one, as (E) says. The most tempting trap is (A), a sampling-style flaw. It fails because both of Reyes's conclusions concern last month only, so the argument never generalizes beyond the month it sampled. (B) describes something the argument never denies: Reyes claims that every denied bolt came from the older looms, not that no older-loom bolt was certified.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "Some members of the Fenwick Cooperative Bank charge that it has been shortchanging the small farmers it was founded to serve. Yet five years ago agricultural loans made up 30 percent of the money the cooperative lent, and this year they make up 34 percent. Admittedly, the cooperative has closed two rural branch offices during that period, and some farmers now travel farther to apply for loans. Nevertheless, since agriculture commands a larger share of the cooperative's lending than it did five years ago, farmers must be receiving more loan money from the cooperative now than they were then.",
+          "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "takes for granted that the farmers who must now travel farther to apply for loans have not stopped applying altogether",
+            "takes for granted that an increase in the proportion of a total devoted to one purpose guarantees an increase in the amount devoted to that purpose",
+            "presumes without justification that the members who made the charge are themselves small farmers",
+            "bases a conclusion about a trend on a comparison of only two years, ignoring the years in between",
+            "attacks the motives of the members who made the charge rather than addressing the charge itself"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "tags": [
+            "ladder:flaw"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: percentage vs. absolute number, stated abstractly. Agriculture's share rose from 30 to 34 percent, but if the cooperative's total lending shrank enough, 34 percent of the new total could be less money than 30 percent of the old. The argument takes for granted that a larger share means a larger amount, as (B) says. The strongest trap is (A), which plays off the concession; but any farmers who stopped applying are already reflected in the 34 percent figure, so the argument does not need to assume they kept applying. (D) is tempting as a sampling complaint, but the conclusion compares only now with five years ago, so the intervening years do not matter.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "The Talvessa wetland's mosquitoes lay their eggs only on open water. The Orrin-3 satellite photographs the wetland at a resolution that reveals any patch of open water larger than four square meters, and researchers found no open water in any of its images of the wetland's northern basin from the past dry season. Granted, the satellite passes over the basin only once every nine days. But the basin's clay soils are such that any standing water there would persist for weeks. So the northern basin held no open water during the dry season, and it therefore could not have been a mosquito breeding site that season.",
+          "stem": "The reasoning in the argument is flawed in that it",
+          "choices": [
+            "overlooks the possibility that standing water formed and disappeared between two of the satellite's passes over the basin",
+            "takes for granted that the mosquitoes could not have laid their eggs anywhere other than on open water",
+            "infers that a characteristic of one region of the wetland must hold for the wetland as a whole",
+            "treats the failure to detect any instance of something above a certain size as showing that no instance of it, of any size, was present",
+            "confuses a reason for believing that the basin was dry with a cause of the basin's being dry"
+          ],
+          "answer": "D",
+          "types": [
+            "flaw"
+          ],
+          "tags": [
+            "ladder:flaw"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: absence of evidence treated as evidence of absence, in a subtle form. The satellite registers only patches of open water larger than four square meters, so finding none shows only that no large patches existed. The argument concludes that there was no open water at all, though mosquitoes could breed in small pools, which is the gap (D) describes. (A) is the most tempting trap because it names a real-sounding gap in the satellite record, but the argument closes it: water in the basin would persist for weeks, longer than the nine days between passes. (B) is also a real-sounding flaw, but the first premise rules it out, and (C) fails because the conclusion concerns only the northern basin, not the wetland as a whole.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "necessary-assumption",
+      "kind": "LR",
+      "title": "Necessary Assumption",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Honeybees from the rooftop hives in the city of Dunmore gather nectar mainly in the city's public gardens. This spring, the city replaced most of the flowering shrubs in those gardens with ornamental grasses, which provide bees with no nectar at all. Beekeepers in Dunmore therefore predict that their rooftop hives will produce less honey this year than they did last year.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Ornamental grasses are less attractive to honeybees than flowering shrubs are.",
+            "The flowering shrubs that were removed had supplied some of the nectar from which the rooftop hives' bees made honey.",
+            "Honeybees cannot make honey from the nectar of any plants other than flowering shrubs.",
+            "Dunmore's rooftop hives produced more honey last year than any other hives in the region.",
+            "The city will not replant flowering shrubs in its public gardens at any point this year."
+          ],
+          "answer": "B",
+          "types": [
+            "necessary-assumption"
+          ],
+          "tags": [
+            "ladder:necessary-assumption"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: find the obvious bridge between premise and conclusion. The prediction links removing the shrubs to less honey, which works only if those shrubs actually supplied nectar the bees used. Negate (B), so that the shrubs supplied none of that nectar, and their removal gives no reason to expect less honey. The tempting trap is (C): it would strengthen the argument, but it is far too strong, since the bees could also use nectar from flower beds or other plants and the prediction would still hold. (E) is not required either, because honey production could fall even if some shrubs were replanted late in the year.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "The Kessler Ridge trail crew plans to reroute a badly eroded section of trail onto a gentler slope and close the old section to hikers. The crew leader argues that the reroute will reduce the total time the crew spends each year on erosion repair along that part of the ridge, since trails on gentle slopes erode far more slowly than trails on steep ones.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Most hikers prefer walking on trails with gentle slopes to walking on trails with steep ones.",
+            "Trails on gentle slopes never require any erosion repair at all.",
+            "The reroute can be completed within a single working season.",
+            "After the reroute, the crew will not need to keep repairing the old section as often as it does now.",
+            "Erosion is the most time-consuming problem the crew deals with anywhere on Kessler Ridge."
+          ],
+          "answer": "D",
+          "types": [
+            "necessary-assumption"
+          ],
+          "tags": [
+            "ladder:necessary-assumption"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: a defender assumption that blocks one way the plan could fail. The conclusion concerns total repair time along that part of the ridge, so if the crew still had to repair the closed old section as often as it does now (the negation of D), adding even slow-eroding new trail would not reduce the total. The tempting trap is (B), which would guarantee that the new section needs no repair but is far stronger than required; the argument needs only that the new section erodes more slowly, as the premise says. (E) is irrelevant because the conclusion concerns erosion repair on this section, not erosion's rank among the crew's problems.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "The Barrow Vale dye works currently rinses each batch of dyed wool in three successive fills of fresh water. A new recirculating system filters and reuses rinse water, so each batch needs only a single fill of fresh water. The system's filtration units must be flushed with fresh water once a week, but the works' manager nonetheless concludes that switching to the new system will reduce the dye works' total consumption of fresh water.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "The fresh water needed each week to flush the filtration units is less than the fresh water the new system saves on rinsing over the same week.",
+            "The new system rinses wool at least as thoroughly as the current three-fill method does.",
+            "Flushing the filtration units requires less fresh water than a single rinse of one batch of wool does.",
+            "A single fill of fresh water in the new system holds no more water than one fill under the current method.",
+            "Other dye works that have adopted recirculating systems have reported lower water bills."
+          ],
+          "answer": "A",
+          "types": [
+            "necessary-assumption"
+          ],
+          "tags": [
+            "ladder:necessary-assumption"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: a 'does not completely offset' assumption. The new system saves two fills per batch but adds a weekly flush, so a net reduction requires that the flush not use up or exceed the savings, which is what (A) states. Negate it and switching saves nothing. The most tempting trap is (C), which sounds like a sensible cost comparison but is too strong: the flush happens once a week while savings accrue on every batch, so it could use more water than one rinse and the system would still come out ahead. (D) is likewise unnecessary, since even a somewhat larger single fill could use less than three ordinary ones, and (B) concerns rinse quality, which the argument about water use never relies on.",
+          "skills": []
+        },
+        {
+          "number": 4,
+          "stimulus": "Every licensed beekeeper in the city of Harlow must register each hive he or she keeps, and the city's registry currently lists 640 hives. Yet a survey of Harlow's rooftops conducted last month counted 910 hives. Admittedly, the registry also includes hives kept in backyards and community gardens, not just on rooftops, but that only widens the gap between the registry and the survey. So the city's apiary inspector is right to conclude that a substantial number of Harlow's hives are being kept by people who hold no beekeeping license.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "The rooftop survey did not count any single hive more than once.",
+            "No licensed beekeeper in Harlow keeps a hive that he or she has failed to register.",
+            "The rooftop survey located every hive that is kept on a rooftop in Harlow.",
+            "Most of the hives kept in backyards and community gardens in Harlow are registered.",
+            "Licensed beekeepers who have failed to register some of their hives do not account for nearly all of Harlow's unregistered hives."
+          ],
+          "answer": "E",
+          "types": [
+            "necessary-assumption"
+          ],
+          "tags": [
+            "ladder:necessary-assumption"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: a minimal 'not nearly all' defender assumption. The gap between 910 surveyed hives and 640 registered ones could be explained by licensed beekeepers who simply neglected to register some hives. The conclusion about unlicensed keepers requires that such hives not account for nearly all of the gap, which (E) states; negate it and the conclusion collapses. (B) is the strongest trap: it would make the argument airtight, but it is too strong, since a few licensed keepers with an unregistered hive or two would leave the conclusion intact. (A) and (C) are also too strong: a few double-counted hives would not undermine the conclusion, and a survey that missed hives would only make the unregistered count larger.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Satellite images of the Sedra River delta show that the area covered by mangrove forest was 18 percent smaller in 2025 than in 2015. Admittedly, shrimp farming expanded rapidly in the delta during that decade, and conservation groups have blamed the shrimp ponds for the loss. But the 2015 images show that every pond now in the delta occupies land that was bare mudflat at that time, so the ponds displaced no mangroves. The bulk of the loss, then, must be due to the rising sea, which has been submerging the delta's seaward fringe.",
+          "stem": "Which one of the following is an assumption on which the argument depends?",
+          "choices": [
+            "Rising sea level and shrimp farming are the only developments that could have reduced the delta's mangrove area over the decade.",
+            "None of the measured decline in mangrove area reflects differences in the way the 2015 and 2025 images were recorded or classified.",
+            "Differences in the way the 2015 and 2025 images were recorded or classified do not account for most of the measured decline in mangrove area.",
+            "No mangroves had been cleared, at any time before 2015, from the land that the shrimp ponds now occupy.",
+            "The rising sea submerged more of the delta between 2015 and 2025 than in any previous decade."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "tags": [
+            "ladder:necessary-assumption"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: a defender assumption that rules out an alternative the stimulus never raises, namely that the measured loss is partly an artifact of measurement. The argument eliminates the shrimp ponds and concludes that the sea accounts for the bulk of the loss. If differences in how the two sets of images were recorded or classified produced most of the measured decline (the negation of C), most of that 'loss' would not be due to the sea at all. (A) is the most tempting trap: together with the premises it would prove the conclusion, but it is not required, because other factors could exist as long as they are minor. (B) differs from (C) by one quantifier and is too strong, since a small measurement artifact would leave the 'bulk' conclusion untouched, and (D) concerns clearing before 2015, which is irrelevant to a decline measured from 2015 onward.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "sufficient-assumption",
+      "kind": "LR",
+      "title": "Sufficient Assumption",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "The Lindell Veterinary Board approves a vaccine only after reviewing the results of a two-year safety trial, and it approves no vaccine that has failed such a trial. Felinor, a new vaccine against feline respiratory disease that its manufacturer plans to market to owners of young cats, received the board's approval last spring. Therefore, Felinor is safe to give to kittens.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Felinor is safe to give to adult cats.",
+            "Any vaccine that is safe to give to kittens has passed a two-year safety trial.",
+            "The Lindell Veterinary Board approves only vaccines intended for cats.",
+            "Any vaccine that has passed a two-year safety trial is safe to give to kittens.",
+            "Most vaccines that have passed a two-year safety trial are safe to give to kittens."
+          ],
+          "answer": "D",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:sufficient-assumption",
+            "conditional"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: supply the single missing link in a two-step chain. The premises establish that Felinor passed a two-year safety trial; the conclusion needs 'passed the trial → safe for kittens,' which is exactly (D). The tempting trap is (B), which uses the same two terms but reverses the conditional: knowing that every kitten-safe vaccine passed a trial says nothing about whether a vaccine that passed one is kitten-safe. (E) has the right direction but is too weak, since 'most' leaves room for Felinor to be an exception.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 2,
+          "stimulus": "The Pinecrest Trail Association will rebuild the Miller Creek footbridge this year only if it receives a state recreation grant, and the state awards such grants only to applicants that submit a completed environmental review. At its last meeting, the association's board voted not to hire a wetland surveyor this year. So the Miller Creek footbridge will not be rebuilt this year.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "If the association hires a wetland surveyor, it will be able to submit a completed environmental review.",
+            "The association cannot submit a completed environmental review this year unless it hires a wetland surveyor.",
+            "A state recreation grant is the association's only possible source of funds for rebuilding the footbridge.",
+            "Any applicant that submits a completed environmental review will receive a state recreation grant.",
+            "The board would have voted to hire a wetland surveyor if the association had more funds."
+          ],
+          "answer": "B",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:sufficient-assumption",
+            "conditional"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: link a negated premise to a negated conclusion. The premises give 'rebuild → grant → completed review'; to get 'not rebuilt' from 'no surveyor hired,' we need 'completed review → surveyor hired.' Then no surveyor means no review, no grant, and no bridge, and (B) supplies that link. The tempting trap is (A), which reverses it: a surveyor being enough for a review tells us nothing about what happens without one. (C) restates what the 'only if' premise already establishes, and (D) reverses the grant condition.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 3,
+          "stimulus": "Every piece on the Halden Choir's spring program is either sung a cappella or accompanied by organ, and no piece sung a cappella requires the tenors to rehearse with the accompanist. The motet Lumen Aeternum, which is on the spring program, does require the tenors to rehearse with the accompanist. It follows that Lumen Aeternum will not be performed at the choir's chapel concert.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Every piece on the spring program that is sung a cappella will be performed at the chapel concert.",
+            "Some pieces on the spring program that are accompanied by organ will not be performed at the chapel concert.",
+            "Every piece on the spring program that requires the tenors to rehearse with the accompanist is accompanied by organ.",
+            "None of the pieces performed at the chapel concert will require the sopranos to rehearse with the accompanist.",
+            "Every piece on the spring program that will be performed at the chapel concert is sung a cappella."
+          ],
+          "answer": "E",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:sufficient-assumption",
+            "conditional"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: a conditional whose contrapositive finishes the chain. Lumen Aeternum requires the tenors to rehearse with the accompanist, so by the contrapositive of the second premise it is not sung a cappella. (E) says every chapel piece is sung a cappella, and its contrapositive (any piece not sung a cappella is not performed at the chapel) yields the conclusion. The main competitor is (A), which uses the same terms in the reverse direction: knowing that a cappella pieces will be performed at the chapel says nothing about pieces that are not sung a cappella. (C) only restates what the premises already imply and never mentions the chapel, and (B) is too weak because 'some' organ pieces need not include Lumen Aeternum.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "At the Brindle Cooperative Bank, no one may vote in board elections without holding at least one share. Holding a share does not by itself guarantee a dividend, however: every shareholding member is entitled to the annual dividend unless that member has a loan in default with the cooperative. Okonkwo voted in this year's board election. It follows that Okonkwo is entitled to this year's annual dividend.",
+          "stem": "The conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Every member who is entitled to the annual dividend is eligible to vote in board elections.",
+            "Okonkwo holds at least one share in the cooperative.",
+            "No member who has a loan in default with the cooperative is permitted to vote in board elections.",
+            "Any member who holds more than one share has no loan in default with the cooperative.",
+            "Any member who is not permitted to vote in board elections has a loan in default with the cooperative."
+          ],
+          "answer": "C",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:sufficient-assumption",
+            "conditional"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: a 'no X is Y' link whose contrapositive closes a chain built on 'unless.' Voting shows that Okonkwo holds a share, and a shareholder gets the dividend unless he has a loan in default, so the conclusion needs Okonkwo to have no defaulted loan. (C) supplies this indirectly: no one with a defaulted loan may vote, and Okonkwo voted, so he has no defaulted loan. (E) is the strongest trap, the reversed conditional ('not permitted to vote → default'), which says nothing about members who did vote. (B) is a necessary-but-not-sufficient bridge that already follows from the premises and leaves the default question open, and (D) fails because Okonkwo may hold only one share.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 5,
+          "stimulus": "None of the translations of Vessk poetry that Ilmar Press published this year is eligible for the Corwen Prize. After all, the prize's rules exclude any translation made from a relay text, that is, from an existing translation in a third language. And every translation Ilmar published this year was made from a relay text unless its translator holds a state certificate in the source language. Admittedly, Ilmar employs several certified translators, so some of its translations this year may well be eligible; but that does not alter the case of its Vessk poetry.",
+          "stem": "Which one of the following, if assumed, enables the conclusion of the argument to be properly drawn?",
+          "choices": [
+            "No translator who holds a state certificate in Vessk translated any of the Vessk poetry that Ilmar Press published this year.",
+            "Most of the Vessk poetry that Ilmar Press published this year was translated by people who hold no state certificate in Vessk.",
+            "Every translation that Ilmar Press published this year by a certified translator was made directly from its source language.",
+            "Any translation made directly from its source language rather than from a relay text is eligible for the Corwen Prize.",
+            "Every translator Ilmar Press employed this year who lacks a state certificate in the source language worked from a relay text."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "tags": [
+            "ladder:sufficient-assumption",
+            "conditional"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: a 'no X is Y' statement that, through an 'unless' premise, completes a chain to a conclusion stated first. The premises say that any Ilmar translation this year whose translator lacks a certificate in the source language was made from a relay text, and relay translations are ineligible. So the conclusion follows if no Vessk-certified translator did any of Ilmar's Vessk poetry, as (A) says. (B) is the near-miss: it differs by one quantifier, and 'most' leaves room for some Vessk poetry by certified translators, which could be eligible. (C) is tempting because it reads 'unless' as a biconditional and echoes the concession, but even if certified translators always work directly from the source, nothing yet shows that none of the Vessk poetry was done by one. (D) reverses the eligibility rule, and (E) merely restates the premise about uncertified translators.",
+          "skills": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strengthen",
+      "kind": "LR",
+      "title": "Strengthen",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Three years ago, the town of Pell replaced the asphalt in all of its public parking lots with permeable paving, which allows rainwater to pass through it into the soil below. Since then, the peak flow of Marrow Creek, which drains the town, has been roughly 20 percent lower after heavy storms than it was before the change. Hydrologists in Pell conclude that the new paving is responsible for the reduction in the creek's storm peaks.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Permeable paving is considerably more expensive to install than conventional asphalt.",
+            "The firm that installed Pell's permeable paving has completed similar projects in many other towns.",
+            "In several other towns that replaced asphalt lots with permeable paving, storm peaks in the local creeks dropped by similar amounts afterward.",
+            "Pell's residents voted by a wide margin in favor of replacing the asphalt lots.",
+            "Storms in the Marrow Creek watershed over the past three years have been, on average, less intense than those of the preceding decade."
+          ],
+          "answer": "C",
+          "types": [
+            "strengthen"
+          ],
+          "tags": [
+            "ladder:strengthen"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: find the choice that directly supports the causal conclusion by showing the same cause produces the same effect elsewhere. C does exactly that: repeated cases in which permeable paving was followed by similar drops in storm peaks make it more likely that the paving, not chance, explains Pell's drop. The tempting trap is B, which also mentions other towns, but it tells us only that the installer was busy, not what happened to any creek. E is the wrong-direction trap: gentler storms are an alternative explanation for lower peaks, so it weakens the argument.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "Last year, Fernhollow Press redesigned its long-running early-reader series, switching to larger type and adding an illustration to every page. In the twelve months after the redesigned books appeared, sales of the series rose by 30 percent over the previous twelve months. Fernhollow's editors conclude that the redesign made the series more appealing to young readers and the parents who buy books for them.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Sales of other publishers' early-reader series, none of which changed their designs, stayed roughly flat over the same twelve months.",
+            "Fernhollow also substantially increased its advertising for the series last year.",
+            "Printing a book with an illustration on every page costs Fernhollow more than its previous format did.",
+            "Reading specialists disagree about whether frequent illustrations help or hinder beginning readers in learning to decode words.",
+            "Fernhollow plans to apply the same redesign to its chapter-book series next year."
+          ],
+          "answer": "A",
+          "types": [
+            "strengthen"
+          ],
+          "tags": [
+            "ladder:strengthen"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: strengthen a before-and-after causal claim by ruling out an alternative cause. A shows the whole early-reader market did not grow, so the 30 percent rise cannot be explained by a general boom and is more plausibly due to Fernhollow's change. The most tempting trap is D, because it is about the redesign's features, but the conclusion is about appeal to buyers, not about whether the illustrations teach reading well; a disagreement among specialists bears on neither. B is a weakener, offering advertising as a rival cause.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "Volunteers at the Carrow Point banding station caught and banded 2,400 migrating warblers this autumn, and only 9 percent of them were first-year birds hatched that summer. A decade ago, first-year birds made up about 25 percent of the warblers banded at the station each autumn. The station's director concludes that the breeding success of the warbler populations that migrate past Carrow Point has declined sharply over the past decade.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Adult warblers are better than first-year warblers at avoiding the mist nets used at banding stations.",
+            "Many of the warblers banded at Carrow Point this autumn were later recaptured at stations farther south.",
+            "The number of volunteers working at the station has roughly doubled over the past decade.",
+            "First-year warblers are generally lighter than adults when they pass Carrow Point.",
+            "Throughout the past decade, the station has operated its nets at the same locations and during the same weeks each autumn."
+          ],
+          "answer": "E",
+          "types": [
+            "strengthen"
+          ],
+          "tags": [
+            "ladder:strengthen"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: strengthen by confirming that the samples being compared are comparable, so the change in the numbers reflects a change in the birds rather than in the sampling. E rules out the possibility that moved nets or shifted dates caught a different mix of ages this year than a decade ago. The tempting trap is A, which is about sampling bias and so feels on point; but a bias that is the same every year affects both figures alike and cannot explain why the share of young birds fell. C mentions a change at the station, but more volunteers banding the same nets would not change the age mix.",
+          "skills": []
+        },
+        {
+          "number": 4,
+          "stimulus": "At Halvard Clinic, patients whose knee replacements were done with the Corin technique, which preserves a thigh-muscle tendon that the standard technique cuts, walked unassisted an average of nine days sooner than patients given the standard technique. Admittedly, surgeons chose which technique to use, and they tended to use the Corin technique on younger patients. But even among patients under sixty, those given the Corin technique walked unassisted sooner. So the faster recovery is attributable to the preservation of the tendon.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Younger patients generally regain mobility after knee replacement faster than older patients do.",
+            "When the tendon is cut, the thigh muscle it anchors cannot generate enough force to stabilize the knee during walking until the tendon has reattached, which takes about a week.",
+            "The Corin technique also requires a somewhat smaller incision than the standard technique does.",
+            "Most surgeons who have tried the Corin technique now prefer it to the standard technique.",
+            "Patients under sixty make up only a small fraction of the clinic's knee-replacement patients."
+          ],
+          "answer": "B",
+          "types": [
+            "strengthen"
+          ],
+          "tags": [
+            "ladder:strengthen"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: strengthen by supplying the mechanism that links the specific feature named in the conclusion (the tendon) to the effect. The premises at most show the Corin technique helps; B explains how cutting the tendon would delay walking by about the observed amount, which makes the tendon, rather than some other feature of the technique, the likely cause. The strongest trap is A: it supports the concession about age, which the argument already answered with the under-sixty comparison, so it adds nothing to the conclusion and if anything highlights a confound. D supports a different conclusion (that the technique is better overall), and C offers a rival feature, so it weakens.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Last year, Brenford restaurants in the western districts, now inspected by unannounced teams, averaged 4.1 recorded violations per inspection, while those in the eastern districts, still inspected on a schedule announced a week ahead, averaged 2.3. Some council members take this as evidence that western restaurants are less sanitary. Granted, the western districts contain more of the city's older buildings. But scheduled inspections are known to understate violations, since restaurants can prepare for them. So the council members' inference is unwarranted, and if unannounced inspections were extended to the east, recorded violations there would likely approach the western level.",
+          "stem": "Which one of the following, if true, most strengthens the argument?",
+          "choices": [
+            "Restaurants that learn of an inspection a week in advance typically use that time to correct problems an inspector would otherwise cite.",
+            "Unannounced inspections are more effective than scheduled ones at reducing the incidence of foodborne illness.",
+            "Older restaurant buildings are more difficult to keep free of pests than newer ones are.",
+            "Four years ago, before unannounced inspections began, western and eastern restaurants averaged nearly identical numbers of recorded violations per scheduled inspection.",
+            "Several eastern-district restaurants have voluntarily requested unannounced inspections in order to reassure customers."
+          ],
+          "answer": "D",
+          "types": [
+            "strengthen"
+          ],
+          "tags": [
+            "ladder:strengthen"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: strengthen a comparison by establishing a baseline, an answer that looks like irrelevant history on first read. D shows that when both halves of the city were measured the same way, they looked the same; so the current gap appeared with the change in method, which supports both that the gap is not about sanitation (despite the older buildings) and that eastern numbers would rise under the new method. The main trap is A: it feels like strong support, but it only restates a premise the argument already gives (scheduled inspections understate violations because restaurants prepare), and it says nothing about how large the understatement is relative to the gap. B supports a different conclusion, a policy recommendation the author never makes, and C strengthens the conceded alternative, so it weakens.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "weaken",
+      "kind": "LR",
+      "title": "Weaken",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Since the Tallow Ridge wind farm began operating two years ago, crews inspecting the ground beneath its forty turbines have found dozens of dead bats each late summer, far more than they find in any other season. The ridge lies on a known migration route for several bat species. Local conservationists conclude that the turbines' spinning blades are killing bats that fly over the ridge during their seasonal migration.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Many bat species in the region migrate during late summer and early autumn.",
+            "Examinations show that most of the dead bats found beneath the turbines died of a fungal disease that has recently spread through the region's bat colonies.",
+            "Wind turbines generate electricity without producing greenhouse gas emissions.",
+            "The turbines at Tallow Ridge are taller than those at most other wind farms in the region.",
+            "Dead bats have also been found beneath the turbines of several other wind farms."
+          ],
+          "answer": "B",
+          "types": [
+            "weaken"
+          ],
+          "tags": [
+            "ladder:weaken"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: weaken a causal conclusion by giving a different cause for the observed effect. If most of the bats died of disease, the presence of carcasses under the turbines no longer shows the blades killed them. The tempting trap is E, because it is about dead bats at wind farms and so feels relevant; but it is consistent with turbines killing bats and, if anything, strengthens the conclusion. A merely supports the premise that bats pass by during migration.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "When the Ashgrove Public Library eliminated overdue fines last year, the number of books returned late fell by 15 percent compared with the year before, even though the library lent out about the same number of books in both years. The library's director argues that fines had been discouraging timely returns, because borrowers who owed fines avoided the library, and that eliminating fines is what produced the decline in late returns.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Eliminating fines cost the library a significant portion of its annual revenue.",
+            "Many borrowers surveyed last year said they had avoided the library in the past while they owed fines.",
+            "The 15 percent figure was compiled by library staff rather than by outside auditors.",
+            "At the same time it eliminated fines, the library began sending borrowers automated reminders a few days before their books were due.",
+            "Some borrowers who returned books late last year had also returned books late in earlier years."
+          ],
+          "answer": "D",
+          "types": [
+            "weaken"
+          ],
+          "tags": [
+            "ladder:weaken"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: weaken a before-and-after argument by identifying a simultaneous change that could explain the result. Due-date reminders are an independent reason late returns would fall, so the decline no longer points to the fine policy. The tempting traps are A, which attacks the policy on a ground (revenue) the director never claims anything about, and C, which tries to cast doubt on the 15 percent figure, a premise we must accept as given. B actually strengthens the director's proposed mechanism.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "An analysis of 3,000 listings on Drivemart, an online used-car marketplace, found that cars advertised with a complete set of service records sold for 12 percent more, on average, than cars of the same make, model, age, and mileage advertised without them. The analysts conclude that a seller who assembles complete service records before listing a car can expect to raise its sale price by about 12 percent.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Owners who keep complete service records also tend to maintain their cars more carefully, so their cars are typically in better mechanical condition than comparable cars without records.",
+            "Cars sold through Drivemart typically fetch slightly higher prices than similar cars sold through dealerships.",
+            "Many buyers surveyed said that service records gave them confidence that a car had been well maintained.",
+            "Assembling a complete set of service records can take a seller many hours of work.",
+            "Some of the cars listed with complete service records had been in minor accidents."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "tags": [
+            "ladder:weaken"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: weaken a correlation-to-causation leap by showing the supposed cause is a marker for a hidden factor. If cars with records are simply better cars, the 12 percent premium reflects condition, and a seller who merely gathers paperwork for an ordinary car would not capture it. The most tempting trap is D, which attacks whether assembling records is worthwhile, a claim the analysts never make; their claim is only about the price increase. B is tempting as a representativeness worry, but a different price level across venues says nothing about the size of the percentage premium, and C strengthens.",
+          "skills": []
+        },
+        {
+          "number": 4,
+          "stimulus": "Marine biologists transplanted fragments of staghorn coral bred at the Ilsa Bay nursery onto a degraded section of the Varro Reef. Two years later, a marine heat wave struck; 70 percent of the transplanted fragments survived it, compared with 30 percent of the wild staghorn on an adjacent section. Admittedly, a few transplants were lost to storms before the heat wave, but these were excluded from the count. The result shows, the biologists say, that the nursery's breeding program has produced staghorn substantially more resistant to heat stress than wild staghorn.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Wild staghorn on other sections of the Varro Reef suffered losses in the heat wave similar to those on the adjacent section.",
+            "The transplanted fragments grew more slowly during their two years on the reef than wild staghorn on the adjacent section did.",
+            "Bleached but still-living staghorn can be hard to distinguish from dead coral, so divers' survival counts after heat waves are sometimes inaccurate.",
+            "The nursery's fragments were bred from parent colonies collected on the Varro Reef itself.",
+            "Before transplanting, the nursery grows all fragments in tanks whose temperature is gradually raised, a treatment known to boost any coral's heat tolerance for several years regardless of its parentage."
+          ],
+          "answer": "E",
+          "types": [
+            "weaken"
+          ],
+          "tags": [
+            "ladder:weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: weaken by separating the factor the conclusion credits (breeding) from another feature of the same treatment (tank conditioning). The data show nursery corals survived better, but E supplies a non-genetic reason they would, so the result no longer shows the breeding program produced more heat-resistant corals. Two traps are strong: B attacks a claim the biologists never make (that the corals are better overall), and C tries to weaken the survival data, which are given as premises; besides, a counting difficulty applies to both groups and gives no reason to think the gap is exaggerated. A strengthens by showing the comparison group was typical.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Since the Marlow Opera House began selling $20 rush tickets to patrons under thirty, 18 percent of its ticket buyers have been under thirty, compared with 7 percent at the Venn Opera, which offers no such discount. Venn's board had long believed that opera simply does not appeal to young adults. It now concludes that it was wrong: young adults will attend opera when it is affordable. Hence, the board reasons, a rush-ticket program at Venn would substantially increase the share of its ticket buyers who are under thirty.",
+          "stem": "Which one of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Adults under thirty in Venn's city, when surveyed, most often cite ticket prices as their reason for not attending opera.",
+            "Some of Marlow's ticket buyers under thirty pay full price rather than buying rush tickets.",
+            "In the season before Marlow introduced rush tickets, 16 percent of its ticket buyers were already under thirty.",
+            "Marlow sells its rush tickets for less than it costs to fill each seat for a performance.",
+            "Venn's board originally adopted its view of young audiences on the basis of a survey conducted more than a decade ago."
+          ],
+          "answer": "C",
+          "types": [
+            "weaken"
+          ],
+          "tags": [
+            "ladder:weaken"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: weaken by undermining the comparison through its base rate. The argument treats the 18-versus-7 gap as the effect of rush tickets, but C shows Marlow's young share was already 16 percent before the program, so nearly all of the gap predates the discount and gives little reason to expect a program to transform Venn's numbers. The sneakiest trap is B, which hinges on a quantifier: if most young Marlow buyers paid full price, the discount would look irrelevant, but some paying full price is fully compatible with the program driving attendance. A strengthens, D attacks the program's finances (a claim never made), and E attacks the board's old belief, which the board has already abandoned.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "explain",
+      "kind": "LR",
+      "title": "Explain / Paradox",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "The turbines at the Gorran Flats wind farm generate the most electricity in winter, when winds in the area are strongest, and the least in summer, when calm days are common. The farm sells all of its output to the regional grid and has no other significant source of income. Yet the wind farm's revenue from selling electricity to the regional grid is consistently highest in summer.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "Winds at Gorran Flats are stronger in every season than at most other wind farms in the region.",
+            "The farm's turbines need more frequent maintenance in winter, when ice forms on their blades.",
+            "Summer days are considerably longer than winter days at Gorran Flats's latitude.",
+            "The price the regional grid pays for each unit of electricity is several times higher in summer, when demand for air-conditioning peaks, than in winter.",
+            "Several new wind farms in the region began selling electricity to the grid last year."
+          ],
+          "answer": "D",
+          "types": [
+            "explain"
+          ],
+          "tags": [
+            "ladder:explain"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: reconcile two facts by finding the missing variable that links them; here revenue depends on price as well as quantity. D shows that a smaller summer output sells at a much higher price, so summer revenue can exceed winter revenue. The tempting trap is B, which explains higher winter costs, but costs do not affect revenue, and the stimulus already says winter output is highest. C is irrelevant because turbines run on wind, not daylight.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "Bookstore sales of a picture book typically triple in the year after it wins the Brambling Medal, a prize awarded annually to one picture book and announced with considerable publicity. The county's libraries, like most, keep at least one copy of each winner on their shelves. Yet in Calder County's public libraries, medal-winning picture books are checked out less often in the year after winning than in the year before.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "Bookstores prominently display and promote medal winners in the months after the award is announced.",
+            "Many parents who learn that a picture book has won the medal buy a copy for their own household rather than borrowing it from a library.",
+            "The committee that selects the Brambling Medal winner is made up largely of children's librarians.",
+            "Picture books are checked out from Calder County's libraries more often than any other kind of children's book.",
+            "Some books that have won the Brambling Medal were already bestsellers before receiving it."
+          ],
+          "answer": "B",
+          "types": [
+            "explain"
+          ],
+          "tags": [
+            "ladder:explain"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: find the one fact that connects the two trends, so that the rise in one actually produces the fall in the other. If families who once borrowed medal winners now buy them, the award drives sales up and library checkouts down simultaneously. The tempting trap is A: it explains the jump in bookstore sales but leaves the library decline unexplained. E concerns only a few books and explains neither trend.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "At Westmere Hospital last year, patients whose hip fractures were surgically repaired within 24 hours of admission had a higher rate of complications than patients whose surgery took place more than 48 hours after admission, even after the hospital accounted for differences in the patients' ages. Yet large studies consistently find that, for hip-fracture patients generally, delaying surgery increases the risk of complications.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "Complications associated with delayed surgery include blood clots and pneumonia, both of which can result from prolonged bed rest.",
+            "Westmere's surgeons perform more hip-fracture repairs each year than surgeons at most comparable hospitals do.",
+            "Most of the large studies of surgical timing were conducted at hospitals considerably larger than Westmere.",
+            "Hip fractures are much more common among elderly people than among younger people.",
+            "Westmere operates immediately mainly on patients with severe, displaced fractures, while patients with simple, stable fractures are scheduled later as operating rooms become free."
+          ],
+          "answer": "E",
+          "types": [
+            "explain"
+          ],
+          "tags": [
+            "ladder:explain"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: resolve a conflict between a local result and a general finding by showing the local comparison groups differ. If Westmere's early-surgery group is made up of the hardest cases, it can have more complications even though, for any given patient, delay is harmful, so both facts stand. The most tempting trap is A, which explains why delay is generally harmful but does nothing to explain Westmere's reverse pattern. C is tempting because it hints Westmere is different, but hospital size alone gives no reason early surgery would go worse there.",
+          "skills": []
+        },
+        {
+          "number": 4,
+          "stimulus": "Over the past decade, live coral cover on the Selka Atoll's reefs has increased by about a third, reversing earlier losses. Over the same period, annual surveys have recorded a steady decline in the number of reef-fish species present at the atoll, and the decline has been as steep among species that no fishery targets as among commercially caught species. Since reef fish depend on corals for food and shelter, marine ecologists had expected the coral's recovery to bring a recovery in fish diversity.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "The coral recovery has consisted almost entirely of a single fast-growing plating species, which has overgrown the branching corals whose complex shapes shelter many reef-fish species.",
+            "Commercial fishing around the atoll has intensified considerably over the past decade.",
+            "Since a ban on boat anchoring took effect ten years ago, damaged coral on the atoll has been steadily regrowing.",
+            "Many reef-fish species at the atoll feed mainly on algae rather than on coral itself.",
+            "The fish species that have disappeared from the atoll's surveys are still found on reefs elsewhere in the region."
+          ],
+          "answer": "A",
+          "types": [
+            "explain"
+          ],
+          "tags": [
+            "ladder:explain"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: choose the answer that explains both facts at once and fits every detail of the stimulus, while traps explain only one side. A explains why coral cover rose (a fast-growing species spread) and why fish diversity fell (that spread destroyed the complex habitat many species need). B is the strongest trap, a natural explanation for fewer fish, but the stimulus already rules it out by noting that untargeted species declined just as steeply. C explains only the coral increase, and D at most weakens the ecologists' expectation without explaining why diversity actually declined.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Last season the Halvorsen Opera raised the price of every seat by about a quarter, expecting to sell fewer tickets but to earn more overall. Instead, the number of tickets it sold rose by 10 percent. Its audience surveys showed no change in the age or income of its patrons. Over the same season, the city's two other opera companies kept their prices unchanged, and both sold fewer tickets than the season before.",
+          "stem": "Each of the following, if true, helps to resolve the apparent discrepancy described above EXCEPT:",
+          "choices": [
+            "Many operagoers in the city treat a higher ticket price as a sign of a more lavish production, and Halvorsen's prices are now the highest in the city.",
+            "Halvorsen's season included several of the most popular works in the operatic repertory, whereas its competitors staged mostly unfamiliar operas.",
+            "Even before Halvorsen raised its prices, its tickets cost more than comparable seats at either of the other companies.",
+            "A celebrated tenor who had previously sung mainly with one of the other companies joined Halvorsen's company last season.",
+            "Halvorsen reopened last season in a renovated hall whose improved sightlines and acoustics drew widespread favorable press coverage."
+          ],
+          "answer": "C",
+          "types": [
+            "explain"
+          ],
+          "tags": [
+            "ladder:explain"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: in an EXCEPT explain question, eliminate the four choices that resolve the discrepancy and find the one that only seems to. C sounds like an explanation because it is about relative price, but it only shows Halvorsen became even more expensive relative to rivals, which deepens the puzzle of why its sales rose while theirs fell. The most tempting trap is A, which looks odd enough to pick as the EXCEPT, but if patrons read high prices as a signal of quality, the price increase itself could draw buyers, so it does explain. B, D, and E each give patrons a reason to shift from the rivals to Halvorsen, explaining both Halvorsen's gain and the rivals' losses.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "evaluate",
+      "kind": "LR",
+      "title": "Evaluate",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "The water level in Brinley Reservoir fell sharply over the course of this summer, reaching its lowest point in more than twenty years. The reservoir is fed by streams draining the surrounding hills. The regional water authority attributes the drop to increased household water use by the residents of Brinley, a fast-growing town that draws all of its water from the reservoir.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the argument?",
+          "choices": [
+            "Whether rainfall in the area that drains into Brinley Reservoir was much lower this summer than in previous summers",
+            "Whether most Brinley residents would support restrictions on lawn watering",
+            "When Brinley Reservoir was originally constructed",
+            "Whether other towns in the region also draw their water from reservoirs",
+            "Whether Brinley's population is expected to keep growing next year"
+          ],
+          "answer": "A",
+          "types": [
+            "evaluate"
+          ],
+          "tags": [
+            "ladder:evaluate"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: an evaluate question asks for the information whose answer would change how strong the argument is, and the obvious candidate is a rival cause. If rainfall was unusually low, drought could explain the drop and the argument weakens; if rainfall was normal, the household-use explanation gains ground. The tempting trap is E, since it concerns the town's growth, but future growth says nothing about what caused this summer's drop. B concerns a possible remedy, not the cause.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "Since Corvel City began requiring restaurants to post their latest inspection grades in their front windows, reported cases of foodborne illness traced to restaurants have dropped by 20 percent compared with the year before the rule took effect. The number of restaurants in the city has stayed roughly constant. A city official argues that the posting requirement has motivated restaurants to improve their hygiene practices.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the argument?",
+          "choices": [
+            "Whether restaurants with high posted grades charge higher prices than those with low grades",
+            "Whether some other cities post restaurant inspection grades online rather than in windows",
+            "Whether restaurants' average inspection scores have risen since the posting requirement took effect",
+            "Whether foodborne illness is generally more common in summer than in winter",
+            "Whether the posted grade signs are printed in more than one language"
+          ],
+          "answer": "C",
+          "types": [
+            "evaluate"
+          ],
+          "tags": [
+            "ladder:evaluate"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: test the official's mechanism directly. If inspection scores rose, there is independent evidence that hygiene improved, supporting the argument; if scores stayed flat, the drop in illness likely has some other cause, weakening it. The tempting trap is B, which is about grade posting, but how other cities publish grades says nothing about what happened in Corvel. D is tempting as a possible confound, but a seasonal pattern recurs every year and so cannot explain a year-over-year decline.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "Last year, Hartwell Motors, a used-car dealership, stopped negotiating prices and began posting a fixed, no-haggle price on every car. Its average profit per car sold rose by 8 percent compared with the year before. Previously, its salespeople had been free to cut prices during negotiations by whatever amount they judged necessary to close a sale. The dealership's owner concludes that customers are willing to pay more for the convenience of not having to haggle.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the argument?",
+          "choices": [
+            "Whether Hartwell sold more cars in total last year than in the year before",
+            "Whether the prices Hartwell paid at wholesale auctions for the cars it sold were lower last year than the year before",
+            "Whether Hartwell's salespeople prefer selling cars at fixed prices",
+            "Whether some of Hartwell's customers last year had also bought cars from Hartwell before the switch",
+            "Whether no-haggle pricing is more common at new-car dealerships than at used-car dealerships"
+          ],
+          "answer": "B",
+          "types": [
+            "evaluate"
+          ],
+          "tags": [
+            "ladder:evaluate"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: profit per car depends on both selling price and cost, so the useful question is the one that tests whether the profit gain came from the customer side at all. If Hartwell's purchase costs fell, the higher profit could have come from cheaper inventory, not higher prices paid by customers, weakening the argument; if costs held steady, the gain must come from what customers paid, supporting it. The tempting trap is A, but the argument concerns profit per car, and total volume does not tell us whether each customer paid more. C concerns staff preferences, not customer behavior.",
+          "skills": []
+        },
+        {
+          "number": 4,
+          "stimulus": "Last spring the Orrin Public Library extended its weekday closing time from 6 p.m. to 9 p.m. Over the next six months, library card applications rose by 40 percent compared with the same months a year earlier. Admittedly, a large apartment complex near the library opened during that period, but applications from the complex's residents account for only a small share of the increase. The library's director concludes that the extended hours attracted many residents who previously had been unable to visit the library.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the argument?",
+          "choices": [
+            "Whether residents of the new apartment complex tend to visit the library mainly in the evening",
+            "Whether the extended hours significantly raised the library's operating costs",
+            "Whether the library's evening visitors borrow more books per visit than its daytime visitors do",
+            "Whether the library had ever extended its hours on a previous occasion",
+            "Whether most of the additional card applications were submitted during the newly added evening hours"
+          ],
+          "answer": "E",
+          "types": [
+            "evaluate"
+          ],
+          "tags": [
+            "ladder:evaluate"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: find the question whose two possible answers point in opposite directions on the claimed mechanism. If most new applications came in after 6 p.m., the extended hours plausibly drew new users; if most came in during the old daytime hours, those applicants could have visited before, and the director's explanation weakens. The strongest trap is A, which revisits the concession, but the argument has already set the complex aside as accounting for only a small share, so its residents' habits cannot decide the issue. C sounds relevant because it compares evening and daytime visitors, but borrowing habits say nothing about who newly applied for cards.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Over the past three years, homes within two kilometers of the Kesby wind farm sold for 6 percent less, on average, than homes farther away in the same county. Opponents of a proposed second wind farm cite this as proof that turbines depress nearby home values. The Kesby farm's operator objects that the homes nearest the farm are, on average, older and smaller. Even so, the opponents are right: when nearby homes are compared only with farther homes of similar age and size, a gap of about 4 percent remains.",
+          "stem": "Which one of the following would it be most useful to know in order to evaluate the argument?",
+          "choices": [
+            "Whether residents living near the Kesby wind farm frequently complain about noise from its turbines",
+            "Whether the proposed second wind farm would be located closer to homes than the Kesby farm is",
+            "Whether, over the past three years, homes near the Kesby farm sold for less than homes of similar age and size farther away in the county",
+            "Whether, in the years before the Kesby farm was built, homes on the land near its site sold for less than similar homes elsewhere in the county",
+            "Whether homes near the Kesby farm are, on average, older and smaller than homes farther away"
+          ],
+          "answer": "D",
+          "types": [
+            "evaluate"
+          ],
+          "tags": [
+            "ladder:evaluate"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: the argument controls for age and size but never shows the gap appeared after the turbines arrived, so the key question is the pre-existing base rate. If nearby homes already sold for less before the farm existed, the 4 percent gap reflects something about the location and the argument collapses; if they sold at par, the turbines become the likely cause. The near-miss trap is C, which differs from D only in its time frame: the past three years fall after the farm was built, and the stimulus already answers that question with the 4 percent figure, so knowing it adds nothing. A only cuts one way (complaints would support the conclusion, but their absence would not undermine it, since turbines could depress prices for visual reasons), B bears on the proposed farm rather than this argument, and E is already conceded in the stimulus.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "inference",
+      "kind": "LR",
+      "title": "Inference (MBT / MSS / MBF)",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Every glaze stocked by the Harrowgate Pottery Cooperative has been certified food-safe. Marisol, a cooperative member, glazed her new set of soup bowls using only glazes she bought from the cooperative's stock. Marisol also owns several glazes that she bought from other suppliers, and at least one of those glazes has not been certified food-safe. She uses the glazes from other suppliers mainly on decorative tiles.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "None of the glazes Marisol bought from other suppliers has been certified food-safe.",
+            "Every certified food-safe glaze that Marisol owns was bought from the cooperative.",
+            "Marisol's new soup bowls were glazed only with glazes that have been certified food-safe.",
+            "Marisol has never applied an uncertified glaze to anything other than decorative tiles.",
+            "Some of the glazes stocked by the cooperative are unsuitable for decorative tiles."
+          ],
+          "answer": "C",
+          "types": [
+            "must-be-true"
+          ],
+          "tags": [
+            "ladder:inference",
+            "conditional"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: combine two facts directly. The bowls used only cooperative glazes, and every cooperative glaze is certified food-safe, so every glaze on the bowls is certified (C). The tempting trap is A, because the stimulus mentions uncertified glazes from other suppliers; but it says only that at least one of them is uncertified, so 'none' is far too strong. B reverses the relationship: all cooperative glazes are certified, but certified glazes could also come from elsewhere, and D overreads 'mainly.'",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 2,
+          "stimulus": "Under Velmarra's maritime salvage code, a crew that assists a vessel may claim a salvage reward only if the assisted vessel was in genuine peril and the assistance was voluntary rather than owed under a contract. Velmarran courts have found genuine peril in nearly every reported case in which a vessel lost engine power in open water. Last month the fishing trawler Ostrander lost engine power in open water, and the tug Brisa, which had no agreement with the Ostrander's owners, towed it to port.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "The Brisa's crew is entitled under the code to a salvage reward for towing the Ostrander.",
+            "Any vessel that loses engine power in open water is in genuine peril under Velmarra's code.",
+            "Had the Brisa been under contract with the Ostrander's owners, the Ostrander would not have been in genuine peril.",
+            "Most salvage claims brought in Velmarran courts involve vessels that lost engine power.",
+            "A Velmarran court would probably find that the Ostrander was in genuine peril after it lost engine power."
+          ],
+          "answer": "E",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "tags": [
+            "ladder:inference",
+            "conditional"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: apply a strong-but-not-universal pattern ('nearly every reported case') to a matching instance, which yields a 'probably' conclusion (E). The tempting trap is A: the Brisa appears to meet both listed conditions, but the code states them only as necessary ('only if'), not as sufficient, so nothing establishes entitlement. B turns 'nearly every' into 'any', C invents a link between contracts and peril, and D draws a statistic about all claims from data about one kind of case.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 3,
+          "stimulus": "At Pellridge Mountain resort, every trail rated expert is closed on any day the avalanche risk is rated high. No trail is groomed on a day when it is closed. Trails rated intermediate or beginner are closed only at the discretion of the ski patrol. The Corniche is an expert trail, and the Larch Run, an intermediate trail, is groomed on every day the resort operates. Today, the avalanche risk at Pellridge is rated high.",
+          "stem": "If the statements above are true, which one of the following CANNOT be true?",
+          "choices": [
+            "The Corniche is groomed today.",
+            "The Larch Run is closed today.",
+            "Some trail at Pellridge that is not rated expert is closed today.",
+            "The Corniche was groomed yesterday.",
+            "Every trail at Pellridge, including the Corniche, is groomed tomorrow."
+          ],
+          "answer": "A",
+          "types": [
+            "must-be-false"
+          ],
+          "tags": [
+            "ladder:inference",
+            "conditional"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: chain three statements: high risk today, so the expert Corniche is closed today, so it is not groomed today; A therefore cannot be true. The tempting trap is B: if the resort operates today, the Larch Run is groomed and so cannot be closed, but nothing says the resort is operating today, so B could be true. C is allowed by the patrol's discretion, and D and E concern other days, when the risk may not be high.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "Over the past five years, rural clinics in the Dunmere district that adopted a telehealth triage system saw average patient wait times fall by about a third, and district officials credit the system for the decline. However, every Dunmere clinic that adopted the system did so under a state grant that also funded an additional full-time nurse. Among Dunmere clinics that hired an additional nurse without adopting the system, average wait times also fell by about a third, while at clinics that did neither, wait times were unchanged. Admittedly, the system has reduced the after-hours calls that physicians must answer.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "Telehealth triage systems do not reduce patient wait times at rural clinics.",
+            "Hiring an additional full-time nurse is the most cost-effective way for a rural clinic to reduce wait times.",
+            "The triage system has benefited Dunmere's physicians more than it has benefited their patients.",
+            "The evidence cited does not show that the triage system, rather than the added nurse, is responsible for shorter waits at the clinics that adopted it.",
+            "Had the adopting clinics used the triage system without hiring an additional nurse, their wait times would not have fallen."
+          ],
+          "answer": "D",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "tags": [
+            "ladder:inference"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: combine three facts (adopters also added a nurse; nurse-only clinics improved just as much; clinics that did neither did not improve) to see that the cause is confounded, which supports only the modest, indirect D. The most tempting trap is E, which reads as the natural lesson of the nurse-only comparison, but it is a confident counterfactual; the data are consistent with the system also cutting waits on its own. A is the same overreach stated generally, which the evidence does not show. C turns the concession into an unsupported comparison, and B brings in cost, which the stimulus never discusses.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Most members of the Calloway Symphony's string section trained at the Wexley Conservatory, and most members of the string section have perfect pitch. Every Wexley-trained member of the orchestra has performed in the orchestra's chamber series. Admittedly, the chamber series is not limited to string players: several wind players have performed in it as well, and only some of those wind players trained at Wexley.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "Most members of the string section who have perfect pitch have performed in the chamber series.",
+            "At least one member of the orchestra who has perfect pitch has performed in the chamber series.",
+            "Some Wexley-trained members of the string section do not have perfect pitch.",
+            "Most of the musicians who have performed in the chamber series are members of the string section.",
+            "Some member of the string section who has perfect pitch has not performed in the chamber series."
+          ],
+          "answer": "B",
+          "types": [
+            "must-be-true"
+          ],
+          "tags": [
+            "ladder:inference",
+            "conditional"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: 'most + most' within the same group (the string section) guarantees at least one overlap, so some string player is both Wexley-trained and has perfect pitch; the conditional then puts that player in the chamber series, which gives B. The most tempting trap is A, which differs from B by one quantifier: the overlap is guaranteed to be at least one person, not a majority of the perfect-pitch players, and the perfect-pitch players who are not from Wexley might never have performed. C and E could both be false if every Wexley-trained string player has perfect pitch, and if every perfect-pitch string player trained at Wexley. D is unsupported because the number of wind performers is not given.",
+          "skills": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principle",
+      "kind": "LR",
+      "title": "Principle",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Privacy consultant: A business that collects a customer's personal information for a specific purpose should delete that information once it is no longer needed for that purpose. Keeping such information longer serves no legitimate business need, and it exposes the customer to the risk of a data breach with no offsetting benefit. A business that wants to keep such information for some other purpose should ask for the customer's permission.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
+          "choices": [
+            "Corbel Bank should delete the account records of a customer who still has an open loan, because the customer has asked to stop receiving marketing mail.",
+            "Tarnwell Outfitters collected customers' shipping addresses solely to deliver orders, so once an order has arrived and its return period has ended, Tarnwell should delete that address.",
+            "Pyle Books collects customers' email addresses to send receipts, so it should never use those addresses for any other purpose.",
+            "Medline Pharmacy should keep its customers' prescription records indefinitely, since the records might someday be useful for research.",
+            "Because data breaches harm customers, Velo Gyms should not collect any personal information from its members."
+          ],
+          "answer": "B",
+          "types": [
+            "principle-apply"
+          ],
+          "tags": [
+            "ladder:principle"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: match the principle's trigger (data collected for a purpose, and that purpose fully served) to its result (delete). In B the address was collected only for delivery and returns, both finished, so deletion follows. The tempting trap is C, which sounds privacy-friendly and concerns using data for its original purpose, but the principle is about how long data is kept, not what it may be used for. A deletes data that is still needed for the open loan, D contradicts the principle, and E goes far beyond it.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "The Ashby town council should not require clay tile roofs on new houses in the town's historic district. The requirement is meant to preserve the district's traditional appearance. But clay tiles cost about three times as much as the composite tiles that builders would otherwise use, and from the street, composite tiles cannot be distinguished from clay.",
+          "stem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+          "choices": [
+            "Building rules for a historic district should require traditional materials wherever it is technically feasible to use them.",
+            "A town council should adopt a building requirement only if most of the affected property owners support it.",
+            "When two roofing materials cost the same, a town should require the one that more closely matches traditional construction.",
+            "A rule intended to preserve a district's appearance should not mandate a costly material when a much cheaper one gives the public the same appearance.",
+            "New houses should be built with whatever roofing material is expected to last the longest."
+          ],
+          "answer": "D",
+          "types": [
+            "principle-strengthen"
+          ],
+          "tags": [
+            "ladder:principle"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: find the principle whose conditions match the argument's premises (the rule's goal is appearance, the cheaper material looks the same, the mandated material costs much more) and whose result is the conclusion (don't mandate it). D does exactly that. The tempting trap is C, which shares the topic of cost and tradition, but its condition (equal cost) is not met here, so it cannot produce the conclusion. A points toward the opposite conclusion, and B and E bring in factors the argument never mentions.",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "Foraging association guideline: A guide who allows a client to eat a wild mushroom that the guide has not personally identified is negligent, regardless of how the mushroom affects the client. A guide's role is to stand between clients and the hazards of misidentification, and that role is abandoned the moment the guide defers to anyone else's judgment.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
+          "choices": [
+            "Bram personally identified every mushroom his clients ate during the outing, so Bram was not negligent.",
+            "Corrie's client became ill after eating a mushroom on Corrie's outing, so Corrie must not have personally identified that mushroom.",
+            "Dagny was negligent, because she misidentified a mushroom on the outing, even though she stopped her client from eating it.",
+            "Since Emeric's client correctly identified a chanterelle on her own, Emeric was not negligent in letting her eat it.",
+            "Ottilie was negligent, since she let a client eat a puffball that only the client had identified, even though the puffball proved harmless."
+          ],
+          "answer": "E",
+          "types": [
+            "principle-apply"
+          ],
+          "tags": [
+            "ladder:principle",
+            "conditional"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: the guideline gives a sufficient condition for negligence (allowing a client to eat a mushroom the guide did not identify), and E satisfies it exactly; 'regardless of how the mushroom affects the client' makes the harmless outcome irrelevant. The most tempting trap is A, which denies the sufficient condition and concludes no negligence; but the guideline names only one way to be negligent, not the only way, so it is silent on Bram. B reasons backward from a bad outcome to a missing identification, which the guideline never links. C finds negligence on grounds the guideline doesn't address, and D contradicts it.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "The Halvard Survey Office should not yet release its revised nautical chart of Selden Bay. Admittedly, the revision corrects several depth errors in the current chart, errors that harbor pilots have complained about for years. But the revision was compiled entirely from the office's own sonar soundings, and no one outside the office has checked either those soundings or the chart drawn from them. Releasing the revision now would therefore be premature, however welcome its corrections.",
+          "stem": "Which one of the following principles, if valid, most helps to justify the reasoning above?",
+          "choices": [
+            "A survey office should release a chart revision only after someone independent of the office has checked it, even if the revision corrects errors that mariners have long complained about.",
+            "A survey office should release any chart revision that has been checked by someone independent of the office.",
+            "A chart revision that corrects errors mariners have complained about should be released as soon as it is completed.",
+            "A survey office should compile charts from its own soundings only when soundings from independent sources are unavailable.",
+            "A chart revision should be released only if it corrects errors that make the current chart hazardous to mariners."
+          ],
+          "answer": "A",
+          "types": [
+            "principle-strengthen"
+          ],
+          "tags": [
+            "ladder:principle",
+            "conditional"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: to justify NOT releasing, the principle must make independent checking a necessary condition for release; the chart fails that condition, so release is ruled out, and A's 'even if' clause also neutralizes the concession. The most tempting trap is B, which uses the right idea backward: it makes independent checking sufficient for release, so it says nothing about an unchecked chart. E is the subtler trap: it states a necessary condition that this revision arguably satisfies (it corrects depth errors), and meeting a necessary condition does not require or forbid release. D concerns how charts are compiled, not whether this one may be released, and C points toward the opposite conclusion.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 5,
+          "stimulus": "Orchestra administrator: Our new attendance rule is this: a musician who misses the dress rehearsal for a concert must not be permitted to play in that concert, unless the absence resulted from an emergency and the musician notified the personnel manager before the rehearsal began. Admittedly, the rule will occasionally keep a well-prepared musician off the stage. But the dress rehearsal is the only time the full ensemble tests the hall's acoustics together, and a rule with few exceptions is hard to abuse.",
+          "stem": "Which one of the following judgments most closely conforms to the rule stated by the administrator?",
+          "choices": [
+            "Since Halvor attended the dress rehearsal, the rule requires that he be permitted to play in the concert.",
+            "Because Rosalind's absence from the dress rehearsal resulted from a genuine emergency, the rule does not require that she be kept out of the concert, even though she first contacted the personnel manager the following day.",
+            "Ines missed the dress rehearsal, but because a burst pipe flooded her apartment that morning and she phoned the personnel manager an hour before the rehearsal, the rule does not require that she be kept out of the concert.",
+            "Tomas told the personnel manager a week in advance that he would miss the dress rehearsal to attend a friend's wedding, so the rule allows him to play in the concert.",
+            "Because Yuki's absence from the dress rehearsal resulted from an emergency that she reported to the personnel manager beforehand, the rule requires that she be permitted to play in the concert."
+          ],
+          "answer": "C",
+          "types": [
+            "principle-apply"
+          ],
+          "tags": [
+            "ladder:principle",
+            "conditional"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: 'X must not play unless E1 and E2' means that if either exception condition fails, the musician is barred; if both hold, the rule simply stops requiring a bar and does not grant a right to play. C triggers the exception precisely (a real emergency AND notice before the rehearsal) and draws only the limited conclusion that the rule does not require exclusion. The most tempting trap is E: it describes the same exception-triggering facts but concludes that the rule REQUIRES that Yuki be allowed to play, turning an exception into a guarantee the rule never gives (A makes the same mistake for a musician who attended). B and D each satisfy only one of the two exception conditions (an emergency but late notice; early notice but no emergency), so the rule actually requires barring those musicians.",
+          "skills": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parallel",
+      "kind": "LR",
+      "title": "Parallel Reasoning",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Several deadly mushroom species share certain visible features. If a mushroom brought to the Brackenfield market has white gills and a ring on its stem, the market's inspector will not allow it to be sold. The mushroom that Pell brought to the market this morning has white gills and a ring on its stem. So the inspector will not allow Pell's mushroom to be sold.",
+          "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+          "choices": [
+            "If a kiln reaches cone 10, the stoneware fired in it will vitrify. The stoneware Hollis fired yesterday vitrified. So Hollis's kiln must have reached cone 10.",
+            "If a ski run is both steep and icy, the patrol will close it. The Ridgeback run is not being closed. So the Ridgeback run must not be both steep and icy.",
+            "If a ship flies a foreign flag and carries cargo, it must pay the harbor fee. The Marlow flies a foreign flag. So the Marlow must pay the harbor fee.",
+            "If an audition recording is both unedited and under ten minutes long, the committee will not reject it unheard. Aster's recording is unedited and under ten minutes long. So the committee will not reject Aster's recording unheard.",
+            "Most mushrooms with white gills are unsafe to eat. The mushroom Pell found has white gills. So Pell's mushroom is probably unsafe to eat."
+          ],
+          "answer": "D",
+          "types": [
+            "parallel"
+          ],
+          "tags": [
+            "ladder:parallel",
+            "conditional"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: identify the pattern: if A and B, then not C; this case has A and B; so not C. D matches it exactly, including both conditions and the negative result. The most tempting trap is C, which looks similar but concludes after only one of the two required conditions is met (we don't know the Marlow carries cargo). B is a valid argument with a different pattern (it infers backward from a result that did not happen), A infers the condition from the result, and E reasons from 'most' to 'probably' rather than from a conditional.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 2,
+          "stimulus": "Roofing contractor: Salt spray and winter gales in the coastal town of Brennock destroy most roofing materials within a few decades. A roof in Brennock can last fifty years only if it is made of slate or of copper. The new roof on Brennock's public library is made of slate. Therefore, the library's new roof will last fifty years.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "A pottery student can enter the advanced studio only if she has completed either the wheel course or the handbuilding course. Rhea has completed the wheel course. Therefore, Rhea can enter the advanced studio.",
+            "If a roof is made of slate, it will last fifty years. The roof on Brennock's museum is not made of slate. Therefore, the museum's roof will not last fifty years.",
+            "A map can be certified only if it has been checked in the field. This map has not been checked in the field. Therefore, this map cannot be certified.",
+            "A clinic can receive the rural health grant only if it serves a rural county. The Ferris clinic received the grant. Therefore, the Ferris clinic serves a rural county.",
+            "Most roofs made of slate last fifty years. The library's new roof is made of slate. Therefore, the library's new roof will certainly last fifty years."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel-flaw"
+          ],
+          "tags": [
+            "ladder:parallel",
+            "conditional"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: the argument treats a necessary condition ('only if slate or copper') as sufficient, and A makes the same error with the same 'either/or' necessary condition. The most tempting trap is B, which shares the topic and vocabulary, but its flaw is different: it assumes that failing a sufficient condition guarantees failure. C and D are valid uses of 'only if' (C denies the necessary condition; D infers the necessary condition from the outcome). E's error is overstating a 'most' statement, not confusing necessary and sufficient conditions.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 3,
+          "stimulus": "The Linwood Historical Archive holds several thousand maps, most of them donated by the families of nineteenth-century surveyors. Every map in the archive that was drawn before 1850 was colored by hand. None of the hand-colored maps in the archive has been digitized. So none of the archive's pre-1850 maps has been digitized.",
+          "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+          "choices": [
+            "Every ski instructor at Halden Peak has first-aid training. None of the resort's lift operators is a ski instructor. So none of the resort's lift operators has first-aid training.",
+            "Most of the Ardgour clinic's nurses speak Gaelic. None of the clinic's Gaelic speakers works the night shift. So most of the clinic's nurses do not work the night shift.",
+            "Every pot fired in the studio's wood kiln has an ash glaze. None of the studio's ash-glazed pots has been sold. So none of the pots fired in the studio's wood kiln has been sold.",
+            "Every cellist in the Ardmore Orchestra owns a carbon-fiber bow. Every orchestra member who owns a carbon-fiber bow tours abroad. So every cellist in the orchestra tours abroad.",
+            "No vessel in the Corran fleet has a steel hull. Every vessel with a steel hull must be inspected yearly. So no vessel in the Corran fleet must be inspected yearly."
+          ],
+          "answer": "C",
+          "types": [
+            "parallel"
+          ],
+          "tags": [
+            "ladder:parallel",
+            "conditional"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: match a quantified chain: all A are B; no B is C; therefore no A is C (valid). C has the identical structure and quantifiers. The most tempting trap is B, which is also valid and chains in the same direction, but it begins with 'most' and so concludes with 'most,' which is a different pattern. D is a valid all-all chain with a positive conclusion, while A and E are invalid chains that negate the wrong term.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 4,
+          "stimulus": "Corvane Peak resort trains all of its staff in basic first aid, but certification in avalanche rescue is optional. Most of the ski instructors at Corvane Peak are certified in avalanche rescue. Moreover, most of the Corvane Peak staff members who hold that certification work on the ski patrol. Therefore, most of Corvane Peak's ski instructors work on the ski patrol.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Most of the musicians in the Hollin Symphony live in the city, and most of the Hollin Symphony's musicians teach privately. Therefore, at least some of the Hollin Symphony's musicians both live in the city and teach privately.",
+            "Every rural clinic in Tarrow County has an on-site pharmacy, and most clinics with an on-site pharmacy stay open on weekends. Therefore, most of Tarrow County's rural clinics stay open on weekends.",
+            "Most of the maps in the Pell collection are engraved, and every engraved map in the Pell collection is signed. Therefore, most of the maps in the Pell collection are signed.",
+            "Most of the mushrooms the foraging club found were edible, and most of the club's edible finds were boletes. Therefore, most of the boletes the club found were edible.",
+            "Most members of the Wrenfield potters' guild sell at the summer craft fair, and most of the potters who sell at that fair use local clay. Therefore, most members of the Wrenfield guild use local clay."
+          ],
+          "answer": "E",
+          "types": [
+            "parallel-flaw"
+          ],
+          "tags": [
+            "ladder:parallel",
+            "conditional"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: the flaw is chaining two 'most' statements (most A are B; most B are C; so most A are C), which fails because the A's that are B may fall among the B's that are not C. E repeats exactly that chain. The strongest trap is B, which is also flawed, but its first premise is 'every' rather than 'most', so it differs by one quantifier and is a different pattern. A (most + most over the same group gives some overlap) and C (most + all gives most) are valid, which makes them attractive to anyone who matches only surface quantifiers, and D's conclusion reverses the terms instead of chaining them.",
+          "skills": [
+            "conditional"
+          ]
+        },
+        {
+          "number": 5,
+          "stimulus": "Under the Varnholt Data Code, any mobile app that collects users' location data must obtain each user's explicit consent, and any app that obtains explicit consent must keep a consent log open to regulators. Regulators have confirmed that the Trailmark hiking app keeps such a log. So Trailmark must have obtained explicit consent from its users, and it must therefore be collecting their location data.",
+          "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
+          "choices": [
+            "Under the Varnholt Data Code, any app that collects health data must encrypt it, and any app that encrypts user data must submit to an annual audit. The Pulsewise app collects health data. So Pulsewise must encrypt that data, and it must therefore submit to an annual audit.",
+            "Under Fenwick Studio's rules, any glaze containing copper must be fired in the reduction kiln, and any glaze fired in the reduction kiln must be tested for leaching. The studio's new crimson glaze has been tested for leaching. So it must have been fired in the reduction kiln, and it must therefore contain copper.",
+            "Under the Varnholt Data Code, any app that shares user data with advertisers must disclose that practice, and any app that discloses it must offer an opt-out. Trailmark does not share user data with advertisers. So it need not disclose any such practice, and it therefore need not offer an opt-out.",
+            "Under the Varnholt Data Code, any app that stores biometric data must appoint a privacy officer, and any app that appoints a privacy officer must file an annual report. The Gripline app has filed no annual report. So it has not appointed a privacy officer, and it therefore does not store biometric data.",
+            "Under Pinehollow's building code, any roof shingled with cedar must be treated with fire retardant, and any roof in the Pinehollow fire zone must be treated with fire retardant. The Aldane house is in the fire zone. So its roof must be treated with fire retardant, and it must therefore be shingled with cedar."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "tags": [
+            "ladder:parallel",
+            "conditional"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: diagram the stimulus as A->B, B->C; C is true; therefore B (an intermediate conclusion that affirms the consequent), therefore A (affirming the consequent again). B reproduces both reversed steps link for link, despite its unrelated topic. The most tempting trap is E, which copies the wording and two-step shape but has one link reversed (the fire-zone premise runs C->B, not B->C), so its first inference is valid and only its second is flawed; that is a different pattern. A, C and D deliberately share the stimulus's data-privacy vocabulary, but A is a valid forward chain, D is a valid contrapositive chain, and C commits a different flaw (denying the antecedent).",
+          "skills": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "kind": "LR",
+      "title": "Argument Structure",
+      "timeLimitMinutes": 8,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Fluoride varnish should be offered to every child at the Brightwater school dental screenings. The varnish takes less than a minute to apply, and the hygienists who already staff the screenings can apply it without any additional training. Furthermore, in a two-year trial at three Brightwater schools, children who received the varnish developed far fewer cavities than children who did not.",
+          "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+          "choices": [
+            "Applying fluoride varnish takes little time and requires no additional training for the screening hygienists.",
+            "Every child at the Brightwater school dental screenings should be offered fluoride varnish.",
+            "Children who received fluoride varnish in a two-year trial developed far fewer cavities than children who did not.",
+            "The hygienists who staff the Brightwater screenings are trained to perform most dental procedures.",
+            "Fluoride varnish is the most effective available means of preventing cavities in children."
+          ],
+          "answer": "B",
+          "types": [
+            "main-conclusion"
+          ],
+          "tags": [
+            "ladder:structure"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: identifying a conclusion stated in the first sentence, with the support following it. Everything after the first sentence gives reasons (speed, no extra training, trial results) for offering the varnish, so B is the conclusion. The tempting trap is C, the most striking piece of evidence; it is tempting because it sounds like a finding, but it is offered to support the recommendation, not drawn from it. A is also a premise, D distorts it, and E is far stronger than anything stated.",
+          "skills": []
+        },
+        {
+          "number": 2,
+          "stimulus": "Some members of the Ashby town council argue that the town no longer needs a local newspaper, since residents can follow council business on the council’s own website. Nonetheless, the Ashby Herald should keep the town’s legal-notice contract, which is the paper’s main source of steady income. The council’s website reports only what the council chooses to publish, whereas Herald reporters have twice uncovered budget errors that the council’s own summaries omitted. A town that relies solely on its government’s account of itself has no independent check on that government.",
+          "stem": "Which one of the following most accurately describes the role played in the argument by the claim that the council’s website reports only what the council chooses to publish?",
+          "choices": [
+            "It is the argument’s main conclusion.",
+            "It is a view the argument attributes to some council members and then rejects.",
+            "It is an intermediate conclusion supported by the claim that Herald reporters have uncovered budget errors.",
+            "It is offered as support for the claim that the Herald should keep the town’s legal-notice contract.",
+            "It is a concession that the council’s website provides residents with some useful information."
+          ],
+          "answer": "D",
+          "types": [
+            "role"
+          ],
+          "tags": [
+            "ladder:structure"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: finding a conclusion placed mid-paragraph after an opposing view, then classifying a claim relative to it. The main conclusion is the second sentence (the Herald should keep the contract); the claim about the website is one of the reasons offered for it, so D. The tempting trap is B, because the website is first raised by the council members; but their view is that the town no longer needs a paper, and the claim in question is the author’s own point against them. Nothing in the argument supports the claim (ruling out C), and it is a criticism of the website, not a concession (E).",
+          "skills": []
+        },
+        {
+          "number": 3,
+          "stimulus": "Many glaciologists hold that the dark bands visible in the Serren Icefield are layers of volcanic ash, since the icefield lies downwind of two active volcanoes. However, the bands are more likely to be dust deposited during unusually dry summers. Chemical analysis of samples from the bands found none of the tiny glass shards that volcanic ash invariably contains, and the spacing of the bands matches the record of drought years kept at the nearby Lisk weather station.",
+          "stem": "The argument proceeds by",
+          "choices": [
+            "showing that the evidence cited in support of a rival view is inaccurate",
+            "rejecting a view because those who hold it rely on an unrepresentative sample",
+            "citing the authority of experts to defend an explanation against an objection",
+            "concluding that the bands cannot be volcanic ash because there is no proof that they are",
+            "favoring one explanation over another by noting a predicted feature that is absent and an observation that fits"
+          ],
+          "answer": "E",
+          "types": [
+            "method"
+          ],
+          "tags": [
+            "ladder:structure"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: describing an argument whose conclusion follows ‘however’ and rejects a stated opposing view. The author prefers the dust explanation because ash would leave glass shards (absent) and because band spacing matches drought years (fits), which is E. The tempting trap is A: the argument does reject the glaciologists’ view, but it never disputes their evidence (the icefield really is downwind of volcanoes); it argues that other evidence outweighs it. D misstates both the strength (‘cannot’ vs ‘more likely’) and the reasoning, since the absence of shards is positive evidence, not mere lack of proof.",
+          "skills": []
+        },
+        {
+          "number": 4,
+          "stimulus": "Some chess coaches insist that beginners should memorize opening variations before studying anything else, because many beginners’ games are lost within the first dozen moves. Beginners do lose many games early. Nevertheless, these coaches have the order of instruction backward. Beginners’ early losses rarely result from not knowing named variations; they result from leaving pieces undefended, a habit that tactical puzzles correct far more efficiently than opening study does. Every hour a beginner spends memorizing variations is therefore an hour taken from the very training that would prevent those early losses.",
+          "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the argument?",
+          "choices": [
+            "Coaches are mistaken to have beginners memorize opening variations before studying other aspects of the game.",
+            "Time that beginners spend memorizing opening variations is time taken from the training that would best prevent their early losses.",
+            "Beginners’ early losses are usually caused by leaving pieces undefended rather than by ignorance of opening variations.",
+            "Many games played by beginners are lost within the first dozen moves.",
+            "Beginners should not study opening variations at any stage of their chess training."
+          ],
+          "answer": "A",
+          "types": [
+            "main-conclusion"
+          ],
+          "tags": [
+            "ladder:structure"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: separating a mid-paragraph main conclusion from an intermediate conclusion that comes last. ‘These coaches have the order of instruction backward’ is the claim everything else supports, and A restates it. The strongest trap is B, the final sentence flagged by ‘therefore’: it is a conclusion, but it is drawn in order to show the coaches’ ordering is wrong, so it is intermediate. C is a premise supporting B, D is a concession, and E is too strong, since the argument objects only to putting openings first.",
+          "skills": []
+        },
+        {
+          "number": 5,
+          "stimulus": "Advocates of the proposed Varnet Act claim that extending copyright from 70 to 95 years after an author’s death will spur the creation of new works. But is there any reason to expect it to spur anything at all? An incentive can influence a decision only if the person deciding gives it some weight, and authors deciding whether to undertake a book give no weight to royalties that would begin accruing seven decades after their deaths. To be sure, the extension would enrich publishers who hold rights to older titles. Those titles, however, already exist, so whatever the extension does for them, it cannot have induced their creation.",
+          "stem": "Which one of the following most accurately describes the role played in the argument by the claim that the extension would enrich publishers who hold rights to older titles?",
+          "choices": [
+            "It is a premise offered in support of the argument’s conclusion that the extension would not spur the creation of new works.",
+            "It is presented as evidence that advocates of the extension are motivated by a desire to benefit publishers rather than authors.",
+            "It acknowledges a consequence of the extension that the argument goes on to maintain is not the benefit the extension’s advocates predict.",
+            "It is an intermediate conclusion that the argument supports by observing that the older titles already exist.",
+            "It is a claim that the argument attributes to the extension’s advocates and then rejects on the grounds that authors disregard distant royalties."
+          ],
+          "answer": "C",
+          "types": [
+            "role"
+          ],
+          "tags": [
+            "ladder:structure"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: locating a main conclusion stated as a rhetorical question (the extension gives no reason to expect new works) and then classifying a concession. ‘To be sure’ introduces an effect the author grants, and the next sentence neutralizes it: enriching holders of existing titles cannot have induced those titles’ creation, so it is not the predicted spur to new works (C). The most tempting trap is A, which correctly identifies the main conclusion but wrongly treats the concession as support; enriching publishers does nothing to show new works won’t be spurred, which is why the author must answer it. B imputes a motive the argument never discusses, D reverses the relationship (the ‘already exist’ point answers the claim rather than supporting it), and E is wrong because the advocates claim new works will be spurred, not that publishers will be enriched.",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "id": "rc-ladder",
+      "kind": "RC",
+      "title": "Reading Comprehension Ladder",
+      "timeLimitMinutes": 30,
+      "passages": [
+        {
+          "id": "p1",
+          "title": "Marrowfield's Four-Day School Week",
+          "text": "Three years ago, the school district in the town of Marrowfield moved from a five-day to a four-day school week. Students now attend Monday through Thursday, and each school day has been lengthened by seventy minutes so that total instructional time is nearly unchanged. The district's main motive was financial: by closing its buildings on Fridays, it expected to save on heating, transportation, and substitute teachers.\n\nBy most measures, the change has worked. The district saved roughly six percent of its operating budget in the first year, and it used much of that money to raise teacher salaries, which had lagged behind those in neighboring districts. Teacher turnover, which had been the highest in the region, fell by nearly half. Test scores have stayed about where they were before the switch, neither rising nor falling noticeably.\n\nThe change has not been costless, however. Families in which every parent works on Fridays have had to find child care for that day, and for lower-income households this expense can consume a large share of the family budget. A town survey found that these families were far less satisfied with the new schedule than other families were. Marrowfield should therefore keep the four-day week but use part of its savings to fund supervised Friday programs at its schools, so that the benefits of the change are not purchased at the expense of the families least able to absorb its costs."
+        },
+        {
+          "id": "p2",
+          "title": "The Sculptor Ilse Varnholt",
+          "text": "For the first two decades of her career, the sculptor Ilse Varnholt worked almost exclusively in marble. Her pieces from this period—smooth, heavy torsos and slowly folding abstract forms—were carved over many months in a studio outside the port town of Kessling, and collectors prized them for their polish and their permanence. Varnholt herself described the work as an effort to “hold still” forms that seemed to her always on the verge of moving.\n\nIn 1994 a flood swept through her studio, destroying most of her tools and several unfinished pieces. When she resumed working two years later, she had abandoned stone entirely. Her new sculptures were built from unfired river clay and placed outdoors, along the very riverbank that had flooded, where rain and current gradually wore them away. Some lasted a season; a few dissolved within weeks. Varnholt photographed each piece at regular intervals until nothing of it remained.\n\nMost critics treated this shift as a rupture, a renunciation of everything her marble work had stood for. Yet that reading overlooks how much the two bodies of work share. The marble pieces were never really about permanence: their surfaces were carved to suggest motion arrested mid-gesture, and Varnholt left visible chisel marks on many of them as a record of the hours of labor they contained. The clay works simply reverse the direction of the same inquiry. Rather than recording the time that went into making a form, they record the time it takes for a form to be unmade. What changed after the flood was not Varnholt's subject but the role she assigned to time—from something the sculptor spends on the work to something the world spends on it."
+        },
+        {
+          "id": "p3",
+          "title": "Legal Rights in Digital Avatars",
+          "text": "As online platforms allow users to build detailed digital avatars—animated figures that may reproduce a user's face, voice, and mannerisms—courts and legislatures have begun to confront a question that existing law did not anticipate: who holds rights in an avatar? Platforms have generally answered through their terms of service, which typically grant the platform a broad license to use, modify, and retain anything users create on it. Under this contractual approach, a user who leaves a platform may find that a replica of her own face continues to appear in its promotional materials.\n\nTwo alternatives have been proposed. The first treats an avatar as property belonging to the user who created it, much as a manuscript belongs to its author. Advocates of this view argue that it would let users transfer, sell, or delete their avatars as they choose. But the property model fits awkwardly with how avatars are actually made. Most avatars are assembled from templates, textures, and animation routines supplied by the platform, so the user's creative contribution is often slight; a property claim grounded in authorship would frequently give the user little or nothing.\n\nThe second alternative extends the right of publicity—the long-standing legal right of individuals to control commercial use of their name and likeness—to cover avatars that resemble their users. This approach does not depend on who authored an avatar's components; it protects the person the avatar depicts. Its proponents note that it would forbid precisely the practice that most troubles users: commercial exploitation of their likenesses after they have left a platform.\n\nThe publicity approach is the more promising of the two, but it has a limit its proponents rarely acknowledge. Many users deliberately build avatars that look nothing like themselves—a dragon, a cartoon fox, an idealized stranger. Such an avatar may carry a user's reputation as surely as a face does, especially in a community where the user has been known for years only by that figure; yet because it does not depict the user's likeness, the right of publicity as traditionally understood would not reach it. Any adequate legal regime will need some way of protecting identities that are built rather than inherited."
+        },
+        {
+          "id": "p4",
+          "title": "The Color of Lake Teskel",
+          "text": "For most of the twentieth century, Lake Teskel, a small alpine lake fed by the Orvald Glacier, was a pale, milky turquoise. Over the past fifteen years it has turned a deep blue-green. Two research groups have offered competing explanations for the change, and their dispute has become a minor proxy for a larger disagreement about how mountain lakes respond to a warming climate.\n\nThe hydrologist Mara Brandt and her colleagues attribute the change to the retreat of the Orvald Glacier. Glaciers grind bedrock into an extremely fine sediment, often called glacial flour, which meltwater carries into lakes; suspended in the water, these particles scatter light and produce the characteristic milky turquoise of glacier-fed lakes. As the Orvald has shrunk and its meltwater stream has shifted course, Brandt's group reports, the concentration of suspended sediment in Teskel has fallen by more than half. On their account, the lake is simply taking on the color that clear mountain water would have anyway.\n\nThe limnologist Tomas Ehrlund disputes this. Clear water, he notes, would be blue rather than blue-green; the green tint indicates phytoplankton, and his group's samples show chlorophyll concentrations roughly triple their levels of the 1990s. Ehrlund attributes the growth to warmer surface temperatures, which lengthen the season in which algae can multiply. Brandt's group, in reply, points out that the tripled concentrations are still low by the standards of lowland lakes and doubts that they could account for so marked a change in color.\n\nEach side, it seems to me, has been too quick to treat the other's explanation as a rival rather than a partner. Glacial flour does more than tint the water: by scattering and absorbing light near the surface, it limits how deeply sunlight penetrates, and thus how much of the water column can support photosynthesis. A sharp decline in sediment would therefore by itself tend to promote algal growth, warming or no warming. If so, much of the chlorophyll increase Ehrlund documents may be a consequence of the very change Brandt identifies. This does not make warming irrelevant—Ehrlund's seasonal data suggest that it has lengthened the growing season—but it does mean that his chlorophyll measurements cannot, by themselves, establish warming as an independent cause of the change in color.\n\nAdmittedly, neither group has yet measured light penetration in the lake directly, and until someone does, this reconciliation remains a hypothesis rather than a finding. But it has the virtue of explaining both the loss of milkiness and the appearance of green, which neither account, taken alone, manages to do."
+        },
+        {
+          "id": "p5",
+          "title": "Counterfactuals as Historical Evidence",
+          "text": "Historians routinely make claims about what would have happened had things gone otherwise: that a treaty, if signed a year earlier, would have averted a war; that a dynasty would have remained secure had a harvest not failed. The philosopher Henrike Lasz has argued that such claims, however useful as rhetoric, can never function as evidence. Evidence, on her view, must be something that could in principle be observed, and a course of events that did not occur is by its nature unobservable. A counterfactual can thus be the conclusion of a historical argument—something one infers—but never a premise that lends support to some further claim.\n\nDefenders of counterfactual history have generally replied by pointing to formal models. The economic historian Dov Arranz, for instance, has estimated what a region's grain output would have been without a particular canal by modeling transport costs, and he treats the resulting figure as evidence of the canal's importance. Lasz's response is that Arranz's figure is only as good as the assumptions built into his model, and that those assumptions have never been tested against any observation of a world without the canal.\n\nLasz is right about this, but less follows from it than she supposes. Every inference from evidence relies on assumptions not tested against the very case at hand: a historian who dates a manuscript by its ink relies on assumptions about how inks age that were established on other documents. That Arranz's assumptions are untested against the counterfactual world is therefore not what distinguishes his figure from ordinary evidence. What does distinguish it is subtler. The ink-dating historian's assumptions were tested on cases in which the outcome they predict was eventually observed; Arranz's model, by contrast, can be calibrated only against the world in which the canal was built.\n\nThis suggests that the dispute has been mislocated. The question is not whether counterfactuals may serve as premises—once adequately supported, any claim may—but whether the support for a given counterfactual ever reaches beyond the single history we have. Where a counterfactual rests on regularities observed across many comparable cases—how harvest failures have affected many dynasties, say—it can carry genuine evidential weight, not because it describes something observed but because the regularity it applies was observed. Where it rests only on a model fitted to the one case under study, it adds nothing that the model's inputs did not already contain, and treating it as independent evidence counts the same information twice.\n\nNone of this vindicates counterfactual history wholesale, and Arranz's canal estimate, as it happens, falls on the wrong side of the line. But Lasz's criterion, which would disqualify every counterfactual alike, cannot distinguish the cases in which historians are genuinely learning something from those in which they are merely restating their assumptions."
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Marrowfield's four-day school week has saved the district money, but it has harmed student achievement.",
+            "Marrowfield's switch to a four-day school week was motivated mainly by a desire to raise teacher salaries.",
+            "Marrowfield's four-day week has largely succeeded, but the town should use some of its savings to ease its burden on certain families.",
+            "Four-day school weeks reduce teacher turnover and should be adopted by districts that have difficulty retaining teachers.",
+            "Marrowfield should return to a five-day school week because lower-income families cannot afford child care on Fridays."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-main-point"
+          ],
+          "tags": [
+            "ladder:rc-big-picture"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: find the claim the whole passage builds toward, here the recommendation in the last sentence together with the overall verdict that the change has worked. C captures both halves: the change has worked, and the town should fund Friday programs for the families it burdens. The most tempting trap is E, because the third paragraph dwells on the child-care burden; but the author explicitly says Marrowfield should keep the four-day week, so E reverses the recommendation. A contradicts the passage's statement that test scores have held steady."
+        },
+        {
+          "number": 2,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "According to the passage, which one of the following occurred after Marrowfield adopted the four-day school week?",
+          "choices": [
+            "Teacher turnover in the district declined substantially.",
+            "Test scores in the district rose noticeably.",
+            "The district reduced its total instructional time by about one-fifth.",
+            "The district closed its schools on Mondays to save on heating costs.",
+            "Teacher salaries in the district fell below those in neighboring districts."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-detail"
+          ],
+          "tags": [
+            "ladder:rc-detail"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: locate a stated fact. The second paragraph says turnover 'fell by nearly half,' which A restates. The most tempting trap is C, because dropping one day of five sounds like losing one-fifth of class time; but the passage says each day was lengthened by seventy minutes so that total instructional time is 'nearly unchanged.' E reverses the salary facts, since salaries were raised from below those of neighboring districts."
+        },
+        {
+          "number": 3,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that the author would most likely agree with which one of the following statements?",
+          "choices": [
+            "The savings produced by the four-day week were too small to justify the inconvenience it has caused families.",
+            "The lengthened school day is the main reason test scores in Marrowfield have remained stable.",
+            "Families in which a parent is at home on Fridays are generally dissatisfied with the new schedule.",
+            "The district should stop using its savings to raise teacher salaries.",
+            "A policy that benefits a community overall can place a disproportionate burden on some members, which the community should try to lessen."
+          ],
+          "answer": "E",
+          "types": [
+            "rc-inference"
+          ],
+          "tags": [
+            "ladder:rc-inference"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: infer the general principle behind the author's recommendation. The author praises the change overall yet asks the town to protect 'the families least able to absorb its costs,' which is exactly the principle in E. The most tempting trap is B: the passage mentions both the longer day and the stable scores, but it never says one caused the other. C misreads the survey, which found working families less satisfied than other families, and D goes beyond the author's request to use only 'part' of the savings."
+        },
+        {
+          "number": 4,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author's attitude toward Marrowfield's four-day school week is best described as",
+          "choices": [
+            "unqualified enthusiasm for the change",
+            "approval tempered by concern about its effects on certain families",
+            "reluctant acceptance of a policy the author considers mostly harmful",
+            "neutral detachment, offering no evaluation of the policy",
+            "strong disapproval, softened only by recognition of its financial savings"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "tags": [
+            "ladder:rc-author"
+          ],
+          "difficulty": 1,
+          "explanation": "Core move: match both the direction and the strength of the author's view. The author says 'by most measures, the change has worked' and wants to keep it, but also says it 'has not been costless' for some families; B captures that qualified approval. The most tempting trap is A, since the author clearly favors the policy; but the third paragraph's concern and proposed remedy rule out 'unqualified.' C and E get the direction wrong, and D ignores the explicit recommendation."
+        },
+        {
+          "number": 5,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following best describes the organization of the passage?",
+          "choices": [
+            "Two phases of an artist's career are described, and the author argues that the later phase is artistically superior to the earlier one.",
+            "A change in an artist's practice is described, its cause is debated, and the author concludes that the cause cannot be determined.",
+            "An artist's early work is described, critics' praise of that work is summarized, and the author explains why that praise was misplaced.",
+            "A change in an artist's practice is described, and the author endorses the prevailing critical account of that change while adding further evidence for it.",
+            "An artist's earlier and later practices are described, and the author then challenges a common interpretation of the change by identifying a continuity between them."
+          ],
+          "answer": "E",
+          "types": [
+            "rc-structure"
+          ],
+          "tags": [
+            "ladder:rc-big-picture"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: track what each paragraph does, especially the turn signaled by 'Yet.' Paragraphs one and two describe the marble and clay periods; paragraph three rejects the critics' 'rupture' reading by showing that both bodies of work concern time, which is E. The most tempting trap is D, which correctly notes a prevailing critical account but reverses the author's relation to it: the author challenges it rather than endorsing it. A is wrong because the author never ranks the two phases."
+        },
+        {
+          "number": 6,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "According to the passage, Varnholt's clay sculptures",
+          "choices": [
+            "were fired in a kiln so that they could withstand outdoor conditions for at least a season",
+            "were produced in the same studio near Kessling in which she had carved her marble pieces",
+            "were carved to suggest motion arrested mid-gesture, as her marble pieces had been",
+            "were photographed at intervals over the course of their deterioration",
+            "were placed along the riverbank in order to protect them from future flooding"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-detail"
+          ],
+          "tags": [
+            "ladder:rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: find the detail and reject phrases borrowed from elsewhere in the passage. The second paragraph says Varnholt photographed each clay piece 'at regular intervals until nothing of it remained,' which D paraphrases. The most tempting trap is C, which quotes the passage's own words, but 'motion arrested mid-gesture' describes the marble pieces, not the clay ones. A contradicts 'unfired,' and E reverses the point: the pieces were placed there so that the water would wear them away."
+        },
+        {
+          "number": 7,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Based on the passage, the author would most likely agree with which one of the following statements about Varnholt's marble works?",
+          "choices": [
+            "They were valued by collectors chiefly because they showed visible traces of the labor that produced them.",
+            "Their appeal to collectors rested partly on a quality that, in the author's view, was not central to what the works were about.",
+            "They addressed the theme of time less successfully than her later clay works did.",
+            "They were completed more quickly than her later clay works were.",
+            "Most of them were destroyed in the 1994 flood that struck her studio."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "tags": [
+            "ladder:rc-inference"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: combine two paragraphs. The first says collectors prized the marble pieces for their 'polish and their permanence'; the third says those pieces 'were never really about permanence.' Together these yield B. The most tempting trap is A, which uses the passage's chisel-mark detail but attaches it to the wrong party: the author, not the collectors, sees the marks as a record of labor. C invents a comparison the author never makes, and E overstates the flood damage, which the passage limits to 'several unfinished pieces.'"
+        },
+        {
+          "number": 8,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author mentions the visible chisel marks on many of Varnholt's marble pieces primarily in order to",
+          "choices": [
+            "illustrate the polish that collectors prized in her early work",
+            "suggest that many of her marble pieces were left unfinished",
+            "support the claim that her marble work was concerned with time rather than with permanence",
+            "explain why critics regarded her turn to clay as a rupture",
+            "show that Varnholt valued technical skill above expressive content"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-function"
+          ],
+          "tags": [
+            "ladder:rc-author"
+          ],
+          "difficulty": 2,
+          "explanation": "Core move: identify the role a detail plays in the author's argument. The chisel marks appear right after the claim that the marble pieces 'were never really about permanence,' as evidence that they record 'the hours of labor they contained,' that is, time spent. So C is right. The most tempting trap is B, which borrows 'unfinished' from the flood paragraph, but visible tool marks were a deliberate choice, not a sign of incompleteness. A is the opposite of the point, since chisel marks work against polish."
+        },
+        {
+          "number": 9,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "The publicity approach is preferable to the property model, but as traditionally understood it would not protect identities carried by avatars that do not resemble their users.",
+            "The right of publicity should replace platforms' terms of service as the basis for determining rights in avatars, because it protects users regardless of who authored an avatar's components.",
+            "Treating avatars as users' property would give users the greatest control over their avatars, but it would conflict with the licenses granted to platforms by their terms of service.",
+            "Because most avatars are assembled from templates and routines supplied by platforms, the platforms rather than the users should hold the rights in them.",
+            "Existing law is incapable of resolving disputes over avatars, so legislatures must create an entirely new category of rights to govern them."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-main-point"
+          ],
+          "tags": [
+            "ladder:rc-big-picture"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: state the author's conclusion with its qualification intact. The final paragraph ranks the publicity approach above the property model and then names its limit, so A captures both parts. The most tempting trap is B, which gets the preference right but drops the limit, and the final paragraph exists precisely to state that limit. E inflates the last sentence: the author calls for 'some way' of protecting built identities, not a wholly new body of law, and never says existing law can resolve nothing."
+        },
+        {
+          "number": 10,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "According to the passage, advocates of the property model claim that it would",
+          "choices": [
+            "protect users whose avatars bear no resemblance to them",
+            "prevent platforms from supplying templates and animation routines to users",
+            "allow users to dispose of their avatars as they see fit",
+            "protect the person an avatar depicts regardless of who authored the avatar's components",
+            "reflect the way in which most avatars are actually made"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-detail"
+          ],
+          "tags": [
+            "ladder:rc-detail"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: match a paraphrase to the correct party's claim. Advocates say the model would let users 'transfer, sell, or delete their avatars as they choose,' which C restates as disposing of them as users see fit. The most tempting trap is D, which nearly quotes the passage, but that is the description of the publicity approach in the third paragraph. E reverses the author's objection that the property model 'fits awkwardly with how avatars are actually made,' and A is the author's own concern about the publicity approach."
+        },
+        {
+          "number": 11,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Based on the passage, the author would most likely say that a user who has assembled a cartoon-fox avatar entirely from a platform's stock templates, and who has been known in an online community only by that avatar for years,",
+          "choices": [
+            "would be adequately protected under the right of publicity, since the avatar carries the user's reputation",
+            "would have a strong claim under the property model, since the avatar has come to represent the user",
+            "has no interest in the avatar that the law ought to recognize",
+            "would gain little protection from either proposed alternative, despite having an interest that the author believes the law should protect",
+            "would be better protected under the platform's terms of service than under the right of publicity"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-inference"
+          ],
+          "tags": [
+            "ladder:rc-inference"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: apply two paragraphs to one new case. The second paragraph implies that a user whose creative contribution is slight gets 'little or nothing' under the authorship-based property model, and the fourth says the traditional right of publicity would not reach a non-resembling avatar, though the author thinks such identities need protection; D combines both. The most tempting trap is A, because the author says such an avatar 'may carry a user's reputation as surely as a face does'; but the author says that to show a gap in the publicity right, not to show that it covers this user. C reverses the author's view."
+        },
+        {
+          "number": 12,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately describes the author's attitude toward the publicity approach?",
+          "choices": [
+            "wholehearted endorsement of it as a complete solution to the problem of avatar rights",
+            "skepticism that it would actually prevent platforms from using users' likenesses after they leave",
+            "preference for it over the contractual approach, but not over the property model",
+            "rejection of it on the grounds that it ignores who authored an avatar's components",
+            "qualified approval, combined with the view that it is incomplete"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "tags": [
+            "ladder:rc-author"
+          ],
+          "difficulty": 3,
+          "explanation": "Core move: measure the author's exact degree of commitment. The author calls the publicity approach 'the more promising of the two' but says it 'has a limit,' which is qualified approval of an incomplete approach, as in E. The most tempting trap is A, since the author does prefer the approach, but 'complete solution' contradicts the limit the final paragraph identifies. D turns a strength into an objection: the approach's independence from authorship is something the author presents neutrally, as a feature, and C reverses the ranking."
+        },
+        {
+          "number": 13,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "The change in Lake Teskel's color is due primarily to the retreat of the Orvald Glacier and the resulting loss of suspended sediment, rather than to rising surface temperatures.",
+            "Ehrlund's chlorophyll measurements show that warming has been an independent cause of the change in Lake Teskel's color.",
+            "Neither the decline in glacial sediment nor the growth of phytoplankton can explain the change in Lake Teskel's color.",
+            "The two explanations for the lake's change in color are better seen as connected than as competing, since the decline in sediment may itself have promoted the algal growth Ehrlund emphasizes.",
+            "Until light penetration in Lake Teskel is measured directly, no explanation of the change in its color should be preferred to any other."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-main-point"
+          ],
+          "tags": [
+            "ladder:rc-big-picture"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: recognize that the author's thesis reframes the debate rather than picking a winner, and keep its hedges. The fourth paragraph opens by calling the explanations partners rather than rivals and argues that the sediment decline may drive algal growth, which is D. The strongest trap is A: the reconciliation does make the glacier's retreat look more basic, but the author never says 'primarily,' grants that warming has lengthened the growing season, and rejects the 'rather than' framing. E inflates the concession: the author grants that the proposal is unconfirmed but still argues that it has an explanatory advantage, so the author does not hold all explanations equal."
+        },
+        {
+          "number": 14,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "According to the passage, which one of the following is a claim made by Brandt's group?",
+          "choices": [
+            "Warmer surface temperatures have lengthened the season in which algae can multiply in Lake Teskel.",
+            "Phytoplankton concentrations that remain low by the standards of lowland lakes are unlikely to account for so pronounced a change in Lake Teskel's color.",
+            "A decline in suspended sediment would by itself tend to promote algal growth in Lake Teskel.",
+            "Clear mountain water would be blue rather than blue-green.",
+            "The Orvald Glacier's meltwater stream has carried more glacial flour into Lake Teskel as the glacier has retreated."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-detail"
+          ],
+          "tags": [
+            "ladder:rc-detail"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: attribute each claim to the right party when three voices share the same vocabulary. B paraphrases Brandt's reply that the tripled concentrations 'are still low by the standards of lowland lakes' and that they doubt such levels 'could account for so marked a change.' The most tempting trap is D: Brandt's group does speak of the color 'clear mountain water would have,' but the specific claim that clear water would be blue rather than blue-green is Ehrlund's objection to Brandt. C is the author's own claim and A is Ehrlund's, while E reverses Brandt's report that sediment has fallen."
+        },
+        {
+          "number": 15,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that the author would most likely agree with which one of the following statements?",
+          "choices": [
+            "Ehrlund's chlorophyll data are less damaging to Brandt's explanation than Ehrlund takes them to be.",
+            "Brandt's group is correct that the tripled chlorophyll concentrations are too low to affect the color of Lake Teskel.",
+            "Warming has had no measurable effect on the length of the algal growing season in Lake Teskel.",
+            "The loss of Lake Teskel's milkiness is better explained by Ehrlund's account than by Brandt's.",
+            "If light penetration in Lake Teskel were measured and found to be unchanged, Brandt's account of the lake's color change would be refuted."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-inference"
+          ],
+          "tags": [
+            "ladder:rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: combine Ehrlund's use of the data in the third paragraph with the author's reinterpretation of it in the fourth. Ehrlund offers the chlorophyll rise as evidence against Brandt, but the author argues that 'much of the chlorophyll increase' may be caused by Brandt's own mechanism, so the data fit her account better than Ehrlund assumes; that is A, stated indirectly. The most tempting trap is B, since the author does treat Ehrlund's data cautiously; but the author's reconciliation credits the algae with 'the appearance of green,' so the author thinks they do affect the color. E is a near miss: unchanged light penetration would undercut the author's proposed link, not Brandt's sediment account of the lost milkiness."
+        },
+        {
+          "number": 16,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately describes the function of the first sentence of the last paragraph (the sentence beginning 'Admittedly')?",
+          "choices": [
+            "It casts doubt on the sediment measurements reported by Brandt's group.",
+            "It indicates that the author's proposed reconciliation should be abandoned unless further evidence is found.",
+            "It suggests that both research groups have neglected a measurement that would decide which of their accounts is correct.",
+            "It acknowledges that a link on which the author's proposal depends has not yet been empirically confirmed.",
+            "It identifies a reason for preferring Ehrlund's account to Brandt's."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-function"
+          ],
+          "tags": [
+            "ladder:rc-author"
+          ],
+          "difficulty": 4,
+          "explanation": "Core move: identify a concession and its exact target. The author's reconciliation depends on sediment limiting light penetration, and the sentence admits that light penetration has not been measured, so the proposal 'remains a hypothesis'; D describes this. The strongest trap is C: the sentence does say neither group has made the measurement, but that measurement would test the author's link between the accounts, and the author denies that they are rivals to be decided between. B overstates the concession, which the next sentence immediately follows by defending the hypothesis."
+        },
+        {
+          "number": 17,
+          "passageId": "p5",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Lasz is mistaken in holding that counterfactual claims are unobservable, since counterfactuals grounded in regularities across many cases describe events that were in fact observed.",
+            "A counterfactual's evidential value depends not on its unobservability but on whether its support reaches beyond the single case studied, a distinction Lasz's criterion misses.",
+            "Lasz is right that counterfactual claims can never serve as premises, but she is wrong to deny that Arranz's canal estimate has evidential value.",
+            "Because every inference relies on assumptions untested against the case at hand, counterfactual claims are as legitimate as evidence as any other historical claims.",
+            "Formal models such as Arranz's provide the most reliable means by which historians can support counterfactual claims."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-main-point"
+          ],
+          "tags": [
+            "ladder:rc-big-picture"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: separate the author's thesis from the intermediate steps and from the views attributed to others. The author argues that the real question is whether a counterfactual's support 'reaches beyond the single history we have' and ends by faulting Lasz's criterion for being unable to make that distinction, which is B. The strongest trap is D: the third paragraph's point about untested assumptions is the author's, but it is only an intermediate step, and the final paragraph says 'none of this vindicates counterfactual history wholesale.' A uses the passage's own words in the wrong relationship, since the author says such a counterfactual carries weight 'not because it describes something observed' but because the regularity it applies was observed. C reverses both of the author's positions."
+        },
+        {
+          "number": 18,
+          "passageId": "p5",
+          "stimulus": "",
+          "stem": "According to the passage, the assumptions underlying the ink-dating historian's inference differ from those underlying Arranz's model in that the former",
+          "choices": [
+            "were tested against the particular manuscript that the historian is attempting to date",
+            "have not been tested against the very case to which they are applied",
+            "derive from a model calibrated against the world as it actually developed",
+            "rest on regularities observed in the histories of many dynasties",
+            "were confirmed in instances where the result they would predict could later be checked"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-detail"
+          ],
+          "tags": [
+            "ladder:rc-detail"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: answer the exact question asked, which is a difference and not a similarity, and match a paraphrase. The passage says the ink-dater's assumptions 'were tested on cases in which the outcome they predict was eventually observed,' while Arranz's model can be calibrated only against the actual world; E paraphrases the first half of that contrast. The strongest trap is B, which is true of the ink-dater's assumptions but is a feature the author says they share with Arranz's ('every inference' relies on such assumptions), so it cannot be the difference. A contradicts the passage, C describes Arranz's model, and D moves the harvest example from the fourth paragraph into the wrong comparison."
+        },
+        {
+          "number": 19,
+          "passageId": "p5",
+          "stimulus": "",
+          "stem": "It can be inferred from the passage that both the author and Lasz would accept which one of the following?",
+          "choices": [
+            "A counterfactual claim can serve as a premise in a historical argument provided that it has been adequately supported.",
+            "Counterfactuals grounded in regularities observed across many comparable cases can carry genuine evidential weight.",
+            "Arranz's estimate of the region's grain output without the canal should not be treated as independent evidence of the canal's importance.",
+            "Every inference from evidence relies on assumptions that have not been tested against the case at hand.",
+            "The untested assumptions built into Arranz's model are what distinguish his figure from ordinary evidence."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-inference"
+          ],
+          "tags": [
+            "ladder:rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: find the claim two parties share for different reasons, using the first and second paragraphs for Lasz and the fourth and fifth for the author. Lasz holds that no counterfactual can be evidence, so she would reject Arranz's figure as evidence of any kind; the author says the estimate 'falls on the wrong side of the line,' where treating a counterfactual 'as independent evidence counts the same information twice.' Only C follows from both views. The strongest trap is A, which is the author's explicit view ('once adequately supported, any claim may'), but it is exactly what Lasz denies. E is Lasz's implicit position, which the author expressly rejects, and B and D are the author's views alone."
+        },
+        {
+          "number": 20,
+          "passageId": "p5",
+          "stimulus": "",
+          "stem": "The author's attitude toward Lasz's position is best described as",
+          "choices": [
+            "endorsement of her verdict on one particular case, together with a denial that her standard tracks the distinction that actually matters",
+            "acceptance of her criterion for what counts as evidence, together with doubt that it applies to estimates derived from formal models",
+            "rejection of her claim that Arranz's assumptions are untested, together with agreement that counterfactuals cannot be premises",
+            "broad agreement with her conclusions, qualified by concern that she has overstated the importance of observability in a few cases",
+            "agreement that counterfactuals can never be evidence, together with the view that they are nonetheless indispensable to historical argument"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "tags": [
+            "ladder:rc-author"
+          ],
+          "difficulty": 5,
+          "explanation": "Core move: measure a split attitude, agreeing on an outcome while rejecting the reasoning behind it. The author grants that 'Lasz is right about this' and that Arranz's estimate fails, but says her criterion 'cannot distinguish' the cases that matter, which is the indirectly worded A. The strongest trap is D, which sounds suitably moderate, but the author does not broadly agree with Lasz's conclusions: the author rejects her central claim that counterfactuals can never be premises, not just an emphasis 'in a few cases.' E invents a middle position that contradicts the author's claim that some counterfactuals 'carry genuine evidential weight,' and C has the author rejecting a point the author explicitly concedes."
+        }
+      ]
+    }
+  ]
+}
