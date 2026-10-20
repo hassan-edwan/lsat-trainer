@@ -1,0 +1,96 @@
+# LSAT Trainer
+
+An open-source, local-first LSAT practice environment. Take timed sections in a test-day style interface,
+blind review your answers, drill by question type, and keep a journal of every question you miss twice.
+
+It runs entirely in your browser. There's no account and no server, and your data never leaves your machine.
+
+## Features
+
+- **Test-day interface:** two panes (passage or stimulus on the left, question on the right), a 35-minute
+  section timer you can hide, a five-minute warning, a question bar with flags, crossing out answers, three
+  highlighter colors and an eraser, adjustable text size, and the intermission after section 2. Keyboard:
+  `A–E` answer, `Shift+A–E` cross out, `←/→` move, `F` flag.
+- **Blind review:** after the timed sections, go through every question again untimed (or only the flagged
+  ones) and re-answer. Each question gets one of four results: correct, fixed in blind review, changed to wrong
+  in blind review, or wrong twice.
+- **Mistake journal:** questions you get wrong in both the timed pass and blind review are added
+  automatically. Each entry has fields for your thought process, what was tricky, why the right answer is
+  right, and your takeaway, plus trap tags ("scope shift", "reversed conditional", …). Download them as
+  Markdown, CSV, or JSON, with the full question text included.
+- **Question-type tagging:** every question is tagged with its type (Flaw, Necessary Assumption, MSS, RC
+  Inference, …). Tags come from the test file or are guessed from the wording of the question stem, and you
+  can change any of them.
+- **Drills:**
+  - *Smart drill* gives more questions to the types you miss most, especially ones you still miss after blind
+    review. It's weighted by how often each type appears on the LSAT, and recent results count more than old
+    ones.
+  - *By type* lets you pick the types yourself.
+  - *Journal retry* re-tests questions you've missed. A question counts as mastered after two correct timed
+    retries in a row.
+  - Drills keep RC passage questions together, and you can limit them to tests you've already taken so fresh
+    tests stay fresh.
+- **Analytics:** timed and blind-review accuracy by section and question type, average time per type, and a
+  trend of recent sessions.
+- **Backups:** download all your data as one file and restore it on another computer.
+
+## About test content
+
+**This app doesn't include official LSAC PrepTests.** LSAC holds the copyright to its PrepTests, so they can't
+be bundled with or redistributed through an open-source project. The official way to practice with them is
+[LSAC LawHub](https://www.lsac.org/lawhub).
+
+What's included is a sample test of **original** questions (10 LR and one RC passage with 5 questions) so you
+can try everything right away. To practice with other material you have the right to use, import it:
+[docs/FORMAT.md](docs/FORMAT.md) describes the JSON format and a plain-text format that's easy to produce from
+copied text.
+
+If you build up a library of freely licensed questions, contributions to `public/samples/` are welcome. Only
+contribute content you wrote or that is openly licensed.
+
+## Running it
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm test           # unit tests (classifier, importer, scoring, drills, journal)
+npm run build      # static site in dist/
+```
+
+`dist/` is a static site, so you can host it anywhere (GitHub Pages, Netlify, Vercel) or open it with
+`npm run preview`. Since all data is stored in the browser, each person who uses a hosted copy has their own
+private data.
+
+## How the smart drill decides
+
+For each question type the app computes:
+
+- **Miss rate:** the share of your timed answers that were wrong, with each attempt weighted by recency (half-life
+  45 days) and smoothed toward 50% when you have few attempts.
+- **Wrong-after-BR rate:** the same, counting only questions you still missed after blind review. These count
+  1.5× because they show a gap in understanding rather than a timing problem.
+- **Exam share:** roughly how often the type appears on the LSAT.
+
+`priority = exam share × (miss rate + 1.5 × wrong-after-BR rate)`. The drill's questions are split across types
+in proportion to priority. Within each type it picks un-mastered journal questions first, then questions you
+haven't seen, then ones you last got wrong, then the rest (oldest first). The Drills page shows this table, so
+you can see why it picked what it did.
+
+## Project layout
+
+```
+src/lib/taxonomy.js   question types, exam weights, stem classifier
+src/lib/importer.js   JSON validation and the plain-text parser
+src/lib/analytics.js  outcomes, per-type stats, weakness scores, drill selection
+src/lib/session.js    building PT and drill sessions; scoring them
+src/lib/journal.js    journal entries, mastery, Markdown/CSV export
+src/lib/db.js         IndexedDB storage and backups
+src/components/       the exam interface (Runner), highlighter, question review
+src/pages/            library, import, drills, journal, analytics, settings
+scripts/parse-text.mjs  command-line text → JSON converter
+```
+
+## License
+
+MIT. See [LICENSE](LICENSE). The license covers the code and the sample questions in this repository, not
+any content you import.

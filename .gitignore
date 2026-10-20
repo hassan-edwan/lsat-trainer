@@ -1,0 +1,9 @@
+node_modules
+dist
+*.log
+.DS_Store
+.vscode/*
+.idea
+# Keep imported test content out of the repo — it may be copyrighted.
+private/
+*.private.json

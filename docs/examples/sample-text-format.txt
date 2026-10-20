@@ -1,0 +1,43 @@
+# Text Format Example
+## Section: LR | 35
+1. Pharmacist: Patients who take the new allergy medication report fewer
+symptoms than patients who take the older one. So the new medication is more
+effective.
+Which one of the following, if true, most seriously weakens the pharmacist's argument?
+(A) The new medication costs more than the older one.
+(B) Patients who take the new medication were, on average, experiencing milder
+allergies before they began treatment.
+(C) Some patients take both medications.
+(D) The older medication has been available for many years.
+(E) Both medications are taken once per day.
+
+2. All members of the debate club are juniors. Mara is not a junior.
+
+Which one of the following must be true on the basis of the statements above?
+(A) Mara is not a member of the debate club.
+(B) Mara is a senior.
+(C) Some juniors are not members of the debate club.
+(D) Every junior is a member of the debate club.
+(E) Mara is a member of some other club.
+
+## Section: RC | 35 | Reading Comprehension
+### Passage 1
+Some historians argue that the printing press transformed scholarship mainly
+by making texts cheaper. Others emphasize standardization: identical copies
+let scholars across Europe cite the same page.
+1. The passage is primarily concerned with
+(A) contrasting two accounts of the printing press's effect on scholarship
+(B) arguing that printed books were cheaper
+(C) describing how pages were numbered
+(D) criticizing historians of science
+(E) explaining how printing presses worked
+2. According to the passage, standardization allowed scholars to
+(A) cite the same page across copies
+(B) buy cheaper texts
+(C) avoid errors entirely
+(D) print their own books
+(E) read faster
+
+## Answers
+B A
+A A
