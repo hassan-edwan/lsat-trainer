@@ -21,12 +21,14 @@ export default function DrillBuilder() {
   const [pace, setPace] = useState('80');
   const [blindReview, setBlindReview] = useState(true);
   const [saveFresh, setSaveFresh] = useState(false);
+  const [minDifficulty, setMinDifficulty] = useState(1);
 
   // Tests the user has started at least once as a full PT.
   const takenTests = useMemo(() => new Set(Object.values(sessions).filter((s) => s.kind === 'pt').map((s) => s.testId)), [sessions]);
   const pool = useMemo(
-    () => questions.filter((q) => !saveFresh || takenTests.has(q.testId)),
-    [questions, saveFresh, takenTests],
+    () => questions.filter((q) => (!saveFresh || takenTests.has(q.testId))
+      && (q.difficulty == null || q.difficulty >= minDifficulty)),
+    [questions, saveFresh, takenTests, minDifficulty],
   );
 
   const typeCounts = useMemo(() => {
@@ -115,6 +117,14 @@ export default function DrillBuilder() {
 
         <div className="form-row">
           <label>Questions <input type="number" min={1} max={100} value={count} onChange={(e) => setCount(Math.max(1, Number(e.target.value) || 1))} /></label>
+          <label>Difficulty
+            <select value={minDifficulty} onChange={(e) => setMinDifficulty(Number(e.target.value))}>
+              <option value={1}>All</option>
+              <option value={3}>Medium and up (3–5)</option>
+              <option value={4}>Hard (4–5)</option>
+              <option value={5}>Hardest only (5)</option>
+            </select>
+          </label>
           <label>Timing
             <select value={pace} onChange={(e) => setPace(e.target.value)}>
               {PACES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
