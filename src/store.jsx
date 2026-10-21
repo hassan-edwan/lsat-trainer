@@ -79,7 +79,8 @@ export function StoreProvider({ children }) {
     const today = byDay[dayKey(Date.now())] || 0;
     return {
       byDay, streak, xp, level: levelInfo(xp), counts, today,
-      earned: earnedAchievements(counts), due: dueJournal(journal),
+      // Only questions still in the library come back for review; retired tests are history only.
+      earned: earnedAchievements(counts), due: dueJournal(journal).filter((e) => index[e.qid] && !index[e.qid].test.retired),
     };
   }, [attempts, taggedAttempts, journal, sessions, index, diagnosticQuestions, prefs.dailyGoal]);
 

@@ -54,7 +54,7 @@ export default function DrillBuilder() {
   }, [attempts, kinds, pool, count]);
 
   const maxScore = Math.max(0, ...weakness.map((r) => r.score)) || 1;
-  const journalOpen = Object.values(journal).filter((e) => e.status !== 'mastered');
+  const journalOpen = Object.values(journal).filter((e) => e.status !== 'mastered' && index[e.qid] && !index[e.qid].test.retired);
 
   const start = async () => {
     let picked;
