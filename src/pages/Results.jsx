@@ -11,6 +11,7 @@ import { GoalRing, LevelBar } from '../components/ProgressWidgets.jsx';
 import { attemptXp } from '../lib/progress.js';
 import { dailyPlan } from '../lib/plan.js';
 import { startTask } from './Today.jsx';
+import StaminaCard from '../components/StaminaCard.jsx';
 
 export default function Results({ session }) {
   const { index, attempts, journal, questions, saveJournalEntry, saveSession } = useStore();
@@ -49,7 +50,7 @@ export default function Results({ session }) {
   return (
     <div className="stack">
       <PageHeader
-        eyebrow={`${session.kind === 'pt' ? 'Practice test' : session.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'} results · ${new Date(session.finishedAt || session.updatedAt).toLocaleDateString()}`}
+        eyebrow={`${session.kind === 'pt' ? 'Practice test' : session.kind === 'stamina' ? 'Stamina' : session.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'} results · ${new Date(session.finishedAt || session.updatedAt).toLocaleDateString()}`}
         title={session.title}
       />
       <Celebration session={session} sessionAttempts={sessionAttempts} />
@@ -90,6 +91,8 @@ export default function Results({ session }) {
           <button onClick={drillMisses}>Drill the types I missed</button>
         </div>
       </section>
+
+      {(session.kind === 'stamina' || (session.kind === 'pt' && session.sections.length > 1)) && <StaminaCard session={session} />}
 
       {session.sections.length > 1 && (
         <section className="card">

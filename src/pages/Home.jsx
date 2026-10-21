@@ -132,7 +132,7 @@ export default function Home() {
                 {done.slice(0, 30).map((s) => (
                   <tr key={s.id}>
                     <td>{s.title}</td>
-                    <td><span className="chip">{s.kind === 'pt' ? 'Test' : s.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'}</span></td>
+                    <td><span className="chip">{s.kind === 'pt' ? 'Test' : s.kind === 'stamina' ? 'Stamina' : s.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'}</span></td>
                     <td className="muted">{new Date(s.finishedAt || s.updatedAt).toLocaleDateString()}</td>
                     <td>{scoreText(s, testById[s.testId])}</td>
                     <td className="right"><a className="button small" href={`#/session/${s.id}`}>Review</a></td>

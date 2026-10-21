@@ -62,11 +62,15 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   }, [session, onSave]);
 
   // Save on unmount / tab close (a finishing session is saved by onFinish).
+  // onSave changes identity whenever the store's sessions change, so read it
+  // through a ref: flushing on every identity change would save in a loop.
+  const onSaveRef = useRef(onSave);
+  onSaveRef.current = onSave;
   useEffect(() => {
-    const flush = () => { if (sessionRef.current.phase !== 'finishing') onSave(sessionRef.current); };
+    const flush = () => { if (sessionRef.current.phase !== 'finishing') onSaveRef.current(sessionRef.current); };
     window.addEventListener('beforeunload', flush);
     return () => { window.removeEventListener('beforeunload', flush); flush(); };
-  }, [onSave]);
+  }, []);
 
   useEffect(() => { localStorage.setItem('lsat.fontSize', String(fontSize)); }, [fontSize]);
 

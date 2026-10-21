@@ -62,6 +62,16 @@ export function createPTSession(test, { sectionIds = null, blindReview = true, t
   });
 }
 
+/** A timed session made of whole sections, possibly from different tests (stamina training). */
+export function createSectionsSession(sections, { kind, title, breakAfterSection = null, breakMinutes = 10, blindReview = true } = {}) {
+  return baseSession({
+    kind,
+    title,
+    sections: sections.map((s) => ({ title: s.title, kind: s.kind, timeLimitSec: s.timeLimitMinutes * 60, elapsedSec: 0, qids: s.questions.map((q) => q.id) })),
+    settings: { blindReview, breakAfterSection, breakMinutes },
+  });
+}
+
 export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill', instant = false } = {}) {
   // RC questions from the same passage are kept together so the passage is read once.
   const ordered = [];

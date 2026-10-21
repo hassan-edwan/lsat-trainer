@@ -10,6 +10,7 @@ import Stats from './pages/Stats.jsx';
 import Settings from './pages/Settings.jsx';
 import Diagnostic from './pages/Diagnostic.jsx';
 import Today from './pages/Today.jsx';
+import Stamina from './pages/Stamina.jsx';
 import Layout from './components/Layout.jsx';
 
 function useHashRoute() {
@@ -39,6 +40,7 @@ function Shell() {
   else if (section === 'test' && id) page = <TestDetail id={decodeURIComponent(id)} />;
   else if (section === 'drill') page = <DrillBuilder />;
   else if (section === 'diagnostic') page = <Diagnostic />;
+  else if (section === 'stamina') page = <Stamina />;
   else if (section === 'journal') page = <Journal />;
   else if (section === 'stats') page = <Stats />;
   else if (section === 'settings') page = <Settings />;

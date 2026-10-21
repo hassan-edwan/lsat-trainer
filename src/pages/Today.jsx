@@ -8,9 +8,10 @@ import { ACHIEVEMENTS, dayKey } from '../lib/progress.js';
 import { AchievementGrid, GoalRing, Heatmap } from '../components/ProgressWidgets.jsx';
 import { loadBundledTests } from '../lib/bundle.js';
 import BundleUpdate from '../components/BundleUpdate.jsx';
+import { createStaminaSession } from '../lib/stamina.js';
 
 /** Start a plan task; returns false if it has nothing to start. */
-export async function startTask(task, { tests, prefs, saveSession }) {
+export async function startTask(task, { tests, attempts, prefs, saveSession }) {
   const a = task.action;
   if (!a) return false;
   if (a.kind === 'link') { window.location.hash = a.href.replace(/^#/, ''); return true; }
@@ -19,6 +20,10 @@ export async function startTask(task, { tests, prefs, saveSession }) {
   if (a.kind === 'test') {
     const test = tests.find((t) => t.id === a.testId);
     session = createPTSession(test, { unscored: prefs?.unscoredSection ? pickUnscoredSection(tests, test) : null });
+  }
+  else if (a.kind === 'stamina') {
+    session = createStaminaSession(a.level, tests, attempts || []);
+    if (!session) return false;
   }
   else session = createDrillSession(a.questions, a.opts);
   const saved = await saveSession({ ...session, queue });
