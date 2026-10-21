@@ -68,3 +68,21 @@ test('falls back to other', () => {
 test('detects EXCEPT stems', () => {
   assert.deepEqual(stemFeatureTags('Each of the following weakens the argument EXCEPT:'), ['except']);
 });
+
+test('classifies classic stem variants', () => {
+  const cases = [
+    ['Which one of the following, if true, most helps explain how newborn animals manage to survive?', 'explain'],
+    ['Which one of the following most logically completes the argument?', 'most-strongly-supported'],
+    ["Which one of the following, if true, most undermines the mayor's defense?", 'weaken'],
+    ['The reasoning in the argument requires which one of the following assumptions?', 'necessary-assumption'],
+    ["The conclusion of the reviewer's argument can be properly drawn if which one of the following is assumed?", 'sufficient-assumption'],
+    ['The principle stated above most helps to justify the reasoning in which one of the following arguments?', 'principle-apply'],
+    ['The principle underlying the argument above is most similar to the principle underlying which one of the following arguments?', 'parallel'],
+    ["The argument's reasoning is questionable in that the argument", 'flaw'],
+    ["Which one of the following most accurately describes a flaw in the argument's reasoning?", 'flaw'],
+    ['The answer to which one of the following questions most helps in evaluating the argument?', 'evaluate'],
+    ['The dialogue most strongly supports the claim that Ana and Ben agree that', 'point-at-issue'],
+    ['The statement that the core is charged plays which one of the following roles in the argument above?', 'role'],
+  ];
+  assert.deepEqual(cases.map(([s, t]) => ({ s, t, got: classifyStem(s, 'LR')[0] })).filter((c) => c.got !== c.t), []);
+});
