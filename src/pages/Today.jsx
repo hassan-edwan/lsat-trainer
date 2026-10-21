@@ -6,7 +6,8 @@ import { createDrillSession, createPTSession } from '../lib/session.js';
 import { dailyPlan } from '../lib/plan.js';
 import { ACHIEVEMENTS, dayKey } from '../lib/progress.js';
 import { AchievementGrid, GoalRing, Heatmap } from '../components/ProgressWidgets.jsx';
-import { loadBundledTests } from './Home.jsx';
+import { loadBundledTests } from '../lib/bundle.js';
+import BundleUpdate from '../components/BundleUpdate.jsx';
 
 /** Start a plan task; returns false if it has nothing to start. */
 export async function startTask(task, { tests, saveSession }) {
@@ -24,7 +25,7 @@ export async function startTask(task, { tests, saveSession }) {
 
 export default function Today() {
   const store = useStore();
-  const { tests, sessions, attempts, journal, index, questions, progress, prefs, addTests, saveSession } = store;
+  const { tests, sessions, attempts, journal, index, questions, progress, prefs, installBundle, saveSession } = store;
   const [busy, setBusy] = useState(false);
   const plan = useMemo(
     () => dailyPlan({ tests, sessions, attempts, journal, index, questions, progress }),
@@ -46,7 +47,7 @@ export default function Today() {
           flaw-pattern set, all original and fully explained. Load them and you'll get a personalized plan every day.
         </p>
         <div className="row">
-          <button className="primary big" disabled={busy} onClick={async () => { setBusy(true); await loadBundledTests(addTests); setBusy(false); }}>
+          <button className="primary big" disabled={busy} onClick={async () => { setBusy(true); await loadBundledTests(installBundle); setBusy(false); }}>
             {busy ? 'Loading…' : 'Load the practice tests'}
           </button>
           <a className="button big" href="#/import">Import my own</a>
@@ -70,6 +71,7 @@ export default function Today() {
 
   return (
     <div className="stack">
+      <BundleUpdate />
       <section className="card today-hero">
         <GoalRing value={today} goal={prefs.dailyGoal} size={128} />
         <div>

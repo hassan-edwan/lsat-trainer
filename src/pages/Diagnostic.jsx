@@ -5,7 +5,7 @@ import { navigate } from '../lib/nav.js';
 import { buildDrill } from '../lib/analytics.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
 import { createDrillSession } from '../lib/session.js';
-import { loadBundledTests } from './Home.jsx';
+import { loadBundledTests } from '../lib/bundle.js';
 
 const CELL = {
   correct: { label: '✓', title: 'Correct on the timed pass' },
@@ -18,7 +18,7 @@ const CELL = {
 const PACES = [['90', '1:30 per question'], ['80', 'Test pace (1:20)'], ['0', 'Untimed']];
 
 export default function Diagnostic() {
-  const { diagnosticQuestions, questions, attempts, journal, addTests, saveSession } = useStore();
+  const { diagnosticQuestions, questions, attempts, journal, installBundle, saveSession } = useStore();
   const available = useMemo(() => ladderQuestions(diagnosticQuestions), [diagnosticQuestions]);
   const ladders = LADDERS.filter((l) => available[l.id]);
   const [selected, setSelected] = useState(() => new Set(LADDERS.map((l) => l.id)));
@@ -49,7 +49,7 @@ export default function Diagnostic() {
       <section className="card empty-state">
         <div className="empty-icon">🩺</div>
         <h2>The diagnostic isn't loaded yet</h2>
-        <button className="primary" onClick={() => loadBundledTests(addTests)}>Load the built-in tests</button>
+        <button className="primary" onClick={() => loadBundledTests(installBundle)}>Load the built-in tests</button>
       </section>
     );
   }

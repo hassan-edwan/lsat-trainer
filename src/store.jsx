@@ -19,7 +19,7 @@ const byKey = (list, key) => Object.fromEntries(list.map((x) => [x[key], x]));
 
 export function StoreProvider({ children }) {
   const [loaded, setLoaded] = useState(false);
-  const [tests, setTests] = useState([]);
+  const [allTests, setTests] = useState([]);
   const [sessions, setSessions] = useState({});
   const [attempts, setAttempts] = useState([]);
   const [journal, setJournal] = useState({});
@@ -39,7 +39,10 @@ export function StoreProvider({ children }) {
 
   useEffect(() => { reload(); }, [reload]);
 
-  const index = useMemo(() => buildIndex(tests), [tests]);
+  // Retired tests (replaced by a newer built-in set) stay indexed so old results still render,
+  // but they're left out of the library, drills, and plans.
+  const tests = useMemo(() => allTests.filter((t) => !t.retired), [allTests]);
+  const index = useMemo(() => buildIndex(allTests), [allTests]);
   const allQuestions = useMemo(() => flatQuestions(tests), [tests]);
   // Diagnostic questions are kept out of drills so retakes stay fresh.
   const questions = useMemo(() => allQuestions.filter((q) => q.purpose !== 'diagnostic'), [allQuestions]);
@@ -93,6 +96,22 @@ export function StoreProvider({ children }) {
       await db.putMany('tests', newTests);
       await reload();
     },
+    /** Add a built-in bundle, then retire tests it replaces: unused ones are deleted, used ones kept for history. */
+    async installBundle(newTests, retiredIds, version) {
+      await db.putMany('tests', newTests);
+      const used = new Set();
+      for (const s of Object.values(sessions)) {
+        if (s.testId) used.add(s.testId);
+        for (const sec of s.sections || []) for (const qid of sec.qids || []) if (index[qid]) used.add(index[qid].test.id);
+      }
+      for (const t of allTests.filter((x) => retiredIds.includes(x.id) && !x.retired)) {
+        if (used.has(t.id)) await db.put('tests', { ...t, retired: true });
+        else await db.delete('tests', t.id);
+      }
+      const p = (await db.get('settings', 'prefs'))?.value || {};
+      await db.put('settings', { key: 'prefs', value: { ...DEFAULT_PREFS, ...p, bundleVersion: version } });
+      await reload();
+    },
     async deleteTest(id) {
       await db.delete('tests', id);
       await reload();
@@ -133,9 +152,9 @@ export function StoreProvider({ children }) {
         return next;
       });
     },
-  }), [reload, index, journal, attempts]);
+  }), [reload, index, journal, attempts, sessions, allTests]);
 
-  const value = { loaded, tests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, prefs, progress, ...actions };
+  const value = { loaded, tests, allTests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, prefs, progress, ...actions };
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
 

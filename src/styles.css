@@ -590,3 +590,5 @@ mark.hl-orange { background: var(--hl-orange); }
 .bd-all { margin-top: 0.75rem; }
 .bd-choices { margin: 0.5rem 0 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
 .bd-choices .bd-note { margin: 0.1rem 0 0; display: inline; }
+
+.update-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-color: var(--accent); }

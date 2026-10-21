@@ -34,7 +34,7 @@ export function TypeEditor({ kind, types, onChange }) {
 }
 
 export default function TestDetail({ id }) {
-  const { tests, saveTest, deleteTest, saveSession } = useStore();
+  const { allTests: tests, saveTest, deleteTest, saveSession } = useStore();
   const test = tests.find((t) => t.id === id);
   const [selected, setSelected] = useState(() => new Set(test?.sections.map((s) => s.id)));
   const [timed, setTimed] = useState(true);

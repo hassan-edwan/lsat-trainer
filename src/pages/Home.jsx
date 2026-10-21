@@ -1,18 +1,11 @@
 import { useState } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
-import { normalizeImport } from '../lib/importer.js';
 import { createPTSession } from '../lib/session.js';
 import { scaledScore } from '../lib/analytics.js';
 import { PageHeader } from '../components/Layout.jsx';
-
-// Loads every bundled test listed in public/samples/index.json.
-export async function loadBundledTests(addTests) {
-  const base = `${import.meta.env.BASE_URL}samples/`;
-  const files = await (await fetch(`${base}index.json`)).json();
-  const tests = await Promise.all(files.map(async (f) => normalizeImport(await (await fetch(base + f)).json())));
-  await addTests(tests.flat());
-}
+import BundleUpdate from '../components/BundleUpdate.jsx';
+import { loadBundledTests } from '../lib/bundle.js';
 
 function scoreText(session, test) {
   const s = session.summary;
@@ -24,7 +17,7 @@ function scoreText(session, test) {
 }
 
 export default function Home() {
-  const { tests, sessions, addTests, saveSession, deleteSession } = useStore();
+  const { tests, sessions, installBundle, saveSession, deleteSession } = useStore();
   const [busy, setBusy] = useState(false);
   const all = Object.values(sessions).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const active = all.filter((s) => s.phase !== 'done');
@@ -48,6 +41,8 @@ export default function Home() {
         actions={<a className="button" href="#/import">Import a test</a>}
       />
 
+      <BundleUpdate />
+
       {tests.length === 0 && (
         <section className="card hero">
           <h2>No tests loaded yet</h2>
@@ -56,7 +51,7 @@ export default function Home() {
             included because they're copyrighted, but you can import tests you have the right to use.
           </p>
           <div className="row">
-            <button className="primary" disabled={busy} onClick={async () => { setBusy(true); await loadBundledTests(addTests); setBusy(false); }}>
+            <button className="primary" disabled={busy} onClick={async () => { setBusy(true); await loadBundledTests(installBundle); setBusy(false); }}>
               Load the practice tests
             </button>
             <a className="button" href="#/import">Import tests</a>

@@ -4,7 +4,7 @@ import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { normalizeImport, parseTestText } from '../lib/importer.js';
 import { typeLabel } from '../lib/taxonomy.js';
-import { loadBundledTests } from './Home.jsx';
+import { loadBundledTests } from '../lib/bundle.js';
 
 const TEXT_EXAMPLE = `# My Practice Test 1
 ## Section: LR | 35
@@ -27,7 +27,7 @@ C A ...
 B ...`;
 
 export default function ImportPage() {
-  const { tests, addTests } = useStore();
+  const { tests, addTests, installBundle } = useStore();
   const [mode, setMode] = useState('file');
   const [text, setText] = useState('');
   const [preview, setPreview] = useState(null);
@@ -133,7 +133,7 @@ export default function ImportPage() {
       <section className="card">
         <h2>Built-in practice tests</h2>
         <p>Load (or reload, after an update) the original practice tests that come with the app. Your history is kept.</p>
-        <button onClick={async () => { await loadBundledTests(addTests); navigate('/library'); }}>Load the practice tests</button>
+        <button onClick={async () => { await loadBundledTests(installBundle); navigate('/library'); }}>Load the practice tests</button>
       </section>
     </div>
   );
