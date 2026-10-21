@@ -23,6 +23,9 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const [fontSize, setFontSize] = useState(() => Number(localStorage.getItem('lsat.fontSize')) || 16);
   const [hideTimer, setHideTimer] = useState(false);
   const [flaggedOnly, setFlaggedOnly] = useState(false);
+  const [missedOnly, setMissedOnly] = useState(false);
+  // Blind review circles the questions missed under time (without revealing the answer).
+  const [circleMisses, setCircleMisses] = useState(() => localStorage.getItem('lsat.circleMisses') !== 'off');
   const [toast, setToast] = useState('');
   const [confirmEnd, setConfirmEnd] = useState(false);
   const lastSave = useRef(0);
@@ -127,8 +130,10 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   // ---- navigation & answering --------------------------------------------
   const visible = useMemo(() => {
     const list = sec.qids.map((id, i) => ({ id, i }));
-    return isBR && flaggedOnly ? list.filter((x) => session.responses[x.id].flagged) : list;
-  }, [sec, isBR, flaggedOnly, session.responses]);
+    if (!isBR) return list;
+    return list.filter((x) => (!flaggedOnly || session.responses[x.id].flagged)
+      && (!missedOnly || !circleMisses || session.responses[x.id].first !== index[x.id]?.question.answer));
+  }, [sec, isBR, flaggedOnly, missedOnly, circleMisses, session.responses, index]);
 
   const go = useCallback((sectionIdx, idx) => update((s) => ({ ...s, current: { section: sectionIdx, index: idx } }), false), [update]);
   const step = useCallback((d) => {
@@ -275,10 +280,12 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         <div className="bubbles">
           {visible.map(({ id, i }) => {
             const r = session.responses[id];
+            const missed = isBR && circleMisses && r.first !== index[id]?.question.answer;
             return (
               <button key={id} onClick={() => go(session.current.section, i)}
                 className={`bubble ${i === session.current.index ? 'current' : ''} ${r[answerField] ? 'answered' : ''} ${
-                  instant && r.checked ? (r.first === index[id]?.question.answer ? 'right' : 'wrong') : ''}`}>
+                  instant && r.checked ? (r.first === index[id]?.question.answer ? 'right' : 'wrong') : ''} ${missed ? 'missed' : ''}`}
+                title={missed ? 'Missed under time' : undefined}>
                 {r.flagged && <span className="flag-dot">⚑</span>}
                 {i + 1}
               </button>
@@ -286,7 +293,14 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           })}
         </div>
         {isBR && (
-          <label className="flag-filter"><input type="checkbox" checked={flaggedOnly} onChange={(e) => setFlaggedOnly(e.target.checked)} /> Flagged only</label>
+          <div className="br-filters">
+            <label className="flag-filter"><input type="checkbox" checked={circleMisses} onChange={(e) => {
+              setCircleMisses(e.target.checked);
+              try { localStorage.setItem('lsat.circleMisses', e.target.checked ? 'on' : 'off'); } catch { /* ignore */ }
+            }} /> Circle misses</label>
+            {circleMisses && <label className="flag-filter"><input type="checkbox" checked={missedOnly} onChange={(e) => setMissedOnly(e.target.checked)} /> Missed only</label>}
+            <label className="flag-filter"><input type="checkbox" checked={flaggedOnly} onChange={(e) => setFlaggedOnly(e.target.checked)} /> Flagged only</label>
+          </div>
         )}
       </div>
 
@@ -304,6 +318,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
             <div className="br-note">
               Your timed answer: <strong>{resp.first ?? '—'}</strong>
               {resp.flagged && ' · flagged'}
+              {circleMisses && resp.first !== question.answer && <span className="br-missed"> · ◯ missed under time. Rethink it before you change anything.</span>}
             </div>
           )}
           <div className="q-number">Question {session.current.index + 1}</div>

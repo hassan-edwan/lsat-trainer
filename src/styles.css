@@ -592,3 +592,6 @@ mark.hl-orange { background: var(--hl-orange); }
 .bd-choices .bd-note { margin: 0.1rem 0 0; display: inline; }
 
 .update-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-color: var(--accent); }
+.bubble.missed { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--bad); border-radius: 50%; }
+.br-filters { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+.br-missed { color: var(--bad); font-weight: 600; }
