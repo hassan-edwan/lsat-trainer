@@ -35,7 +35,41 @@
           "flaws": [
             "sampling"
           ],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Conclusion",
+                "text": "Installing new streetlights in every neighborhood will reduce burglaries citywide."
+              },
+              {
+                "label": "Reasoning",
+                "text": "Neighborhoods that installed new streetlights saw a 20% drop in reported burglaries last year."
+              }
+            ],
+            "analysis": "The neighborhoods that got streetlights first might be special: maybe they had a dark-street problem the others don't, or they also added patrols. Generalizing from them to every neighborhood assumes they're representative. It's like seeing that glasses improved vision for people who needed glasses and concluding everyone should wear them.",
+            "choices": [
+              {
+                "note": "The argument doesn't care how serious burglary is compared to other crimes. It only claims burglaries would drop.",
+                "example": "Example of this flaw: Streetlights reduce burglary, so streetlights are the best way to fight crime in our city."
+              },
+              {
+                "note": "No source is identified, and nothing suggests bias in the burglary data.",
+                "example": "Example of this flaw: The streetlight manufacturer's report says burglaries fell, so they must have fallen."
+              },
+              {
+                "note": "The argument never talks about cost. Its conclusion is about burglary, not money.",
+                "example": "Example of this flaw: Streetlights cut burglaries 20%, so they're worth whatever they cost."
+              },
+              {
+                "note": "CORRECT. The argument assumes the neighborhoods that installed lights are like all the others. If they differed (say, they were unusually dark before), the result may not carry over."
+              },
+              {
+                "note": "The argument never mentions burglars. It reasons about burglaries in both premise and conclusion.",
+                "example": "Example of this flaw: Burglaries fell 20%, so there are 20% fewer burglars in town."
+              }
+            ]
+          }
         },
         {
           "number": 2,
@@ -58,7 +92,42 @@
             "causal"
           ],
           "flaws": [],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Conclusion",
+                "text": "The fungal disease is probably responsible for the marsh frog decline."
+              },
+              {
+                "label": "Reasoning",
+                "text": "The frogs declined sharply over a decade; a disease often fatal to them was first detected in the wetland ten years ago."
+              }
+            ],
+            "analysis": "The timing matches, but a disease that kills a few frogs here and there can't explain a sharp population crash. The argument needs the disease to kill enough frogs to matter. It's like blaming a slow leak for an empty swimming pool; it only works if the leak is big enough. Use the negation test on each answer.",
+            "choices": [
+              {
+                "note": "Too strong. The argument says 'probably responsible,' not the only threat. Negate it: there are other threats too. The disease could still be the main cause.",
+                "negation": "The fungal disease is not the only threat to marsh frogs in the wetland."
+              },
+              {
+                "note": "CORRECT. Negate it: the disease doesn't kill enough frogs to affect the population. Then it can't explain the decline, and the argument collapses.",
+                "negation": "The fungal disease does not kill marsh frogs in numbers large enough to affect the size of the wetland's population."
+              },
+              {
+                "note": "Too specific. Negate it: most infected frogs don't die within a year (maybe it takes longer). The disease could still drive the decline over ten years.",
+                "negation": "It is not the case that most marsh frogs that contract the disease die within a year of infection."
+              },
+              {
+                "note": "Irrelevant. Negate it: some other amphibian also declined. Maybe the disease or something else hit it too; that doesn't stop the disease from explaining the frog decline.",
+                "negation": "At least one other amphibian species in the wetland has declined over the past decade."
+              },
+              {
+                "note": "A prediction the argument doesn't make. Negate it: the disease won't wipe them out entirely. It can still be responsible for the decline so far.",
+                "negation": "The fungal disease will not eventually eliminate the wetland's marsh frog population."
+              }
+            ]
+          }
         },
         {
           "number": 3,
@@ -83,7 +152,37 @@
           "flaws": [
             "causation"
           ],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Conclusion",
+                "text": "Eating breakfast improves children's test performance."
+              },
+              {
+                "label": "Reasoning",
+                "text": "Children who eat breakfast daily score higher on standardized tests, on average, than children who don't."
+              }
+            ],
+            "analysis": "Correlation to causation. Kids who eat breakfast every day may also sleep more, come from wealthier homes, or have more structured families. Any of those could explain the scores. The best strengthener is an experiment where breakfast is randomly given and scores still rise, which isolates breakfast as the cause.",
+            "choices": [
+              {
+                "note": "Sleep is an alternative cause of higher scores. This weakens."
+              },
+              {
+                "note": "Income is another alternative cause. This weakens."
+              },
+              {
+                "note": "A few exceptions don't affect an average. Irrelevant, or at most a tiny nudge against."
+              },
+              {
+                "note": "Morning testing might make breakfast seem more plausible as a factor, but it doesn't show breakfast causes higher scores. Too weak to strengthen much."
+              },
+              {
+                "note": "CORRECT. Randomly selected children given breakfast improved relative to a similar group without it. Randomization removes the alternative causes and directly supports breakfast as the cause."
+              }
+            ]
+          }
         },
         {
           "number": 4,
@@ -110,7 +209,37 @@
             "causation",
             "percent-number"
           ],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Conclusion",
+                "text": "The remote-work policy has made employees more productive."
+              },
+              {
+                "label": "Reasoning",
+                "text": "Since the policy began, monthly reports completed have risen 15%."
+              }
+            ],
+            "analysis": "Productivity means output per person, not total output. If you add more people, total output can rise while each person does less. Quick math: 10 people making 100 reports is 10 each. Add 2 people (20%) and make 115 reports: about 9.6 each. Output went up, productivity went down. Watch for answers that change the denominator.",
+            "choices": [
+              {
+                "note": "Other departments also improved, which, if anything, fits the idea that remote work helps. Doesn't weaken."
+              },
+              {
+                "note": "Job satisfaction isn't productivity. Irrelevant, or maybe a slight strengthener."
+              },
+              {
+                "note": "CORRECT. Staff grew 20% while output grew only 15%, so output per employee actually fell. The policy didn't make employees more productive by this evidence."
+              },
+              {
+                "note": "A few people staying in the office barely matters. It doesn't explain the 15% rise or undercut it."
+              },
+              {
+                "note": "Reports being the same length rules out the 'reports got shorter' explanation. That strengthens."
+              }
+            ]
+          }
         },
         {
           "number": 5,
@@ -133,7 +262,37 @@
             "conditional"
           ],
           "flaws": [],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Conclusion",
+                "text": "The Ravel landscape has been professionally restored at least once."
+              },
+              {
+                "label": "Reasoning",
+                "text": "East wing painting → acquired before 1950; acquired before 1950 → restored at least once."
+              }
+            ],
+            "analysis": "Chain: east wing → acquired before 1950 → restored. The conclusion is about the Ravel, but the premises never mention the Ravel. We just need to plug it into the start of the chain (or the middle). 'The Ravel is in the east wing' does it: east wing → before 1950 → restored.",
+            "choices": [
+              {
+                "note": "CORRECT. Ravel in the east wing → acquired before 1950 → restored. The chain runs straight through to the conclusion."
+              },
+              {
+                "note": "Acquired after 1950 means the second rule doesn't apply. That leaves the conclusion unproven, maybe even less likely."
+              },
+              {
+                "note": "Reverses the second conditional (restored → before 1950). It tells us nothing about whether the Ravel was restored."
+              },
+              {
+                "note": "About some east wing paintings, not the Ravel. Doesn't connect it to anything."
+              },
+              {
+                "note": "Display history is irrelevant to restoration."
+              }
+            ]
+          }
         },
         {
           "number": 6,
@@ -157,7 +316,33 @@
             "fact-set"
           ],
           "flaws": [],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Facts",
+                "text": "1) Most Harlan Prize winners in the past 20 years had published at least three books; 2) none of the winners in that period had previously won another major award."
+              }
+            ],
+            "analysis": "Combine: most winners had 3+ books, and every winner had no prior major award. So the 3+-book winners are novelists with 3+ books who won the Harlan without a prior award. There's at least one of them (more than half of winners). That's exactly a 'some' statement you can prove.",
+            "choices": [
+              {
+                "note": "The facts only talk about Harlan winners. Novelists with other awards and 3+ books could be plentiful outside that group."
+              },
+              {
+                "note": "CORRECT. Most winners had 3+ books, and all winners lacked prior major awards. So at least some 3+-book novelists won the Harlan without a prior major award."
+              },
+              {
+                "note": "The facts never say whether the Harlan counts as major. 'Any other major award' doesn't settle it."
+              },
+              {
+                "note": "Reverses the 'most.' Most winners had 3+ books; that says nothing about what share of all 3+-book novelists won."
+              },
+              {
+                "note": "The facts are about awards won before the Harlan. What winners do afterward is never mentioned."
+              }
+            ]
+          }
         },
         {
           "number": 7,
@@ -181,7 +366,33 @@
             "fact-set"
           ],
           "flaws": [],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Facts",
+                "text": "1) Participants told a wine was expensive rated it better than those told the same wine was cheap; 2) pleasure-related brain regions were more active in those told it was expensive."
+              }
+            ],
+            "analysis": "Same wine, different beliefs about price, different ratings, and different brain activity. So belief about the wine changed the actual experience of pleasure. The supported answer is modest: beliefs CAN affect enjoyment. Anything about what matters most to consumers or whether people can tell wines apart goes beyond the facts.",
+            "choices": [
+              {
+                "note": "Way too strong. The experiment shows price beliefs affect ratings, not that price is the most important factor in buying wine."
+              },
+              {
+                "note": "It was the same wine in both groups. The experiment says nothing about whether expensive wines really taste better."
+              },
+              {
+                "note": "Too broad. The experiment didn't test whether people can distinguish different wines; everyone tasted the same one."
+              },
+              {
+                "note": "Contradicted by the brain imaging: pleasure regions really were more active, so they weren't just faking their ratings."
+              },
+              {
+                "note": "CORRECT. Same wine, different beliefs, different pleasure responses. 'Can' is exactly as far as the evidence goes."
+              }
+            ]
+          }
         },
         {
           "number": 8,
@@ -208,7 +419,33 @@
           "flaws": [
             "percent-number"
           ],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Paradox",
+                "text": "Delford installed a traffic light at its busiest intersection to reduce accidents, but accidents there increased the following year."
+              }
+            ],
+            "analysis": "The light was supposed to reduce accidents, but the count went up. Classic rate-versus-number puzzle. If far more cars go through the intersection, the total number of accidents can rise even if each car is safer. It's like a bigger crowd at a safer swimming pool: the lifeguard is doing great, but more people means more incidents overall. Look for something that changed the volume.",
+            "choices": [
+              {
+                "note": "Installation cost has nothing to do with accident numbers."
+              },
+              {
+                "note": "Deepens the puzzle. If lights work elsewhere, why not here? It doesn't explain the increase."
+              },
+              {
+                "note": "CORRECT. Traffic more than doubled because of a new highway exit. The light may well have lowered the accident rate per car, while the total count still rose because so many more cars came through."
+              },
+              {
+                "note": "Driver approval doesn't explain why accidents went up."
+              },
+              {
+                "note": "Other intersections staying stable means there wasn't a town-wide spike. That rules out one explanation and leaves the puzzle intact."
+              }
+            ]
+          }
         },
         {
           "number": 9,
@@ -232,7 +469,37 @@
             "rebuttal"
           ],
           "flaws": [],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Conclusion",
+                "text": "The architects failed at the most important part of their task."
+              },
+              {
+                "label": "Reasoning",
+                "text": "A building meant to protect fragile artworks shouldn't admit much sunlight, which fades pigments; the museum uses lots of glass."
+              }
+            ],
+            "analysis": "'Therefore' flags the conclusion, and here it really is the main one. The critic concedes the design is praised and striking, then argues it fails the museum's core job. The sunlight point is the reason. Ask 'why do you think they failed?' Answer: because the building lets in sunlight that fades art. That's premise → conclusion.",
+            "choices": [
+              {
+                "note": "A premise. It's the reason the critic gives for saying the architects failed."
+              },
+              {
+                "note": "Background the critic is pushing back against with 'Yet.'"
+              },
+              {
+                "note": "Part of the supporting premise (sunlight fades pigments). Supports the conclusion; isn't it."
+              },
+              {
+                "note": "CORRECT. Marked by 'therefore,' supported by the sunlight point, and it's the critic's ultimate judgment of the design."
+              },
+              {
+                "note": "A concession ('however striking the result may be'). The critic grants it, then argues past it."
+              }
+            ]
+          }
         },
         {
           "number": 10,
@@ -256,7 +523,33 @@
             "plan"
           ],
           "flaws": [],
-          "tags": []
+          "tags": [],
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Arguments",
+                "text": "Alicia: Libraries should eliminate late fees because they deter low-income patrons from borrowing.; Benjamin: Without late fees, patrons wouldn't return books promptly and others would wait longer for popular titles."
+              }
+            ],
+            "analysis": "Alicia says eliminate fees. Benjamin's 'But' raises a reason not to, so he disagrees with eliminating them. Note that each speaker argues from a different consideration, and neither engages the other's fact. Lesson: to disagree, one speaker must say yes and the other no; the shared issue here is the policy itself.",
+            "choices": [
+              {
+                "note": "CORRECT. Alicia: yes, eliminate late fees. Benjamin: no, because returns would slow. Clean disagreement."
+              },
+              {
+                "note": "Alicia says yes. Benjamin never addresses whether fees deter low-income patrons. No view from him."
+              },
+              {
+                "note": "Benjamin implies it, but Alicia says nothing about demand for popular titles."
+              },
+              {
+                "note": "Benjamin says patrons wouldn't return books promptly; Alicia never addresses that. No disagreement on record."
+              },
+              {
+                "note": "Neither speaker mentions library revenue."
+              }
+            ]
+          }
         }
       ]
     },
@@ -290,7 +583,37 @@
             "rc-main-point"
           ],
           "difficulty": 2,
-          "explanation": "The last paragraph states the thesis: the technique excels at exclusion but does not replace connoisseurship. A contradicts the final sentence, and E contradicts paragraph two."
+          "explanation": "The last paragraph states the thesis: the technique excels at exclusion but does not replace connoisseurship. A contradicts the final sentence, and E contradicts paragraph two.",
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Task",
+                "text": "Pick the statement that sums up the passage as a whole."
+              },
+              {
+                "label": "Where to look",
+                "text": "The last paragraph, especially the final sentence; check against paragraph one's setup."
+              }
+            ],
+            "analysis": "Paragraph one: stylistic analysis is contestable; dendrochronology adds physical evidence. Paragraph two: how it works and why the ring date isn't the painting date. Paragraph three: it tells you the earliest possible date, so it's great at ruling attributions out but can't confirm them; it disciplines connoisseurship rather than replacing it. The main point has to capture both the value (exclusion) and the limit (can't confirm).",
+            "choices": [
+              {
+                "note": "Contradicts the final sentence: dendrochronology 'does not replace connoisseurship.'"
+              },
+              {
+                "note": "CORRECT. Physical evidence that rules out some attributions but can't confirm them on its own. That's the thesis of the last paragraph and the payoff of the whole passage."
+              },
+              {
+                "note": "Too negative. The sapwood issue is handled with a statistical allowance; the author doesn't call the dates unreliable."
+              },
+              {
+                "note": "True according to paragraph one, but it's background. It leaves out dendrochronology entirely, which is what the passage is about."
+              },
+              {
+                "note": "Contradicts paragraph two: the ring date isn't the painting date, and analysts only estimate an earliest plausible date."
+              }
+            ]
+          }
         },
         {
           "number": 2,
@@ -308,7 +631,37 @@
             "rc-detail"
           ],
           "difficulty": 1,
-          "explanation": "Paragraph two: the allowance covers the missing sapwood and a minimum seasoning period."
+          "explanation": "Paragraph two: the allowance covers the missing sapwood and a minimum seasoning period.",
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Task",
+                "text": "Identify what the added allowance accounts for, as the passage states."
+              },
+              {
+                "label": "Where to look",
+                "text": "Paragraph two, final two sentences."
+              }
+            ],
+            "analysis": "Detail question: find the line. Paragraph two says analysts add 'a statistically derived allowance for missing sapwood and a minimum seasoning period.' Those two things, missing rings and seasoning time, are the answer. Lesson: on detail questions, match the text, don't reason past it.",
+            "choices": [
+              {
+                "note": "CORRECT. Missing sapwood rings plus the seasoning period: almost word-for-word paragraph two."
+              },
+              {
+                "note": "Climate variation is why ring widths differ and can be matched to chronologies. It's not what the allowance covers."
+              },
+              {
+                "note": "Painting time isn't mentioned. The allowance is for the wood, not the painter's work."
+              },
+              {
+                "note": "The passage never discusses errors in master chronologies."
+              },
+              {
+                "note": "Imitators come up in paragraph three as a reason consistency doesn't confirm attribution. They have nothing to do with the allowance."
+              }
+            ]
+          }
         },
         {
           "number": 3,
@@ -326,7 +679,37 @@
             "rc-inference"
           ],
           "difficulty": 2,
-          "explanation": "A consistent date does not confirm the attribution because imitators used the same timber, so the panel could still be an imitator's work. B overstates what an earliest-possible date shows."
+          "explanation": "A consistent date does not confirm the attribution because imitators used the same timber, so the panel could still be an imitator's work. B overstates what an earliest-possible date shows.",
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Task",
+                "text": "Figure out what follows about a painting whose ring dating is consistent with its attribution to a master."
+              },
+              {
+                "label": "Where to look",
+                "text": "Paragraph three, the 'But a panel whose dating is consistent...' sentence."
+              }
+            ],
+            "analysis": "The passage says consistency 'does not thereby confirm' the attribution, because imitators of the same period used the same timber. So the painting could still be an imitator's. Also remember that dendrochronology only gives the earliest possible date, so consistency doesn't even prove the painting was made in the master's lifetime.",
+            "choices": [
+              {
+                "note": "Exactly what the passage says you can't conclude: consistency doesn't confirm the attribution."
+              },
+              {
+                "note": "Overstates it. Ring dating only gives an earliest possible date. A panel could be cut from old enough wood yet be painted after the master died."
+              },
+              {
+                "note": "CORRECT. Imitators of the same period used the same timber, so a consistent date leaves open that an imitator painted it."
+              },
+              {
+                "note": "Nothing about dendrochronology tells you about the painting's style. A consistent date says nothing on brushwork or composition."
+              },
+              {
+                "note": "Seasoning length isn't implied. The passage only says analysts add a minimum seasoning period."
+              }
+            ]
+          }
         },
         {
           "number": 4,
@@ -344,7 +727,37 @@
             "rc-function"
           ],
           "difficulty": 2,
-          "explanation": "The reference is the 'since' clause supporting the claim that consistency does not confirm an attribution."
+          "explanation": "The reference is the 'since' clause supporting the claim that consistency does not confirm an attribution.",
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Task",
+                "text": "Explain why the author brings up imitators active in the same period."
+              },
+              {
+                "label": "Where to look",
+                "text": "Paragraph three, the 'since imitators...' clause."
+              }
+            ],
+            "analysis": "The imitators are in a 'since' clause, which means they're a reason. The claim they support: a date consistent with an attribution doesn't confirm it. Because imitators drew on the same timber, wood dates can't tell a master from a contemporary copycat. Lesson: function questions are about why something is there; find what it's supporting.",
+            "choices": [
+              {
+                "note": "Opposite. The point is that dendrochronology can't distinguish imitators who used the same timber."
+              },
+              {
+                "note": "Too strong. The author just says imitators could have painted such panels, not that most disputed panels are theirs."
+              },
+              {
+                "note": "The imitators aren't used to show what stylistic analysis requires. They explain a limit of dendrochronology."
+              },
+              {
+                "note": "The passage says imitators used the same timber supplies, not that timber was scarce."
+              },
+              {
+                "note": "CORRECT. The 'since' clause explains why a consistent date doesn't confirm an attribution: imitators of the same era had the same wood."
+              }
+            ]
+          }
         },
         {
           "number": 5,
@@ -362,7 +775,37 @@
             "rc-author-attitude"
           ],
           "difficulty": 1,
-          "explanation": "'Excels at exclusion' and 'disciplines' connoisseurship are positive, while 'does not thereby confirm it' marks a limit."
+          "explanation": "'Excels at exclusion' and 'disciplines' connoisseurship are positive, while 'does not thereby confirm it' marks a limit.",
+          "breakdown": {
+            "setup": [
+              {
+                "label": "Task",
+                "text": "Describe how the author feels about using dendrochronology to attribute panel paintings."
+              },
+              {
+                "label": "Where to look",
+                "text": "Paragraph three: 'excels at exclusion,' 'does not thereby confirm,' and 'disciplines it.'"
+              }
+            ],
+            "analysis": "Look at the tone words. 'Excels at exclusion' and 'disciplines' connoisseurship are positive. 'Does not thereby confirm' and 'does not replace' are limits. So: positive, with qualifications. Lesson: on attitude questions, the right answer usually matches the mix of praise and caution, not one extreme.",
+            "choices": [
+              {
+                "note": "The author explains the method in careful detail (sapwood, seasoning), which is the opposite of indifference."
+              },
+              {
+                "note": "Too negative. The author says it 'excels at exclusion' and anchors debates in physical evidence."
+              },
+              {
+                "note": "Too positive. The author explicitly says it can't confirm attributions, so it doesn't settle disputes conclusively."
+              },
+              {
+                "note": "CORRECT. Real appreciation ('excels,' 'disciplines') balanced by clear limits ('does not thereby confirm,' 'does not replace')."
+              },
+              {
+                "note": "No sign of disapproval. The author values the technique."
+              }
+            ]
+          }
         }
       ]
     }
