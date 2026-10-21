@@ -1,6 +1,6 @@
 {
   "format": "lsat-trainer/v1",
-  "id": "classic-style-test-3-v3",
+  "id": "classic-style-test-3-v4",
   "name": "Classic-Style Test 3",
   "number": 3,
   "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
@@ -16,9 +16,9 @@
           "stimulus": "Swim coach: Sports scientists warn that teenage swimmers who train more than twenty hours a week face a higher risk of serious shoulder injury than those who train less. But this warning is overblown. Throughout high school I trained more than twenty-five hours a week, often in two sessions a day, and I never injured a shoulder once.",
           "stem": "The reasoning in the swim coach's argument is flawed in that the argument",
           "choices": [
-            "attacks the motives of the sports scientists rather than addressing the evidence on which their warning is based",
-            "takes for granted that what is true of competitive swimmers must also be true of athletes in other sports",
-            "treats one person's experience as sufficient to show that a claim about increased risk is exaggerated",
+            "attacks the motives of the sports scientists rather than addressing the evidence on which their warning about injury is based",
+            "takes for granted that what is true of competitive swimmers must also be true of athletes in all other sports",
+            "treats one person's experience as enough to show that a claim about an increased risk of injury is exaggerated",
             "fails to consider that the coach may have trained fewer hours in high school than the coach now remembers",
             "concludes that heavy training is beneficial merely because it caused no harm in a single case"
           ],
@@ -77,7 +77,7 @@
             "Pale gravel reflects sunlight onto the leaves of nearby shrubs and so raises the temperature of those leaves.",
             "Gravel spread over the soil around shrubs slows the evaporation of water from the soil beneath it.",
             "Gardeners in dry regions should stop growing shrubs that need large amounts of water to survive.",
-            "Spreading pale gravel around shrubs usually does more harm than good to the shrubs.",
+            "Spreading pale gravel over the soil around shrubs in dry regions usually does more harm than good to the shrubs.",
             "Shrubs surrounded by pale gravel lose more water through their leaves than do shrubs surrounded by bare soil."
           ],
           "answer": "D",
@@ -127,11 +127,11 @@
           "stimulus": "Last spring, the Marrow Creek trail, alone among the six trails in the Ashgrove nature preserve, had its trailhead signs replaced with new signs asking hikers to stay on marked paths. Over the summer, rangers recorded 40 percent fewer instances of hikers leaving the Marrow Creek trail than they had the summer before. The new signs, therefore, reduced off-trail hiking there.",
           "stem": "Which one of the following, if true, most strengthens the argument?",
           "choices": [
-            "On the preserve's other trails, whose signs were unchanged, recorded off-trail hiking was about the same as the previous summer.",
-            "Several hikers interviewed on the Marrow Creek trail last summer said that they had not noticed the new signs.",
+            "On the preserve's other trails, whose signs were unchanged, off-trail hiking was about the same as the previous summer.",
+            "Several hikers interviewed on the Marrow Creek trail last summer said that they had never noticed the new signs at all.",
             "Rangers spent fewer hours patrolling the Marrow Creek trail last summer than they had the summer before.",
-            "A heavy storm closed the Marrow Creek trail for most of July, though the preserve's other trails stayed open.",
-            "Trampling by hikers is the leading cause of damage to plants along trails in nature preserves of this kind."
+            "A heavy storm closed the Marrow Creek trail for most of July last summer, though the preserve's other trails stayed open.",
+            "Trampling by hikers is the leading cause of damage to plants growing along trails in nature preserves of this kind."
           ],
           "answer": "A",
           "types": [
@@ -234,7 +234,7 @@
             "a modest admission fee would bring in enough money to pay for longer opening hours",
             "overall attendance at the Halvard Museum would drop sharply if an admission fee were introduced",
             "families from the neighborhoods around the museum value it more than its other visitors do",
-            "the Halvard Museum should begin charging visitors a modest admission fee",
+            "the Halvard Museum should end free admission and charge visitors a modest fee",
             "the museum's duty to nearby neighborhoods outweighs every other consideration in setting its policies"
           ],
           "answer": "D",
@@ -444,8 +444,8 @@
             "chickadees that use feeders in winter gradually lose much of their ability to find food on their own",
             "at least for chickadees, winter feeding does not appear to create the dependence that many people fear",
             "winter feeding actually improves chickadees' chances of surviving long and unusually cold winters",
-            "people need not be concerned about any of the effects that feeding might have on wild birds",
-            "chickadees prefer the natural foods they find to the seeds that people offer at feeders"
+            "people need not be concerned about any of the effects that winter feeding might have on wild birds",
+            "chickadees generally prefer the natural foods they find for themselves to the seeds that people offer at feeders"
           ],
           "answer": "B",
           "types": [
@@ -491,8 +491,8 @@
           "stimulus": "Principle: A city should waive the permit fee it normally charges for a street festival if the festival is open to the public free of charge, does not close any street served by a public bus route, and either is organized by a neighborhood association or gives all of its proceeds to a registered charity.",
           "stem": "Which one of the following judgments most closely conforms to the principle above?",
           "choices": [
-            "The city should waive the fee for the Dorset Avenue block party, a free public event organized by the Dorset neighborhood association that will close a street on the number 4 bus route.",
-            "The city should not waive the fee for the Riverside Jazz Walk, a free public event that closes no bus route, because it is run by a private promoter who keeps the proceeds.",
+            "The city should waive the fee for the Dorset Avenue block party, a free public event organized by the Dorset neighborhood association that will close a street on the number 4 bus route for the day.",
+            "The city should not waive the fee for the Riverside Jazz Walk, a free public event that closes no bus route, because it is run by a private promoter who keeps all of the proceeds.",
             "The city should waive the fee for the Elm Park Arts Market, which closes no bus route and is run by the Elm Park neighborhood association, although visitors must pay to enter.",
             "The city should waive the fee for the Grove Street Food Festival, a free public event that closes no bus route, because its organizers expect it to draw large crowds downtown.",
             "The city should waive the fee for the Larch Street Harvest Fair, a free public event that closes no bus route and that will give all of its proceeds to a registered charity."
@@ -544,8 +544,8 @@
           "stimulus": "Columnist: Supporters of ranked-choice voting claim that it reduces negative campaigning. Their evidence is a single city where televised attack ads declined sharply after the system was adopted there. But attack ads declined nationwide that same year, even in cities that kept their old voting systems, so that city's experience proves nothing. Ranked-choice voting, therefore, does not reduce negative campaigning.",
           "stem": "The reasoning in the columnist's argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
-            "treats the failure of the supporters' evidence to establish their claim as showing that the claim is false",
-            "attacks the motives of the supporters of ranked-choice voting rather than the evidence that they offer for their claim",
+            "treats a failure to establish the supporters' claim as proof that it is false",
+            "attacks the motives of ranked-choice voting's supporters rather than the evidence they offer for their claim",
             "relies on nationwide figures that may not reflect conditions in the particular city the supporters cite",
             "presumes, without providing justification, that negative campaigning is harmful to voters and to the candidates",
             "concludes that ranked-choice voting is undesirable merely because it fails to achieve one of its intended goals"
@@ -605,7 +605,7 @@
           "choices": [
             "Fares on the ferry line were raised slightly in March to help pay for the purchase of the new vessels.",
             "Ferries on other lines that cross the same bay have also arrived late more often since March.",
-            "When the new vessels entered service, the line revised its timetable, cutting each scheduled crossing time by ten minutes.",
+            "When the new vessels entered service, the line revised its published timetable, cutting each scheduled crossing time by ten minutes.",
             "Fog occasionally forces the ferries to slow to a crawl for several minutes in the middle of the bay.",
             "Owners of private boats complain that the new ferries' larger wakes have made crossing the bay more difficult."
           ],
@@ -709,7 +709,7 @@
           "stem": "The conclusion of the director's argument follows logically if which one of the following is assumed?",
           "choices": [
             "If the Glenmorrow blanket could be woven entirely from members' wool, it would be sold in the cooperative's shop.",
-            "The Glenmorrow blanket cannot be woven without a crimson stripe of the correct shade.",
+            "The Glenmorrow blanket cannot be woven without a crimson stripe that has taken the correct shade of dye.",
             "Some of the cooperative's members could begin raising Kerran sheep within the next few years.",
             "If the cooperative had Kerran wool, it would be able to weave the Glenmorrow blanket with its crimson stripe.",
             "Wool from Kerran sheep costs considerably more than wool from the breeds that the cooperative's members raise."
@@ -763,7 +763,7 @@
           "stem": "The historian's argument proceeds by",
           "choices": [
             "arguing that the parish records are unreliable because the officials who compiled them had a stake in the tax on bequests",
-            "offering an alternative explanation for the evidence on which the scholars base their conclusion about the town",
+            "offering another explanation for the evidence on which the scholars base their conclusion",
             "presenting new evidence that the town of Korby was in fact wealthy during the 1600s",
             "questioning the scholars' expertise in interpreting the parish records of the seventeenth century",
             "showing that the scholars' conclusion is inconsistent with other claims those scholars have made about the town"
@@ -822,7 +822,7 @@
             "Most engineers on the team say that writing the required tests has considerably slowed their work on new features.",
             "Customer-reported bugs fell by a similar percentage last quarter at several companies that have no testing requirement.",
             "Automated tests can catch some kinds of bugs that manual reviews of code by other engineers tend to miss.",
-            "The drop in reported bugs came almost entirely from parts of the software changed after the requirement took effect.",
+            "The drop in reported bugs came almost entirely from parts of the software that were changed after the requirement took effect.",
             "Several customers who had reported many bugs in the previous quarter stopped using the team's software before last quarter."
           ],
           "answer": "D",
@@ -870,14 +870,14 @@
         },
         {
           "number": 17,
-          "stimulus": "Urban ecologist: To shade its new boulevards within a few years, the city plans to line them exclusively with fast-growing poplars. This plan is shortsighted. Poplars are short-lived, and their brittle limbs often break in storms, so the city would likely have to replace most of the trees within twenty years. Slower-growing oaks, by contrast, would shade the boulevards for well over a century.",
-          "stem": "Which one of the following most accurately describes the role played in the ecologist's argument by the claim that the city would likely have to replace most of the trees within twenty years?",
+          "stimulus": "Urban ecologist: The city plans to line its new boulevards exclusively with fast-growing poplars so that the streets will be shaded within a few years. The city would do better to plant oaks. Admittedly, oaks would take far longer to provide much shade. But poplars are short-lived, and their brittle limbs often break in storms, so the city would likely have to replace most of the poplars within twenty years, just when oaks would be reaching full size.",
+          "stem": "Which one of the following most accurately describes the role played in the ecologist's argument by the claim that the city would likely have to replace most of the poplars within twenty years?",
           "choices": [
-            "It is the overall conclusion of the argument, which each of the other claims in the argument is offered to support.",
-            "It is a premise offered in support of the claim that poplars are short-lived and that their limbs often break.",
-            "It is supported by another claim in the argument and in turn supports the argument's main conclusion.",
-            "It describes a consequence of the city's plan that the ecologist argues is unlikely to actually occur.",
-            "It is offered as evidence that slower-growing oaks would shade the boulevards for more than a century."
+            "It is the overall conclusion of the argument, and it is supported by the claims about the poplars' short lives and brittle limbs.",
+            "It is a consideration that the ecologist acknowledges tells against the course of action that the argument recommends.",
+            "It is supported by other claims in the argument and is in turn used to support a claim stated earlier in the argument.",
+            "It is a premise offered in support of the claim that oaks would take far longer than poplars to provide much shade.",
+            "It is a prediction attributed to the city's planners that the ecologist argues is unlikely to come true."
           ],
           "answer": "C",
           "types": [
@@ -886,37 +886,37 @@
           "difficulty": 4,
           "skills": [
             "plan",
-            "causal"
+            "rebuttal"
           ],
           "flaws": [],
-          "explanation": "The replacement claim is drawn from the facts about poplars' short lives and brittle limbs, and it in turn supports 'This plan is shortsighted,' so it is a subsidiary conclusion (C). (A) is the trap: the claim is flagged by 'so,' but it supports a further claim, so it isn't the overall conclusion. (B) reverses the support relation.",
+          "explanation": "The main conclusion is the unflagged recommendation 'The city would do better to plant oaks'; the replacement claim is drawn from the facts about poplars' short lives and brittle limbs ('so') and in turn supports that earlier recommendation, so it is a subsidiary conclusion (C). (A) is the trap: the claim comes last and follows 'so,' but it is offered as a reason to plant oaks, so it can't be the overall conclusion. (B) mislocates the concession, which is about oaks being slow.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The city's poplars-only plan is shortsighted."
+                "text": "The city would do better to plant oaks than poplars."
               },
               {
                 "label": "Reasoning",
-                "text": "Poplars are short-lived and brittle, so most would need replacing within 20 years; oaks would shade for over a century."
+                "text": "Poplars are short-lived and brittle → the city would likely have to replace most of them within twenty years (the claim in question), just as oaks reach full size; concession: oaks are slower to give shade."
               }
             ],
-            "analysis": "Ask which statement supports which. 'Short-lived, brittle' → 'replace within twenty years' → 'shortsighted.' The 'so' tempts you to call the replacement claim the conclusion, but it is itself used to support 'This plan is shortsighted,' which nothing else props up. So the claim is in the middle: supported and supporting. We need an answer that says it gets support and gives support to the main conclusion.",
+            "analysis": "Where's the conclusion? Not at the end. Ask which statement supports which; the conclusion is the one everything else supports. 1. Poplars are short-lived and brittle. → 2. The city would have to replace most of them within twenty years. → 3. The city would do better to plant oaks. The first sentence is background, and the 'Admittedly' sentence is a concession against 3. So the claim in question is supported (by 1) and supports something (3): a subsidiary conclusion. Most students pick (A) because the claim comes last and follows 'so.' But 'so' only shows the claim is drawn from something; it doesn't show that nothing further rests on it. Here it is the reason oaks are the better choice. We need an answer that says: supported, and in turn supports a claim made earlier.",
             "choices": [
               {
-                "note": "Tempting, because it's flagged by 'so.' But it isn't the end of the line: it is itself used to show the plan is shortsighted. The main conclusion is 'This plan is shortsighted.'"
+                "note": "Tempting. It's the last sentence and it follows 'so,' which looks like a conclusion flag. But it's offered as a reason for 'The city would do better to plant oaks.' A claim that supports another claim isn't the overall conclusion."
               },
               {
-                "note": "Backward. The short life and brittle limbs support the replacement claim, not the other way around."
+                "note": "Wrong concession. The ecologist does concede something, but it's that oaks are slow to give shade. The replacement claim counts against poplars, which helps the recommendation instead of telling against it."
               },
               {
-                "note": "CORRECT. It's drawn from the facts about short life and brittle limbs ('so'), and it's a reason the plan is shortsighted. That makes it a subsidiary conclusion."
+                "note": "CORRECT. It's supported by the facts about short lives and brittle limbs ('so'), and it supports the recommendation to plant oaks, which comes earlier in the argument. That's a subsidiary conclusion, described abstractly."
               },
               {
-                "note": "The ecologist thinks this consequence is likely, not unlikely. It's a reason against the plan."
+                "note": "Right role word, wrong relation. The claim that oaks are slow is a concession, and nothing is offered to support it; the replacement claim supports the recommendation instead."
               },
               {
-                "note": "Right claim, wrong relation. The oak lifespan is a separate premise; the replacement claim doesn't support it."
+                "note": "The ecologist believes the replacement prediction; it's the reason poplars are a poor choice. It isn't attributed to the planners, and it isn't rejected."
               }
             ]
           }
@@ -926,7 +926,7 @@
           "stimulus": "Last season, runners on the Westfield High track team who attended the coach's optional sessions reviewing race footage cut their race times by more, on average, than did runners who skipped the sessions. So, to improve the team's race times this season, the coach plans to require every runner on the team to attend the film sessions.",
           "stem": "Which one of the following is an assumption on which the argument depends?",
           "choices": [
-            "Some runners who have skipped the film sessions would improve more if they attended them.",
+            "Some runners who skip the film sessions would improve more by attending them.",
             "The film sessions are the most valuable part of the team's entire training program.",
             "Every runner who attended the sessions cut his or her race times by more than every runner who skipped them.",
             "Requiring attendance will not make the sessions less enjoyable for the runners who already attend them voluntarily.",
@@ -984,14 +984,14 @@
         },
         {
           "number": 19,
-          "stimulus": "Engineer: Stone arch bridges built in the Calden region during the 1700s are, on average, in noticeably better structural condition today than stone arch bridges built there in the early 1900s, even though the older bridges have had nearly two more centuries in which to deteriorate. Evidently, Calden's eighteenth-century bridge builders followed sounder construction practices than did their twentieth-century successors.",
+          "stimulus": "Engineer: Stone arch bridges built in the Calden region during the 1700s are, on average, in noticeably better structural condition today than those built there in the early 1900s. Yet the two groups of bridges now carry similar amounts of traffic, and the older bridges have had nearly two more centuries in which to deteriorate. Evidently, Calden's eighteenth-century bridge builders followed sounder construction practices than did their twentieth-century successors.",
           "stem": "The engineer's argument is most vulnerable to criticism on the grounds that it",
           "choices": [
-            "overlooks the possibility that most poorly built bridges from the earlier period have long since collapsed or been replaced",
-            "takes for granted that a bridge in good structural condition is also safe for the traffic it now carries",
+            "takes for granted that the bridges still available for comparison today represent the building work of each period equally well",
+            "fails to consider that the older bridges may now bear much lighter traffic than the bridges built in the early 1900s",
             "fails to consider that builders in the earlier period may have constructed far fewer bridges than later builders did",
             "draws a general conclusion about construction practices from the condition of the bridges in a single region only",
-            "treats the age of a bridge as though it were the main factor determining the bridge's present condition"
+            "treats the age of a bridge as though it were the main factor determining that bridge's present condition"
           ],
           "answer": "A",
           "types": [
@@ -1000,13 +1000,12 @@
           "difficulty": 5,
           "skills": [
             "sampling",
-            "comparison",
-            "causal"
+            "comparison"
           ],
           "flaws": [
             "sampling"
           ],
-          "explanation": "Only the 1700s bridges that are still standing can be compared today; if most poorly built ones from that era have already collapsed or been replaced, the survivors are an unrepresentative sample of eighteenth-century work (A). (E) is tempting because age is mentioned, but the engineer treats age as a handicap the older bridges overcame, not as the cause of their condition. (D) misdescribes a conclusion that is explicitly limited to Calden.",
+          "explanation": "The comparison can use only the 1700s bridges still standing; if most poorly built ones from that era collapsed or were replaced long ago, the survivors overstate the quality of eighteenth-century work, while the 1900s bridges haven't been weeded out the same way. (A) says this abstractly: the argument takes for granted that today's bridges represent each period equally well. (B) is the trap: lighter traffic is the obvious rival cause, but the engineer already said the two groups carry similar traffic. (E) misreads age, which the engineer treats as a handicap, not as the cause.",
           "breakdown": {
             "setup": [
               {
@@ -1015,29 +1014,29 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Surviving 1700s stone bridges are, on average, in better condition than early-1900s ones, despite being older."
+                "text": "Surviving 1700s bridges are on average in better condition than early-1900s bridges; the two groups carry similar traffic; the older bridges have had two more centuries to deteriorate."
               }
             ],
-            "analysis": "Which 1700s bridges are we looking at? Only the ones still standing. The weak ones fell down or were torn out long ago. That's survivorship bias: the sample is filtered by the very quality being measured. It's like saying old cars were better built because the 1960s cars you see on the road today run great; the bad ones are in the scrapyard. We need an answer that says the surviving older bridges may not represent all the bridges built back then.",
+            "analysis": "Which 1700s bridges are we looking at? Only the ones still standing. If the badly built ones fell down or were torn down long ago, the survivors are the best of their era, while the 1900s group still includes its weak bridges. That's survivorship bias, a sampling flaw; know it. It's like concluding that cars from the 1960s were built better because the ones you still see on the road run beautifully, when the lemons went to the scrapyard decades ago. Most students pick (B) because lighter traffic is the obvious alternative cause. But the engineer already said the two groups carry similar traffic, so (B) faults the argument for ignoring something it explicitly addressed. We need an answer that says the bridges available today may not be a fair sample of each era. The right answer says exactly that, in abstract words that don't mention collapse at all.",
             "choices": [
               {
-                "note": "CORRECT. Only the 1700s bridges that survived can be inspected today. If the badly built ones are gone, the survivors are the cream of their era, and comparing them with all early-1900s bridges proves nothing about typical practices."
+                "note": "CORRECT. This is survivorship, worded abstractly. Two centuries of collapses and replacements may have removed the weak old bridges, so today's 1700s bridges represent their era less well than today's 1900s bridges represent theirs. If so, the better average says nothing about the builders."
               },
               {
-                "note": "The engineer never talks about safety or traffic. This answers a question the argument doesn't raise.",
-                "example": "Example of this flaw: The bridge passed its structural inspection, so it can certainly handle the heavier trucks that will use it next year."
+                "note": "Tempting. Lighter traffic would be a fine alternative explanation in general. But the engineer states that the two groups now carry similar traffic, so this criticizes the argument for overlooking something it already ruled out.",
+                "example": "Example of this flaw: Our old office printer has outlasted the new one, so older printers were built better (when the old one prints a few pages a week and the new one runs all day)."
               },
               {
-                "note": "So? How many bridges each era built doesn't tell us how well each bridge was built, and the comparison uses averages.",
-                "example": "Example of this flaw: Our town built more houses in the 1950s than in the 1850s, so 1950s builders must have been less careful."
+                "note": "So? The argument compares average condition, not totals. How many bridges each era built doesn't change an average.",
+                "example": "Example of this flaw: More Calden bridges needed repairs in the 1900s than in the 1700s, so 1900s builders were worse (ignoring that far more bridges were built in the 1900s)."
               },
               {
-                "note": "The conclusion is limited to Calden's builders. There's no generalization beyond the region.",
-                "example": "Example of this flaw: Calden's old bridges are sound, so eighteenth-century builders everywhere used sound methods."
+                "note": "The conclusion is explicitly about Calden's builders, not builders everywhere. There's no generalization beyond the region.",
+                "example": "Example of this flaw: Calden's old bridges are in better shape than its newer ones, so bridge builders everywhere have gotten worse."
               },
               {
-                "note": "Tempting, because age is mentioned. But the engineer uses age only to say the older bridges did well despite it; the argument credits construction practices, not age.",
-                "example": "Example of this flaw: This bridge is the oldest in the county, so it must be the one in the worst condition."
+                "note": "The engineer treats age as a handicap the old bridges overcame, not as the cause of their good condition. This misdescribes the argument.",
+                "example": "Example of this flaw: This bridge is in poor condition, so it must be very old."
               }
             ]
           }
@@ -1048,7 +1047,7 @@
           "stem": "Which one of the following principles, if valid, most helps to justify the bakery owner's reasoning?",
           "choices": [
             "A business should fill every lawful order it receives unless filling that order would cause the business to lose money on the sale.",
-            "A business may refuse a lawful order if the item would publicly bear its name and would reasonably be read as its view.",
+            "A business may refuse a lawful order if the item would publicly bear its name and would reasonably be read as its own view.",
             "A business should not be held responsible for the views expressed in items that it makes at a customer's request.",
             "A business that declines a customer's order should always explain its reasons for doing so to that customer in writing.",
             "A message that most people at a public event would find offensive should not be displayed at that event at all."
@@ -1097,13 +1096,13 @@
         },
         {
           "number": 21,
-          "stimulus": "Campaign strategist: In last year's city council races in Marbury, the 20 candidates whose volunteers knocked on the doors of more than 5,000 households during the campaign won 15 seats, while the 30 candidates whose campaigns reached fewer households won only 6 seats. So door-to-door canvassing substantially improves a candidate's chances of winning a council seat.",
+          "stimulus": "Campaign strategist: In Marbury's city council races last year, the 20 candidates whose volunteers knocked on the doors of more than 5,000 households won 15 seats, while the 30 candidates whose volunteers reached fewer households won only 6. So door-to-door canvassing substantially improves a candidate's chances of winning a council seat.",
           "stem": "Which one of the following, if true, most seriously weakens the campaign strategist's argument?",
           "choices": [
-            "Several of the candidates whose campaigns visited more than 5,000 households lost their races by very wide margins.",
-            "Door-to-door canvassing costs a campaign considerably more per voter reached than does advertising sent by mail.",
-            "The candidates whose campaigns reached fewer households spent more, on average, on television advertising than the others did.",
-            "Campaigns already leading in early polls attract the most volunteers, who determine how many households a campaign can visit.",
+            "Several of the candidates whose volunteers visited more than 5,000 households lost their races by very wide margins.",
+            "Of the 21 seats won, 16 went to incumbents, and incumbents in Marbury generally win far more often than challengers do.",
+            "The candidates whose volunteers reached fewer households spent more, on average, on television advertising than the others did.",
+            "How many volunteers a campaign attracts depends largely on how likely its candidate appears to win early in the race.",
             "In council races in neighboring cities last year, the link between canvassing and winning was weaker than in Marbury."
           ],
           "answer": "D",
@@ -1118,34 +1117,34 @@
           "flaws": [
             "causation"
           ],
-          "explanation": "(D) shows the correlation could run backward: candidates already favored to win attract volunteers, and volunteers are what let a campaign reach many households, so being a frontrunner explains both the canvassing and the wins. (E) is tempting, but a weaker link elsewhere is still a link. (C) strengthens by ruling out greater ad spending as the explanation, and (A) is already built into the 15-of-20 figure.",
+          "explanation": "(D) never mentions canvassing, but volunteers are what let a campaign reach households, so if apparent frontrunners attract the most volunteers, being a likely winner explains both the heavy canvassing and the wins: the correlation may run the other way. (B) is the trap: incumbency is the obvious rival cause, but nothing says the incumbents were concentrated among the heavy canvassers, so it doesn't explain the gap between the groups. (C) strengthens by ruling out ad spending, and (E) still describes a link.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Door-to-door canvassing substantially improves a candidate's chances of winning."
+                "text": "Door-to-door canvassing substantially improves a candidate's chances of winning a Marbury council seat."
               },
               {
                 "label": "Reasoning",
-                "text": "Heavy-canvassing candidates won 15 of 20 races; lighter-canvassing candidates won 6 of 30."
+                "text": "Candidates whose volunteers reached 5,000+ households won 15 of 20; those whose volunteers reached fewer won 6 of 30."
               }
             ],
-            "analysis": "Correlation, then a causal conclusion. So which came first? Maybe strong candidates canvass more, rather than canvassing making candidates strong. Reversed causation (or a common cause); it's a classic, know it. It's like noticing that restaurants with long lines serve good food and concluding the lines make the food good. We need an answer showing that likely winners are the ones able to canvass heavily.",
+            "analysis": "Did canvassing win the seats, or did winning-type candidates get to canvass more? Look at what limits canvassing: volunteers. If strong candidates draw more volunteers, the arrow can point backward: likely winner → more volunteers → more doors knocked. 15 of 20 vs. 6 of 30 is a correlation, and correlation isn't causation; reversed causation is a classic, know it. It's like concluding that owning a yacht makes people rich. Most students pick (B) because incumbency sounds like the alternative cause. But a rival cause weakens only if it lines up with the two groups being compared, and (B) never says the incumbents were the heavy canvassers; they could be spread evenly across both groups. We need an answer that ties the amount of canvassing to something that also predicts winning. The right one does it through volunteers, without using the word canvassing.",
             "choices": [
               {
-                "note": "Already built into the numbers: 5 of those 20 lost. A few big losses don't undercut a pattern of 15 wins in 20."
+                "note": "Already built in. 15 of 20 means five heavy canvassers lost; losing by a lot doesn't change the win rate."
               },
               {
-                "note": "Cost isn't the issue. Canvassing can be expensive and still raise a candidate's chances."
+                "note": "Tempting. Incumbency is a real advantage, and it's the rival cause most students reach for. But to explain the gap, the incumbents would have to cluster among the heavy canvassers, and (B) doesn't say that. If the 16 incumbent winners are spread across both groups, the canvassing gap is still unexplained."
               },
               {
-                "note": "This actually strengthens: it rules out bigger ad budgets as the reason the canvassing candidates won."
+                "note": "Opposite direction. The low canvassers spent more on TV yet won less, which rules out ad spending as the explanation and helps the strategist."
               },
               {
-                "note": "CORRECT. This shows the correlation could run the other way: being a frontrunner brings volunteers, volunteers make heavy canvassing possible, and frontrunners also tend to win. Canvassing may just be a marker of strength."
+                "note": "CORRECT. Volunteers drive how many doors get knocked. If campaigns that look like winners early attract more volunteers, then likely winners canvass more, and the canvassing-win correlation could come entirely from which candidates were already ahead."
               },
               {
-                "note": "Tempting, but a weaker link elsewhere is still a link, and it tells us nothing about why the link held in Marbury."
+                "note": "So? A weaker link elsewhere is still a link, and it says nothing about why Marbury's link exists."
               }
             ]
           }
@@ -1155,11 +1154,11 @@
           "stimulus": "Any city whose transit system runs trains at least every ten minutes during rush hour will see its rush-hour train ridership rise from year to year. Rush-hour train ridership in Ashcombe has been rising steadily in each of the past five years. So Ashcombe's transit system must be running its trains at least every ten minutes during rush hour.",
           "stem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that exhibited by the argument above?",
           "choices": [
-            "Any museum that offers free admission on weekends will see its weekend attendance rise. Weekend attendance at the Corbin Museum has not risen. So the Corbin Museum must not be offering free admission on weekends.",
-            "Every hospital in the region that adopted electronic charts last year reduced its paperwork costs. So electronic charts will reduce paperwork costs at any hospital in the region that adopts them in the future.",
-            "Any choir that rehearses each piece at least six times will perform it without major errors. The Westbrook Choir rehearsed its new piece eight times. So the Westbrook Choir will perform the new piece without major errors.",
-            "Most candidates endorsed by the Ledger newspaper win their elections. Pelham has been endorsed by the Ledger this year. So Pelham will certainly win the election that she is now contesting.",
-            "No restaurant whose chef trained at the Lyon Institute fails to earn a top rating from critics. Hollis Bistro earned a top rating from critics. So its chef must have trained at the Lyon Institute."
+            "Any museum that offers free admission on weekends will see its weekend attendance rise from year to year. Weekend attendance at the Corbin Museum has not risen in five years. So the Corbin Museum must not offer free admission on weekends.",
+            "Every hospital in the region that adopted electronic charts last year reduced its paperwork costs. So electronic charts will reduce paperwork costs at any hospital in the region that adopts them at some point in the future.",
+            "Any choir that rehearses each piece at least six times will perform it without major errors. The Westbrook Choir rehearsed its new piece eight times. So the Westbrook Choir will perform its new piece without major errors.",
+            "Most candidates endorsed by the Ledger newspaper win their elections. Pelham has been endorsed by the Ledger this year. So Pelham will certainly win the election that she is now contesting against two rivals.",
+            "Hollis Bistro's chef must have trained at the Lyon Institute, since the bistro has a top rating from critics and no restaurant whose chef trained there fails to earn one."
           ],
           "answer": "E",
           "types": [
@@ -1172,38 +1171,38 @@
           "flaws": [
             "necessary-sufficient"
           ],
-          "explanation": "The argument has the form: frequent trains → rising ridership; ridership is rising; so trains are frequent, which affirms the consequent. (E)'s double-negative premise ('no restaurant whose chef trained at Lyon fails to earn a top rating') just means Lyon training → top rating, and it then infers the training from the rating, the same error. (A) is the trap: it looks closest on the surface but reasons validly by contrapositive. (C) is also valid, while (B) and (D) commit different errors.",
+          "explanation": "The argument has the form: frequent trains → rising ridership; ridership is rising; so trains are frequent, which affirms the consequent. (E) puts its conclusion first and states its rule as a double negative ('no restaurant whose chef trained there fails to earn one' just means Lyon training → top rating), then infers the training from the rating: the same error in disguise. (A) is the trap: it copies the original's wording and sentence order but reasons validly by contrapositive. (C) is also valid, while (B) and (D) commit different errors.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Ashcombe's trains run at least every ten minutes at rush hour."
+                "text": "Ashcombe's transit system must run trains at least every ten minutes at rush hour."
               },
               {
                 "label": "Reasoning",
-                "text": "Trains every ≤10 minutes → ridership rises; Ashcombe's ridership is rising."
+                "text": "Trains every ten minutes or better → rush-hour ridership rises each year; Ashcombe's ridership has been rising."
               },
               {
                 "label": "Pattern",
-                "text": "If A, then B; B; so A."
+                "text": "If X, then Y; Y; so X. (Affirming the consequent: treating a sufficient condition as if it were necessary.)"
               }
             ],
-            "analysis": "Arrow it: frequent trains → ridership rises. We're told ridership rises, and the argument concludes frequent trains. That's the reversal: the result could have other causes (new housing near stations, higher gas prices). Find the answer with If A → B; B; so A. Watch for the valid look-alike that uses the contrapositive, and decode double negatives: 'No X fails to Y' means every X is Y.",
+            "analysis": "Rising ridership proves frequent trains? No. Frequent trains are enough for rising ridership, but ridership can rise for other reasons, like a new stadium or pricier parking. Chain: frequent trains → ridership rises. Ashcombe: ridership rises. → 'Must be' frequent trains. That's affirming the consequent (reversing the conditional); it's a classic, know it. Most students pick (A) because it looks like the original: 'Any X that does Y will see Z rise,' then a fact about Z, then 'must.' But (A) says Z did NOT happen and concludes Y did NOT happen. That's the contrapositive, which is valid, and a valid argument can't match a flawed one. Now translate before you match: the right answer hides its rule in a double negative and puts its conclusion first.",
             "choices": [
               {
-                "note": "Tempting: it's the closest on the surface. But it reasons by contrapositive (no rise → no free admission), which is valid. The original is flawed, so this doesn't match."
+                "note": "Tempting. Same vocabulary and sentence order as the original. But it runs the contrapositive: attendance didn't rise → no free admission. That's valid, so it can't parallel a flawed argument."
               },
               {
-                "note": "A different flaw: generalizing from past cases to all future ones. No conditional is reversed."
+                "note": "A different flaw: it generalizes from hospitals that adopted charts last year to any future adopter. There's no conditional being reversed."
               },
               {
-                "note": "Valid: the condition is met, so the result follows. The original affirms the result instead."
+                "note": "Valid. Six or more rehearsals → no major errors; eight rehearsals; so no major errors. That's applying the rule forward."
               },
               {
-                "note": "A different flaw: it turns 'most' into 'certainly.' The original's problem is direction, not a quantifier."
+                "note": "A different flaw: it turns 'most' into 'certainly.' Endorsed → probably wins, but the conclusion claims a sure thing. The original's problem isn't strength; it's direction."
               },
               {
-                "note": "CORRECT. Decode the double negative: chef trained at Lyon → top rating. Then it sees a top rating and infers Lyon training. Same error: affirming the consequent."
+                "note": "CORRECT. Translate the double negative: 'no restaurant whose chef trained there fails to earn one' = Lyon training → top rating. Hollis has a top rating, so it 'must' have a Lyon-trained chef. Same reversal as the original, with the conclusion moved to the front."
               }
             ]
           }
@@ -1213,11 +1212,11 @@
           "stimulus": "Last season, the Arden Theater began selling any seats still unsold on the day of a performance at half the regular price. The theater sells no other discounted tickets, and its regular price has not changed. Compared with the season before, the theater sold 4 percent fewer regular-price tickets last season, yet its total revenue from ticket sales was exactly the same.",
           "stem": "Which one of the following is most strongly supported by the information above?",
           "choices": [
-            "Some patrons who had previously bought regular-price tickets waited last season to buy half-price tickets instead.",
-            "Most of the people who bought half-price tickets last season had never attended the Arden Theater before.",
-            "The total number of tickets the theater sold was greater last season than in the season before.",
-            "The theater's performances last season were attended by fewer people than its performances the season before.",
-            "Selling unsold seats at half price on the day of a performance increased the theater's total ticket revenue."
+            "Some patrons who had bought regular-price tickets in advance in earlier seasons waited last season to buy half-price tickets instead.",
+            "Most of the people who bought half-price tickets last season had never before attended a performance at the Arden Theater.",
+            "The theater sold more tickets last season than the season before, though at a lower average price per ticket.",
+            "Fewer people attended the theater's performances last season than attended its performances during the season before.",
+            "Selling unsold seats at half price on the day of a performance increased the theater's total revenue from ticket sales."
           ],
           "answer": "C",
           "types": [
@@ -1229,30 +1228,30 @@
             "fact-set"
           ],
           "flaws": [],
-          "explanation": "Revenue held steady while regular-price sales fell 4 percent, so half-price sales replaced the lost revenue; since each half-price ticket earns half as much, the theater had to sell twice as many half-price tickets as the regular tickets it lost, so total tickets rose (C). (A) is the tempting cannibalization story, but nothing shows any patron switched. (E) is contradicted by the flat revenue.",
+          "explanation": "Revenue held steady while regular-price sales fell 4 percent, so half-price sales exactly replaced the lost revenue; each half-price ticket earns half as much, so the theater sold twice as many half-price tickets as the regular tickets it lost. Total tickets therefore rose, and with the same revenue spread over more tickets the average price fell (C). (A) is the trap: the cannibalization story is natural, but nothing shows why regular sales dropped or that any patron switched. (D) confuses fewer regular tickets with fewer tickets overall, and (E) is contradicted by the flat revenue.",
           "breakdown": {
             "setup": [
               {
                 "label": "Facts",
-                "text": "1. New: unsold seats sold at half price on the day of the show; 2. No other discounts; regular price unchanged; 3. Regular-price sales fell 4%; 4. Total ticket revenue unchanged."
+                "text": "1. Last season, unsold seats were sold on performance day at half price; 2. no other discounts, and the regular price didn't change; 3. regular-price tickets sold fell 4 percent from the season before; 4. total ticket revenue was exactly the same."
               }
             ],
-            "analysis": "Do the arithmetic with easy numbers. Say 100 regular tickets at $20 before: $2,000. Last season, 96 regular tickets: $1,920. Revenue is still $2,000, so half-price tickets brought in $80, which at $10 each is 8 tickets. Total: 96 + 8 = 104 tickets, more than 100. Hard to prephrase beyond that, so watch for answers that tell a plausible story the numbers don't require.",
+            "analysis": "Hard to prephrase without the math, so do it. Say the season before, the theater sold 100 tickets at $10: $1,000, all full price. Last season: 96 regular tickets = $960, so half-price tickets brought in $40, at $5 each = 8 tickets. Total: 104 tickets, and $1,000 / 104 ≈ $9.62 per ticket. More tickets, lower average price, and that holds for any starting numbers. Most students pick (A) because the story writes itself: regulars waited for the bargain. But the stimulus never says why regular sales fell 4 percent; maybe a few subscribers moved away. A plausible story isn't a supported one. Also watch (D): 'fewer regular-price tickets' isn't 'fewer tickets.' The half-price sales more than make up the difference.",
             "choices": [
               {
-                "note": "Tempting, because it's the familiar story about discounts cannibalizing full-price sales. But the 4 percent drop could have other causes; nothing shows these patrons switched."
+                "note": "Tempting. It's the obvious explanation for the 4 percent drop. But the facts don't say why regular sales fell, and the numbers work just as well if not a single patron switched. Possible isn't supported."
               },
               {
-                "note": "We don't know who bought the half-price tickets. Possible, but unsupported."
+                "note": "We know nothing about who bought the half-price tickets. New information."
               },
               {
-                "note": "CORRECT. Revenue stayed flat while regular sales fell 4 percent, so half-price sales made up that lost revenue. Each half-price ticket brings in half as much, so the theater needed twice as many half-price tickets as the regular tickets it lost. Total tickets went up."
+                "note": "CORRECT. Same revenue, 4 percent fewer full-price tickets, so the gap was filled by half-price tickets at twice the count: total tickets rose. The same money spread over more tickets means a lower average price."
               },
               {
-                "note": "The facts point the other way: more tickets sold overall means more seats filled, not fewer."
+                "note": "This reverses what the math shows. Regular-price sales fell, but total tickets sold rose, so there's no reason to think attendance fell."
               },
               {
-                "note": "Contradicted. Total revenue was exactly the same as the season before."
+                "note": "Contradicts the facts: total ticket revenue was exactly the same."
               }
             ]
           }
@@ -1318,11 +1317,11 @@
           "stimulus": "More than half of the engineers at Merrin Software work on the company's mobile app team, and more than half of Merrin's engineers voted in favor of the proposal, put forward by the company's founders, to switch to a four-day workweek. So a majority of the engineers on the mobile app team must have voted in favor of switching to a four-day workweek.",
           "stem": "The reasoning in the argument is flawed in that the argument",
           "choices": [
-            "overlooks the possibility that some of the company's engineers did not vote on the proposal at all",
-            "takes for granted that because most engineers favored the switch, the switch would benefit the company",
-            "relies on figures about the company as a whole to draw a conclusion about every engineer on the mobile app team",
+            "overlooks the possibility that some of the company's engineers did not vote on the four-day workweek proposal at all",
+            "takes for granted that because most engineers favored the switch, the switch would be good for the company",
+            "relies on figures about the company's engineers as a whole to draw a conclusion about every engineer on the mobile app team",
             "overlooks the possibility that none of the engineers on the mobile app team voted in favor of the switch",
-            "fails to consider that the engineers who did not vote for the switch could be concentrated on the mobile app team"
+            "overlooks the possibility that the mobile app team and the group that favored the switch have only a few members in common"
           ],
           "answer": "E",
           "types": [
@@ -1336,7 +1335,7 @@
           "flaws": [
             "percent-number"
           ],
-          "explanation": "Two majorities of the same group must overlap, but only by a little: with 100 engineers, 51 on mobile and 51 in favor, all 49 non-supporters could be on mobile, leaving just 2 mobile supporters. (E) names exactly this. (D) is the trap: it describes something impossible, since two majorities of one group must share at least one member. (C) misstates the conclusion, which concerns a majority of the mobile team, not every engineer on it.",
+          "explanation": "Two majorities of the same group must overlap, but only a little: with 100 engineers, 51 on mobile and 51 in favor, all 49 non-supporters could be on mobile, leaving just 2 mobile supporters. (E) describes this abstractly, as the two groups having only a few members in common. (D) is the trap: it sounds like the same idea pushed further, but it's impossible, since two majorities of one group must share at least one member. (A) is irrelevant because 'more than half of the engineers' already counts nonvoters, and (C) misstates the conclusion, which is about a majority of the mobile team.",
           "breakdown": {
             "setup": [
               {
@@ -1345,28 +1344,28 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Over half of all engineers are on the mobile team; over half of all engineers voted yes."
+                "text": "More than half of all engineers are on the mobile team; more than half of all engineers voted in favor."
               }
             ],
-            "analysis": "Two 'mosts' about the same group guarantee only that they overlap by at least one. 'Many' isn't 'all,' and here 'most' isn't 'most of the subgroup': the supporters could mostly be the other engineers. Imagine 100 engineers: 51 on mobile, 51 in favor. The 49 who voted no could all be mobile engineers. We need an answer that says the opponents might be clustered on the mobile team.",
+            "analysis": "Two majorities must overlap. But by how much? Maybe barely. Take 100 engineers: 51 on mobile, 51 in favor. Put all 49 'no or didn't vote' engineers on the mobile team. Now mobile has 49 non-supporters and only 2 supporters. Majority + majority → at least one shared member, not a majority of either group. 'Most' isn't 'all,' and two 'mosts' don't stack; this quantifier slip is worth knowing. Most students pick (D) because it's the rushed prephrase ('what if the mobile people are the ones who voted no?') pushed to the extreme. But 'none' is impossible here: 51 + 51 > 100, so at least one mobile engineer must have voted yes. The right answer says the overlap could be small, in abstract terms that don't mention majorities. We need an answer that says the two groups might share only a few members.",
             "choices": [
               {
-                "note": "Irrelevant. The premise already says more than half of all engineers voted yes; non-voters don't change that.",
-                "example": "Example of this flaw: Most of the votes cast were for the proposal, so most members must support it."
+                "note": "Irrelevant. The premise already says more than half of ALL engineers voted yes, so nonvoters are counted among the rest. Whether some didn't vote changes nothing.",
+                "example": "Example of this flaw: 60 percent of those who voted chose the switch, so a majority of engineers want it (when only half the engineers voted)."
               },
               {
-                "note": "The argument says nothing about whether the switch is good for the company. Invented conclusion.",
-                "example": "Example of this flaw: Most employees want a four-day week, so a four-day week will make the company more productive."
+                "note": "The argument never says the switch is good for the company. Invented conclusion.",
+                "example": "Example of this flaw: Most engineers voted for the four-day week, so it will make the company more productive."
               },
               {
-                "note": "Misreads the conclusion. It's about a majority of the mobile team, not every member.",
-                "example": "Example of this flaw: Most of the company's engineers favor the switch, so every mobile engineer must favor it."
+                "note": "Overstates the conclusion. It's about a majority of the mobile team, not every member.",
+                "example": "Example of this flaw: Most of Merrin's engineers voted yes, so every engineer on the mobile team voted yes."
               },
               {
-                "note": "Tempting, because it points at the right group. But it's impossible: two majorities of the same group must share at least one member. An argument can't be faulted for ignoring an impossibility."
+                "note": "Tempting, because it's the natural worry pushed to its extreme. But it's impossible: more than half + more than half of the same 100 must share at least one person. An argument can't be faulted for overlooking something that can't happen."
               },
               {
-                "note": "CORRECT. Two majorities must overlap, but only a little. With 100 engineers, 51 on mobile and 51 in favor, all 49 non-supporters could sit on mobile, leaving just 2 mobile supporters out of 51."
+                "note": "CORRECT. The two majorities must share at least one member, but they might share only a few. If so, most of the mobile team could be engineers who didn't vote yes, and the conclusion fails."
               }
             ]
           }
@@ -1413,7 +1412,7 @@
           "choices": [
             "Constructed editions of unfinished novels take no greater liberties with an author’s work than ordinary publishing does, so textual scholars’ objections to them are unfounded.",
             "The history of the 1964 edition of The Lantern Year shows how an editor’s provisional arrangement of an unfinished novel can harden into a permanent text.",
-            "The objections critics raise against constructed editions of unfinished novels are reasons to prepare such editions openly, not reasons to abandon them.",
+            "The objections critics raise against constructed editions of unfinished novels are reasons to prepare such editions openly and candidly, not reasons to abandon them.",
             "Editions that reproduce an unfinished novel’s drafts in full serve only specialists and should therefore give way to constructed editions meant for general readers.",
             "Because constructed editions present editors’ decisions as the author’s own, editors of unfinished novels should publish the surviving drafts as drafts."
           ],
@@ -1610,7 +1609,7 @@
             "It should be withdrawn in favor of an edition that reproduces Korvath’s three drafts in full.",
             "It took no greater liberties with Korvath’s drafts than a publisher ordinarily takes with a finished novel.",
             "Its arrangement of the last chapters is more satisfying than any that later scholars have proposed.",
-            "It would have been less open to the critics’ objections had it disclosed where its editor intervened.",
+            "It would have been less vulnerable to the critics had it disclosed its editor’s interventions.",
             "Its editor was justified in presenting the novel as Korvath’s because Korvath had left three drafts."
           ],
           "answer": "D",
@@ -1659,7 +1658,7 @@
             "a museum’s decision to display a damaged fresco in its damaged state rather than restore it",
             "a label beside a restored fresco identifying which portions were repainted by the museum’s conservators",
             "a conservator’s choice to repaint the missing portions of a fresco in a style matching the original",
-            "a catalog listing every fresco that scholars have attributed to a particular painter",
+            "a museum catalog listing every fresco that art historians have ever attributed to one particular painter",
             "an essay in which a scholar argues that a restored fresco should be returned to its damaged state"
           ],
           "answer": "B",
@@ -1709,7 +1708,7 @@
             "whether the adverse possession doctrine of Aldmere ought to be reformed or abolished",
             "the historical origins of the rule that a possessor may acquire title after fifteen years",
             "the protection that Aldmere law extends to owners who are minors or legally incapacitated",
-            "the purpose that best explains a rule allowing possessors to acquire title to another’s land"
+            "the purpose that best explains a rule letting possessors acquire title to another’s land"
           ],
           "answer": "E",
           "types": [
@@ -1806,7 +1805,7 @@
             "a person who openly occupies another’s land for fifteen years can acquire title to it under Aldmere law",
             "a possessor who knows that the land is not hers can acquire title under the law of Aldmere",
             "the courts of Aldmere have denied title to a possessor whose orchard could not be seen from a public road",
-            "the fifteen-year period is best understood as measuring a possessor’s investment in the land",
+            "the fifteen-year period is best understood as a measure of the investment that a possessor has made in the land",
             "the rule suspending the fifteen-year period for owners who are minors should be abolished"
           ],
           "answer": "D",
@@ -1951,8 +1950,8 @@
           "stimulus": "",
           "stem": "The author of passage B would most likely respond to the claim in passage A that an owner who has ignored land for fifteen years “has shown how little it means to him” by pointing out that",
           "choices": [
-            "an owner may leave land unused for reasons that reflect concern for it rather than indifference",
-            "possessors who merely fence and graze land invest less in it than possessors who plant orchards",
+            "an owner’s leaving land unused can express concern for the land rather than a lack of interest in it",
+            "an owner’s failure to object to an open possession, rather than his nonuse, is what shows how little the land means to him",
             "owners who cannot afford to develop their land should not lose title to it on that account",
             "a possessor who has worked land for fifteen years would lose her investment if she were ejected",
             "courts rarely inquire into how much an owner values land that he has chosen to leave unused"
@@ -1963,34 +1962,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Passage B’s second paragraph says the industry account ‘equates an owner’s nonuse with neglect,’ though some owners leave land unused ‘to let a woodland regenerate or to protect a watershed,’ which is ‘not a sign of indifference.’ That answers passage A’s claim directly, which is A. B is the trap: it comes from passage B’s orchard example, but that example targets the industry account generally, not the inference from nonuse to indifference. C invents an affordability point, and D is passage A’s own argument.",
+          "explanation": "Passage B’s second paragraph says the industry account ‘equates an owner’s nonuse with neglect,’ though some owners leave land unused ‘to let a woodland regenerate or to protect a watershed,’ which is ‘an exercise of ownership, not a sign of indifference.’ That answers passage A’s claim directly, which is A. B is the dominant trap: it borrows passage B’s phrase about an owner’s failure to object, but passage B uses that idea to identify the doctrine’s concern, not to say what reveals an owner’s attitude toward the land. It gives passage B an opinion it never expresses. C invents an affordability point, D is passage A’s own argument, and E is a claim neither passage makes.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Predict passage B’s reply to one specific claim in passage A."
+                "text": "Predict how passage B's author would answer passage A's claim that fifteen years of nonuse shows the land means little to the owner."
               },
               {
                 "label": "Where to look",
-                "text": "Passage A, P2 (last sentence); passage B, P2."
+                "text": "Passage A paragraph 2, last sentence (the quoted claim); passage B paragraph 2 (nonuse isn't neglect); passage B paragraph 3 (the doctrine is about failure to object)."
               }
             ],
-            "analysis": "Passage A treats fifteen years of nonuse as proof the owner doesn’t care. Passage B has a paragraph aimed squarely at that move: nonuse isn’t neglect, because some owners hold off on purpose (regeneration, a watershed). So B would say: unused doesn’t mean unloved.",
+            "analysis": "A's claim: an owner who ignores land for fifteen years shows he doesn't care about it. Does B accept that nonuse shows indifference? No. Paragraph 2 says some owners leave land alone on purpose, to regrow woods or protect water, and calls that 'an exercise of ownership'. So B's reply: nonuse can come from care, not neglect. Most students pick (B) because it echoes B's strongest paragraph, the 'failure to object' point. But B uses that to say what the doctrine is about, not to say what reveals an owner's feelings. B never claims a failure to object shows the land means little to him. Don't hand an author a view that only sounds like theirs.",
             "choices": [
               {
-                "note": "CORRECT. Passage B, P2: deliberate restraint ‘is an exercise of ownership, not a sign of indifference to it.’"
+                "note": "CORRECT. Passage B's second paragraph says exactly this: leaving land unused can be deliberate restraint, 'not a sign of indifference'. That's a direct answer to A's inference from nonuse to not caring."
               },
               {
-                "note": "Tempting, because it’s drawn from passage B. But the orchard case answers ‘the doctrine rewards industry,’ not ‘nonuse shows the owner doesn’t care.’ It’s a real B point aimed at a different A claim."
+                "note": "Tempting. This is the trap. 'Failure to object' is passage B's language, but B uses it to identify the doctrine's concern. B never says that failing to object reveals how little the land means to an owner. That's an opinion B never expresses, and it doesn't answer A's point anyway; it just moves it."
               },
               {
-                "note": "We don’t know this. Passage B’s examples are deliberate choices (regeneration, a watershed), not owners who can’t afford development."
+                "note": "Affordability never comes up. B's owners leave land unused by choice, for purposes they value."
               },
               {
-                "note": "Wrong side. This is passage A’s own argument about the possessor’s sunk labor and money."
+                "note": "That's passage A's argument (the possessor's sunk labor), not a reply to it."
               },
               {
-                "note": "Never stated in passage B, and it wouldn’t rebut passage A’s claim even if true."
+                "note": "Neither passage says this. B's point is about what nonuse means, not about what courts ask."
               }
             ]
           }
@@ -2051,9 +2050,9 @@
           "stem": "Which one of the following, if true, would most strengthen the position taken in passage B relative to that taken in passage A?",
           "choices": [
             "Possessors who acquire title under the doctrine generally go on to make more productive use of the land than its former owners did.",
-            "Fencing a meadow and grazing sheep on it require considerable labor and expense in the steep hill districts of Aldmere.",
+            "Aldmere courts have in fact refused to count years of a possessor’s labor during which the owner was still a minor.",
             "Courts in several neighboring jurisdictions consider whether a possessor acted in good faith when deciding disputes over title.",
-            "Aldmere courts have granted title to possessors who never worked the land but whose occupation the owner could easily have seen.",
+            "Aldmere courts have awarded title to possessors who merely occupied the land, doing nothing at all with it, in plain view of its owner.",
             "Some possessors in Aldmere have occupied land for fifteen years while sincerely believing that it was their own."
           ],
           "answer": "D",
@@ -2062,34 +2061,34 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 4,
-          "explanation": "Passage A says the doctrine rewards productive use; passage B says it turns on an owner’s failure to object to a possession the owner could have noticed. A grant of title with no productive use at all, where the owner could easily have seen the occupation, fits passage B’s account and is hard for passage A’s to explain, which is D. B is the trap: it would make fencing and grazing look industrious and so weaken one of passage B’s points. Choice A supports passage A, C concerns other jurisdictions, and E fits both accounts.",
+          "explanation": "Passage A says the doctrine rewards productive use; passage B says it turns on an owner’s failure to object to a possession the owner could have noticed. A grant of title where there was no productive use at all, but the occupation was plain to the owner, fits passage B’s account and is hard for passage A’s to explain, which is D. B is the dominant trap: it echoes passage B’s ‘most tellingly’ point, but passage B already states that Aldmere law suspends the period for minors, so confirming that courts follow the rule adds nothing to the case. A supports passage A, C concerns other jurisdictions, and E fits both accounts.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the fact that favors passage B’s account of the doctrine over passage A’s."
+                "text": "Find the fact that helps passage B's account (the doctrine is about an owner's failure to object to a visible possession) more than passage A's (it rewards productive use)."
               },
               {
                 "label": "Where to look",
-                "text": "Passage A, P2–P3 (industry); passage B, P1 and P3 (visibility and failure to object)."
+                "text": "Passage A paragraphs 2–3 (productive use); passage B paragraph 1 (visibility decided the orchard case) and paragraph 3 (the minority rule; 'failure to object')."
               }
             ],
-            "analysis": "What would separate the two theories? A case where they predict different outcomes. Industry theory: no work, no title. Failure-to-object theory: if the owner could see it and did nothing, title passes, work or no work. So we want title granted for a visible occupation with no productive use at all.",
+            "analysis": "To favor B over A, you want a case the two accounts predict differently. Where do they split? Labor without visibility (A says title, B says no) and visibility without labor (A says no, B says title). An answer showing either one sides with B. Most students pick (B) because it sounds like B's best evidence, the minority rule. But B already told us that the law suspends the period for minors. An answer that confirms what a passage already states adds nothing; it's 'irrelevant corroboration'. Look for new evidence that splits the two theories.",
             "choices": [
               {
-                "note": "Supports passage A, not passage B. If possessors really do put land to better use, the industry account looks better."
+                "note": "This supports passage A: it makes the doctrine look like a mechanism for moving land to productive users."
               },
               {
-                "note": "Tempting, because it’s about the meadow example. But it cuts the wrong way: if fencing and grazing take real labor, passage B’s claim that those possessors ‘did little more’ loses force, and the industry account looks better."
+                "note": "Tempting. This is the trap. It restates passage B's third paragraph: Aldmere law already 'suspends the fifteen-year period while the owner is a minor'. Learning that courts apply the rule they're bound by gives B nothing new."
               },
               {
-                "note": "Irrelevant. Other jurisdictions’ rules say nothing about what Aldmere’s doctrine is for."
+                "note": "Other jurisdictions and good faith are beside the point. Neither passage's account turns on good faith."
               },
               {
-                "note": "CORRECT. Title with zero industry but full visibility is exactly what passage B’s account predicts and passage A’s can’t explain."
+                "note": "CORRECT. No productive use at all, yet title, and the occupation was plain to the owner. Passage A's labor-reward account can't explain that; passage B's failure-to-object account predicts it."
               },
               {
-                "note": "Inert. Both accounts allow possessors who believed the land was theirs to gain title; this doesn’t favor either side."
+                "note": "Both accounts handle this. Passage A explicitly says state of mind is beside the point, and passage B's account doesn't depend on it."
               }
             ]
           }
@@ -2298,7 +2297,7 @@
           "choices": [
             "In towns that acquired rail links before telegraph offices, price gaps with other towns narrowed when the railway arrived.",
             "Agents of grain firms throughout the Torrin Valley commonly ordered shipments within a few days of receiving telegraphed reports of rising prices.",
-            "In the six towns, neither the routes nor the charges for carrying grain changed between the telegraph’s arrival and the railway’s.",
+            "In the six towns, the cost of moving grain to other towns did not fall when the telegraph offices opened.",
             "The six towns were among the largest and most prosperous market towns in the Torrin Valley throughout the period.",
             "Deaths from hunger in the six towns declined still further in the years after the railways finally reached them."
           ],
@@ -2307,34 +2306,34 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 4,
-          "explanation": "Maranho’s response is that in six towns the price gap narrowed when the telegraph arrived, years before the railway. A defender of the transport objection could still say some other transport improvement, such as new roads or lower carrying charges, came at the same time as the telegraph. C rules that out. B is the trap: it supports Maranho on the second objection, about merchant behavior, not on transport. A, if anything, helps the critics.",
+          "explanation": "Maranho’s response is that in six towns the price gap narrowed when the telegraph arrived, years before the railway. A defender of the transport objection could still say some other cheapening of transport, by road or river, coincided with the telegraph. C rules that out, which strengthens her response. B is the dominant trap: it is good evidence for Maranho, but on the second objection, about how merchants behave, not on whether transport costs explain the narrowing. A, if anything, helps the critics; D and E do not bear on what caused the narrowing.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the fact that makes Maranho’s six-town reply to the transport objection stronger."
+                "text": "Strengthen Maranho's answer to the rail objection: that cheaper transport, not faster news, narrowed the price gaps."
               },
               {
                 "label": "Where to look",
-                "text": "P3, sentences 2 and 4."
+                "text": "Paragraph 3, first sentences of the objections (railways in the same decade) and its fourth sentence (the six towns where the gap narrowed when the telegraph arrived, not when the railway did)."
               }
             ],
-            "analysis": "Maranho’s reply: in six towns, the gap narrowed with the telegraph, not the railway. The leftover hole: maybe transport got cheaper some other way at the same time. So ask, how could the critic still win? We want an answer that shuts that door: transport didn’t change when the telegraph came.",
+            "analysis": "Her six towns show the gap narrowing with the telegraph, years before rail. So what's left for a critic? The objection was about cheaper transport, and railways are only one way transport gets cheaper. If carrying costs fell in some other way at the same time, the six towns prove nothing. We need an answer that shuts that door: no change in transport costs when the telegraph came. Notice the right answer doesn't mention railways or news at all; it looks almost too modest. Most students pick (B) because it's strong pro-Maranho evidence. But it answers the other objection, about whether merchants would ship rather than hoard. Pick the answer that supports the response you were asked about.",
             "choices": [
               {
-                "note": "Helps the critics. If rail alone narrowed gaps elsewhere, cheaper transport looks like a real cause."
+                "note": "If anything, this helps the critics: price gaps narrowing with rail suggests transport mattered."
               },
               {
-                "note": "Tempting, because it supports Maranho in general. But it answers the second objection (would merchants ship?), not the first (was it transport rather than news?)."
+                "note": "Tempting. This is the trap. It supports Maranho, but on the second objection (would merchants act on the news?). It does nothing to rule out cheaper transport as the cause of the narrowing."
               },
               {
-                "note": "CORRECT. With routes and charges unchanged when the telegraph came, cheaper transport can’t explain the narrowing in those towns."
+                "note": "CORRECT. Her response leaves open the possibility that transport got cheaper some other way when the telegraph came. If carrying costs didn't fall then, faster news is the remaining explanation for the narrowing."
               },
               {
-                "note": "Irrelevant to the timing argument. Size doesn’t tell us what caused the narrowing."
+                "note": "Size and prosperity don't tell us whether transport or news narrowed the gaps."
               },
               {
-                "note": "Doesn’t help. A later fall in deaths after rail arrived, if anything, suggests rail mattered too."
+                "note": "Hunger deaths after the railway don't separate the effects. The question is what narrowed the price gap when the telegraph arrived."
               }
             ]
           }
@@ -2346,9 +2345,9 @@
           "stem": "Which one of the following is most strongly supported by the information in the passage?",
           "choices": [
             "The Ostrup trading house had agents in each of the six towns that acquired telegraph offices before rail links.",
-            "Until the Ostrup records were found, the evidence that merchants did not commonly withhold grain during shortages was indirect.",
+            "Before the Ostrup records came to light, the case that merchants rarely withheld grain rested on inference.",
             "The Ostrup records indicate that Maranho’s price data overstated how much price gaps narrowed after the telegraph arrived.",
-            "Merchants in towns where bank credit was unavailable deliberately withheld grain when prices elsewhere began to rise.",
+            "Merchants in towns where bank credit was unavailable deliberately withheld grain when prices elsewhere began to rise sharply.",
             "Once railways reached the valley’s towns, telegraphed price reports ceased to have any effect on merchants’ shipments."
           ],
           "answer": "B",
@@ -2356,34 +2355,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "The third paragraph says Maranho could answer the withholding objection ‘only by appeal to the price data themselves,’ and the fourth says the Ostrup records first allowed merchant conduct ‘to be examined directly.’ So the earlier evidence was indirect, which is B. D is the trap: few shipments where credit was lacking points to inability to act, not deliberate withholding. Nothing supports A, C, or E.",
+          "explanation": "The third paragraph says Maranho could answer the withholding objection ‘only by appeal to the price data themselves,’ and the fourth says the Ostrup records first allowed merchant conduct ‘to be examined directly.’ So until 2009 the case against withholding was inferred from prices, which is B. D is the dominant trap: the records show few shipments where credit was lacking, which points to an inability to act, not a decision to withhold; ‘deliberately’ adds a motive the passage never states. Nothing supports A, C, or E.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the statement the passage supports best."
+                "text": "Find the statement the passage supports. Expect a one-step inference, not a restated detail."
               },
               {
                 "label": "Where to look",
-                "text": "P3 (last sentence) and P4 (first sentence)."
+                "text": "Paragraph 3, last sentence (the second objection answered 'only by appeal to the price data'); paragraph 4, first sentence (the records 'allowed merchant conduct to be examined directly')."
               }
             ],
-            "analysis": "Hard to prephrase. Combine statements and watch for answers that turn ‘few shipments’ into a motive, or that link facts the passage never connects. Here two sentences fit together: Maranho’s only answer to withholding was the price data, and the Ostrup records were the first direct look at conduct.",
+            "analysis": "Hard to prephrase, so watch for answers that add a motive or overstate a finding. Two sentences do the work here: before 2009, Maranho could answer the hoarding objection only from price data; in 2009 the records let historians look at merchant conduct 'directly'. Put them together: before then, the case was indirect, an inference from prices. The right answer says this abstractly ('rested on inference'), which makes it easy to skip. Most students pick (D) because the records do show few shipments where credit was missing. But few shipments isn't withholding. Merchants without credit couldn't buy grain to ship. 'Deliberately' is the word that kills it.",
             "choices": [
               {
-                "note": "Unsupported link. The passage never says where the firm’s eleven towns were relative to the six."
+                "note": "We aren't told where the Ostrup agents were. Eleven towns, but which ones is never said."
               },
               {
-                "note": "CORRECT. ‘Only by appeal to the price data’ plus ‘allowed merchant conduct to be examined directly’ means earlier evidence was indirect."
+                "note": "CORRECT. Before 2009 Maranho could appeal only to the price data; the records first let merchant conduct be 'examined directly'. So the earlier case was inferred from prices."
               },
               {
-                "note": "Never stated. The records bear out her account of merchant behavior; nothing says her price data were overstated."
+                "note": "The records confirm and qualify her thesis; nothing says her price data were overstated."
               },
               {
-                "note": "Tempting, because P4 says shipments were few where agents lacked credit. But that shows they couldn’t act, not that they chose to withhold. The records show ‘no instance’ of the firm holding back stock."
+                "note": "Tempting. This is the trap. Few shipments where credit was lacking is a failure of means, not a choice to hold back. 'Deliberately withheld' adds a motive the passage never states."
               },
               {
-                "note": "Too strong and unsupported. The passage never says railways ended the telegraph’s effect."
+                "note": "Nothing supports this. The passage doesn't discuss the telegraph's effect after railways arrived."
               }
             ]
           }
@@ -2395,8 +2394,8 @@
           "stem": "Which one of the following studies would be most useful in evaluating the claim made in the last sentence of the passage?",
           "choices": [
             "a comparison of deaths from hunger during harvest failures in districts connected to the telegraph and in unconnected districts, both before and after 1880",
-            "a study of whether grain firms other than the Ostrup trading house also refrained from withholding stock when prices rose",
-            "a comparison of the change in hunger deaths after the telegraph’s arrival between districts where merchants could obtain credit and districts where they could not",
+            "a study of whether grain firms other than the Ostrup trading house also refrained from withholding stock when telegraphed reports showed prices rising",
+            "a comparison of how hunger deaths changed after the telegraph arrived in districts where merchants could get credit and in districts where they could not",
             "a measurement of how much the price gap between towns with banks lending to grain merchants narrowed after those towns acquired telegraph offices",
             "a survey of the interest rates that banks in the Torrin Valley charged to grain merchants in the decades after 1880"
           ],
@@ -2405,34 +2404,34 @@
             "rc-analogy"
           ],
           "difficulty": 5,
-          "explanation": "The last sentence says information reduced the toll of harvest failures ‘only where merchants had the means to act on it.’ Testing that requires comparing the telegraph’s effect on deaths where merchants had credit with its effect where they did not, which is C. D is the trap: it studies only towns with credit and measures prices rather than deaths, so with no comparison group it cannot show the effect was limited to such towns. A tests whether information mattered at all, not whether credit conditioned it.",
+          "explanation": "The last sentence says information reduced the toll of harvest failures ‘only where merchants had the means to act on it.’ Testing an ‘only where’ claim requires comparing the telegraph’s effect where merchants had credit with its effect where they did not, which is C. D is the dominant trap: it looks at the right ingredients (credit, telegraph, narrowing gaps), but it studies only towns that had credit, so with no comparison group it cannot show that the effect was limited to them. A tests whether information mattered at all, not whether credit conditioned it; B and E do not connect credit to the telegraph’s effect.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Pick the study that would best test the passage’s final claim."
+                "text": "Choose the study that would best test the passage's final claim: information reduced the toll of harvest failures only where merchants could act on it."
               },
               {
                 "label": "Where to look",
-                "text": "P4, last sentence (and the credit finding just before it)."
+                "text": "Last sentence of the passage, plus paragraph 4's credit finding (where agents lacked bank credit, telegraphed reports 'produced few shipments')."
               }
             ],
-            "analysis": "The claim has two parts: information reduced the toll, and only where merchants could act (credit). An ‘only where’ claim needs a comparison: with credit vs. without. And it’s about the toll (deaths), so the study should measure deaths, or at least compare both groups. We need a with-vs-without-credit comparison after the telegraph arrived.",
+            "analysis": "The claim has the word 'only'. How do you test an 'only where' claim? You compare: did the telegraph reduce hunger deaths where merchants had credit, and not where they lacked it? Without both groups you can't see the 'only'. Most students pick (D) because it mentions credit, banks, the telegraph and narrowing gaps, every keyword in the claim. But it measures only towns with credit. Even a big narrowing there tells you nothing about towns without credit. A test of 'only' needs a comparison group.",
             "choices": [
               {
-                "note": "Tempting, because it’s a careful comparison. But it tests whether the telegraph mattered at all, not whether its effect depended on credit."
+                "note": "This tests whether the telegraph helped at all. It doesn't separate districts by whether merchants had credit, so it can't test the 'only where' part."
               },
               {
-                "note": "Wrong question. Withholding by other firms bears on the second objection, not on the credit condition."
+                "note": "Withholding is the second objection, already addressed by the records. It doesn't bear on credit."
               },
               {
-                "note": "CORRECT. It compares the telegraph’s effect on deaths in places with and without merchant credit, exactly what ‘only where merchants had the means’ requires."
+                "note": "CORRECT. Comparing the change in hunger deaths after the telegraph arrived across credit and no-credit districts is exactly the test of 'only where merchants had the means to act'."
               },
               {
-                "note": "Tempting, because it mentions both banks and the telegraph. But it looks only at towns with credit, so there’s nothing to compare against, and it measures prices instead of the toll."
+                "note": "Tempting. This is the trap. Right ingredients, but only one group. With no towns lacking credit in the study, it can't show the effect was confined to towns with credit."
               },
               {
-                "note": "Irrelevant detail. Interest rates don’t show whether the telegraph’s effect depended on credit."
+                "note": "Interest rates tell you about the cost of credit, not whether credit conditioned the telegraph's effect on deaths."
               }
             ]
           }
@@ -2443,7 +2442,7 @@
           "stimulus": "",
           "stem": "Which one of the following most accurately expresses the main point of the passage?",
           "choices": [
-            "Haldor’s hypothesis that the lake receives two floods of sediment a year plausibly reconciles Lake Tarnholm’s couplet count with its radiocarbon age.",
+            "Haldor’s hypothesis that Lake Tarnholm receives two floods of sediment each year plausibly reconciles the lake’s couplet count with the much younger age that radiocarbon dating indicates.",
             "The radiocarbon dates for Lake Tarnholm’s sediment must be mistaken, since the count of couplets in its cores shows that the lake is about 4,100 years old.",
             "Counting couplets is an unreliable method of dating lake sediment, as the conflicting evidence from Lake Tarnholm and nearby Lake Vessel demonstrates.",
             "Ash from an eruption of Mount Ossel provides a more reliable means of dating the sediment of lakes in Lake Tarnholm’s region than radiocarbon dating does.",
@@ -2590,10 +2589,10 @@
           "stimulus": "",
           "stem": "The author mentions Lake Vessel (second-to-last sentence of the passage) primarily in order to",
           "choices": [
-            "show that radiocarbon dating is more reliable than couplet counting in valleys that contain glaciers",
+            "show that counting couplets gives accurate dates only for lakes in valleys that contain no glacier",
             "illustrate how carbon from ancient limestone can distort the radiocarbon ages of lake sediment",
             "suggest that ash from the eruption of Mount Ossel did not reach lakes outside the Tarnholm valley",
-            "offer a comparison case that lacks the feature Haldor holds responsible for Tarnholm’s double couplets",
+            "present a case that lacks the condition Haldor invokes to explain Tarnholm’s cores and shows the usual result",
             "explain why a handful of intervals in the Tarnholm cores contain single rather than double couplets"
           ],
           "answer": "D",
@@ -2601,7 +2600,7 @@
             "rc-function"
           ],
           "difficulty": 4,
-          "explanation": "Lake Vessel lies in a valley without a glacier, and there couplet count and radiocarbon age agree. Since Haldor attributes Tarnholm’s second couplet each year to its glacier, Vessel is a control case that lacks that feature and shows the expected one-to-one result, which is D. A is the trap: Vessel shows the two methods agreeing, not one beating the other, and it has no glacier. E is the next sentence’s topic, and B and C are not discussed in connection with Vessel.",
+          "explanation": "Lake Vessel lies in a valley without a glacier, and there couplet count and radiocarbon age agree. Since Haldor attributes Tarnholm’s second couplet each year to its glacier, Vessel is a comparison case that lacks that condition and shows the expected one-couplet-per-year result, which is D. A is the dominant trap: it turns the comparison into a sweeping rule, and the first paragraph says couplets in many lakes fed by glacial meltwater normally mark single years; Haldor blames Tarnholm’s two separate floods, not glaciers as such. E is the next sentence’s topic, and B and C are not discussed in connection with Vessel.",
           "breakdown": {
             "setup": [
               {
@@ -2610,25 +2609,25 @@
               },
               {
                 "label": "Where to look",
-                "text": "P3, the second-to-last sentence; P2 for the role of the glacier."
+                "text": "Paragraph 3, second-to-last sentence (Vessel: no glacier; count and radiocarbon agree); paragraph 2, the two-flood hypothesis (late-summer glacier flood); paragraph 1, first three sentences (glacial lakes normally lay one couplet a year)."
               }
             ],
-            "analysis": "Why mention a lake with no glacier? Because Haldor says the glacier causes Tarnholm’s second flood. A nearby lake without one should show one couplet a year, and it does: count and radiocarbon agree. That’s a control: take away the cause, and the effect disappears.",
+            "analysis": "Haldor says Tarnholm's glacier sends a second flood every year, doubling the couplets. What would you want next? A lake without that glacier, to see whether the doubling disappears. Vessel is that lake, and the dates agree there. It's a control case. The right answer says so abstractly ('lacks the condition Haldor invokes'), so you have to map 'condition' to the glacier. Most students pick (A) because it sounds like the lesson of Vessel. But 'only' makes it a rule, and paragraph 1 says glacial lakes normally lay one couplet a year. Haldor's point is that Tarnholm gets two separate floods, not that any glacier ruins the count. Right idea, wrong strength.",
             "choices": [
               {
-                "note": "Tempting, because radiocarbon and couplets are both involved. But at Vessel they agree, so neither beats the other, and Vessel’s valley has no glacier."
+                "note": "Tempting. This is the trap. It overstates the comparison into a rule. Paragraph 1 says couplets in lakes fed by glacial meltwater normally mark one year each; Haldor blames Tarnholm's two separate floods, not glaciers in general."
               },
               {
-                "note": "Wrong topic. The limestone error comes up in P2 and has nothing to do with Vessel."
+                "note": "Vessel isn't about limestone. The limestone point is in paragraph 2, about radiocarbon error."
               },
               {
-                "note": "Never discussed. The passage says nothing about ash at Lake Vessel."
+                "note": "Ash at Vessel is never mentioned."
               },
               {
-                "note": "CORRECT. No glacier, no second flood, and the count matches the radiocarbon age: a comparison case lacking the proposed cause."
+                "note": "CORRECT. Vessel lacks the glacier, the condition Haldor says creates the second flood, and shows the usual one-couplet-per-year agreement. It's a control case."
               },
               {
-                "note": "Wrong sentence. The single couplets are the subject of the last sentence, and Haldor’s suggestion there involves cool summers, not Vessel."
+                "note": "That's the next sentence's topic (cool summers), not Vessel's."
               }
             ]
           }
@@ -2639,45 +2638,45 @@
           "stimulus": "",
           "stem": "If Haldor’s suggestion about the intervals that contain single rather than double couplets (last sentence of the passage) is correct, which one of the following would most likely be true of the couplets in those intervals?",
           "choices": [
-            "Their coarse layers would consist mostly of particles of feldspar-rich granite.",
+            "Their coarse layers would consist mostly of particles of the pale, feldspar-rich granite.",
             "They would be noticeably thicker than the couplets found in the rest of the cores.",
             "They would contain traces of ash from eruptions earlier than that of Mount Ossel.",
-            "They would have formed in years when little snow fell on the slopes around the lake.",
-            "Their coarse layers would consist mostly of fragments of the dark slate."
+            "They would have formed in years when little snow melted on the slopes around the lake.",
+            "Their coarse layers would come mostly from the bedrock of the low slopes."
           ],
           "answer": "E",
           "types": [
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Haldor suggests that in those years a cool summer kept the glacier from sending its flood, so only the spring snowmelt from the low slopes reached the lake. The third paragraph says those slopes are underlain by dark slate, while the glacier sits on feldspar-rich granite, so the single couplets should be slate-rich, which is E. A reverses the two sources and is the main trap. D blames the wrong season’s melt, and B and C have no basis in the passage.",
+          "explanation": "Haldor suggests that in those years a cool summer kept the glacier from sending its flood, so only the spring snowmelt from the low slopes reached the lake. The low slopes are underlain by dark slate, while the glacier sits on feldspar-rich granite (third paragraph), so the single couplets’ coarse layers should come from the slopes’ bedrock, which is E. A is the dominant trap: it reverses the two sources, giving the single couplet the glacier’s granite. D blames the wrong season’s melt; B and C have no basis in the passage.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Apply Haldor’s suggestion to predict what the single couplets look like."
+                "text": "Apply Haldor's cool-summer suggestion and predict what the single couplets would be made of."
               },
               {
                 "label": "Where to look",
-                "text": "P3, last sentence (the suggestion) and the slate/granite sentence; P2 for which flood comes from where."
+                "text": "Last sentence of the passage (cool summer, no distinct glacier flood); paragraph 2 (spring flood from the low slopes, late-summer flood from the glacier); paragraph 3 (slopes = dark slate, glacier = granite)."
               }
             ],
-            "analysis": "Chain it: cool summer → no glacier flood → only the spring snowmelt flood that year. Spring flood comes off the low slopes → low slopes are dark slate. So the lone coarse layer should be slate, not granite.",
+            "analysis": "Two floods a year: spring from the low slopes, late summer from the glacier. Cool summer means the glacier flood fails. What's left? Only the spring flood, from the slopes. What rock is on the slopes? Dark slate. So the lone couplet should carry slope material. The right answer never says 'slate'; it says 'the bedrock of the low slopes', so you have to go back and match it. Most students pick (A) because granite is the rock they remember tied to Haldor's evidence. But granite comes from the glacier, the flood that didn't happen. Reversed sources.",
             "choices": [
               {
-                "note": "Reversed. Granite comes from beneath the glacier, and the glacier flood is the one that’s missing."
+                "note": "Tempting. This is the trap. It swaps the sources. Granite comes from the glacier, and a cool summer is when the glacier sends no distinct flood."
               },
               {
-                "note": "Unsupported. Nothing in the passage tells us how thick single couplets would be."
+                "note": "Nothing tells us how thick these couplets would be."
               },
               {
-                "note": "No basis. The passage mentions only the Ossel ash in the cores."
+                "note": "Unrelated. Earlier eruptions aren't discussed in connection with single couplets."
               },
               {
-                "note": "Wrong season. Haldor blames a cool summer that kept the glacier from melting, not a lack of snow on the slopes; the spring flood still comes."
+                "note": "Wrong season. The suggestion is that a cool summer stopped the glacier's flood; the spring snowmelt on the slopes still happens."
               },
               {
-                "note": "CORRECT. The surviving flood is the spring snowmelt from the low slopes, which are underlain by dark slate."
+                "note": "CORRECT. With the glacier's flood missing, only the spring flood off the low slopes leaves a couplet, so its coarse layer comes from the slopes' bedrock (the dark slate)."
               }
             ]
           }
@@ -2688,9 +2687,9 @@
           "stimulus": "",
           "stem": "Which one of the following, if true, would most call into question Haldor’s hypothesis?",
           "choices": [
-            "In some lakes far from Lake Tarnholm, couplets are known to form at a rate of more than one per year for reasons unrelated to glaciers.",
-            "The monastery chronicles that record the eruption of Mount Ossel also mention several earlier eruptions whose ash has not been found in the Tarnholm cores.",
-            "The glacier at the head of Tarnholm’s valley formed only about 600 years ago, after centuries in which the upper valley was free of ice.",
+            "In some lakes far from Tarnholm, couplets form at a rate of more than one per year for reasons unrelated to glaciers.",
+            "Several intervals in the Tarnholm cores contain only a single couplet for a year in which Haldor’s account would lead one to expect two.",
+            "The ice now at the head of Tarnholm’s valley accumulated within the last 600 years, the upper valley having been ice-free for centuries before that.",
             "Leaf fragments that reach the floor of a lake have sometimes fallen from their trees several years, or even decades, before they were buried.",
             "In late spring, meltwater from the slopes around Lake Tarnholm carries more sediment into the lake than the glacier does in late summer."
           ],
@@ -2699,34 +2698,34 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 5,
-          "explanation": "Haldor’s hypothesis needs a late-summer glacier flood every year, and the third paragraph says the two-per-year ratio holds even below the ash, more than 1,140 years back. If the glacier is only about 600 years old, that older sediment could not have formed as she proposes, which is C. B is the trap, but missing ash from other eruptions does not challenge the dating of the Ossel ash. A is consistent with her view, D involves errors far too small to matter, and E is compatible with two floods a year.",
+          "explanation": "Haldor’s hypothesis needs a late-summer glacier flood every year, and the third paragraph says the two-per-year ratio holds below the Ossel ash too, more than 1,140 years back. If the glacier is less than 600 years old, the older doubled sediment could not have formed as she proposes, which is C. B is the dominant trap: it attacks something the passage already concedes; the last sentence admits that a handful of intervals hold single couplets and offers an explanation (cool summers). A is consistent with her view, D involves errors far too small to matter, and E is compatible with two floods a year.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the fact that most undermines the two-floods-a-year hypothesis."
+                "text": "Find the fact that most damages Haldor's two-floods-a-year hypothesis."
               },
               {
                 "label": "Where to look",
-                "text": "P2 (the glacier’s late-summer flood) and P3 (the ratio above and below the ash)."
+                "text": "Paragraph 2 (the late-summer flood comes from 'the small glacier at the head of the valley'); paragraph 3 (doubling 'holds on both sides of the ash'; the ash is 1,140 years old; last sentence on single couplets)."
               }
             ],
-            "analysis": "What does the hypothesis need? A glacier flood every year for the lake’s whole history, because the doubling holds on both sides of the ash. So find something that removes the glacier for part of that time while the doubling continues. A glacier only 600 years old does exactly that: the 1,814 couplets below the ash, formed 1,140 to 2,050 years ago, would have no second flood to explain them.",
+            "analysis": "What does Haldor's story need to have existed for the whole 2,050 years? The glacier, since it supplies the second flood every year. And the doubling holds below the ash, so it goes back more than 1,140 years. So what if the glacier wasn't there for most of that time? Then her second flood couldn't have happened. The right answer never says 'glacier'; it says 'the ice now at the head of Tarnholm's valley'. Most students pick (B) because it looks like hard counterevidence. But the passage already admits it ('a handful of intervals contain single rather than double couplets') and offers an explanation. An answer that only restates a conceded exception doesn't weaken the argument.",
             "choices": [
               {
-                "note": "Consistent with Haldor. It shows multiple couplets per year can happen; it doesn’t challenge her account of why they happen at Tarnholm."
+                "note": "Consistent with her view. Other lakes doubling for other reasons doesn't touch her explanation of Tarnholm's doubling."
               },
               {
-                "note": "Tempting, because it questions the chronicles. But missing ash from other eruptions doesn’t touch the chemical match and date of the Ossel ash."
+                "note": "Tempting. This is the trap. The last sentence already concedes that a handful of intervals hold single couplets, and Haldor offers cool summers as the reason. A conceded exception isn't new evidence against her."
               },
               {
-                "note": "CORRECT. No glacier before about 600 years ago means no late-summer flood for the older sediment, yet the doubling holds there too."
+                "note": "CORRECT. Under 600 years of ice means no glacier flood for most of the lake's history, yet the doubling holds below the 1,140-year-old ash. Her mechanism couldn't have produced that older sediment."
               },
               {
-                "note": "Too small to matter. A lag of years or decades can’t close a gap of about 2,050 years."
+                "note": "A lag of years or decades is tiny next to a 2,050-year gap. It can't close a discrepancy of about two thousand years."
               },
               {
-                "note": "Compatible. Two floods of unequal size still make two couplets; the hypothesis doesn’t need the floods to be equal."
+                "note": "Which flood carries more sediment doesn't matter. Two floods a year still means two couplets a year."
               }
             ]
           }
@@ -2802,7 +2801,7 @@
           "stimulus": "Editor: For forty years, the Harlow Courier has printed a weekly list of local court filings. Recently some readers have urged the paper to drop the list, calling it an invasion of privacy. The Courier should keep printing it. Court filings are public records that anyone may inspect, so printing them reveals nothing truly private. Moreover, the list is the only regular source of this information for residents who cannot get to the courthouse.",
           "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the editor's argument?",
           "choices": [
-            "The Courier should continue to print its weekly list of local court filings despite readers' privacy objections.",
+            "The Courier should continue to print its weekly list of local court filings despite some readers' objections on privacy grounds.",
             "Because court filings are public records that anyone may inspect, they are not private in any sense at all.",
             "The Courier's weekly list is the best available source of information about local court filings for most residents.",
             "Readers who object to the list on privacy grounds should have no say in the Courier's editorial decisions.",
@@ -2854,8 +2853,8 @@
           "stimulus": "After the Eastgate branch library began offering Saturday story hours, it lent more children's books in a single year than it had ever lent before. Yet in that same year, for the first time in a decade, Eastgate was not the branch of the city library system that lent the most children's books.",
           "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
           "choices": [
-            "Most of the children who attended Eastgate's Saturday story hours had already had library cards before the program began.",
-            "Eastgate's lending of adult fiction declined slightly during the year in which the Saturday story hours were added.",
+            "Most of the children who attended Eastgate's Saturday story hours had already had library cards before the program ever began.",
+            "Eastgate's lending of adult fiction declined slightly during the same year in which the new Saturday story hours were added.",
             "That year another branch doubled its children's collection, and its lending of children's books rose far more than Eastgate's.",
             "Saturday story hours tend to be more popular with families of young children than weekday library programs are.",
             "Children's books lent by Eastgate are, on average, returned later than children's books lent by the other branches."
@@ -2903,10 +2902,10 @@
           "stimulus": "Last quarter, Kerrow Market offered shoppers free samples of its new house-brand granola at the store entrance. Of the roughly 2,000 shoppers who took a sample, 40 percent bought a box of the granola during that same visit. Clearly, then, the sampling stand is an effective way to boost sales of the granola.",
           "stem": "Which one of the following, if true, most strengthens the argument?",
           "choices": [
-            "Shoppers who took a sample were more likely than other shoppers to describe the store's prices as quite reasonable.",
+            "Shoppers who took a sample were more likely than other shoppers to describe the store's prices overall as quite reasonable.",
             "Shoppers who declined a sample tended to spend less in total during their visit than did shoppers who took one.",
             "On those same days, under 5 percent of shoppers who skipped the sample bought a box of the granola.",
-            "Shoppers who are never offered free samples at the store sometimes buy food products that they have never tasted.",
+            "Shoppers who are never offered free samples at the store sometimes buy food products there that they have never tasted.",
             "Throughout the quarter, the granola was priced well below comparable brands of granola sold at the store."
           ],
           "answer": "C",
@@ -2962,7 +2961,7 @@
             "The tourism office does not test the water at the coast's public beaches before recommending them to visitors.",
             "Most of the beaches that the tourism office recommended this summer had water that was unsafe for swimming.",
             "Beaches known to have unsafe water cannot be recommended to visitors by any organization along the Ottery coast.",
-            "This summer at least one beach on the Ottery coast had unsafe water without the tourism office's knowing it.",
+            "This summer at least one public beach on the Ottery coast had unsafe water without the tourism office's knowing it.",
             "Unsafe water at a few beaches does not reduce the number of visitors to the Ottery coast enough to concern the office."
           ],
           "answer": "D",
@@ -3172,7 +3171,7 @@
           "stem": "The conclusion of the argument follows logically if which one of the following is assumed?",
           "choices": [
             "Stores that move to shopping centers usually attract enough new customers to replace the regular customers they lose.",
-            "The Brookfield shopping center cannot easily be reached by people who live downtown and do not own cars.",
+            "The Brookfield center is hard to reach for downtown residents who do not own cars.",
             "If a store's regular customers can easily reach its new location, the store will keep those regular customers.",
             "Most of the people who shop at the Brookfield shopping center arrive there by car rather than by bus.",
             "Ostler Hardware would lose a substantial amount of money if it moved to the Brookfield shopping center."
@@ -3227,7 +3226,7 @@
             "presumes, without providing justification, that improving delivery service would cost less than the revenue it would save",
             "relies on the survey responses of former subscribers, who are likely to feel some hostility toward the newspaper",
             "takes for granted that late delivery is the only problem about which any subscriber has ever complained to the paper",
-            "fails to consider how many of the subscribers who did not cancel had also complained about late delivery"
+            "fails to consider how many of the subscribers who did not cancel had also complained to the paper about late delivery"
           ],
           "answer": "E",
           "types": [
@@ -3332,7 +3331,7 @@
           "stimulus": "Researcher: Some argue that the ice cores drilled at the Tarn Glacier last decade are too shallow to reveal anything about climate before the last ice age. That is true, but it misses the point of the project. The cores were drilled to record the past few thousand years, and they record that period in exceptional detail, since their annual layers are thick enough to be counted one by one. So the project should be judged a success.",
           "stem": "Which one of the following most accurately describes the role played in the researcher's argument by the claim that the cores record the past few thousand years in exceptional detail?",
           "choices": [
-            "It is supported by another claim in the argument and is offered as support for the argument's main conclusion.",
+            "It is supported by another claim in the argument and is itself offered as support for the argument's main conclusion.",
             "It is the main conclusion of the argument, which the other claims in the argument are offered to support.",
             "It is a claim that the researcher concedes is true but argues is irrelevant to evaluating the project.",
             "It is offered as evidence that the cores also reveal something about the climate before the last ice age.",
@@ -3441,7 +3440,7 @@
             "Weekday-morning wages make up the largest share of the labor costs that Pellam's pays its checkout staff.",
             "Customers who shop on weekend afternoons are less bothered by long checkout lines than contractors are.",
             "Pellam's managers have not seriously considered reducing checkout staffing at other times of the week instead.",
-            "Longer checkout waits on weekday mornings would lead at least some contractors to buy less at Pellam's."
+            "Longer weekday-morning checkout waits would lead some contractors to buy less at Pellam's."
           ],
           "answer": "E",
           "types": [
@@ -3495,9 +3494,9 @@
           "stimulus": "Every one of the 140 employees of the Danvers customer-service call center completed an anonymous self-evaluation last month. One question asked employees to compare their own patience with callers to that of the center's other employees. Most of the employees reported that they are more patient with callers than most of their coworkers at the center are.",
           "stem": "If the statements above are true, which one of the following must also be true?",
           "choices": [
-            "At least one employee who made that report is not in fact more patient with callers than most coworkers.",
+            "Not every employee who made that report is in fact more patient with callers than most coworkers.",
             "Most of the employees who made that report are not in fact more patient with callers than most of their coworkers.",
-            "No employee at the center could have known whether he or she is more patient with callers than most coworkers.",
+            "No employee at the center could have known whether he or she is more patient with callers than most coworkers are.",
             "Employees who are more patient with callers tend to receive fewer complaints from callers than less patient employees do.",
             "Most of the center's employees are less patient with callers than the center's own training guidelines recommend."
           ],
@@ -3511,30 +3510,30 @@
             "fact-set"
           ],
           "flaws": [],
-          "explanation": "Fewer than half of a group can each be more patient than most of the others, yet more than half of the center's employees reported being so, so at least one report must be false, which is (A). (B) is the trap: if just over half made the report and just under half are truly that patient, only a few reports are false, not most.",
+          "explanation": "Rank all 140 employees by patience: only those in the top half (at most 70) can each be more patient than most of their 139 coworkers. Yet more than half (at least 71) reported being so, so at least one report must be false, which (A) states as 'not every' report is accurate. (B) is the trap: if 71 made the report and 70 are truly that patient, only one report is false, not most. (C) overreaches into what employees could know.",
           "breakdown": {
             "setup": [
               {
                 "label": "Facts",
-                "text": "1) Every employee completed the self-evaluation; 2) most employees reported being more patient with callers than most of their coworkers."
+                "text": "1. All 140 employees answered the survey; 2. most (71+) reported being more patient with callers than most of their coworkers."
               }
             ],
-            "analysis": "How many people can beat 'most of the others'? Fewer than half. Rank everyone; you have to be in the top half. Yet more than half claimed to be there. So some claims are wrong. Worked example: 100 employees, 60 make the claim. At most 49 can truly beat more than half of the other 99. So at least 11 claims are false. But 11 of 60 isn't 'most.' Spell out the quantifier trap: some claims must be false, not most. Watch for answers that inflate 'some' to 'most' or to 'impossible to know.' The right answer here is dense and sits at (A); don't skim past it.",
+            "analysis": "Can most people each be more patient than most others? No. Line the 140 employees up from most to least patient. To beat most of your 139 coworkers you must beat at least 70 of them, so only the top 70 qualify, and ties only shrink that number. But 71 or more said they qualify. So at least one of them is wrong. That's all we know: maybe just one. Most students pick (B) because 'most people overrate themselves' is the familiar story and the numbers seem to point there. But with 71 reports and 70 true qualifiers, only one report is false. 'At least one' isn't 'most.' We need the modest answer, and here it's dressed in a 'not every' negative.",
             "choices": [
               {
-                "note": "CORRECT. More than half claim a spot that fewer than half can hold, so at least one claim must be false."
+                "note": "CORRECT. 'Not every' = at least one is not. At most 70 can truly be more patient than most coworkers, and 71+ said so, so at least one report is inaccurate."
               },
               {
-                "note": "Tempting. This is the classic quantity trap. But with 60 claimants and up to 49 true claims, only 11 are false: some, not most."
+                "note": "Tempting. It's the cynical story the stimulus seems to tell. But the math only forces one false report. If 71 reported and 70 qualify, 70 of the 71 are right. Too strong."
               },
               {
-                "note": "Too broad: 'could not have known.' Nothing says employees can't know how they compare. Some claims are false, but others could be accurate and well founded."
+                "note": "Too strong. Some employees could know perfectly well; the facts only show that at least one report is wrong, not that no one could know."
               },
               {
-                "note": "Adds a consequence never mentioned: complaints. The facts are only about reports and patience."
+                "note": "New information. The stimulus says nothing about complaints."
               },
               {
-                "note": "Wrong standard. 'Not more patient than most others' is about relative ranking, not about a training guideline. Polar vs. logical opposite: not in the top half ≠ below the recommended level."
+                "note": "The training guidelines never appear. Out of scope."
               }
             ]
           }
@@ -3598,10 +3597,10 @@
           "stimulus": "Last year, none of the patients at Brightwater Dental whose molars were coated with sealant developed a cavity in a sealed molar. This year, every child patient at Brightwater will have sealant applied to his or her molars. So no child patient at Brightwater will develop a cavity in a sealed molar this year.",
           "stem": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
           "choices": [
-            "Last year, every Harmon store that hired security guards reported fewer thefts than the year before. This year, no Harmon store will hire guards. So no Harmon store will report fewer thefts this year.",
-            "Last season, no Kessler deckhand who wore the new grip gloves hurt a hand while wearing them. This season every apprentice deckhand will wear them. So no apprentice will hurt a hand while wearing them.",
-            "Last year, most newspapers that raised their subscription prices lost subscribers. The Ledger will raise its price this year. So the Ledger will probably lose some of its subscribers this year.",
-            "Last year, no Wrenfield runner who trained under the new interval plan was injured during the season. This year the coach wants every runner to stay healthy. So she should require every runner to train under the plan.",
+            "Last year, every Harmon store that hired security guards reported fewer thefts than the year before. This year, no Harmon store will hire guards. So no Harmon store will report fewer thefts this year than last.",
+            "No apprentice deckhand in the Kessler fleet will hurt a hand while wearing the new grip gloves this season, since every apprentice will wear them and last season no deckhand who wore them hurt a hand while doing so.",
+            "Last year, most newspapers that raised their subscription prices lost subscribers. The Ledger will raise its price this year. So the Ledger will probably lose at least some of its subscribers this year.",
+            "Last year, no Wrenfield runner who trained under the new interval plan suffered a leg injury during training. This year, every Wrenfield runner will train under the plan. So no Wrenfield runner will suffer any injury this year.",
             "None of the tomato plants in Ruiz's garden developed blight this summer, and every one of them had been sprayed with a copper solution in early June. So the spray is what kept all of Ruiz's plants free of blight."
           ],
           "answer": "B",
@@ -3614,38 +3613,38 @@
             "sampling"
           ],
           "flaws": [],
-          "explanation": "The original takes a past pattern (no one with treatment T had outcome O), notes that a new group will all receive T, and predicts none of them will have O; (B) matches step for step. (D) is the near miss: it starts from the same kind of past pattern but concludes with a recommendation driven by a goal rather than a prediction about a group already set to receive T.",
+          "explanation": "The original takes a past pattern (no one with treatment T had outcome O in the treated part), notes that a new group will all receive T, and predicts none of them will have O in that same restricted sense. (B) matches step for step, though it states its conclusion first. (D) is the trap: it copies the sentence order, but its conclusion widens from leg injuries during training to any injury at all, so it isn't the same reasoning. (A) reasons from the absence of the treatment, and (C) and (E) use 'most' and a causal conclusion.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "No child patient will develop a cavity in a sealed molar this year."
+                "text": "No Brightwater child patient will develop a cavity in a sealed molar this year."
               },
               {
                 "label": "Reasoning",
-                "text": "Last year no sealed patient got a cavity in a sealed molar; this year all child patients get sealant."
+                "text": "Last year, no patient with sealed molars got a cavity in a sealed molar; this year, every child patient will get sealant."
               },
               {
                 "label": "Pattern",
-                "text": "Last time, no one who got T had O; now everyone in group G will get T; so no one in G will have O."
+                "text": "Last time, no one who got T had O (in the treated part); a new group will all get T; so no one in that group will have O (in the treated part)."
               }
             ],
-            "analysis": "What's the skeleton? 1. Last year, no one who got T (sealant) had O (a cavity in a sealed molar). 2. This year, everyone in group G (child patients) gets T. → No one in G will have O. Match the quantifiers and the conclusion type: none / every / none, ending in a prediction. Kill anything that switches to 'most' or 'probably,' draws a causal conclusion about the past, negates the treatment, or turns the prediction into a recommendation.",
+            "analysis": "Match the skeleton, the quantifiers and the scope. Notice how narrow the conclusion is: no cavity in a SEALED molar, not no cavities at all. The original keeps the outcome exactly as narrow as the evidence. Most students pick (D) because its first two sentences read like the original's, sentence by sentence. But (D)'s evidence is about leg injuries during training, and its conclusion is about any injury this year. That's a scope jump the original doesn't make. The right answer keeps the scope ('while wearing them' on both ends) but moves the conclusion to the front, so it looks less similar than it is.",
             "choices": [
               {
-                "note": "Polar flip. It says the group will NOT get the treatment and concludes it won't get the result. That's reasoning from the absence of T, not from everyone getting T."
+                "note": "Different structure. It reasons from a group that will NOT get the treatment to a lack of the outcome. The original's new group all gets the treatment."
               },
               {
-                "note": "CORRECT. No glove-wearer was injured last season; every apprentice will wear the gloves; so no apprentice will be injured while wearing them. Same none / every / none skeleton, and a prediction of fact."
+                "note": "CORRECT. Last season, no deckhand who wore the gloves hurt a hand while wearing them; every apprentice will wear them; so no apprentice will hurt a hand while wearing them. Same past pattern, same new group getting the treatment, same restricted outcome. The reordering is only cosmetic."
               },
               {
-                "note": "Close in feel, different in structure. 'Most' and 'probably' for a single paper aren't 'none' applied to a whole group."
+                "note": "Different strength. 'Most' and 'probably' replace 'none' and the certain prediction."
               },
               {
-                "note": "Tempting. It opens with exactly the right kind of premise: no one who got T had the bad outcome. But then it switches to a goal and a recommendation ('she should require'). The original predicts a fact about a group that will all get T. Recommendation vs. fact is a different conclusion type."
+                "note": "Tempting. Same sentence order and nearly the same words. But the evidence covers only leg injuries during training, while the conclusion rules out any injury at all. The original's conclusion stays as narrow as its evidence."
               },
               {
-                "note": "Different conclusion type. This draws a causal explanation about the past, not a prediction about a new group."
+                "note": "Different structure. It draws a causal conclusion from one group that had both the spray and no blight; there's no prediction about a new group."
               }
             ]
           }
@@ -3710,11 +3709,11 @@
           "stimulus": "Dramaturg: Some critics define a 'repertory company' as any theater company that stages several different plays in a single season. But consider a company that stages five plays in a season, hiring a separate cast for each production and never reusing an actor. No one would call that a repertory company, since the hallmark of repertory is a stable group of actors who perform together across productions.",
           "stem": "The dramaturg's argument proceeds by",
           "choices": [
-            "describing a case that clearly counts as a repertory company but that the critics' definition fails to include",
-            "arguing that the critics' definition should be rejected on the grounds that few actual theater companies satisfy it",
-            "describing a case that satisfies the critics' definition but that clearly does not count as a repertory company",
-            "showing that the critics' definition implies that every theater company, whatever its practices, is a repertory company",
-            "suggesting that the critics proposed their definition mainly in order to praise companies that they already favored"
+            "showing that a proposed criterion is not met by something that plainly has the feature essential to what the criterion is meant to pick out",
+            "arguing that a proposed criterion should be rejected on the grounds that few actual theater companies would satisfy it",
+            "showing that a proposed criterion is met by something that lacks the feature essential to what the criterion is meant to pick out",
+            "showing that a proposed criterion implies that every theater company, whatever its practices, is a repertory company",
+            "suggesting that the critics proposed their criterion mainly in order to praise companies that they already favored"
           ],
           "answer": "C",
           "types": [
@@ -3725,38 +3724,38 @@
             "analogy"
           ],
           "flaws": [],
-          "explanation": "The five-play company with a new cast each time meets the critics' definition (several plays in one season) yet is plainly not a repertory company, so the dramaturg shows the definition is too broad, as (C) says. (A) is the mirror-image trap: it describes showing a definition is too narrow (it leaves out a real case), which is the opposite move.",
+          "explanation": "The five-play company with a new cast for each production meets the critics' criterion (several plays in one season) yet lacks the stable group of actors that marks a repertory company, so the dramaturg shows the criterion lets in something it shouldn't: (C). (A) is the trap, its mirror image with almost the same words: it describes a case the criterion leaves out (too narrow), the opposite move. (D) overstates 'too broad' as 'covers everything.'",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "(Implied) The critics' definition of a repertory company is wrong: it's too broad."
+                "text": "The critics' definition of 'repertory company' (any company staging several plays in a season) is wrong."
               },
               {
                 "label": "Reasoning",
-                "text": "A company staging five plays with a fresh cast for each meets the definition but isn't repertory, since repertory requires a stable ensemble."
+                "text": "A company staging five plays with a new cast each time meets the definition but is not a repertory company, because repertory requires a stable group of actors."
               }
             ],
-            "analysis": "Does the hypothetical company fit the critics' definition? Yes, five plays in one season. Is it a repertory company? The dramaturg says no. Fits the definition but isn't the real thing → the definition is too broad. The opposite move (a real case the definition leaves out) shows a definition is too narrow. Know both; the LSAT loves to swap them. Like defining 'bird' as 'any animal that flies' and pointing to a bat. We need an answer that says: a case satisfies the definition but clearly isn't a repertory company.",
+            "analysis": "Does the dramaturg's example get left out by the definition, or let in? Let in: five plays in a season is 'several,' so it satisfies the critics' definition. But it lacks the hallmark, a stable cast. So the definition is too broad. A definition can fail two ways: too broad (includes non-members) or too narrow (excludes members). This is worth knowing for every definition question. Most students pick (A) because it uses nearly the same words as (C) and reads like 'a counterexample to the definition.' But (A) is the too-narrow move: something that does have the hallmark yet fails the definition. The dramaturg's company lacks the hallmark. We need an answer that says: meets the definition, lacks the essential feature.",
             "choices": [
               {
-                "note": "Tempting, because it's the other standard way to attack a definition. But it's the 'too narrow' attack. The dramaturg's company isn't a repertory company and it isn't excluded by the definition. Both halves are backwards.",
-                "example": "Example of this method: Defining a newspaper as 'a daily printed paper' is wrong, since a weekly town paper is clearly a newspaper yet isn't daily."
+                "note": "Tempting. It's the mirror image of the right answer, with almost the same words. But it describes a real repertory company that the definition fails to include (too narrow). The dramaturg's company meets the definition and isn't a repertory company (too broad).",
+                "example": "Example of this method: Critics define a band as a group that plays original songs. But a group that plays only covers, rehearsing and touring together for years, is plainly a band."
               },
               {
-                "note": "Wrong dimension. How many companies meet the definition is never discussed; the attack is on accuracy, not popularity.",
-                "example": "Example of this method: That definition of 'great actor' is useless, since hardly anyone meets it."
+                "note": "The dramaturg never says few companies meet the definition. In fact the objection is that too many do.",
+                "example": "Example of this method: The definition requires a company to stage twelve plays a season, and almost no company does that, so it should be rejected."
               },
               {
-                "note": "CORRECT. The company meets the critics' definition (several plays, one season) but clearly isn't repertory. That shows the definition is too broad."
+                "note": "CORRECT. The five-play, new-cast company meets the critics' definition but lacks a stable group of actors, the essential feature of repertory. That's showing the definition is too broad."
               },
               {
-                "note": "Too broad a claim. One counterexample shows the definition lets in a wrong case, not that it lets in every company. Companies staging a single play wouldn't meet it.",
-                "example": "Example of this method: If 'athlete' means anyone who moves, then every living person is an athlete."
+                "note": "Too strong. One company that the definition wrongly includes doesn't show that every company is included. A company staging a single play would still fail the definition.",
+                "example": "Example of this method: By the critics' definition, even a company that stages one play a year would count, and so would every other company."
               },
               {
-                "note": "Social-autopilot. Nothing about the critics' motives appears; the dramaturg argues purely from a case.",
-                "example": "Example of this method: The critics only define 'repertory' that way because their favorite theater happens to fit it."
+                "note": "The dramaturg says nothing about the critics' motives.",
+                "example": "Example of this method: The critics favor large companies, so they defined repertory to flatter them."
               }
             ]
           }
@@ -3766,11 +3765,11 @@
           "stimulus": "The Climate Data Trust funds a research proposal only if the proposal guarantees that its data will be made public within a year of collection. No proposal that relies on data licensed from a private weather firm can make that guarantee, since such firms restrict publication. Dr. Okafor's proposal on coastal fog relies on data from the Merrin Observatory. So the Trust will not fund Dr. Okafor's proposal.",
           "stem": "The conclusion of the argument can be properly drawn if which one of the following is assumed?",
           "choices": [
-            "If a proposal guarantees that its data will be made public within a year, the Trust will fund the proposal.",
+            "If a proposal guarantees that its data will be made public within a year of collection, the Trust will fund it.",
             "Most of the data that the Merrin Observatory provides to researchers is licensed from private weather firms.",
             "Dr. Okafor's proposal does not rely on any data that is already available to the public free of charge.",
-            "Private weather firms restrict the publication of all of the data they collect, whether or not it is licensed.",
-            "Unless data is licensed from a private weather firm, it is not data from the Merrin Observatory."
+            "Private weather firms restrict the publication of all of the data they collect, whether or not that data is licensed.",
+            "Unless data is licensed from a private weather firm, it is not data that comes from the Merrin Observatory."
           ],
           "answer": "E",
           "types": [
@@ -3781,48 +3780,48 @@
             "conditional"
           ],
           "flaws": [],
-          "explanation": "Funded → guarantee; relies on privately licensed data → no guarantee; so the argument needs Okafor's Merrin data to be privately licensed data, and (E), phrased as a contrapositive, says that all Merrin data is licensed from a private weather firm. (B) is the near miss: if only most Merrin data is licensed, Okafor's proposal might rely solely on the unlicensed remainder.",
+          "explanation": "Funded → guarantee; relies on privately licensed data → no guarantee. So the conclusion follows once Okafor's Merrin data counts as privately licensed data, and (E), phrased as a contrapositive ('unless licensed, not Merrin data' = Merrin data → licensed), supplies exactly that. (B) is the trap: it's the right idea at the wrong strength; if only most Merrin data is licensed, Okafor might rely solely on the unlicensed rest. (A) reverses the funding condition.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The Trust will not fund Okafor's proposal."
+                "text": "The Trust will not fund Dr. Okafor's proposal."
               },
               {
                 "label": "Reasoning",
-                "text": "Funded → guarantees publication within a year; relies on private-firm licensed data → can't guarantee; Okafor relies on Merrin Observatory data."
+                "text": "Funded → guarantees publication within a year; relies on privately licensed data → can't guarantee; Okafor relies on Merrin Observatory data."
               }
             ],
-            "analysis": "Okafor uses Merrin data. Who says that's private, licensed data? Chain: 1. Funded → guarantees publication within a year. 2. Relies on private-firm licensed data → can't guarantee. So: licensed private data → no guarantee → not funded. 3. Okafor relies on Merrin data. Missing link: Merrin data → licensed from a private firm. 'Unless X, not Y' means Y → X: Merrin → licensed private. That's the link, written in contrapositive form. Awkward, but airtight.",
+            "analysis": "Why would Merrin data block funding? Nothing yet says Merrin data is licensed from a private firm. Chain: relies on privately licensed data → no guarantee → not funded. Okafor: relies on Merrin data → ??? We need: Merrin data → privately licensed data. Then Okafor → licensed → no guarantee → not funded. The right answer states that bridge in contrapositive form ('Unless licensed, not Merrin'), so it doesn't look like a bridge at first. Most students pick (B) because it names Merrin and private licensing together. But 'most' is too weak for a sufficient assumption: Okafor might use only the unlicensed part. You can't pick an SA answer that leaves a gap.",
             "choices": [
               {
-                "note": "Reverses the conditional. The guarantee is necessary for funding, not sufficient. And this is about who gets funded, which can't prove Okafor won't be."
+                "note": "This reverses the funding rule: guarantee → funded. Even if true, it can't show a proposal will NOT be funded."
               },
               {
-                "note": "Tempting. 'Most' Merrin data being licensed sounds nearly enough. But Okafor might use only the unlicensed part. A sufficient assumption has to guarantee the link, and 'most' leaves a gap."
+                "note": "Tempting. Right idea, wrong strength. If only most Merrin data is licensed, Okafor's proposal could rely entirely on the unlicensed remainder, and the conclusion wouldn't follow."
               },
               {
-                "note": "Wrong group of data. Whether Okafor uses other public data doesn't tell us whether the Merrin data is privately licensed."
+                "note": "Irrelevant. Whether Okafor uses freely available data doesn't link Merrin data to private licensing."
               },
               {
-                "note": "Too broad and still missing the link. Even if private firms restrict everything, nothing says Merrin is (or licenses from) a private firm."
+                "note": "Says private firms restrict all their data, but still doesn't say Merrin data comes from a private firm. The gap remains."
               },
               {
-                "note": "CORRECT. Translate: Merrin data → licensed from a private firm. Then Okafor relies on licensed private data → no guarantee → no funding."
+                "note": "CORRECT. 'Unless licensed from a private firm, not Merrin data' = Merrin data → licensed from a private firm. Then: Okafor relies on licensed data → can't guarantee publication → not funded."
               }
             ]
           }
         },
         {
           "number": 21,
-          "stimulus": "In March, the Delmont Port Authority began requiring container ships to slow to 10 knots within twenty miles of the harbor. Since then, according to harbor records, there have been no collisions between ships and the whales that feed near the harbor, though there were three such collisions the previous year. Clearly, the speed rule has kept whales from being struck.",
+          "stimulus": "In March, the Delmont Port Authority began requiring container ships to slow to 10 knots within twenty miles of the harbor. In the eight months since, harbor records show no collisions between ships and the whales that feed near the harbor; during the same eight months of the previous year, there were three. Clearly, the speed rule has kept whales from being struck.",
           "stem": "Which one of the following is an assumption required by the argument?",
           "choices": [
             "The speed rule is the most effective of all the measures available for protecting the whales that feed near the harbor.",
-            "More whales have fed near the harbor since March than fed there during the corresponding months of the previous year.",
+            "At least as many whales have fed near the harbor since March as fed there during the same months of the previous year.",
             "Container ships obeying the speed rule have not been substantially delayed in reaching the harbor or unloading their cargo.",
-            "The lack of collisions since March is not due entirely to there being fewer whales feeding near the harbor.",
-            "Whales struck by ships traveling at 10 knots are less likely to be killed than whales struck by faster ships."
+            "If fewer ships have used the harbor since March than a year earlier, that alone does not explain the lack of collisions.",
+            "Whales struck by ships traveling at 10 knots are less likely to be killed than are whales struck by faster ships."
           ],
           "answer": "D",
           "types": [
@@ -3835,7 +3834,7 @@
           "flaws": [
             "causation"
           ],
-          "explanation": "To credit the rule with the absence of collisions, the argument must assume the absence is not fully explained by something else, such as the whales simply being fewer; negate (D) (fewer whales fully explain it) and the rule did nothing. (B) is the too-strong trap: the argument doesn't need more whales than before, only that a decline in whales isn't the whole story.",
+          "explanation": "To credit the speed rule with the drop from three collisions to none, the argument must assume the drop isn't fully explained by something else, such as less ship traffic; negate (D) (fewer ships used the harbor, and that alone explains it) and the rule did nothing. (B) is the trap: it targets the alternative everyone thinks of first (fewer whales), but it's too strong; a small decline in whales wouldn't explain zero collisions, so the argument doesn't need the whale count to have held steady.",
           "breakdown": {
             "setup": [
               {
@@ -3844,29 +3843,29 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Three collisions the year before the rule; zero since the rule began in March."
+                "text": "The rule began in March; no collisions in the eight months since; three in the same months a year earlier."
               }
             ],
-            "analysis": "So collisions stopped. Did the rule stop them, or did something else change? Maybe the whales simply went elsewhere. Structure: 1. Rule began in March. 2. Zero collisions since; three the year before. → The rule prevented strikes. Crediting a policy for an outcome needs the outcome not to be fully explained by something else. We need an answer that rules out an alternative cause, worded modestly ('not entirely'). Test every choice by negating it.",
+            "analysis": "Collisions stopped. Did the rule stop them, or did something else change? Fewer whales? Fewer ships? Crediting a policy for an outcome requires that the outcome isn't wholly explained by something else. Structure: 1. Rule began in March. 2. Zero collisions since; three in the same months the year before. → The rule prevented strikes. Most students prephrase 'the whales didn't leave' and pick (B). But (B) demands that the whale count didn't drop at all. Negate it: slightly fewer whales. Does that wreck the argument? No; a small decline can't explain going from three collisions to zero. Too strong. The right answer guards against a different rival cause, ship traffic, and it's written as a conditional so it looks like a side issue. Test every choice by negating it.",
             "choices": [
               {
-                "note": "Too strong. The rule can have prevented strikes without being the best available measure.",
+                "note": "Too strong. The rule can have prevented strikes without being the best measure available.",
                 "negation": "The speed rule is not the most effective measure available. (The rule could still have prevented collisions, so the argument survives.)"
               },
               {
-                "note": "Tempting, because it's a too-strong version of the right idea. More whales would make zero collisions look impressive, but the argument doesn't need more; it only needs the drop not to be wholly explained by fewer.",
-                "negation": "It is not the case that more whales have fed there since March. (The same number could be there; the argument still stands.)"
+                "note": "Tempting, because it targets the first rival cause everyone thinks of. But it's too strong: the argument doesn't need the whale count to have held steady, only that any decline doesn't explain the whole drop.",
+                "negation": "Fewer whales have fed near the harbor since March than during the same months a year earlier. (Maybe only slightly fewer; the rule could still deserve the credit.)"
               },
               {
-                "note": "Wrong dimension: delays, not whale safety. Negating it doesn't touch the conclusion.",
+                "note": "Wrong dimension: shipping delays, not whale safety.",
                 "negation": "Ships obeying the rule have been substantially delayed. (A cost, but the rule could still protect whales.)"
               },
               {
-                "note": "CORRECT. Negate it: the lack of collisions is due entirely to fewer whales. Then the rule did nothing, and the argument collapses.",
-                "negation": "The lack of collisions since March is due entirely to there being fewer whales feeding near the harbor."
+                "note": "CORRECT. Negate it and the rule gets no credit: the absence of collisions is fully explained by less traffic.",
+                "negation": "Fewer ships have used the harbor since March than a year earlier, and that alone explains the lack of collisions."
               },
               {
-                "note": "Adjacent scope. The argument is about whether whales are struck at all, not whether they survive a strike. Negating it doesn't matter.",
+                "note": "Adjacent scope. The argument is about whether whales are struck at all, not whether they survive a strike.",
                 "negation": "Whales struck at 10 knots are not less likely to be killed. (Irrelevant to whether strikes were prevented.)"
               }
             ]
@@ -3877,11 +3876,11 @@
           "stimulus": "A piano tuned by the Kestrel Piano Service will hold its tuning for at least six months if it is kept away from radiators. The Morrows' piano was tuned by Kestrel in January, but it sits right beside a radiator in their living room. So the Morrows' piano will not hold its tuning for six months.",
           "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
           "choices": [
-            "A container shipped by Norrland Freight will arrive within a week if it clears customs on its first inspection. One Norrland container did not arrive within a week. So it did not clear customs on its first inspection.",
+            "A container shipped by Norrland Freight will arrive within a week only if it clears customs on its first inspection. One Norrland container failed its first customs inspection. So that container will not arrive within a week.",
             "If a newspaper's investigative series wins a regional award, the paper's circulation rises the following year. The Gazette's circulation rose this year. So its investigative series must have won a regional award last year.",
-            "A patron's library card will be renewed automatically if the patron has no overdue fines at renewal time. Mr. Hale is a patron with no overdue fines. So his library card will be renewed automatically.",
+            "A patron's library card will be renewed automatically if the patron has no overdue fines at renewal time. Mr. Hale is a patron who has no overdue fines. So his library card will be renewed automatically.",
             "The new floor cleaner has been shown not to harm hardwood finishes, and anything that does not harm hardwood finishes is safe to use every week. So the new cleaner must actually be good for hardwood finishes.",
-            "Any Tallis company apprentice who completes the stage-combat course is cleared to perform fight scenes. Joaquin is a Tallis apprentice who has not completed the course. So he is not cleared to perform fight scenes."
+            "Completing the stage-combat course is enough to clear any Tallis apprentice to perform fight scenes. Joaquin, a Tallis apprentice, never completed that course. So he is not cleared to perform fight scenes."
           ],
           "answer": "E",
           "types": [
@@ -3894,7 +3893,7 @@
           "flaws": [
             "necessary-sufficient"
           ],
-          "explanation": "The argument treats being kept away from radiators as necessary for a Kestrel-tuned piano to hold its tuning, when it was only stated as sufficient (Kestrel tuning and no radiator → holds tuning; the Morrows' piano is near a radiator; so it won't hold), and (E) denies the condition in the same way. (A) is the trap: it mirrors the wording almost exactly but reasons by the valid contrapositive, so it is not flawed at all; (B) is flawed but in a different way (it affirms the result).",
+          "explanation": "The argument treats being kept away from radiators as necessary for a Kestrel-tuned piano to hold its tuning, when it was stated only as sufficient (Kestrel tuning and no radiator → holds tuning; the Morrows' piano is near a radiator; so it won't hold). (E) states its condition with 'is enough to,' which is also only sufficient, and denies it in the same way. (A) is the trap: it reads almost word for word like the original, but its 'only if' makes clearing customs necessary, so denying it validly yields the conclusion. (B) is flawed in a different way (it affirms the result).",
           "breakdown": {
             "setup": [
               {
@@ -3910,22 +3909,22 @@
                 "text": "Members of group G with condition C get result R; this member of G lacks C; so this member won't get R. (Denying the sufficient condition.)"
               }
             ],
-            "analysis": "The piano sits by a radiator. Does that doom its tuning? No: staying away from radiators was given as enough for the tuning to hold, not as required. Chain: Kestrel tuning AND away from radiators → holds 6+ months. Morrows: Kestrel tuning, beside a radiator. → Won't hold. That's denying the sufficient condition (mistaking a sufficient condition for a necessary one), a classic; know it. Valid moves: away from radiators → holds (forward), or didn't hold → wasn't kept away (contrapositive). The trap copies the wording but runs the contrapositive, which is valid. We need an answer that commits the same mistake, whatever the wording.",
+            "analysis": "The piano sits by a radiator. Does that doom its tuning? No: staying away from radiators was given as enough for the tuning to hold, not as required. Chain: Kestrel tuning AND away from radiators → holds 6+ months. Morrows: Kestrel tuning, beside a radiator. → Won't hold. That's denying the sufficient condition (treating a sufficient condition as necessary), a classic; know it. Most students pick (A) because it is nearly a word-for-word copy: 'will arrive within a week ... if it clears customs ... failed ... so will not arrive.' But one word changes everything: 'only if.' That makes clearing customs necessary, and denying a necessary condition is valid. A valid argument can't match a flawed one. The right answer hides its sufficient condition in 'is enough to.'",
             "choices": [
               {
-                "note": "Tempting. Same sentence shape: 'will ... if ...', then a fact, then a 'not' conclusion. But it's the contrapositive: didn't arrive → didn't clear customs. That's valid. A valid argument can't match a flawed one."
+                "note": "Tempting. Same sentence shape and almost the same words. But 'will arrive ... only if it clears customs' makes clearing customs a necessary condition: arrives in a week → cleared. This container didn't clear, so it won't arrive in a week. That's valid."
               },
               {
-                "note": "Flawed, but a different flaw. This reverses the conditional: circulation rose → award, affirming the result instead of denying the condition. Not the same mistake."
+                "note": "Flawed, but a different flaw. It reverses the conditional: circulation rose → award, affirming the result instead of denying the condition."
               },
               {
                 "note": "Valid. No fines → renewed; Hale has no fines; so renewed. Straightforward application, no flaw."
               },
               {
-                "note": "A different flaw: it treats 'does not harm' as 'is good for' (polar vs. logical opposite). No conditional is being negated."
+                "note": "A different flaw: it treats 'does not harm' as 'is good for' (polar vs. logical opposite). No conditional is being denied."
               },
               {
-                "note": "CORRECT. Tallis apprentice who completes the course → cleared. Joaquin hasn't completed it, so 'not cleared.' Same mistake: the course is sufficient, not shown to be necessary. Different wording ('any ... who'), same skeleton."
+                "note": "CORRECT. 'Is enough to clear' = completes the course → cleared (sufficient). Joaquin hasn't completed it, so 'not cleared.' Same mistake: the course is sufficient, not shown to be necessary."
               }
             ]
           }
@@ -3936,7 +3935,7 @@
           "stem": "Which one of the following most logically completes the media critic's argument?",
           "choices": [
             "Fallowmere's newspapers closed because their readers came to prefer getting their news online rather than in print",
-            "a local newspaper can survive only if it stops relying on classified advertising for most of its revenue",
+            "a local newspaper can survive only if it stops relying on classified advertising for the greater part of its revenue",
             "news that readers obtain from online sources is generally less reliable than news reported by local newspapers",
             "the closures of Fallowmere's newspapers are better explained by a loss of revenue than by a loss of readers",
             "no newspaper anywhere has ever been forced to close because of a decline in the number of people who read it"
@@ -3985,10 +3984,10 @@
           "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
             "takes for granted that none of the letters written by the men of the family deal chiefly with household accounts",
-            "overlooks the possibility that the women's letters dealing chiefly with household accounts are fewer than half of all the letters",
+            "treats a feature of most letters in a majority of the collection as a feature of most letters overall",
             "presumes, without providing justification, that letters are a more reliable record of household accounts than ledgers would be",
-            "treats the fact that the papers consist mainly of letters as showing that the collection contains no account books",
-            "relies on a classification of the letters by subject that historians who study the family might reasonably dispute"
+            "treats the fact that the papers consist mainly of letters as showing that the collection contains no account books at all",
+            "relies on a classification of the letters by subject that the historians who study the Garrow family might reasonably dispute"
           ],
           "answer": "B",
           "types": [
@@ -4002,51 +4001,51 @@
           "flaws": [
             "quantifier"
           ],
-          "explanation": "Most letters are by women, and most of those concern household accounts, but 'most of most' can be well under half of the whole (60 percent of letters by women, 58 percent of those about accounts, is about 35 percent of all letters); (B) names this gap. (A) is tempting, but the argument does not need the men's letters to be about something else; if some were about accounts, that would only help the conclusion.",
+          "explanation": "Most letters are by women, and most of those concern household accounts, but 'most of most' can be well under half of the whole (60 percent of letters by women, 58 percent of those about accounts, is about 35 percent of all letters); (B) states this abstractly. (A) is the trap: it sounds like a needed assumption, but the argument doesn't need the men's letters to be about something else; men's letters about accounts would only help the conclusion.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Most of the letters in the collection deal chiefly with household accounts."
+                "text": "Most of the letters in the Garrow papers deal chiefly with household accounts."
               },
               {
                 "label": "Reasoning",
-                "text": "Most letters were written by women; most of the women's letters deal chiefly with household accounts."
+                "text": "Most of the letters were written by the women of the family; most of the women's letters deal chiefly with household accounts."
               }
             ],
-            "analysis": "Most of most is most? Not necessarily. Worked example: 100 letters. 60 by women (most). 35 of those 60 are about accounts (most of the women's letters). That's 35 of 100 letters about accounts: not most. Structure: 1. Most letters → by women. 2. Most women's letters → about accounts. → Most letters → about accounts. 'Most' doesn't chain the way 'all' does; you can only conclude that some letters (in fact, more than a quarter) are about accounts. Know this quantifier trap. We need an answer that says the women's account letters might not reach half of the whole.",
+            "analysis": "Most of most = most? No. Try numbers: 100 letters, 60 by women, 35 of those about accounts. 35 is most of the women's letters and the women wrote most of the letters, but 35 is not most of 100. 'Most' of 'most' can be barely over a quarter. This quantifier slip is worth knowing. Most students pick (A) because it sounds like the gap: what about the men's letters? But if some men's letters were about accounts, that would push the total up, which only helps the conclusion. The argument can't depend on the men's letters being about something else. The right answer is abstract and doesn't mention women, men or accounts: it describes moving from 'most letters in a majority of the collection' to 'most letters overall.'",
             "choices": [
               {
-                "note": "Not assumed. If some of the men's letters were about household accounts, that would only help the conclusion. The argument doesn't need this, so it isn't the flaw.",
-                "example": "Example of this flaw: Most of the cookbooks were written by women, so no cookbook in the collection was written by a man."
+                "note": "Tempting. It sounds like the missing piece. But the argument never needs the men's letters to avoid household accounts; men's account letters would only raise the share. The real problem is the women's letters alone may fall short of half.",
+                "example": "Example of this flaw: Most letters about accounts were by women, so the men must never have written about accounts."
               },
               {
-                "note": "CORRECT. 'Most of most' can be well under half. If 60 of 100 letters are by women and 35 of those are about accounts, that's 35 of 100: not most. The argument never rules this out."
+                "note": "CORRECT. 'Most letters in a majority of the collection' = most of the women's letters, and the feature is dealing with household accounts. The argument treats that as a feature of most of the whole collection, but most of a majority can be well under half."
               },
               {
-                "note": "Wrong dimension. The argument is about what the letters are about, not how reliable they are as records.",
-                "example": "Example of this flaw: The diaries mention prices, so they are a better source for prices than the shop's own ledgers."
+                "note": "The argument doesn't compare letters to ledgers or rely on letters being reliable. It's only about what the letters discuss.",
+                "example": "Example of this flaw: The family's letters discuss household spending, so they must be a better record of it than the account ledgers."
               },
               {
-                "note": "Never happens. The argument says nothing about account books; 'mainly letters' is just background.",
-                "example": "Example of this flaw: The box is mostly photographs, so there can't be any maps in it."
+                "note": "The argument never claims there are no account books. 'Mainly letters' leaves room for other documents, and the conclusion is only about the letters.",
+                "example": "Example of this flaw: The papers are mostly letters, so the collection contains no ledgers at all."
               },
               {
-                "note": "Merely possible. Nothing suggests the classification is doubtful, and even if every label is accurate, the math still doesn't work. Premise objection, not the flaw.",
-                "example": "Example of this flaw: The archivist labeled these letters 'business,' but a historian might call them personal, so the count is wrong."
+                "note": "A premise objection. The argument might use a disputable classification, but even with an agreed classification the reasoning fails for a different reason.",
+                "example": "Example of this flaw: Our staff sorted these letters by topic, so our count of letters about accounts settles the question, even though other scholars would sort them differently."
               }
             ]
           }
         },
         {
           "number": 25,
-          "stimulus": "Store owner: Our clothing store has always given full refunds on unworn returns. Lately a few customers have bought expensive dresses, worn them once to an event, and returned them. Some staff want us to stop accepting dress returns altogether. But that would penalize the many honest customers who return dresses that don't fit. Instead, we should accept a dress return only if the original hang tag, which must be cut off before the dress can be worn, is still attached.",
+          "stimulus": "Store owner: Lately a few customers have bought expensive dresses, worn them once to an event, and returned them for a full refund. Some staff want us to stop accepting dress returns, but that would penalize the many honest customers who return dresses that don't fit. Instead, we should refund a dress only if its hang tag, which must be removed before the dress can be worn, is still attached. Admittedly, a few honest customers who remove the tag too soon will lose their refunds.",
           "stem": "Which one of the following principles, if valid, most helps to justify the store owner's reasoning?",
           "choices": [
-            "A store should never change a long-standing policy merely because a few of its customers have found ways to abuse it.",
+            "A store should never change its return policy merely because a few of its customers have found ways to abuse that policy.",
             "Honest customers should never be made to bear any of the costs that are created by the actions of dishonest customers.",
             "A store's return policy should be designed above all to maximize the store's profits, even at some cost to customer goodwill.",
-            "When customers abuse a policy, a store should stop the abuse in a way that preserves the policy's benefits for honest customers.",
+            "Among the responses that would curb an abuse of a practice, one should choose the one that denies the fewest honest users its benefits.",
             "Customers who are found to have returned merchandise that they have worn should be barred from making any further purchases at the store."
           ],
           "answer": "D",
@@ -4059,34 +4058,34 @@
             "plan"
           ],
           "flaws": [],
-          "explanation": "The owner rejects a blanket ban because it would hurt honest returners and endorses a tag rule that blocks the wear-once abuse while still letting honest customers return ill-fitting dresses; (D) endorses exactly that kind of targeted response. (B) is the strongest trap: it supports rejecting the ban but says nothing in favor of adopting the tag requirement (which itself places a small new condition on honest customers), and (A) would forbid the owner's own policy change.",
+          "explanation": "The owner rejects a blanket ban on dress returns because it would hurt the many honest returners and endorses a tag rule that still blocks the wear-once abuse but costs only a few honest customers; (D) says to pick, among responses that curb the abuse, the one that denies the fewest honest users the policy's benefits. (B) is the trap: it supports rejecting the ban, but the owner concedes the tag rule also costs some honest customers, so (B) would condemn the owner's own proposal. (A) would forbid any change at all.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Rather than banning dress returns, the store should accept them only with the hang tag still attached."
+                "text": "Instead of banning dress returns, the store should refund a dress only if its hang tag is still attached."
               },
               {
                 "label": "Reasoning",
-                "text": "A few customers wear dresses once and return them; a ban would penalize honest customers returning dresses that don't fit; the tag must be cut off to wear the dress."
+                "text": "A few customers wear dresses once and return them; a ban would penalize many honest customers returning ill-fitting dresses; the tag rule costs only a few honest customers who remove the tag too soon."
               }
             ],
-            "analysis": "Why is the tag rule better than a ban? Because it blocks the wear-once trick and still lets honest customers return dresses that don't fit. The owner makes two moves: 1. Reject the blanket ban (it hurts honest returners). 2. Adopt the tag rule (wearers must cut the tag; honest returners don't). A principle-justify answer has to tell you to do what the conclusion says, so it must support both moves. We need an answer that says: answer abuse with a fix that stops it without taking the benefit away from proper users.",
+            "analysis": "Why the tag rule over the ban? Both stop the wear-once trick. Both hurt some honest customers; the owner admits that. The difference is how many: the ban hurts many, the tag rule a few. So we need a principle that says: when fixing an abuse, pick the fix that costs honest customers the least. Most students pick (B) because it captures the owner's sympathy for honest customers and rules out the ban. But read the last sentence: the tag rule also makes some honest customers lose refunds. (B) says honest customers should never bear ANY cost, so it rules out the owner's plan too. A principle-justify answer has to support doing what the conclusion says. The right answer is abstract ('a practice,' 'honest users') and comparative ('the fewest').",
             "choices": [
               {
-                "note": "Too strong, and it backfires: the owner IS changing the policy (adding the tag requirement) because of a few abusers. This principle would condemn the owner's own recommendation."
+                "note": "Opposite. The owner is changing the policy because of a few abusers. This principle would forbid the owner's own proposal."
               },
               {
-                "note": "Tempting. It supports rejecting the ban. But it doesn't tell you to adopt the tag rule, and the new tag condition itself puts a small burden on honest customers. Only half the conclusion is justified."
+                "note": "Tempting. It condemns the ban, which hurts honest customers. But the owner admits the tag rule also costs some honest customers their refunds, so this principle condemns the tag rule as well. It can't justify adopting it."
               },
               {
-                "note": "Wrong dimension. The owner reasons about fairness to honest customers, not profit. A profit-first principle might even favor the ban."
+                "note": "Wrong dimension. The owner argues from fairness to honest customers, not profit."
               },
               {
-                "note": "CORRECT. It calls for a response that stops the abuse (wearers can't keep the tag) while keeping the benefit for honest customers (ill-fitting dresses still come back). That covers both halves of the owner's reasoning."
+                "note": "CORRECT. Both the ban and the tag rule curb the abuse; the tag rule denies refunds to only a few honest customers, the ban to many. So this principle picks the tag rule, which is exactly the owner's conclusion."
               },
               {
-                "note": "Adds a consequence the owner never proposes. Banning abusers isn't part of the plan and doesn't justify the tag rule."
+                "note": "Adds a penalty the owner never mentions. It doesn't help choose between the ban and the tag rule."
               }
             ]
           }

@@ -1,6 +1,6 @@
 {
   "format": "lsat-trainer/v1",
-  "id": "classic-style-test-2-v3",
+  "id": "classic-style-test-2-v4",
   "name": "Classic-Style Test 2",
   "number": 2,
   "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
@@ -125,7 +125,7 @@
           "stem": "Which one of the following, if true, most strengthens the argument?",
           "choices": [
             "The new fungicide controls orchard fungi more effectively than did the products that growers used before it.",
-            "In valley orchards where the fungicide has never been used, orange-banded bee numbers have held steady.",
+            "In valley orchards where the new fungicide has never been used, orange-banded bee numbers have held steady.",
             "Orange-banded bees visit orchard blossoms less often than several other bee species in the valley do.",
             "Over the past decade, a parasitic mite that attacks orange-banded bees has spread throughout the valley.",
             "Some growers in the valley have recently begun planting wildflowers near their orchards to attract bees."
@@ -182,7 +182,7 @@
             "Sellers who set an unusually low price for a house usually do so because the house has a hidden defect.",
             "Some sellers set a low price on a house only because they need to sell it quickly.",
             "A buyer cannot tell whether a low price reflects a hidden defect or merely a seller's haste.",
-            "A house priced far below similar nearby homes is unlikely to be the bargain it seems.",
+            "A house priced far below similar nearby homes is unlikely to be the bargain that it appears to be.",
             "Buyers should have any unusually low-priced house professionally inspected before they make an offer on it."
           ],
           "answer": "D",
@@ -284,7 +284,7 @@
             "Every Quillon employee who uses the company's encrypted connection on a given day is working from home that day.",
             "Quillon's team leads approve most of the requests to work from home that they receive from trained employees.",
             "A Quillon employee who uses the encrypted connection does not need a team lead's approval to work from home.",
-            "Any Quillon employee who works from home on a given day has completed the company's security training."
+            "Any Quillon employee who works from home on a given day must have completed the company's security training."
           ],
           "answer": "E",
           "types": [
@@ -329,10 +329,10 @@
           "stimulus": "Meteorologist: Our station's new forecasting model correctly predicted whether it would rain the next day on 88 percent of days last spring. The model we used before it was correct on only 74 percent of days during the previous spring. Both figures were checked against the same set of rain gauges. So the new model predicts next-day rain more accurately than the old one did.",
           "stem": "Which one of the following is an assumption required by the meteorologist's argument?",
           "choices": [
-            "The new model will be correct on at least 88 percent of days during next spring as well.",
+            "The new model will be correct on at least 88 percent of days during the coming spring as well.",
             "The old model was more accurate during the spring than it was during any other season of the year.",
-            "Next-day rain last spring was not substantially easier to predict than it was during the previous spring.",
-            "No forecasting model that is currently available to the station is more accurate than the new model.",
+            "Next-day rain last spring was not substantially easier to predict than it had been during the previous spring.",
+            "No other forecasting model that is currently available to the station is any more accurate than the new model.",
             "The new model requires less computing time to produce a forecast than the old model required."
           ],
           "answer": "C",
@@ -442,7 +442,7 @@
           "stem": "The principle stated by the editor most helps to justify the reasoning in which one of the following arguments?",
           "choices": [
             "Hollis Books should reissue Meera Dahl's first novel. Dahl has consented to the reissue, and no factual errors have been discovered in the novel since it first appeared.",
-            "Grayline Press should not reissue Owen Tarr's travel memoir. Tarr's estate favors a reissue, but errors found in the memoir since it appeared cannot be corrected.",
+            "Grayline Press should not reissue Owen Tarr's travel memoir. Tarr's estate favors a reissue, but the errors found in the memoir since it first appeared cannot be corrected.",
             "Fenwick House should not reissue its 1970s cookbook, since the original edition sold poorly and there is little reason to expect that a new edition would sell any better.",
             "Arden Press should reissue Lionel Fry's chemistry textbook despite Fry's objection, because every error found in the textbook can now be corrected in a new edition.",
             "Lattice Press should not reissue Ana Voss's field guide, because Voss has died and much of the information in the guide has since become out of date."
@@ -495,9 +495,9 @@
           "stem": "Which one of the following most accurately describes a flaw in the tech analyst's reasoning?",
           "choices": [
             "It relies on a comparison between Brightway and companies that may not operate in the same industry.",
-            "It confuses the amount of revenue a company's division brings in with the amount of profit it earns.",
+            "It confuses the amount of revenue that a company's division brings in with the amount of profit that it earns.",
             "It takes for granted that a company's most profitable division must be the one that brings in most of its revenue.",
-            "It infers that a part of a company has a feature merely because the whole company has it.",
+            "It infers that a part of a company has a certain feature merely because the whole company has it.",
             "It fails to consider that Brightway's competitors may become more profitable than Brightway in the coming years."
           ],
           "answer": "D",
@@ -579,7 +579,7 @@
             "analysis": "More heat, slightly more people, fewer heat admissions. Four answers will show some change over the thirty years that made people less likely to end up in the hospital for heat. We want the one that doesn't. Since this is a trend over time, a fixed fact that doesn't change over time can't explain it. Lesson: in EXCEPT questions, cross off the four that work and pick the leftover.",
             "choices": [
               {
-                "note": "CORRECT (the exception). A fixed pattern, not a change. And if admissions happen mostly on very hot days, more very hot days should mean more admissions. It deepens the puzzle instead of resolving it."
+                "note": "CORRECT. This is the exception. A fixed pattern, not a change. And if admissions happen mostly on very hot days, more very hot days should mean more admissions. It deepens the puzzle instead of resolving it."
               },
               {
                 "note": "Resolves it. Far more people can cool off at home, so fewer end up in the hospital despite more scorching days."
@@ -603,9 +603,9 @@
           "choices": [
             "the females of prey species repeat their signals several times in order to help males avoid being eaten",
             "males of prey species cannot distinguish the signals of their own species' females from those of the mimics",
-            "the predatory mimics reproduce flash patterns more accurately than do the females they are imitating",
+            "the predatory mimics reproduce flash patterns more accurately than do the very females they are imitating",
             "most males of prey species that live near the mimics are eaten before they ever have a chance to mate",
-            "where such mimics are common, prey males that delay their responses probably survive at higher rates"
+            "where such mimics are common, prey males that respond slowly probably survive at higher rates"
           ],
           "answer": "E",
           "types": [
@@ -652,7 +652,7 @@
           "choices": [
             "Ostrand's suppliers can reliably deliver only drugs made in facilities that passed their latest national inspections.",
             "The brand-name version of Brelomax is made in a facility that passed its latest national inspection.",
-            "The facility in which generic Brelomax is made passed its most recent national inspection.",
+            "The facility in which the new generic Brelomax is made passed its most recent national inspection.",
             "Ostrand stocks no generic drug that its suppliers are unable to deliver reliably.",
             "Generic Brelomax is as effective in treating asthma as the brand-name version is."
           ],
@@ -757,7 +757,7 @@
           "choices": [
             "Did the people of Ombra decorate objects other than pottery, such as tools or textiles, with spirals?",
             "How many pieces of pottery, decorated and undecorated, have been excavated at Ombra and at Dessin?",
-            "Was the spiral-decorated pottery at Dessin made from clay found near Dessin or from clay found near Ombra?",
+            "Was the spiral-decorated pottery at Dessin made from clay found near Dessin or near Ombra?",
             "Did the people of Dessin continue to use the spiral motif for some time after Ombra was abandoned?",
             "Was Ombra a larger settlement than Dessin at the time when each settlement's population was at its peak?"
           ],
@@ -809,11 +809,11 @@
           "stimulus": "Pharmacy analyst: Last year Medway Pharmacies began sending a text message to customers who had opted in to the service whenever one of their prescriptions was due for a refill. Among those customers, the proportion of refills picked up on time rose from 61 percent the year before to 78 percent. The messages, therefore, were responsible for the rise.",
           "stem": "Which one of the following, if true, most strengthens the analyst's argument?",
           "choices": [
-            "In a survey, most customers who received the messages described them as helpful and said they hoped the service would continue.",
-            "Before the messages began, customers who later opted in had already been picking up refills on time somewhat more often than other customers.",
+            "In a survey, most customers who received the messages described them as helpful and said that they hoped the service would continue indefinitely.",
+            "Nearly every customer who signed up for the service received at least one refill message last year, and most of them received several.",
             "Last year several competing pharmacies in the area closed, and many of their former customers began filling prescriptions at Medway.",
             "The text messages that Medway sent last year also announced discounts on nonprescription products sold in its stores.",
-            "Among customers who did not opt in, Medway's on-time refill rate last year was about the same as the year before."
+            "Among Medway customers with no mobile number on file, who thus could not sign up, on-time refills were unchanged last year."
           ],
           "answer": "E",
           "types": [
@@ -827,34 +827,34 @@
           "flaws": [
             "causation"
           ],
-          "explanation": "The argument infers causation from a before-and-after change in one group, so it is vulnerable to a general trend, such as a change in insurance rules, that raised on-time refills for everyone. (E) supplies a control: customers who got no messages showed no rise, which makes the messages the likelier cause. (B) is the most tempting trap, but the comparison is of the same customers before and after, so their higher starting rate does not bear on what caused the rise. (A) offers only customers' impressions.",
+          "explanation": "The argument infers causation from a before-and-after change in one group, so it is open to the possibility that something pharmacy-wide, such as new pickup hours or an insurance rule, raised on-time refills for everyone. (E) supplies a control group: customers who could not receive the messages showed no rise, which points to the messages. (B) is the trap: it seems to confirm that the messages reached people, but the stimulus already says a message went out whenever a refill came due, so (B) adds nothing about what caused the rise. (A) offers only impressions; (C) and (D) do not separate the messages from other causes.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The refill text messages were responsible for the rise in on-time refills."
+                "text": "Medway's refill text messages were responsible for the rise in on-time refills."
               },
               {
                 "label": "Reasoning",
-                "text": "Among opted-in customers, on-time refills rose from 61% the year before to 78% after the messages started."
+                "text": "Among customers who signed up for the texts, on-time refills rose from 61 percent the year before to 78 percent."
               }
             ],
-            "analysis": "Before-and-after in one group. What if something else changed that year for everyone, like an insurance rule or a new pharmacy app? The best strengthener is a control group: customers who got no messages. If their rate stayed flat, the messages look like the cause. Like checking whether only the plants you watered grew, or every plant in the garden.",
+            "analysis": "So the rate went up after the texts started. Did the texts do it, or did something else change at Medway that year for everybody? A before-and-after comparison in one group can't tell those apart. It's like: I started taking vitamins in May and felt better in June, so the vitamins worked. Maybe June was just sunnier. We need an answer that shows the rise didn't happen to comparable people who got no texts. Most students pick (B) because it sounds like proof the texts actually reached people. It fails because the stimulus already tells you a message went out whenever a refill came due. Confirming a fact the argument already gives you is irrelevant corroboration: it does nothing to rule out another cause. The right answer hides behind a stand-in description: customers with no mobile number on file are simply people who couldn't get the texts.",
             "choices": [
               {
-                "note": "Customers liking the messages doesn't show the messages changed their behavior. Impressions, not evidence of cause."
+                "note": "Wrong. Customers liking the service doesn't show it changed their behavior. People can find a reminder helpful and still be late, or be on time for other reasons."
               },
               {
-                "note": "Tempting, since it's about the opted-in group. But the argument compares the same customers to themselves, before and after. Their higher starting point doesn't explain the jump."
+                "note": "Tempting. It feels like it confirms exposure to the texts. But the premise already says a text went out whenever a refill was due, so this tells you nothing new. It doesn't touch the real question: was something else responsible for the rise?"
               },
               {
-                "note": "New customers from closed competitors change who's in the group, which muddies the comparison. If anything, a weakener."
+                "note": "Wrong. New customers from closed pharmacies are a different group from the customers whose rates were compared. If anything this muddies the comparison; it certainly doesn't support the texts as the cause."
               },
               {
-                "note": "So the messages contained something else too. That's a possible rival influence, if anything, and it does nothing to tie the rise to the refill reminders."
+                "note": "Wrong. This tells you what else the texts said, not whether the texts caused the rise. It does nothing to rule out a pharmacy-wide change, and the discount angle could even suggest a different reason people came in."
               },
               {
-                "note": "CORRECT. Customers who didn't opt in saw no change. So there was no general trend lifting everyone; the rise happened only among people getting messages. That points to the messages."
+                "note": "CORRECT. These are the customers who couldn't get the texts: a control group. Their on-time rate stayed flat, so whatever raised the signed-up customers' rate wasn't something that hit all Medway customers. That makes the texts the likelier cause."
               }
             ]
           }
@@ -865,8 +865,8 @@
           "stem": "Which one of the following, if assumed, enables the conclusion above to be properly drawn?",
           "choices": [
             "Any people who possessed a system of writing kept lasting records of the sun's yearly movements.",
-            "Any people who kept a lasting record of any kind possessed a system of writing.",
-            "Most ancient structures aligned with the summer solstice sunrise were built by people who possessed a system of writing.",
+            "Any people who kept a lasting record of any kind must have possessed a system of writing.",
+            "Most ancient structures aligned with the summer solstice sunrise were built by people with a system of writing.",
             "The builders of the Hallow Fen ring tracked the sun's yearly movements over a period of many years.",
             "Some ancient people who kept lasting records of the sun's movements possessed a system of writing."
           ],
@@ -916,7 +916,7 @@
           "stimulus": "Ten years ago, snowboarders accounted for 45 percent of the injured people treated at the first-aid clinic of the Haldane ski resort. Last season they accounted for only 30 percent. Over the same period, the resort required all of its snowboard instructors to complete a new safety course. Clearly, snowboarding at Haldane has become less dangerous than it was ten years ago.",
           "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
-            "fails to consider that the proportion of the resort's visitors who are snowboarders may have declined over the period",
+            "fails to consider that snowboarders may now make up a smaller share of the resort's visitors",
             "takes for granted that the new safety course for snowboard instructors is responsible for the reduction in injuries",
             "infers that snowboarding has become less dangerous at all ski resorts from evidence about only one resort",
             "overlooks the possibility that skiing at Haldane has also become less dangerous over the past ten years",
@@ -975,10 +975,10 @@
           "stimulus": "Entomologist: Ant species on the island of Tavor differ widely in their habits. Every ant species there that cultivates fungus keeps the interior of its nests humid. Most of the island's ant species that keep their nests humid build those nests underground, and none of Tavor's ant species that nest underground forage at night. Several ant species on Tavor do forage at night.",
           "stem": "If the entomologist's statements are true, which one of the following is most strongly supported by them?",
           "choices": [
-            "Most of the ant species on Tavor that keep their nests humid do not forage at night.",
+            "Fewer than half of Tavor's ant species with humid nests forage at night.",
             "None of the ant species on Tavor that cultivate fungus inside their nests forage at night.",
             "Most of the ant species on Tavor that cultivate fungus build their nests underground.",
-            "At least some of the ant species on Tavor that forage at night cultivate fungus in their nests.",
+            "At least some of the ant species on Tavor that forage at night are species that cultivate fungus in their nests.",
             "Several of the ant species on Tavor that cultivate fungus forage for food at night."
           ],
           "answer": "A",
@@ -991,30 +991,30 @@
             "fact-set"
           ],
           "flaws": [],
-          "explanation": "Most humid-nest species nest underground, and no underground nesters forage at night, so most humid-nest species do not forage at night: (A). (C) is the main trap. Fungus cultivators are only a subset of the humid-nest species, and that subset could fall entirely within the minority that nests above ground, so what holds for most humid-nest species need not hold for most fungus cultivators. For the same reason, (B), (D), and (E) are all left open.",
+          "explanation": "Most humid-nest species nest underground, and no underground nester forages at night, so most humid-nest species do not forage at night; that means fewer than half of them do, which is (A) stated the other way around. (C) is the main trap: fungus cultivators are only a subset of the humid-nest species, and that subset could sit entirely in the minority that nests above ground. For the same reason (B), (D), and (E) are left open.",
           "breakdown": {
             "setup": [
               {
                 "label": "Facts",
-                "text": "1. Every fungus-cultivating species keeps humid nests; 2. most humid-nest species nest underground; 3. no underground-nesting species forages at night; 4. several species forage at night."
+                "text": "1. Fungus cultivator → humid nest; 2. Most humid-nest species → underground; 3. Underground → no night foraging; 4. Several species forage at night."
               }
             ],
-            "analysis": "Hard to prephrase, so watch for answers that slide a \"most\" onto a subgroup. Chain: most humid-nest species → underground → no night foraging. So most humid-nest species don't forage at night. But fungus cultivators are only a slice of the humid-nest group, and that slice could sit entirely in the above-ground minority. Imagine 10 humid-nest species, 7 underground; the 2 fungus growers could both be among the 3 above ground. \"Most\" isn't \"all\": the members you care about could be the other ones.",
+            "analysis": "Chain what actually links. Most humid-nest species are underground, and every underground species skips night foraging. Most + all chains: most humid-nest species don't forage at night. Now flip that into a count: if more than half don't, then fewer than half do. That's (A), dressed up so it doesn't look like the chain you just built. Most students pick (C) because fungus → humid → (most) underground looks like a clean chain. It fails because 'most humid-nest species' says nothing about which ones. The fungus cultivators are a subset of the humid-nest group, and 'most' isn't 'all': they could all be in the above-ground minority. Imagine 10 humid-nest species, 7 underground; the 3 above ground could be the only fungus cultivators.",
             "choices": [
               {
-                "note": "CORRECT. Most humid-nest species are underground, and no underground species forages at night, so most humid-nest species don't forage at night. Straight chain."
+                "note": "CORRECT. More than half of the humid-nest species are underground, and underground species never forage at night, so more than half of the humid-nest species don't forage at night. Fewer than half can be night foragers."
               },
               {
-                "note": "Left open. Fungus cultivators might all be above-ground humid nesters, and those could forage at night."
+                "note": "Wrong. Fungus cultivators might all be above-ground nesters, and nothing stops above-ground species from foraging at night. Too strong."
               },
               {
-                "note": "Tempting: it looks like rule 1 plus rule 2. But \"most humid-nest species nest underground\" doesn't carry over to the fungus-growing subset. They could all be in the above-ground minority."
+                "note": "Tempting. It chains fungus → humid → underground. But the 'most' link covers humid-nest species in general, not the fungus-growing subset. That subset could be entirely in the above-ground minority."
               },
               {
-                "note": "Left open. The night foragers could include fungus cultivators, or not. Nothing decides it."
+                "note": "Wrong. The night foragers could all be species with dry nests. Nothing ties night foraging to fungus."
               },
               {
-                "note": "Possible but unsupported. Nothing says any fungus cultivator forages at night, let alone several."
+                "note": "Wrong. Possible, but nothing requires it. The several night foragers could be species that grow no fungus at all."
               }
             ]
           }
@@ -1081,10 +1081,10 @@
           "stimulus": "Ethicist: When the software firm Lumetra discovered a security flaw in its messaging app, it fixed the flaw within a week but chose not to tell users, on the grounds that there was no evidence the flaw had ever been exploited. Lumetra acted wrongly. People who sent sensitive messages during the months the flaw existed had a stake in knowing that those messages might have been exposed, even though they probably were not.",
           "stem": "Which one of the following principles, if valid, most helps to justify the ethicist's argument?",
           "choices": [
-            "A company should tell users about a security flaw in its product whenever there is evidence that the flaw has been exploited.",
-            "A company should fix any security flaw in its products as soon as possible after the flaw has been discovered.",
-            "A company that conceals a security flaw from its users acts wrongly only if the concealment results in actual harm to them.",
-            "Keeping users uninformed of a risk they had a stake in knowing about is wrong even when the risk was improbable.",
+            "A company should tell users about a security flaw in its product whenever there is any evidence that the flaw has actually been exploited.",
+            "A company should fix any security flaw in its products as soon as it reasonably can after the flaw has first been discovered.",
+            "A company that conceals a security flaw from its users acts wrongly only if the concealment results in some actual harm to them.",
+            "It is wrong to withhold information about a risk to people's interests from them, even if the risk was unlikely to materialize.",
             "People who choose to send sensitive messages through an app thereby accept responsibility for whatever risks come with doing so."
           ],
           "answer": "D",
@@ -1096,34 +1096,34 @@
             "principle"
           ],
           "flaws": [],
-          "explanation": "The ethicist rejects Lumetra's reasoning, which was that disclosure was unnecessary because exploitation was unlikely, and argues that users' stake in the information required disclosure anyway. (D) makes users' stake, rather than the probability of exposure, decisive, which licenses the conclusion that Lumetra acted wrongly. (A) is the tempting trap: it requires disclosure when there is evidence of exploitation, but here there was none, so it does not apply. (C) and (E) cut against the ethicist.",
+          "explanation": "The ethicist rejects Lumetra's excuse that exploitation was unlikely and says users' stake in knowing settled the matter. (D) makes withholding information about a risk to people's interests wrong even when the risk was improbable, which is exactly Lumetra's case. (A) is the trap: it is pro-disclosure, but it applies only when there is evidence of exploitation, and here there was none. (B) is satisfied by Lumetra, and (C) and (E) cut against the ethicist.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Lumetra acted wrongly by not telling users about the security flaw."
+                "text": "Lumetra acted wrongly in not telling users about the flaw."
               },
               {
                 "label": "Reasoning",
-                "text": "Lumetra's excuse was no evidence of exploitation; but people who sent sensitive messages had a stake in knowing they might have been exposed, even though they probably weren't."
+                "text": "Users who sent sensitive messages had a stake in knowing those messages might have been exposed, even though they probably weren't."
               }
             ],
-            "analysis": "Lumetra said: unlikely to have been exploited, so no need to tell. The ethicist says: low odds don't settle it; the users' stake does. We need a principle that says withholding is wrong when users have a stake, even if the risk is unlikely. A principle-justify answer has to tell you to do what the conclusion says, and it has to fit these facts (no evidence of exploitation).",
+            "analysis": "Lumetra's excuse: no evidence anyone exploited the flaw. The ethicist's answer: doesn't matter, users had a stake in knowing. So we need a principle that says the stake is what counts, and low probability is no excuse. A principle-justify answer has to tell you that what Lumetra did was wrong in these facts. Most students pick (A) because it is the pro-disclosure rule and the ethicist is pro-disclosure. It fails because its trigger is 'any evidence that the flaw has actually been exploited,' and the stimulus says there was none. A rule that doesn't apply to the facts can't justify a verdict on them. (D) hides behind synonyms: 'interests' for 'stake,' 'unlikely to materialize' for 'probably were not.'",
             "choices": [
               {
-                "note": "Tempting, since it's about disclosure. But it requires disclosure only when there's evidence of exploitation, and here there was none. It doesn't apply, so it can't show Lumetra was wrong."
+                "note": "Tempting. It sounds like the ethicist's side. But it only kicks in when there is evidence of exploitation, and Lumetra had none. The ethicist's whole point is that disclosure was owed anyway."
               },
               {
-                "note": "Lumetra did fix the flaw within a week. This is about fixing, not telling users."
+                "note": "Wrong. Lumetra fixed the flaw within a week, so this principle, if anything, says Lumetra did fine. The issue is telling users, not fixing."
               },
               {
-                "note": "Cuts against the ethicist. No actual harm is evident, so this would excuse Lumetra."
+                "note": "Wrong. This undercuts the ethicist. The messages probably weren't exposed, so there was probably no actual harm, and by this rule Lumetra probably didn't act wrongly."
               },
               {
-                "note": "CORRECT. Users who sent sensitive messages had a stake in knowing, and the risk being improbable doesn't excuse silence. So Lumetra's withholding was wrong. Sufficient condition matches the facts; verdict matches the conclusion."
+                "note": "CORRECT. Lumetra withheld information about a risk to users' interests (possible exposure of sensitive messages), and the risk was unlikely to materialize. This principle says that's still wrong, which is exactly the ethicist's conclusion."
               },
               {
-                "note": "Cuts against the ethicist. If users accept the risk, Lumetra's silence looks more defensible."
+                "note": "Wrong. This shifts responsibility to users, which cuts against the claim that Lumetra did wrong."
               }
             ]
           }
@@ -1133,11 +1133,11 @@
           "stimulus": "Most of the novels that Starling House published last year were written by first-time novelists. And according to an industry survey, most first-time novelists whose books were published last year received advances of less than $5,000. So most of the novels Starling House published last year earned their authors advances of less than $5,000.",
           "stem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that exhibited by the argument above?",
           "choices": [
-            "Most of the plants in the Hadley greenhouse are orchids. Every orchid in the greenhouse requires daily misting. So most of the plants in the Hadley greenhouse require daily misting.",
-            "Most members of the Orrin hiking club are retirees. Most of the club's retirees hike every week. So at least some members of the Orrin hiking club hike every week.",
-            "Most residents of Calder own bicycles, and most residents of Calder also own cars. So at least some of the residents of Calder own both a bicycle and a car.",
-            "Most applicants to the Velor fellowship are from the town of Varn. Most of the fellowship's recipients are also from Varn. So most applicants from Varn end up receiving the fellowship.",
-            "Most cars Dunmore Motors sold last month were electric. Most electric cars sold in the region last month cost over $40,000. So most cars Dunmore sold then cost over $40,000."
+            "Most of the plants that the Hadley greenhouse sold last year were orchids. And according to a growers' survey, every orchid sold last year needed daily misting. So most of the plants Hadley sold last year needed daily misting.",
+            "Most members of the Orrin hiking club are retirees, and most of the club's own retirees go on a hike every week. So at least some members of the Orrin hiking club go on a hike every week.",
+            "Most residents of the town of Calder own bicycles, and most residents of Calder also own cars. So it must be that at least some of the residents of Calder own both a bicycle and a car.",
+            "Most applicants to the Velor fellowship are from the town of Varn, and most of the fellowship's recipients are from Varn as well. So most applicants from Varn end up receiving the fellowship.",
+            "Most electric cars sold in the region last month cost over $40,000, and most of the cars that Dunmore Motors sold last month were electric. So most of the cars that Dunmore sold last month cost over $40,000."
           ],
           "answer": "E",
           "types": [
@@ -1151,38 +1151,38 @@
           "flaws": [
             "quantifier"
           ],
-          "explanation": "The argument applies a fact about first-time novelists in general to Starling's first-time novelists, though Starling's could be the minority who received large advances. (E) makes the same move: Dunmore's electric cars might be the cheaper minority of the region's electric cars. (A), (B), and (C) are attractive because they also combine 'most' statements, but each is valid: (A) uses 'every', (B) restricts its second premise to the club's own retirees, and two majorities of the same group must overlap in (C). (D) is flawed in a different way, inferring a success rate from where applicants and recipients come from.",
+          "explanation": "The argument applies a majority figure about first-time novelists in general to Starling's first-time novelists, who could be the minority with large advances; and even a representative 'most of most' need not be a majority. (E) makes the same move with its premises swapped: Dunmore's electric cars might be the cheaper minority. (A) is the trap: it copies the stimulus almost word for word, but its second premise says 'every,' which makes the conclusion valid. (B) and (C) are valid, and (D) commits a different error.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Most Starling House novels last year earned their authors advances under $5,000."
+                "text": "Most novels Starling House published last year earned advances under $5,000."
               },
               {
                 "label": "Reasoning",
-                "text": "Most Starling novels last year were by first-time novelists; most first-time novelists published last year (everywhere) got advances under $5,000."
+                "text": "Most Starling novels last year were by first-time novelists; most first-time novelists published last year (industry-wide) got advances under $5,000."
               },
               {
                 "label": "Pattern",
-                "text": "Most of our A are B; most B in general are C; so most of our A are C."
+                "text": "Most of group X are B; most B in general are C; so most of X are C."
               }
             ],
-            "analysis": "The second \"most\" is about first-time novelists everywhere, not Starling's. Starling's debut authors could be the lucky minority who got big advances. Find the answer that applies a general majority to one company's own subset. Watch for valid lookalikes: an \"every,\" a second premise restricted to the same group, or two majorities of one group (those must overlap).",
+            "analysis": "Who says Starling's first-timers look like first-timers in general? Starling could be the press that pays its debut authors well. And even if they were typical, most of most can be a minority: 60 percent of 60 percent is 36 percent. Find the answer that applies a general 'most' to one seller's or publisher's subgroup. Most students pick (A) because it looks like a copy: same 'Most of the … last year were …', same 'according to a survey', same conclusion. It fails because its second premise says 'every' orchid, and most + all is valid. A valid version of a flawed argument is never the parallel flaw. (E) is easy to skip because it puts the general premise first, but the skeleton is identical.",
             "choices": [
               {
-                "note": "Valid. \"Every orchid\" closes the gap. Not flawed, so not a match."
+                "note": "Tempting. It mirrors the stimulus sentence by sentence. But 'every orchid sold last year needed misting' covers Hadley's orchids too, so most of Hadley's plants needed misting. Valid, so not the same flaw."
               },
               {
-                "note": "Valid. The second premise is about the club's own retirees, and the conclusion is only \"some.\" Not flawed."
+                "note": "Wrong. The second premise is about the club's own retirees, and the conclusion is only 'at least some'. Most of a majority is at least one member. Valid."
               },
               {
-                "note": "Tempting because of the two \"most\" premises, but it's valid. More than half plus more than half of the same residents must overlap."
+                "note": "Wrong. Two majorities of the same town must overlap, so at least some residents own both. Valid."
               },
               {
-                "note": "Flawed, but differently. It goes from where applicants and recipients come from to a success rate for Varn applicants."
+                "note": "Wrong. Flawed, but differently: it confuses where recipients come from with the chance that a Varn applicant wins. That's a reversal of 'most', not a general-to-subgroup move."
               },
               {
-                "note": "CORRECT. Most Dunmore cars were electric; most electric cars in the region cost over $40,000; so most Dunmore cars did. Same flaw: Dunmore's electric cars could be the cheaper minority of the region's."
+                "note": "CORRECT. A general fact about electric cars in the region is applied to Dunmore's electric cars, which could be the cheap minority, and two 'mosts' are chained. Same flaw, premises in the other order."
               }
             ]
           }
@@ -1193,8 +1193,8 @@
           "stem": "Which one of the following, if true, most seriously weakens the argument?",
           "choices": [
             "Apartment rents in Ferrisport's suburbs have risen far less over the past three years than rents downtown have.",
-            "Downtown rents have risen mainly for units with a window in every room, which the offices' deep floor plans cannot provide.",
-            "Several of the largely empty downtown office buildings were built within the past fifteen years and have up-to-date heating and cooling systems.",
+            "The downtown units whose rents have climbed nearly all have windows in every room, which the offices' deep floor plans cannot provide.",
+            "Developers in Ferrisport have generally earned higher returns from building new apartment complexes than from converting existing buildings.",
             "Over the past decade, Ferrisport's downtown population has grown considerably faster than the city's supply of downtown housing has.",
             "Many of the office tenants who have left downtown Ferrisport moved to newer and cheaper office space in the suburbs."
           ],
@@ -1208,7 +1208,7 @@
             "causal"
           ],
           "flaws": [],
-          "explanation": "The argument assumes that converted offices would earn the high rents that downtown apartments now command. (B) shows that the rent surge is for a kind of apartment the office buildings cannot become, so converted units may not share in it. (D) strengthens the demand side, (C) if anything makes conversion easier, and (A) and (E) do not bear on whether converted units would earn high rents.",
+          "explanation": "The argument assumes that converted offices would earn the rents downtown apartments now command. (B) shows the rent surge is for a kind of unit the office buildings cannot become, so converted units may not share in it. (C) is the trap: it says conversion earns less than new construction, but a comparison with another investment does not show that conversion would not be highly profitable. (D) strengthens, and (A) and (E) do not bear on converted units' rents.",
           "breakdown": {
             "setup": [
               {
@@ -1217,25 +1217,25 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Downtown rents rose 30% in three years; apartment vacancy is at a decades-long low; many downtown office buildings are largely empty and their owners want to sell."
+                "text": "Downtown rents are up 30 percent in three years and vacancy is at a decades low; many office buildings are empty and for sale."
               }
             ],
-            "analysis": "Rents are high and apartments are scarce. But will converted offices get those rents? That assumes the demand is for any apartment, including one carved out of an office. If renters are paying up for a particular kind of unit that offices can't become, the converted units won't ride the wave. We need an answer that splits the hot market from what conversion can produce. Like seeing that beach houses sell for a fortune and assuming a converted warehouse inland will too.",
+            "analysis": "The argument treats 'downtown apartments' as one market. Would the converted units actually get those rents? Only if they're the kind of apartment renters are paying up for. It's like seeing that three-bedroom houses are selling fast and concluding your studio will too. We need an answer that shows converted offices wouldn't share in the rent boom. Most students pick (C) because 'lower returns' sounds like 'not profitable.' It fails because it's a comparison: conversion can earn less than new construction and still be highly profitable. Watch the switch from a relative claim (less profitable than) to an absolute one (highly profitable). (B) looks like a detail about windows until you see it splits the market.",
             "choices": [
               {
-                "note": "Suburban rents aren't the issue. Downtown rents rising more, if anything, helps the developer's case slightly."
+                "note": "Wrong. Suburban rents aren't the issue. The conversions would be downtown, where rents are high."
               },
               {
-                "note": "CORRECT. The rent surge is for units with a window in every room, and deep office floor plans can't deliver that. So converted units likely wouldn't command the high rents the argument counts on."
+                "note": "CORRECT. The rent boom is in units with windows in every room. Deep office floor plans can't give that, so converted units would be outside the hot segment and may not command the high rents."
               },
               {
-                "note": "Tempting to read as relevant, but modern systems would, if anything, make conversion cheaper. It doesn't hurt the argument."
+                "note": "Tempting. It sounds like conversion is a worse deal. But 'less profitable than new construction' doesn't mean 'not highly profitable.' Both could be lucrative. A relative claim can't sink an absolute one."
               },
               {
-                "note": "Strengthens. Population outpacing housing means strong demand for new apartments."
+                "note": "Wrong. This strengthens the case: demand outpacing supply supports high rents for new units."
               },
               {
-                "note": "Explains why the offices are empty. It says nothing about whether apartments made from them would pay."
+                "note": "Wrong. This explains why the offices are empty. It says nothing about what converted apartments would earn."
               }
             ]
           }
@@ -1245,11 +1245,11 @@
           "stimulus": "Climatologist: Of the severe storms that struck the Lundar coast over the past decade, 70 percent were preceded by a week of unusually warm temperatures in the adjacent sea. Records of sea temperatures and storms for that decade are complete and reliable. Hence, whenever the sea off the Lundar coast has a week of unusually warm temperatures, a severe storm will probably follow.",
           "stem": "The climatologist's argument is flawed because it",
           "choices": [
-            "treats a correlation between two kinds of events as proof that one kind of event causes the other",
+            "treats a correlation between two kinds of events as proof that one causes the other",
             "draws a general conclusion from data that cover too short a period to reveal any reliable long-term pattern",
             "fails to consider that some of the severe storms struck the coast after weeks of entirely normal sea temperatures",
             "presumes, without providing justification, that unusually warm seas are the only factor that can produce a severe storm",
-            "infers that most warm weeks will be followed by storms from evidence that most storms followed warm weeks"
+            "overlooks the possibility that most of the decade's unusually warm weeks were followed by no severe storm"
           ],
           "answer": "E",
           "types": [
@@ -1263,38 +1263,37 @@
           "flaws": [
             "necessary-sufficient"
           ],
-          "explanation": "That most storms were preceded by warm weeks does not show that most warm weeks are followed by storms; warm weeks could be common and storms rare. The argument reverses the direction of the proportion, which is (E). (A) is the very tempting trap, but the conclusion is a prediction ('will probably follow'), not a causal claim. (C) describes something the premise itself acknowledges (the other 30 percent), and a decade of reliable records, as in (B), is not the problem.",
+          "explanation": "That most storms were preceded by warm weeks does not show that most warm weeks were followed by storms; warm weeks could be common and storms rare. (E) names exactly that overlooked possibility. (A) is the trap: correlation-to-causation is the textbook flaw, but the conclusion is a prediction ('will probably follow'), not a causal claim. (C) restates the 30 percent the premise already concedes, and a decade of reliable records, as in (B), is not the problem.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Whenever the sea off Lundar has a week of unusually warm temperatures, a severe storm will probably follow."
+                "text": "Whenever the sea has an unusually warm week, a severe storm will probably follow."
               },
               {
                 "label": "Reasoning",
-                "text": "70% of the past decade's severe storms on the Lundar coast were preceded by a week of unusually warm sea temperatures; the records are complete and reliable."
+                "text": "70 percent of the decade's severe storms came after an unusually warm week; the records are complete and reliable."
               }
             ],
-            "analysis": "The data go storm → usually preceded by a warm week. The conclusion goes warm week → usually followed by a storm. That flips the percentage. If warm weeks happen 30 times a year and storms only twice, nearly every storm can follow a warm week while nearly every warm week passes quietly. Like saying \"most lottery winners bought a ticket, so most ticket buyers win.\" You might think the flaw is causation, but read the conclusion: it only predicts.",
+            "analysis": "The premise starts from storms and looks back: most storms had a warm week first. The conclusion starts from warm weeks and looks forward: most warm weeks bring a storm. Those are different fractions. Quick numbers: 10 storms, 7 after warm weeks, but 50 warm weeks in the decade. Then only 7 of 50 warm weeks were followed by a storm. It's like: most lottery winners bought a ticket that week, so if you buy a ticket you'll probably win. Most students pick (A) because 'correlation is not causation' is the flaw everyone knows. It fails because the climatologist never claims warm seas cause storms; the conclusion is a probability claim. (E) hides in omission form: it's the reversed proportion stated as the case the argument ignores.",
             "choices": [
               {
-                "note": "Tempting. But the conclusion is a prediction (\"will probably follow\"), not a causal claim. The argument never says warm water causes storms.",
-                "example": "Example of flaw: Towns with more firefighters have more fires, so firefighters must be causing fires."
+                "note": "Tempting. It's the classic flaw. But the conclusion never says warm water causes storms; it says a storm will probably follow. The error is in the proportions, not in a causal leap.",
+                "example": "Example of flaw: Cities with more libraries have lower crime, so building libraries causes crime to fall."
               },
               {
-                "note": "A full decade of complete, reliable records is reasonable. The problem is the direction of the inference, not the time span.",
-                "example": "Example of flaw: The stock rose every day last week, so it will keep rising forever."
+                "note": "Wrong. Ten years of complete, reliable records is a reasonable basis, and nothing suggests the period is too short. The problem would remain with a century of data.",
+                "example": "Example of flaw: It rained on both days I visited, so it rains there all the time."
               },
               {
-                "note": "The premise already says only 70%, so it acknowledges the other 30%. Not overlooked.",
-                "example": "Example of flaw: Every case of food poisoning last month came from the cafeteria, so no one could get sick from eating elsewhere."
+                "note": "Wrong. The premise already concedes this: 30 percent of storms weren't preceded by warm weeks. The argument doesn't ignore it."
               },
               {
-                "note": "The argument never says warm water is the only factor; it predicts a probable storm, not a guaranteed one.",
-                "example": "Example of flaw: Smoking causes lung cancer, so anyone who doesn't smoke can't get it."
+                "note": "Wrong. The argument doesn't claim warm seas are the only cause. It openly allows that 30 percent of storms came without them.",
+                "example": "Example of flaw: Smoking causes lung disease, so anyone with lung disease must have smoked."
               },
               {
-                "note": "CORRECT. From \"storms are usually preceded by warm weeks\" it infers \"warm weeks are usually followed by storms.\" Flipping the direction of a proportion. Warm weeks could be common and storms rare."
+                "note": "CORRECT. If warm weeks were common, most of them could have passed with no storm at all, even though most storms followed a warm week. Then 'a storm will probably follow' is false."
               }
             ]
           }
@@ -1397,9 +1396,9 @@
           "stimulus": "",
           "stem": "Which one of the following most accurately expresses the main point of the passage?",
           "choices": [
-            "Solvang’s doctrine should give way to a general policy of imitative repair, since that policy better respects the traditions within which many buildings were made.",
+            "Solvang’s doctrine should give way to a general policy of imitative repair, which better respects the traditions within which many buildings were made.",
             "Because new materials eventually weather to match old ones, distinguishable repair cannot be sustained over time, and Solvang’s doctrine therefore defeats its own purpose.",
-            "Whether a repair deceives depends on what a building is understood to be, a question that Solvang’s doctrine answers without argument.",
+            "Whether a repair deceives depends on what a building is understood to be, a prior question that Solvang’s doctrine simply answers without argument.",
             "Since few historic buildings reach us in a single state, conservation architects should abandon the very notion of a building’s original fabric.",
             "Solvang rightly holds that repairs make claims about the past, but the rebuilding of the Strandholm chapel misapplied his own doctrine."
           ],
@@ -1596,8 +1595,8 @@
           "choices": [
             "The 1720s west front of the Strandholm chapel should be treated as new work rather than as part of the original fabric.",
             "Imitative repair is acceptable when a building’s earlier alterations were themselves carried out in an imitative manner.",
-            "Buildings that are rebuilt at regular intervals in the same form are exempt from the requirement that repairs be distinguishable.",
-            "Any future repair to the parts of the Strandholm chapel rebuilt in the 1950s should be distinguishable from the 1950s work.",
+            "Buildings rebuilt at regular intervals in the same form are exempt from the requirement that repairs be distinguishable.",
+            "Any later repair to the portions of the Strandholm chapel rebuilt after the 1944 fire should be distinguishable from those portions.",
             "The work done on the Strandholm chapel in the 1860s has less historical value than the work done there in the 1950s."
           ],
           "answer": "D",
@@ -1605,34 +1604,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Solvang’s rule is that new work must be distinguishable from the existing fabric it repairs, and the second paragraph says the doctrine requires the latest intervention to announce itself. Once the 1950s work is itself existing fabric, a new repair to it must be set off from it too, which is D. A echoes the author’s criticism, but Solvang in effect treated the 1720s front as original, the opposite of A. C is the author’s complication, not Solvang’s view, and E confuses which work announces itself with which work is more valuable.",
+          "explanation": "Solvang’s rule is that new work must be plainly distinguishable from the old fabric it repairs, and the second paragraph says the doctrine in effect requires the latest intervention to announce itself. Once the post-fire rebuilding of the 1950s is itself existing fabric, a later repair to it must be set off from it too, which is D. A is the dominant trap: it sounds like the author’s criticism turned into a rule, but Solvang in effect treated the 1720s front as original, and the author only notes this without saying what should be done. C is the author’s complication, not Solvang’s view, and E confuses which work announces itself with which work is more valuable.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Commitment: what must Solvang accept, given his own rule?"
+                "text": "Apply Solvang's own rule to a new case and say what it forces him to accept."
               },
               {
                 "label": "Where to look",
-                "text": "First paragraph (the rule: new work must be distinguishable from the old) and the last two sentences of the second paragraph (only the latest intervention announces itself)."
+                "text": "Paragraph 1 (the rule: new work 'plainly distinguishable from the old'; Strandholm rebuilt in the 1950s after the 1944 fire); paragraph 2, last sentence ('requires only the latest intervention to announce itself')."
               }
             ],
-            "analysis": "So what does the rule say about the next repair? Solvang's rule is general: whatever is new must be distinguishable from what's already there. The second paragraph points out that in practice this means the latest intervention always announces itself. Apply it forward: if someone repairs the 1950s work later, that later repair is now the latest intervention and must be set off from the 1950s fabric. Prephrase: 'future repairs to the 1950s work must look different from it.'",
+            "analysis": "Solvang's rule: whatever is new must be visibly different from whatever is already there. So what happens when the 1950s repair is the thing being repaired? It's now 'the old', and the new patch must be distinguishable from it. The right answer refers to the 1950s work by a stand-in ('the portions rebuilt after the 1944 fire'), so you have to connect it back to paragraph 1. Most students pick (A) because the author's critique is all about the 1720s front, and (A) sounds like the fix. But the author describes what Solvang's approach did with the 1720s front ('as though ... as original as the medieval nave'). Solvang is committed to the opposite of (A), and the author never prescribes it either.",
             "choices": [
               {
-                "note": "Tempting, because it echoes the author's complaint. But the author's point is that Solvang treated the 1720s front as if it were original. A states what a critic might want, not what Solvang is committed to."
+                "note": "Tempting. This is the trap. It turns the author's complaint into a rule. But Solvang's approach set the 1950s work off against 'all earlier fabric alike', treating the 1720s front as old. He's committed to the reverse, and the author doesn't recommend (A) either."
               },
               {
-                "note": "Nothing in Solvang's view makes room for an exception like this. He calls imitative repair a forgery, full stop."
+                "note": "Solvang calls imitative repair 'a quiet forgery'. Nothing in his position creates this exception."
               },
               {
-                "note": "That's the author's complication (Ise), not Solvang's commitment. If anything, his rule would apply to these buildings too."
+                "note": "That's the author's Ise Grand Shrine complication. Solvang's doctrine has no such exemption; the whole point is that it ignores such traditions."
               },
               {
-                "note": "CORRECT. His rule applies to any new work against existing fabric. Once the 1950s work is old, a repair to it is new work and must be distinguishable from it."
+                "note": "CORRECT. The fire-damaged portions were rebuilt in the 1950s. Under Solvang's rule, a later repair to them is new work, and new work must be distinguishable from the existing fabric, which now includes the 1950s work."
               },
               {
-                "note": "Confuses which work is marked off with which is more valuable. Solvang's rule is about distinguishing new from old, not ranking periods."
+                "note": "Value isn't the issue. The doctrine concerns which work must be visibly distinguished, not which work matters more historically."
               }
             ]
           }
@@ -1643,7 +1642,7 @@
           "stimulus": "",
           "stem": "With which one of the following statements would the author be most likely to agree?",
           "choices": [
-            "A repair that is plainly distinguishable from the surrounding fabric can nonetheless give a misleading impression of a building’s history.",
+            "A repair plainly distinguishable from the surrounding fabric can still give a misleading impression of a building’s history.",
             "A repair that follows a local tradition of faithful reproduction cannot misrepresent the history of the building it restores.",
             "Conservation architects ought to abandon Solvang’s doctrine entirely in favor of judging each repair case by case.",
             "How a building ought to be repaired is a more fundamental question than what that building is understood to be.",
@@ -1743,9 +1742,9 @@
           "choices": [
             "cost the least to build and maintain over time",
             "benefit the neighborhoods in which the residents live",
-            "have already been endorsed by council members",
+            "have already been endorsed by the city’s council members",
             "produce results that residents can readily see",
-            "repair or replace the city’s existing infrastructure"
+            "repair or replace the city’s existing infrastructure, such as water mains"
           ],
           "answer": "D",
           "types": [
@@ -1792,9 +1791,9 @@
           "choices": [
             "show that residents generally rank safety projects above projects intended to improve a neighborhood’s appearance",
             "suggest that city engineers are, on the whole, less competent than residents at identifying hazards",
-            "support the claim that residents’ choices can address needs that professional planners have missed",
+            "support the claim that residents’ choices can address needs that the city’s professional planners have missed",
             "illustrate the kind of project the council funds from the remaining 98 percent of the capital budget",
-            "give an example of a highly visible project of the kind that critics say residents tend to prefer"
+            "give an example of a highly visible project of the kind critics say residents prefer"
           ],
           "answer": "C",
           "types": [
@@ -1889,7 +1888,7 @@
           "stem": "According to the passage, which one of the following was true of Brennick’s participatory budgeting program during its first eight cycles?",
           "choices": [
             "Residents of the city’s lowest-income neighborhoods cast a disproportionately large share of the votes.",
-            "Proposal meetings were moved from weeknight evenings to times more convenient for working residents.",
+            "Proposal meetings were moved from weeknight evenings to times more convenient for most working residents.",
             "Residents were permitted to allocate funds for the repair of water and sewer systems.",
             "The proportion of the capital budget set aside for residents grew after each successful cycle.",
             "The handful of activists who dominate public hearings cast most of the votes on the projects."
@@ -2035,8 +2034,8 @@
           "stimulus": "",
           "stem": "Which one of the following, if true, would most call into question the author’s suggestion that the first objection described in the first paragraph concerns an avoidable feature of particular programs?",
           "choices": [
-            "Residents of Brennick’s lowest-income neighborhoods make up a smaller share of the city’s population than they did in 2014.",
-            "The proposal meetings that determine Brennick’s ballot have been held on weeknight evenings and attended chiefly by affluent residents.",
+            "Fewer than one Brennick resident in ten has cast a ballot in any cycle of the program since it began in 2014.",
+            "The meetings that draw up Brennick’s ballot have been held on weeknight evenings and attended mostly by residents of its wealthier neighborhoods.",
             "In cities that accept ballots only at public meetings, low-income residents cast a smaller share of votes than in Brennick.",
             "Several of the projects chosen by Brennick’s voters have proved more costly to maintain than city engineers had projected.",
             "Most residents who voted in Brennick’s early cycles had never before attended a public hearing on the city’s budget."
@@ -2046,34 +2045,34 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 4,
-          "explanation": "The first objection is about the proposal meetings that decide what appears on the ballot, but Brennick’s evidence concerns only who voted. If even Brennick’s meetings are held on weeknights and dominated by affluent residents, its design did not avoid the problem, which is B. C and E strengthen the author’s point about voting access; A does not undo the finding that vote share exceeded population share; D concerns cost, not who takes part.",
+          "explanation": "The first objection is about the proposal meetings that decide which projects appear on the ballot (first paragraph), but Brennick’s evidence concerns only who voted (second paragraph). If even Brennick’s ballot-setting meetings are held on weeknights and dominated by wealthier residents, its design did not avoid the problem, which is B. A is the dominant trap: low turnout sounds like an unrepresentative process, but the author’s evidence is a relative one, the share of votes cast by low-income residents compared with their share of the population, and a small electorate can still have that composition. C and E support the author’s point about voting access, and D concerns cost, not who takes part.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Weaken: what would undercut the author's claim that Brennick shows the 'unfair sample' problem is avoidable?"
+                "text": "Find the fact that most undermines the author's claim that the first objection (participants aren't a fair sample) describes an avoidable feature, i.e., that Brennick avoided it."
               },
               {
                 "label": "Where to look",
-                "text": "First paragraph, the first objection (proposal meetings decide the ballot); second paragraph, the voting evidence; third paragraph, the 'avoidable features' claim."
+                "text": "Paragraph 1, the first objection (it is about 'the proposal meetings at which residents decide which projects will appear on the ballot'); paragraph 2 (Brennick's evidence: votes by mail and at libraries); paragraph 3, second sentence (the 'avoidable features' claim)."
               }
             ],
-            "analysis": "Look closely at the first objection. It isn't about who votes; it's about who attends the proposal meetings 'at which residents decide which projects will appear on the ballot.' Brennick's evidence is all about ballots. So what if the meetings that set the ballot are still skewed? Then the unfair-sample problem may still be there, even in Brennick. We need an answer showing Brennick's agenda-setting stage was unrepresentative.",
+            "analysis": "What exactly did the critics complain about? Not the vote. The proposal meetings, held on weeknights, that decide what gets on the ballot. And what did Brennick fix? The vote: mail ballots, libraries, grocery stores. So did Brennick avoid the problem the critics described? Only if its meetings were fair too, and the passage never says. We need an answer showing the meetings in Brennick still skew. That answer looks like it just repeats the critics, which is why it hides. Most students pick (A) because low turnout feels like a failure of representation. But the author's evidence is relative: low-income neighborhoods' share of votes exceeds their share of population. That can be true whether 5% or 50% of residents vote. Watch for count-versus-share swaps.",
             "choices": [
               {
-                "note": "Doesn't hurt. The finding compares vote share with population share in each cycle, so a change in population share is already built in."
+                "note": "Tempting. This is the trap. Low turnout sounds damning, but the author's claim rests on the composition of the voters (share of votes versus share of population), not their number. A small electorate can still be a fair sample."
               },
               {
-                "note": "CORRECT. The first objection targets the meetings that build the ballot. If Brennick's are weeknight affairs dominated by the affluent, its design didn't avoid the problem; it only widened the final vote."
+                "note": "CORRECT. The objection targets the ballot-setting meetings. If Brennick's are weeknight affairs dominated by wealthier residents, Brennick never avoided the problem; it only widened access to the final vote."
               },
               {
-                "note": "This strengthens the author: accepting ballots outside meetings seems to be what made the difference."
+                "note": "This shows Brennick's voting access works better than the alternative, which supports the author."
               },
               {
-                "note": "Irrelevant to the first objection. Maintenance costs bear, if on anything, on the quality of residents' choices."
+                "note": "Maintenance cost concerns the second objection's territory at most (which projects get chosen), not who participates."
               },
               {
-                "note": "Strengthens the author: the program drew in people who don't usually take part."
+                "note": "New voters who never attend hearings suggest the activists didn't capture the vote. That supports the author."
               }
             ]
           }
@@ -2281,7 +2280,7 @@
           "stem": "Which one of the following, if true, would most strengthen the objection to Ostrander raised by public access advocates, as described in the third paragraph?",
           "choices": [
             "Many owners of beachfront parcels in Calder bought their land before the courts recognized the public’s customary right.",
-            "In the decades after Ostrander, most of the inland retreat of Calder’s vegetation line occurred during brief storms.",
+            "In the decades after Ostrander, most inland retreat of Calder’s vegetation line occurred in brief storms.",
             "Sand stripped away by a single storm is often partly restored by natural processes over the following months.",
             "The rate of gradual erosion along Calder’s coast increased substantially in the years following the 1979 decision.",
             "Courts in several neighboring provinces have declined to recognize any public right to use privately titled beaches."
@@ -2331,43 +2330,43 @@
           "choices": [
             "It answers the landowners’ objection that the easement could move onto land they had never surrendered.",
             "It moves the easement more promptly than the Ostrander rule did in cases of gradual erosion.",
-            "It was adopted by the court on the basis of the findings reported in the 1996 provincial survey.",
-            "It does not require courts to answer a question that the coastal geologists doubted could be answered.",
-            "It prevents landowners from fencing any portion of the sand that a storm has exposed."
+            "It was adopted in response to the 1996 survey’s finding that owners had fenced much of the formerly public dry beach.",
+            "It spares courts an inquiry that some scientists who study the coast doubted could be carried out at all.",
+            "It prevents landowners from fencing any portion of the sand that a single storm has exposed."
           ],
           "answer": "D",
           "types": [
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "The geologists doubted that courts could tell gradual retreat from storm loss; Reyes asks only where the line has stood, 'not … how quickly it got there' (fourth paragraph), so that question drops out, which is D. C is the strongest trap: the survey preceded Reyes and 'lent support' to the critics, but the passage never says the court relied on it. A fails because the easement still moves onto private land, B reverses things, and E ignores the five-year wait.",
+          "explanation": "The coastal geologists doubted that courts could tell gradual retreat from storm loss (third paragraph). Reyes asks only where the vegetation line has stood, ‘not ... how quickly it got there’ (fourth paragraph), so that inquiry drops out, which is D. C is the dominant trap: the survey came before Reyes and ‘lent support’ to the critics, but the passage never says the court acted on it; the sequence is not a stated cause. A fails because the easement still moves onto private land, B has no support (under Reyes a gradual shift must persist five years), and E ignores the five-year wait.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Inference about the Reyes test."
+                "text": "Find the claim about the Reyes test that the passage actually supports."
               },
               {
                 "label": "Where to look",
-                "text": "Fourth paragraph (the Reyes test and its 'evidentiary virtue'); third paragraph (the coastal geologists)."
+                "text": "Paragraph 3 (the geologists' doubt that the gradual/sudden distinction 'could be applied at all'); paragraph 4 (the survey; Reyes's five-year test; the last sentence on its 'evidentiary virtue')."
               }
             ],
-            "analysis": "Connect the end of the passage to the middle. The geologists' complaint: you can't reliably tell gradual from sudden loss. Reyes's virtue: courts no longer reconstruct 'how quickly it got there.' So Reyes sidesteps exactly the question the geologists said was unanswerable. Prephrase that link.",
+            "analysis": "What does Reyes stop asking? How fast the line moved. Who said that question was unanswerable? The coastal geologists in paragraph 3. Connect those two and you have the answer, but notice that it names the geologists only as 'some scientists who study the coast'. You have to map it back. Most students pick (C) because the survey sits right before Reyes in the same paragraph and the passage says later developments 'lent support' to the critics. But support for the critics isn't a reason the court gave. The passage never says why the court changed course. Order in the paragraph isn't cause.",
             "choices": [
               {
-                "note": "Reyes doesn't help landowners here: after five years the easement moves onto their land whatever the cause."
+                "note": "The opposite. Under Reyes the easement still moves onto private land when a shift persists. Landowners' objection to that is untouched."
               },
               {
-                "note": "Reversed. Ostrander moves the easement along with gradual change; Reyes waits for five years of persistence."
+                "note": "Nothing supports this. Under Ostrander a gradual shift carried the easement with it; under Reyes it must persist five years first, if anything slower."
               },
               {
-                "note": "Tempting: the survey came before Reyes and supported the critics. But the passage never says the court relied on it. Sequence isn't cause."
+                "note": "Tempting. This is the trap. The survey came first and supported the critics, but the passage never says the Reyes court relied on it. That's a causal claim the passage doesn't make."
               },
               {
-                "note": "CORRECT. The geologists doubted the speed distinction could be applied; Reyes asks where the line has stood, not how fast it moved."
+                "note": "CORRECT. The geologists doubted the speed distinction could be applied at all. Reyes asks only where the line has stood for five years, so courts no longer face that inquiry."
               },
               {
-                "note": "Too strong. Until a storm-made line has persisted five years, the easement hasn't moved, so nothing in the passage shows owners can't fence in the meantime."
+                "note": "Too strong. If the line returns seaward within five years, 'nothing changes', and storm-exposed sand that hasn't persisted for five years stays private in the meantime."
               }
             ]
           }
@@ -2528,7 +2527,7 @@
             "suggest that egg predators are more numerous on wind-scoured islands than in sheltered inland valleys",
             "provide the temperature figures that are used in the worked example in the third paragraph",
             "identify a case that Valk’s theory, by the author’s own admission, has not yet explained",
-            "show that egg darkness tracks the variable Valk’s theory emphasizes, not mere geographic position",
+            "show that egg darkness tracks the variable Valk’s theory emphasizes rather than mere geographic position",
             "indicate that females at island colonies take longer foraging trips than females at inland colonies"
           ],
           "answer": "D",
@@ -2575,7 +2574,7 @@
           "stem": "The author’s attitude toward Valk’s theory can most accurately be described as",
           "choices": [
             "skepticism about the physical mechanism on which the theory relies",
-            "favorable regard tempered by an acknowledgment that some questions remain open",
+            "favorable regard tempered by acknowledgment that some questions remain open",
             "unreserved enthusiasm for a theory regarded as having settled the matter",
             "reluctant acceptance of a theory that conflicts with established experimental findings",
             "detached neutrality between the theory and the concealment view it challenges"
@@ -2623,7 +2622,7 @@
           "stimulus": "",
           "stem": "Which one of the following, if true, would most call into question Valk’s theory as described in the second paragraph?",
           "choices": [
-            "At northern colonies, dark eggs are found by predators more often than pale eggs would be at the same sites.",
+            "At northern colonies, predators find dark clutches more often, day for day, than they find pale clutches at the same sites.",
             "Females at southern colonies take foraging trips that are, on average, somewhat longer than those of northern females.",
             "Several shorebird species that nest alongside the Kessin sandpiper in the north lay pale eggs, and in those species both parents incubate.",
             "The pigment that darkens Kessin sandpiper eggs requires the female to expend energy that she must replace by foraging.",
@@ -2634,34 +2633,34 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 4,
-          "explanation": "The theory’s mechanism is that dark shells 'absorb more sunlight' and so cool more slowly; the worked example concerns eggs 'exposed to sunlight.' If darkness is just as pronounced where there is little sun to absorb, the trait does not track the benefit said to explain it, so E undermines the theory. A is the main trap, but greater visibility is a cost the theory already accepts. C fits the theory, since eggs with two incubating parents are seldom left uncovered; B and D do not touch the trade-off.",
+          "explanation": "Valk’s mechanism is that dark shells ‘absorb more sunlight’ and so cool more slowly, and the worked example concerns eggs ‘exposed to sunlight.’ If eggs are just as dark where there is little sun to absorb, the trait does not track the benefit said to explain it, so E undermines the theory. A is the dominant trap: it attacks a cost the theory already concedes; the fourth paragraph reports that darker clutches were found by predators more often, day for day, and still hatched more often overall. C fits the theory, since eggs with two incubating parents are seldom left uncovered; B and D do not touch the trade-off.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Weaken: what would most undercut Valk's warmth theory?"
+                "text": "Find the fact that most damages Valk's claim that dark eggs are an adaptation for warmth."
               },
               {
                 "label": "Where to look",
-                "text": "Second paragraph (the mechanism: dark shells absorb sunlight), third paragraph (the worked example with eggs 'exposed to sunlight')."
+                "text": "Paragraph 2 (the mechanism: dark shells 'absorb more sunlight'); paragraph 3 (the example uses eggs 'exposed to sunlight'); paragraph 4 (darker clutches found more often by predators, yet hatch more often)."
               }
             ],
-            "analysis": "What does the benefit actually depend on? Sunlight. Dark shells help only by absorbing more of it. So the theory predicts darker eggs where there's sun to absorb, other things equal. If clear-sky and overcast colonies lay equally dark eggs, the trait isn't tracking the benefit. Weaken answers that hit the mechanism beat answers that restate a cost the theory already admits.",
+            "analysis": "Where does the warmth come from in Valk's story? Sunlight. Dark shells soak up sun, so they cool slowly. So what should happen where there's little sun? Darkness should buy less, and if the theory is right, eggs there should be less dark. A finding that darkness ignores cloud cover cuts the trait loose from its supposed benefit. Most students pick (A) because 'dark eggs get eaten more' sounds like the obvious objection to a dark-egg adaptation. But the passage already grants it. Valk's account is a trade-off: more predation day for day, fewer days in the nest. Attacking a cost the argument concedes doesn't weaken it.",
             "choices": [
               {
-                "note": "Tempting, but the theory already admits this. Its whole claim is that the warmth benefit outweighs the visibility cost."
+                "note": "Tempting. This is the trap. The passage already concedes this: darker clutches 'were found by predators somewhat more often' day for day, yet hatched more often overall. A theory built on a trade-off isn't hurt by its admitted cost."
               },
               {
-                "note": "Even somewhat longer southern trips are far shorter than the hour pale eggs take to cool there, so darkness still buys nothing in the south. No conflict."
+                "note": "Southern pale eggs take over an hour to cool to the threshold. Somewhat longer trips there still wouldn't make darkening pay. No effect."
               },
               {
-                "note": "Fits the theory, if anything: when both parents incubate, eggs are rarely left uncovered, so warmth matters less and camouflage can win."
+                "note": "Fits the theory. With two parents, eggs are rarely left uncovered, so there's no cooling problem to solve."
               },
               {
-                "note": "A small added cost doesn't challenge the claim that benefits outweigh costs in cold places. Too weak to matter."
+                "note": "Every trait has some cost. This doesn't show the warmth benefit is missing or too small."
               },
               {
-                "note": "CORRECT. The benefit depends on absorbing sunlight. If darkness doesn't vary with how much sun is available, the trait isn't tracking the benefit the theory says explains it."
+                "note": "CORRECT. The benefit depends on absorbing sunlight. If eggs are no darker where skies are clear than where they are overcast, darkness doesn't track the factor that supposedly makes it pay."
               }
             ]
           }
@@ -2672,10 +2671,10 @@
           "stimulus": "",
           "stem": "Which one of the following is most strongly supported by the information in the passage?",
           "choices": [
-            "The darkest Kessin sandpiper eggs are laid at whichever colonies lie farthest north in the species’ breeding range.",
+            "Kessin sandpiper eggs are darkest at whichever colonies lie farthest north, where pale gravel makes them easiest to spot.",
             "Over a full incubation at the northern colony Valk studied, the embryo in a dark egg would never have its development halted.",
             "Kessin sandpiper eggs that are left uncovered in cold air for more than about 15 minutes generally fail to hatch.",
-            "If females at Valk’s northern colony typically returned within 15 minutes, dark eggs there would offer little developmental advantage.",
+            "If females at Valk’s northern colony typically returned to the nest within about 15 minutes, dark eggs there would offer little developmental advantage.",
             "At the southern end of the range, females spend less time away from the nest each day than northern females do."
           ],
           "answer": "D",
@@ -2683,34 +2682,34 @@
             "rc-inference"
           ],
           "difficulty": 5,
-          "explanation": "At the northern colony a pale egg takes about 15 minutes to cool to the 26°C threshold. If trips were usually shorter than that, pale eggs would rarely reach the threshold, so dark shells would gain little developmental time, which is D. A is the strongest trap: eggs darken toward the north, but the fourth paragraph says darkness tracks temperature more closely than latitude. B is too strong, because dark eggs avoid a pause only 'on most trips'; C confuses a halt in development with failure to hatch; E compares something the passage never measures.",
+          "explanation": "At the northern colony a pale egg takes about 15 minutes to cool to the 26°C threshold. If trips were usually no longer than that, pale eggs would rarely reach the threshold, so dark shells would gain little developmental time, which is D. A is the dominant trap: eggs do darken toward the north, but the fourth paragraph says darkness tracks breeding-season temperature more closely than latitude, so the farthest-north colony need not be the darkest. B is too strong, because dark eggs avoid a pause only ‘on most trips’; C confuses a halt in development with failure to hatch; E compares something the passage never measures.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Inference: which statement can be worked out from the passage's numbers and claims?"
+                "text": "Find the statement the passage's facts actually support. The numbers in paragraph 3 are the place to work."
               },
               {
                 "label": "Where to look",
-                "text": "Third paragraph (the 15-minute and 28-minute cooling figures, the 25-minute trips); fourth paragraph (temperature vs. latitude) for the main trap."
+                "text": "Paragraph 3 (pale egg: 15 minutes to the threshold; trips about 25 minutes; dark egg: about 28 minutes, 'on most trips' no pause); paragraph 4, first observation (darkness tracks temperature more than latitude)."
               }
             ],
-            "analysis": "Hard to prephrase, so run the numbers. Pale egg: 15 minutes to the threshold. Dark egg: 28 minutes. Trips: about 25 minutes. Darkness helps only because trips outlast 15 minutes. So what if trips were shorter than 15 minutes? Then pale eggs wouldn't cool to the threshold either, and dark shells would buy almost nothing. Watch for answers that turn 'on most trips' into 'never' or latitude into temperature.",
+            "analysis": "Hard to prephrase, so run the numbers. A pale egg hits 26°C in about 15 minutes. The trips last about 25, so the pale egg spends about 10 minutes stalled. Dark eggs take about 28, so they usually don't stall. The whole advantage lives in the gap between 15 minutes and the length of the trip. Shrink the trip below 15 and pale eggs never stall either: no advantage left. That's (D), stated as a hypothetical. Most students pick (A) because paragraph 1 says eggs 'grow steadily darker toward the north'. But paragraph 4 says darkness tracks temperature 'more closely than it tracks latitude', and the island colony shows a colder site beating a warmer one at the same latitude. 'Farthest north' isn't 'coldest'. One word, different variable.",
             "choices": [
               {
-                "note": "Tempting, since eggs darken 'toward the north.' But darkness 'tracks breeding-season temperature more closely than it tracks latitude,' so a colder colony farther south could lay darker eggs."
+                "note": "Tempting. This is the trap. The trend runs north, but paragraph 4 says darkness tracks temperature more closely than latitude. The darkest eggs would be at the coldest colonies, which need not be the northernmost."
               },
               {
-                "note": "Too strong. A dark egg avoids a pause only 'on most trips,' so some pauses can still happen."
+                "note": "Too strong. Dark eggs avoid a pause only 'on most trips'. 'Never' overshoots."
               },
               {
-                "note": "Confuses a pause in development with death. The passage says development 'stops … until it is warmed again,' not that the egg fails."
+                "note": "Halted development isn't death. The passage says the embryo 'stops developing until it is warmed again', not that it fails."
               },
               {
-                "note": "CORRECT. Pale eggs need about 15 minutes to reach the 26°C threshold. With trips shorter than that, neither color pauses much, so darkness gains little."
+                "note": "CORRECT. The pale egg's 15-minute cooling time is the threshold. Trips shorter than that leave pale eggs above 26°C, so darkness buys little time."
               },
               {
-                "note": "The passage gives no data on time away from the nest in the south."
+                "note": "The passage gives southern temperatures and cooling times but says nothing about how long southern females are away."
               }
             ]
           }
@@ -2731,7 +2730,7 @@
             "presumes that what is true of Fenwick Park must also be true of every other park in the city",
             "relies on visitor counts that may have been gathered by people who favored the new lamps",
             "takes for granted that the lamps were installed in response to complaints from visitors about the dark",
-            "overlooks the possibility that some other change could account for the increase in evening visitors",
+            "overlooks the possibility that some change other than the new lamps could account for the increase in evening visitors",
             "fails to establish that the additional visitors stayed in the park longer than earlier visitors did"
           ],
           "answer": "D",
@@ -2992,10 +2991,10 @@
           "stimulus": "A panel of professional chefs tasted each of the twelve sauces that the Mirela Bistro has developed for its new menu and rated every one of them excellent. Each dish on the new menu will combine one of these sauces with a main ingredient that the bistro already prepares superbly. So every dish on the new menu will be excellent.",
           "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
-            "fails to consider whether diners will be willing to pay more for the dishes on the new menu than for the old ones",
+            "fails to consider whether diners will pay more for the dishes on the new menu than for the old ones",
             "relies on the ratings of chefs who may have had a hand in developing the sauces they were asked to judge",
-            "draws a conclusion about all of the bistro's new sauces from a tasting of only some of them",
-            "treats the success of the bistro's current dishes as proof that its new menu will be just as popular with diners",
+            "draws a conclusion about all of the new sauces from a tasting of only some of them",
+            "treats the success of the bistro's current dishes as proof that its new menu will be equally popular",
             "takes for granted that combining elements that are each excellent on their own will produce something excellent"
           ],
           "answer": "E",
@@ -3220,9 +3219,9 @@
           "stem": "Which one of the following most logically completes the argument?",
           "choices": [
             "shrikes impale prey on thorns chiefly in order to make toxic prey safe to eat",
-            "the toxin carried by these grasshoppers is harmful to most bird species",
-            "shrikes would eat more of these grasshoppers if their toxin broke down more quickly",
-            "shrikes in the Ostrava Hills catch more grasshoppers than any other kind of prey",
+            "the toxin carried by these grasshoppers is harmful to most of the bird species that eat them",
+            "shrikes would eat more of these grasshoppers if the grasshoppers' toxin broke down more quickly",
+            "shrikes in the Ostrava Hills catch more of these grasshoppers than any other kind of prey",
             "the shrikes' practice of impaling prey may help protect them from the grasshoppers' toxin"
           ],
           "answer": "E",
@@ -3326,11 +3325,11 @@
           "stimulus": "Principal: Some teachers doubt that our new humanities courses belong in the information-literacy requirement. But any course that requires students to complete a substantial independent research project develops students' ability to evaluate sources. Every course in Fairview High School's new humanities sequence requires such a project. Therefore, every course in the new humanities sequence should count toward the school's information-literacy requirement.",
           "stem": "The conclusion of the principal's argument follows logically if which one of the following is assumed?",
           "choices": [
-            "Only courses that develop students' ability to evaluate sources should count toward the school's information-literacy requirement.",
+            "Only courses that develop students' ability to evaluate sources should be counted toward the school's information-literacy requirement.",
             "Any course that develops students' ability to evaluate sources should count toward the school's information-literacy requirement.",
-            "Students who complete substantial independent research projects evaluate sources better than students who do not.",
+            "Students who complete a substantial independent research project tend to evaluate sources better than students who do not complete one.",
             "Every course that counts toward the information-literacy requirement requires a substantial independent research project.",
-            "Most courses outside the new humanities sequence do not develop students' ability to evaluate sources."
+            "Most of the courses offered outside the new humanities sequence do not develop students' ability to evaluate sources."
           ],
           "answer": "B",
           "types": [
@@ -3382,8 +3381,8 @@
             "In recent years, rainfall in the Halden Valley has been greater than its long-term average.",
             "Land sinks when the removal of groundwater allows underground layers of fine clay to compact under the weight of the material above them.",
             "Several farms in the valley have recently switched to irrigation methods that use less water.",
-            "Most of the clay beneath the valley has already compacted almost as far as it can, and the sands that remain barely compact.",
-            "In a neighboring valley where less groundwater is pumped, the land has sunk by only a few centimeters."
+            "Most of the clay beneath the valley has already compacted nearly as far as it can, and sand barely compacts.",
+            "In a neighboring valley where far less groundwater is pumped, the land has sunk by only a few centimeters in total."
           ],
           "answer": "D",
           "types": [
@@ -3482,7 +3481,7 @@
           "choices": [
             "The increase in the minimum wage is what caused the county's restaurants to reduce the hours their employees worked.",
             "Restaurants that reduced their employees' hours posted fewer job openings than other restaurants did.",
-            "Restaurant employees in Dunmore County earned less in total last year than they had the year before.",
+            "Restaurant employees in Dunmore County earned less money in total last year than they had the year before.",
             "The number of people employed at the county's restaurants rose after the minimum wage was increased.",
             "Fewer employees leaving their jobs may account for part of the decline in the restaurants' job openings."
           ],
@@ -3584,11 +3583,11 @@
           "stimulus": "A utility should postpone shutting off a household's service for nonpayment whenever the household has made at least one partial payment within the past sixty days and, in addition, either someone in the household depends on electrically powered medical equipment or temperatures are forecast to fall below freezing during the following week.",
           "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
           "choices": [
-            "The Lees made a partial payment last month, and a hard freeze is forecast for next week, so the utility should postpone shutting off their service.",
+            "The Lees made a partial payment on their bill last month, and a hard freeze is forecast for next week, so the utility should postpone shutting off their service.",
             "The Whitfields made a partial payment two weeks ago, and no one in the household uses medical equipment; with mild weather forecast, the utility should postpone shutting off their service.",
             "The Garcias' last partial payment was ninety days ago, but Mr. Garcia relies on a home oxygen machine, so the utility should postpone shutting off their service.",
             "The Novaks have made no partial payments this year, although Ms. Novak relies on a powered wheelchair, so the utility is required to shut off their service.",
-            "The Ortegas made a partial payment last month and rely on medical equipment, so the utility should not only postpone shutting off their service but also forgive their unpaid balance."
+            "The Ortegas made a partial payment last month and rely on medical equipment, so the utility should both postpone their shutoff and forgive their unpaid balance."
           ],
           "answer": "A",
           "types": [
@@ -3638,10 +3637,10 @@
           "stem": "The pattern of reasoning in which one of the following arguments is most similar to that in the argument above?",
           "choices": [
             "Every car sold at Henley Motors is inspected by Pratt, and Pratt inspects no car that has more than 100,000 miles on it. So the sedan Pratt inspected last week has fewer than 100,000 miles on it.",
-            "Every dish on the Corbel Café's lunch menu is prepared by its head chef, and the head chef prepares no dish that contains peanuts. The café's satay contains peanuts, so it is not on the lunch menu.",
-            "All of the paintings in the east gallery were donated by Ames, and Ames donated no painting made before 1900. The Tolland portrait was made before 1900, so Ames did not donate it.",
-            "Every member of the choir auditioned for the director, and the director turned away no one who could read music. Since Lin can read music, Lin is a member of the choir.",
-            "Every book in the reading room was approved by the librarian, and the librarian approves only books in good condition. This atlas is in good condition, so it must be in the reading room."
+            "The Corbel Café's head chef prepares no dish with peanuts, and only dishes the head chef prepares appear on the café's lunch menu. The café's satay has peanuts, so it is not on that menu.",
+            "Every painting in the east gallery was donated by Ames, and Ames donated no painting that was made before 1900. The Tolland portrait was made before 1900, so it was not one of the paintings Ames donated.",
+            "Every member of the choir auditioned for the director, and the director turned away no one who could read music. Since Lin can read music, it follows that Lin must be a member of the choir.",
+            "Every book in the reading room was approved by the librarian, and the librarian approves only those books that are in good condition. This atlas is in good condition, so it must be in the reading room."
           ],
           "answer": "B",
           "types": [
@@ -3652,7 +3651,7 @@
             "conditional"
           ],
           "flaws": [],
-          "explanation": "The argument chains two rules (shown at the festival → chosen by the jury; chosen by the jury → not released commercially) and, from an item lacking the final property, concludes by contrapositive that it lacks the first: it was not shown. B matches step for step: the satay contains peanuts, so the chef did not prepare it, so it is not on the menu. C is the most tempting trap, but it concludes only that the painting was not donated by Ames, never using the gallery premise to reach a conclusion about the gallery; A runs forward from the middle term, and D and E reverse the conditionals.",
+          "explanation": "The argument chains two rules (shown at the festival → chosen by the jury → not released commercially) and, from an item that lacks the final property, concludes by contrapositive that it lacks the first: it was not shown. (B) does the same with its rules stated in a different order and with 'only': the satay contains peanuts, so the chef did not prepare it, so it is not on the menu. (C) is the trap: its first sentence copies the stimulus's form, but it stops at the middle term and never uses the gallery premise. (A) reasons forward from the middle term, and (D) and (E) reverse the conditionals.",
           "breakdown": {
             "setup": [
               {
@@ -3661,29 +3660,29 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Shown at festival → chosen by the jury; chosen by the jury → not released commercially; The Long Field was released commercially."
+                "text": "Every film shown was chosen by the jury; the jury chose no film already released commercially; The Long Field was already released commercially."
               },
               {
                 "label": "Pattern",
-                "text": "All A are B; no B is C; this item is C; so it is not A."
+                "text": "A → B; B → not C; this item is C; so it is not B, and so not A."
               }
             ],
-            "analysis": "Chain: shown → chosen → not released. Contrapositive: released → not chosen → not shown. The Long Field was released, so it wasn't chosen, so it wasn't shown. Find the answer that takes an item with the final property and concludes it doesn't have the first one, passing through the middle step.",
+            "analysis": "Diagram it. Shown → chosen by jury → not released. The Long Field is released, so by contrapositive: not chosen, and so not shown. The conclusion lands on the FIRST term of the chain. Find the answer that runs the whole chain backward to the first term. Most students pick (C) because its first sentence is a carbon copy: 'Every … was … by Ames, and Ames … no …'. It fails because it concludes only that Ames didn't donate the portrait. That's the middle term; the gallery premise does no work. Like proving a dish wasn't cooked by the chef and stopping there, never saying it's not on the menu. (B) hides because it puts the second rule first and phrases the first one with 'only': only chef-prepared dishes are on the menu means on menu → chef prepared.",
             "choices": [
               {
-                "note": "Wrong. Sold → inspected; inspected → not over 100,000 miles. The sedan was inspected (the middle term), so it's under 100,000. That's valid, but it runs forward from the middle, not backward from the end to the start."
+                "note": "Wrong. This starts from the middle term (Pratt inspected it) and runs forward to a conclusion. It never uses the Henley premise and never denies anything by contrapositive."
               },
               {
-                "note": "CORRECT. On menu → prepared by the head chef; prepared by chef → no peanuts. Satay has peanuts, so the chef didn't prepare it, so it's not on the menu. Same chain, same backward run to the first term."
+                "note": "CORRECT. On menu → chef prepared ('only'); chef prepared → no peanuts. The satay has peanuts, so the chef didn't prepare it, so it's not on the menu. Same two-step contrapositive back to the first term."
               },
               {
-                "note": "Wrong. The closest trap. Gallery → donated by Ames; donated → not pre-1900. The portrait is pre-1900, so Ames didn't donate it. But it stops at the middle term. The original goes all the way to 'not shown,' the first term; C never concludes 'not in the east gallery.'"
+                "note": "Tempting. It looks the most like the stimulus. But it stops halfway: not donated by Ames. It never concludes the portrait isn't in the east gallery, so the first premise is idle. Half the chain is not the same pattern."
               },
               {
-                "note": "Wrong. Member → auditioned; can read music → not turned away. Then concludes Lin is a member because Lin reads music. That's reversed and invalid; not being turned away doesn't make you a member."
+                "note": "Wrong. 'Turned away no one who could read music' doesn't mean everyone who reads music joined. It reverses the conditional: from the condition to membership."
               },
               {
-                "note": "Wrong. Reading room → approved; approved → good condition. Then concludes a book in good condition must be in the reading room. That reverses both conditionals."
+                "note": "Wrong. Reading room → good condition. Being in good condition doesn't put the atlas in the reading room. Reversed conditional."
               }
             ]
           }
@@ -3693,11 +3692,11 @@
           "stimulus": "Some historians argue that the Brennock Canal was built mainly to carry coal, pointing out that coal made up most of its cargo in the decades after it opened. But the canal company's charter, drafted before the region's large coal seams had been discovered, names only grain and timber as the cargo the canal was meant to serve. The coal traffic, then, reflects a use that arose later, and it reveals little about why the canal was built.",
           "stem": "The claim that coal made up most of the canal's cargo in the decades after it opened plays which one of the following roles in the argument?",
           "choices": [
-            "It is a claim that the argument attempts to show is false by appealing to the contents of the canal company's charter.",
+            "It is a claim that the argument tries to show is false, using evidence drawn from the canal company's charter.",
             "It is a premise that the argument uses, together with the charter's contents, to establish the builders' actual purpose.",
             "It is the main conclusion of an argument that the author contends rests on a misreading of the charter.",
-            "It is offered as evidence that the canal's builders did not anticipate the discovery of the region's coal seams.",
-            "It is a claim that the argument accepts but contends does not support the conclusion others draw from it."
+            "It is offered as evidence that the canal's builders did not foresee the discovery of coal.",
+            "Others cite it to support a view that the argument rejects, and the argument grants its truth."
           ],
           "answer": "E",
           "types": [
@@ -3709,34 +3708,34 @@
             "causal"
           ],
           "flaws": [],
-          "explanation": "The historians cite the coal traffic as evidence; the author accepts that coal dominated the cargo but argues, from the charter, that this reflects a later use and so does not show why the canal was built, which is E. A is the main trap: the author rejects the historians' conclusion, not the fact they rely on. B misassigns the support (the charter alone indicates the builders' purpose), C confuses the historians' evidence with their conclusion, and D has no basis in the argument.",
+          "explanation": "The historians cite the coal traffic as evidence that the canal was built for coal. The author accepts that coal dominated the cargo but argues, from the charter, that this reflects a later use and reveals little about why the canal was built. So the claim is others' evidence for a rejected view, and its truth is granted: (E). (A) is the trap: the author rejects the historians' conclusion, not the fact they rely on. (B) misassigns the support, (C) confuses the historians' evidence with their conclusion, and (D) has no basis.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The coal traffic reveals little about why the canal was built, so it doesn't support the historians' view."
+                "text": "The coal traffic reflects a later use and reveals little about why the Brennock Canal was built."
               },
               {
                 "label": "Reasoning",
-                "text": "The charter, drafted before the coal seams were found, names only grain and timber; so the coal traffic reflects a use that arose later."
+                "text": "The charter, written before the coal seams were found, names only grain and timber; some historians cite the coal cargo as proof the canal was built for coal."
               }
             ],
-            "analysis": "Ask two things: who uses the claim, and does the author believe it? The historians use the coal fact as their evidence. The author never disputes it: coal really was most of the cargo. Instead the author explains it away. It reflects a later use, so it doesn't show what the builders intended. It's like a defense lawyer who says: yes, my client's fingerprints are on the door, but he worked in that building for years. The prints are accepted; they're just denied their force. Prephrase: a fact the author accepts but says doesn't support the opposing conclusion. Watch the difference between rejecting a conclusion and rejecting the evidence for it.",
+            "analysis": "Who says coal made up most of the cargo? The historians, and the author never argues with it. The author's fight is over what the coal traffic shows: a later use, not the original purpose. So the claim is a fact the author grants but says doesn't support the historians' conclusion. Most students pick (A) because the author is clearly disagreeing with the historians, and the claim belongs to the historians. It fails because the author disputes their conclusion, not this fact; 'The coal traffic, then, reflects a use that arose later' takes the coal traffic as real. It's like conceding your rival scored the most points this season but denying that makes them the best defender. (E) hides behind an abstract stand-in, 'a view that the argument rejects.'",
             "choices": [
               {
-                "note": "Tempting. The author argues against the historians, so it's easy to think the author is attacking their evidence. But the author never says coal wasn't most of the cargo. Rejecting a conclusion isn't the same as denying the premise behind it."
+                "note": "Tempting. The author does oppose the historians. But the author never says coal wasn't most of the cargo. The charter is used to show what the canal was originally for, not to deny the coal traffic."
               },
               {
-                "note": "Wrong. The builders' purpose comes from the charter alone. The coal fact isn't support for that purpose; it's the thing the author explains away."
+                "note": "Wrong. The charter alone shows the builders' purpose. The coal claim doesn't help establish that purpose; the author says it reveals little about it."
               },
               {
-                "note": "Wrong. The coal fact is the historians' evidence, not their conclusion. Their conclusion is that the canal was built mainly for coal. And nobody says the historians misread the charter."
+                "note": "Wrong. The coal claim is the historians' evidence, not their conclusion. Their conclusion is that the canal was built mainly to carry coal. And the author's complaint isn't that they misread the charter."
               },
               {
-                "note": "Wrong. The argument never uses the coal fact to say what the builders foresaw. If anything, the charter's timing does that work, not the cargo figures."
+                "note": "Wrong. Nothing uses the coal cargo to show what the builders anticipated. The charter's timing does that work, not the cargo."
               },
               {
-                "note": "CORRECT. The author accepts the fact (coal dominated the later cargo) but argues it reflects a later use, so it can't support the historians' conclusion about why the canal was built."
+                "note": "CORRECT. The historians offer it to support their view; the author rejects that view but accepts the fact, arguing only that it reflects a later use."
               }
             ]
           }
@@ -3746,11 +3745,11 @@
           "stimulus": "Records show that the silent film The Lantern Keeper was shown in only three cities during its original release, and few reviews of it were published. Yet its distinctive camera techniques appear in dozens of films by directors who began working in the years just after its release. These directors, then, must have seen The Lantern Keeper.",
           "stem": "Which one of the following is an assumption on which the argument depends?",
           "choices": [
-            "Most of the directors who used the techniques lived in or near one of the three cities where the film was shown.",
-            "The few published reviews of The Lantern Keeper praised its camera techniques.",
-            "The directors who used the techniques were more innovative than most other directors of their time.",
-            "The techniques were not described in some widely available publication before those directors began using them.",
-            "The Lantern Keeper was seen by more people than the surviving records indicate."
+            "At least some of the directors who used the techniques lived in or visited one of the three cities during the film's original release.",
+            "The few reviews of The Lantern Keeper that were published at the time singled out its camera techniques for praise.",
+            "The directors who used the techniques were, on the whole, more innovative than most other directors working at the time.",
+            "None of the directors who used the techniques acquired them solely by studying the films of other directors who used them.",
+            "The Lantern Keeper was seen by more people than the surviving records of its original release indicate."
           ],
           "answer": "D",
           "types": [
@@ -3763,39 +3762,39 @@
           "flaws": [
             "causation"
           ],
-          "explanation": "The argument infers from shared techniques that the directors must have seen the film, which requires ruling out other ways they could have learned the techniques. Negate D: if a widely available publication described the techniques, the directors could have learned them there, and 'must have seen' fails. A and E are attractive because they would make it easier for the directors to have seen the film, but the argument does not need either: a film shown in only three cities could still have reached these directors.",
+          "explanation": "The argument infers that every director who used the techniques must have seen the film, which requires that the techniques could not reach them by another route. Dozens of films used them, so a later director could have picked them up from an earlier imitator. Negate (D): some director learned the techniques only from other directors' films, and that director need not have seen The Lantern Keeper. (A) is the trap: it looks like a modest access assumption, but the argument never says the directors saw the film during its original release, so they could have seen it later. (E), (B), and (C) are not required.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Directors who used the film's camera techniques must have seen The Lantern Keeper."
+                "text": "The directors whose films use The Lantern Keeper's camera techniques must have seen The Lantern Keeper."
               },
               {
                 "label": "Reasoning",
-                "text": "The film showed in only three cities and got few reviews; its distinctive techniques appear in dozens of films by directors who started soon after its release."
+                "text": "The film showed in only three cities in its original release and got few reviews; its distinctive techniques appear in dozens of films by directors who started soon after."
               }
             ],
-            "analysis": "'Must have seen' is very strong. It assumes there's no other way those directors picked up the techniques. If the techniques were written up somewhere widely read, or passed on by a teacher, the directors needn't have seen the film. Like saying: you know my grandma's secret recipe, so you must have eaten at her house. Not if she published it. Prephrase: the techniques weren't available some other way.",
+            "analysis": "'Must have seen' is very strong. It takes for granted that using the techniques means you saw the original. But dozens of films used them. Couldn't a director have copied the techniques from one of those other films? Like a cover band learning a song from another cover band, never hearing the original. We need an answer that rules out second-hand learning. Most students pick (A) because it looks like the classic hedged NA answer about access to the film. It fails because the argument never says the directors saw the film during its original release; the three-city limit applies only to that run, and they could have seen it later. (D) hides because it's about other directors' films, which the stimulus never mentions, and because it's worded strongly ('none'). It has to be: the conclusion covers every one of 'these directors.'",
             "choices": [
               {
-                "note": "Wrong. Not needed. Directors could have traveled to one of those cities, or seen the film later. Negating A doesn't hurt the argument. Tempting because it would make seeing the film easier.",
-                "negation": "It is not the case that most of the directors who used the techniques lived in or near one of the three cities."
+                "note": "Tempting. 'At least some' sounds like a safe necessary assumption. But the directors could have seen the film after its original release, at a later screening or from a print. Negate it and the argument survives.",
+                "negation": "None of the directors who used the techniques lived in or visited one of the three cities during the film's original release."
               },
               {
-                "note": "Wrong. What the reviews said isn't required. Even if they ignored the techniques, the directors could have seen the film. Negating B does no damage.",
-                "negation": "Not all of the few published reviews praised the film's camera techniques."
+                "note": "Wrong. What reviewers praised doesn't matter. The directors could have seen the film no matter what the reviews said. Negating it does no damage.",
+                "negation": "The few reviews published at the time did not all single out the film's camera techniques for praise."
               },
               {
-                "note": "Wrong. Whether these directors were more innovative is irrelevant to whether they saw the film. Negating it changes nothing.",
-                "negation": "The directors who used the techniques were not more innovative than most other directors of their time."
+                "note": "Wrong. How innovative the directors were is beside the point. Negating it changes nothing about whether they saw the film.",
+                "negation": "The directors who used the techniques were not, on the whole, more innovative than most other directors of the time."
               },
               {
-                "note": "CORRECT. Negate it and the argument collapses: if a widely available publication described the techniques first, the directors could have learned them by reading, and 'must have seen' fails.",
-                "negation": "The techniques were described in some widely available publication before those directors began using them."
+                "note": "CORRECT. Negate it: some director learned the techniques only from imitators' films. That director needn't have seen The Lantern Keeper, so 'these directors must have seen it' fails.",
+                "negation": "At least one of the directors who used the techniques acquired them solely by studying the films of other directors who used them."
               },
               {
-                "note": "Wrong. It would help, but it isn't required. A film in only three cities could still have reached these directors. Negating E (records are accurate) doesn't break the argument.",
-                "negation": "The Lantern Keeper was not seen by more people than the surviving records indicate."
+                "note": "Wrong. It would help, but it isn't required. Even if the records are accurate, the directors could be among the people who saw the film. Negating it doesn't break the argument.",
+                "negation": "The Lantern Keeper was not seen by more people than the surviving records of its original release indicate."
               }
             ]
           }
@@ -3805,11 +3804,11 @@
           "stimulus": "Conservationist: Any bird species in the Pellam Islands whose nests are within reach of the introduced rats is in danger of local extinction unless it breeds more than once a year. Every bird species in danger of local extinction there should be included in the new captive-breeding program. The Pellam rail nests only on the ground, where the rats can reach its nests. So the Pellam rail should be included in the captive-breeding program.",
           "stem": "The conclusion of the conservationist's argument can be properly drawn if which one of the following is assumed?",
           "choices": [
-            "Only bird species whose nests are within reach of the rats should be included in the captive-breeding program.",
-            "The Pellam rail breeds less often than any other bird species in the Pellam Islands.",
+            "Only bird species whose nests are within reach of the rats should be included in the new captive-breeding program.",
+            "The Pellam rail breeds less often than any other bird species in the Pellam Islands whose nests the rats can reach.",
             "Any bird species that breeds only once a year is in danger of local extinction if rats can reach its nests.",
             "Every bird species in the Pellam Islands that nests only on the ground breeds more than once a year.",
-            "Every bird species in the Pellam Islands that breeds more than once a year nests at least partly off the ground."
+            "Pellam bird species that breed more than once a year all nest at least partly off the ground."
           ],
           "answer": "E",
           "types": [
@@ -3820,7 +3819,7 @@
             "conditional"
           ],
           "flaws": [],
-          "explanation": "The rail's nests are within the rats' reach, so it is endangered (and belongs in the program) unless it breeds more than once a year; the argument needs to rule that out. By contrapositive, E says that a species nesting only on the ground does not breed more than once a year, which completes the chain. B is the most attractive trap, but breeding less often than every other species is compatible with breeding twice a year; C restates part of the first rule without saying how often the rail breeds, and D would defeat the conclusion.",
+          "explanation": "The rail's nests are within the rats' reach, so it is in danger, and belongs in the program, unless it breeds more than once a year; the argument needs to rule that out. (E), by contrapositive, says a species that nests only on the ground does not breed more than once a year, which completes the chain. (B) is the trap: breeding less often than every other exposed species is a relative claim and is compatible with breeding twice a year. (C) restates part of the first rule, (A) is irrelevant, and (D) would defeat the conclusion.",
           "breakdown": {
             "setup": [
               {
@@ -3829,39 +3828,39 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Nests within rats' reach → endangered, unless the species breeds more than once a year; endangered → should be in the program; the rail nests only on the ground, within the rats' reach."
+                "text": "Nests within rats' reach AND not breeding more than once a year → in danger; in danger → should be in the program; the rail nests only on the ground, within the rats' reach."
               }
             ],
-            "analysis": "Translate the 'unless': nests reachable AND NOT breeds more than once a year → endangered → program. The rail's nests are reachable. So the only missing piece is: the rail does not breed more than once a year. Chain: rail → nests only on ground → (need) not breeding more than once a year → endangered → program. Any answer that guarantees a ground-only nester doesn't breed more than once a year closes the gap.",
+            "analysis": "Build the chain. Rats can reach the nests → in danger UNLESS the species breeds more than once a year. In danger → program. We know the rail's nests are reachable. What's missing? That the rail does NOT breed more than once a year. Find the answer that guarantees it. (E) does it in contrapositive form: breeds more than once a year → nests at least partly off the ground. Contrapositive: nests only on the ground → doesn't breed more than once a year. The rail nests only on the ground. Done. Most students pick (B) because 'breeds less often than any other' sounds like 'breeds rarely.' It fails because it's relative. If every other exposed species breeds three times a year, the rail could breed twice and escape the danger rule. Watch the switch from a relative word (less often) to an absolute one (not more than once).",
             "choices": [
               {
-                "note": "Wrong. 'Only' makes this: in program → nests reachable. That's a necessary condition for inclusion, not something that puts the rail in. And it doesn't touch the breeding issue."
+                "note": "Wrong. This limits who else can be included. It says nothing about whether the rail breeds more than once a year, which is the missing link."
               },
               {
-                "note": "Wrong. The trap. Breeding less often than every other species sounds like 'rarely,' but it's a relative claim. If every other species breeds three times a year, the rail could still breed twice, and then it's not endangered by the rule. Watch the switch from a relative claim to an absolute one."
+                "note": "Tempting. It sounds like the rail barely breeds. But 'less often than the others' is relative. The rail could still breed twice a year if the others breed more, and then the danger rule doesn't apply."
               },
               {
-                "note": "Wrong. This restates part of the first rule but never says how often the rail breeds. Without that, you still can't apply it to the rail."
+                "note": "Wrong. This restates part of the first rule. It doesn't tell you how often the rail breeds, so the chain still has a gap."
               },
               {
-                "note": "Wrong. Opposite. If ground-only nesters breed more than once a year, the rail escapes the endangered category, and the conclusion loses its support."
+                "note": "Wrong. Opposite. If ground-only nesters breed more than once a year, the rail escapes the danger rule and the conclusion doesn't follow."
               },
               {
-                "note": "CORRECT. Breeds more than once a year → nests at least partly off the ground. Contrapositive: nests only on the ground → does not breed more than once a year. The rail nests only on the ground, so it breeds once a year or less, so with reachable nests it's endangered, so it belongs in the program."
+                "note": "CORRECT. Contrapositive: nests only on the ground → does not breed more than once a year. The rail nests only on the ground, so it's in danger and belongs in the program."
               }
             ]
           }
         },
         {
           "number": 22,
-          "stimulus": "Most of the houses on Tilbury Lane were built before 1950, and most of the houses on the lane that were built before 1950 still have their original slate roofs. It follows that most of the houses on Tilbury Lane still have their original slate roofs.",
-          "stem": "The pattern of questionable reasoning in the argument above is most similar to that in which one of the following?",
+          "stimulus": "A Quarrow apple seedling will bear fruit in its third year only if it has been grafted onto dwarf rootstock and is planted where it gets full sun. Every seedling in Mira Okonjo's new orchard row was grafted onto dwarf rootstock, and the row faces south with no shade at all. So the seedlings in that row will bear fruit in their third year.",
+          "stem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that exhibited by the argument above?",
           "choices": [
-            "Most of the employees at Dorrit Mills work the night shift, and every night-shift employee there receives a wage premium. So most of the employees at Dorrit Mills receive a wage premium.",
-            "Most of the students in Pell's class passed the exam, and most of those who passed had studied with a tutor. So most of the students who studied with a tutor passed the exam.",
-            "Most of the novels on Ingrid's shelf are mysteries, and most mysteries are set in cities. So it is likely that at least one novel on Ingrid's shelf is set in a city.",
-            "Most of the trails in Kessel Forest are open to cyclists, and most of the forest's trails that are open to cyclists are steep. So most of the trails in Kessel Forest are steep.",
-            "Most of the members of the Arden Hiking Club are retired, and the club's newly elected president has been a member for many years. So the club's president is probably retired."
+            "Any tenant at the Hesketh Building who gives sixty days' notice and leaves the unit undamaged gets the full deposit back. The Wrexleys gave sixty days' notice and left their unit undamaged, so they will get their full security deposit back.",
+            "Any runner who finishes the qualifying race in under three hours and has paid the entry fee will be admitted to the championship. Dana paid the fee but finished in over three hours, so she will not be admitted to the championship.",
+            "A volunteer may handle the rare maps in the city archive only if she has completed conservation training and been approved by the curator. Petra has not been approved by the curator, so she may not handle the rare maps.",
+            "No orchestra will be considered for the festival's opening night unless it has played at the festival before and has a board-approved conductor. The Tamberly Orchestra has played there twice and has such a conductor, so it will be considered.",
+            "Each of the four members of the Pindar Quartet is an accomplished soloist who has won national competitions. So the Pindar Quartet must itself be an accomplished ensemble, one that would win national competitions for quartets."
           ],
           "answer": "D",
           "types": [
@@ -3869,44 +3868,43 @@
           ],
           "difficulty": 5,
           "skills": [
-            "conditional",
-            "statistical"
+            "conditional"
           ],
           "flaws": [
-            "quantifier"
+            "necessary-sufficient"
           ],
-          "explanation": "The argument chains two 'most' statements, but most of a majority need not be a majority of the whole (60 percent of 60 percent is only 36 percent). D makes the identical error with trails, cyclists, and steepness. A is the strongest trap because it looks the same, but its second premise says 'every,' which makes the conclusion valid; B commits a different error, reversing which group is said to be 'most' of which, while C and E draw modest, reasonable probabilistic conclusions.",
+          "explanation": "Grafting and full sun are stated as necessary conditions for third-year fruit ('only if'), but the argument treats meeting them as enough to guarantee fruit. (D) makes the same error: 'unless' makes past play and an approved conductor necessary for consideration, and the orchestra meeting both is taken to guarantee it. (A) is the trap: it also shows two conditions met and draws the conclusion, but its conditions are sufficient ('any tenant who … gets'), so it is valid. (C) validly denies a necessary condition, (B) wrongly negates a sufficient condition, and (E) moves from parts to the whole.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Most houses on Tilbury Lane still have their original slate roofs."
+                "text": "The seedlings in Okonjo's row will bear fruit in their third year."
               },
               {
                 "label": "Reasoning",
-                "text": "Most houses on the lane were built before 1950; most of the lane's pre-1950 houses still have their original slate roofs."
+                "text": "Third-year fruit → dwarf rootstock AND full sun; the row's seedlings have dwarf rootstock and full sun."
               },
               {
                 "label": "Pattern",
-                "text": "Most A are B; most B (among A) are C; so most A are C."
+                "text": "X only if A and B; this case has A and B; so X. (Necessary conditions treated as sufficient.)"
               }
             ],
-            "analysis": "Two 'mosts' don't chain. Most of most can be a minority. Quick numbers: 100 houses, 60 built before 1950, 36 of those (60 percent) with original slate roofs. That's only 36 percent of all the houses. It's like: most of the class went on the trip, and most of the trip-goers got sunburned, so most of the class got sunburned. Not necessarily. Find the answer making that same 'most + most' error.",
+            "analysis": "'Only if' introduces what's required, not what's enough. Fruit → rootstock and sun. Having rootstock and sun doesn't get you fruit: the seedlings could still need water, pollination, a mild winter. It's like saying you can only pass the bar if you go to law school, so everyone who went to law school passed. Find the answer that meets every NECESSARY condition and then concludes the outcome. Most students pick (A) because it looks identical on the surface: two conditions, both met, conclusion follows. It fails because (A)'s conditions are sufficient: 'any tenant who gives sixty days' notice and leaves the unit undamaged gets the full deposit back.' Meeting a sufficient condition does guarantee the result, so (A) is valid, and a valid argument can't share a flaw. (D) hides behind 'unless': 'No orchestra will be considered unless A and B' means considered → A and B. Same necessary conditions, same illegal leap.",
             "choices": [
               {
-                "note": "Wrong. The strongest trap because it looks the same. But the second premise says 'every' night-shift employee gets the premium. Most + all does chain: if most work nights and all night workers get the premium, most get the premium. Valid, so not parallel."
+                "note": "Tempting. Two conditions met, conclusion drawn: it looks like a twin of the stimulus. But here the conditions are sufficient: any tenant who does both gets the deposit back. The Wrexleys did both, so the conclusion follows. Valid, so not the same flaw."
               },
               {
-                "note": "Wrong. A different error: reversal. Most who passed had a tutor doesn't mean most who had a tutor passed. Flawed, but not the same flaw."
+                "note": "Wrong. A different error. Finishing under three hours plus paying is sufficient for admission; failing one part doesn't prove Dana won't be admitted some other way. That's negating a sufficient condition, not treating a necessary one as sufficient."
               },
               {
-                "note": "Wrong. The conclusion is modest: it's likely at least one novel is set in a city. That's reasonable, not the same overreach. Also, its second premise is about mysteries in general, not on the shelf."
+                "note": "Wrong. Valid. Curator approval is necessary for handling the maps, and Petra lacks it, so she may not handle them. Denying a necessary condition is the right way to use one."
               },
               {
-                "note": "CORRECT. Most trails are open to cyclists; most cyclist-open trails are steep; so most trails are steep. Same 'most of most' error. 60 percent of 60 percent is only 36 percent."
+                "note": "CORRECT. 'Unless' marks necessary conditions: considered → played before AND approved conductor. The Tamberly Orchestra meets both, and the argument concludes it will be considered. Necessary taken as sufficient, just like the orchard."
               },
               {
-                "note": "Wrong. Most members are retired, so a given member is probably retired. That's a reasonable probabilistic conclusion, not the 'most of most' chain."
+                "note": "Wrong. A different flaw: part to whole. Great soloists needn't make a great quartet. No conditional is involved."
               }
             ]
           }
@@ -3965,11 +3963,11 @@
           "stimulus": "Economist: Two years after the town of Ashby began requiring employers to list salary ranges in job postings, the gap between the average starting salaries of men and women hired by Ashby firms had narrowed considerably. The requirement probably narrowed the gap by giving applicants, many of whom had previously had little idea what a position paid, a firmer basis for negotiating their pay.",
           "stem": "Which one of the following, if true, most strengthens the economist's argument?",
           "choices": [
-            "Since the requirement took effect, far more women than before have applied for positions at Ashby firms of every size.",
-            "Some Ashby employers listed salary ranges in their job postings even before the requirement took effect.",
-            "Job postings in Ashby that list salary ranges attract more applicants than postings that do not.",
+            "Before the requirement took effect, surveys found that many job applicants in Ashby had little idea what the positions they sought paid.",
+            "Some Ashby employers had already been listing salary ranges in their job postings before the requirement took effect.",
+            "Job postings in Ashby that list salary ranges tend to attract more applicants than do postings that do not list them.",
             "Women hired by Ashby firms since the requirement took effect have, on average, more work experience than women hired before it.",
-            "The gap narrowed mainly for positions whose starting pay was individually negotiated, and hardly at all for positions with fixed pay scales."
+            "The gap narrowed mostly in jobs with negotiated starting pay and hardly at all in jobs with fixed pay scales."
           ],
           "answer": "E",
           "types": [
@@ -3982,34 +3980,34 @@
           "flaws": [
             "causation"
           ],
-          "explanation": "The economist claims both that the requirement narrowed the gap and that it did so by aiding negotiation. E fits that mechanism precisely: the gap shrank where pay is negotiated and not where pay is fixed, which is hard to explain unless the change worked through negotiation. A is tempting because more female applicants sounds favorable, but a changed applicant pool is an alternative explanation, not support; D likewise offers an alternative cause (more experienced hires), and B, if anything, slightly weakens.",
+          "explanation": "The economist claims both that the requirement narrowed the gap and that it did so by aiding negotiation. (E) fits that mechanism: the gap shrank where pay is negotiated and not where it is fixed, which is hard to explain unless the change worked through negotiation. (A) is the trap: it confirms that applicants lacked pay information, but the economist already states that, so it adds no support for the causal claim. (D) offers an alternative cause, (B) if anything slightly weakens, and (C) is irrelevant to the gap.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The salary-range requirement probably narrowed the gender gap in starting pay by giving applicants a firmer basis for negotiating."
+                "text": "Ashby's salary-range requirement probably narrowed the gender gap in starting salaries by giving applicants a firmer basis for negotiating."
               },
               {
                 "label": "Reasoning",
-                "text": "Two years after Ashby required posted salary ranges, the gap between men's and women's average starting salaries narrowed considerably; many applicants previously had little idea what jobs paid."
+                "text": "Two years after the requirement, the gap between men's and women's average starting salaries had narrowed considerably; many applicants had previously had little idea what jobs paid."
               }
             ],
-            "analysis": "Two claims: the requirement caused the narrowing, and it worked through negotiation. The best strengthener supports the mechanism. Think about where negotiation matters: jobs where pay is negotiated, not jobs with fixed scales. If the gap shrank only where people negotiate, that's strong evidence the negotiation story is right. Prephrase: the narrowing happened where negotiation matters.",
+            "analysis": "The gap narrowed after the rule. Was it the rule, and was it through negotiation? Lots of things could narrow a pay gap: who got hired, which jobs grew, general trends. The best support would show the change happened exactly where the proposed mechanism works. If negotiation is the channel, the gap should shrink where pay is negotiated and not where it's fixed. Most students pick (A) because it lines up with the economist's story. It fails because it only repeats a fact the economist already gave you: applicants used to lack pay information. Confirming a premise is irrelevant corroboration; it doesn't make the causal link any more likely. (E) hides because it never mentions the requirement or women; it just tells you where the narrowing happened.",
             "choices": [
               {
-                "note": "Wrong. Tempting because it sounds pro-women. But a changed applicant pool is a different explanation for the narrowing, not support for the negotiation mechanism. It competes with the economist's story."
+                "note": "Tempting. It sounds like evidence for the economist. But the stimulus already says many applicants had little idea what positions paid. Repeating a given premise adds nothing to the case that the requirement caused the narrowing."
               },
               {
-                "note": "Wrong. If some employers already listed ranges, the requirement changed less, which if anything slightly weakens the claim."
+                "note": "Wrong. If some employers already listed ranges, the requirement changed less than it seems. If anything that slightly weakens the argument."
               },
               {
-                "note": "Wrong. More applicants doesn't show anything about negotiating pay or the gender gap."
+                "note": "Wrong. More applicants per posting says nothing about whether men's and women's pay converged, or why."
               },
               {
-                "note": "Wrong. Alternative cause. More experienced women hires would earn more for that reason, which would explain the narrowing without the requirement."
+                "note": "Wrong. This is an alternative cause: more experienced women would earn more regardless of the requirement. It weakens."
               },
               {
-                "note": "CORRECT. The gap narrowed where pay is negotiated and barely moved where it's fixed. That's exactly the pattern you'd expect if the requirement worked by helping people negotiate, and it's hard to explain otherwise."
+                "note": "CORRECT. The narrowing tracks the proposed mechanism: big where pay is bargained, near zero where it's fixed. A general trend wouldn't split that way, so this supports both that the rule worked and how."
               }
             ]
           }
@@ -4019,11 +4017,11 @@
           "stimulus": "Library board member: Advocates of eliminating overdue fines at Corland's public libraries claim that doing so would increase the number of books borrowed, and they cite a pilot program at the Wexley branch, where borrowing rose after fines were dropped. But the pilot coincided with the opening of a large school next door to the Wexley branch, which by itself could have increased borrowing there. So eliminating overdue fines would not increase the number of books borrowed.",
           "stem": "The board member's reasoning is flawed in that it",
           "choices": [
-            "attacks the motives of those who advocate eliminating overdue fines rather than addressing their evidence",
-            "relies on a possible explanation of the pilot results without considering whether the new school's students use the library",
+            "attacks the motives of those who advocate eliminating overdue fines rather than addressing the evidence that they cite",
+            "fails to establish that the opening of the school actually caused borrowing at the Wexley branch to rise",
             "presumes that an increase in borrowing is the only reason anyone has offered for eliminating overdue fines",
-            "takes the weakness of the evidence offered for a claim as sufficient grounds for concluding that the claim is false",
-            "takes for granted that the results of a pilot program at one branch cannot reveal anything about the effects of a citywide policy"
+            "overlooks the possibility that ending fines could raise borrowing even if the school explains Wexley's rise",
+            "takes for granted that results from a pilot program at a single branch cannot show anything about a citywide policy"
           ],
           "answer": "D",
           "types": [
@@ -4037,7 +4035,7 @@
           "flaws": [
             "absence-of-evidence"
           ],
-          "explanation": "The board member legitimately shows that the Wexley pilot does not establish its conclusion, since the new school is an uncontrolled alternative cause, but then concludes that eliminating fines would not increase borrowing; discrediting the evidence for a claim does not show the claim false, as D says. B is the main trap: offering a possible alternative explanation is enough to undercut the pilot as evidence, so the member need not prove the school's students borrow. C is also tempting, but the argument concerns only borrowing and presumes nothing about other reasons, and E misdescribes the objection, which concerns a confounding event rather than the limits of pilots.",
+          "explanation": "The board member legitimately shows that the Wexley pilot does not establish its conclusion, since the new school is an uncontrolled alternative cause, but then concludes that eliminating fines would not increase borrowing. Undercutting the evidence for a claim does not show the claim false: ending fines could still raise borrowing, which is (D). (B) is the trap: offering a possible alternative explanation is enough to undercut the pilot as evidence, so the member need not prove the school caused the rise. (C) and (E) describe reasoning the member never uses, and (A) misdescribes an argument that addresses the evidence directly.",
           "breakdown": {
             "setup": [
               {
@@ -4046,29 +4044,28 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Advocates cite a Wexley pilot where borrowing rose after fines were dropped; but a large school opened next door at the same time, which alone could have increased borrowing."
+                "text": "Advocates cite the Wexley pilot, where borrowing rose after fines were dropped; a large school opened next door during the pilot and could by itself explain the rise."
               }
             ],
-            "analysis": "The board member does one fair thing and one unfair thing. Fair: pointing out the new school means the pilot doesn't prove fines matter. Unfair: concluding that dropping fines would NOT increase borrowing. Weak evidence for a claim doesn't make the claim false. It's like saying: your only witness was drunk, so you didn't see a UFO. Maybe not, but maybe you did. Prephrase: treats undermined evidence as proof the conclusion is false.",
+            "analysis": "The board member does a fine job of poking a hole in the pilot: the school is a confound. That's enough to say 'the pilot doesn't prove anything.' But the conclusion goes further: eliminating fines would NOT increase borrowing. Bad evidence for a claim isn't good evidence against it. It's like: your only witness was drunk, so the crime never happened. Most students pick (B) because the member only says the school 'could have' raised borrowing, and that sounds like an unproven claim. It fails because a possible alternative cause is all you need to undercut the pilot; that part of the argument is fine. The mistake is the leap from 'unproven' to 'false.' (D) hides in omission form: it describes the case the member ignores rather than naming the flaw.",
             "choices": [
               {
-                "note": "Wrong. The member addresses the evidence directly (the pilot and the school). Nothing about motives.",
-                "example": "Example of flaw: The advocates just don't want to pay their own fines, so their proposal should be ignored."
+                "note": "Wrong. The board member doesn't mention the advocates' motives at all. The argument engages the evidence directly.",
+                "example": "Example of flaw: The advocates want fines eliminated only because they have overdue books themselves, so their argument should be ignored."
               },
               {
-                "note": "Wrong. The main trap. To undercut evidence, you only need a plausible alternative explanation. The member doesn't have to prove the students use the library. The real problem is the leap at the end, not this step.",
-                "example": "Example of flaw: Borrowing rose because of the new school, so it wasn't the fines, even though no one checked whether students ever visit the branch."
+                "note": "Tempting. The member only says the school could have raised borrowing. But that's enough to show the pilot doesn't prove the advocates' claim. To undercut evidence, a plausible alternative cause is sufficient. The flaw is what the member concludes after that."
               },
               {
-                "note": "Wrong. Tempting, but the argument is only about borrowing and assumes nothing about other reasons for dropping fines.",
-                "example": "Example of flaw: Dropping fines won't raise borrowing, so there's no reason at all to drop them."
+                "note": "Wrong. The argument is about borrowing only. It presumes nothing about other reasons for eliminating fines, and its conclusion doesn't depend on them.",
+                "example": "Example of flaw: Eliminating fines won't raise borrowing, so there's no reason at all to eliminate them."
               },
               {
-                "note": "CORRECT. The member shows the pilot evidence is weak, then jumps to 'fines don't matter.' Discrediting the support for a claim doesn't show the claim is false."
+                "note": "CORRECT. Even if the school explains the Wexley rise, ending fines might still raise borrowing. The member treats the pilot's failure as proof of the opposite, which doesn't follow."
               },
               {
-                "note": "Wrong. Misdescribes the objection. The member's complaint is a confounding event at that branch, not that a pilot can never tell you anything about a citywide policy.",
-                "example": "Example of flaw: The pilot was at just one branch, so it can tell us nothing about what would happen across the city."
+                "note": "Wrong. The member's objection is a specific confound at Wexley, not that one branch can never tell us anything. This misdescribes the reasoning.",
+                "example": "Example of flaw: One branch is too small to tell us anything, so the pilot is worthless regardless of how it was run."
               }
             ]
           }

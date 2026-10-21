@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "notes": "Every question was audited against measured data from PrepTests 140–159 (lengths, answer patterns, stems, difficulty curve, RC layout) and revised to match; two tests now use the 2026 RC format with no comparative pair.",
+  "version": 4,
+  "notes": "The six practice tests were reworked so their hardest questions are hard the way real PT 150–159 questions are (one dominant trap, a correct answer that hides), and answer lengths no longer hint at the key.",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
@@ -25,6 +25,12 @@
     "classic-style-test-5",
     "classic-style-test-6",
     "flaw-pattern-practice-v2",
-    "skill-diagnostic-v2"
+    "skill-diagnostic-v2",
+    "classic-style-test-1-v3",
+    "classic-style-test-2-v3",
+    "classic-style-test-3-v3",
+    "classic-style-test-4-v3",
+    "classic-style-test-5-v3",
+    "classic-style-test-6-v3"
   ]
 }

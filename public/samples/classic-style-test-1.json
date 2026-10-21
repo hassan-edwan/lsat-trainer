@@ -1,6 +1,6 @@
 {
   "format": "lsat-trainer/v1",
-  "id": "classic-style-test-1-v3",
+  "id": "classic-style-test-1-v4",
   "name": "Classic-Style Test 1",
   "number": 1,
   "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
@@ -71,7 +71,7 @@
           "choices": [
             "the mill is the town’s last remaining link to the industry on which the town was founded",
             "restoring the mill would cost more money than the town could realistically ever raise",
-            "the town should restore the mill and open it to the public as a museum",
+            "the town should restore the mill and then open it to the public as a museum",
             "the history associated with the mill is worth preserving for future residents in some form",
             "visitors would learn more from a museum in the mill than from an exhibit at the library"
           ],
@@ -169,7 +169,7 @@
           "choices": [
             "relies on reports from dog owners rather than on observations made by professional trainers or other neutral experts",
             "presumes, without providing justification, that any dog that lunges at passersby must have been poorly trained by its owner",
-            "takes for granted that every dog that is walked on a retractable leash will at some point lunge at passersby",
+            "takes for granted that every dog walked on a retractable leash will at some point lunge at passersby",
             "overlooks the possibility that owners of dogs prone to lunging are more likely to choose retractable leashes",
             "treats the fact that lunging at passersby is undesirable as evidence that such lunging is common among dogs"
           ],
@@ -343,7 +343,7 @@
             "Customers who did not buy the extended warranty must pay the full cost of any repair their vacuum needs.",
             "Lumo vacuums break down less often, on average, than most competing vacuums sold in the same price range.",
             "Most customers who bought the extended warranty brought their vacuums in for the free yearly tune-up last year.",
-            "The extended warranty costs about one-fifth as much as the Lumo vacuum itself when the two are bought together."
+            "The extended warranty costs about one-fifth as much as the vacuum itself when the two are bought together."
           ],
           "answer": "A",
           "types": [
@@ -396,7 +396,7 @@
             "Some projects that have been paid for from the parks budget are not open to members of the public.",
             "No facility that is reachable only through a secured employee entrance is open to the public.",
             "The rooftop garden would benefit city employees considerably more than it would benefit the city’s other residents.",
-            "If a proposed project would be open to the public, then it can be paid for from the parks budget."
+            "If a proposed project would be open to the public, it can be paid for from the parks budget."
           ],
           "answer": "C",
           "types": [
@@ -444,7 +444,7 @@
           "stimulus": "At the Linden animal shelter, cats housed in the shelter’s quiet rooms have long been adopted more quickly than cats housed in the noisy main kennel area. Last fall, hoping to speed adoptions, the shelter soundproofed another room and moved half of its main-area cats into it. Yet the cats that were moved were not adopted any more quickly than before.",
           "stem": "Which one of the following, if true, most helps to explain why moving the cats did not shorten their adoption times?",
           "choices": [
-            "Cats in the shelter’s main kennel area are frequently exposed to the noise of dogs barking in a nearby wing.",
+            "Cats in the main kennel area are frequently exposed to the noise of dogs barking in a nearby wing.",
             "Most people who adopt cats from the Linden shelter visit on weekends, when the shelter is at its busiest.",
             "The newly soundproofed room is larger and brighter than any of the other quiet rooms at the shelter.",
             "Some cats housed in the main kennel area have been adopted within a day of arriving at the shelter.",
@@ -497,7 +497,7 @@
             "fails to consider whether keeping the gym open until midnight would substantially raise the gym’s staffing and utility costs",
             "treats the fact that most surveyed members opposed the change as proof that the change would be unprofitable for the gym",
             "infers what most members prefer from the opinions of members who are especially likely to favor the early opening",
-            "overlooks the possibility that some members who check in before 8 a.m. would also use the gym late in the evening"
+            "overlooks the possibility that some members who check in before 8 a.m. would also use the gym late at night"
           ],
           "answer": "D",
           "types": [
@@ -603,9 +603,9 @@
           "stimulus": "Ten years ago, amateur astronomers were responsible for about 30 percent of all newly identified asteroids; last year, they were responsible for under 5 percent. Clearly, then, amateurs are finding fewer asteroids than they once did. The likely reason is that light pollution has steadily worsened in the suburbs, where many amateur astronomers live and observe.",
           "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
-            "relies on discovery figures drawn from only two years in order to support a claim about a decade-long trend",
+            "relies on discovery figures from only two years to support a claim about a decade-long trend",
             "presumes, without providing justification, that light pollution affects professional astronomers less severely than it affects amateurs",
-            "takes for granted that most amateur astronomers live and do their observing in suburbs rather than in rural areas",
+            "takes for granted that most amateur astronomers live and observe in suburbs rather than in rural areas",
             "confuses a decline in amateur astronomers’ interest in asteroids with a decline in their observing skill",
             "overlooks the possibility that the total number of asteroids discovered each year has risen sharply"
           ],
@@ -664,7 +664,7 @@
             "a restaurant that builds its menu entirely around seasonal ingredients risks losing its repeat customers",
             "no restaurant can have both a reputation for freshness and a loyal base of repeat customers",
             "restaurants that hope to attract repeat customers should avoid using seasonal ingredients in their dishes",
-            "a reputation for freshness is less valuable to a restaurant than a reputation for consistency is",
+            "a reputation for freshness is less valuable to a restaurant than one for consistency is",
             "restaurants whose dishes are prepared consistently seldom make use of ingredients that are in season"
           ],
           "answer": "A",
@@ -811,21 +811,21 @@
         },
         {
           "number": 16,
-          "stimulus": "Animal behaviorist: Parrots that pluck out their own feathers are commonly assumed to be bored. But feather plucking often begins in parrots that already have plenty of toys and companionship, and it frequently stops after a change in the bird’s diet. This suggests that, in many cases, plucking has a nutritional rather than a psychological cause. Owners of parrots that pluck should therefore consult an avian veterinarian before buying more toys.",
+          "stimulus": "Animal behaviorist: When a pet parrot starts plucking out its own feathers, owners typically assume it is bored and buy it more toys. They would do better to consult an avian veterinarian first. In many cases, plucking has a nutritional rather than a psychological cause: it often begins in parrots that already have plenty of toys and companionship, and it frequently stops after a change in the bird’s diet.",
           "stem": "The claim that in many cases plucking has a nutritional rather than a psychological cause plays which one of the following roles in the animal behaviorist’s argument?",
           "choices": [
-            "It is the main conclusion of the argument, which the other statements in the argument are offered to support.",
-            "It is a view that the argument as a whole is designed to call into question by presenting contrary evidence.",
-            "It is a premise offered in support of the view that feather plucking is usually caused by boredom.",
-            "It is a conclusion supported by the argument’s evidence, and it is used to support the argument’s main conclusion.",
-            "It is a hypothesis offered to explain why the owners of parrots that pluck their feathers tend to buy more toys."
+            "It is the argument’s main conclusion, and the observations about toys, companionship, and diet are offered in support of it.",
+            "It is a view that the argument presents in order to call it into question by citing evidence that conflicts with it.",
+            "It is a premise offered in support of the view that parrots that pluck their own feathers are usually bored.",
+            "It is supported by the observations about toys and diet, and it is in turn offered as grounds for the advice to owners.",
+            "It is a hypothesis that the argument advances to explain why owners of parrots that pluck tend to buy more toys."
           ],
           "answer": "D",
           "types": [
             "role"
           ],
           "difficulty": 4,
-          "explanation": "The claim is drawn from the observations about toys and diet (“This suggests that”), and it in turn supports the recommendation introduced by “therefore,” so it is an intermediate conclusion, as (D) says. (A) is the trap: the argument’s final point is the advice to owners, which the nutritional claim supports. (B) describes the boredom assumption, not this claim, and (C) has the claim supporting the very view it opposes.",
+          "explanation": "The main conclusion is the unflagged advice in the middle: owners would do better to consult an avian veterinarian first. The nutritional claim is the reason given for that advice, and it is itself supported by the observations about toys and diet that follow the colon, so it is an intermediate conclusion, as (D) says. (A) is the trap: the claim comes last and reads like a thesis, but it is offered as the reason to see a veterinarian, not the other way round. (B) and (E) misdescribe the claim, and (C) has it supporting the boredom view it opposes.",
           "skills": [
             "causal",
             "plan"
@@ -835,29 +835,29 @@
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Owners of plucking parrots should consult an avian vet before buying more toys."
+                "text": "Owners of parrots that pluck would do better to consult an avian veterinarian before buying more toys."
               },
               {
                 "label": "Reasoning",
-                "text": "Plucking often starts in parrots with plenty of toys and company, and often stops after a diet change; so in many cases plucking has a nutritional, not psychological, cause."
+                "text": "Plucking often begins in parrots that already have toys and company, and often stops after a diet change; so in many cases it has a nutritional cause; so see a veterinarian first."
               }
             ],
-            "analysis": "Three layers. Bottom: observations about toys and diet. Middle: \"This suggests\" plucking is often nutritional. Top: \"therefore\" owners should see a vet before buying toys. The claim in question is the middle layer: it's concluded from the evidence and then used to support the final advice. That's an intermediate conclusion. A \"therefore\" after a supported claim usually means the earlier claim is a stepping stone.",
+            "analysis": "Where's the conclusion? Not at the end, and nothing flags it. Ask which statement supports which. Why should owners see a vet first? Because the cause is often nutritional. Why think the cause is nutritional? Because of the toy and diet observations. So the chain is: 1. observations → 2. nutritional cause → 3. see a vet first. The claim in the stem is the middle link: supported, and supporting. Most students pick (A) because the claim comes last, gets direct support after the colon, and sounds like the thesis. It fails because the advice to owners is what the nutritional claim is there to justify. Lesson: position and tone don't make a main conclusion; the support relations do.",
             "choices": [
               {
-                "note": "Tempting. It is a conclusion, but not the main one. The final point is the advice to owners, and the nutritional claim is a reason for that advice."
+                "note": "Tempting, and the main trap. The claim sits at the end and gets direct support, so it feels like the point. But ask why the behaviorist tells us the cause is nutritional: to show owners should see a vet before buying toys. That advice is the main conclusion, and it rests on this claim, not the other way round."
               },
               {
-                "note": "The view the argument questions is the boredom assumption. This claim is the argument's own position, not its target."
+                "note": "Opposite. The argument doesn't question this claim; it argues for it. The view it calls into question is the owners' boredom assumption."
               },
               {
-                "note": "Backwards. The claim opposes the boredom view; it doesn't support it."
+                "note": "Wrong relation. The nutritional claim cuts against the boredom view; it doesn't support it."
               },
               {
-                "note": "CORRECT. It's supported by the toys-and-diet observations (\"This suggests\") and in turn supports the recommendation introduced by \"therefore.\" Right role, right relation."
+                "note": "CORRECT. The toy and diet observations support it, and it supports the advice to see a vet first. A claim that is supported and then used as support is an intermediate (subsidiary) conclusion."
               },
               {
-                "note": "The argument never tries to explain why owners buy toys. The claim explains plucking, not shopping habits."
+                "note": "The claim explains feather plucking, not owners' toy buying. Wrong thing explained."
               }
             ]
           }
@@ -867,7 +867,7 @@
           "stimulus": "At Kessler Logistics, only employees who have registered a vehicle with security may receive a parking pass, and security registers a vehicle only for an employee who has completed the company’s safety orientation. Dana, a Kessler employee, works only on weekends. It follows that Dana will not receive a parking pass.",
           "stem": "The conclusion above follows logically if which one of the following is assumed?",
           "choices": [
-            "Every Kessler employee who has completed the safety orientation will receive a parking pass if he or she requests one.",
+            "Every Kessler employee who has completed the safety orientation will receive a parking pass on request.",
             "No Kessler employee who works only on weekends has ever completed the safety orientation.",
             "The safety orientation is offered only on weekdays, when weekend employees are usually not at work.",
             "Most Kessler employees who work only on weekends have not completed the company’s safety orientation.",
@@ -916,21 +916,21 @@
         },
         {
           "number": 18,
-          "stimulus": "Superintendent: Critics claim that moving our high school’s start time from 7:30 to 8:30 has hurt attendance at after-school sports, since practices now end after dark for much of the year. But this complaint is unfounded. The number of students on our sports teams this year is actually slightly higher than it was last year, before the change.",
+          "stimulus": "Superintendent: Critics claim that moving our high school’s start time from 7:30 to 8:30 has hurt attendance at after-school sports practices, since practices now end after dark for much of the year. But this complaint is unfounded. The number of students on our sports teams this year is actually slightly higher than it was last year, before the change.",
           "stem": "Which one of the following, if true, most seriously weakens the superintendent’s argument?",
           "choices": [
-            "Attendance at the school’s evening theater and music rehearsals has also declined since the start time was changed.",
-            "Practices at neighboring schools that have kept a 7:30 start time also end after dark during part of the year.",
-            "Unlike in past years, students may now remain on a team’s roster without attending a minimum number of practices.",
-            "Membership on the school’s sports teams rose more this year than it had in any of the previous five years.",
-            "Several parents have complained that the later start time conflicts with their own work schedules in the morning."
+            "Some parents have complained that the later start time makes it harder for their children to hold after-school jobs.",
+            "During the late fall and winter, most of the school’s teams now finish their practices well after the sun has set.",
+            "The school no longer drops students from a team’s roster for missing practices, as it routinely did in previous years.",
+            "The number of students on the school’s teams rose more this year than in any of the previous five years.",
+            "Practices at neighboring schools that kept a 7:30 start time also end after dark during part of the year."
           ],
           "answer": "C",
           "types": [
             "weaken"
           ],
           "difficulty": 5,
-          "explanation": "The critics’ complaint is about attendance at practices, but the superintendent answers with roster size. (C) shows why that answer misses: with attendance no longer required to stay on a roster, rosters can grow even while practice attendance falls. (A) is the attractive trap, since it fits the critics’ general worry, but it concerns different activities and leaves the superintendent’s evidence about sports untouched. (D) supports the defense, and (B) and (E) do not bear on whether sports attendance fell.",
+          "explanation": "The critics’ complaint is about attendance at practices, but the superintendent answers with the number of students on teams. That answer works only if being on a roster still means showing up. (C) breaks that link: if students are no longer dropped for missing practices, rosters can grow while attendance falls. (B) is the trap: it backs up the critics’ reason, but the superintendent never denied that practices end after dark; his point is that no harm followed, and (B) gives no evidence that it did. (D) supports the superintendent, and (A) and (E) do not bear on whether attendance fell.",
           "skills": [
             "rebuttal",
             "comparison"
@@ -942,29 +942,29 @@
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The critics' complaint that the later start time hurt after-school sports attendance is unfounded."
+                "text": "The critics' complaint that the later start time hurt attendance at sports practices is unfounded."
               },
               {
                 "label": "Reasoning",
-                "text": "The number of students on sports teams is slightly higher this year than last."
+                "text": "More students are on the school's sports teams this year than last year, before the change."
               }
             ],
-            "analysis": "Is being on a roster the same as showing up to practice? The critics are talking about attendance. The superintendent answers with roster size. You can be on a team and skip practice. It's like a gym bragging about membership numbers when the complaint was that nobody shows up anymore. To weaken, show that roster size can rise while attendance falls.",
+            "analysis": "So what if more students are on the rosters? The critics talked about attendance at practices. Roster size stands in for attendance only if being on a team means showing up. It's like a gym bragging about its membership count while the weight room sits empty. We need an answer that cuts the link between roster numbers and actual attendance. Most students pick (B) because it seems to back the critics: practices really do end in the dark. It fails because the stimulus already grants that, and the superintendent doesn't deny it. His claim is that the darkness did no harm, and (B) gives no evidence of harm. Lesson: supporting a premise nobody disputes doesn't weaken anything.",
             "choices": [
               {
-                "note": "Tempting. It fits the critics' general worry about evenings, but it's about theater and music, not sports. The superintendent's evidence about sports is untouched."
+                "note": "Different complaint. After-school jobs aren't sports attendance, and this doesn't touch the superintendent's evidence."
               },
               {
-                "note": "Neighboring schools' practices also end after dark sometimes. That doesn't say anything about whether attendance at this school fell. Irrelevant."
+                "note": "Tempting, and the main trap. It sounds like it helps the critics. But the stimulus already says practices end after dark, and the superintendent doesn't dispute it. He argues that it didn't hurt attendance. Repeating the cause isn't showing the effect."
               },
               {
-                "note": "CORRECT. This year, students can stay on a roster without attending a minimum number of practices. So rosters can grow even as kids skip dark practices. The superintendent's numbers no longer answer the complaint."
+                "note": "CORRECT. The superintendent's only evidence is roster size. If students now stay on rosters even when they skip practice, a bigger roster says nothing about attendance, which could have dropped. The evidence no longer reaches the conclusion."
               },
               {
-                "note": "Strengthens the superintendent: membership rose even more than usual. It doesn't expose the membership-versus-attendance gap."
+                "note": "This helps the superintendent. A record rise in team membership makes it harder to say the change drove students away."
               },
               {
-                "note": "Parents' work schedules are a different complaint. Nothing here about sports attendance."
+                "note": "Other schools' schedules don't tell us whether attendance at this school fell. If anything, it suggests practicing after dark is common."
               }
             ]
           }
@@ -1026,54 +1026,54 @@
         },
         {
           "number": 20,
-          "stimulus": "The diary of Hester Vane, who lived in Millbrook in the 1840s, describes her crossing a covered bridge over the Tull River. Yet no other surviving record from that decade mentions such a bridge in Millbrook, and the town’s earliest map, drawn in 1852, shows no bridge over the Tull. So the bridge Vane described must have been in some other town along the river.",
+          "stimulus": "Hester Vane’s diary, which she kept while living in Millbrook from 1843 to 1849, describes her crossing a covered bridge over the Tull River. The diary also records her frequent trips to other towns along the Tull. Yet Millbrook’s earliest map, a detailed survey drawn in 1852, shows no bridge over the river. So the bridge Vane described must have been in one of those other towns.",
           "stem": "The answer to which one of the following questions most helps in evaluating the argument?",
           "choices": [
-            "Is Vane’s diary the oldest surviving document known to have been written by a resident of Millbrook?",
-            "Did any event destroy structures along the Tull River in Millbrook between the 1840s and 1852?",
+            "Did Vane make any trips to towns other than Millbrook during the years in which she was keeping her diary?",
+            "Were the bridges built over the Tull River during the 1840s generally still standing by the year 1852?",
             "Were covered bridges in the 1840s considerably more expensive to build than bridges that were not covered?",
-            "How long did Vane continue to live in Millbrook after the period described in her diary?",
-            "Were most of the people who lived in Millbrook during the 1840s able to read and write?"
+            "Was the 1852 survey of Millbrook paid for by the town’s government or by a group of private landowners?",
+            "Did other residents of Millbrook keep diaries during the 1840s that have survived to the present day?"
           ],
           "answer": "B",
           "types": [
             "evaluate"
           ],
           "difficulty": 4,
-          "explanation": "The argument relies on the bridge’s absence from later evidence, especially the 1852 map. If a flood or similar event had destroyed a bridge in Millbrook before 1852, the map’s silence would be expected even though the bridge had existed, so the answer to (B) bears directly on the argument. (A) sounds important, but whether the diary is the oldest document does not affect where the bridge stood, and (E) bears at most on the scarcity of written records, not on the map.",
+          "explanation": "The only evidence against a Millbrook bridge is the 1852 map, drawn a few years after the diary. That evidence counts only if a bridge from the 1840s would probably still have been there in 1852. (B) asks exactly that: if such bridges usually lasted, the map’s silence is telling; if they often washed out or fell down within a few years, it tells us little. (A) is the trap: it raises the possibility that Vane crossed the bridge elsewhere, but the argument already states that she traveled often to other towns, so its answer adds nothing. (C), (D), and (E) do not bear on where the bridge stood.",
           "skills": [
             "authority"
           ],
           "flaws": [
-            "absence-of-evidence"
+            "scope-shift"
           ],
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The covered bridge Vane described must have been in some other town along the river, not Millbrook."
+                "text": "The bridge Vane described was in another town along the Tull, not in Millbrook."
               },
               {
                 "label": "Reasoning",
-                "text": "No other surviving 1840s record mentions a covered bridge in Millbrook; the town's earliest map (1852) shows no bridge over the Tull."
+                "text": "Vane's 1840s diary describes crossing a covered bridge over the Tull; she often traveled to other river towns; Millbrook's detailed 1852 map shows no bridge."
               }
             ],
-            "analysis": "Does a map from 1852 tell you what stood in 1845? The argument reasons from absence: no record, no bridge on the 1852 map, so no bridge in the 1840s. The gap is time. A bridge could have existed in the 1840s and been gone by 1852. A good evaluate question is one where one answer helps the argument and the other hurts it. Ask: was there something that could have wiped the bridge out before 1852? Yes → the map's silence means little. No → the map is strong evidence.",
+            "analysis": "So what if there's no bridge on an 1852 map? Vane was writing in the 1840s, and a map shows only what stood when it was drawn. It's like concluding your town never had a drive-in theater because this year's map doesn't show one. The argument needs a bridge that existed in the 1840s to still be around in 1852. We need a question whose answer tells us whether that's likely. Most students pick (A) because their prephrase is \"maybe she crossed it somewhere else.\" It fails because the stimulus already tells us she traveled to other river towns often. A question the argument has already answered can't help you evaluate it.",
             "choices": [
               {
-                "note": "Sounds important but doesn't matter. Whether the diary is the oldest document says nothing about where the bridge stood. Either answer leaves the argument the same."
+                "note": "Tempting, and the main trap. It's the natural first thought. But the argument already says she made frequent trips to other towns. The answer to this question is given, so it can't change how strong the argument is."
               },
               {
-                "note": "CORRECT. If a flood or fire destroyed structures along the Tull in Millbrook before 1852, the map's missing bridge is expected even if Vane crossed one there; the argument weakens. If nothing like that happened, the map's silence is stronger evidence. Either answer moves the argument."
+                "note": "CORRECT. If 1840s bridges usually stood for years, a bridge in Millbrook should have shown up on the 1852 map, and the argument gets stronger. If they often washed away or collapsed within a few years, the map's silence means little, and the argument falls apart. Either answer matters."
               },
               {
-                "note": "Cost of covered bridges doesn't tell us whether Millbrook had one. Irrelevant."
+                "note": "Cost has nothing to do with where this bridge stood. Irrelevant."
               },
               {
-                "note": "How long Vane stayed afterward doesn't tell us where the bridge was in the 1840s."
+                "note": "Who paid for the survey doesn't tell us whether an earlier bridge survived until it was drawn. The argument already grants that it's a detailed survey."
               },
               {
-                "note": "Tempting, since low literacy might explain why there are few records. But it says nothing about the 1852 map, and a few records is all the argument mentions. Doesn't bear on where the bridge stood."
+                "note": "Whether other diaries survived tells us nothing unless we know what they say. And the real gap is the time between the diary and the map."
               }
             ]
           }
@@ -1083,10 +1083,10 @@
           "stimulus": "Most of the buildings on Market Street date from before 1900, and most of the city’s buildings that date from before 1900 have been designated as historic landmarks. So most of the buildings on Market Street have been designated as historic landmarks.",
           "stem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that exhibited by the argument above?",
           "choices": [
-            "Most members of the choir are sopranos, and most of the choir’s sopranos also play an instrument. So at least some members of the choir play an instrument.",
-            "Most of the library’s patrons are students, and all students receive free borrowing privileges at the library. So most of the library’s patrons receive free borrowing privileges.",
-            "No member of the hiking club smokes, and most members of the hiking club are also runners. So most of the runners in the area do not smoke.",
-            "Most of the paintings in the east gallery are oils, and most of the museum’s oils are on loan. So most of the paintings in the east gallery are on loan.",
+            "Most houses on Quarry Lane were built before 1900, and every house in the city built before 1900 has been designated a historic landmark. So most houses on Quarry Lane have been designated historic landmarks.",
+            "Most members of the town choir are sopranos, and most of the choir’s sopranos also play a musical instrument. So at least some members of the town choir play a musical instrument.",
+            "No member of the Ridgeview hiking club smokes, and most members of the hiking club are also runners. So most of the runners who live in the area do not smoke.",
+            "More than half of the paintings in the east gallery must be on loan, since more than half of them are oils and more than half of the museum’s oils are on loan.",
             "Most of the apples grown on the Garza farm are sold at the farmers’ market each fall. So most of the produce grown on the Garza farm is sold at the farmers’ market."
           ],
           "answer": "D",
@@ -1094,7 +1094,7 @@
             "parallel-flaw"
           ],
           "difficulty": 4,
-          "explanation": "The argument chains two “most” statements as if they guaranteed overlap: the Market Street buildings could fall mostly among the pre-1900 buildings that are not landmarks. (D) makes exactly that move with paintings, oils, and loans. (A) is the strongest trap because it shares the “most… most” form, but its conclusion is only “some,” which does validly follow; (B) is also valid because its second premise says “all.” (C) and (E) are flawed, but in different ways.",
+          "explanation": "The argument chains two “most” statements as if they guaranteed overlap, but the Market Street buildings could fall among the pre-1900 buildings that are not landmarks. (D) makes the same move with paintings, oils, and loans, though it states its conclusion first and says “more than half” instead of “most.” (A) is the trap: it copies the stimulus’s topic and wording, but its second premise says “every,” so its conclusion follows. (B) is also valid, since it concludes only “some.” (C) and (E) are flawed, but in different ways.",
           "skills": [
             "conditional"
           ],
@@ -1105,33 +1105,33 @@
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Most Market Street buildings have been designated as landmarks."
+                "text": "Most buildings on Market Street have been designated historic landmarks."
               },
               {
                 "label": "Reasoning",
-                "text": "Most Market Street buildings date from before 1900; most pre-1900 buildings in the city are landmarks."
+                "text": "Most Market Street buildings date from before 1900; most of the city's pre-1900 buildings are landmarks."
               },
               {
                 "label": "Pattern",
-                "text": "Most A are B; most B are C; so most A are C."
+                "text": "Most A are B; most B are C; so most A are C (invalid: the A's may be the B's that aren't C)."
               }
             ],
-            "analysis": "Two \"most\" statements don't chain. Market Street's old buildings could be a small slice of the city's old buildings, and that slice could sit entirely in the non-landmark minority. Imagine 1,000 pre-1900 buildings citywide, 600 are landmarks, and Market Street's 50 old buildings are all among the 400 that aren't. \"Most\" isn't \"all\": the members you care about could be the other ones. Find the answer with the same most-most-so-most structure and the same flaw.",
+            "analysis": "Is \"most\" plus \"most\" enough? No. Imagine the city has 1,000 pre-1900 buildings, 600 of them landmarks. Market Street has 100 buildings, 60 of them pre-1900, and all 60 could be among the 400 that aren't landmarks. \"Most\" isn't \"all\": the buildings you care about could be the other ones. We need an answer with the same two \"most\" links and a \"most\" conclusion. Most students pick (A) because it looks like a copy: old buildings, 1900, landmarks. It fails because its middle premise says \"every,\" which makes it valid. Match the structure, not the topic, and don't be thrown when the right answer leads with its conclusion and says \"more than half\" for \"most.\"",
             "choices": [
               {
-                "note": "Tempting: same \"most... most\" setup. But the conclusion is only \"some,\" and that one is valid. Most choir members are sopranos, and most of those sopranos play, so at least some choir members play. A valid argument can't match a flawed one."
+                "note": "Tempting, and the main trap. Same topic, same order, almost the same words. But every house built before 1900 is a landmark, so most Quarry Lane houses must be landmarks. That's valid; the original's error is gone."
               },
               {
-                "note": "Valid. \"All students\" get free borrowing, so whatever students are among the patrons get it, and that's most patrons. The \"all\" fixes the gap. Not a match."
+                "note": "Valid, so not a match. The sopranos are choir members, so if most of them play an instrument, at least some choir members do. The modest \"some\" conclusion follows."
               },
               {
-                "note": "Flawed, but differently. It flips the relationship: from \"most hikers are runners\" to a claim about most runners in the area. Wrong flaw."
+                "note": "Flawed, but differently. It jumps from facts about club members to a claim about all runners in the area. That's a shift in group, not a \"most + most\" chain."
               },
               {
-                "note": "CORRECT. Most east gallery paintings are oils; most of the museum's oils are on loan; so most east gallery paintings are on loan. Same most-most-most chain, same flaw: the east gallery's oils could all be in the not-on-loan group."
+                "note": "CORRECT. Rearranged: most east-gallery paintings are oils; most of the museum's oils are on loan; so most east-gallery paintings are on loan. Same two \"mosts,\" same overreaching \"most\" conclusion. The east-gallery oils could be the museum's oils that stayed home."
               },
               {
-                "note": "Flawed, but it's a part-to-whole jump: apples are just one part of the farm's produce. Only one premise, no \"most... most\" chain. Wrong flaw."
+                "note": "Flawed, but differently: it moves from one kind of produce (apples) to all produce. That's a part-to-whole move with one premise, not a chain."
               }
             ]
           }
@@ -1141,18 +1141,18 @@
           "stimulus": "Councilor Reyes: Supporters of the proposed bus-only lane on Garnet Avenue claim that it will cut commute times for bus riders, because a similar lane in Easton did so. But buses in Easton run twice as often as ours do, so Easton’s results tell us little about what would happen on Garnet Avenue. Hence, the bus lane will not cut commute times for our riders.",
           "stem": "The reasoning in Councilor Reyes’s argument is flawed in that the argument",
           "choices": [
-            "relies on an analogy between two cities that differ in a respect relevant to the conclusion being drawn",
-            "attacks the motives of the lane’s supporters rather than addressing the reasoning they offer for it",
-            "presumes, without providing justification, that bus frequency is the only factor that affects how long riders’ commutes take",
-            "overlooks the possibility that a bus-only lane on Garnet Avenue would also benefit people who drive private cars",
-            "treats the inadequacy of the evidence offered for a claim as showing that the claim is false"
+            "relies on a comparison between two cities that differ in a respect that bears on the conclusion being drawn",
+            "attacks the motives of the lane’s supporters rather than addressing the reasons they offer for the proposal",
+            "presumes, without providing justification, that bus frequency is the only factor that affects the length of riders’ commutes",
+            "overlooks the possibility that a bus-only lane on Garnet Avenue would also benefit people who drive their own cars",
+            "infers that a prediction is false from the fact that the evidence offered in support of that prediction is weak"
           ],
           "answer": "E",
           "types": [
             "flaw"
           ],
           "difficulty": 5,
-          "explanation": "Reyes legitimately shows that the Easton comparison is weak support, but then concludes that the lane will not cut commute times; a poorly supported claim may still be true, so (E) names the flaw. (A) is the main trap: the weak analogy belongs to the supporters, and pointing it out is the sound part of Reyes’s reasoning. (C) also tempts, but Reyes treats frequency only as one relevant difference, and (D) concerns drivers rather than bus riders.",
+          "explanation": "Reyes fairly shows that the Easton comparison is weak support for the lane, but then concludes that the lane will not cut commute times. A poorly supported prediction may still come true, so (E) names the flaw. (A) is the trap: the shaky comparison belongs to the supporters, and pointing it out is the sound part of Reyes’s reasoning, not something Reyes relies on. (C) misreads frequency as Reyes’s only factor, and (B) and (D) describe moves Reyes never makes.",
           "skills": [
             "analogy",
             "rebuttal"
@@ -1171,10 +1171,10 @@
                 "text": "Supporters cite Easton's bus lane; but Easton's buses run twice as often, so Easton's results tell us little about Garnet Avenue."
               }
             ],
-            "analysis": "Reyes does something fair, then something unfair. Fair: Easton is a weak comparison, so the supporters' evidence is weak. Unfair: concluding that the lane won't work. So what if their evidence is bad? Weak evidence for a claim isn't evidence against it. It's like saying \"Your only reason for thinking it'll rain is that your knee hurts, which is silly, so it won't rain.\" It still might. Knocking down an argument doesn't prove the opposite.",
+            "analysis": "Reyes does something fair, then something unfair. Fair: Easton is a weak comparison, so the supporters' evidence is weak. Unfair: concluding that the lane won't work. So what if their evidence is bad? Weak evidence for a claim isn't evidence against it. It's like saying \"Your only reason for thinking it'll rain is that your knee hurts, which is silly, so it won't rain.\" It still might. Most students pick (A) because they spot a weak analogy in the stimulus and grab the answer that names one. It fails because Reyes isn't relying on the analogy; Reyes is knocking it down. Know whose argument you're critiquing. Knocking down an argument doesn't prove the opposite.",
             "choices": [
               {
-                "note": "Tempting, and the main trap. There is a shaky analogy here, but it belongs to the supporters. Reyes points it out, which is the sound part of the argument. Reyes isn't the one relying on it.",
+                "note": "Tempting, and the main trap. There is a shaky comparison here, but it belongs to the supporters. Reyes points it out, which is the sound part of the argument. Reyes isn't the one relying on it.",
                 "example": "Example of flaw: Rome's new subway was a huge success, so our town of 5,000 should build a subway too."
               },
               {
@@ -1190,7 +1190,7 @@
                 "example": "Example of flaw: A new park won't help children, since adults are the ones who'll use the walking trails."
               },
               {
-                "note": "CORRECT. Reyes shows the Easton evidence is weak, then concludes the lane will not cut commute times. A poorly supported claim can still be true. Showing the evidence is bad doesn't show the claim is false."
+                "note": "CORRECT. The \"prediction\" is that the lane will cut commute times; the weak evidence is the Easton comparison. Reyes shows the evidence is weak, then concludes the prediction is false. A poorly supported claim can still be true."
               }
             ]
           }
@@ -1200,18 +1200,18 @@
           "stimulus": "Restaurant reviewer: Café Morrow’s menu used to state that its bread was baked in-house. When the café began buying its bread from a local bakery, it simply removed that statement. Some diners complain that the café should have announced the change. But the café never made a false claim; it merely stopped making a true claim once the claim became false. So the café did nothing wrong.",
           "stem": "Which one of the following principles, if valid, most helps to justify the restaurant reviewer’s argument?",
           "choices": [
-            "Diners are entitled to be told the source of every ingredient in the food that a restaurant serves them.",
-            "A business does nothing wrong in changing its suppliers so long as the quality of its products is not affected.",
-            "A business that stops making a claim as soon as the claim becomes false need not announce that it has stopped.",
-            "Whether a business has wronged its customers depends entirely on whether any of those customers was actually harmed as a result.",
-            "A business that has made a false claim about its products should correct that claim promptly and in public."
+            "Diners are entitled to know where each item that a restaurant serves them was made, unless telling them would be costly.",
+            "A business does nothing wrong in changing its suppliers as long as the quality of what it sells stays the same.",
+            "A business’s failure to tell its customers about a change is not wrong unless it results in the business’s making a false statement.",
+            "Any business that makes a false claim about its products has wronged its customers, whether or not anyone was harmed.",
+            "Whether a business has wronged its customers depends entirely on whether any of those customers was actually harmed."
           ],
           "answer": "C",
           "types": [
             "principle-strengthen"
           ],
           "difficulty": 4,
-          "explanation": "The reviewer’s defense is that the café stopped making the in-house claim at the moment it became false and so owed diners no announcement; (C) states exactly that principle. (B) is the strongest trap, but the reviewer says nothing about bread quality, and the diners’ complaint concerns the lack of an announcement, not the change of supplier. (E) applies only to false claims, which the café never made, and (D) depends on harm, which the argument never discusses.",
+          "explanation": "The reviewer’s defense is that the café never said anything false, since it dropped the in-house claim when the claim stopped being true. (C) turns that into a rule: keeping quiet about a change is wrong only if it leads to a false statement, which did not happen here, so the café did nothing wrong. (D) is the trap: it links false claims to wrongdoing, which sounds like the reviewer’s point, but it says only what follows when a false claim is made, and the café made none. (B) depends on bread quality, which the argument never discusses, (E) depends on harm, and (A) supports the diners.",
           "skills": [
             "principle",
             "rebuttal"
@@ -1225,25 +1225,25 @@
               },
               {
                 "label": "Reasoning",
-                "text": "The café never made a false claim; it simply stopped making the in-house-bread claim once that claim became false, without announcing the change."
+                "text": "Diners say the café should have announced its switch to bakery bread; but the café never made a false claim; it just stopped making a true claim once it became false."
               }
             ],
-            "analysis": "Diners say: you should have told us. The reviewer says: we dropped the claim the moment it stopped being true, so no announcement was owed. We need an answer that says: if you withdraw a claim as soon as it becomes false, you don't have to announce the withdrawal. A principle-justify answer has to connect the specific facts (quietly dropped a claim right when it became false) to the specific conclusion (did nothing wrong).",
+            "analysis": "Why does \"never said anything false\" clear the café? Only if saying something false is the way you'd go wrong here. Keeping quiet about a change has to be fine as long as nothing you say turns into a lie. We need a principle like: not announcing a change isn't wrong unless it leaves you making a false statement. Most students pick (D) because it puts \"false claim\" and \"wronged\" in one sentence, which looks like the reviewer's logic. But (D) says false claim → wrong. The café made no false claim, and that rule says nothing about cases without one. Reading it as \"no false claim → no wrong\" reverses it. A principle-justify answer has to deliver the conclusion the author reached.",
             "choices": [
               {
-                "note": "Opposite direction. If diners are owed the source of every ingredient, the café arguably did wrong by not saying where its bread now comes from. This hurts the reviewer."
+                "note": "Opposite. This sides with the diners: they'd be entitled to be told the bread now came from elsewhere."
               },
               {
-                "note": "Tempting, and the strongest trap. It defends changing suppliers, but the diners aren't upset about the switch itself; they're upset there was no announcement. And the reviewer never mentions bread quality, so we can't even apply it."
+                "note": "It turns on quality, which the reviewer never mentions. And the diners' complaint is about the missing announcement, not the switch itself."
               },
               {
-                "note": "CORRECT. The café stopped making the in-house claim exactly when it became false. This principle says such a business need not announce that it stopped. That answers the diners' complaint, so the café did nothing wrong."
+                "note": "CORRECT. Not telling diners is wrong only if it leads the café into a false statement. The café removed the in-house claim, so it said nothing false. The rule then says its silence wasn't wrong, which is the reviewer's conclusion."
               },
               {
-                "note": "Hinges on harm, which the reviewer never discusses. We don't know if any diner was harmed, so we can't apply it to reach \"did nothing wrong.\""
+                "note": "Tempting, and the main trap. False claim → wronged customers. The café made no false claim, so the rule never triggers and can't tell us the café did nothing wrong. Taking \"no false claim\" to mean \"no wrong\" reverses the rule."
               },
               {
-                "note": "On topic but doesn't apply: it's about false claims, and the café never made one. A rule for false claims can't tell us anything about a café that only ever made true ones."
+                "note": "The reviewer never mentions harm. This principle would need facts we don't have, and it isn't the reviewer's reason."
               }
             ]
           }
@@ -1311,9 +1311,9 @@
           "stem": "The statements above, if true, most strongly support which one of the following?",
           "choices": [
             "Most of the customers who bought the Tallis chair last year without the lumbar cushion later returned the chair.",
-            "Buying the optional lumbar cushion made customers less likely than they otherwise would have been to return the chair.",
+            "Buying the optional lumbar cushion made customers less likely than they otherwise would have been to return their chairs.",
             "More Tallis chairs were returned by customers who bought the lumbar cushion than by customers who did not.",
-            "The return rate was higher among customers who skipped the cushion than among those who bought it.",
+            "Customers who bought the lumbar cushion kept their Tallis chairs at a higher rate than customers who did not.",
             "Most of the customers who bought the Tallis chair from Orrin Office Supply last year did not return it."
           ],
           "answer": "D",
@@ -1321,7 +1321,7 @@
             "most-strongly-supported"
           ],
           "difficulty": 5,
-          "explanation": "Customers without the cushion were the smaller group, yet they accounted for more of the returns, so their return rate must have been higher, which is (D). (B) is the most tempting choice, but the data show only a correlation; customers who skipped the cushion may differ in other ways. (A) and (E) need information about the overall return rate, which is not given, and (C) contradicts the second statement.",
+          "explanation": "Most buyers took the cushion, yet most returns came from buyers who did not. A smaller group producing more returns must have a higher return rate, so cushion buyers kept their chairs at a higher rate, which is (D) stated from the other side. (B) is the trap: it reads the rate difference as the cushion’s effect, but the data show only a correlation; customers who skipped the cushion may differ in other ways. (A) and (E) need the overall return rate, which is not given, and (C) contradicts the second statement.",
           "skills": [
             "statistical",
             "fact-set"
@@ -1331,25 +1331,25 @@
             "setup": [
               {
                 "label": "Facts",
-                "text": "1) Most Tallis chair buyers also bought the lumbar cushion; 2) most customers who returned the chair had not bought the cushion; 3) no one bought more than one chair, and all returns came from last year's buyers."
+                "text": "1. Most Tallis chair buyers also bought the cushion; 2. Most customers who returned the chair had not bought the cushion; 3. One chair per customer, and every return came from last year's buyers."
               }
             ],
-            "analysis": "Hard to prephrase, so do the math. No-cushion buyers are the smaller group, but they make up most of the returns. A smaller group producing more returns has to have a higher return rate. Worked example: 100 buyers, 70 with cushion and 30 without. 10 returns, 6 from no-cushion buyers and 4 from cushion buyers. Return rates: 6/30 = 20% vs. 4/70 = about 6%. Any numbers that fit the facts give the same direction. But that's correlation, not cause. Watch for answers that sneak in a cause or need the overall return rate.",
+            "analysis": "This is a rate-versus-count puzzle. Say 100 people bought the chair: 70 with the cushion, 30 without. If most returns came from the no-cushion group, that smaller group produced more returns than the bigger one. So its return rate is higher, and the cushion group's keep rate is higher. That's the safe inference, but watch the phrasing: the right answer says it from the \"kept\" side. Most students pick (B) because the numbers seem to show the cushion working. It fails because the facts show only a difference between groups, not a cause. Maybe people who buy add-ons are people who had already decided they love the chair.",
             "choices": [
               {
-                "note": "We don't know the overall return rate. If only 10 chairs came back out of 100, then only about 6 of 30 no-cushion buyers returned theirs. Not most."
+                "note": "We don't know this. With 30 no-cushion buyers, maybe only 3 returned and 2 cushion buyers returned. Most returns would still be no-cushion, yet only 10% of that group returned."
               },
               {
-                "note": "Tempting, and the most attractive wrong answer. But it's causal. The data show only that the two things go together. Maybe people who skipped the cushion were less committed to the chair from the start. A higher rate in one group doesn't tell you why."
+                "note": "Tempting, and the main trap. It turns a correlation into a cause. The facts show who returned chairs, not why. Buyers who skip the add-on might be less committed to the chair from the start."
               },
               {
-                "note": "Contradicts the second statement: most returns came from people who did not buy the cushion."
+                "note": "This contradicts fact 2. Most returns came from customers without the cushion, so they returned more chairs."
               },
               {
-                "note": "CORRECT. Smaller group, more returns → higher return rate. This is pure math from the first two facts and doesn't claim anything about cause."
+                "note": "CORRECT. The no-cushion group is smaller (fact 1) but produced more returns (fact 2), so its return rate is higher. Flip it: cushion buyers kept their chairs at a higher rate."
               },
               {
-                "note": "Needs the overall return rate, which we don't have. If 80 of 100 chairs came back, both facts could still hold (say, all 45 no-cushion buyers plus 35 of 55 cushion buyers). Unsupported."
+                "note": "Could be true, but nothing says so. The facts compare the two groups; they never tell us how many returns there were overall."
               }
             ]
           }
@@ -1396,7 +1396,7 @@
           "choices": [
             "Varga has shown that features of Victorian novels that earlier critics dismissed as flaws of craft were in fact rational responses to the demands of serial publication.",
             "Varga’s account of the influence of serial publication on the Victorian novel is undermined by the case of a novelist who completed his books before serializing them.",
-            "Although Varga is right that serial publication shaped the Victorian novel, her account conflates distinct pressures and rests on a comparison of uncertain significance.",
+            "Although Varga is right that serial publication shaped the Victorian novel, her account conflates two distinct pressures and rests on a comparison whose significance is uncertain.",
             "The features of Victorian serialized novels are better explained by the pressures that serial publication placed on writers than by those it placed on readers.",
             "Varga’s comparison of serialized novels with novels first issued complete overlooks differences between the kinds of authors and stories in the two groups."
           ],
@@ -1593,7 +1593,7 @@
             "identify the kinds of fiction for which publishers first adopted the practice of issuing novels in monthly installments",
             "suggest that the earlier critics’ dismissal of certain features as padding was justified at least for some kinds of fiction",
             "illustrate the pressures that serial publication placed on readers who encountered novels in fragments weeks apart",
-            "point to a way in which the novels Varga compares might differ other than in mode of publication",
+            "point to a way in which the novels that Varga compares might differ other than in mode of publication",
             "show that suspenseful endings and broadly drawn characters were more common in novels issued complete than in serialized ones"
           ],
           "answer": "D",
@@ -1639,9 +1639,9 @@
           "stimulus": "",
           "stem": "The passage suggests that Varga’s interpretation of Carrow’s novels commits her to which one of the following views?",
           "choices": [
-            "Some features she attributes to serial form can arise in a novel not composed under installment deadlines.",
-            "The pressures that serial publication placed on readers and on writers operated independently of each other.",
-            "The term “serial form” should be used to refer only to the situation of readers who met novels in installments.",
+            "Some features she attributes to serial form can appear in a novel whose author was not writing against installment deadlines.",
+            "The abandoned subplots found in many serialized novels arose from the conditions under which those novels were written rather than read.",
+            "The term “serial form” should be reserved for the situation of readers who met novels in installments weeks apart.",
             "Carrow’s novels contain as many abandoned subplots and inconsistencies of detail as do novels written installment by installment.",
             "Novelists who completed their work before serialization were more skilled at plotting than those who wrote installment by installment."
           ],
@@ -1650,28 +1650,28 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Carrow finished each novel before serialization, so he did not write under installment deadlines, yet Varga treats his cliffhangers and recurring tics as confirming her thesis (fourth paragraph); she must therefore hold that features she attributes to serial form can arise without deadline composition, which is A. B is the most tempting trap, but it is the author's conclusion from the Carrow case, not something Varga's reading requires; the passage says her term 'conflates' the two pressures. C is too strong, and D is contradicted by the fourth paragraph.",
+          "explanation": "Carrow finished each novel before its first installment appeared, so he wrote under no installment deadline, yet Varga counts his cliffhangers and tic-tagged characters as confirming her thesis (fourth paragraph). She is therefore committed to A: some serial-form features can arise without deadline composition. B is the dominant trap: it is the author’s inference from Carrow’s lack of abandoned subplots, an opinion Varga never expresses; her term ‘conflates’ the two pressures. C is too strong, D contradicts the fourth paragraph, and E introduces a ranking of skill no one in the passage makes.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Work out what Varga must believe, given that she counts Carrow as support for her thesis."
+                "text": "Work out what Varga must believe, given that she counts Carrow as support for her thesis. Not what the author concludes about Carrow: what Varga is stuck with."
               },
               {
                 "label": "Where to look",
-                "text": "Paragraph 4, sentences 2-3 (Carrow finished his novels first; Varga treats him as confirming her thesis 'since he wrote knowing that readers would meet his work in parts')."
+                "text": "Paragraph 4, sentences 2–3 (Carrow finished his novels first; Varga treats him as confirming her thesis 'since he wrote knowing that readers would meet his work in parts'). Contrast sentence 4 onward, which is the author talking."
               }
             ],
-            "analysis": "Carrow had no deadlines: he finished each book before the first installment. Yet his books have cliffhangers and tic-tagged minor characters, features Varga credits to serial form. If she counts him as confirming her thesis, then she's committed to: those serial-form features can show up even without deadline writing. Watch for the trap that hands Varga the author's conclusion. The author, not Varga, says the pressures worked independently.",
+            "analysis": "Carrow had no deadlines: every book was done before installment one. Yet his books have cliffhangers and tic-tagged minor characters, features Varga credits to serial form. So if she says Carrow confirms her thesis, what is she stuck with? That those features can show up without deadline writing. We need an answer that says: serial-form features can arise even when the writer wasn't racing the printer. Most students pick (B) because it is the lesson of the Carrow paragraph. It is, but it's the author's lesson. The author separates writing-pressure features (abandoned subplots) from reading-pressure features (cliffhangers); Varga's term lumps them together. Separate whose view is whose before you answer a 'commits her to' question.",
             "choices": [
               {
-                "note": "CORRECT. Calling Carrow's cliffhangers and tics confirmation means she accepts that serial-form features can arise without installment deadlines."
+                "note": "CORRECT. Counting Carrow's cliffhangers and tics as serial-form effects means accepting that such features can arise in a book not composed against deadlines. Note the hedge: 'some features ... can appear.' That's all her reading requires."
               },
               {
-                "note": "Tempting, because it follows from Carrow. But it's the author's inference. Varga's term 'conflates' the two pressures, so she isn't committed to separating them."
+                "note": "Tempting. This is the trap. It's what the author infers from Carrow ('almost none of the abandoned subplots'), and it may well be true. But Varga never assigns abandoned subplots to the writing side as opposed to the reading side; the passage says her term 'conflates' the two. Her Carrow reading doesn't commit her to splitting them."
               },
               {
-                "note": "Too strong. Accepting a reader-side effect in Carrow doesn't commit her to dropping the writer side of her term."
+                "note": "Too strong. Accepting a reader-side effect in Carrow doesn't commit her to dropping the writer side of her term. She still blames serial form for abandoned subplots and inconsistencies too."
               },
               {
                 "note": "Contradicted. Paragraph 4 says Carrow's novels contain 'almost none' of the abandoned subplots and inconsistencies."
@@ -1689,7 +1689,7 @@
           "stem": "Which one of the following most accurately expresses the main point of the passage?",
           "choices": [
             "The Orlen Valley ledgers show that rural households of the period lacked the arithmetic they would have needed to reconcile their accounts with neighbors.",
-            "Imbalances in Orlen accounts between neighbors, once blamed on poor bookkeeping, may have been a deliberate way of keeping households’ relationships open.",
+            "Imbalances in Orlen accounts between neighbors, once blamed on poor bookkeeping, may instead have been a deliberate way of keeping households’ relationships open.",
             "Orlen Valley households kept careful accounts with outside merchants because they distrusted those merchants more than they distrusted their own neighbors.",
             "The account between the Brenn and Tamm households shows that disputes between Orlen families were usually caused by the closing of an account.",
             "Parish records demonstrate that whenever an Orlen household repaid a neighbor exactly, a quarrel or lawsuit between the two families soon followed."
@@ -1837,7 +1837,7 @@
           "choices": [
             "a comparison between the Orlen ledgers and the ledgers kept by households in other valleys during the same period",
             "the belief that a debt left unsettled ended the relationship between the two households involved in it",
-            "evidence from parish records that disputes between neighboring households were rare during the period",
+            "evidence from parish records that disputes between neighboring households were quite rare during the period",
             "the view that the remainders were too small to have mattered to the households that recorded them",
             "the presumption that the households were trying to make their accounts with neighbors balance"
           ],
@@ -1983,7 +1983,7 @@
           "stem": "If Halvik’s theory is correct, which one of the following would most likely have been true of a household that had newly settled in the Orlen Valley during the period in which the ledgers were kept?",
           "choices": [
             "It would have avoided borrowing from its neighbors until it had first established accounts with outside merchants.",
-            "To form lasting ties with a neighbor, it would have repaid that neighbor slightly more or less than it borrowed.",
+            "To form lasting ties with a neighbor, it would have repaid that neighbor slightly more or less than it had borrowed.",
             "It would have been expected to repay each neighbor exactly until that neighbor had extended it a second loan.",
             "It would have kept its accounts with neighbors in a different unit of measure from the one it used with merchants.",
             "It would have been unable to borrow grain from any neighbor without first performing several days of labor for that neighbor."
@@ -2031,18 +2031,18 @@
           "stimulus": "",
           "stem": "Which one of the following, if true, would most call into question Halvik’s explanation of the imbalances in the Orlen ledgers?",
           "choices": [
-            "Households in a neighboring valley during the same period kept accounts with their neighbors that nearly always balanced exactly.",
+            "Households in a neighboring valley during the same period kept accounts with their own neighbors that nearly always balanced to the last measure.",
             "The Orlen ledgers rarely record the purposes for which grain, labor, or tools were lent from one household to another.",
-            "Several of the quarrels recorded in Orlen parish registers involved families whose accounts with each other remained open afterward.",
+            "Several Orlen families whom parish registers record as having quarreled kept carrying small remainders in their accounts with each other.",
             "Households in the valley that kept ledgers tended to be somewhat wealthier than households in the valley that kept no ledgers.",
-            "The remainders closely match the discrepancies produced by converting among several inconsistent local grain measures, none used with outside merchants."
+            "Neighbors, unlike outside merchants, repaid loans in a different local measure from the one borrowed, and the valley’s measures did not convert exactly."
           ],
           "answer": "E",
           "types": [
             "rc-strengthen-weaken"
           ],
           "difficulty": 4,
-          "explanation": "Halvik claims the remainders were deliberate (second paragraph); E supplies a non-deliberate cause that explains both their small size and the contrast with exactly closed merchant accounts, undercutting her strongest evidence (third paragraph). C is the most tempting trap, but Halvik never claims every quarrel closed an account, only that exact closings frequently coincided with disputes. A concerns a different community whose customs could differ, and B and D are irrelevant to why the remainders existed.",
+          "explanation": "Halvik says the remainders were deliberate (second paragraph), and her best evidence is that the same households closed merchant accounts exactly and left only small remainders with neighbors (third paragraph). E gives an accidental cause that fits both facts: repayment in a different, inexactly convertible measure, a practice not used with merchants, would leave small remainders with neighbors only. C is the dominant trap. It looks like a counterexample to the parish evidence, but Halvik’s claim runs one way: exact closings often coincided with disputes. She never says a dispute closed the account, so quarreling families who stayed bound fit her view. A concerns another community, and B and D do not bear on why the remainders existed.",
           "breakdown": {
             "setup": [
               {
@@ -2051,25 +2051,25 @@
               },
               {
                 "label": "Where to look",
-                "text": "Paragraph 2 (the theory) and paragraph 3 (her evidence, especially the contrast with merchant accounts and the small remainders)."
+                "text": "Paragraph 2 (the theory: remainders kept on purpose) and paragraph 3 (her evidence: exact merchant accounts, small alternating remainders, closings that coincide with disputes)."
               }
             ],
-            "analysis": "So what if the remainders were small and the merchant accounts were exact? Maybe something accidental produces exactly that pattern. Halvik leans on the contrast: same people, exact with merchants, inexact with neighbors, so it must be on purpose. The best weakener gives an innocent cause that explains the same pattern, especially the neighbor/merchant contrast. We want an alternative explanation.",
+            "analysis": "Halvik's key move is a contrast: the same households were exact with merchants and inexact with neighbors, so the inexactness must be a choice. So what if something mechanical produced exactly that pattern? We want an innocent cause that operates with neighbors and not with merchants. Most students pick (C) because it looks like a counterexample to the quarrel evidence. Read her claim's direction: exact closing → frequently a dispute. (C) gives dispute → no closing. That's the reverse direction, and her theory is fine with it: people can quarrel and still want to stay bound. The right answer doesn't mention deliberateness at all. You have to see that a conversion loss between unequal measures would leave small, never-quite-zero remainders by itself.",
             "choices": [
               {
-                "note": "Another valley could have different customs. This doesn't touch why Orlen accounts were unbalanced."
+                "note": "Another valley could have different customs. A community nearby that balanced its books tells us nothing about why Orlen households didn't."
               },
               {
                 "note": "Irrelevant. Halvik's theory doesn't depend on knowing why things were borrowed."
               },
               {
-                "note": "Tempting, because it looks like a counterexample to the quarrel evidence. But Halvik's claim runs one way: exact closings often came with disputes. She never says every quarrel closed an account."
+                "note": "Tempting. This is the trap: it feels like quarrels don't track closings after all. But Halvik's evidence runs from closing to dispute, not from dispute to closing. Families who quarreled but kept their account open are just people who quarreled and still chose to stay bound. That's consistent with her view."
               },
               {
                 "note": "Irrelevant. Wealth tells us nothing about whether the imbalances were deliberate."
               },
               {
-                "note": "CORRECT. An accidental source (conversion among inconsistent local measures) explains small remainders, and because those measures weren't used with merchants, it also explains why merchant accounts balanced. That knocks out her key contrast."
+                "note": "CORRECT. If neighbors (but not merchants) repaid in a different local measure that didn't convert exactly, small remainders would appear with neighbors and not with merchants, with no intention behind them. That supplies an accidental cause for the very contrast Halvik relies on."
               }
             ]
           }
@@ -2133,7 +2133,7 @@
             "the possibility that a judge could ask a professional body to propose candidates for appointment",
             "the existence of technical fields in which competent specialists disagree with one another",
             "the tendency of jurors to credit whichever of two experts seems more poised and likable",
-            "the reluctance of attorneys to cross-examine forcefully a witness whom the judge has chosen",
+            "the reluctance of attorneys to cross-examine forcefully an expert witness whom the judge has chosen",
             "the right of parties to present their own experts even when the court has appointed one"
           ],
           "answer": "D",
@@ -2230,10 +2230,10 @@
           "stimulus": "",
           "stem": "The relationship between passage A and passage B is most analogous to the relationship between the documents described in which one of the following?",
           "choices": [
-            "an essay titled “Why Arbitrators Should Rely on the Parties’ Rival Appraisals” and an essay titled “Improving the Exchange of Appraisal Reports Before Arbitration Hearings”",
+            "an essay titled “Why Arbitrators Should Rely on the Parties’ Rival Appraisals” and an essay titled “Improving the Exchange of Appraisal Reports Before Hearings”",
             "an essay titled “In Defense of Arbitrator-Commissioned Appraisals” and an essay titled “The Dangers of Letting Arbitrators Choose Their Own Appraisers”",
             "an essay titled “The Hidden Hazards of Arbitrator-Commissioned Appraisals” and an essay titled “How Parties to Arbitration Can Choose Better Appraisers of Their Own”",
-            "an essay titled “A Short History of Appraisal in Commercial Arbitration” and an essay titled “A Benchmark Between Rival Valuations: The Case for Arbitrator-Commissioned Appraisals”",
+            "an essay titled “A Short History of Appraisal in Arbitration” and an essay titled “A Benchmark Between Rival Valuations: The Case for Arbitrator-Commissioned Appraisals”",
             "an essay titled “The Hidden Hazards of Arbitrator-Commissioned Appraisals” and an essay titled “A Benchmark Between Rival Valuations: The Case for Arbitrator-Commissioned Appraisals”"
           ],
           "answer": "E",
@@ -2280,11 +2280,11 @@
           "stimulus": "",
           "stem": "The authors of the two passages would be most likely to disagree over whether",
           "choices": [
-            "jurors are likely to give the testimony of a court-appointed expert more weight than they give the testimony of a party’s expert",
+            "jurors are likely to give a court-appointed expert’s testimony more weight than they give the testimony of either party’s expert",
             "parties should be permitted to cross-examine an expert whom the court itself has appointed",
-            "the weight jurors are likely to give a court-appointed expert’s testimony is a reason against appointing such experts",
-            "the testimony of experts retained by litigants tends to reflect the interests of those litigants",
-            "competent specialists in some technical fields sometimes reach conflicting conclusions on the questions before a court"
+            "jurors’ readiness to defer to an expert chosen by the court counts against the practice of appointing one",
+            "the testimony of experts retained by litigants tends to reflect the interests of the litigants who retained them",
+            "competent specialists in some technical fields sometimes reach conflicting conclusions on questions that come before a court"
           ],
           "answer": "C",
           "types": [
@@ -2292,34 +2292,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Passage A's first objection (second paragraph) is that jurors will treat the court's expert's opinion 'as a verdict to be ratified'; passage B replies (second paragraph) that if jurors give that expert more weight, 'that is hardly a defect.' They disagree about whether such deference counts against appointment, which is C. A is the strong trap: passage B does not deny that jurors will give the court's expert more weight (its 'if' clause concedes the possibility), so they disagree about the significance of that weight, not its existence. D and E are points both authors accept, and B is something passage A never addresses.",
+          "explanation": "Passage A’s first objection (second paragraph) is that jurors will treat the court’s expert’s opinion ‘as a verdict to be ratified’; passage B replies (second paragraph) that if jurors give that expert more weight, ‘that is hardly a defect.’ So they disagree over whether jurors’ deference counts against appointment, which is C. A is the dominant trap: passage A asserts that jurors will give the court’s expert more weight, but passage B never denies it; its ‘if’ clause leaves the point open. D and E are views both authors hold, and B is something passage A never addresses.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find a claim on which the two authors would take opposite sides."
+                "text": "Find a claim one author would accept and the other would reject. Both authors must take a side."
               },
               {
                 "label": "Where to look",
-                "text": "Passage A, paragraph 2 (jurors treat the court's expert's opinion as a verdict); passage B, paragraph 2, last sentence ('that is hardly a defect')."
+                "text": "Passage A paragraph 2 (jurors treat the court's expert's opinion 'as a verdict to be ratified'); passage B paragraph 2 ('if jurors give the court's expert more weight ... that is hardly a defect')."
               }
             ],
-            "analysis": "To disagree, one author must say yes and the other no. A: jurors will over-trust the court's expert, and that's a reason not to appoint. B: if jurors give it more weight, that's fine, because a competent neutral expert deserves more weight. So they may agree on the fact (more weight) but disagree on what it means. The answer should be about whether the weight counts against appointment.",
+            "analysis": "Do the authors disagree about whether jurors defer to the court's expert, or about whether that deference is bad? Look at B's wording: 'if jurors give the court's expert more weight.' That's an 'if'. B never says they won't. So the disagreement isn't about the fact; it's about what the fact means. A says it's a reason against appointment. B says it's no defect. We need an answer about the significance of the deference. Most students pick (A) because it's the most obvious point of contrast. But to disagree, one author must say yes and the other no. Passage B never says no.",
             "choices": [
               {
-                "note": "Tempting, because A clearly says yes. But B doesn't say no; 'if jurors give the court's expert more weight' concedes it might happen. The fight is over whether it's bad."
+                "note": "Tempting. This is the trap. Passage A says yes. But passage B says only 'if jurors give the court's expert more weight', which is a conditional, not a denial. B has no stated view on whether they will, so there's no disagreement here."
               },
               {
-                "note": "A never discusses whether cross-examining the court's expert should be permitted; it says lawyers are reluctant to do it. B says parties are free to. No clash."
+                "note": "Passage B says the parties remain free to cross-examine. Passage A never says they shouldn't be; it says lawyers are reluctant to do it hard. No disagreement."
               },
               {
-                "note": "CORRECT. A: the weight is a reason against appointment. B: the weight is 'hardly a defect.' One yes, one no."
+                "note": "CORRECT. A treats jurors' deference as a reason not to appoint (the expert 'effectively' decides the case). B says the extra weight is 'hardly a defect'. One yes, one no, on whether the deference counts against the practice."
               },
               {
-                "note": "Both accept this. A speaks of 'partisan expertise'; B says experts' views can be 'made to serve' the case."
+                "note": "Both agree. A calls for a remedy for 'partisan expertise'; B says litigants pick experts whose views serve their case."
               },
               {
-                "note": "Both accept this. A: 'competent specialists disagree.' B: 'Where a field is genuinely divided.'"
+                "note": "Both agree. A says competent specialists disagree in unsettled fields; B's 'two confident witnesses whose conclusions are irreconcilable' and its 'range of respectable opinion' concede the same."
               }
             ]
           }
@@ -2330,7 +2330,7 @@
           "stimulus": "",
           "stem": "Which one of the following is a criticism that the author of passage A would be likely to offer regarding the suggestion in the last sentence of passage B?",
           "choices": [
-            "Such an instruction would discourage jurors from giving the court’s expert the additional weight that the expert’s neutrality warrants.",
+            "Such an instruction would discourage jurors from giving the court’s expert the additional weight that the expert’s neutrality rightly warrants.",
             "Jurors who know that the judge chose the expert will likely go on treating that expert’s opinion as authoritative.",
             "Such an instruction would reveal to jurors a fact about how the expert was selected that they would otherwise never learn.",
             "Such an instruction would make attorneys more willing to cross-examine the court’s expert aggressively, needlessly prolonging technical trials.",
@@ -2381,9 +2381,9 @@
           "stem": "The author of passage B would be most likely to regard the remedy proposed in the last sentence of passage A as inadequate on the grounds that it",
           "choices": [
             "would deprive the parties of the opportunity to cross-examine opposing experts in the presence of the jury",
-            "presupposes that judges can choose qualified experts competently without the assistance of the parties",
+            "would still leave a judge who lacks the relevant expertise to determine which of two conflicting experts is correct",
             "would require jurors to master the technical reasoning that the opposing experts present at pretrial hearings",
-            "would leave jurors without an independent reference point for assessing the conflicting conclusions of the parties’ experts",
+            "would give jurors no reference point beyond the parties’ own witnesses for judging between two conflicting expert opinions at trial",
             "would make litigants’ selection of experts whose views serve their case even more strategic than it already is"
           ],
           "answer": "D",
@@ -2392,34 +2392,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Passage B locates the problem in jurors having 'no basis for choosing between' two partisan experts (first paragraph) and presents the court's expert as 'a fixed point against which to measure them' (second paragraph); passage A's remedy (earlier disclosure and pretrial confrontation between the parties' experts) still leaves jurors with only partisan experts, so D is correct. B is the most tempting trap because it echoes passage B's phrase 'unaided guesswork,' but passage A's remedy involves no judicial selection of experts. C misplaces the jury at pretrial hearings, and A and E have no basis in either passage.",
+          "explanation": "Passage B locates the problem in jurors having ‘no basis for choosing between’ two partisan experts (first paragraph) and offers the court’s expert as ‘a fixed point against which to measure them’ (second paragraph). Passage A’s remedy, earlier disclosure and pretrial confrontation between the parties’ experts, still leaves jurors with only partisan experts to compare, so D is correct. B is the dominant trap: a judge lacking expertise is passage A’s worry about selection, and passage A’s remedy gives the judge no role in deciding which expert is right. Passage B’s complaint is about jurors. C puts jurors at pretrial hearings, and A and E have no basis in either passage.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Say why B's author would find A's proposed fix (earlier disclosure, pretrial confrontation of experts) not good enough."
+                "text": "Say why passage B's author would find passage A's fix (more disclosure, pretrial confrontation of experts) not good enough."
               },
               {
                 "label": "Where to look",
-                "text": "Passage A, paragraph 4, last sentence (the remedy); passage B, paragraph 1 ('no basis for choosing between them') and paragraph 2 ('a fixed point')."
+                "text": "Last sentence of passage A (the remedy); passage B paragraph 1 (jurors have 'no basis for choosing') and paragraph 2 (the court's expert as 'a fixed point')."
               }
             ],
-            "analysis": "A's fix keeps everything adversarial: party experts, just tested harder. B's diagnosis: jurors facing two hired experts have 'no basis for choosing' and fall back on who seems likable. B's cure: a neutral fixed point. A's fix supplies no such point, so the jurors are still stuck choosing between two partisans. Prephrase: it still leaves jurors with nothing neutral to measure the experts against.",
+            "analysis": "What is B's problem with partisan experts, exactly? Not that the experts are biased as such. It's that jurors facing two irreconcilable experts have nothing to measure them by, so they go with the more likable one. Does A's remedy fix that? Earlier reports and pretrial hearings sharpen the parties' experts, but at trial jurors still face two partisan witnesses and no neutral benchmark. We need an answer that says: jurors still lack an independent yardstick. Most students pick (B) because 'a judge who lacks the relevant expertise' is a phrase they remember from the comparative set. But that worry belongs to passage A, it concerns choosing an expert, and A's remedy doesn't ask the judge to pick a winner at all.",
             "choices": [
               {
-                "note": "Neither passage says A's remedy removes cross-examination before the jury. It adds pretrial steps; it doesn't take any away."
+                "note": "Nothing in A's remedy removes cross-examination. Pretrial confrontation adds testing; it doesn't take any away."
               },
               {
-                "note": "Tempting, because it echoes B's 'unaided guesswork.' But A's remedy involves no judge choosing experts, so it can't presuppose anything about judges' choices."
+                "note": "Tempting. This is the trap. The judge-lacks-expertise idea comes from passage A's second objection, about choosing an expert. Passage A's remedy involves no judicial choice of expert and no judge deciding who is right, and passage B's complaint is about what jurors lack."
               },
               {
-                "note": "The pretrial hearings are where experts confront each other; nothing says jurors attend them."
+                "note": "The jury isn't at pretrial hearings. Nothing in either passage says the remedy asks jurors to master anything new."
               },
               {
-                "note": "CORRECT. B's whole case is that jurors need a neutral reference point. A's remedy keeps only partisan experts, so the jurors still lack one."
+                "note": "CORRECT. B's whole case is that jurors need 'a fixed point' against which to measure the parties' experts. A's remedy improves the parties' experts but leaves jurors with only those experts to compare."
               },
               {
-                "note": "No basis. Earlier disclosure doesn't obviously change how litigants choose experts, and B doesn't argue that it would."
+                "note": "Neither passage suggests disclosure or pretrial hearings would make expert shopping worse. Pure invention."
               }
             ]
           }
@@ -2483,7 +2483,7 @@
             "Which fish species other than the Halder herring did Kovač expose to glochidia in her laboratory tests?",
             "How much did the fish lift at the Ostrow Dam cost to build, and who paid for its operation?",
             "Why do slate pearlmussels live longer than most other freshwater mussel species found in the Halder River?",
-            "Why did better water quality above the Ostrow Dam fail to halt the mussels’ decline there?"
+            "Why did the improvement in water quality above the Ostrow Dam fail to halt the mussels’ decline there?"
           ],
           "answer": "E",
           "types": [
@@ -2529,7 +2529,7 @@
           "stem": "The author mentions that recruitment was markedly lower in the siltiest reaches (third sentence of the last paragraph) primarily in order to",
           "choices": [
             "suggest that the fish lift has so far failed to restore reproduction in most of the river above the dam",
-            "show that Kovač’s critics were correct that the missing age classes reflected where juveniles could survive",
+            "show that Kovač’s critics were correct that the missing age classes reflected where juveniles could survive above the dam",
             "concede that an objection to Kovač’s account identified a real factor, though not the main one",
             "argue that funding for measures to reduce sediment and pollution above the dam should now be restored",
             "cast doubt on Kovač’s laboratory findings about which fish species could serve as hosts for glochidia"
@@ -2626,45 +2626,45 @@
           "stimulus": "",
           "stem": "The information yielded by which one of the following experiments would be most useful in determining whether the critics described in the third paragraph were correct that the missing age classes reflected where juveniles could survive?",
           "choices": [
-            "exposing slate pearlmussel glochidia in the laboratory to additional fish species that are found above the dam",
-            "placing hatchery-raised juvenile pearlmussels in cages on the riverbed above the dam and monitoring their survival",
+            "placing adult pearlmussels taken from below the dam in cages on the riverbed above the dam and monitoring their survival",
+            "caging hatchery-raised juvenile pearlmussels on the riverbed above the dam and comparing their survival there with survival below it",
             "comparing the number of glochidia released by female pearlmussels above the dam with the number released by females below it",
             "counting the growth rings of slate pearlmussels collected from several sites on the river below the dam",
-            "measuring concentrations of industrial pollutants in the water above the dam during the herring’s former spawning season"
+            "exposing slate pearlmussel glochidia in the laboratory to additional fish species that are found above the dam"
           ],
           "answer": "B",
           "types": [
             "rc-analogy"
           ],
           "difficulty": 4,
-          "explanation": "The sediment critics (third paragraph) claimed juveniles could not survive above the dam even if they were produced; B supplies juveniles directly and tests their survival in that riverbed, separating survival from production. A is the strongest trap, but it tests the other objection (whether hosts in the wild differ from those in tanks), not the sediment claim. C measures larval output, which bears on production rather than juvenile survival, and D and E do not test the upstream riverbed's effect on juveniles.",
+          "explanation": "The sediment critics (third paragraph) claimed the missing age classes reflected where juveniles could survive, not whether they were produced. B supplies juveniles directly and tests their survival in the upstream riverbed against a downstream baseline, separating survival from production. A is the dominant trap: it runs the right kind of caged-survival test on the wrong animals. The passage says juveniles are more sensitive to sediment than adults, so adult survival says little about whether juveniles could live there. C bears on larval output, E tests the other objection (hosts in the wild), and D looks only below the dam.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Pick the experiment that would test the sediment critics' claim: juveniles are produced but can't survive above the dam."
+                "text": "Pick the experiment whose result would tell you whether the sediment critics were right: were juveniles missing above the dam because they couldn't survive there?"
               },
               {
                 "label": "Where to look",
-                "text": "Paragraph 3, last two sentences (sediment and juveniles; 'where juveniles could survive rather than whether they were being produced')."
+                "text": "Paragraph 3, last three sentences (fine sediment above the dam; juveniles 'more sensitive to such sediment than adults are'; the missing age classes 'might reflect where juveniles could survive')."
               }
             ],
-            "analysis": "Separate the two stories. Kovač: no juveniles are being produced. Critics: juveniles may be produced but die in the silty bed. To test the critics, take production out of the picture: supply juveniles directly and see whether they survive upstream. If they die, the critics gain; if they thrive, sediment isn't the reason the age classes are missing.",
+            "analysis": "The critics split two questions: were juveniles being produced, and could they survive? To test survival, you have to take production out of the picture: put juveniles there yourself and see if they live. A comparison with juveniles below the dam tells you whether the upstream bed is the problem. Most students pick (A) because it has the right design: cages on the upstream riverbed, track survival. But read who goes in the cage. Adults. The critics' claim was about juveniles, and the passage says juveniles are more sensitive than adults. Adults thriving up there proves nothing. One word decides this question.",
             "choices": [
               {
-                "note": "Tempting, because it's a real objection from paragraph 3. But it tests the first critics (wild hosts vs. tanks), which is about production, not juvenile survival."
+                "note": "Tempting. This is the trap. Right design, wrong animal. The passage says juveniles are 'more sensitive to such sediment than adults are', so adults surviving above the dam wouldn't show that juveniles could."
               },
               {
-                "note": "CORRECT. Supplies juveniles directly to the upstream riverbed and measures survival. That isolates the critics' claim."
+                "note": "CORRECT. Putting juveniles on the upstream riverbed removes the question of production and isolates survival; the downstream comparison shows whether the upstream bed is what kills them."
               },
               {
-                "note": "Larval output is about production. The critics' claim concerns what happens to juveniles after production."
+                "note": "This measures larval output, which bears on production, the very thing the critics said might not be the issue."
               },
               {
-                "note": "Below the dam has every age present already. This tells you nothing about survival above the dam."
+                "note": "Below the dam isn't where the age classes are missing. This tells you nothing about the upstream bed."
               },
               {
-                "note": "Water pollution isn't the critics' point (they blame sediment in the bed), and the water already met standards."
+                "note": "This tests the other objection (wild hosts that fare poorly in tanks), not the sediment claim."
               }
             ]
           }
@@ -2675,7 +2675,7 @@
           "stimulus": "",
           "stem": "The passage most strongly supports which one of the following about the surveys of the 1970s mentioned in the first paragraph?",
           "choices": [
-            "They overstated the extent of the decline, since many old mussels above the dam were in fact still alive.",
+            "They used methods unable to detect juvenile mussels burrowed in the riverbed and so missed young mussels that were present.",
             "Their findings were inconsistent with the view that industrial pollution and sediment were responsible for the decline.",
             "They should have led biologists to examine the mussel’s life cycle rather than the condition of the river’s water.",
             "The decline they recorded would not by itself have revealed that the population above the dam had ceased to reproduce.",
@@ -2686,34 +2686,34 @@
             "rc-inference"
           ],
           "difficulty": 5,
-          "explanation": "The surveys recorded falling numbers; Kovač's insight required aging the mussels, since a population of long-lived adults that has stopped reproducing appears 'merely diminished' (second paragraph) and 'can conceal a failure of reproduction' (fourth paragraph), which supports D. B is the most tempting trap, but a decline in numbers is consistent with a pollution explanation, which is why that explanation was accepted. C imports a normative judgment the author never makes, A has no support, and E contradicts the first paragraph, which places the surveys upstream of the dam.",
+          "explanation": "The surveys recorded falling numbers. Kovač’s insight required aging the mussels, because a population of long-lived adults that has stopped reproducing appears ‘merely diminished’ (second paragraph) and ‘can conceal a failure of reproduction’ (last paragraph), which supports D. A is the dominant trap: it borrows a real fact (juveniles burrow in the riverbed, third paragraph) to invent a flaw in the survey methods that the passage never describes, and Kovač’s aging found that young mussels upstream really were missing. B fails because a decline in numbers fits a pollution explanation, which is why that explanation was accepted; C imports a judgment the author never makes; E contradicts the first paragraph, which places the surveys upstream.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Infer what the passage implies about the 1970s surveys that counted fewer mussels each decade."
+                "text": "Find what the passage supports about the 1970s surveys: what they could and couldn't show."
               },
               {
                 "label": "Where to look",
-                "text": "Paragraph 1 (the surveys upstream of the dam), paragraph 2, last sentence ('appearing merely diminished'), and paragraph 4, last sentence ('can conceal a failure of reproduction')."
+                "text": "Paragraph 1 (the surveys upstream found fewer mussels each decade); paragraph 2, last two sentences (aging the mussels; 'reproductively dead ... while appearing merely diminished'); last sentence of the passage."
               }
             ],
-            "analysis": "What did the surveys actually show? Only that numbers were falling. What was really going on? No reproduction at all since the dam, hidden because the adults live so long. Kovač only saw it by aging the mussels. So a count alone couldn't reveal it. Hard to prephrase precisely; watch for answers that blame the surveys or overstate what they implied.",
+            "analysis": "What did the surveys actually measure? Numbers. And what was really going on? No reproduction, hidden by long-lived adults. So could a falling count, by itself, tell you reproduction had stopped? No: a dying-but-not-reproducing population and a population thinned by pollution both just look smaller. That's what the right answer has to say, and it says it in a weak, hedged way ('would not by itself have revealed'). Most students pick (A) because it sounds like the scientific explanation of what went wrong, and it uses a real fact: juveniles burrow. But the passage never says how the surveys were run, and Kovač's aging confirmed that young mussels upstream were actually missing, not hidden. Hard RC traps often stitch a passage fact onto a claim the passage never makes.",
             "choices": [
               {
-                "note": "No support. Nothing says the surveys counted wrongly; old mussels being alive fits a real, ongoing decline."
+                "note": "Tempting. This is the trap. Juveniles do burrow (paragraph 3), but the passage says nothing about survey methods, and Kovač found that nearly all upstream mussels really were over sixty-five. The young ones weren't hiding; they weren't there."
               },
               {
-                "note": "Tempting, because the pollution explanation turned out wrong. But a falling count fits the pollution story perfectly well; that's why people believed it. The surveys themselves didn't contradict it."
+                "note": "A decline fits a pollution explanation perfectly well, which is why that explanation was accepted. The problem came when the decline continued after the cleanup, decades later."
               },
               {
-                "note": "A judgment the author never makes. The passage doesn't fault the surveys or say what they should have prompted."
+                "note": "A normative judgment the author never makes. The author says the episode is a caution, not that the 1970s surveyors should have looked elsewhere."
               },
               {
-                "note": "CORRECT. Counts can't separate 'fewer adults' from 'no young at all.' The passage says the population appeared 'merely diminished' and that long-lived adults 'can conceal a failure of reproduction.'"
+                "note": "CORRECT. Counts can't separate 'diminished' from 'reproductively dead' in a long-lived species; it took aging the mussels. The passage's 'appearing merely diminished' and 'can conceal a failure of reproduction' say exactly this."
               },
               {
-                "note": "Contradicted. Paragraph 1 places the surveys 'upstream of the Ostrow Dam.'"
+                "note": "Contradicted. Paragraph 1 says the surveys were 'upstream of the Ostrow Dam'."
               }
             ]
           }
@@ -2733,7 +2733,7 @@
           "choices": [
             "Reducing arm injuries among the league's youth pitchers is a worthy aim that the rule's supporters share.",
             "A limit on pitches in league games would do little to protect the arms of the league's young players.",
-            "Most of the arm injuries suffered by the league's players occur during off-season travel tournaments.",
+            "Most arm injuries suffered by the league's players occur during off-season travel tournaments.",
             "The league should not adopt the proposed rule limiting youth pitchers to forty pitches per game.",
             "The league should begin to govern the off-season travel tournaments in which most arm injuries occur."
           ],
@@ -2787,9 +2787,9 @@
           "choices": [
             "presumes, without providing justification, that customers who tried a sample bought only the kind of pastry they had sampled",
             "fails to establish that the increase in pastry sales led to any increase in the bakery's overall profits for March",
-            "overlooks the possibility that some factor other than the samples accounts for the rise in March sales",
+            "overlooks the possibility that some factor other than the samples accounts for the rise in March pastry sales",
             "takes for granted that a practice that works for one bakery will work equally well for every other bakery",
-            "treats a single month's increase in sales as proof that sales will keep rising at that rate in every later month"
+            "treats a single month's increase in sales as proof that sales will keep rising at that rate every month"
           ],
           "answer": "C",
           "types": [
@@ -2896,7 +2896,7 @@
             "the orchestra should devote nearly all of its programs to established classical works",
             "established classical works draw larger audiences than new compositions do at the orchestra's concerts",
             "younger listeners generally prefer new compositions to the established classical works the orchestra now plays",
-            "ticket sales are important to the financial health of the Marlton city orchestra",
+            "ticket sales are important to the overall financial health of the Marlton city orchestra",
             "the orchestra is currently at risk of becoming insolvent because of declining ticket sales"
           ],
           "answer": "A",
@@ -3057,7 +3057,7 @@
           "choices": [
             "Most of the defendants in Darrow County who plead guilty to the charges against them are in fact innocent.",
             "Defendants in Darrow County who are released before trial are less likely than jailed defendants to be convicted at trial.",
-            "Some defendants' decisions about whether to plead guilty are influenced by factors other than the evidence against them.",
+            "Some defendants' choices about whether to plead guilty are partly influenced by factors other than the evidence against them.",
             "Bail amounts set in Darrow County are higher, on average, than those set in most other counties in the state.",
             "Eliminating bail in Darrow County would reduce the number of guilty pleas entered there by roughly half."
           ],
@@ -3106,7 +3106,7 @@
           "stem": "The reasoning in the sportswriter's argument is flawed in that the argument",
           "choices": [
             "relies on the judgment of all-star selectors, who may know little about how well the players work together",
-            "presumes that a team whose individual players are outstanding must itself be outstanding as a team",
+            "presumes that a team made up of individually outstanding players must itself be outstanding as a team",
             "takes for granted that the players were chosen for the all-star squad solely on the basis of their scoring",
             "draws a conclusion about the team's performance in every season from evidence about a single season",
             "takes for granted that the regional all-star squad included at least one player from every team in the region"
@@ -3167,7 +3167,7 @@
             "Diesel exhaust is the primary cause of childhood asthma among the children who live in Tarrow County.",
             "Ellis County has no freight yards or any other major source of diesel exhaust within its borders.",
             "Reducing diesel exhaust in Tarrow County would also lower the rate of respiratory illness among adults living there.",
-            "Children with asthma attacks are more likely to be taken to a hospital in Tarrow County than in Ellis County.",
+            "Children with asthma attacks are likelier to be taken to a hospital in Tarrow County than in Ellis County.",
             "Exposure to diesel exhaust can contribute to making some children's asthma severe enough to require hospitalization."
           ],
           "answer": "E",
@@ -3226,10 +3226,10 @@
           "stem": "The conclusion of the argument follows logically if which one of the following is assumed?",
           "choices": [
             "Only farms that plant winter rye on all of their fields after the harvest qualify for the county's soil-conservation grant.",
-            "Every farm that qualifies for the county's soil-conservation grant loses less soil to erosion over the winter than it otherwise would.",
+            "Every farm that qualifies for the county's soil-conservation grant loses less soil to erosion over the winter than it otherwise would have.",
             "Most farms that plant winter rye after the fall harvest qualify for the county's soil-conservation grant in that year.",
             "Any farm all of whose fields will lose less soil to winter erosion than they otherwise would qualifies for the grant.",
-            "Winter rye reduces the amount of soil lost to winter erosion more than any other crop planted after the harvest does."
+            "Winter rye reduces the amount of soil lost to winter erosion more than any other cover crop planted after the harvest does."
           ],
           "answer": "D",
           "types": [
@@ -3382,11 +3382,11 @@
           "stimulus": "Five years ago, bottom trawling was banned throughout Selby Bay, ending a practice that had long torn up the seafloor where cod lay their eggs. Since the ban took effect, the number of juvenile cod counted in the bay's annual survey, which samples the same twenty sites each year, has tripled. Evidently, the ban has allowed the bay's cod population to recover.",
           "stem": "The answer to which one of the following questions most helps in evaluating the argument?",
           "choices": [
-            "Does bottom trawling also damage populations of fish species other than cod that live in Selby Bay?",
+            "Does bottom trawling also harm the populations of fish species other than cod that live in Selby Bay?",
             "Did juvenile cod counts rise as much over the same period in nearby waters where trawling continued?",
             "Was the ban on bottom trawling supported by most of the commercial fishing crews that work in Selby Bay?",
             "Has the cost of enforcing the trawling ban in Selby Bay exceeded the estimates made before it took effect?",
-            "Was bottom trawling banned in Selby Bay before it was banned in any of the other bays in the region?"
+            "Was bottom trawling banned in Selby Bay before it was banned in the region's other bays?"
           ],
           "answer": "B",
           "types": [
@@ -3499,7 +3499,7 @@
           "choices": [
             "The intersections that were converted were chosen at random from among all of the city's four-way-stop intersections.",
             "Many drivers report that they find traffic circles confusing the first few times they drive through them.",
-            "In the year before the conversion, the converted intersections had more collisions than any other intersections in the city.",
+            "In the year before the conversion, the converted intersections had more collisions than any others in the city.",
             "Traffic circles generally cost the city less to maintain each year than the traffic signals at other intersections do.",
             "Some of the collisions that occurred at the converted intersections in the following year involved pedestrians or cyclists."
           ],
@@ -3556,7 +3556,7 @@
           "choices": [
             "Students who practice in only a few long sessions each week do not improve in their playing at all.",
             "Most of the music teacher's students improve more slowly than do the students of most other music teachers.",
-            "A student's schedule is the most important factor in determining how quickly that student's playing improves.",
+            "A student's schedule is the most important factor in how quickly that student's playing improves.",
             "Some of the teacher's students would probably improve faster by spreading the same practice time over more sessions.",
             "The music teacher should require students to practice in short sessions even if doing so is hard to schedule."
           ],
@@ -3662,7 +3662,7 @@
           "choices": [
             "Ortiz has no prior convictions of any kind, and the victim of his theft has been told of the proposed offer. So the prosecutor should offer Ortiz a reduced charge.",
             "Pryce has a prior conviction for fraud, which is not a violent offense. So the prosecutor should not offer Pryce a reduced charge in exchange for a guilty plea.",
-            "Hale has no prior convictions, but the owner of the shop he vandalized has not been told of the offer. So the prosecutor should not yet make Hale the offer.",
+            "Hale has no prior convictions, and the owner of the shop he vandalized has heard nothing about any plea offer. So it would be premature to offer Hale a reduced charge.",
             "Lam's offense had no identifiable victim, though Lam has a prior conviction for assault. So the prosecutor may offer Lam a reduced charge once the community has been consulted.",
             "The victim of Reyes's burglary was told of the proposed offer and objected to it. So the prosecutor should not offer Reyes a reduced charge in exchange for a guilty plea."
           ],
@@ -3671,7 +3671,7 @@
             "principle-apply"
           ],
           "difficulty": 4,
-          "explanation": "The principle states only necessary conditions, so it can justify only a conclusion that an offer should not be made when a condition fails. In C the shop owner, an identifiable victim, has not been told, so the offer should not be made yet. A is the main trap: both conditions are met, but meeting necessary conditions does not show the offer should be made. E is also tempting, but the principle requires only that the victim be told, not that the victim agree; B misapplies it because fraud is not violent; and D gets the assault conviction backward.",
+          "explanation": "The principle gives only necessary conditions: no prior violent conviction and, where there is an identifiable victim, the victim told first. So it can justify only a conclusion that an offer should not be made, at least not yet, when a condition fails. In C the shop owner is an identifiable victim who has heard nothing about any offer, so making the offer now would be premature. A is the trap: Ortiz meets both conditions, but meeting necessary conditions does not show that the offer should be made. E gives the victim a veto the principle never grants, B treats fraud as if it were violent, and D ignores Lam's assault conviction.",
           "skills": [
             "principle",
             "conditional"
@@ -3682,29 +3682,29 @@
             "setup": [
               {
                 "label": "Principle",
-                "text": "Offer reduced charge → no prior violent conviction AND (if identifiable victim) victim informed first. Contrapositive: prior violent conviction OR uninformed identifiable victim → no offer."
+                "text": "Offer a reduced charge → no prior violent conviction; in a case with an identifiable victim, offer → victim informed first."
               },
               {
                 "label": "Application",
-                "text": "Find the case where a necessary condition fails and the conclusion is that the offer should not (yet) be made."
+                "text": "The right answer must conclude that an offer should not be made (or not yet), because one of these conditions fails."
               }
             ],
-            "analysis": "Both conditions are 'only if' conditions. They tell you when not to make an offer, never when you must. So the right answer has to show a condition failing and conclude 'no offer.' Conditions to check: 1. no prior violent conviction; 2. if there's an identifiable victim, the victim has been told.",
+            "analysis": "Both rules are \"only if\" rules, so they give necessary conditions. Contrapositive: violent prior OR (identifiable victim not yet told) → no offer (yet). The principle can never tell you to make an offer; it can only tell you not to. So the right answer must: 1. conclude against an offer, at least for now; 2. rest on a condition that really fails. Most students pick (A) because Ortiz checks every box. It fails because passing \"only if\" conditions just means the offer isn't ruled out; nothing says it should be made. Necessary isn't sufficient. Also watch (C)'s stand-in wording: a shop owner is an identifiable victim, and \"premature\" means \"not yet.\"",
             "choices": [
               {
-                "note": "Tempting, because both conditions are met. But meeting necessary conditions doesn't trigger 'should offer.' The principle never says when an offer is required."
+                "note": "Tempting, and the main trap. Ortiz meets both necessary conditions, so the principle doesn't forbid the offer. But it never says when an offer should be made. This treats necessary conditions as sufficient."
               },
               {
-                "note": "Fraud isn't violent, so condition 1 is met. Nothing in the principle blocks the offer, so it can't justify 'should not.'"
+                "note": "Fraud isn't violent, so the first condition is met and the principle gives no reason to refuse. Misapplied."
               },
               {
-                "note": "CORRECT. The shop owner is an identifiable victim who hasn't been told, so condition 2 fails. The principle says no offer until then: 'not yet' is exactly right."
+                "note": "CORRECT. The shop owner is an identifiable victim and hasn't heard about any offer. The second rule allows an offer only after the victim is told, so making it now is premature. Condition fails → not yet."
               },
               {
-                "note": "Backwards. An assault conviction is a prior violent offense, so the principle rules the offer out. The community consultation is invented."
+                "note": "Lam has a prior assault conviction, a violent offense. The first rule says no offer, consultation or not. This gets the principle backward."
               },
               {
-                "note": "The principle only requires the victim to be informed, not to agree. Here the victim was told, so the principle has nothing against the offer."
+                "note": "The principle requires only that the victim be told, not that the victim agree. This victim was told, so no condition fails. An objection isn't a veto here."
               }
             ]
           }
@@ -3715,9 +3715,9 @@
           "stem": "Which one of the following is an assumption on which the argument depends?",
           "choices": [
             "Sea otters eat more of Calder Sound's sea urchins than does any other predator that lives in the sound.",
-            "Water temperatures in Calder Sound have not changed at all during the twelve years since the otters returned.",
+            "Nothing other than the otters' return has affected the kelp forests in Calder Sound during the past twelve years.",
             "Expanded kelp forests provide the sea otters of Calder Sound with shelter from the predators that hunt them.",
-            "Before the otters returned, sea urchins in the sound were numerous enough to limit the kelp forests' growth.",
+            "Before the otters returned, grazing by sea urchins was among the factors that kept the sound's kelp forests from spreading further.",
             "The sea urchins in Calder Sound eat no food other than kelp, and nothing but otters ever preys on them."
           ],
           "answer": "D",
@@ -3725,7 +3725,7 @@
             "necessary-assumption"
           ],
           "difficulty": 4,
-          "explanation": "The argument's mechanism is that otters reduce urchins, and fewer urchins let kelp grow. If urchins were too few before the otters returned to hold the kelp back (the negation of D), removing some of them could not explain the expansion. B is tempting, but a temperature change need not have affected kelp, so the argument does not require that temperatures stayed exactly constant. A and E are stronger than the argument needs, and C reverses the relationship.",
+          "explanation": "The argument's mechanism is otters → fewer urchins → more kelp. That works only if urchins were actually holding the kelp back before the otters came. Negate D and urchin grazing never limited the kelp, so removing urchins could not explain the expansion. B is the trap: it rules out every other influence, which sounds like the standard alternative-cause assumption, but the conclusion says only that the otters were probably the main reason, so other factors could have played some part. A and E are also stronger than needed, and C runs the relationship backward.",
           "skills": [
             "causal"
           ],
@@ -3744,23 +3744,23 @@
                 "text": "Otters returned twelve years ago; otters eat urchins and urchins eat kelp; since then kelp area has more than doubled."
               }
             ],
-            "analysis": "The chain is otters → fewer urchins → more kelp. Every link has to hold. What if urchins were never numerous enough to hurt the kelp? Then eating some of them changes nothing, and the otters can't be the reason. We need an answer that says urchins were actually holding the kelp back before.",
+            "analysis": "The chain is otters → fewer urchins → more kelp. Every link has to hold. What if urchins were never holding the kelp back? Then eating some of them changes nothing, and the otters can't be the reason. We need an answer that says urchin grazing was actually limiting the kelp before. Most students pick (B) because \"rule out other causes\" is the reflex for any causal argument. It fails because the conclusion only says \"main reason.\" Other things can have nudged the kelp too. Negate (B) and the argument is still standing. A necessary assumption has to be needed, not just helpful.",
             "choices": [
               {
                 "note": "Too strong. Otters don't need to be the top urchin predator, just to cut urchin numbers enough to matter. Negating it doesn't hurt.",
                 "negation": "Some other predator in the sound eats at least as many urchins as the otters do."
               },
               {
-                "note": "Tempting, because a warm-water shift is the obvious alternative cause. But 'not changed at all' is too strong: a small change that didn't affect kelp is fine. Negate it and the argument survives.",
-                "negation": "Water temperatures in Calder Sound have changed at least somewhat during the past twelve years."
+                "note": "Tempting, and the main trap. It looks like the usual \"no other cause\" assumption. But the conclusion is only that otters were the main reason. Something else, like a small temperature shift, could have helped a little. Negate it and the argument survives.",
+                "negation": "Something other than the otters' return has affected the kelp forests in Calder Sound during the past twelve years."
               },
               {
                 "note": "This runs the wrong way: kelp helping otters, not otters helping kelp. Negating it doesn't touch the argument.",
-                "negation": "Expanded kelp forests do not provide the otters with shelter from predators."
+                "negation": "Expanded kelp forests do not provide the otters with shelter from their predators."
               },
               {
-                "note": "CORRECT. Negate it: urchins were too few to limit the kelp. Then fewer urchins can't explain more kelp, and the otter explanation collapses.",
-                "negation": "Before the otters returned, sea urchins in the sound were not numerous enough to limit the kelp forests' growth."
+                "note": "CORRECT. Negate it: urchin grazing wasn't limiting the kelp at all. Then fewer urchins can't explain more kelp, and the otter explanation collapses.",
+                "negation": "Before the otters returned, grazing by sea urchins was not among the factors keeping the kelp forests from spreading further."
               },
               {
                 "note": "Way too strong. Urchins can eat other things and have other predators, and otters can still be the main reason. Negating it is harmless.",
@@ -3776,7 +3776,7 @@
           "choices": [
             "Every chef who completes the Marlow Institute's program learns to make stock from scratch. Petra never completed that program, even though she enrolled in it. So Petra must not know how to make stock from scratch.",
             "Every apartment in the Elgin Building comes with a private balcony. Dev's apartment, which he has rented for six years, has no private balcony. So Dev's apartment must not be in the Elgin Building.",
-            "At Fenwick's, any customer who spends over $100 in one visit gets a discount coupon. Yusuf, a regular there, got a discount coupon last week. So he must have spent over $100 there.",
+            "Yusuf must have spent over $100 on his last visit to Fenwick's, since he left the store with a discount coupon, and Fenwick's gives one to every customer who spends over $100 in a single visit.",
             "Only applicants who pass the entrance exam are admitted to Carlow Academy. Lena, who studied for the exam all summer, was admitted to Carlow Academy this fall. So Lena must have passed the entrance exam.",
             "Most volunteers who attend the orientation session stay with the literacy program for a full year. Malik attended this spring's orientation session. So Malik will probably stay with the program for a full year."
           ],
@@ -3785,7 +3785,7 @@
             "parallel-flaw"
           ],
           "difficulty": 5,
-          "explanation": "The argument treats a sufficient condition (breaking a record guarantees an invitation) as if it were necessary, inferring the record from the invitation; the detail about training is irrelevant. C makes the same error, inferring big spending from the coupon, which may be given for other reasons. D looks identical on the surface, down to the irrelevant detail, but is valid, because 'only' makes passing the exam necessary for admission. A commits a different error (denying the antecedent), B is a valid contrapositive, and E is a reasonable probabilistic inference.",
+          "explanation": "The argument treats a sufficient condition as necessary: breaking a record guarantees an invitation, but an invitation could come for other reasons. C makes the same move, inferring big spending from the coupon, though it states its conclusion first and has no filler detail. D is the trap: it copies the original's order and even its irrelevant detail about hard work, but 'only' makes passing the exam necessary for admission, so its conclusion follows. A negates the condition instead of reversing it, B is a valid contrapositive, and E is a reasonable probabilistic inference.",
           "skills": [
             "conditional"
           ],
@@ -3808,25 +3808,22 @@
                 "text": "X → Y; this one has Y; so this one must have X (affirming the consequent). The training detail is filler."
               }
             ],
-            "analysis": "Breaking a record gets you invited. But that's not the only road to the camp. A coach's pick or a fast time could do it too. The argument reverses the conditional: it treats a sufficient condition as a necessary one. Now find the answer that does the same thing, and watch for the valid lookalike that uses 'only.' Note the filler detail about training: answers have it too, and it doesn't matter.",
+            "analysis": "Breaks a record → invited. Odile was invited. So she broke a record? Not necessarily: there may be other ways to earn an invitation, like a coach's pick or a fast time at a meet. The training detail is filler. We need the same move: X → Y; Y; so X. Most students pick (D) because it looks like a carbon copy, right down to the hard-work filler. But \"only applicants who pass are admitted\" means admitted → passed. Lena was admitted, so she passed. That's valid, so it can't match a flawed argument. Read \"only\" carefully: it marks the necessary condition. The right answer, (C), hides by leading with its conclusion; rearrange it and it's the same skeleton.",
             "choices": [
               {
-                "note": "Different flaw. This negates the conditional (no program → no stock skills) instead of reversing it. Petra may have learned stock elsewhere, but the error has a different shape.",
-                "example": "Pattern: X → Y; not X; so not Y."
+                "note": "A different error: X → Y; not X; so not Y (denying the antecedent). Petra could have learned to make stock somewhere else."
               },
               {
-                "note": "Valid. Elgin → balcony; no balcony; so not Elgin. That's the contrapositive, which is good reasoning.",
-                "example": "Pattern: X → Y; not Y; so not X."
+                "note": "Valid. Every Elgin apartment has a balcony; Dev's doesn't; so it isn't in the Elgin Building. That's a correct contrapositive."
               },
               {
-                "note": "CORRECT. Spends over $100 → coupon; Yusuf got a coupon; so he spent over $100. Same reversal: coupons may go out for other reasons."
+                "note": "CORRECT. Rearranged: spends over $100 → coupon; Yusuf got a coupon; so he spent over $100. Same reversal. Coupons might also go out for birthdays or promotions."
               },
               {
-                "note": "The trap. It looks just like the original, but 'only' flips it: admitted → passed. Lena was admitted, so she passed. That's valid, and the stimulus wasn't."
+                "note": "Tempting, and the main trap. Same order, same filler. But \"only applicants who pass are admitted\" makes passing necessary for admission, so admission proves passing. Valid, so it doesn't share the original's flaw."
               },
               {
-                "note": "A 'most' statement with a 'probably' conclusion. That's a reasonable inference, not a reversed conditional.",
-                "example": "Pattern: Most X are Y; this is X; so it's probably Y."
+                "note": "A modest \"probably\" drawn from a \"most\" premise. That's reasonable, not the same flaw."
               }
             ]
           }
@@ -3839,15 +3836,15 @@
             "It presumes, without providing justification, that heat stroke is more dangerous for older residents than for younger ones.",
             "It treats a factor that makes heat stroke more likely as though it were the only possible cause of heat stroke.",
             "It confuses the claim that most heat stroke patients are over 65 with the claim that most residents over 65 suffer heat stroke.",
-            "It fails to consider what proportion of Fallon County's residents are over the age of 65.",
-            "It fails to consider that some younger residents who suffered heat stroke may also have had other illnesses."
+            "It fails to consider how the number of the county's residents who are over 65 compares with the number who are younger.",
+            "It overlooks the possibility that some of the younger residents treated for heat stroke also had other illnesses."
           ],
           "answer": "D",
           "types": [
             "flaw"
           ],
           "difficulty": 4,
-          "explanation": "That 70 percent of patients were over 65 shows greater risk only if older people make up much less than 70 percent of the population; if most residents are over 65, the figure is unremarkable. D names this missing base rate. C is the tempting trap: it describes a real confusion, but the director never concludes that most older residents get heat stroke, only that they are more likely to than younger residents. Nothing in the argument concerns danger (A), a sole cause (B), or other illnesses (E).",
+          "explanation": "That 70 percent of heat stroke patients were over 65 shows greater risk only if residents over 65 make up well under 70 percent of the population; if most residents are over 65, the figure is unremarkable. D points to that missing comparison of group sizes. C is the trap: it names a real and familiar confusion, but the director never concludes that most older residents get heat stroke, only that they are more likely to than younger residents. Nothing in the argument concerns danger (A), a sole cause (B), or other illnesses (E).",
           "skills": [
             "statistical",
             "comparison"
@@ -3864,29 +3861,29 @@
               },
               {
                 "label": "Reasoning",
-                "text": "70 percent of last summer's heat stroke patients were over 65."
+                "text": "70 percent of last summer's heat stroke patients were over 65; the share was similar the summer before."
               }
             ],
-            "analysis": "70 percent of patients were over 65. Is that a lot? It depends on how many residents are over 65. Imagine a retirement county where 90 percent of residents are over 65: then older people are actually under-represented among patients. A share of the cases tells you nothing about risk until you know each group's share of the population. We need an answer about that base rate.",
+            "analysis": "So what if 70 percent of patients were older? What if 80 percent of the county is over 65? Then older people would actually be under-represented among patients. A share of patients means nothing without the share of the population. It's like saying most car crashes happen under 50 mph, so slow driving is dangerous: most driving is under 50. We need an answer that points at the population base rate. Most students pick (C) because they recognize the classic flip of \"most A are B\" into \"most B are A.\" It fails because the director never says most older residents get heat stroke; the conclusion is comparative. The right answer hides in plain words: \"how the number ... compares\" is the base rate.",
             "choices": [
               {
-                "note": "Danger isn't the claim. The argument is about who is more likely to get heat stroke, not how bad it is.",
-                "example": "Example of this flaw: More older people get heat stroke, so heat stroke must be more deadly for them."
+                "note": "The argument is about how likely heat stroke is, not how dangerous it is. Wrong dimension.",
+                "example": "Example of flaw: Older residents should get first priority for treatment, since heat stroke is surely more harmful to them."
               },
               {
-                "note": "The director never says age is the only cause. Saying older residents are more likely to get it is compatible with many causes.",
-                "example": "Example of this flaw: Older people get heat stroke more, so age is what causes heat stroke."
+                "note": "The director never says age is the only cause; \"more likely\" leaves room for other causes.",
+                "example": "Example of flaw: Smokers get lung disease more often, so smoking must be the only cause of lung disease."
               },
               {
-                "note": "Tempting, because it describes a real reversal people make with percentages. But the director doesn't conclude that most older residents get heat stroke, only that they're more likely to than younger ones. The flaw is a missing base rate, not this reversal.",
-                "example": "Example of this flaw: Most heat stroke patients are over 65, so most people over 65 will get heat stroke."
+                "note": "Tempting, and the main trap. Mixing up \"most patients are old\" with \"most old people are patients\" is a real flaw, but this argument doesn't make it. The director's conclusion is comparative: older residents are more likely to get heat stroke than younger ones. No claim about most older residents.",
+                "example": "Example of flaw: Most lottery winners buy tickets every week, so most people who buy tickets every week win the lottery."
               },
               {
-                "note": "CORRECT. Without the share of residents over 65, the 70 percent figure can't show higher risk. If 80 percent of residents are over 65, the older group is actually doing better."
+                "note": "CORRECT. The patient share shows higher risk only if older residents are a smaller share of the population. If the county is mostly over 65, a 70 percent patient share is no surprise. Comparing the two groups' sizes is the base rate."
               },
               {
-                "note": "Other illnesses among younger patients don't affect the comparison. Irrelevant.",
-                "example": "Example of this flaw: Younger patients were sicker to begin with, so their heat stroke doesn't count."
+                "note": "Other illnesses among younger patients don't affect the age comparison. If anything they'd make younger residents look riskier, not safer.",
+                "example": "Example of flaw: Ten runners collapsed in the heat, so the heat caused every collapse, though several runners had heart conditions."
               }
             ]
           }
@@ -3899,15 +3896,15 @@
             "Any court ruling that sets out specialists' competing views in plain language is explained in terms that ordinary citizens can follow.",
             "A court ruling that is explained in terms that ordinary citizens can follow deserves the confidence of the public.",
             "Most court rulings that turn on a dispute among specialists fail to set out the specialists' views in plain language.",
-            "The forensic experts in the Marsh case disagreed with each other about matters that ordinary citizens could not follow.",
-            "The appellate court's ruling in the Marsh case turned on a dispute between the two sides' forensic experts."
+            "The forensic experts in the Marsh case disagreed with one another about matters that ordinary citizens could not easily follow.",
+            "What the appellate court decided in the Marsh case depended on which side's forensic experts had the better of their dispute."
           ],
           "answer": "E",
           "types": [
             "sufficient-assumption"
           ],
           "difficulty": 5,
-          "explanation": "The second rule applies only to rulings that turn on a dispute among specialists. If the Marsh ruling did (E), then because the experts' views were not set out plainly, the ruling was not explained in followable terms, and by the first rule it does not deserve confidence. D is the most attractive trap: it says the experts disagreed, but not that the ruling turned on their dispute, so the second rule still is not triggered. A and B reverse the stated conditionals, and C's 'most' says nothing about this case.",
+          "explanation": "The second rule applies only to a ruling that turns on a dispute among specialists. E says, in other words, that the Marsh ruling did: the outcome depended on which side's forensic experts were right. Then, since the experts' views were not set out plainly, the ruling was not explained in followable terms, and by the first rule it does not deserve confidence. D is the trap: it shows the experts disagreed, but not that the ruling turned on their dispute, so the second rule is never triggered. A and B reverse the stated conditionals, and C's 'most' says nothing about this case.",
           "skills": [
             "conditional"
           ],
@@ -3921,25 +3918,25 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Deserves confidence → explained in followable terms; turns on specialist dispute AND views not set out plainly → not explained in followable terms; Marsh court didn't set out the experts' views plainly."
+                "text": "Deserves confidence → explained in followable terms; for a ruling that turns on a specialist dispute, followable → specialists' views set out plainly; the Marsh court did not set out either side's forensic experts' views plainly."
               }
             ],
-            "analysis": "Run the chain backward from the conclusion. To show 'no confidence,' we need 'not explained in followable terms.' To get that from rule 2, we need two things: the ruling turned on a specialist dispute, and the views weren't set out plainly. We have the second. The missing piece is the first: Marsh turned on a specialist dispute → not followable → no confidence. Here the answer is a fact, not a rule, which makes it easy to skip.",
+            "analysis": "Chain it. Rule 2, contrapositive: turns on a specialist dispute AND views not set out plainly → not followable. Rule 1, contrapositive: not followable → no confidence. Marsh: views not set out plainly. What's missing? Whether the Marsh ruling turned on a dispute among specialists at all. Without that, rule 2 never kicks in. Full chain: Marsh turned on expert dispute + views not set out → not followable → no confidence. Most students pick (D) because it puts the experts in a dispute about hard matters, which feels like the missing piece. It fails because experts disagreeing isn't the ruling turning on their disagreement; the court could have decided on other grounds. (E) hides behind a paraphrase: \"depended on which side's experts had the better of their dispute\" means \"turned on a dispute among specialists.\"",
             "choices": [
               {
-                "note": "This reverses rule 2 (plain views → followable). Rule 2 says you need plain views; it doesn't say they're enough. And it doesn't help, because Marsh lacked plain views anyway."
+                "note": "Reverses rule 2. Setting out the views plainly is necessary for a followable explanation; this makes it sufficient. It's also about rulings that DO set them out, and Marsh didn't."
               },
               {
-                "note": "This reverses rule 1 (followable → confidence). We need to prove no confidence, so a rule about when confidence is earned doesn't help."
+                "note": "Reverses rule 1. Being followable is necessary for confidence, not sufficient. And it only tells us about followable rulings, while we're trying to show Marsh isn't one."
               },
               {
-                "note": "'Most' rulings tell us nothing certain about this one, and the stimulus already says Marsh lacked plain views."
+                "note": "\"Most\" rulings tells us nothing about Marsh. A sufficient assumption has to lock in this case."
               },
               {
-                "note": "Tempting. It mentions a disagreement, so it feels like the trigger. But experts can disagree without the ruling turning on their dispute. Rule 2 still isn't triggered."
+                "note": "Tempting, and the main trap. There's a dispute in the case, but rule 2 needs the RULING to turn on it. The court might have decided Marsh on a procedural point. Then rule 2 doesn't apply and the conclusion doesn't follow."
               },
               {
-                "note": "CORRECT. This triggers rule 2: the ruling turned on a specialist dispute and the views weren't set out plainly, so it wasn't followable; by rule 1, no confidence."
+                "note": "CORRECT. If the decision depended on which experts were right, the ruling turned on a specialist dispute. Rule 2 plus the unexplained views → not followable; rule 1 → no public confidence."
               }
             ]
           }
@@ -3999,18 +3996,18 @@
           "stimulus": "Museum director: The Halvorsen Museum should not lend its fragile, one-of-a-kind medieval tapestry to the touring exhibition, even though the tour would let many thousands of people see the tapestry who otherwise never would. Each move exposes the tapestry to a small but real risk of irreparable damage, and once it is damaged, no future visitor will ever see it as it is now.",
           "stem": "Which one of the following principles, if valid, most helps to justify the museum director's argument?",
           "choices": [
-            "A museum should lend its works only to exhibitions organized by institutions with recognized expertise in the conservation of textiles.",
-            "Museums should make the works in their collections accessible to as many people as they reasonably can.",
-            "A museum should not lend a work if conditions in the borrowing institution's galleries could damage the work.",
-            "The risk of damage to a work of art should be weighed against the educational benefit of showing it to new audiences.",
-            "No irreplaceable work should be exposed to any risk of permanent damage merely so that more people can see it."
+            "A museum should lend its works only to exhibitions organized by institutions with a recognized expertise in the conservation of fragile textiles.",
+            "Museums should make the works in their collections accessible to as many members of the public as they reasonably can.",
+            "A museum should not lend a work if conditions in the galleries of the borrowing institution could damage the work.",
+            "The risk of damage to a work should be weighed against the benefit of showing it to new audiences.",
+            "Wider viewing now never justifies even a small risk that later viewers can no longer see a work as it is."
           ],
           "answer": "E",
           "types": [
             "principle-strengthen"
           ],
           "difficulty": 4,
-          "explanation": "The director concedes the tour's benefit, wider viewing, but holds that a small risk of irreparable damage to a unique work outweighs it. E states that principle exactly, so the conclusion follows. D is the attractive trap: it describes weighing risk against benefit, but it does not say which way the balance comes out, so it cannot justify refusing the loan. C concerns the borrower's galleries, while the director's concern is the moves themselves; A turns on facts the stimulus never gives; and B supports lending.",
+          "explanation": "The director concedes the tour's benefit, wider viewing, but holds that a small risk of irreparable damage outweighs it, since damage would mean no later visitor could see the tapestry as it now is. E states that trade-off as a rule about later viewers, which is exactly the director's reason. D is the trap: it describes weighing risk against benefit, which the director does, but it does not say which way the balance comes out, so it cannot justify refusing the loan. C concerns the borrower's galleries, while the director worries about the moves; A turns on facts the stimulus never gives; and B supports lending.",
           "skills": [
             "principle"
           ],
@@ -4024,25 +4021,25 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Many more people would see it (conceded benefit); each move carries a small but real risk of irreparable damage to a unique work."
+                "text": "The tour would let many thousands more people see it (concession); each move carries a small but real risk of irreparable damage; once damaged, no future visitor will see it as it is now."
               }
             ],
-            "analysis": "The director admits the upside and refuses anyway, because the risk is small but permanent and the work can't be replaced. A principle-justify answer has to tell you to do what the conclusion says. We need: irreplaceable work + any risk of permanent damage + only benefit is more viewers → don't lend.",
+            "analysis": "Why should a small risk beat thousands of viewers? The director's answer is the future: damage is forever, and every later visitor loses out. We need a principle that says that kind of risk outweighs wider viewing now. Most students pick (D) because \"weigh risk against benefit\" sounds like exactly what the director did. It fails because a weighing rule doesn't say which side wins; you could weigh and decide to lend. A principle-justify answer has to tell you to do what the conclusion says. The right answer talks about \"later viewers\" instead of the tapestry, so it can look off-topic at first.",
             "choices": [
               {
-                "note": "Partial match. We don't know who organized the tour or whether they have conservation expertise, so this can't decide the case."
+                "note": "The stimulus says nothing about who organized the tour or their textile expertise. We can't apply this."
               },
               {
-                "note": "Opposite. This pushes toward lending the tapestry."
+                "note": "Opposite. This supports lending."
               },
               {
-                "note": "Tempting, but the director's worry is the moving, not the galleries at the other end. We're told nothing about the borrowers' conditions."
+                "note": "The director's worry is the moves themselves, not the borrower's galleries. Wrong source of risk."
               },
               {
-                "note": "Tempting. It names the right two factors, but it doesn't say which wins. A principle that only says 'weigh them' can't justify 'don't lend.'"
+                "note": "Tempting, and the main trap. The director does weigh risk against benefit. But this principle doesn't say which way the scale tips, so it can't get you to \"don't lend.\""
               },
               {
-                "note": "CORRECT. Irreplaceable work, a real risk of permanent damage, and the only gain is more viewers. The principle says don't, which is the director's conclusion."
+                "note": "CORRECT. The tour lets more people see the tapestry now; each move risks damage that would keep later viewers from ever seeing it as it is. The principle says that's never worth it, so don't lend."
               }
             ]
           }
@@ -4055,7 +4052,7 @@
             "Most of the musicians in the Fairview orchestra studied at a conservatory. Most musicians who studied at a conservatory can sight-read difficult scores. So some musicians in the Fairview orchestra can sight-read difficult scores.",
             "Every bicycle sold at Corliss Cycles comes with a one-year warranty. Most bicycles that come with a one-year warranty are made overseas. So some of the bicycles sold at Corliss Cycles are made overseas.",
             "Most of the novels on this year's prize shortlist were written by first-time authors. Some first-time authors have received writing grants. So some novels on the shortlist were written by authors who received writing grants.",
-            "Most restaurants that passed last month's health inspection were also inspected the year before. Every restaurant inspected the year before got a reminder notice. So some restaurants that passed last month's inspection got a reminder notice.",
+            "Some restaurants that passed last month's health inspection got a reminder notice from the city. After all, most restaurants that passed were also inspected the year before, and every restaurant inspected the year before got one.",
             "Every greenhouse at the Ames nursery is heated entirely by solar panels. No greenhouse that is heated entirely by solar panels needs a backup generator. So none of the greenhouses at the Ames nursery needs a backup generator."
           ],
           "answer": "D",
@@ -4063,7 +4060,7 @@
             "parallel"
           ],
           "difficulty": 5,
-          "explanation": "The argument is valid: most A are B, every B is C, so some A are C. D has exactly this form (most restaurants that passed were inspected the year before; every one inspected then got a notice; so some that passed got a notice). A is the most tempting trap because it also concludes 'some,' but its second premise says 'most' rather than 'every,' and two 'most' statements need not overlap, so it is invalid. B and C are likewise invalid, and E is valid but has a different, all-and-none form.",
+          "explanation": "The argument is valid: most A are B, every B is C, so some A are C. D has exactly this form once it is rearranged: it gives its conclusion first, then 'most that passed were inspected the year before' and 'every restaurant inspected the year before got a notice.' A is the trap: it matches the original's order and also concludes 'some,' but its second premise says 'most' rather than 'every,' and two 'most' statements need not overlap, so it is invalid. B and C are likewise invalid, and E is valid but has a different, all-and-none form.",
           "skills": [
             "conditional"
           ],
@@ -4073,37 +4070,33 @@
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Some sprayed orchards got a premium price."
+                "text": "Some orchards sprayed with kaolin clay got a premium price."
               },
               {
                 "label": "Reasoning",
-                "text": "Most sprayed orchards had little sunburn; every little-sunburn orchard got a premium price."
+                "text": "Most sprayed orchards had little sunburn damage; every orchard with little sunburn damage got a premium price."
               },
               {
                 "label": "Pattern",
                 "text": "Most A are B; all B are C; so some A are C (valid)."
               }
             ],
-            "analysis": "Diagram it: most A are B, all B are C. The 'most' A that are B all inherit C, so at least some A are C. That's valid. Now check each answer's quantifiers in order. The trap is an answer that swaps one 'every' for 'most': two 'most' groups can miss each other entirely. Imagine 10 musicians, 6 from a conservatory, and the sight-readers are other conservatory grads entirely.",
+            "analysis": "Is it valid? Yes. The A's that are B (most of them) are all C, because every B is C, so at least some A's are C. We need another valid \"most + every → some\" argument. Most students pick (A) because it reads in the same order and ends with the same \"some.\" But its second link is \"most,\" not \"every.\" Two \"mosts\" can miss each other: the orchestra's conservatory graduates could be the ones who can't sight-read. The right answer, (D), states its conclusion first and its premises after \"After all.\" Rearrange before you match.",
             "choices": [
               {
-                "note": "Tempting: same 'most' start and 'some' conclusion. But the second premise is 'most,' not 'every.' The orchestra's conservatory grads could all be in the minority who can't sight-read. Invalid.",
-                "example": "Pattern: Most A are B; most B are C; so some A are C."
+                "note": "Tempting, and the main trap. Same order, same \"some\" conclusion. But \"most\" in the second premise breaks it: the orchestra's conservatory graduates could all be in the minority who can't sight-read. Invalid, so not parallel to a valid argument."
               },
               {
-                "note": "Order and quantifiers are off: 'every' then 'most.' Corliss bikes could all be among the warrantied bikes made at home. Invalid.",
-                "example": "Pattern: All A are B; most B are C; so some A are C."
+                "note": "Every A is B; most B are C; so some A are C. Invalid: the Corliss bikes could all be among the warranty bikes made at home."
               },
               {
-                "note": "'Some' first-time authors got grants, and they need not be the ones on the shortlist. Invalid, and the wrong quantifier.",
-                "example": "Pattern: Most A are B; some B are C; so some A are C."
+                "note": "\"Some first-time authors\" got grants, but they need not be the shortlisted ones. Invalid."
               },
               {
-                "note": "CORRECT. Most A (passed last month) are B (inspected the year before); every B got a notice (C); so some A are C. Same quantifiers, same order, same valid inference."
+                "note": "CORRECT. Rearranged: most that passed were inspected the year before; every one inspected the year before got a notice; so some that passed got a notice. Most A are B, all B are C, so some A are C."
               },
               {
-                "note": "Valid, but a different form: all A are B, no B are C, so no A are C. No 'most,' and a negative conclusion.",
-                "example": "Pattern: All A are B; no B are C; so no A are C."
+                "note": "Valid, but a different shape: all A are B, no B is C, so no A is C. No \"most,\" no \"some.\""
               }
             ]
           }

@@ -1,6 +1,6 @@
 {
   "format": "lsat-trainer/v1",
-  "id": "classic-style-test-4-v3",
+  "id": "classic-style-test-4-v4",
   "name": "Classic-Style Test 4",
   "number": 4,
   "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
@@ -19,8 +19,8 @@
             "Swallows at the pump house tend to lay their eggs earlier in the season than do swallows at the footbridge.",
             "Rats are known to eat the eggs and nestlings of many kinds of birds, including several species of swallow.",
             "Far more people walk past the footbridge nests each day than walk past the nests under the pump-house eaves.",
-            "Footbridge nests fitted with rat guards last year fledged about as many chicks per nest as pump-house nests did.",
-            "Some swallows that nest at the pump house in one year nest at the footbridge in the next."
+            "Footbridge nests with rat guards last year fledged about as many chicks per nest as pump-house nests did.",
+            "Some swallows that nest at the pump house in one year go on to nest at the footbridge in the next."
           ],
           "answer": "D",
           "types": [
@@ -71,7 +71,7 @@
           "stimulus": "Moreno: The warehouse workers’ union should accept the company’s contract offer. It raises wages 4 percent a year for three years, which is more than workers at any other warehouse in the region received in their most recent contracts.\n\nLyle: That raise is certainly generous. But the offer also lets the company require overtime on only one day’s notice, and workers with young children cannot arrange child care that quickly. The union should reject the offer unless that clause is removed.",
           "stem": "Moreno and Lyle disagree over whether",
           "choices": [
-            "the wage increase in the company’s offer is larger than the increases recently received by other warehouse workers in the region",
+            "the offered wage increase is larger than the increases that other warehouse workers in the region recently received",
             "workers with young children would have difficulty arranging child care on one day’s notice",
             "the union should accept the company’s offer in its current form",
             "the company would agree to remove the overtime clause from its offer",
@@ -180,8 +180,8 @@
           "choices": [
             "the blasting at the quarry has made sinkholes in Corbin more frequent than they would otherwise be",
             "the quarry’s blasting is probably not what is causing Corbin’s sinkholes",
-            "sinkholes will stop opening in Corbin once the quarry closes",
-            "no human activity contributes to the formation of sinkholes",
+            "sinkholes will stop opening in Corbin once the quarry closes for good",
+            "no human activity of any kind contributes to the formation of sinkholes",
             "the bedrock beneath Corbin is dissolving faster now than it did a century ago"
           ],
           "answer": "B",
@@ -227,11 +227,11 @@
           "stimulus": "Since the thermostat on Tavola Pizzeria’s only oven began malfunctioning, causing the oven to run considerably hotter than its setting, the restaurant has had to throw out many overcooked trays of roasted vegetables. Yet over the same period, customers have rated Tavola’s pizza crusts much more highly than before, even though the pizzas are baked in the same oven.",
           "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
           "choices": [
-            "Customers who order pizza at Tavola seldom order roasted vegetables.",
+            "Customers who order pizza at Tavola seldom also order the roasted vegetables served there.",
             "Since the malfunction began, Tavola’s cooks have been checking pizzas more often while they bake.",
-            "Tavola’s pizza recipe calls for an oven temperature well below the temperature at which pizza crust crisps and browns best.",
+            "Tavola’s pizza recipe calls for an oven temperature well below the one at which crust crisps and browns best.",
             "Tavola has raised the prices on its menu to cover the cost of the vegetables it has had to discard.",
-            "Many pizzerias use separate ovens for pizzas and for roasted dishes."
+            "Many pizzerias use one oven for their pizzas and a separate oven for roasted dishes."
           ],
           "answer": "C",
           "types": [
@@ -277,9 +277,9 @@
           "stem": "Which one of the following most accurately expresses the overall conclusion drawn in the urban planner’s argument?",
           "choices": [
             "Halvern’s downtown streets were designed as one-way pairs in order to move commuter traffic quickly.",
-            "Several cities near Halvern have recently converted one-way streets back to two-way traffic.",
+            "Several cities near Halvern have recently converted their one-way streets back to two-way traffic.",
             "The one-way design of Halvern’s downtown streets no longer serves the purpose for which it was adopted.",
-            "Two-way streets slow cars enough to make downtown sidewalks more inviting to shoppers.",
+            "Two-way streets slow cars enough to make the downtown sidewalks more inviting to shoppers.",
             "Pike and Orrin Streets in Halvern ought to be converted to two-way traffic."
           ],
           "answer": "E",
@@ -328,10 +328,10 @@
           "stimulus": "Many older customers of Linden Street Pharmacy have trouble opening child-resistant medicine bottles, and some of them stop taking their medications as a result. Any customer can ask for easy-open caps instead, but few customers know this. So if the pharmacy posts signs at its counter announcing that easy-open caps are available on request, fewer of its older customers will stop taking their medications.",
           "stem": "Which one of the following is an assumption required by the argument?",
           "choices": [
-            "Most older customers who stop taking their medications do so mainly because they cannot open the child-resistant bottles.",
+            "Most older customers who stop taking their medications do so mainly because they are unable to open the child-resistant bottles.",
             "Some older customers who have trouble opening child-resistant bottles would notice the signs and ask for easy-open caps.",
             "Easy-open caps cost the pharmacy no more than child-resistant caps do.",
-            "Older customers are more likely than younger customers to stop taking their prescribed medications.",
+            "Older customers are more likely than younger customers to stop taking the medications that have been prescribed to them.",
             "Signs at the counter are the most effective way to let customers know that easy-open caps are available on request."
           ],
           "answer": "B",
@@ -387,10 +387,10 @@
           "stem": "The reasoning in the marketing director’s argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
             "treats a feature shared by all the bestselling novels as enough to make a novel a bestseller",
-            "draws a conclusion about all novels from a sample consisting only of novels by debut authors",
+            "draws a conclusion about all novels from a sample that consists only of the novels of debut authors",
             "fails to consider that the Coastal Booksellers list might not accurately reflect how well novels actually sell",
             "takes for granted that Pellbrook’s debut novelists would be willing and able to go on podcast tours this spring",
-            "presumes, without providing justification, that podcast tours are more effective than other forms of book promotion"
+            "presumes, without providing justification, that podcast tours are more effective than the other forms of book promotion that are available"
           ],
           "answer": "A",
           "types": [
@@ -501,7 +501,7 @@
             "The steward approved Ilse’s leave in some month other than December.",
             "Every worker with at least three years of seniority who requested a leave outside December last year had the leave approved.",
             "Any worker who took an unpaid leave of two weeks or less last year did so without the steward’s approval.",
-            "None of the days of Ilse’s leave last year fell in December.",
+            "None of the days of the unpaid leave that Ilse took last year fell in the month of December.",
             "Ilse’s leave was the longest unpaid leave taken by any foundry worker last year."
           ],
           "answer": "D",
@@ -600,7 +600,7 @@
           "stimulus": "Preservationist: Councilor Brandt proposes protecting from demolition every building in Oakhurst that is more than fifty years old, on the grounds that age alone gives a building historic value. But under that standard, the cinder-block bus garage put up on Mercer Road in 1968 would merit the same protection as the town’s colonial courthouse. No one seriously regards that garage as a landmark. So age alone cannot be what gives a building historic value.",
           "stem": "The claim that the bus garage would merit the same protection as the colonial courthouse plays which one of the following roles in the preservationist’s argument?",
           "choices": [
-            "It is presented as a consequence of Councilor Brandt’s standard that the preservationist takes to be unacceptable.",
+            "It is a consequence of Councilor Brandt’s standard that the preservationist takes to be unacceptable.",
             "It is the conclusion that the preservationist’s argument is designed to establish.",
             "It is a premise that Councilor Brandt offers in support of the proposal.",
             "It is offered as evidence that the courthouse has less historic value than is commonly believed.",
@@ -657,7 +657,7 @@
             "Patients who refill their blood-pressure prescriptions on time suffer fewer strokes than patients who do not.",
             "Most patients collect all their prescriptions in one pharmacy visit, which those short of money delay because their other drugs still cost money.",
             "The free drug is as effective as the more expensive blood-pressure drugs that Calloway’s physicians sometimes prescribe.",
-            "Some patients who fail to refill their prescriptions on time do so simply because they lose track of when each refill is due."
+            "Some patients who fail to refill their prescriptions on time do so simply because they lose track of when each of their refills is due."
           ],
           "answer": "C",
           "types": [
@@ -702,11 +702,11 @@
           "stimulus": "Publisher: Over four decades, our press built its reputation on accuracy, and we should not put that reputation at risk. Dr. Ames’s history of Harrow Lake is lively and well organized, but it makes many claims about local families that no one has checked against public records. So we should not publish the book in its current form.",
           "stem": "The conclusion of the publisher’s argument can be properly drawn if which one of the following is assumed?",
           "choices": [
-            "Publishing a book that contains factual errors would put the press’s reputation for accuracy at risk.",
-            "The press should not publish a book containing claims about local families unless those claims have been checked against public records.",
-            "Most histories of small communities contain at least some errors about local families.",
+            "Publishing a book that contains factual errors would put the press’s long-standing reputation for accuracy at risk.",
+            "The press should publish no book containing claims about local families unless those claims were checked against public records.",
+            "Most published histories of small communities contain at least some errors concerning local families.",
             "Any book whose claims about local families have been checked against public records is accurate enough for the press to publish.",
-            "Dr. Ames did not consult any public records while writing his history of Harrow Lake."
+            "Dr. Ames did not consult any public records at all while writing his history of Harrow Lake."
           ],
           "answer": "B",
           "types": [
@@ -755,11 +755,11 @@
           "stimulus": "Ten years ago, Wexley ranked third among the region’s twelve cities in the percentage of commuters who travel to work by bicycle, a figure the regional transit authority publishes each year. This year it ranked seventh. Clearly, then, the millions of dollars that Wexley spent building protected bike lanes during the past decade did not prevent bicycle commuting in Wexley from declining.",
           "stem": "The reasoning in the argument is flawed in that the argument",
           "choices": [
-            "fails to consider that bike lanes might provide benefits other than an increase in bicycle commuting",
-            "overlooks the possibility that bicycle commuting in Wexley would have fallen even further without the new bike lanes",
-            "presumes, without providing justification, that the region’s other cities spent less on bike lanes than Wexley did",
-            "ignores the possibility that Wexley’s population grew more slowly over the decade than the populations of other cities in the region",
-            "takes for granted that because Wexley fell in the ranking, the percentage of its commuters who bike must have fallen"
+            "fails to consider that protected bike lanes might provide benefits to the city other than an increase in bicycle commuting",
+            "overlooks the possibility that bicycle commuting in Wexley would have fallen even further had the new bike lanes not been built",
+            "presumes, without providing justification, that the region’s other cities spent less on bike lanes than Wexley spent",
+            "ignores the possibility that Wexley’s population grew more slowly over the decade than did the populations of the other cities",
+            "infers that Wexley’s own share of commuters who bike fell from a decline in how that share compares with other cities’ shares"
           ],
           "answer": "E",
           "types": [
@@ -770,41 +770,42 @@
             "comparison"
           ],
           "flaws": [
-            "scope-shift"
+            "scope-shift",
+            "percent-number"
           ],
           "difficulty": 4,
-          "explanation": "Dropping from third to seventh shows only that other cities now outrank Wexley; Wexley’s own bicycle share could have stayed level or risen while several other cities rose faster, so (E) names the flaw. (B) is the strongest trap, but the conclusion is only that the spending did not prevent a decline; if a decline happened, that is true even if things would have been worse without the lanes. (D) is irrelevant because the ranking is by percentage, which already adjusts for population.",
+          "explanation": "Falling from third to seventh shows only that more cities now have higher bike shares than Wexley; Wexley’s own share could have held steady or risen while others rose faster, and (E) names that relative-to-absolute slip. (B) is the dominant trap, but it describes a flaw the argument does not commit: the conclusion is only that the spending did not prevent a decline, which is true whenever a decline happened, even if things would have been worse without the lanes. (D) is irrelevant because the ranking is by percentage, which already adjusts for population.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The bike-lane spending didn’t prevent bicycle commuting in Wexley from declining."
+                "text": "The bike-lane spending did not prevent bicycle commuting in Wexley from declining."
               },
               {
                 "label": "Reasoning",
-                "text": "Wexley fell from third to seventh in the region in percentage of commuters who bike."
+                "text": "Wexley fell from third to seventh of twelve cities in the percentage of commuters who bike."
               }
             ],
-            "analysis": "Did biking in Wexley actually go down? All we know is its rank dropped. Rankings are relative. Picture it: Wexley went from 8 percent to 10 percent, but four other cities jumped from 6 to 12. Wexley slides to seventh while its biking grows. Moving down a ranking isn’t an absolute decrease; that’s a classic trap, know it. We need an answer that says the argument treats a lower rank as a lower percentage.",
+            "analysis": "Did biking in Wexley actually go down? All we know is that its rank dropped, and rankings are relative. Picture it: Wexley goes from 8 percent to 10 percent while four other cities jump from 6 to 12. Wexley slides to seventh while its biking grows. Moving down a ranking isn’t an absolute decrease; that’s a classic slip, know it. We need an answer that says the argument reads a lower rank as a lower percentage. Most students pick (B), because ‘it would have been even worse without the lanes’ is the textbook objection to any before-and-after policy argument. It fails here because the conclusion is only that the lanes didn’t PREVENT a decline; if commuting fell at all, that’s true whether or not it would have fallen further. The right answer (E) hides behind abstract wording: ‘how that share compares with other cities’ shares’ is just the ranking.",
             "choices": [
               {
-                "note": "Irrelevant. The conclusion is only about whether biking declined, not whether the lanes were worthwhile overall.",
-                "example": "Example of this flaw: The bike lanes didn’t raise cycling, so they were a total waste of money."
+                "note": "So? The argument never says the lanes were worthless. It says only that they didn’t stop a decline. Other benefits don’t touch that.",
+                "example": "Example of this flaw: The new stadium didn’t raise tax revenue, so it did the city no good at all."
               },
               {
-                "note": "Tempting, because it sounds like the classic ‘it could have been worse’ objection. But the conclusion only says the spending didn’t prevent a decline. If biking declined, that’s true even if it would have fallen further without the lanes. The real problem is that we don’t know there was any decline.",
-                "example": "Example of this flaw: Since we hired more police, crime rose 5 percent, so the hiring increased crime, even though crime might have risen 20 percent without it."
+                "note": "Tempting. It’s the standard counterfactual objection, and it sounds like the right criticism of a policy argument. But read the conclusion: the spending ‘did not prevent’ a decline. If commuting fell, the lanes didn’t prevent the fall, even if things would have been worse without them. The argument doesn’t need to deny (B), so (B) isn’t its flaw.",
+                "example": "Example of this flaw: Burglaries rose after we hired more officers, so hiring them made no difference to burglaries."
               },
               {
-                "note": "The argument doesn’t compare spending among cities at all. Nothing in it depends on what others spent.",
-                "example": "Example of this flaw: Wexley outspent everyone on bike lanes, so it must have the most cyclists."
+                "note": "Irrelevant. What other cities spent has nothing to do with whether Wexley’s own bike share fell.",
+                "example": "Example of this flaw: Our school’s test scores beat Lakeside’s, so our school must spend more per student."
               },
               {
-                "note": "Irrelevant. The ranking is by percentage of commuters, which already adjusts for population size. Population growth doesn’t affect it.",
-                "example": "Example of this flaw: Wexley has more cyclists than Tull, so a larger share of Wexley’s commuters must bike."
+                "note": "The ranking is by percentage of commuters, which already adjusts for population size. How fast the population grew explains nothing here.",
+                "example": "Example of this flaw: Our town has more car accidents than the village next door, so our drivers are worse."
               },
               {
-                "note": "CORRECT. A drop in rank shows only that other cities passed Wexley. Wexley’s own percentage could have held steady or even risen."
+                "note": "CORRECT. ‘How that share compares with other cities’ shares’ is the ranking. The argument infers that Wexley’s own share fell from the fact that its rank fell, but the rank can drop while the share holds steady or rises."
               }
             ]
           }
@@ -922,14 +923,14 @@
         },
         {
           "number": 18,
-          "stimulus": "In 1987 the sawmills of the Brisco Valley cut their workers’ wages by 15 percent. Over the next two years, nearly a third of the mills’ experienced workers left for jobs elsewhere, many of them outside the valley, and the mills’ output fell sharply as less experienced crews took their place. Clearly, the wage cut was responsible for the mills’ loss of experienced workers.",
+          "stimulus": "Each spring the frogs of Harlan Pond begin their mating calls within two days of the same calendar date, even though the date on which the pond’s ice melts varies by as much as three weeks from one year to the next. Since the frogs’ start date does not track the melting of the ice, the frogs must be timing their calls by an internal clock rather than by any cue from their surroundings.",
           "stem": "Which one of the following is an assumption required by the argument?",
           "choices": [
-            "Most of the experienced workers who left the mills took jobs that paid more than the mills had paid before the wage cut.",
-            "The sharp fall in the mills’ output was caused mainly by the departure of experienced workers.",
-            "Many of the experienced workers who left the mills in those two years would not have left had their wages not been cut.",
-            "No experienced workers had left the mills during the years before the wage cut.",
-            "The wage cut at the Brisco Valley mills was larger than any wage cut made by other employers in the region at that time."
+            "Any frog population that times its mating calls by an internal clock starts calling within a few days of the same date every year.",
+            "Frogs in ponds where the ice melts at about the same time each year also begin calling on a consistent date each spring.",
+            "Nothing in the pond or its surroundings that the frogs are able to detect changes on nearly the same date each spring.",
+            "The temperature of the water in Harlan Pond plays no role at all in determining the date on which the frogs begin calling.",
+            "The date on which Harlan Pond’s ice melts has no influence on when the pond’s frogs lay their eggs."
           ],
           "answer": "C",
           "types": [
@@ -942,39 +943,39 @@
             "causation"
           ],
           "difficulty": 4,
-          "explanation": "To blame the departures on the wage cut, the argument must assume they would not have happened anyway; if nearly all those workers would have left even without the cut, the cut wasn’t responsible, so (C) is required. (D) is the most tempting trap, but it is too strong: some workers could have left before the cut and the cut could still explain the later wave. (B) concerns output, which the conclusion doesn’t address, and (A) requires ‘most,’ which goes beyond what the argument needs.",
+          "explanation": "The argument rules out the ice as a cue and then concludes that no outside cue is involved. That leap requires that nothing detectable in the surroundings changes on a fixed date each year, because such a feature (day length, for instance) could produce a fixed calling date with no internal clock; that is (C). (D) is the dominant trap, but it is too strong: water temperature could nudge the date within the two-day window while a clock does the main timing. (A) reverses the reasoning, which runs from a fixed date to a clock, not from a clock to a fixed date.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The wage cut caused the mills’ loss of experienced workers."
+                "text": "The frogs time their calls by an internal clock, not by any cue from their surroundings."
               },
               {
                 "label": "Reasoning",
-                "text": "Wages were cut 15 percent in 1987; over the next two years nearly a third of experienced workers left and output fell."
+                "text": "The frogs start calling within two days of the same date every year; the ice-melt date varies by up to three weeks, so the calls don’t track the ice."
               }
             ],
-            "analysis": "Would those workers have left anyway? Maybe a big new employer opened nearby, or the mills were rumored to be closing. To blame the wage cut, the argument needs the departures not to have happened without it. That’s a counterfactual cause: blaming X requires that the outcome wouldn’t have happened without X. We need an answer saying many of those workers would have stayed if wages hadn’t been cut.",
+            "analysis": "So the frogs ignore the ice. Does that mean they ignore everything outside them? Only if the ice was the only cue on offer. What about something in the surroundings that changes on the same date every year, like the length of the day? A cue like that would give a fixed calling date with no internal clock at all. The argument eliminated one outside cue and declared all of them gone. We need an answer that says there is no detectable outside cue running on a fixed yearly schedule. Most students pick (D), because temperature feels like exactly the outside cue the argument is ruling out. It fails because ‘no role at all’ is too strong: a clock could set the date while warm or cold water shifts it by a day, which even fits the two-day spread. The right answer (C) hides as a vague claim about ‘nothing in the surroundings,’ but it is the precondition the whole elimination step rests on.",
             "choices": [
               {
-                "note": "Too strong. Negate it: not most found better-paying jobs. Workers could still have left because of the cut, say for jobs that paid more than the reduced wage. Not required.",
-                "negation": "It is not the case that most of the workers who left took jobs paying more than the pre-cut wage."
+                "note": "This reverses the reasoning. The argument goes from ‘same date every year’ to ‘internal clock,’ not from ‘clock’ to ‘same date.’ Negate it and some clock-timed frogs vary their dates. So? The Harlan Pond frogs don’t vary, and the argument says nothing about other populations.",
+                "negation": "Some frog populations that time their calls by an internal clock start calling on dates that vary widely from year to year."
               },
               {
-                "note": "Output is a side issue. The conclusion is only about losing workers. Negate it: output fell mainly for some other reason. The wage cut could still explain the departures. Not required.",
-                "negation": "The fall in output was not caused mainly by the departure of experienced workers."
+                "note": "Interesting, but not required. Other ponds tell us nothing about which cue the Harlan Pond frogs use. Negating it doesn’t touch the argument.",
+                "negation": "In some ponds where the ice melts at about the same time each year, the frogs do not begin calling on a consistent date."
               },
               {
-                "note": "CORRECT. Negate it: few if any of those workers would have stayed without the cut; they’d have left anyway. Then the cut wasn’t responsible, and the conclusion falls apart.",
-                "negation": "Few, if any, of the workers who left would have stayed had their wages not been cut."
+                "note": "CORRECT. Negate it: something the frogs can detect, such as day length, changes on nearly the same date every spring. Then that cue could explain the fixed calling date, and the conclusion that no outside cue is involved collapses.",
+                "negation": "Something in the pond or its surroundings that the frogs can detect does change on nearly the same date each spring."
               },
               {
-                "note": "Tempting, because a steady drip of departures before the cut would complicate things. But it’s too strong. Negate it: a few workers had left before. The cut can still explain the big wave afterward. Not required.",
-                "negation": "Some experienced workers had left the mills during the years before the wage cut."
+                "note": "Tempting. Temperature is the obvious outside cue, so ruling it out feels required. But this is too strong. Negate it: water temperature plays some role. The clock can still set the date while a warm or cold spell moves it by a day. The argument survives, so (D) isn’t required.",
+                "negation": "The temperature of the water in Harlan Pond plays some role in determining when the frogs begin calling."
               },
               {
-                "note": "An irrelevant comparison. Negate it: other employers cut wages just as much. The Brisco cut could still be why these workers left. Not required.",
-                "negation": "The Brisco Valley wage cut was not larger than every other regional employer’s wage cut."
+                "note": "Irrelevant. Egg laying is a different event. The argument is only about when the frogs start calling.",
+                "negation": "The date on which the pond’s ice melts has some influence on when the frogs lay their eggs."
               }
             ]
           }
@@ -985,9 +986,9 @@
           "stem": "The pattern of questionable reasoning in the argument above is most similar to that in which one of the following?",
           "choices": [
             "A cake at Pella’s Café is labeled gluten-free only if it was baked on a Tuesday, after the ovens are cleaned. This torte was baked on a Tuesday, so it must be labeled gluten-free.",
-            "A bus may enter the downtown transit mall only if it carries a city permit. The bus now parked at the depot carries no city permit, so it may not enter the downtown transit mall.",
-            "Every student who passed the final exam received a certificate. Mira did not pass the final exam, so she must not have received a certificate.",
-            "Most of the tenants who signed the petition attended the building meeting. Hal attended the building meeting, so he probably signed the petition.",
+            "Only vessels that have been cleared by the harbor pilot may unload at the north wharf. The barge tied up there unloaded its cargo this morning, so it must have been cleared by the harbor pilot.",
+            "Every student who passed the final exam in Ms. Tran’s course received a certificate. Mira did not pass the final exam, so she must not have received a certificate either.",
+            "Most of the tenants who signed the petition attended last week’s building meeting. Hal attended that building meeting, so he probably signed the petition as well.",
             "Every member of the choir sings at the spring festival, and everyone who sings at the festival receives a free ticket. So every member of the choir receives a free ticket."
           ],
           "answer": "A",
@@ -1001,38 +1002,38 @@
             "necessary-sufficient"
           ],
           "difficulty": 5,
-          "explanation": "The argument reasons: from abroad → inspected; the machine parts were inspected; so they came from abroad, mistaking a necessary condition for a sufficient one. (A) has the same form once its ‘only if’ is translated: labeled gluten-free → baked Tuesday; the torte was baked Tuesday; so it’s labeled gluten-free. (D) is the strongest trap, but it uses ‘most’ and ‘probably,’ a different and weaker pattern; (B) and (E) are valid, and (C) negates the condition rather than affirming the result.",
+          "explanation": "The argument treats a necessary condition as sufficient: cargo from abroad → inspected; these parts were inspected; so they came from abroad. (A) does the same once its ‘only if’ is read correctly: labeled gluten-free → baked on a Tuesday; the torte was baked on a Tuesday; so it is labeled gluten-free. (B) is the dominant trap because it reads in the same order as the original, but ‘only’ makes its rule unload → cleared, so its reasoning is valid. (C) negates the sufficient condition instead, and (D) uses ‘most’ and ‘probably.’",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The machine parts at Pier 6 came from outside the country."
+                "text": "The machine parts came from outside the country."
               },
               {
                 "label": "Reasoning",
-                "text": "All cargo from outside the country is inspected by customs; the machine parts were inspected by customs."
+                "text": "All cargo from abroad is inspected before it leaves the docks; the machine parts were inspected."
               },
               {
                 "label": "Pattern",
-                "text": "All A are B; this thing is B; so it is A. (Affirming the result of a conditional.)"
+                "text": "From abroad → inspected. This was inspected. So it came from abroad. (Treats the necessary condition as sufficient.)"
               }
             ],
-            "analysis": "From abroad → inspected. But inspected doesn’t mean from abroad; customs officers might open domestic crates too, on a tip or at random. It’s like saying every dog has four legs, my cat has four legs, so my cat is a dog. Now find the same error: a rule A → B, a case with B, a conclusion of A, stated with certainty (‘must’). Careful: ‘only if’ introduces the necessary condition, so ‘X only if Y’ means X → Y. Translate every choice before matching.",
+            "analysis": "Inspection is required for foreign cargo. Does that mean only foreign cargo gets inspected? No. Customs could open domestic crates too. It’s like saying: everyone who flies gets their bag scanned; my bag was scanned; so I flew. Maybe it was scanned at a courthouse. This is mistaking a necessary condition for a sufficient one; know it cold. Translate every answer into arrows before comparing. Most students pick (B), because it reads just like the original: a rule about a group, then an item that did the second thing, so it must have the first. But ‘Only cleared vessels may unload’ means unload → cleared, so the barge’s unloading guarantees it was cleared. (B) is valid; the original isn’t. The right answer (A) hides its flaw behind ‘only if’: labeled gluten-free → baked Tuesday, so a Tuesday torte isn’t guaranteed the label.",
             "choices": [
               {
-                "note": "CORRECT. Labeled gluten-free → baked Tuesday. The torte was baked Tuesday, so it must be labeled gluten-free. Same mistake: having the necessary condition is treated as proof of the other. The ‘only if’ wording hides the match."
+                "note": "CORRECT. ‘Labeled gluten-free only if baked on a Tuesday’ means label → Tuesday. The torte was baked on a Tuesday, and the argument concludes it’s labeled. That affirms the necessary condition, exactly as the original does."
               },
               {
-                "note": "Tempting on the surface because of the ‘only if.’ Translate it: enter → permit. No permit → can’t enter. That’s the contrapositive, which is valid. Our stimulus is flawed, so this doesn’t match."
+                "note": "Tempting. It reads in the same order as the original and is even set at a port. But translate it: ‘only cleared vessels may unload’ means unload → cleared. The barge unloaded, so it was cleared. That’s valid, and the original is flawed, so they don’t match."
               },
               {
-                "note": "A different flaw. Passed → certificate. Mira didn’t pass, so no certificate. That’s negating the first part, not affirming the second. She could have earned a certificate some other way."
+                "note": "A different error. Passed → certificate; Mira didn’t pass; so no certificate. That negates the sufficient condition rather than affirming the necessary one. Flawed, but not the same flaw."
               },
               {
-                "note": "Tempting, because it runs in the same backward direction. But it starts from ‘most’ and ends with ‘probably,’ a probabilistic argument. The stimulus uses ‘every’ and ‘must.’ Close, but not the same pattern."
+                "note": "Different quantifier and certainty. ‘Most’ plus ‘probably’ isn’t the all-plus-must pattern of the original. Whatever you think of this reasoning, it doesn’t match."
               },
               {
-                "note": "Valid. Choir → sings → ticket, so choir → ticket. A clean chain, no flaw, so it can’t match a flawed argument."
+                "note": "Valid chain: choir → sings → ticket. The original is flawed, so a valid argument can’t be the match."
               }
             ]
           }
@@ -1042,8 +1043,8 @@
           "stimulus": "Labor mediator: The Oriel Hotel’s management wants to require its housekeepers to wear location-tracking badges throughout their shifts, saying the data would help it schedule cleaning more efficiently. But the same scheduling gains could be achieved by having housekeepers log each room as they finish it, which would reveal far less about their movements. So the hotel should not adopt the badge requirement.",
           "stem": "Which one of the following principles, if valid, most helps to justify the labor mediator’s argument?",
           "choices": [
-            "Before adopting a practice that affects how employees do their jobs, an employer should consult the employees affected.",
-            "An employer should adopt any practice that makes scheduling more efficient unless employees formally object to it.",
+            "Before adopting a practice that affects how employees do their jobs, an employer should first consult the employees who would be affected.",
+            "An employer should adopt any practice that makes its scheduling more efficient unless its employees formally object to the practice.",
             "If a workplace practice would make operations more efficient without intruding on employees’ privacy, an employer should adopt it.",
             "An employer should adopt a less intrusive practice in place of a more intrusive one only if the less intrusive practice also costs less.",
             "An employer should not adopt a practice that intrudes on employees’ privacy if a less intrusive practice would serve the employer’s purpose equally well."
@@ -1099,7 +1100,7 @@
             "Any rock in the Corrin Highlands that has been exposed to air for several centuries contains no marlite.",
             "Most of the marlite that has formed anywhere on Earth has since broken down completely as a result of exposure to air.",
             "The rock containing the cliff’s marlite has never, since the marlite formed, been exposed to air for two thousand years or more.",
-            "Marlite is more abundant in the Corrin Highlands than in rock near present-day coasts."
+            "Marlite is more abundant in the rock of the Corrin Highlands than in the rock found near present-day coasts."
           ],
           "answer": "D",
           "types": [
@@ -1111,30 +1112,30 @@
           ],
           "flaws": [],
           "difficulty": 5,
-          "explanation": "If the marlite-bearing rock had ever been exposed to air for two thousand years or more, the marlite would have broken down completely; since the rock still contains abundant marlite, it was never exposed that long, which is (D). (A) is the main trap: the breakdown clock runs only while the rock is exposed to air, so buried marlite could be millions of years old. (B) misreads the time scale, since centuries are less than two thousand years.",
+          "explanation": "If the marlite-bearing rock had ever been exposed to air for two thousand years or more, its marlite would be gone; it still has abundant marlite, so it was never exposed that long, which is (D). (A) is the dominant trap: it starts the two-thousand-year clock when the marlite formed, but the clock runs only while the rock is exposed to air, so buried marlite could be far older. (B) misreads the time scale, since several centuries is less than two thousand years.",
           "breakdown": {
             "setup": [
               {
                 "label": "Facts",
-                "text": "1. Marlite forms only where molten volcanic rock meets seawater; 2. exposed to air, marlite breaks down completely within 2,000 years; 3. last year’s landslide exposed cliff rock in the inland Corrin Highlands containing abundant marlite."
+                "text": "1. Marlite forms only where molten volcanic rock meets seawater; 2. once exposed to air, marlite breaks down completely within 2,000 years; 3. a landslide just exposed cliff rock in an inland region, and that rock has abundant marlite."
               }
             ],
-            "analysis": "Hard to predict exactly, but fact 2 is a clock, and it only ticks while marlite is exposed to air. Exposed for 2,000+ years → no marlite left. Contrapositive: marlite still there → never exposed that long. The cliff rock still has plenty of marlite, so it was never exposed for 2,000 years. Watch for answers that treat the clock as running from when the marlite formed, or that stretch the time scale.",
+            "analysis": "Hard to prephrase fully, but fact 2 is a clock, and it only ticks while marlite is exposed to air. Exposed for 2,000+ years → no marlite left. Contrapositive: marlite still there → never exposed that long. The cliff rock still has plenty of marlite, so it was never exposed for 2,000 years. Most students pick (A), because they read the clock as running from the day the marlite formed: ‘it can’t last 2,000 years, so it must be young.’ It fails because breakdown starts only on exposure to air. Rock sealed inside a cliff could hold marlite millions of years old; the landslide only just started its clock. The right answer (D) is that contrapositive written as a ‘never,’ which is why it looks clumsy.",
             "choices": [
               {
-                "note": "Tempting, because ‘two thousand years’ matches the clock. But the clock only runs while the marlite is exposed to air. Rock sealed inside a cliff could hold marlite that formed millions of years ago."
+                "note": "Tempting. It’s the most natural reading of ‘two thousand years.’ But the clock runs only while marlite is exposed to air. Sealed inside the cliff, it could be millions of years old."
               },
               {
-                "note": "Wrong time scale. Breakdown is complete within 2,000 years, but after only a few centuries some marlite could remain. ‘Contains no marlite’ goes too far."
+                "note": "This misreads the time scale. ‘Within two thousand years’ allows marlite to survive several centuries of exposure, so rock exposed for a few hundred years could still contain some."
               },
               {
-                "note": "We don’t know this. The facts say nothing about how much marlite has ever formed or how much has been exposed."
+                "note": "We don’t know this. Nothing says how much marlite has ever formed or how much of it has been exposed. One cliff can’t support a claim about the whole Earth."
               },
               {
-                "note": "CORRECT. Exposure of 2,000+ years would leave no marlite. This rock has abundant marlite, so it was never exposed that long. That follows directly from the facts."
+                "note": "CORRECT. Exposed for 2,000+ years → no marlite. This rock has abundant marlite, so since its marlite formed it has never been exposed that long."
               },
               {
-                "note": "Unsupported comparison. We’re told nothing about how much marlite exists near coasts."
+                "note": "No comparison is given. One cliff with abundant marlite says nothing about how common marlite is inland versus near the coast."
               }
             ]
           }
@@ -1144,11 +1145,11 @@
           "stimulus": "Ornithologist: Adult male Tolland warblers have a white patch on the tail that is visible only when the tail is spread; females lack the patch entirely. Males spread their tails far more often during the three weeks before pairs form than at any other time of year. So the patch most likely serves to attract mates.",
           "stem": "Which one of the following, if true, most seriously weakens the ornithologist’s argument?",
           "choices": [
-            "Females of a closely related warbler species prefer to pair with males whose white tail patches are larger than average.",
-            "The tail patch is slightly larger and brighter on older males than it is on younger ones.",
+            "Male Tolland warblers spread their tails at every time of year, including the months in which no pairs are forming.",
+            "The tail patch is slightly larger and brighter on older males than it is on younger males of the species.",
             "Many songbird species have markings that are visible only when the birds spread their wings or tails in flight.",
-            "After pairs have formed for the season, male Tolland warblers seldom spread their tails at all, even during territorial disputes.",
-            "Males spread their tails mostly when a hawk is in view, and hawks migrate through in the weeks before pairs form."
+            "Females of a closely related warbler species prefer to pair with males whose white tail patches are larger than average.",
+            "Female Tolland warblers, which lack the patch, spread their tails about as often as males do in the weeks before pairs form."
           ],
           "answer": "E",
           "types": [
@@ -1161,34 +1162,34 @@
             "causation"
           ],
           "difficulty": 4,
-          "explanation": "The argument infers the patch’s function from when it is displayed; (E) shows the timing is explained by hawks passing through and that males flash the patch in response to hawks, suggesting an alarm or predator-deterrent function instead. (D) is the trap: it fits the mate-attraction story by showing displays drop after pairing, so it strengthens rather than weakens. (A) concerns a different species and, if anything, supports the ornithologist.",
+          "explanation": "The ornithologist infers the patch’s purpose from when males spread their tails. (E) shows that females, which have no patch, spread their tails just as often at that time, so the seasonal tail-spreading serves some purpose other than showing the patch and the timing no longer points to mate attraction. (A) is the dominant trap, but the ornithologist already grants that males spread their tails at other times, only less often, so (A) conflicts with nothing in the argument. (D) supports the mate-attraction idea.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "The male warbler’s tail patch most likely serves to attract mates."
+                "text": "The males’ white tail patch most likely serves to attract mates."
               },
               {
                 "label": "Reasoning",
-                "text": "The patch shows only when the tail is spread; males spread their tails most in the three weeks before pairs form."
+                "text": "The patch shows only when the tail is spread; females lack it; males spread their tails far more often in the three weeks before pairs form than at any other time."
               }
             ],
-            "analysis": "So what if the displays peak before pairing? Lots of things could happen during those three weeks. The argument guesses a function from timing alone. The best weakener gives the patch a different job that explains the same timing. We need an answer that offers an alternative function, especially one that fits the three-week peak.",
+            "analysis": "The whole argument is: it’s shown most during courtship season, so it’s for courtship. What would break that? Something showing that the tail-spreading in that season isn’t about the patch at all. If birds without the patch spread their tails just as much then, the spreading has some other job, and its timing tells us nothing about the patch. Most students pick (A): ‘males spread their tails all year, so it isn’t about mating.’ But reread the premise. Males spread far more often before pairing ‘than at any other time,’ which already allows spreading at other times. (A) attacks something the ornithologist conceded, so it doesn’t weaken. The right answer (E) looks off topic because it’s about the birds without the patch, and that’s exactly why it works.",
             "choices": [
               {
-                "note": "Strengthens, if anything, by analogy: in a related species, the patch matters to females. Wrong direction."
+                "note": "Tempting. It sounds as if the patch isn’t tied to the mating season. But the premise already says males spread their tails at other times, just far less often. (A) is consistent with everything the ornithologist said."
               },
               {
-                "note": "Neutral. Bigger patches on older males fit either a mating or a non-mating function."
+                "note": "So? A patch that grows with age fits a mate-attraction signal as well as any other function. If anything, it’s mild support."
               },
               {
-                "note": "Interesting fact, but not relevant. That other birds have flight-only markings tells us nothing about what this patch does."
+                "note": "Irrelevant. Other species’ markings don’t tell us what this patch is for or why the spreading peaks before pairing."
               },
               {
-                "note": "Tempting, because it’s about tail-spreading timing. But fewer displays after pairing, even in territorial fights, fits the mate-attraction story and rules out a territorial job. It strengthens."
+                "note": "Opposite direction. If related females prefer bigger patches, that supports the idea that the patch attracts mates."
               },
               {
-                "note": "CORRECT. The pre-pairing peak is explained by hawks passing through, and males flash the patch when a hawk appears. That points to a predator-related function and undercuts the mating inference."
+                "note": "CORRECT. Females have no patch, yet they spread their tails just as often in the same weeks. So the seasonal spreading serves some purpose that has nothing to do with showing the patch, and the timing evidence loses its force."
               }
             ]
           }
@@ -1198,11 +1199,11 @@
           "stimulus": "Pharmacist: A prescription for a drug in the restricted category can be refilled without a new consultation only if the prescribing physician has signed a long-term-use authorization for that patient within the past year. Dr. Hale, who prescribes Velacor for Mr. Ruiz, signs such authorizations only during in-person examinations, and she has not examined Mr. Ruiz in person in more than two years. So Velacor must not be in the restricted category.",
           "stem": "The pharmacist’s conclusion follows logically if which one of the following is assumed?",
           "choices": [
-            "Mr. Ruiz’s prescription for Velacor was refilled last week without a new consultation.",
-            "Dr. Hale has not signed a long-term-use authorization for Mr. Ruiz within the past year.",
-            "Any drug whose prescriptions can be refilled without a new consultation is outside the restricted category.",
-            "If Dr. Hale had examined Mr. Ruiz in person within the past year, she would have signed a long-term-use authorization for his Velacor prescription.",
-            "Some of Dr. Hale’s other patients have had their Velacor prescriptions refilled without a new consultation."
+            "Mr. Ruiz’s prescription for Velacor was refilled last week, in full compliance with the rules, without a new consultation.",
+            "Dr. Hale has not signed a long-term-use authorization for Mr. Ruiz at any time within the past year.",
+            "Any drug for which a prescription can properly be refilled without a new consultation falls outside the restricted category.",
+            "If Dr. Hale had examined Mr. Ruiz in person within the past year, she would have signed an authorization for his Velacor.",
+            "Some of Dr. Hale’s other patients have had their prescriptions for Velacor refilled without a new consultation."
           ],
           "answer": "A",
           "types": [
@@ -1213,7 +1214,7 @@
           ],
           "flaws": [],
           "difficulty": 5,
-          "explanation": "Hale signs authorizations only during in-person exams and hasn’t examined Ruiz in two years, so Ruiz has no authorization from the past year; if Velacor were restricted, his prescription therefore couldn’t be refilled without a consultation. If it was in fact refilled last week without one, Velacor can’t be restricted, so (A) completes the proof. (B) is tempting but only restates what the premises already establish, and (E) fails because other patients may have recent authorizations.",
+          "explanation": "The premises show that Mr. Ruiz has no authorization from the past year, so if Velacor were restricted, his prescription could not properly be refilled without a new consultation. (A) says it was properly refilled that way, so Velacor cannot be restricted. (C) is the dominant trap: it looks like the conditional bridge a sufficient-assumption answer usually supplies, but nothing establishes that a Velacor prescription can be refilled without a consultation, so its condition is never triggered. (B) only restates what the premises already establish.",
           "breakdown": {
             "setup": [
               {
@@ -1222,25 +1223,25 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Restricted drug refilled without consultation → prescriber signed an authorization for that patient within the past year; Hale signs only during in-person exams; Hale hasn’t examined Ruiz in over two years."
+                "text": "Restricted drug refilled without a new consultation → prescriber signed an authorization within the past year; Hale signs only during in-person exams; she hasn’t examined Ruiz in over two years."
               }
             ],
-            "analysis": "Build the chain. Hale signs only at exams + no exam in two years → no authorization for Ruiz in the past year. Rule: restricted AND refilled without consultation → authorization in past year. Contrapositive: no authorization → NOT (restricted AND refilled without consultation). So for Ruiz, either Velacor isn’t restricted or his prescription wasn’t refilled without a consultation. To force ‘not restricted,’ we need the missing fact: Ruiz’s Velacor was refilled without a consultation. Here the answer is a plain fact, not a rule, which makes it easy to skip.",
+            "analysis": "Chain it. Hale hasn’t examined Ruiz in two years and signs only during exams → no authorization in the past year. Restricted AND refilled without consultation → authorization in the past year. Put together: if Velacor is restricted, Ruiz can’t be refilled without a consultation. So far the premises only say what WOULD happen if Velacor were restricted. To prove it isn’t, we need the other half: Ruiz did get a proper refill without a consultation. Refilled + no authorization → not restricted. Most students pick (C), because sufficient-assumption answers are usually ‘any X is Y’ bridges and (C) uses the right words. It fails because its trigger, a prescription that can be refilled without a consultation, is never shown for Velacor; the premises point the other way. The right answer (A) hides because it’s a plain fact, not a rule.",
             "choices": [
               {
-                "note": "CORRECT. Ruiz got a refill without a consultation (last week, well within the window) and had no authorization from the past year. If Velacor were restricted, that refill couldn’t have happened. So Velacor isn’t restricted."
+                "note": "CORRECT. A proper refill without a consultation, with no authorization from the past year, is impossible for a restricted drug. So Velacor isn’t restricted."
               },
               {
-                "note": "Tempting, because it’s a real step in the chain. But the premises already prove it. Adding it gives nothing new; we still don’t know whether Ruiz ever got a refill without a consultation."
+                "note": "Already established. Hale signs only in person and hasn’t seen Ruiz in two years, so we know this. Repeating it adds nothing, and the conclusion still doesn’t follow."
               },
               {
-                "note": "This is about drugs that can be refilled without consultation, but nothing says Velacor can be for Ruiz. And restricted drugs can be refilled without a consultation when an authorization exists, so this rule doesn’t fit the stimulus anyway."
+                "note": "Tempting. It looks like the bridge you expect. But it helps only if some Velacor prescription can properly be refilled without a consultation, and nothing says so. Its condition never gets triggered."
               },
               {
-                "note": "A sufficient-condition trap. It tells us what Hale would have done after an exam, but there was no exam, so it tells us nothing new. It doesn’t connect to whether Velacor is restricted."
+                "note": "So? What Hale would have done after a hypothetical exam tells us nothing about which category Velacor is in."
               },
               {
-                "note": "Wrong group. Other patients may have been examined recently and have valid authorizations. Their refills prove nothing about Velacor’s category."
+                "note": "Other patients may have recent authorizations from in-person exams. Their refills fit perfectly well with Velacor being restricted, so this proves nothing."
               }
             ]
           }
@@ -1251,10 +1252,10 @@
           "stem": "The reasoning in the literary agent’s argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
             "relies on the judgments of magazine reviewers who may have been biased in the author’s favor",
-            "treats the fact that the stories were published in magazines as evidence that they are of high quality",
+            "treats the fact that the stories were published in magazines as evidence that they are of high literary quality",
             "confuses the praise a book receives from reviewers with its success in the market for books",
             "takes for granted that a work as a whole will be praised if each of its parts was",
-            "fails to consider that some of the stories in the collection may never have appeared in a magazine"
+            "fails to consider that some of the stories in the collection may never have appeared in any magazine at all"
           ],
           "answer": "D",
           "types": [
@@ -1323,38 +1324,38 @@
           ],
           "flaws": [],
           "difficulty": 4,
-          "explanation": "The argument has the valid form: most A are B; every B is C; so most A are C. (E) matches exactly (most apartments are west-facing; every west-facing one is hard to rent; so most are hard to rent), with the conclusion stated first. (C) is tempting but chains two ‘most’ statements, which doesn’t guarantee overlap; (A) reverses which statement uses ‘every,’ and (B) borrows the cookbook topic but reasons backward.",
+          "explanation": "The argument has a valid form: most A are B; every B is C; so most A are C. (E) matches it (most apartments face west; every west-facing apartment in the building is hard to rent; so most are hard to rent), with its conclusion stated first. (C) is the dominant trap: it looks nearly identical but chains two ‘most’ statements, which need not overlap. (A) flips which statement uses ‘every,’ and (B) borrows the cookbook topic but reasons backward.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Most recipes in Ferro’s cookbook are impractical for small-kitchen readers."
+                "text": "Most of the recipes in Ferro’s cookbook are impractical for small-kitchen readers."
               },
               {
                 "label": "Reasoning",
-                "text": "Most recipes need a stand mixer; every stand-mixer recipe is impractical for those readers."
+                "text": "Most of the recipes require a stand mixer; every recipe that requires a stand mixer is impractical for those readers."
               },
               {
                 "label": "Pattern",
                 "text": "Most A are B; every B is C; so most A are C. (Valid.)"
               }
             ],
-            "analysis": "This one is valid: if most recipes are in the ‘needs a mixer’ group, and everyone in that group is impractical, then most recipes are impractical. Now find the same shape: ‘most’ first, then an ‘every’ that covers the whole middle group, then ‘most’ in the conclusion. Don’t be thrown by an answer that puts its conclusion first, and don’t be lured by an answer that shares the cookbook topic.",
+            "analysis": "This one is valid: if most recipes sit in the ‘needs a mixer’ group, and every recipe in that group is impractical, then most recipes are impractical. Find the same shape: a ‘most’ about the group, an ‘every’ covering the whole middle group, and ‘most’ in the conclusion. Most students pick (C), because ‘most … most … so most’ looks like the same argument. It fails because two ‘most’ statements don’t have to overlap enough. Picture 10 trails: 6 are steep and 4 of those are closed. Most trails are steep, most steep trails are closed, yet only 4 of 10 are closed. The right answer (E) hides by putting its conclusion first and its premises after ‘since.’",
             "choices": [
               {
-                "note": "The quantifiers are swapped: every A is B, most B are C. The ‘most’ west-facing apartments that are hard to rent could all be in other buildings. Invalid, and a different pattern."
+                "note": "The quantifiers are flipped: every Larch apartment faces west (every A is B), and most west-facing apartments in the city are hard to rent (most B are C). The Larch apartments could be among the easy-to-rent minority. A different, invalid pattern."
               },
               {
-                "note": "Same topic as the stimulus, which is the lure. But it’s backward: every saffron recipe is expensive and most recipes are expensive, so most use saffron. That reverses the conditional."
+                "note": "Same topic, backward reasoning: every saffron recipe is expensive and most recipes are expensive, so most use saffron. That runs the ‘every’ statement in reverse."
               },
               {
-                "note": "Tempting, because it looks almost the same. But it’s most + most. The steep trails that are closed could be a small slice of all trails. Two ‘mosts’ don’t chain."
+                "note": "Tempting. ‘Most … most … so most’ looks like the original. But two ‘most’ statements don’t guarantee the conclusion, while the original’s ‘every’ does. Invalid where the original is valid."
               },
               {
-                "note": "The conclusion reverses the ‘every’ statement: from ‘diesel → inspected’ it concludes ‘inspected → diesel.’ Different pattern, and invalid."
+                "note": "The conclusion reverses the ‘every’ statement (every diesel truck is inspected becomes every inspected truck is diesel) and jumps from ‘most’ to ‘every.’"
               },
               {
-                "note": "CORRECT. Most Larch apartments face west (most A are B); every west-facing Larch apartment is hard to rent (every B is C); so most Larch apartments are hard to rent (most A are C). The conclusion comes first, but the structure is identical."
+                "note": "CORRECT. Conclusion first, then ‘since’: most apartments face west (most A are B); every west-facing apartment in the building is hard to rent (every B is C); so most are hard to rent (most A are C). Same valid shape."
               }
             ]
           }
@@ -1449,8 +1450,8 @@
           "stem": "According to the passage, earlier revivals of Strand’s dances",
           "choices": [
             "restored the counts recorded in Strand’s notebooks wherever they conflicted with the music",
-            "relied on films of the original performances rather than on Strand’s notebooks",
-            "set Strand’s choreography to newly arranged scores written in four",
+            "relied on films of the original performances instead of on Strand’s own notebooks",
+            "set Strand’s choreography to new arrangements of the music written entirely in four",
             "moved the soloist’s entrance in Harbor Song to the beginning of a section of the score",
             "altered the movement so that each phrase would begin on a downbeat"
           ],
@@ -1794,7 +1795,7 @@
           "choices": [
             "How many certificates did Halvey’s council issue during the period in which the scrip circulated?",
             "Why did Corley’s town council decide to issue its scrip without any stamp requirement?",
-            "Apart from goods sold by local merchants, what could Halvey’s scrip be used to pay for?",
+            "Besides goods from local merchants, what could Halvey’s scrip be used to pay for?",
             "What proportion of Halvey’s retail sales during the scrip period were paid for in scrip?",
             "How long after Halvey’s bank closed did one of the town’s mills resume partial operation?"
           ],
@@ -1841,7 +1842,7 @@
           "stimulus": "",
           "stem": "The primary function of the third paragraph is to",
           "choices": [
-            "identify an assumption on which Kenning’s argument relies and cite evidence from her own work that tells against it",
+            "identify an assumption Kenning’s argument relies on and cite evidence from her own work that tells against it",
             "show that the stamp records on which Kenning bases her reconstruction of the scrip’s circulation are unreliable and incomplete",
             "clarify an ambiguity in Kenning’s use of the term “revival” that the preceding paragraph left unresolved",
             "explain why Halvey’s council chose to make its scrip redeemable for town taxes rather than for goods or cash",
@@ -1892,7 +1893,7 @@
           "stem": "Which one of the following is most strongly supported by the second paragraph?",
           "choices": [
             "Kenning’s figures show that the total value of Halvey’s retail sales stagnated while the scrip circulated.",
-            "A charge that makes holding money costly could increase the number of purchases without increasing the total spent.",
+            "A charge on holding money could increase purchases in number without increasing the total spent.",
             "Halvey’s merchants recorded the number of their transactions more accurately than the value of their sales.",
             "Residents of Halvey generally preferred to make several small purchases rather than a single large one of equal value.",
             "Kenning should have measured Halvey’s revival by the number of transactions rather than by the value of sales."
@@ -1942,7 +1943,7 @@
           "choices": [
             "dismissive rejection of both its methods and its conclusions as fundamentally misguided",
             "agreement with its conclusions combined with doubts about the reliability of its sources",
-            "admiration for aspects of its method combined with skepticism about its central causal claim",
+            "admiration for its methods combined with skepticism about its central causal claim",
             "general approval tempered by a concern that it overstates the importance of taxation",
             "reluctant acceptance of its conclusion owing to the absence of any better explanation"
           ],
@@ -1991,8 +1992,8 @@
           "choices": [
             "The revival of Halvey’s retail trade was produced chiefly by the partial reopening of one of the town’s mills.",
             "Kenning erred in relying on the surviving stamp records to reconstruct how Halvey’s scrip circulated among the town’s residents.",
-            "Tax-redeemable scrip without a stamp requirement might have served Halvey’s council equally well as a way to pay its employees.",
-            "The experience of Corley demonstrates that the stamps had no effect on how quickly Halvey’s scrip was spent by its residents.",
+            "The function that Halvey’s scrip may chiefly have served for the town did not depend on making the scrip costly to hold.",
+            "Had Halvey’s scrip carried no weekly stamp, the town’s residents would probably have spent it about as quickly as they did.",
             "Historians of scrip should attend to the quantity of money issued rather than to the design of the currency."
           ],
           "answer": "C",
@@ -2000,34 +2001,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "The third paragraph says the scrip may have functioned as a way for the town to pay employees out of future tax receipts, ‘a useful arrangement, but not one that the stamps were needed to produce’; Corley’s stamp-free scrip and the closing emphasis on the town’s ‘power to tax’ point the same way, so C. A and D are the tempting traps: the author says a reopened mill ‘could also have contributed’ and explicitly denies having shown that the stamps had no effect. B contradicts the praise of the reconstruction as ‘ingenious,’ and E reverses the credit given to Kenning for attending to design.",
+          "explanation": "The third paragraph suggests the scrip may have served mainly as a way for the town to pay its employees out of future tax receipts, ‘a useful arrangement, but not one that the stamps were needed to produce’; since the stamps are what made the scrip costly to hold, C follows. D is the trap: it reads that remark and the Corley comparison as saying the stamps did nothing to the speed of spending, but the author says ‘None of this shows that the stamps were without effect.’ A overstates ‘could also have contributed,’ B contradicts the praise of the reconstruction, and E reverses the credit given to Kenning for attending to design.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Pick the statement the author would accept, given the exact strength of the author’s claims."
+                "text": "Pick the statement the author would accept, at exactly the strength the author commits to."
               },
               {
                 "label": "Where to look",
-                "text": "End of the third paragraph (‘not one that the stamps were needed to produce’), the last two sentences of the fourth paragraph, and the compliments at the start of the second."
+                "text": "The last sentence of the third paragraph (‘not one that the stamps were needed to produce’); the last two sentences of the fourth paragraph (‘None of this shows…’); the first paragraph for what the stamps did (made the scrip ‘costly to hold’)."
               }
             ],
-            "analysis": "The author is careful. Notice what the author does and doesn’t commit to: 1. The stamps may have done something (‘None of this shows…’). 2. The mill ‘could’ have contributed, not ‘did.’ 3. The tax-receipt arrangement was useful and didn’t need the stamps (third paragraph). So the safe answer is one built on point 3, hedged like the author. Prephrase: the town could have paid its workers with tax-redeemable scrip even without stamps.",
+            "analysis": "So what exactly does the author say the stamps weren’t needed for? Not for spending. For the tax arrangement. The third paragraph says the scrip may have worked mainly as a way for the town to pay its employees out of future tax receipts, and that this arrangement was not one ‘the stamps were needed to produce.’ The stamps are the thing that made scrip ‘costly to hold’ (first paragraph). Prephrase: the job the scrip may mainly have done didn’t need the holding cost. The right answer says that in stand-in words, so it doesn’t look like the third paragraph at first. Most students pick (D) because it sounds like the author’s whole drift: Corley recovered without stamps, and the stamps ‘weren’t needed.’ It fails because the author refuses to say the stamps had no effect on how fast residents spent: ‘None of this shows that the stamps were without effect.’ Watch the subject swap: ‘not needed for the tax arrangement’ is not ‘not needed for fast spending.’",
             "choices": [
               {
-                "note": "Tempting. The mill is the author’s best counterpoint to Kenning. But the author only says it ‘could also have contributed.’ ‘Chiefly produced’ is a commitment the author never makes. Too strong."
+                "note": "Too strong. The author says a reopened mill ‘could also have contributed’ to Halvey’s recovery. ‘Chiefly produced’ is a commitment the author never makes."
               },
               {
-                "note": "Opposite. The author calls the reconstruction ‘ingenious’ and uses Kenning’s own figures in the third paragraph. The records aren’t the problem."
+                "note": "Opposite. The author calls the reconstruction from stamp records ‘ingenious’ and uses Kenning’s own figures in the third paragraph. The records aren’t the problem."
               },
               {
-                "note": "CORRECT. Third paragraph: paying employees out of future tax receipts was ‘a useful arrangement, but not one that the stamps were needed to produce.’ A stamp-free, tax-redeemable scrip would give you that arrangement, and the hedge ‘might have’ matches the author’s caution."
+                "note": "CORRECT. The function is paying employees out of future tax receipts (third paragraph), and the author says the stamps, the feature that made scrip costly to hold, weren’t needed to produce it. ‘May chiefly have served’ matches the author’s hedge."
               },
               {
-                "note": "Tempting. Corley is the author’s comparison case. But the fourth paragraph says flat out, ‘None of this shows that the stamps were without effect.’ This puts in the author’s mouth exactly what the author disclaims."
+                "note": "Tempting. It feels like the lesson of Corley and of ‘not one that the stamps were needed to produce.’ But that remark is about the tax arrangement, not spending speed, and the fourth paragraph says outright, ‘None of this shows that the stamps were without effect.’ This gives the author an opinion the author disclaims."
               },
               {
-                "note": "Opposite. The second paragraph credits Kenning for ‘attending to the design of a currency rather than merely to its quantity.’ The author likes that move."
+                "note": "Opposite. The second paragraph credits Kenning for ‘attending to the design of a currency rather than merely to its quantity.’"
               }
             ]
           }
@@ -2039,44 +2040,44 @@
           "stem": "Which one of the following, if true, would most help Kenning to answer the objection concerning Corley that is raised in the fourth paragraph?",
           "choices": [
             "Corley’s scrip, like Halvey’s, could be used to pay property taxes owed to the town, and merchants there often used it that way.",
-            "Corley’s merchants’ association recorded the total value of its members’ sales but not the number of their transactions.",
+            "Halvey’s surviving stamp records show that residents usually spent each new certificate within a few days of receiving it from the council.",
             "Fewer of Corley’s merchants than of Halvey’s agreed to accept the scrip issued by their town during its first year.",
             "Some other towns in the region that issued scrip with a stamp requirement saw no recovery in retail sales.",
-            "Halvey’s retail sales had risen nearly as far by the spring of 1933 as they would rise while the scrip circulated."
+            "Nearly all of the rise in Halvey’s retail sales during the scrip period had already occurred by the spring of 1933."
           ],
           "answer": "E",
           "types": [
             "rc-strengthen-weaken"
           ],
           "difficulty": 5,
-          "explanation": "The objection is that Kenning cannot dismiss Corley because of its reopened railway shop when Halvey also had a reopened employer, a mill that resumed partial operation in the summer of 1933. E shows that nearly all of Halvey’s recovery came before that reopening, so the mill cannot explain it and the two towns are no longer parallel. B is tempting because it recalls the second paragraph’s transactions-versus-value point, but it does nothing about the alternative cause. A and C make Corley a cleaner case against the stamps, and D weakens Kenning.",
+          "explanation": "The Corley objection is that Kenning cannot set Corley aside because of its reopened railway shop, since Halvey also had a reopened employer: a mill that resumed partial operation in the summer of 1933. E shows that nearly all of Halvey’s rise came before that, so the mill cannot explain it and the two towns are no longer parallel. B is the trap: it supports Kenning’s mechanism (residents spent quickly), but the objection grants nothing about speed and turns on an alternative cause, which B leaves untouched. A and C make Corley a cleaner case against the stamps, and D weakens Kenning.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the fact that best rescues Kenning from the Corley objection."
+                "text": "Find the fact that best rescues Kenning from the Corley objection specifically, not just any fact that helps Kenning."
               },
               {
                 "label": "Where to look",
-                "text": "The fourth paragraph through its fourth sentence, especially Halvey’s mill ‘resumed partial operation in the summer of 1933’; the timing in the first paragraph (scrip from the autumn of 1932, for eighteen months)."
+                "text": "The first four sentences of the fourth paragraph, especially Halvey’s mill that ‘resumed partial operation in the summer of 1933’; the first paragraph for the timing (scrip from the autumn of 1932, for eighteen months)."
               }
             ],
-            "analysis": "Lay out the objection. 1. Corley had no stamps and recovered just as fast. 2. Kenning says Corley’s recovery came from its reopened railway shop. 3. Author: fine, but Halvey had a reopened mill too, so maybe that explains Halvey’s recovery. So the objection lives on the Halvey mill. How does Kenning escape? Cut the mill off from Halvey’s recovery. If the recovery mostly happened before the mill reopened, the mill can’t be the cause, and Halvey is no longer like Corley. Prephrase: Halvey recovered before the mill came back. The right answer gives you that only through a date, so you have to connect ‘spring of 1933’ with ‘summer of 1933.’",
+            "analysis": "Lay out the objection. 1. Corley had no stamps and recovered just as fast. 2. Kenning says Corley’s recovery came from its reopened railway shop. 3. The author replies: Halvey had a reopened employer too, its mill, so the same factor may explain Halvey. So the objection lives on Halvey’s mill. How does Kenning escape? Cut the mill off from Halvey’s recovery. If the rise was mostly over before the mill came back, the mill can’t be the cause and the towns aren’t parallel after all. Prephrase: Halvey recovered before summer 1933. The answer gives you that only as a date, so you have to connect ‘spring of 1933’ with ‘summer of 1933.’ Most students pick (B) because it is the one answer that plainly sounds pro-Kenning: residents spent fast, just as she says. It fails because the Corley objection doesn’t dispute that residents spent fast; it says something else (a reopened employer) could explain the sales. Helping the argument in general isn’t answering this objection.",
             "choices": [
               {
-                "note": "Wrong direction. If Corley’s scrip also redeemed for taxes and was used that way, the two towns share the tax mechanism from the third paragraph and differ mainly in the stamps. That makes Corley look like a fair test showing stamps weren’t needed, which hurts Kenning."
+                "note": "Wrong direction. If Corley’s scrip also redeemed for taxes and was used that way, the towns share the tax mechanism from the third paragraph and differ mainly in the stamps. That makes Corley a fair test showing stamps weren’t needed, which hurts Kenning."
               },
               {
-                "note": "Tempting. It sounds like the second paragraph’s point about transactions versus total value, and it suggests Corley’s figures measure value. But the objection is about an alternative cause (a reopened employer), and this does nothing about Halvey’s mill."
+                "note": "Tempting. It backs Kenning’s mechanism, so it feels like help. But the Corley objection is about an alternative cause of the sales recovery, and fast spending does nothing to separate the stamps’ effect from the mill’s. Support for a point the objection never disputes."
               },
               {
-                "note": "Wrong direction. If fewer Corley merchants took scrip yet Corley recovered just as fast, scrip (stamped or not) looks less important to recovery. That doesn’t help a stamps-explain-the-revival thesis."
+                "note": "Wrong direction. If fewer Corley merchants took scrip yet Corley recovered just as fast, scrip of any kind looks less important to recovery."
               },
               {
-                "note": "Wrong direction. Stamped scrip with no recovery elsewhere is a point against Kenning, not a defense of her."
+                "note": "Wrong direction. Stamped scrip with no recovery elsewhere is a point against Kenning."
               },
               {
-                "note": "CORRECT. The mill resumed operation in the summer of 1933. If nearly all of Halvey’s rise had happened by spring, the mill can’t account for it, and the author’s ‘Halvey had a reopened employer too’ reply loses its force. Kenning’s distinction between the towns stands."
+                "note": "CORRECT. The mill resumed operation in the summer of 1933. If nearly all of Halvey’s rise had happened by spring, the mill can’t account for it, and the author’s ‘Halvey had a reopened employer too’ reply loses its force."
               }
             ]
           }
@@ -2138,7 +2139,7 @@
           "stem": "In saying that ‘sincerity is not measured by legal risk’ (second sentence of passage B), the author of passage B most probably means that",
           "choices": [
             "apologies that carry no legal risk are usually more sincere than those that could be used in court",
-            "an apology’s sincerity is independent of whether it could later be used as evidence against the apologizer",
+            "an apology’s sincerity is independent of whether it could be used in court against its maker",
             "courts are not in a position to determine whether an apology offered after an accident is sincere",
             "people who apologize at the scene of an accident rarely consider the legal consequences of doing so",
             "an apology that carries legal risk is less likely to be offered than one that does not"
@@ -2337,9 +2338,9 @@
           "stimulus": "",
           "stem": "The authors of the two passages would be most likely to disagree over whether",
           "choices": [
-            "a sympathetic apology that admits no fault offers many injured people something of real value",
+            "acknowledging an injury without accepting responsibility for it gives many injured people something they genuinely value",
             "fear of litigation is one of the reasons that people withhold apologies after causing harm",
-            "some injured people want an admission of fault and not merely an expression of sympathy from the other party",
+            "a protected expression of sympathy falls short of what some injured people want from the person who harmed them",
             "most apology statutes protect expressions of sympathy but leave admissions of fault fully admissible",
             "jurors tend to interpret a defendant’s expression of sympathy as an admission of fault"
           ],
@@ -2349,7 +2350,7 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Passage A says a sympathy-only apology is the kind injured people find ‘least satisfying’ and ‘gives injured people little of what they actually seek,’ while passage B says that for many injured people ‘what matters first is acknowledgment of the harm done’ and backs it with Castan’s settlement finding. That is a direct disagreement, A. B and C are points both authors accept, D is stated by A and not contested by B, and E is the trap: B asserts it, but A says nothing about how jurors hear apologies.",
+          "explanation": "Passage A says a sympathy-only apology is the kind injured people find ‘least satisfying’ and ‘gives injured people little of what they actually seek’; passage B says that for many injured people ‘what matters first is acknowledgment of the harm done,’ backed by Castan’s finding. That is a real yes/no split, A. C is the trap: it sounds like A’s complaint, but B concedes it too (‘some injured people want the latter’), so both authors hold it. B is also common ground, D is stated by A and not contested by B, and only B addresses E.",
           "breakdown": {
             "setup": [
               {
@@ -2358,25 +2359,25 @@
               },
               {
                 "label": "Where to look",
-                "text": "Passage A’s second paragraph (sympathy-only apologies give injured people little of what they seek) against passage B’s second paragraph (acknowledgment matters first; Castan’s study)."
+                "text": "Passage A’s second paragraph (sympathy-only apologies give injured people little of what they seek) against passage B’s second paragraph (‘It is true that…’; acknowledgment matters first; Castan’s study)."
               }
             ],
-            "analysis": "To disagree, one author must say yes and the other no. Silence on one side doesn’t count. So for each choice, check both passages. The clash is the value of sympathy-only apologies to the injured. A: they’re the “least satisfying” kind and give injured people “little of what they actually seek.” B: for many, “what matters first is acknowledgment,” and claimants who got sympathy with no admission were more willing to settle. Note A’s third objection doesn’t change this: A thinks weightless regret can be used to make claims go away, not that it gives the injured anything of real value.",
+            "analysis": "To disagree, one author must say yes and the other no. Agreement doesn’t count, and silence doesn’t either. The clash is the value of a sympathy-only apology to the injured. A: it’s the ‘least satisfying’ kind and gives injured people ‘little of what they actually seek.’ B: for ‘many,’ acknowledgment is ‘what matters first,’ and claimants who got sympathy without any admission were readier to settle. The key describes this in stand-in words (‘acknowledging an injury without accepting responsibility’ = sympathy without fault), which is why it’s easy to skim past. Most students pick (C) because it sounds exactly like passage A’s complaint. It fails because passage B grants it: ‘some injured people want the latter.’ ‘Some’ want more, ‘many’ value acknowledgment: B holds both, so C is common ground.",
             "choices": [
               {
-                "note": "CORRECT. A says a sympathy-only apology gives injured people little of what they seek; B says acknowledgment is what many of them want first. Yes versus no on the same question."
+                "note": "CORRECT. A says sympathy without fault gives injured people little of what they seek; B says acknowledgment is what many of them want first. Yes versus no on the same question."
               },
               {
-                "note": "Both agree. A says physicians cited other reasons “at least as often as legal exposure,” so legal exposure is one reason. B says removing “one of those reasons still helps.”"
+                "note": "Both agree. A says physicians cited other reasons ‘at least as often as legal exposure,’ so legal exposure is one reason; B says removing ‘one of those reasons still helps.’"
               },
               {
-                "note": "Both agree. A says the statutes promote the apology people “find least satisfying,” and B concedes “some injured people want the latter.”"
+                "note": "Tempting. It’s passage A’s first objection in miniature. But passage B concedes it in so many words: ‘It is true that a protected statement of sympathy is not a confession of fault, and some injured people want the latter.’ Both authors hold it."
               },
               {
-                "note": "A states this outright, and B never contests it (“a protected statement of sympathy is not a confession of fault”). No disagreement."
+                "note": "A states this outright and B never contests it (‘a protected statement of sympathy is not a confession of fault’). No disagreement."
               },
               {
-                "note": "Tempting, since this is B’s argument and A is the critic. But A never discusses jurors or how they hear apologies. You can’t disagree with a point you never address."
+                "note": "Only B discusses jurors. A says nothing about how jurors hear apologies, and you can’t disagree with a point you never address."
               }
             ]
           }
@@ -2390,7 +2391,7 @@
             "Claimants in mediated disputes over minor injuries are unlike most injured people, since most injured people never enter mediation at all.",
             "Expressions of sympathy that carry no admission of fault are rarely sincere, so the claimants in the study were misled.",
             "Claimants may have been more willing to settle only because they feared that the expressions of sympathy would be used against them.",
-            "Claimants’ greater willingness to settle does not show that the claims they gave up were ones they ought to have given up.",
+            "That the claimants became more willing to settle does not show that the claims they were thereby induced to abandon lacked merit.",
             "The study shows only that apology statutes increase the number of apologies offered, not that they reduce the number of lawsuits."
           ],
           "answer": "D",
@@ -2399,34 +2400,34 @@
             "rc-inference"
           ],
           "difficulty": 5,
-          "explanation": "Passage B presents Castan’s finding (sympathy made claimants more willing to settle) as a point in favor of apology laws. Passage A’s third objection is that weightless expressions of regret may ‘defuse claims that deserve to be pursued,’ so A’s author would say that easier settlement is not a good result in itself, which is D. A is the strongest trap, a generic sampling complaint that nothing in passage A supports. B is the view passage B attributes to critics, but A’s author never questions anyone’s sincerity; C is incoherent, and E misdescribes the study.",
+          "explanation": "Passage B offers Castan’s finding (sympathy made claimants readier to settle) as a point for apology laws. Passage A’s third objection is that weightless regret may ‘defuse claims that deserve to be pursued,’ so A’s author would say easier settlement is not by itself a good result: D. A is the trap, a plausible sampling complaint drawn from outside knowledge; nothing in passage A concerns mediation or who enters it. B is the view passage B attributes to critics, not one A’s author expresses; C is incoherent; E misdescribes the study.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Pick the objection passage A’s author would raise to passage B’s use of the Castan study."
+                "text": "Pick the objection that passage A’s author, using A’s own concerns, would raise to passage B’s use of the Castan study."
               },
               {
                 "label": "Where to look",
-                "text": "Passage B, second paragraph (Castan) against passage A’s last paragraph (strategic use)."
+                "text": "Passage B, second paragraph (Castan) against passage A’s last paragraph (strategic use; ‘defuse claims that deserve to be pursued’)."
               }
             ],
-            "analysis": "Passage B treats “more willing to accept settlement offers” as good news. Ask: good for whom? A’s third problem says an insurer can use weightless regret to “defuse claims that deserve to be pursued.” From A’s side, Castan’s result could be exactly that problem in action. People settled, but maybe they shouldn’t have. It’s like a store showing that customers stop complaining after a friendly apology. That proves the apology works on customers, not that their complaints were wrong. The answer must come from A’s own concerns, not just any criticism you could think of.",
+            "analysis": "Passage B treats ‘more willing to accept settlement offers’ as good news. Ask: good for whom? A’s third problem is that an insurer can use weightless regret to ‘defuse claims that deserve to be pursued.’ From A’s side, Castan’s result could be that problem in action: people settled, but maybe they shouldn’t have. It’s like a store showing that customers stop complaining after a friendly apology. That proves the apology works on customers, not that their complaints were wrong. Prephrase: settling more doesn’t show the claims were weak. Most students pick (A) because it is a sharp, real-world objection to any study of this kind. It fails because the question asks what A’s author would say, and A never mentions mediation, minor injuries, or who ends up in either. A good criticism you supply isn’t one the passage supports.",
             "choices": [
               {
-                "note": "The big trap. It sounds like a sharp methodological point. But A never mentions mediation or who ends up in it. This criticism comes from you, not from A’s author."
+                "note": "Tempting. It sounds like a sharp methodological point, and it may even be true. But passage A never discusses mediation or which injured people enter it. The criticism comes from outside the passage, not from A’s author."
               },
               {
-                "note": "Tempting, because B says critics treat these apologies as insincere. But that’s B’s characterization. A’s author never questions sincerity; A’s first problem is that such apologies are unsatisfying, not fake."
+                "note": "This is how passage B describes critics, not anything A’s author says. A’s first problem is that such apologies are unsatisfying, not that they are fake."
               },
               {
                 "note": "Makes no sense. The sympathy in the study admitted no fault, and fear of its use would push people away from settling, not toward it."
               },
               {
-                "note": "CORRECT. This is A’s third objection aimed at B’s evidence: settlement may just mean a deserving claim was defused, which is what A fears these laws make possible."
+                "note": "CORRECT. This is A’s third objection aimed at B’s evidence: settling may simply mean a deserving claim was defused, which is what A fears these laws make possible."
               },
               {
-                "note": "Misdescribes the study. Castan measured willingness to settle, not how many apologies were offered under a statute."
+                "note": "Misdescribes the study. Castan measured willingness to settle in mediated disputes, not how many apologies a statute produced."
               }
             ]
           }
@@ -2537,7 +2538,7 @@
           "choices": [
             "help explain why periwinkles do not build thick shells in places where crabs are absent",
             "provide evidence that the snails in the first set of tanks were exposed to the most concentrated cues",
-            "identify a limitation of the experiment to which the author returns in the final paragraph",
+            "identify a limitation of the experiment to which the author returns in the passage’s final paragraph",
             "show that thick shells protect periwinkles from crabs less well than earlier researchers had believed",
             "suggest that a snail’s growth, rather than its shell, is what protects it from being eaten by crabs"
           ],
@@ -2586,43 +2587,43 @@
           "choices": [
             "The cues from crabs fed periwinkles produced the thickest shells because they were the most concentrated cues used in the experiment.",
             "Adult periwinkles moved from Hesk Sound to Tolley Inlet would soon develop shells as thin as those of Tolley Inlet periwinkles.",
-            "Periwinkles raised in water containing crushed periwinkles grew thinner shells than those raised in water from tanks of crabs fed fish.",
+            "Water containing crushed periwinkles prompted less shell thickening in the experiment than did water from tanks of crabs fed fish.",
             "Cues from crabs alone are sufficient to produce shells as thick as those of wild periwinkles in Hesk Sound.",
-            "Periwinkles can respond to cues from crushed members of their own species even when no crab is present."
+            "A periwinkle can be prompted to build a thicker shell by a chemical cue that does not come from any predator at all."
           ],
           "answer": "E",
           "types": [
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "In the third tank set, water held crushed periwinkles but no crabs, and those snails grew shells of intermediate thickness, thicker than the plain-seawater controls. So periwinkles respond to cues from crushed periwinkles even without crab cues, which is E. C is the trap: the passage puts the second and third sets together at ‘intermediate thickness’ and gives no ranking between them. A invents a cause, B assumes shells can thin, and D compares tank snails to wild ones, which the passage never does.",
+          "explanation": "In the third tank set, the water held crushed periwinkles but no crabs, and those snails grew shells of intermediate thickness, thicker than the plain-seawater controls; so a cue that comes from no predator can prompt thickening, E. C is the trap: it ranks the second and third sets, but the passage groups them together at ‘intermediate thickness’ and gives no order between them. A invents a cause, B assumes shells can thin, and D compares tank snails with wild ones, which the passage never does.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the claim the experiment’s results actually support."
+                "text": "Find the claim the tank results actually support."
               },
               {
                 "label": "Where to look",
                 "text": "Third paragraph, second and third sentences: the four tank sets and their results."
               }
             ],
-            "analysis": "Hard to prephrase, so lay out the results. 1. Crabs fed periwinkles → thickest. 2. Crabs fed fish → intermediate. 3. Crushed periwinkles, no crabs → intermediate. 4. Plain seawater → thinnest. Set 3 has no crab at all, yet beats plain seawater. So the snails react to crushed periwinkles on their own. Watch for answers that rank sets 2 and 3 or explain why set 1 won; the passage gives neither.",
+            "analysis": "Hard to prephrase, so lay out the results. 1. Crabs fed periwinkles → thickest. 2. Crabs fed fish → intermediate. 3. Crushed periwinkles, no crabs → intermediate. 4. Plain seawater → thinnest. Set 3 had no crab at all, yet beat plain seawater. So the snails react to something other than a predator. The right answer says this abstractly (‘a cue that does not come from any predator’) instead of naming set 3, so it’s easy to skip. Most students pick (C) because it seems natural that a crab’s scent would matter more than crushed snails. It fails because the passage lumps sets 2 and 3 together as ‘intermediate thickness’ and never ranks them. An order the passage doesn’t give is an order you can’t infer.",
             "choices": [
               {
-                "note": "Invents a cause. The passage never says set 1 had more concentrated cues. The simpler reading is that it combined crab cues with cues from eaten periwinkles."
+                "note": "Invents a cause. The passage never says set 1 had more concentrated cues. The natural reading is that it combined crab cues with cues from eaten periwinkles."
               },
               {
-                "note": "We don’t know this. The passage never says shells can thin, and adults in particular have already laid down their shell material."
+                "note": "We don’t know this. The passage never says shells can thin, and adults have already laid down their shell material."
               },
               {
-                "note": "Tempting, since you might expect crab cues to matter more. But the passage lumps sets 2 and 3 together as “intermediate thickness.” No ranking between them is given."
+                "note": "Tempting, because you might expect crab cues to beat crushed snails. But the passage puts sets 2 and 3 together at ‘intermediate thickness.’ No ranking between them is given."
               },
               {
-                "note": "No comparison between tank shells and wild Hesk Sound shells is made, so “sufficient to match the wild” is unsupported."
+                "note": "No comparison between tank shells and wild Hesk Sound shells is made, so ‘as thick as wild’ is unsupported."
               },
               {
-                "note": "CORRECT. Set 3 had crushed periwinkles but no crabs, and its snails still grew thicker shells than the plain-seawater set."
+                "note": "CORRECT. Set 3 held crushed periwinkles and no crabs, and its snails still grew thicker shells than the plain-seawater set. That cue came from no predator."
               }
             ]
           }
@@ -2634,9 +2635,9 @@
           "stem": "Which one of the following experiments would be most useful in determining whether the difference in calcium content mentioned in the second sentence of the fourth paragraph contributes to the difference in shell thickness between the two bays’ periwinkles?",
           "choices": [
             "raising juveniles from both bays in plain seawater and comparing the thickness of the shells that the two groups develop",
-            "raising juveniles in water from tanks of crabs fed periwinkles at several different concentrations of crab cue and then comparing the thickness of their shells",
+            "raising juveniles at several crab-cue concentrations, down to those likely in Hesk Sound’s open water, with calcium held at a single level, then comparing shells",
             "comparing the shell thickness of periwinkles living in sheltered parts of Tolley Inlet with that of periwinkles in its exposed parts",
-            "raising juveniles without crab cues in water matched to Hesk Sound’s calcium level and in water matched to Tolley Inlet’s, then comparing shells",
+            "raising juveniles from a single bay in crab-free tanks, some at Hesk Sound’s calcium level and some at Tolley Inlet’s, then comparing their shells",
             "measuring the calcium content of shells collected from each of the two bays and comparing the averages for the two populations"
           ],
           "answer": "D",
@@ -2644,28 +2645,28 @@
             "rc-analogy"
           ],
           "difficulty": 4,
-          "explanation": "To learn whether calcium matters, vary calcium while holding everything else, including crab cues, constant; D does exactly that with the two bays’ calcium levels. B is the trap, because it tests the other reservation in the same sentence, cue concentration, not calcium. A repeats the test for inherited differences, C tests waves, and E measures shell composition without showing what causes thickness.",
+          "explanation": "To learn whether calcium matters, vary calcium while holding everything else, including crab cues, constant; D does that at the two bays’ calcium levels. B is the trap: it mentions calcium, but holds it fixed and varies cue concentration, the other reservation in the same sentence, so it tests cues, not calcium. A repeats the test for inherited differences, C tests waves, and E measures what shells are made of without showing what makes them thick.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Pick the experiment that isolates calcium as a cause of thickness."
+                "text": "Pick the experiment that isolates the water’s calcium content as a cause of shell thickness."
               },
               {
                 "label": "Where to look",
-                "text": "Fourth paragraph, second sentence (the calcium reservation), using the third paragraph’s tank experiment as a model."
+                "text": "Fourth paragraph, second sentence (the calcium reservation and, beside it, the cue-concentration reservation), using the third paragraph’s tank experiment as a model."
               }
             ],
-            "analysis": "To test one factor, change only that factor. Here: two calcium levels (Hesk’s and Tolley’s), same kind of snails, no crab cues to muddy things, then compare shells. If the Hesk-level calcium gives thicker shells, calcium contributes. If not, it doesn’t. Anything that varies something else, or just measures shells, can’t answer the question.",
+            "analysis": "To test one factor, change only that factor. Here: same kind of snails, no crab cues, two calcium levels (Hesk’s and Tolley’s), then compare shells. If Hesk-level calcium gives thicker shells, calcium contributes. Most students pick (B) because it names calcium and sounds the most rigorous, and because the same sentence raises both worries. It fails because calcium is the one thing B holds constant; it varies the crab cue. That answers the concentration worry, not the calcium one. Always ask: what does this experiment change?",
             "choices": [
               {
                 "note": "Tests whether the populations differ genetically, which the original experiment already covered. Calcium isn’t varied."
               },
               {
-                "note": "Tempting, because cue concentration is the other worry in the same sentence. But this varies the crab cue, not calcium."
+                "note": "Tempting. It mentions calcium and tackles the other reservation in the same sentence. But it holds calcium at a single level and varies the cue, so it can tell you nothing about calcium’s effect."
               },
               {
-                "note": "Waves, not calcium. And it compares spots within one bay."
+                "note": "Waves, not calcium, and within one bay only."
               },
               {
                 "note": "CORRECT. Calcium is the only thing that changes, and crab cues are kept out. Any shell difference would show calcium’s effect."
@@ -2683,7 +2684,7 @@
           "stem": "Which one of the following, if true, would most call into question Ambler’s explanation of the difference in shell thickness between the periwinkles of the two bays?",
           "choices": [
             "In a third bay on the Varn Peninsula where the shell-crushing crab is also common, periwinkles likewise have thick shells.",
-            "Crab cues in the open waters of Hesk Sound are everywhere far too dilute to cause any measurable change in periwinkle shells.",
+            "In Ambler’s tanks, crab cues diluted to the highest concentration recorded anywhere in Hesk Sound produced no thickening of the snails’ shells.",
             "Periwinkles on Hesk Sound’s exposed headlands are more often dislodged by storm waves than are those living in its sheltered coves.",
             "In Ambler’s tanks, thick-shelled periwinkles were more likely than thin-shelled periwinkles to survive attacks by crabs of the same size.",
             "The water of Tolley Inlet contains less dissolved calcium than that of Hesk Sound, and periwinkles raised in low-calcium water build somewhat thinner shells."
@@ -2693,34 +2694,34 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 5,
-          "explanation": "Ambler’s explanation needs wild Hesk Sound snails to be exposed to enough crab cue to trigger thickening; the fourth paragraph already worries that tank concentrations exceeded those in open water. If cue levels throughout the sound are too low to have any effect, her mechanism cannot be what thickens the wild shells, so B seriously undermines it. E is the trap: it adds a possible contributing factor, which the author already allows, without showing that crab cues do not also work. A and D support Ambler, and C is irrelevant to the cue account.",
+          "explanation": "Ambler’s explanation needs wild Hesk Sound snails to meet enough crab cue to trigger thickening, and the fourth paragraph already worries that her tank concentrations were higher than those in open water. If cues at the highest level found anywhere in the sound produce no thickening, her mechanism cannot be what thickens the wild shells: B. E is the trap: it adds calcium as a contributing factor, which the author already allows for, without showing that crab cues fail to work too. A and D support Ambler, and C is irrelevant to the cue account.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the fact that most damages the crab-cue explanation of the wild difference."
+                "text": "Find the fact that most damages the crab-cue explanation of the wild difference between the bays."
               },
               {
                 "label": "Where to look",
-                "text": "Fourth paragraph, second sentence (cue concentrations, calcium), and the last sentence of the second paragraph (her hypothesis)."
+                "text": "Fourth paragraph, second sentence (cue concentrations; calcium), and the last sentence of the second paragraph (Ambler’s hypothesis)."
               }
             ],
-            "analysis": "Ambler’s experiment shows snails can respond to crab cues in tanks. Her explanation says that’s why wild Hesk Sound snails are thick. Gap: are wild snails actually exposed to enough cue? The author flags this: tank levels were “probably higher” than in open water. So attack that link. If the sound’s cue levels are too low to do anything, the tank result can’t explain the wild pattern. It’s like proving a drug works at ten times the dose people actually take.",
+            "analysis": "Ambler’s tanks show snails can respond to crab cues. Her explanation says that’s why wild Hesk Sound snails are thick. So what if snails respond in a tank? Are the wild ones ever exposed to that much cue? The author flags exactly this: tank levels were ‘probably higher’ than in open water. The right answer attacks that link without saying ‘too dilute’: it reports a tank result at real-world concentrations, and you have to see what it implies for the wild. It’s like proving a drug works at ten times the dose anyone takes. Most students pick (E) because calcium is the alternative the passage itself names. It fails because the author already grants that calcium might ‘contribute’; a second factor working ‘somewhat’ leaves crab cues in place. Attacking something the account already concedes isn’t a weakener.",
             "choices": [
               {
                 "note": "Strengthens. Another crab bay with thick shells fits Ambler’s pattern."
               },
               {
-                "note": "CORRECT. If wild cue levels are below the threshold for any effect, crab cues can’t be what makes Hesk Sound shells thick, whatever happens in tanks."
+                "note": "CORRECT. If even the highest cue level found anywhere in the sound produces no thickening, crab cues can’t be what makes Hesk Sound shells thick, whatever happens at tank concentrations."
               },
               {
-                "note": "Irrelevant. Dislodging rates don’t bear on what controls shell thickness, and Ambler already showed sheltered and exposed shells are alike."
+                "note": "Irrelevant. Dislodging rates don’t bear on what controls thickness, and Ambler already showed sheltered and exposed shells are alike."
               },
               {
-                "note": "Strengthens the logic of her account: thick shells really are useful against crabs."
+                "note": "Supports her account’s logic: thick shells really do help against crabs."
               },
               {
-                "note": "Tempting, since calcium is the alternative the author mentions. But it shows only that calcium may contribute a little (“somewhat thinner”). Both factors could operate, so Ambler’s crab account survives. B, by contrast, removes her mechanism entirely."
+                "note": "Tempting, since calcium is the alternative the author mentions. But the author already allows that calcium may ‘contribute,’ and ‘somewhat thinner’ shows only a partial effect. Both factors could operate, so the crab account survives."
               }
             ]
           }
@@ -2790,7 +2791,7 @@
           "stimulus": "Gardening columnist: A survey of home gardeners in our region found that those who keep a written log of what they plant and when they water harvest, on average, considerably more vegetables per square meter than those who keep no such log. Clearly, keeping a garden log makes a gardener more productive, so anyone who wants a bigger harvest should start one.",
           "stem": "The reasoning in the gardening columnist’s argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
-            "overlooks the possibility that gardeners who are more diligent in general are more likely to keep a log",
+            "overlooks the possibility that gardeners who are more diligent in general are also more likely to keep a log",
             "presumes, without providing justification, that gardeners who keep logs record their planting and watering dates accurately",
             "takes for granted that a larger harvest is the only reason that a gardener might have for keeping a written log",
             "draws a conclusion about every vegetable grown in the region from the harvests of only some kinds of vegetables",
@@ -2849,7 +2850,7 @@
           "choices": [
             "the parking rule adds to the price of the new houses built in Kelso",
             "many of the people who buy new houses in Kelso own only a single car",
-            "Kelso’s town council should drop its rule requiring off-street parking for new houses",
+            "Kelso’s town council should drop its rule requiring off-street parking for each new house",
             "snowplows in Kelso would be unable to clear the town’s streets if more cars were parked on them",
             "the price of new housing should be the main consideration when a town decides which building rules to adopt"
           ],
@@ -2957,7 +2958,7 @@
             "Wild salmon in the Merrow River are, on average, slightly larger at a given age than hatchery salmon are.",
             "The number of predatory fish in the Merrow River has risen steadily over the past decade, according to a recent survey.",
             "Some of the hatchery salmon released into the Merrow River survive to adulthood even though they were fed by hand.",
-            "Hatchery salmon briefly exposed to predatory fish in holding ponds before release survived at nearly the wild salmon’s rate.",
+            "Hatchery salmon briefly exposed to predatory fish in holding ponds before their release survived at nearly the wild salmon’s rate.",
             "Hatchery salmon are caught by anglers more often than wild salmon are, because anglers favor the stretch of river near the hatchery."
           ],
           "answer": "D",
@@ -3013,7 +3014,7 @@
             "Passengers on short flights generally care less about seat comfort than passengers on long flights do.",
             "The new seats cost Talmor less to buy and maintain than the old seats did, which lowered its operating costs.",
             "Satisfaction scores for Talmor’s jet flights, whose seats were not replaced, did not change at all over the same year.",
-            "Because the new seats are lighter, Talmor’s turboprops now rarely have to leave checked bags behind to meet weight limits."
+            "Because the new seats are lighter, Talmor’s turboprops now rarely have to leave checked bags behind to meet their weight limits."
           ],
           "answer": "E",
           "types": [
@@ -3058,7 +3059,7 @@
           "stimulus": "Customers at the Linley post office often wait twenty minutes or more in line during the lunch hour. To shorten these waits, the postmaster plans to staff a second service window during that hour. Since two clerks can serve customers twice as fast as one clerk can, the plan should cut lunch-hour waits roughly in half.",
           "stem": "Which one of the following, if true, most seriously weakens the argument?",
           "choices": [
-            "Most lunch-hour delays occur while parcels are weighed on the office’s single scale, which both windows would have to share.",
+            "Most lunch-hour delays occur while parcels are weighed on the office’s single scale, which both of the windows would have to share.",
             "Many customers who come to the post office during the lunch hour are buying only stamps, which takes a minute or two.",
             "The clerk who would staff the second window currently sorts incoming mail in the back room during the lunch hour.",
             "Customers at other post offices in the region report waiting in line for even longer than customers at the Linley office do.",
@@ -3274,8 +3275,8 @@
           "stem": "The statements above, if true, most strongly support which one of the following?",
           "choices": [
             "The word ‘kelmaro’ entered the Kaleni language at some point within the past generation.",
-            "The word ‘kelmaro’ did not originate in the Kaleni language itself.",
-            "Most of the words that have been borrowed into Kaleni are stressed on their second syllable.",
+            "The word ‘kelmaro’ is not one that originated within the Kaleni language itself.",
+            "Most words borrowed into Kaleni are stressed on their second syllable.",
             "Borrowed words that have been part of Kaleni for more than a generation are stressed on their first syllable.",
             "‘Kelmaro’ was borrowed from a language in which it was stressed on its second syllable."
           ],
@@ -3374,7 +3375,7 @@
           "stimulus": "Brookvale homes equipped with smoke detectors that are wired into the house’s electrical system are more likely to suffer serious fire damage than are Brookvale homes that have only battery-powered detectors. Yet Brookvale’s fire officials insist that wired detectors are more reliable than battery-powered ones and that nearly every home would be safer with them.",
           "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
           "choices": [
-            "Brookvale requires wired detectors in every home with a wood stove or fireplace, the source of most serious fires there.",
+            "Brookvale requires wired detectors in every home with a wood stove or fireplace, the source of most serious house fires there.",
             "Battery-powered detectors in Brookvale homes are often found during inspections to have dead or missing batteries.",
             "Wired detectors cost considerably more to install than battery-powered detectors do, though they cost less to maintain over time.",
             "Unlike battery-powered detectors, wired detectors keep working without depending on homeowners to remember to replace their batteries.",
@@ -3476,11 +3477,11 @@
           "stimulus": "Hospital administrator: Some of our staff propose installing hand-sanitizer stations outside every patient room to reduce the number of infections that patients acquire in our hospital. But studies of hospitals like ours show that most such infections are spread by contaminated equipment, not by the hands of staff or visitors. So installing the stations would not be worthwhile.",
           "stem": "The reasoning in the hospital administrator’s argument is flawed in that the argument",
           "choices": [
-            "takes for granted that studies of other hospitals accurately describe how infections are spread in every hospital in the country",
-            "presumes, without providing justification, that staff members would not use the sanitizer stations if they were installed",
-            "confuses the number of infections spread by equipment with the severity of the infections that equipment spreads",
-            "infers that a measure is not worthwhile from the fact that it would not address the main source of a problem",
-            "attacks the motives of the staff who proposed the stations rather than addressing the merits of their proposal"
+            "draws a conclusion about one hospital from studies of other hospitals, which may differ from it in how infections spread",
+            "presumes, without providing justification, that staff members would not use the sanitizer stations if the stations were installed",
+            "confuses the number of infections spread by equipment with the severity of the infections that such equipment spreads",
+            "takes for granted that a remedy is worth adopting only if it targets the most common cause of the problem it addresses",
+            "attacks the motives of the staff members who proposed the stations rather than addressing the merits of their proposal"
           ],
           "answer": "D",
           "types": [
@@ -3494,7 +3495,7 @@
             "scope-shift"
           ],
           "difficulty": 4,
-          "explanation": "Showing that hands spread only a minority of infections does not show that cutting hand-spread infections is not worth doing; D describes that leap. A is tempting, but the studies are of ‘hospitals like ours,’ and the argument never makes a claim about every hospital in the country.",
+          "explanation": "Hands spread only a minority of the infections, but cutting a minority of infections may still be worth doing; the administrator treats ‘not the main source’ as ‘not worthwhile,’ which (D) describes. (A) is the dominant trap: it names the familiar flaw of generalizing from other cases, but the administrator relies on studies of ‘hospitals like ours,’ so the similarity is part of the premise. (B), (C) and (E) describe moves the argument never makes.",
           "breakdown": {
             "setup": [
               {
@@ -3503,27 +3504,29 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Most hospital-acquired infections are spread by contaminated equipment, not by hands."
+                "text": "Studies of hospitals like this one show that most hospital-acquired infections are spread by contaminated equipment, not by hands."
               }
             ],
-            "analysis": "So most infections come from equipment. Does that make the hand-borne ones not worth preventing? If hands spread, say, 40 percent of infections, cutting those would still prevent a lot of illness. A fix doesn’t have to solve the whole problem to be worth doing. It’s like refusing to fix a leaky window because most of your heat escapes through the roof. We need an answer that says the argument rejects a partial solution just because it isn’t the main one.",
+            "analysis": "So hands aren’t the main source. Does that make them no source? If hands spread 30 percent of infections, cutting some of those could still save lives cheaply. It’s like refusing to fix a leaky faucet because most of your water bill comes from the shower. The administrator jumps from ‘not the main cause’ to ‘not worth addressing.’ We need an answer that names that jump. Most students pick (A), because ‘generalizes from other hospitals’ is a textbook flaw and the argument does cite other hospitals. It fails because the studies are of ‘hospitals like ours’; the similarity is a premise, and on the LSAT you accept the premises. The right answer (D) hides in general terms (‘a remedy,’ ‘a problem’) instead of naming sanitizer or infections.",
             "choices": [
               {
-                "note": "Tempting, because relying on other hospitals’ studies sounds risky. But the administrator cites studies of ‘hospitals like ours’ and draws a conclusion only about this hospital, not every hospital in the country."
+                "note": "Tempting. Arguments that lean on other cases often are flawed this way. But the administrator cites studies of ‘hospitals like ours,’ so the similarity is given. Criticizing it objects to a premise, not to the reasoning.",
+                "example": "Example of this flaw: Patients at a big-city teaching hospital recover faster when they walk early, so patients at our small rural clinic will too."
               },
               {
-                "note": "The argument never says or assumes staff would ignore the stations. Its reason is about where infections come from, not about usage.",
-                "example": "Example of this flaw: We shouldn’t buy a treadmill, since we’d never use it (with no evidence about whether we would)."
+                "note": "The argument never depends on staff refusing to use the stations. Its point is about where infections come from.",
+                "example": "Example of this flaw: We shouldn’t buy treadmills for the office, because nobody would use them."
               },
               {
-                "note": "Describes a different flaw. The administrator never mentions severity; the argument is about which route spreads most infections.",
+                "note": "Severity never comes up. The argument is about which source spreads most infections, and it never mixes up count with seriousness.",
                 "example": "Example of this flaw: Most of our complaints are about slow service, so slow service must be our most serious problem."
               },
               {
-                "note": "CORRECT. The stations would target a minority source, but that doesn’t make them worthless. The argument treats ‘not the main source’ as ‘not worth addressing.’"
+                "note": "CORRECT. The administrator moves from ‘hands are not the main way infections spread’ to ‘the stations aren’t worthwhile.’ That works only if a remedy is worthwhile just when it targets the biggest cause, which is what (D) says the argument takes for granted."
               },
               {
-                "note": "The administrator says nothing about the staff’s motives; the response addresses the proposal itself. Attacks-the-source answers are usually traps."
+                "note": "The administrator never mentions the staff’s motives. There’s no personal attack here.",
+                "example": "Example of this flaw: The nurses want sanitizer stations only so they look busy, so the idea should be rejected."
               }
             ]
           }
@@ -3590,7 +3593,7 @@
           "stem": "The conclusion of the archaeologist’s argument can be properly drawn if which one of the following is assumed?",
           "choices": [
             "Every pottery fragment that was made after the end of the Varn period bears traces of lead glaze.",
-            "Any layer of a dig that contains pottery made after the Varn period was deposited after that period ended.",
+            "Any layer of a dig that contains pottery made after the end of the Varn period was deposited after that period ended.",
             "The traders who introduced lead glazing to the region settled at Osk Hill near the end of the Varn period.",
             "Pottery fragments found in the lowest layer of a dig are usually the oldest fragments found anywhere at that dig.",
             "No pottery made during the Varn period has been found in any of the layers of the dig at Osk Hill."
@@ -3645,7 +3648,7 @@
             "Do any other auto insurers in the region offer their customers a monitor similar to the one Ambrose offers?",
             "Are claims for accidents more costly for Ambrose to pay, on average, than the other kinds of claims it receives?",
             "Did Ambrose drivers without the monitor file more accident claims last year than they had in previous years?",
-            "Before installing the monitor, did the drivers who chose it file fewer accident claims than other Ambrose drivers?"
+            "Before installing the monitor, did the drivers who chose to install it file fewer accident claims than other Ambrose drivers?"
           ],
           "answer": "E",
           "types": [
@@ -3699,7 +3702,7 @@
           "choices": [
             "students who send many text messages will gradually lose their ability to spell even common words correctly",
             "frequent text messaging actually improves young people’s ability to spell the words they abbreviate",
-            "frequent use of texting abbreviations is not, by itself, a sign that a young person spells poorly",
+            "frequent use of texting abbreviations is not, by itself, a sign that a young person is a poor speller",
             "students who rarely send text messages tend to score worse on spelling tests than students who often do",
             "abbreviations in text messages are harder for young people to produce than the conventionally spelled words they replace"
           ],
@@ -3713,30 +3716,34 @@
           ],
           "flaws": [],
           "difficulty": 4,
-          "explanation": "The linguist pushes back on the popular view by arguing that abbreviating requires knowing the spelling and that heavy abbreviators spell at least as well as others; the modest conclusion that abbreviating is not itself a sign of poor spelling, C, follows. B is the attractive overreach: the evidence shows no deficit, not that texting causes improvement.",
+          "explanation": "The linguist argues that abbreviating requires knowing the spelling and that heavy abbreviators spell at least as well as others, so the blank should reject the popular inference modestly: frequent abbreviation is not by itself a sign of poor spelling, (C). (B) is the dominant trap: it goes the extra step from ‘no worse’ to ‘texting improves spelling,’ which a correlation showing no deficit cannot support. (D) turns ‘at least as well’ into ‘better.’",
           "breakdown": {
             "setup": [
               {
-                "label": "Facts",
-                "text": "1. Popular view: texting abbreviations erode spelling; 2. Deliberate abbreviating requires knowing the normal spelling and sound; 3. Heavy abbreviators score at least as well on spelling tests as light users."
+                "label": "Conclusion",
+                "text": "(The blank) Something that undercuts the popular claim that texting abbreviations show or cause poor spelling."
+              },
+              {
+                "label": "Reasoning",
+                "text": "Abbreviating a word deliberately requires knowing how the full word is spelled; heavy abbreviators score at least as well on spelling tests as light users."
               }
             ],
-            "analysis": "The ‘But’ tells you the linguist is pushing back on the popular view, so the blank should reject or undercut it, not repeat it. How far can we go? The evidence shows abbreviators know spelling and do no worse. That knocks out ‘abbreviations show bad spelling.’ It does not show texting makes spelling better: ‘at least as well’ isn’t ‘better,’ and a correlation can’t prove a cause. We need a modest answer: using these abbreviations doesn’t by itself indicate poor spelling.",
+            "analysis": "The ‘But’ tells you the linguist is pushing back on the popular view, so the blank should reject or undercut it, not repeat it. How far can the evidence go? Abbreviators must know the spelling, and they do no worse on tests. That knocks out ‘abbreviations show bad spelling.’ It doesn’t show texting makes spelling better. Most students pick (B), because once ‘texting hurts’ is rejected, ‘texting helps’ feels like the natural counterpunch. It fails twice: ‘at least as well’ isn’t ‘better,’ and a correlation in test scores can’t show that texting caused anything. We need the modest answer, (C), whose hedge ‘not, by itself, a sign’ makes it look weak. Weak is good here.",
             "choices": [
               {
-                "note": "This is the popular view the linguist is arguing against. A completion that repeats the opponent’s claim after a ‘But’ is backwards."
+                "note": "This is the popular view the linguist argues against. The blank must undercut it, not repeat it."
               },
               {
-                "note": "Tempting, because it’s the opposite of the popular view. But the evidence is only that heavy texters do no worse, ‘at least as well.’ That’s not improvement, and a correlation can’t show texting causes anything. Polar opposite isn’t the logical opposite."
+                "note": "Tempting. It’s the natural rebuttal to ‘texting hurts spelling.’ But the evidence shows only that abbreviators do no worse, and a correlation can’t show texting improved anything. Too strong."
               },
               {
-                "note": "CORRECT. Abbreviating requires knowing the spelling, and heavy abbreviators spell at least as well as others. So abbreviation use alone isn’t evidence of weak spelling. It’s exactly as strong as the evidence allows."
+                "note": "CORRECT. Abbreviating takes spelling knowledge, and heavy abbreviators spell at least as well as others. So frequent abbreviating, on its own, doesn’t indicate poor spelling. That’s exactly as far as the evidence goes."
               },
               {
-                "note": "We don’t know this. Heavy users score at least as well as rare users; that doesn’t mean rare users score poorly. Both groups might score well."
+                "note": "‘At least as well’ allows equal scores; this turns it into ‘better.’ It also shifts from how often students abbreviate to how often they text."
               },
               {
-                "note": "Unsupported comparison. Abbreviating requires knowing the full word, but nothing says it’s harder than writing the full word."
+                "note": "Nothing supports this. The linguist says abbreviating takes knowledge, not that it’s harder than spelling the word out."
               }
             ]
           }
@@ -3749,7 +3756,7 @@
             "Seagrass meadows farther from the plants have also shrunk over the past decade, though by much smaller amounts.",
             "The three desalination plants were built on stretches of coast where the seagrass meadows had been unusually extensive.",
             "Seagrass is also harmed by water that is much warmer than usual, and the brine raises water temperatures near the plants.",
-            "Near a coastal power station that discharges warm but not salty water, the seagrass meadows have not shrunk.",
+            "Near a coastal power station that discharges warm but not unusually salty water, the nearby seagrass meadows have not shrunk.",
             "The number of boats anchoring along the Sarne Coast, whose anchors can tear up seagrass, has grown over the past decade."
           ],
           "answer": "D",
@@ -3764,34 +3771,34 @@
             "causation"
           ],
           "difficulty": 5,
-          "explanation": "The brine is both warm and salty, so the shrinkage could be due to heat rather than salt; D shows that warm water alone leaves seagrass unharmed, which rules out the rival and supports salinity. C is the trap: it fits the idea that the plants are to blame, but it names heat as a competing cause and so weakens the claim about salinity.",
+          "explanation": "The brine is both warm and salty, so the shrinkage could be due to heat rather than salt; (D) shows that warm water alone leaves seagrass unharmed, which rules out the rival and supports salinity. (C) is the dominant trap: it adds another way the plants could harm seagrass, but it names heat as a competing cause and so weakens the specific claim about salinity.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Increased salinity near the plants is probably the main cause of the meadows’ decline there."
+                "text": "Increased salinity near the plants is probably the main cause of the seagrass decline there."
               },
               {
                 "label": "Reasoning",
-                "text": "Meadows shrank most near the plants; the plants discharge warm, salty brine; salty water harms seagrass."
+                "text": "Meadows shrank most near the three desalination plants, which discharge warm, very salty brine; seagrass is harmed by unusually salty water."
               }
             ],
-            "analysis": "Read the conclusion closely. It doesn’t just blame the plants. It blames the salt. But the brine is warm too. What if the heat is doing the damage? Then the plants are guilty, but the salinity claim is wrong. Strengthen by ruling out that rival: show that warm water without salt doesn’t hurt seagrass. It’s like blaming the spice, not the temperature, for a burned tongue: you test it by serving the dish hot but unspiced. We need an answer that isolates salinity from heat.",
+            "analysis": "Read the conclusion closely. It doesn’t just blame the plants. It blames the salt. But the brine is warm too. What if the heat is doing the damage? Then the plants are guilty but the salinity claim is wrong. It’s like blaming the spice, not the temperature, for a burned tongue: you test it by serving the dish hot but unspiced. We need an answer that separates salt from heat. Most students pick (C), because it gives another way the plants hurt seagrass and ‘the plants are to blame’ feels like the argument. It fails because the conclusion blames salinity specifically; (C) brings in heat as a rival, so it weakens. The right answer (D) hides behind a power station that seems to have nothing to do with desalination, but it is the hot-but-unspiced test.",
             "choices": [
               {
-                "note": "If meadows everywhere are shrinking, something coast-wide may be at work. That gives a rival cause rather than support. At best it does nothing."
+                "note": "Shrinkage everywhere, but more near the plants. That restates the pattern in the premise; it doesn’t separate salt from heat."
               },
               {
-                "note": "So? Bigger meadows near the plants might just have more to lose. This doesn’t link the loss to salt, and if anything hints at another explanation."
+                "note": "If anything this weakens: the meadows near the plants had more to lose, which offers another reason they shrank most. It doesn’t help the salinity claim."
               },
               {
-                "note": "Tempting, because it makes the plants look even more harmful. But the argument blames salinity specifically. This makes heat a competing cause, which weakens that claim."
+                "note": "Tempting. It makes the plants look even more harmful. But the conclusion is about salt, and (C) offers heat as a competing cause. That weakens the argument."
               },
               {
-                "note": "CORRECT. Warm water without salt leaves seagrass alone. That knocks out heat as the explanation, leaving the salty part of the brine as the likely culprit."
+                "note": "CORRECT. Warm water without extra salt leaves seagrass alone. That rules out heat as the cause near the desalination plants and leaves salinity standing."
               },
               {
-                "note": "This adds a rival cause (anchors), and we aren’t told the boats cluster near the plants. It doesn’t help the salinity explanation."
+                "note": "Anchors are a rival cause along the whole coast, and nothing ties them to the plants. If anything it slightly weakens."
               }
             ]
           }
@@ -3801,11 +3808,11 @@
           "stimulus": "In the town of Corlay, households that own a dog report knowing, on average, twice as many of their neighbors by name as households without a dog report knowing. Walking a dog brings people into frequent, casual contact with the neighbors they pass. So owning a dog leads people to become acquainted with more of their neighbors.",
           "stem": "Which one of the following, if true, most seriously weakens the argument?",
           "choices": [
-            "Corlay dog owners who walk their dogs several times a day know more neighbors by name than those who rarely do.",
+            "Corlay dog owners who walk their dogs several times a day know more of their neighbors by name than those who rarely do.",
             "Some households in Corlay that do not own a dog report knowing nearly all of their neighbors by name.",
-            "Corlay residents who own cats report knowing about as many of their neighbors as do residents who own no pets.",
-            "In surveys, Corlay dog owners describe their neighborhoods as friendlier than residents without dogs describe theirs.",
-            "Most of Corlay’s apartment buildings, whose residents seldom know their neighbors by name, forbid tenants to keep dogs."
+            "Corlay residents who own cats report knowing about as many of their neighbors by name as do residents who own no pets.",
+            "In surveys, Corlay residents who own dogs tend to describe their neighborhoods as friendlier than other residents describe theirs.",
+            "Corlay households that own a dog have, on average, about twice as many members as households without a dog do."
           ],
           "answer": "E",
           "types": [
@@ -3813,13 +3820,13 @@
           ],
           "skills": [
             "causal",
-            "comparison"
+            "statistical"
           ],
           "flaws": [
             "causation"
           ],
           "difficulty": 4,
-          "explanation": "E shows that households without dogs are concentrated in apartment buildings where people seldom know their neighbors for reasons that have nothing to do with dogs, so where people live, not dog ownership, may explain the gap. A is the trap: more walking going with more acquaintances fits the argument’s mechanism and so strengthens it.",
+          "explanation": "The survey counts neighbors known per household, and a household with more members will usually know more neighbors between them. If dog-owning households are about twice as large, (E), household size alone could produce the twofold gap, so dog ownership need not be the cause. (C) is the dominant trap: it seems to show that pets make no difference, but cats aren’t walked, so cat owners knowing no more neighbors is just what the argument’s walking mechanism predicts. (A) strengthens.",
           "breakdown": {
             "setup": [
               {
@@ -3828,25 +3835,25 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Dog-owning households know twice as many neighbors by name; dog walking brings casual contact with neighbors."
+                "text": "Dog-owning households report knowing twice as many neighbors by name as households without dogs; walking a dog brings frequent contact with neighbors."
               }
             ],
-            "analysis": "Dog owners know more neighbors. Is the dog the reason? Ask how dog owners differ from everyone else. Maybe they live in different kinds of places. If the non-owners are mostly people in buildings where nobody knows anybody, the comparison is rigged before any dog gets walked. Weaken by showing the two groups differ in some other way that explains the gap. Correct weaken answers often work like this: indirectly, through the comparison group.",
+            "analysis": "Who is doing the knowing? The survey counts per household, not per person. A household of four will know more neighbors between them than a person living alone, dog or no dog. If dog households are bigger, ‘twice as many’ could just mean more people. It’s like noting that families with minivans know more people at church. We need an answer that gives a rival explanation for the gap. Most students pick (C), because it looks like a control group: pet owners know no more neighbors, so pets must not matter. It fails because cats don’t get walked. The argument’s mechanism is the walk, so cat owners matching non-owners is what the argument predicts. The right answer (E) hides because household size looks like a dull demographic fact rather than a cause.",
             "choices": [
               {
-                "note": "Tempting, because it’s about dogs and neighbors. But more walks going with more acquaintances fits the walking mechanism perfectly. That’s a strengthener."
+                "note": "Opposite direction. More walking going with more acquaintances fits the argument’s mechanism and strengthens it."
               },
               {
-                "note": "‘Some’ households is nothing. An average can hide plenty of exceptions; a few friendly dogless households don’t touch the comparison."
+                "note": "So? An average can hide exceptions. A few dogless households that know everyone don’t explain why dog households know twice as many on average."
               },
               {
-                "note": "If cats don’t help, maybe it’s the walking, not pet ownership in general. That fits the argument; it doesn’t weaken it."
+                "note": "Tempting. It looks like a control group showing pets make no difference. But the argument credits the walking, and cats aren’t walked. Cat owners matching non-owners is exactly what the argument would predict."
               },
               {
-                "note": "Feeling that a neighborhood is friendly is a different thing from knowing neighbors by name, and it’s consistent with the dog causing it anyway."
+                "note": "Friendlier impressions could result from knowing more neighbors. This offers no different explanation of the gap; if anything it fits the argument."
               },
               {
-                "note": "CORRECT. Dogless households are disproportionately apartment dwellers, and apartment dwellers seldom know their neighbors anyway. Housing, not dogs, could explain the gap."
+                "note": "CORRECT. The count is per household. If dog households have about twice as many members, they’d know roughly twice as many neighbors between them even if the dog never left the house. That’s a rival explanation for the whole gap."
               }
             ]
           }
@@ -3860,7 +3867,7 @@
             "presumes, without providing justification, that a larger average loan size indicates that the bank’s lending has become riskier",
             "infers that each branch increased its total lending from the fact that each branch increased its average loan size",
             "fails to consider that a larger share of last year’s loans may have come from branches whose loans are smaller",
-            "treats a change in the average size of loans as if it were a change in the total number of home loans the bank issued"
+            "treats a change in the average size of loans as if it were a change in the number of loans issued"
           ],
           "answer": "D",
           "types": [
@@ -3875,7 +3882,7 @@
             "percent-number"
           ],
           "difficulty": 5,
-          "explanation": "A bank-wide average depends on how loans are spread across branches; if lending shifted toward branches with smaller loans, every branch’s average could rise while the overall average fell. D names this. E is tempting because it mentions averages, but the economist never draws any conclusion about the number of loans.",
+          "explanation": "A bank-wide average depends on how loans are spread across branches; if more of last year’s loans came from branches that make smaller loans, every branch’s average could rise while the overall average fell. (D) names this. (E) is the dominant trap: it names the familiar confusion of averages with totals, but the economist reasons only about average size and never draws a conclusion about the number of loans.",
           "breakdown": {
             "setup": [
               {
@@ -3887,23 +3894,25 @@
                 "text": "Each of the five branches raised its own average loan size."
               }
             ],
-            "analysis": "Sounds airtight: every part went up, so the whole went up. But averages don’t add up that way. Worked example: Branch 1 makes big loans, Branch 2 small ones. Year one: 9 loans at Branch 1 averaging $300k, 1 loan at Branch 2 at $100k. Overall average: $280k. Year two: Branch 1 makes 1 loan at $310k, Branch 2 makes 9 at $110k. Both branch averages rose, but the overall average is $130k. The mix shifted toward the small-loan branch. We need an answer that points to a change in where the loans came from.",
+            "analysis": "Sounds airtight: every part went up, so the whole went up. But averages don’t combine that way. Worked example: Branch 1 makes big loans, Branch 2 small ones. Year one: 9 loans at Branch 1 averaging $300k and 1 at Branch 2 for $100k; overall average $280k. Year two: Branch 1 makes 1 loan at $310k and Branch 2 makes 9 averaging $110k. Both branch averages rose, yet the overall average is $130k. The mix shifted toward the small-loan branch. We need an answer that points to a change in where the loans came from. Most students pick (E), because it mentions averages and ‘average versus total’ is a famous flaw. It fails because the economist never says anything about how many loans were made; the conclusion is about average size. The right answer (D) hides as a dry remark about ‘share’ that is really the whole mix problem.",
             "choices": [
               {
-                "note": "Irrelevant. Where customers live doesn’t affect how branch averages combine into a bank-wide average."
+                "note": "Irrelevant. Where customers live doesn’t affect how branch averages combine into a bank-wide average.",
+                "example": "Example of this flaw: Both our stores serve the same neighborhood, so their sales figures can be added together."
               },
               {
                 "note": "The economist says nothing about risk. This describes an assumption the argument never makes.",
                 "example": "Example of this flaw: Our patients are older this year, so our hospital must be doing a worse job."
               },
               {
-                "note": "The argument doesn’t claim anything about total lending at each branch. It only reasons from branch averages to an overall average."
+                "note": "The argument makes no claim about total lending at each branch. It reasons only from branch averages to an overall average.",
+                "example": "Example of this flaw: Every branch’s average loan grew, so every branch must be lending more money in total."
               },
               {
                 "note": "CORRECT. This is the mix problem. If more of the loans came from branches with smaller loans, the overall average can fall even though every branch’s average rose."
               },
               {
-                "note": "Tempting, because it’s about averages. But the conclusion is about average size, not the number of loans. The argument never confuses the two.",
+                "note": "Tempting, because it’s about averages. But the conclusion is about average size, not the number of loans, and the argument never confuses the two.",
                 "example": "Example of this flaw: Our average sale grew, so we must have made more sales."
               }
             ]
@@ -3915,7 +3924,7 @@
           "stem": "Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that exhibited by the argument above?",
           "choices": [
             "Every member of the chess club also belongs to the math club, and most members of the math club are seniors. So most members of the chess club are seniors, and so are some members of the math club.",
-            "All of the restaurants on Pine Street serve vegetarian dishes, as do about half of those in the harbor district, and some restaurants serving vegetarian dishes won a city health award. So some award winners are on Pine Street, and some are in the harbor district.",
+            "Some restaurants that won a city health award serve vegetarian dishes. Every restaurant on Pine Street serves them, as do about half of those in the harbor district. Hence some of the award winners are on Pine Street and some are in the harbor district.",
             "All of the paintings in the museum’s east gallery are oil paintings, and about half of those in its west gallery are. Every oil painting in the museum is insured. So all of the east gallery’s paintings and at least half of the west gallery’s paintings are insured.",
             "Some of the volunteers at the animal shelter are teachers, and some of the teachers in town donate money to the shelter. So some of the shelter’s volunteers donate money to the shelter, and some of its donors are teachers.",
             "All of the novels on this year’s prize shortlist were written in English, as were about half of the novels in the town library. So about half of the novels in the town library are on this year’s prize shortlist."
@@ -3931,7 +3940,7 @@
             "scope-shift"
           ],
           "difficulty": 5,
-          "explanation": "The original has all A are C, about half of B are C, some C are D, and concludes that some D are A and some D are B, ignoring that the C’s that are D might be neither A nor B. B repeats this exactly. C has the same opening but is valid because every C is insured, and D commits a different ‘some–some’ error with only two groups.",
+          "explanation": "The original has: all A are C; about half of B are C; some C are D; so some D are A and some D are B. It ignores that the C’s that are D might be neither A’s nor B’s. (B) has the same structure with its statements reordered. (C) is the dominant trap: it opens exactly like the original, but its third premise says every oil painting is insured, so its conclusion follows and it is valid. (D) commits a different some–some error with only two groups.",
           "breakdown": {
             "setup": [
               {
@@ -3947,22 +3956,22 @@
                 "text": "All A are C; about half of B are C; some C are D; so some D are A and some D are B."
               }
             ],
-            "analysis": "Where’s the gap? ‘Some documentaries’ got funding, but which ones? They could be documentaries that were neither nominated nor shown at Leland. There are lots of documentaries in the world. ‘Some’ isn’t ‘all’: the members you care about could be the other ones. This is an overlap fallacy: two groups each overlap with C, and some C have a feature, so we’re told both groups get the feature. We need the same three-part setup with a ‘some’ link and a double conclusion.",
+            "analysis": "Why is this bad? The funded documentaries could be ones that were neither nominated nor shown at Leland. Picture 100 documentaries this year: 5 nominated, 10 at Leland, and the 3 funded ones among the other 85. ‘Some C are D’ doesn’t say WHICH C’s. This is the overlap fallacy: two groups that both sit inside a bigger group needn’t overlap with a third slice of it. Most students pick (C), because its first two sentences are a near-copy of the original’s. It fails because its third premise says EVERY oil painting is insured, and ‘every’ guarantees the result, so (C) is valid. The right answer (B) hides by reordering: it starts with the ‘some’ statement and uses its own wording, but the pieces are identical.",
             "choices": [
               {
-                "note": "A different flaw. This one passes ‘most’ through an ‘all’ link: chess club members could be the non-senior minority of the math club. It has no ‘some C are D’ step feeding a double conclusion."
+                "note": "A different flaw: all chess members are math members; most math members are seniors; so most chess members are seniors. That’s the all-plus-most error, without the original’s two-part ‘some’ conclusion."
               },
               {
-                "note": "CORRECT. All Pine Street restaurants serve vegetarian (all A are C); about half of harbor restaurants do (half B are C); some vegetarian-serving restaurants won (some C are D); so some winners are on Pine Street and some in the harbor district. Same pattern, same flaw: the winners could be vegetarian-serving restaurants on neither street."
+                "note": "CORRECT. Some award winners (D) serve vegetarian dishes (C); all Pine Street restaurants (A) and about half of harbor restaurants (B) do too; so some award winners are A’s and some are B’s. Same overlap error, statements reordered."
               },
               {
-                "note": "Tempting. The first two sentences match the original almost word for word. But then it says EVERY oil painting is insured, not ‘some.’ That makes the argument valid. You can’t match a flawed argument with a valid one."
+                "note": "Tempting. It opens exactly like the original. But its third premise is ‘every oil painting is insured,’ not ‘some.’ That makes the conclusion follow, so this argument is valid and can’t match a flawed one."
               },
               {
-                "note": "Flawed, but differently. Its first conclusion links two groups through one ‘some–some’ overlap with teachers (the second conclusion is fine). The original has three groups, and its trouble comes from an ‘all’ and a ‘half’ feeding into a ‘some.’"
+                "note": "Only two groups and a ‘some … some’ chain: some volunteers are teachers, some teachers donate. A different error, missing the all / about-half structure."
               },
               {
-                "note": "A different flaw. It treats sharing a trait (written in English) as membership in the shortlist. There’s no ‘some C are D’ step at all."
+                "note": "A different flaw: it concludes that half the library is on the shortlist just because both groups contain English novels. There’s no third ‘some’ group and no two-part conclusion."
               }
             ]
           }
@@ -3975,7 +3984,7 @@
             "Lena’s mother submitted a written request, and Lena plays on the school’s volleyball team, which practices five days a week. So Lena must be excused from the physical education requirement.",
             "Omar has a physician’s note documenting that his asthma makes participation unsafe, though no written request has been submitted for him. Since his need is documented, Omar may be excused.",
             "Priya’s father submitted a written request, and Priya swims on a private club team that trains six days a week. So Priya may be excused from the physical education requirement.",
-            "Theo’s guardian submitted a written request, but Theo has no physician’s note, and his school cross-country team practices only three days a week. So Theo may not be excused.",
+            "Theo’s guardian submitted a written request, but Theo has no physician’s note, and his school’s cross-country team practices only three days a week. So Theo may not be excused.",
             "Mira’s mother submitted a written request, and Mira has a physician’s note documenting a knee injury that makes participation unsafe. But she is on no school team, so she may not be excused."
           ],
           "answer": "D",
@@ -3990,7 +3999,7 @@
             "necessary-sufficient"
           ],
           "difficulty": 4,
-          "explanation": "The policy states only necessary conditions: a written request, plus either a physician’s note or a school team practicing four or more days a week. Theo has neither a note nor a qualifying team, so the policy rules out excusing him, as D says. A is the attractive trap: Lena meets every necessary condition, but the policy never says meeting them guarantees an exemption, so ‘must be excused’ does not follow.",
+          "explanation": "The policy lists only necessary conditions: a written request, plus either a physician’s note or a school team that practices at least four days a week. Theo has neither a note nor a qualifying team, so the policy rules out excusing him, which is (D). (A) is the dominant trap: Lena meets every condition, but conditions that are necessary don’t guarantee an exemption, so ‘must be excused’ doesn’t follow. (E) wrongly treats school-team membership as required even when there is a physician’s note.",
           "breakdown": {
             "setup": [
               {
@@ -3999,25 +4008,25 @@
               },
               {
                 "label": "Application",
-                "text": "Find the judgment the policy actually supports. Since the policy lists only requirements, it can prove a student may NOT be excused (a requirement fails), but it can never prove a student must or may be excused."
+                "text": "Find the judgment the policy actually supports. Since the policy lists only requirements, it can prove that a student may NOT be excused (a requirement fails), but it can never prove that a student must or may be excused."
               }
             ],
-            "analysis": "Read ‘only if’ carefully. Both conditions are necessary, not sufficient. Contrapositive: no written request → not excused; no note AND no qualifying team → not excused. So the safest conforming judgment denies an exemption to someone who fails a requirement. Check each student: Does a request exist? Is there a note, or a school team with 4+ practice days? A right answer must show a student failing one of those and conclude ‘may not be excused.’",
+            "analysis": "Read ‘only if’ carefully. Both conditions are necessary, not sufficient. Contrapositive: no written request → not excused; no note AND no qualifying team → not excused. So a conforming judgment must deny an exemption to someone who fails a requirement. Check each student: Is there a request? Is there a note, or a school team with 4+ practice days? Most students pick (A), because Lena checks every box and ‘must be excused’ feels like the payoff. It fails because the policy never says meeting the requirements guarantees anything; necessary isn’t sufficient. The right answer (D) hides as a negative conclusion, which is the only kind this policy can deliver.",
             "choices": [
               {
-                "note": "Tempting. Lena meets every requirement: request, school team, five days. But meeting necessary conditions doesn’t guarantee anything. The policy never says who must be excused. ‘Must’ goes too far."
+                "note": "Tempting. Lena meets every requirement. But the policy states only necessary conditions, so meeting them doesn’t make an exemption mandatory. ‘Must be excused’ doesn’t follow."
               },
               {
-                "note": "Omar fails the written-request requirement. The policy says no request → not excused, so concluding he may be excused contradicts it."
+                "note": "No written request → can’t be excused. The policy flatly rules Omar out, so ‘may be excused’ contradicts it."
               },
               {
-                "note": "Priya’s team is a private club, not school-sponsored, and she has no note. She fails the ‘either’ condition, so the policy points toward denying her, not excusing her."
+                "note": "Priya’s team is a private club, not school-sponsored, and she has no note. She fails the ‘or’ condition, so the policy rules her out."
               },
               {
-                "note": "CORRECT. Theo has the request, but no note, and his school team practices only three days. He fails the ‘either ... or’ requirement, so under the policy he may not be excused."
+                "note": "CORRECT. Theo has a request, but no note and a team that practices only three days. He fails the ‘or’ condition, so by the contrapositive he may not be excused."
               },
               {
-                "note": "Mira satisfies the ‘or’ through her physician’s note; she doesn’t also need a team. Denying her because she’s not on a team misreads ‘either ... or’ as ‘both.’ The policy gives no ground for that denial."
+                "note": "Mira has a request and a note, which satisfies the ‘or’ condition. The policy never requires team membership as well, so denying her doesn’t follow from the policy."
               }
             ]
           }
@@ -4028,9 +4037,9 @@
           "stem": "Which one of the following is an assumption on which the literary historian’s argument depends?",
           "choices": [
             "Most of the critics who reviewed Raske’s late novels disliked her personally and said as much in their published reviews.",
-            "Raske’s early novels were praised by critics at least as warmly as the Halloran novels were later praised.",
+            "Raske’s early novels were praised by the critics at least as warmly as the Halloran novels were later praised.",
             "No other novelist of Raske’s time used an assumed name to avoid critics’ bias.",
-            "The Halloran novels sold more copies than the novels Raske published under her own name during those years.",
+            "The Halloran novels sold more copies than the novels that Raske published under her own name during those years.",
             "The Halloran novels were not substantially better written than the late novels Raske published under her own name."
           ],
           "answer": "E",

@@ -1,6 +1,6 @@
 {
   "format": "lsat-trainer/v1",
-  "id": "classic-style-test-6-v3",
+  "id": "classic-style-test-6-v4",
   "name": "Classic-Style Test 6",
   "number": 6,
   "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
@@ -18,7 +18,7 @@
           "choices": [
             "The front of the Vellin Glacier was already pulling back in the 1880s, long before recent warming began.",
             "Recent warming has increased the rate at which the Vellin Glacier is retreating.",
-            "Recent warming does not by itself account for the retreat of the Vellin Glacier.",
+            "Recent warming does not by itself account for the Vellin Glacier’s retreat over the past century.",
             "The Vellin Glacier has retreated nearly two kilometers over the course of the past century.",
             "Many visitors are mistaken in believing that the Vellin Glacier is retreating at all."
           ],
@@ -69,7 +69,7 @@
           "stimulus": "Blogger: Audiologists warn that people who are regularly exposed to loud music face an increased risk of permanent hearing loss. But my uncle has played drums in loud nightclubs several nights a week for forty years, and a hearing test last month found his hearing to be normal for his age. Clearly, audiologists have exaggerated the danger that loud music poses to hearing.",
           "stem": "The reasoning in the blogger’s argument is flawed in that the argument",
           "choices": [
-            "treats one person’s experience as sufficient to show that a claim about risk across a population is exaggerated",
+            "treats one person’s experience as sufficient to show that a claim about the risk to a whole population is exaggerated",
             "takes for granted that what is true of musicians who play in nightclubs is true of musicians who play elsewhere",
             "presumes, without providing justification, that the audiologists’ warnings were based on a sample that was too small",
             "fails to specify how much exposure to loud music would be needed before hearing loss became likely",
@@ -175,7 +175,7 @@
           "stimulus": "Imre: Cities should be willing to name new streets after people who are still living. Honoring someone while that person can appreciate the honor makes the tribute more meaningful, and it encourages others to serve their communities.\n\nDana: A living person’s reputation is never settled. If someone honored with a street name is later disgraced, the city must either keep a name that embarrasses residents or go to the expense and confusion of renaming the street.",
           "stem": "Imre and Dana disagree over whether",
           "choices": [
-            "honoring a person while that person is alive makes a tribute more meaningful",
+            "honoring a person while that person is still alive makes a tribute to that person more meaningful",
             "cities should be willing to name new streets after people who are still living",
             "renaming a street causes expense and confusion for a city and its residents",
             "the reputations of people who have died are more settled than those of people who are living",
@@ -224,7 +224,7 @@
           "stimulus": "Bookshop owner: Since the café next door closed in March, our weekday afternoon sales have dropped by a quarter, while our morning and weekend sales are unchanged. Many of our afternoon customers used to stop in to browse after leaving the café. So if a new café opens in that space, our afternoon sales will probably recover.",
           "stem": "Which one of the following is an assumption required by the bookshop owner’s argument?",
           "choices": [
-            "A new café next door would attract at least some people who would also visit the bookshop.",
+            "A new café next door would attract at least some people who would then also visit the bookshop.",
             "Most of the bookshop’s afternoon customers before March had come to the shop directly from the café next door.",
             "A new café is likely to open in the space next door within the next year or so.",
             "The bookshop’s afternoon sales before March were higher than they had been in any previous year.",
@@ -255,7 +255,7 @@
             "choices": [
               {
                 "note": "CORRECT. Negate it: a new café would attract no one who would also visit the bookshop. Then a new café can’t bring sales back, and the conclusion collapses. Notice the modest wording, “at least some”; that’s typical of a right answer here.",
-                "negation": "A new café next door would attract no one who would also visit the bookshop."
+                "negation": "A new café next door would attract no one who would then also visit the bookshop."
               },
               {
                 "note": "Tempting, because it fits the story. But the owner says “many,” not “most.” Negate it: maybe only 30 percent came from the café. A new café could still bring those people back. The argument survives, so this isn’t required.",
@@ -331,9 +331,9 @@
           "stem": "Which one of the following, if true, most seriously weakens the argument?",
           "choices": [
             "Female C. virens release airborne chemicals that males of the species can detect from several meters away.",
-            "In some other species of leaf beetle, the females have antennae that are longer than those of the males.",
+            "In some other species of leaf beetle, the females have longer antennae than the males do.",
             "Male C. virens use their antennae chiefly to fence with rival males over feeding sites.",
-            "Male C. virens whose antennae have been damaged are less likely to mate than are males whose antennae are intact.",
+            "Male C. virens with damaged antennae are less likely to mate than are males whose antennae are intact.",
             "The antennae of male C. virens contain more sensory cells than do the antennae of females."
           ],
           "answer": "C",
@@ -749,11 +749,11 @@
           "stimulus": "In a recent study, volunteers studied a list of words before going to bed and were later woken during deep sleep and asked to recall the list. Brain scans taken just before waking showed intense activity in the hippocampus, a brain region involved in memory, in nearly every volunteer who recalled the list well. Thus, intense hippocampal activity during deep sleep helps people retain what they learned before sleeping.",
           "stem": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
           "choices": [
-            "takes for granted that all of the volunteers studied the list of words with equal effort",
-            "overlooks the possibility that volunteers who recalled the list poorly also showed intense hippocampal activity",
-            "presumes, without providing justification, that the hippocampus is the only brain region involved in memory",
+            "takes for granted that all of the volunteers studied the list of words with roughly equal care and effort",
+            "overlooks the possibility that such activity is typical of deep sleep in nearly everyone, however good their recall",
+            "fails to rule out the possibility that recalling the list well caused the intense activity in the hippocampus",
             "fails to consider that being woken during deep sleep may make it harder to recall what one has learned",
-            "draws a conclusion about people in general from a study of volunteers who may not be representative"
+            "draws a conclusion about people in general from a study of volunteers who may not be representative of most people"
           ],
           "answer": "B",
           "types": [
@@ -767,7 +767,7 @@
             "causation"
           ],
           "difficulty": 4,
-          "explanation": "The study reports brain activity only for good recallers; if poor recallers showed the same intense activity, that activity can’t be what distinguishes retention, so the missing comparison group is the flaw (B). (C) is tempting but the conclusion says only that hippocampal activity “helps,” which doesn’t require it to be the only region involved; (D) would lower everyone’s recall and wouldn’t explain away the link.",
+          "explanation": "The scans are reported only for volunteers who recalled the list well; if nearly everyone shows intense hippocampal activity in deep sleep, poor recallers included, the activity can’t be what helps retention, and (B) describes that missing comparison without naming the group. (C) is the trap: reverse causation is the textbook causal flaw, but the scans were taken before anyone was woken and asked to recall, so the recall can’t have caused the activity.",
           "breakdown": {
             "setup": [
               {
@@ -776,28 +776,28 @@
               },
               {
                 "label": "Reasoning",
-                "text": "Nearly every volunteer who recalled the list well showed intense hippocampal activity just before waking."
+                "text": "Nearly every volunteer who recalled the list well showed intense hippocampal activity just before being woken."
               }
             ],
-            "analysis": "What about the volunteers who recalled the list badly? If they had the same intense activity, then the activity is just what every sleeping brain does and has nothing to do with remembering. The argument looks at only one group. It’s like noting that nearly every lottery winner bought a ticket on a Tuesday, without checking when the losers bought theirs. We need an answer that points out the missing comparison: poor recallers.",
+            "analysis": "So nearly every good recaller had intense hippocampal activity. What about the poor recallers? If their brains lit up the same way, the activity is just what deep sleep looks like, and it has nothing to do with remembering. The argument checks only one group. It’s like noting that nearly every lottery winner drank coffee that morning without asking how many losers did. We need an answer that raises the missing comparison. (B) does, but in disguise: it never mentions poor recallers, it just says the activity might be typical of nearly everyone. Most students pick (C) because reverse causation is the first causal flaw they hunt for, and (C) reuses the stimulus’s own words. It fails on timing: the scans were taken just before waking, and the recall came afterward, so recalling can’t have produced the activity.",
             "choices": [
               {
-                "note": "Merely possible. Unequal effort could add noise, but it doesn’t explain why good recall goes with high hippocampal activity. And the argument never assumes equal effort.",
-                "example": "Example of this flaw: Students who used the new textbook scored higher, so the textbook works (ignoring that some students studied much harder)."
+                "note": "Merely possible. Uneven effort might add noise, but it doesn’t explain why good recall goes with intense activity, and the argument never relies on equal effort.",
+                "example": "Example of this flaw: Students who used the new textbook scored higher, so the textbook works (ignoring that some students simply studied harder)."
               },
               {
-                "note": "CORRECT. The data cover only good recallers. If poor recallers’ brains showed the same activity, it can’t be what separates good retention from bad. This is the missing-comparison-group flaw."
+                "note": "CORRECT. If intense hippocampal activity shows up in deep sleep for nearly everyone, poor recallers included, it can’t be what separates good retention from bad. That’s the missing-comparison-group flaw, stated without naming the missing group."
               },
               {
-                "note": "Tempting, because it sounds like a classic overreach. But the conclusion says the activity “helps,” not that the hippocampus is the only region that matters. The argument doesn’t need that assumption.",
-                "example": "Example of this flaw: Exercise improves mood, so people who feel down must not be exercising."
+                "note": "Tempting. Reverse causation is the classic causal flaw, and this answer borrows the stimulus’s wording. But check the timing: the scans were taken just before the volunteers were woken, and they recalled the list only afterward. A later event can’t cause an earlier one, so the argument doesn’t commit this flaw.",
+                "example": "Example of this flaw: People who own running shoes run more, so owning running shoes makes people run (when running is why they bought the shoes)."
               },
               {
-                "note": "So? If waking people up hurts recall, it hurts everyone’s recall. That doesn’t explain why good recallers had intense activity, and it doesn’t touch the conclusion.",
+                "note": "So? If being woken hurts recall, it hurts everyone’s recall. That doesn’t explain why the good recallers had intense activity.",
                 "example": "Example of this flaw: The new test format lowered scores, so students learned less this year (ignoring that the harder format affected everyone)."
               },
               {
-                "note": "Tempting because it’s a generic study criticism. But nothing suggests these volunteers are unusual, and even a perfectly representative sample would have the real problem: no data on poor recallers.",
+                "note": "A generic study complaint. Nothing suggests these volunteers are unusual, and a perfectly representative sample would still leave the real problem: no data on poor recallers.",
                 "example": "Example of this flaw: Members of our running club love the new shoes, so most people will love them."
               }
             ]
@@ -860,8 +860,8 @@
           "stimulus": "Café owner: Since the Tamsin Street footbridge opened in April, linking our side of the river to the office district on the far bank, our weekday lunch sales have risen by nearly a third. We changed nothing about our menu, prices, or hours during that time. So the new footbridge is what brought us the additional lunch customers.",
           "stem": "Which one of the following, if true, most strengthens the café owner’s argument?",
           "choices": [
-            "Several cafés far from the footbridge on the café owner’s side of the river also saw their lunch sales rise after April.",
-            "Many workers in the office district say that they would like a wider choice of places to eat lunch.",
+            "Several cafés far from the footbridge, on the café owner’s side of the river, also saw lunch sales rise after April.",
+            "Many workers in the office district say they would like more places to choose from at lunch.",
             "A large new residential building a block from the café filled with tenants during April.",
             "The footbridge cost the city considerably more to build than had originally been projected by its planners.",
             "The café’s weekend sales, when the office district is largely empty, have not risen since April."
@@ -915,7 +915,7 @@
           "stimulus": "Every pottery studio in the Aldine district that sells its work to restaurants fires its pieces in a gas kiln. The Wren Street studio, which is in the Aldine district, fires its pieces in a gas kiln. So the Wren Street studio must be one of the district’s studios that sell their work to restaurants.",
           "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
           "choices": [
-            "To be eligible for the Halden Prize, a novel must have been published within the past two years. Mira Ravel’s novel was published last year. So Mira Ravel’s novel must be eligible for the Halden Prize.",
+            "To be eligible for this year’s Halden Prize, a novel must have been published within the past two years. Mira Ravel’s novel came out last year. So Mira Ravel’s novel must be eligible for this year’s Halden Prize.",
             "Every restaurant on Corder Street that offers outdoor seating also serves breakfast on weekends. The Blue Heron, a restaurant on Corder Street, does not serve breakfast on weekends. So the Blue Heron must not offer outdoor seating.",
             "Every violin made in the Pazzi workshop during the last century has a maple back. This violin was not made in the Pazzi workshop during the last century. So this violin must not have a maple back.",
             "Only members of the Harlan choir have been given keys to the rehearsal hall that the choir uses on weekday evenings. Tomas has been given a key to that rehearsal hall. So Tomas must be a member of the Harlan choir.",
@@ -948,10 +948,10 @@
                 "text": "A → B; this one has B; so it has A (affirming the necessary condition)."
               }
             ],
-            "analysis": "Is the kiln argument good? No. Lots of studios could use gas kilns without selling to restaurants. Sells to restaurants → gas kiln. Having the gas kiln doesn’t take you back to restaurants. It’s like saying every NBA player is tall, my cousin is tall, so he’s in the NBA. Now map each choice. Watch the wording: “must have been” and “only” both mark necessary conditions, so translate before you compare. The match has to be flawed in the same way, not just flawed.",
+            "analysis": "Is the kiln argument good? No. Lots of studios could use gas kilns without selling to restaurants. Sells to restaurants → gas kiln. Having the gas kiln doesn’t take you back to restaurants. It’s like saying every NBA player is tall, my cousin is tall, so he’s in the NBA. Now map each choice. Watch the wording: “must have been” and “only” both mark necessary conditions, so translate before you compare. The match has to be flawed in the same way, not just flawed. Most students pick (D) because it has the same surface shape as the kiln argument. It fails because “only” marks the key as enough to prove membership, so (D) is valid. The match, (A), hides behind “must have been,” which marks a necessary condition.",
             "choices": [
               {
-                "note": "CORRECT. Translate “to be eligible, a novel must have been published recently”: eligible → published recently. Ravel’s novel was published recently, so it’s eligible. That treats the necessary condition as enough, exactly like the kiln argument."
+                "note": "CORRECT. Translate “to be eligible, a novel must have been published recently”: eligible → published recently. Ravel’s novel came out recently, so it’s eligible. That treats the necessary condition as enough, exactly like the kiln argument."
               },
               {
                 "note": "Outdoor seating → weekend breakfast; no weekend breakfast; so no outdoor seating. That’s the contrapositive, and it’s valid. A valid argument can’t match a flawed one."
@@ -960,7 +960,7 @@
                 "note": "Tempting, because it’s flawed and uses “every.” But it’s a different flaw: it negates the sufficient condition (not Pazzi, so not maple) instead of affirming the necessary one."
               },
               {
-                "note": "Looks like the same shape, but “only members have keys” means key → member. Tomas has a key, so he’s a member. Valid."
+                "note": "Tempting, because it looks like the same shape: a group, a feature, and someone with the feature. But “only members have keys” means key → member. Tomas has a key, so he’s a member. That’s valid, and a valid argument can’t match a flawed one."
               },
               {
                 "note": "Flawed, but differently: it treats “most” as “all.” The original’s premise is a true “every” statement; its error is running it backward."
@@ -974,10 +974,10 @@
           "stem": "Which one of the following is an assumption on which the argument depends?",
           "choices": [
             "The three late-night businesses were the only businesses on Wexley’s main street to close permanently last year.",
-            "Most of the revenue of each of the three businesses had come from sales made after 9 p.m.",
-            "At least one of the three businesses would have stayed open had the rule not been adopted.",
+            "None of the three businesses was struggling financially before the town began requiring shops to close by 9 p.m.",
+            "Not all three of the businesses would have closed that year had the town’s closing rule never been adopted.",
             "The town council adopted the closing rule mainly in order to reduce late-night noise on the main street.",
-            "Businesses that close by 9 p.m. generally earn less than comparable businesses that stay open later."
+            "Businesses that close by 9 p.m. generally earn less than otherwise comparable businesses that stay open later."
           ],
           "answer": "C",
           "types": [
@@ -990,7 +990,7 @@
             "causation"
           ],
           "difficulty": 4,
-          "explanation": "To blame the rule for the closures, the argument must assume the closures wouldn’t have happened anyway; negate (C) and all three businesses would have closed regardless, so the rule drove none of them out. (B) is tempting, but it is stronger than needed: a business can be ruined by losing well under half its revenue.",
+          "explanation": "Blaming the rule requires that the closures weren’t going to happen anyway; (C) says this in double-negative form, and negating it (all three would have closed regardless) sinks the conclusion. (B) is the trap: it sounds like “they weren’t already failing,” but a struggling business can still be the one the rule pushes under, so the argument doesn’t need it.",
           "breakdown": {
             "setup": [
               {
@@ -999,30 +999,30 @@
               },
               {
                 "label": "Reasoning",
-                "text": "The rule took effect; within twelve months, three late-night businesses on the street closed permanently, after five years with no such closures."
+                "text": "Within twelve months of the rule, three late-night businesses on the street closed permanently, after five years with no such closures."
               }
             ],
-            "analysis": "What if those three shops were going under anyway: rent hikes, a dying lease, owners retiring? Then the rule didn’t drive them out; it just happened at the same time. Any argument that blames an action for an outcome assumes the outcome wouldn’t have happened without the action. Think of a defense lawyer saying, “It would have happened anyway.” We need the answer that shuts that defense down. Test by negation.",
+            "analysis": "What if those three shops were going under anyway: rising rent, expiring leases, owners retiring? Then the rule didn’t drive them out; it just arrived at the same time. Any argument that blames an action for an outcome assumes the outcome wouldn’t have happened without it. We need the answer that shuts down the “it would have happened anyway” defense. (C) does, in an awkward double negative: “not all three would have closed” just means at least one survives without the rule. Most students pick (B) because “they weren’t already struggling” sounds like the same idea. It fails because it’s too strong: a shop can be struggling and still be the one the rule finishes off. Test both by negation.",
             "choices": [
               {
                 "note": "Too strong. Negate it: a couple of other shops also closed. The rule could still have driven out the late-night ones. The argument survives.",
                 "negation": "Some business on Wexley’s main street other than the three late-night businesses also closed permanently last year."
               },
               {
-                "note": "Tempting, because it explains how the rule could hurt. But “most” is more than the argument needs. Negate it: say 35 percent of revenue came after 9 p.m. Losing that could easily sink a shop. The argument survives.",
-                "negation": "It is not the case that most of the revenue of each of the three businesses had come from sales made after 9 p.m."
+                "note": "Tempting. It reads like the prephrase “they weren’t going to close anyway,” but it’s much stronger. Negate it: one of the shops was already struggling. The rule could still be what pushed it under; struggling isn’t the same as doomed. The argument survives, so this isn’t required.",
+                "negation": "At least one of the three businesses was struggling financially before the town began requiring shops to close by 9 p.m."
               },
               {
-                "note": "CORRECT. Negate it: all three businesses would have closed last year even without the rule. Then the rule drove none of them out, and the conclusion collapses. The modest “at least one” wording is typical of a required assumption.",
-                "negation": "All three of the businesses would have closed last year even if the rule had not been adopted."
+                "note": "CORRECT. Negate it: all three would have closed that year even without the rule. Then the rule drove none of them out, and the conclusion collapses. The double negative hides a plain defender.",
+                "negation": "All three of the businesses would have closed that year even if the town’s closing rule had never been adopted."
               },
               {
-                "note": "Irrelevant. Why the council passed the rule has nothing to do with what the rule did to these shops.",
+                "note": "Irrelevant. Why the council passed the rule says nothing about what the rule did to these shops.",
                 "negation": "The town council did not adopt the closing rule mainly in order to reduce late-night noise on the main street."
               },
               {
                 "note": "Too general and not needed. Negate it: early-closing businesses don’t generally earn less. These particular shops could still have been ruined by losing their late hours.",
-                "negation": "Businesses that close by 9 p.m. do not generally earn less than comparable businesses that stay open later."
+                "negation": "Businesses that close by 9 p.m. do not generally earn less than otherwise comparable businesses that stay open later."
               }
             ]
           }
@@ -1087,10 +1087,10 @@
           "stimulus": "Historian: It is often said that the weavers’ guild of medieval Varenna kept cloth prices high by restricting who could enter the trade. Guild records do show that the number of licensed weavers in Varenna fell by about a third between 1350 and 1400. But plague killed roughly a third of the city’s population during those same decades. So the drop in the number of licensed weavers ______.",
           "stem": "Which one of the following most logically completes the historian’s argument?",
           "choices": [
-            "shows that the guild did not in fact restrict who could enter the weaving trade in medieval Varenna",
-            "was caused entirely by deaths from plague rather than by any policy of the weavers’ guild",
+            "suggests that the guild enforced its restrictions on entry less strictly after 1350 than before",
+            "resulted from deaths from plague rather than from any restriction on entry imposed by the guild",
             "confirms that the guild’s restrictions on entry kept cloth prices in Varenna high during that period",
-            "does not by itself provide evidence that the guild was restricting entry into the weaving trade",
+            "is about what one would expect even if the guild had admitted new weavers as freely as before",
             "was smaller than the drop in the number of people practicing most other trades in Varenna"
           ],
           "answer": "D",
@@ -1104,30 +1104,30 @@
           ],
           "flaws": [],
           "difficulty": 4,
-          "explanation": "The number of weavers fell by about a third, but so did the city’s population, so the share of residents who were weavers barely changed; the drop by itself is no evidence of guild restriction (D). (A) and (B) overshoot: undercutting one piece of evidence doesn’t prove the guild imposed no restrictions or that plague alone explains the drop, and (C) repeats the popular view the historian is challenging.",
+          "explanation": "Weavers fell by about a third, and so did the whole population, so the weavers’ share of the city barely moved; that is just what an unchanged guild policy would produce, which is (D). (B) is the trap: it pushes the historian’s point too far, since showing the drop needs no guild explanation doesn’t show the guild played no part in it.",
           "breakdown": {
             "setup": [
               {
                 "label": "Facts",
-                "text": "1. People say the guild restricted entry to keep prices high; 2. licensed weavers fell by about a third, 1350–1400; 3. plague killed about a third of the population in those decades."
+                "text": "1. Popular view: the guild kept cloth prices high by restricting entry; 2. Licensed weavers fell by about a third from 1350 to 1400; 3. Plague killed about a third of the city’s population in the same decades."
               }
             ],
-            "analysis": "Is a falling number of weavers a sign of restriction? Not if everybody’s numbers fell. A third fewer weavers in a city with a third fewer people is the same share of weavers. Watch the switch between an absolute number and a proportion; it’s a classic. The historian is pushing back on the popular view, so the blank should say the evidence doesn’t support it. But careful: “doesn’t support” is not “proves false.” We need the modest version.",
+            "analysis": "So the weavers fell by a third. So did everyone. Is that evidence of a guild policy? No: if the guild had changed nothing, you’d expect the weavers to shrink right along with the city. The share of residents who were weavers stayed about the same. It’s a count-versus-rate point: a falling count means nothing if the base fell just as much. The blank should say the drop is no evidence of restriction. (D) says exactly that, in a roundabout way: it’s what you’d see even under an open-door policy. Most students pick (B) because it sounds like the historian’s point. It fails because it’s too strong: the historian shows the evidence is neutral, not that plague was the whole story. The guild could still have restricted entry while the plague did the visible damage.",
             "choices": [
               {
-                "note": "Too strong. The historian only removes one piece of evidence for restriction. The guild might still have restricted entry; the weaver count just doesn’t show it."
+                "note": "Unsupported. Nothing compares how strictly the guild enforced anything before and after 1350. The numbers fit an unchanged policy."
               },
               {
-                "note": "Too strong. The numbers match, but that doesn’t prove every lost weaver died of plague. Some could have left the trade for other reasons, including guild rules."
+                "note": "Tempting, and it’s the trap. It takes the historian’s point and turns it up too far. Matching drops show the weaver count is no evidence of restriction, not that the guild had no effect at all. Restriction and plague could both have played a part."
               },
               {
-                "note": "This repeats the popular view the historian is pushing back on. “But” signals the historian is about to undercut it, not confirm it."
+                "note": "Backwards. This is the popular view the historian is pushing against. The argument takes evidence away from it."
               },
               {
-                "note": "CORRECT. Weavers fell by about a third; the whole population fell by about a third. So weavers per resident stayed about the same, and the drop needs no guild restriction to explain it. On its own, it’s no evidence of restriction."
+                "note": "CORRECT. If the guild had let weavers in as freely as before, the trade would still shrink by about a third, because the city did. So the drop is what an unchanged policy predicts, which means it can’t show a restriction."
               },
               {
-                "note": "New information. We know nothing about other trades, so nothing supports this comparison."
+                "note": "New information. Other trades are never mentioned, so there’s nothing to compare."
               }
             ]
           }
@@ -1137,8 +1137,8 @@
           "stimulus": "Ecologist: Barn owls, which prey heavily on voles, became considerably more numerous in the Tessel grasslands last year. Yet the vole population of the Tessel grasslands grew substantially over that same year. It follows that the voles in the Tessel grasslands had more food available to them last year than they had the year before.",
           "stem": "The conclusion of the argument can be properly drawn if which one of the following is assumed?",
           "choices": [
-            "If the voles in an area have more food available in a year than the year before, their population will grow that year even if their predators become more numerous.",
-            "Most vole populations in areas where barn owls became more numerous last year declined over that year.",
+            "If voles have more food available in a year than in the year before, their population grows that year even if their predators increase.",
+            "Most vole populations in areas where barn owls became more numerous last year declined over the course of that year.",
             "Whether a vole population grows depends more on the food available to it than on the number of its predators.",
             "The vole population of the Tessel grasslands would have grown even more last year if barn owls had not become more numerous.",
             "No vole population grows during a year in which any of its predators becomes more numerous unless its food supply also increases that year."
@@ -1165,7 +1165,7 @@
                 "text": "Barn owls, a major vole predator, increased last year; the vole population still grew substantially."
               }
             ],
-            "analysis": "Why must the extra growth come from food? Maybe a mild winter, less disease, fewer foxes. The argument needs a rule that rules all that out: if predators go up and voles still grow, food must have gone up. Chain: predator up AND voles grow → more food. Equivalent: predator up AND NOT more food → NOT grow. A sufficient assumption answer can be strong; it can’t be backwards. This is the SA trap where the needed link is a necessary condition and a choice offers the sufficient version.",
+            "analysis": "Why must the extra growth come from food? Maybe a mild winter, less disease, fewer foxes. The argument needs a rule that rules all that out: if predators go up and voles still grow, food must have gone up. Chain: predator up AND voles grow → more food. Equivalent: predator up AND NOT more food → NOT grow. A sufficient assumption answer can be strong; it can’t be backwards. This is the SA trap where the needed link is a necessary condition and a choice offers the sufficient version. Most students pick (A) because it mentions food, predators, and growth all at once. It fails because it makes extra food enough for growth, and we need the reverse: growth despite more predators proves extra food.",
             "choices": [
               {
                 "note": "Tempting, because it links food, predators, and growth. But it runs the wrong way: more food → growth. We need growth → more food. With this, the voles could still have grown for some other reason without extra food."
@@ -1187,58 +1187,59 @@
         },
         {
           "number": 23,
-          "stimulus": "Farm association spokesperson: Some naturalists claim that the decline of the meadow skipper butterfly in the Harrow Hills is due to pesticides sprayed on nearby farms. But their only evidence is that the decline began shortly after the farms started spraying, and that sequence of events by itself hardly shows that the spraying caused the decline. So pesticides are not responsible for the meadow skipper’s decline.",
-          "stem": "Which one of the following most accurately describes a flaw in the spokesperson’s reasoning?",
+          "stimulus": "Lake manager: Large fish die-offs in Orren Lake have only two causes: water that is too low in oxygen, or toxins released by blooms of blue-green algae. During last month’s die-off, our staff tested the lake’s oxygen level every afternoon, and every reading was well within the normal range. So the die-off must have been caused by algal toxins.",
+          "stem": "The lake manager’s argument is flawed in that it",
           "choices": [
-            "It treats the naturalists’ failure to establish their claim as showing that their claim is false.",
-            "It dismisses the naturalists’ claim on the grounds that the naturalists may have a bias against farmers.",
-            "It infers that one event caused another from the mere fact that the first event preceded the second.",
-            "It fails to consider that the meadow skipper’s decline may have resulted from more than one cause.",
-            "It presumes, without providing justification, that the meadow skipper population in the Harrow Hills has in fact declined."
+            "overlooks the possibility that one of the causes it considers was present at times when no measurements were being taken",
+            "takes for granted that low oxygen and algal toxins are the only possible causes of a large die-off in the lake",
+            "infers that algal toxins caused the die-off merely from the fact that the die-off followed an algal bloom",
+            "confuses a condition required for a die-off to occur with a condition sufficient to bring one about",
+            "relies on oxygen readings without establishing that the staff who took them were qualified to measure water quality"
           ],
           "answer": "A",
           "types": [
             "flaw"
           ],
           "skills": [
-            "rebuttal",
-            "causal"
+            "causal",
+            "sampling"
           ],
           "flaws": [
-            "absence-of-evidence"
+            "scope-shift"
           ],
           "difficulty": 5,
-          "explanation": "The spokesperson correctly points out that timing alone doesn’t prove the pesticides caused the decline, but then concludes that the pesticides are not responsible, treating a weak argument for a claim as proof the claim is false (A). (C) describes the naturalists’ mistake, which the spokesperson identifies rather than commits.",
+          "explanation": "The manager rules out low oxygen using readings taken only in the afternoons, then treats that as ruling it out at all times; the oxygen could have crashed at night, when no one measured, and (A) describes that gap abstractly. (B) is the trap: the two-causes claim is the manager’s stated premise, not something taken for granted, and the argument fails even if that premise is true.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Pesticides are not responsible for the meadow skipper’s decline."
+                "text": "Last month’s die-off was caused by algal toxins."
               },
               {
                 "label": "Reasoning",
-                "text": "The naturalists’ only evidence is that the decline began after spraying began, and timing alone doesn’t show causation."
+                "text": "Die-offs have only two causes, low oxygen or algal toxins; oxygen readings taken every afternoon during the die-off were all normal."
               }
             ],
-            "analysis": "Good point about the naturalists: timing alone doesn’t prove cause. But so what? A bad argument for a claim doesn’t make the claim false. The pesticides might still be the culprit; we just don’t know yet. The right conclusion is “unproven,” not “false.” It’s like saying: your only reason for thinking it will rain is that your knee aches, so it won’t rain. We need an answer that says the author treats a failed proof as a disproof.",
+            "analysis": "So the oxygen was fine every afternoon. What about every night? The manager eliminates one of two causes, but the evidence covers only part of each day. If the oxygen crashed in the small hours, every afternoon reading could be normal and low oxygen could still be the killer. It’s like proving a shop was never robbed because the alarm log is clean, when the alarm is switched on only during business hours. We need an answer that says the elimination step rests on incomplete coverage. (A) says that, but abstractly (“one of the causes it considers,” “times when no measurements were being taken”), so you have to map it back. Most students pick (B) because “only two causes” smells like a false choice, the textbook flaw. It fails because the manager states that as a premise, and a flaw answer has to describe a bad move from the premises to the conclusion. Even granting that there are only two causes, low oxygen still hasn’t been ruled out.",
             "choices": [
               {
-                "note": "CORRECT. The spokesperson shows only that the naturalists haven’t proven their case, then concludes the opposite of their claim. Lack of proof isn’t proof of the opposite."
+                "note": "CORRECT. The two causes are low oxygen and toxins. The only evidence against low oxygen is afternoon readings. If the oxygen dropped at night, the readings would miss it, and the elimination falls apart. That’s exactly a cause “present at times when no measurements were being taken.”"
               },
               {
-                "note": "The spokesperson never mentions the naturalists’ motives. Wrong flaw, though the farm connection makes it feel likely.",
-                "example": "Example of this flaw: The naturalists just dislike farmers, so their claim about pesticides can be ignored."
+                "note": "Tempting. It looks like the false-choice flaw. But the manager doesn’t take this for granted; it’s stated outright as a premise, and flaw questions accept the premises. And even if those really are the only two causes, the conclusion still doesn’t follow, because low oxygen hasn’t been ruled out.",
+                "example": "Example of this flaw: The car won’t start and the battery tested fine, so the starter must be broken (quietly assuming those are the only two possibilities)."
               },
               {
-                "note": "Tempting, because this flaw is in the passage. But it’s the naturalists’ flaw, and the spokesperson is the one pointing it out. Watch whose reasoning the question asks about.",
-                "example": "Example of this flaw: The decline began right after spraying started, so the spraying caused it."
+                "note": "No bloom is ever mentioned, and the argument cites no timing at all. The manager reaches the toxins by eliminating the alternative, not by noticing that one thing followed another.",
+                "example": "Example of this flaw: The fish died the week after the marina opened, so the marina killed them."
               },
               {
-                "note": "Interesting thought, but not the problem. Even if the decline had a single cause, the spokesperson would still have no grounds for ruling out pesticides.",
-                "example": "Example of this flaw: The fire was caused by faulty wiring, so the dry weather played no part."
+                "note": "No necessary condition is being treated as sufficient here. The premise lists two possible causes, and the manager uses it as an either/or, which is a fair reading of it.",
+                "example": "Example of this flaw: Clean water is required for trout to thrive; this stream has clean water; so trout will thrive in it."
               },
               {
-                "note": "The spokesperson accepts that the decline happened; that isn’t in dispute and isn’t a flaw. Everyone in the passage agrees on it."
+                "note": "Attacks the source of a premise. Nothing suggests the staff measured badly, and perfectly accurate readings would leave the real problem untouched: they cover only afternoons.",
+                "example": "Example of this flaw: The traffic survey was run by students, so its findings can be ignored."
               }
             ]
           }
@@ -1251,7 +1252,7 @@
             "Every guide at the Corran Museum has a degree in art history. Some people with degrees in art history teach at the university. Hence, some guides at the Corran Museum teach at the university.",
             "Most of the employees of the Fennick Bakery work early-morning shifts during the week. Some of the bakery’s employees are university students. Hence, some university students work early-morning shifts at the Fennick Bakery.",
             "All of the moths in the Ilse collection were caught in Brazil, and all moths caught in Brazil for that collection were caught before 1950. Hence, all of the moths in the Ilse collection were caught before 1950.",
-            "Every volunteer at the Kessel Public Library has lived in Kessel County for at least a year. Some of the library’s volunteers are retired. Hence, some retired people have lived in Kessel County for at least a year.",
+            "Some volunteers at the Kessel Public Library are retired, and none of its volunteers has lived in Kessel County for under a year. Hence, some retirees have lived in the county for at least a year.",
             "Every licensed mountain guide in the town of Tarvik is certified in wilderness first aid. Some people certified in wilderness first aid work as lifeguards. Hence, some lifeguards are licensed mountain guides in Tarvik."
           ],
           "answer": "D",
@@ -1263,7 +1264,7 @@
           ],
           "flaws": [],
           "difficulty": 4,
-          "explanation": "The argument reasons: all A are B; some A are C; so some C are B. (D) matches exactly: all library volunteers are year-long residents, some volunteers are retired, so some retirees are year-long residents. (C) is also valid, which makes it tempting, but its all-all-all chain is a different pattern; (A) and (E) link the groups through the wrong term and are invalid, and (B) uses “most” plus “some,” which doesn’t guarantee an overlap.",
+          "explanation": "The argument runs: all A are B; some A are C; so some C are B. (D) matches once you reorder its premises and read “none has lived there for under a year” as “all have lived there at least a year.” (B) is the trap: it copies the original sentence by sentence but opens with “most,” which breaks the validity, and (C) is valid but has an all-all-all shape.",
           "breakdown": {
             "setup": [
               {
@@ -1272,29 +1273,29 @@
               },
               {
                 "label": "Reasoning",
-                "text": "All cooperative beekeepers sell honey at the market; some cooperative beekeepers make candles."
+                "text": "Every cooperative beekeeper sells honey at the market; some cooperative beekeepers make candles from their own wax."
               },
               {
                 "label": "Pattern",
-                "text": "All A are B; some A are C; so some C are B."
+                "text": "All A are B; some A are C; so some C are B (valid)."
               }
             ],
-            "analysis": "Does it work? Yes. Take the candle-making beekeepers: they’re in the cooperative, and everyone in the cooperative sells honey, so those candle makers sell honey. The shared group (A, the cooperative) is in both premises, and the “all” premise covers it. Map each choice to letters. The match needs all A are B, some A are C, so some C are B. Being valid isn’t enough; the shape has to match.",
+            "analysis": "Is the original valid? Yes. Take the candle-making co-op members: they’re co-op members, so they sell honey. That gives you people who make candles and sell honey. We need another valid argument with the same skeleton: all A are B, some A are C, so some C are B. Translate before you compare: the match may scramble the order or state the “all” in negative form. (D) does both: it puts the “some” first, and “none has lived there for under a year” is just “all have lived there at least a year.” Most students pick (B) because it copies the original line for line. It fails on one word: “most” instead of “every.” The students could all be in the minority who don’t work early shifts, so (B)’s conclusion doesn’t follow.",
             "choices": [
               {
-                "note": "All A (guides) are B (art history degrees); some B teach. The “some” is about art-history graduates, not guides, so the teachers could all be non-guides. Invalid, and a different shape."
+                "note": "Invalid. All guides have art-history degrees, and some degree holders teach. But the teachers could be different degree holders. The shared term never links the two groups."
               },
               {
-                "note": "Most A work early shifts; some A are students. The students could all be in the minority who don’t work early. “Most” plus “some” doesn’t force an overlap. Invalid."
+                "note": "Tempting, because it copies the original line for line. But it starts with “most,” not “every.” The students could all be in the minority who don’t work early, so the conclusion doesn’t follow. The original is valid; this one isn’t."
               },
               {
-                "note": "Tempting, because it’s valid too. But its shape is all A are B, all B are C, so all A are C: a chain of “alls,” not “all” plus “some.” Valid isn’t the same as parallel."
+                "note": "Valid, which makes it tempting, but the skeleton differs: all A are B, all B are C, so all A are C. No “some” premise and no “some” conclusion."
               },
               {
-                "note": "CORRECT. All A (volunteers) are B (year-long residents); some A are C (retired); so some C are B. Same terms in the same places, and valid for the same reason."
+                "note": "CORRECT. Reorder it: no volunteer has lived in the county under a year, so every volunteer has lived there at least a year (all A are B). Some volunteers are retired (some A are C). So some retirees have lived there at least a year (some C are B). Same skeleton, same validity."
               },
               {
-                "note": "All A (guides) are B (first-aid certified); some B are lifeguards; so some lifeguards are A. The lifeguards could all be non-guides with first-aid training. Invalid."
+                "note": "Invalid, for the same reason as (A): the first-aid group is the shared term, and the lifeguards may be first-aiders who aren’t guides."
               }
             ]
           }
@@ -1590,7 +1591,7 @@
           "choices": [
             "It is an example of the stageable material that Hallard treats as a mere residue of the directions.",
             "It can serve a purpose in performance even though nothing in a production directly represents it.",
-            "It shows that Fane intended at least some of her directions to be read only by readers of the published plays.",
+            "It shows that Fane intended some of her directions to be read only by readers of the published plays.",
             "It was probably added to the published text of The Glass Orchard some years after the play’s premiere.",
             "It ought to be conveyed to audiences through some means other than the dialogue spoken by the characters."
           ],
@@ -1640,7 +1641,7 @@
             "A composer publishes a score with detailed performance markings that the musicians are expected to consult at every rehearsal.",
             "A novelist adapting her own novel for the stage cuts every descriptive passage that could not be shown to an audience.",
             "At the first rehearsal, a playwright gives the actors a summary of the plot so that they can learn their lines more quickly.",
-            "A choreographer tells each dancer, once and before rehearsals, an imagined history for the role that the dance itself never depicts.",
+            "A choreographer tells each dancer, once and before rehearsals begin, an imagined history for the role that the dance itself never depicts.",
             "A film director writes notes on each scene for a book, published after the film’s release, intended for curious readers."
           ],
           "answer": "D",
@@ -1835,7 +1836,7 @@
           "choices": [
             "looks to the size of the stipulated sum rather than to the loss that the breach actually caused",
             "applies to contracts between two firms but not to contracts between a firm and a private individual",
-            "considers who the contracting parties are but not whether the particular clause was actually negotiated",
+            "considers who the parties are but not whether the particular clause in question was actually negotiated",
             "requires a court to inquire into each party’s private reasons for entering into the contract in the first place",
             "fails to take into account whether the two contracting parties were in fact equally sophisticated"
           ],
@@ -1885,7 +1886,7 @@
             "show that firms of comparable sophistication frequently contract on standard forms that neither side reads",
             "provide an example of a damages clause that reasonably estimated the harm a breach would cause",
             "suggest that penalty clauses are more common in some industries than they are in others",
-            "illustrate how enforcing a penalty can impose costs on people who never agreed to the contract",
+            "illustrate how enforcing a penalty can impose costs on people who had never agreed to the contract",
             "demonstrate that a delay of only a few weeks rarely causes a significant loss to the injured party"
           ],
           "answer": "D",
@@ -1981,8 +1982,8 @@
           "stem": "Which one of the following principles, if accepted, would most help to justify the position the author takes in the last sentence of the passage?",
           "choices": [
             "A court should enforce any term to which both contracting parties freely agreed, unless the term was imposed on one of them by fraud or by duress.",
-            "A court should refuse to enforce an agreed sum if, and only if, the sum was not genuinely bargained over or would seriously harm those outside the contract.",
-            "A contractual term that is designed to coerce one party into performing should never be enforced by a court, however carefully the two parties may have negotiated it.",
+            "A court should decline to enforce an agreed sum if, and only if, it reflects no real negotiation or its payment would injure people outside the contract.",
+            "A court should decline to enforce an agreed sum whenever it far exceeds any loss a breach could plausibly cause, however carefully it was negotiated.",
             "Courts should defer to commercial parties’ own judgments about the risks of breach whenever both parties had access to competent legal advice while they negotiated the contract.",
             "Whether a contractual term should be enforced depends chiefly on whether enforcing it would leave the breaching party able to pay all of its other debts."
           ],
@@ -1991,34 +1992,34 @@
             "rc-analogy"
           ],
           "difficulty": 4,
-          "explanation": "The last sentence says the doctrine may protect “the integrity of bargaining and the interests of outsiders,” which supports a narrower rule but not abolition. B makes exactly those two concerns the grounds, and the only grounds, for refusing enforcement: narrower than now, but not gone. A and D support Rudd’s abolition; C is the traditional rationale the author rejects; E captures outsiders only.",
+          "explanation": "The last sentence says the doctrine may protect ‘the integrity of bargaining and the interests of outsiders to the contract,’ purposes that support a narrower rule than the current one but not abolition. B makes exactly those two concerns the grounds, and the only grounds, for refusing enforcement. C is the trap: it keeps the doctrine alive, but it is simply today’s size-based test, applied ‘however carefully’ the sum was negotiated, so it is neither narrower nor tied to bargaining. A and D support Rudd’s abolition; E keeps one concern and makes solvency the chief test.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the principle that would back up the author’s final position: keep the penalty doctrine, but narrowed to protect bargaining and outsiders."
+                "text": "Find the principle that would justify the author’s final position: keep the penalty doctrine, but in a narrower form aimed at bargaining and outsiders."
               },
               {
                 "label": "Where to look",
-                "text": "The last sentence of the passage, with the third paragraph (bargaining) and the fourth paragraph (outsiders)."
+                "text": "The last sentence of the passage, with the last sentence of the first paragraph (today’s test: a sum ‘far exceeding any plausible loss’), the third paragraph (bargaining) and the fourth (outsiders)."
               }
             ],
-            "analysis": "The position has two parts: 1. don’t abolish the doctrine (sometimes refuse enforcement); 2. narrow it to two purposes: real bargaining and protecting outsiders. So the principle should say: refuse enforcement when (and only when) the clause wasn’t really bargained or would hurt outsiders. An answer that supports abolition, or rests on coercion, or names only one purpose, fails.",
+            "analysis": "The position has two halves: 1. don’t abolish the doctrine; 2. narrow it to two purposes: real bargaining and outsiders. A principle that justifies it must do both. Prephrase: refuse enforcement when, and only when, the clause wasn’t really bargained over or would hurt outsiders. The key uses stand-in wording (‘no real negotiation,’ ‘people outside the contract’), so match ideas, not words. Most students pick (C) because they read ‘but not its abolition’ and grab the answer that keeps the doctrine. It fails the other half: C is the rule courts apply now (a sum far beyond any plausible loss), and it applies ‘however carefully it was negotiated,’ ignoring the bargaining concern. The author wants ‘a narrower rule than the one courts now apply,’ not the same one.",
             "choices": [
               {
-                "note": "This supports Rudd: enforce whatever both sides agreed to. It would leave no room for a penalty doctrine based on bargaining quality or outsiders."
+                "note": "This supports Rudd: enforce whatever both sides agreed to. It leaves no room for refusing a clause because it wasn’t really bargained or because it hurts outsiders."
               },
               {
-                "note": "CORRECT. Both purposes from the last sentence, and only those: the doctrine survives (so not abolished) but is limited to those grounds (so narrower)."
+                "note": "CORRECT. Both purposes from the last sentence, and only those: the doctrine survives (not abolished) but is limited to those grounds (narrower than today’s size test)."
               },
               {
-                "note": "This is the traditional rationale (penalties are bad because they coerce), which the author says is not rescued."
+                "note": "Tempting. It keeps the doctrine, which matches ‘not its abolition.’ But it is the current size-based rule from the first paragraph, and ‘however carefully it was negotiated’ discards the author’s bargaining concern. It justifies the status quo, not a narrower rule."
               },
               {
                 "note": "Rudd’s position again. The author’s worry is that legal advice and sophistication describe the parties, not whether this clause was bargained over."
               },
               {
-                "note": "Tempting, because outsiders are one of the author’s concerns. But it drops the bargaining concern and makes solvency the chief test, which is narrower and different from what the author proposes."
+                "note": "It picks up the outsiders concern only, drops bargaining, and turns solvency into the chief test, which is different from what the author proposes."
               }
             ]
           }
@@ -2030,7 +2031,7 @@
           "stem": "The passage suggests that the author would be most likely to agree with which one of the following statements?",
           "choices": [
             "Courts currently strike down too few damages clauses as penalties, especially in contracts negotiated between large and well-advised firms.",
-            "Courts should never enforce a damages clause that appears in a contract drafted on one party’s standard form.",
+            "Courts should presume that a damages clause in a standard-form contract is unenforceable unless it is shown to have been negotiated.",
             "How a damages clause came to be included in a contract can bear on whether a court should enforce it.",
             "The penalty doctrine is justified chiefly by the fact that penalty clauses are designed to coerce parties into performing.",
             "Rudd’s proposal would be acceptable if it were limited to contracts between firms that have no creditors other than each other."
@@ -2040,34 +2041,34 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "The third paragraph faults Rudd’s test because it “cannot distinguish a figure both sides weighed from one that one side’s lawyers inserted,” and the last sentence names “the integrity of bargaining” as a purpose of the doctrine. So the clause’s history matters: C. A reverses the direction (the author wants a narrower rule), and B turns “may reflect no one’s considered judgment” into “never.”",
+          "explanation": "The third paragraph faults Rudd’s test because it ‘cannot distinguish a figure both sides weighed from one that one side’s lawyers inserted,’ and the last sentence names ‘the integrity of bargaining’ as a purpose of the doctrine, so the clause’s history matters: C. B is the trap: it turns the author’s worry about standard forms into a specific legal rule, a presumption against enforcement, that the author never proposes; the author says only that such a clause ‘may reflect no one’s considered judgment.’ A reverses the direction of the author’s narrower rule, and D is the rationale the author rejects.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Infer a view the author would hold."
+                "text": "Infer a view the author would hold, at no more than the author’s strength."
               },
               {
                 "label": "Where to look",
-                "text": "The last two sentences of the third paragraph and the last sentence of the passage."
+                "text": "The second through fourth sentences of the third paragraph (standard forms; ‘describes the parties, not the transaction’) and the last sentence of the passage."
               }
             ],
-            "analysis": "Hard to prephrase, so test each answer against the author’s two concerns and the “narrower, not abolished” verdict. The author’s main complaint about Rudd is that his test ignores whether a clause was actually bargained over. So the author thinks a court can properly look at how the clause got there.",
+            "analysis": "The author’s main complaint about Rudd is that his test ignores whether a clause was actually bargained over. So the author thinks a court can properly look at how a clause got into the contract. That’s modest, and the key says it modestly (‘can bear on’). Most students pick (B) because it sounds like the author’s standard-form worry turned into a rule. It fails because the author never proposes any rule for standard forms, let alone a presumption against them: a buried clause ‘may’ reflect no one’s judgment. Turning a worry into a policy the author never states gives the author an opinion the passage doesn’t contain.",
             "choices": [
               {
-                "note": "Reversed. A “narrower rule than the one courts now apply” means striking down fewer clauses, not more. And the author grants Rudd’s point most fully for well-advised firms."
+                "note": "Reversed. A ‘narrower rule than the one courts now apply’ means striking down fewer clauses, not more, and the author grants Rudd’s point most fully for well-advised firms."
               },
               {
-                "note": "Too strong. A buried standard-form clause “may” reflect no one’s judgment; the author doesn’t say such clauses are never enforceable."
+                "note": "Tempting. It sounds like the third paragraph’s worry put into practice. But the author proposes no presumption and says only that a buried clause ‘may reflect no one’s considered judgment.’ This is a rule the author never states."
               },
               {
-                "note": "CORRECT. The author’s objection in the third paragraph is precisely that Rudd’s test ignores whether a clause was weighed by both sides; protecting “the integrity of bargaining” requires looking at that."
+                "note": "CORRECT. The author’s objection is that Rudd’s test can’t tell a figure both sides weighed from one slipped into a form; protecting ‘the integrity of bargaining’ means looking at how the clause got there."
               },
               {
-                "note": "This is the traditional rationale, which the author says is not rescued."
+                "note": "This is the traditional coercion rationale, which the author says is not rescued."
               },
               {
-                "note": "Tempting, because it addresses the outsider worry. But the bargaining worry from the third paragraph would remain, and employees and suppliers are outsiders too. The author wouldn’t accept Rudd’s proposal on this limit alone."
+                "note": "It addresses only the outsiders worry, and employees and suppliers are outsiders too; the bargaining worry would remain. The author wouldn’t accept Rudd’s proposal on this limit alone."
               }
             ]
           }
@@ -2229,7 +2230,7 @@
           "choices": [
             "The value of the earthenware in those households was probably overstated by the appraisers who listed it.",
             "Those households probably acquired most of their earthenware by inheritance rather than by purchase.",
-            "Those households were probably considerably more prosperous than the poorest households in the district.",
+            "Those households were probably considerably more prosperous than the very poorest households in the district.",
             "The inventories of those households were probably less complete than the inventories of the wealthiest households.",
             "Earthenware probably became common in those households only after it had become common among the wealthiest."
           ],
@@ -2280,7 +2281,7 @@
             "Passage A criticizes a historian’s use of a particular kind of record, and passage B defends that use of the record against the criticism.",
             "Passage A describes a body of evidence and a conclusion drawn from it, and passage B argues that the same evidence supports the opposite conclusion.",
             "Both passages draw conclusions from the same kind of record, but the conclusions in passage B concern a different region and a later period.",
-            "Passage A presents a historian’s conclusions from a kind of record, and passage B raises general concerns about that kind of record.",
+            "Passage A presents a historian’s conclusions drawn from a kind of record, and passage B raises general concerns about that kind of record.",
             "Passage A argues that a particular kind of record is the only reliable source on its subject, and passage B argues that it is entirely unreliable."
           ],
           "answer": "D",
@@ -2327,8 +2328,8 @@
           "stimulus": "",
           "stem": "The authors of both passages would be most likely to agree with which one of the following statements?",
           "choices": [
-            "Probate inventories provide information about ordinary households that is difficult to obtain from other kinds of records.",
-            "The poorest households of the period were seldom inventoried because their possessions were not worth appraising.",
+            "Historians of ordinary eighteenth-century households would lose something of real value if no probate inventories had survived.",
+            "Ownership of earthenware spread among the district’s less prosperous households nearly as quickly as among its wealthiest households.",
             "The rise in ownership of earthenware recorded in the inventories reflects a change in how ordinary families worked.",
             "Probate inventories provide a complete and accurate record of all the objects found in the households they describe.",
             "Probate inventories from the eighteenth century are more reliable than those that survive from earlier periods."
@@ -2339,31 +2340,31 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "Passage A ends by saying inventories offer “something no other source can”; passage B says they offer “exactly what diaries and account books do not” and remain “indispensable.” Both endorse A. B is passage B’s point alone; C is Kolbe’s interpretation, which the author of passage A sets aside (“Whatever one makes of that interpretation”) and passage B’s cautions undercut.",
+          "explanation": "Passage A ends by saying inventories offer ‘something no other source can’; passage B, for all its cautions, says that read alongside other records they ‘remain indispensable.’ Both authors would agree that losing them would cost historians something real: A. B is the trap: it is passage A’s headline finding, but passage B’s second paragraph argues that the ‘lowest third’ of the inventoried were better off than the population at large, and its later paragraphs question whether the rise is real at all, so only A supports it. C is Kolbe’s view, which passage A sets aside, and D is what passage B denies.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find a claim both authors would accept."
+                "text": "Find a claim BOTH authors would accept."
               },
               {
                 "label": "Where to look",
-                "text": "The last paragraph of passage A; the first and last paragraphs of passage B."
+                "text": "The last paragraph of passage A; the first, second and last paragraphs of passage B."
               }
             ],
-            "analysis": "Find common ground despite B’s skepticism. A’s author: inventories give “something no other source can.” B’s author: inventories seem to offer “exactly what diaries and account books do not” and, read with other records, “remain indispensable.” So both think inventories hold information about ordinary homes you can’t easily get elsewhere. Careful with C: it’s Kolbe’s view, and the author of A is noncommittal about it.",
+            "analysis": "Find common ground despite B’s skepticism. A’s author: inventories give ‘something no other source can.’ B’s author: read with other records, they ‘remain indispensable.’ So both think historians would be worse off without them. The key says that as a counterfactual (‘would lose something of real value if no … had survived’), so it doesn’t look like either passage’s wording. Most students pick (B) because it is the most striking finding in passage A and passage B never flatly says it’s false. It fails because a ‘both’ answer needs support from both passages, and passage B undercuts it: the ‘lowest third’ of the inventoried are ‘considerably better off than the population at large,’ and the apparent rise may be an artifact of age or appraisers. Not denied is not endorsed.",
             "choices": [
               {
-                "note": "CORRECT. Passage A’s last paragraph and passage B’s first and last paragraphs both credit inventories with information other records don’t give."
+                "note": "CORRECT. A says inventories offer what no other source can; B calls them ‘indispensable’ when read with other records. Both would say their loss would cost historians something."
               },
               {
-                "note": "Only passage B says this. Passage A never discusses who wasn’t inventoried."
+                "note": "Tempting. It’s passage A’s second paragraph. But passage B argues the ‘lowest third’ of the inventoried aren’t the poor at all and that the rise itself may partly be an artifact. Only one passage supports it."
               },
               {
-                "note": "Tempting, because it’s the heart of passage A. But it’s Kolbe’s view, not clearly the author’s (“Whatever one makes of that interpretation”), and passage B suggests the rise may partly be an artifact."
+                "note": "This is Kolbe’s interpretation. A’s author is noncommittal (‘Whatever one makes of that interpretation’), and B suggests the rise may partly be an artifact."
               },
               {
-                "note": "Passage B denies this outright: the impression of completeness is “misleading.”"
+                "note": "Passage B denies this outright: the impression of completeness is ‘misleading.’"
               },
               {
                 "note": "Neither passage compares inventories from different centuries."
@@ -2378,10 +2379,10 @@
           "stem": "Which one of the following, if true of the inventories discussed in passage A, would most reduce the force of the concern raised in the third paragraph of passage B as an objection to Kolbe’s findings?",
           "choices": [
             "Appraisers in the 1760s were more likely than appraisers in the 1690s to list inexpensive objects individually rather than lumping them together as sundries.",
-            "Earthenware ownership rose about as fast among householders who died young as among those who died old, and the average age at death barely changed.",
+            "When the inventories are grouped by the decedent’s age at death, the rise in earthenware ownership appears just as clearly within each age group.",
             "The number of inventories surviving from the 1760s is considerably larger than the number that survive from the 1690s, when record keeping was less systematic.",
             "Many of the householders in the lowest third of the inventories owned no land, and most of them earned their living chiefly through wage labor.",
-            "Most of the householders whose estates were inventoried had lived in the district for their entire adult lives and died there in old age."
+            "Most of the householders whose estates were inventoried had died in old age, after spending decades acquiring the goods that were listed."
           ],
           "answer": "B",
           "types": [
@@ -2389,7 +2390,7 @@
             "rc-strengthen-weaken"
           ],
           "difficulty": 5,
-          "explanation": "The third paragraph of passage B says inventoried people were disproportionately old, so a rise in ownership over decades may partly reflect changes in who lived long enough to be inventoried, and at what age. B removes both routes: the rise appears at every age, and the age mix didn’t shift. A bears on passage B’s fourth paragraph (appraisers’ habits) and would actually support that different concern.",
+          "explanation": "The third paragraph of passage B says inventoried people were disproportionately old, so a rise in ownership across decades may partly reflect changes in who lived long enough to leave an inventory, and at what age. If the rise appears within each age group taken separately, a shifting age mix cannot produce it: B. E is the trap: it is about age, but it merely restates passage B’s own premise that decedents were old, which leaves the concern intact. A addresses passage B’s fourth paragraph and would strengthen that concern.",
           "breakdown": {
             "setup": [
               {
@@ -2401,22 +2402,22 @@
                 "text": "The third paragraph of passage B; the second paragraph of passage A for Kolbe’s findings."
               }
             ],
-            "analysis": "Pin down the concern first. Passage B, paragraph 3: inventories record lifetime accumulation by mostly old people, so a rise across decades “may partly reflect changes in who lived long enough to leave an inventory, and at what age.” To defuse it, show the rise isn’t an age effect: e.g., it happened among the young too, and the age at death didn’t change. Traps will address passage B’s other concerns (appraisers, who was counted) or just confirm that decedents were old.",
+            "analysis": "Pin down the concern. Passage B, third paragraph: inventories record lifetime accumulation by mostly old people, so a rise across decades ‘may partly reflect changes in who lived long enough to leave an inventory, and at what age.’ That’s a composition worry: maybe the mix of ages changed, not people’s habits. How do you kill a composition worry? Compare like with like. If the rise shows up inside each age group, a change in the mix can’t be what produced it. The key gives you only the method (‘grouped by … age at death’), and you have to see why it answers the worry. Most students pick (E) because it talks about age and lifetime accumulation, just like the concern. It fails because it only repeats passage B’s premise; confirming that decedents were old doesn’t show the rise is more than an age effect.",
             "choices": [
               {
                 "note": "Wrong concern. This is about appraisers’ habits (passage B’s fourth paragraph), and it would make that concern stronger, since later appraisers would list cheap items that earlier ones lumped together."
               },
               {
-                "note": "CORRECT. If ownership rose equally among those who died young and old, and the age at death barely moved, the rise can’t be explained by a shift in the age of those inventoried."
+                "note": "CORRECT. If the rise appears just as clearly among people who died at the same age, a change in the age of those inventoried can’t explain it."
               },
               {
-                "note": "More inventories later doesn’t touch the age concern. It might affect sampling, but not who was old."
+                "note": "More inventories later doesn’t touch the age concern. It might affect sampling, not who was old."
               },
               {
                 "note": "This is about the lowest third and about wealth, passage B’s second-paragraph concern, and it doesn’t defuse even that."
               },
               {
-                "note": "Tempting because it talks about age. But it confirms the decedents were old rather than showing the age mix stayed constant, so the concern stands."
+                "note": "Tempting, because it talks about age and accumulation. But it just restates passage B’s premise that decedents were old. It says nothing about whether the rise survives once age is held fixed, so the concern stands."
               }
             ]
           }
@@ -2430,7 +2431,7 @@
             "The alkaloid in the Varrow lily’s nectar is best explained as a defense against insects that drink nectar without carrying pollen.",
             "Carrow’s experiment shows that the bitter nectar of the Varrow lily increases cross-pollination wherever the species happens to grow.",
             "Because bumblebees avoid bitter nectar, lilies that produce it receive fewer pollinator visits and therefore set fewer seeds than other lilies.",
-            "Carrow’s view that the lily’s bitter nectar promotes cross-pollination by shortening bee visits is well supported, though its scope is uncertain.",
+            "Carrow’s view that the lily’s bitter nectar promotes cross-pollination by shortening bee visits is well supported, though its scope is still uncertain.",
             "Nectar is better understood not as a payment to pollinators but as a means by which plants control the movements of their visitors."
           ],
           "answer": "D",
@@ -2478,9 +2479,9 @@
           "choices": [
             "visited fewer flowers per plant than did bees on the plants whose flowers held the alkaloid",
             "typically took only a sip or two of nectar from each flower before leaving the plant",
-            "visited more than twice as many flowers per plant as did the bees on the alkaloid plants",
+            "visited over twice as many flowers per plant as bees on the alkaloid plants",
             "left mostly foreign pollen on the flowers they visited after the first two on each plant",
-            "often left the stand altogether to forage on other kinds of flowers growing nearby"
+            "often left the stand altogether to forage on other kinds of flowers that were growing nearby"
           ],
           "answer": "C",
           "types": [
@@ -2574,10 +2575,10 @@
           "stimulus": "",
           "stem": "The passage provides information that most helps to answer which one of the following questions?",
           "choices": [
-            "Why does Carrow doubt that the alkaloid serves mainly to protect the lily’s nectar from ants?",
+            "Why does Carrow conclude that the alkaloid’s effect must be on the lily’s pollinators rather than on other visitors?",
             "At what concentration does the alkaloid begin to deter bumblebees from drinking the lily’s nectar?",
             "Do Varrow lilies growing in sparse stands produce less of the alkaloid than lilies in dense stands do?",
-            "How many seeds did the alkaloid plants in Carrow’s experiment produce compared with the alkaloid-free plants?",
+            "What proportion of the flowers on the alkaloid plants in Carrow’s experiment received pollen from other plants?",
             "Which insects other than ants have been proposed as the nectar thieves that the alkaloid might deter?"
           ],
           "answer": "A",
@@ -2585,31 +2586,31 @@
             "rc-inference"
           ],
           "difficulty": 4,
-          "explanation": "The first paragraph answers A: ants are scarce in the lily’s meadows, and the few present seldom climb its stalks. D is the strongest trap; the last paragraph says the team traced “the parentage of seeds, not their number,” so the passage specifically lacks this answer.",
+          "explanation": "The first paragraph answers A: Carrow notes that the likeliest nectar thieves, ants, are scarce in the lily’s meadows and seldom climb its stalks, and concludes that whatever the alkaloid does, ‘it must do to the bees themselves.’ D is the trap: the passage gives the share of seeds sired by other plants (71 percent), not the share of flowers that received foreign pollen, and a flower can receive mixed pollen and set several seeds. B, C and E ask for facts the passage never supplies.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the question that the passage actually answers."
+                "text": "Find the question the passage actually answers, word for word."
               },
               {
                 "label": "Where to look",
-                "text": "The fourth sentence of the first paragraph; also check the third and last paragraphs for the traps."
+                "text": "The last two sentences of the first paragraph; the last sentence of the third paragraph for the trap."
               }
             ],
-            "analysis": "Go answer by answer and ask: can I point to a sentence that answers this? Watch for questions on the passage’s topic that the passage leaves open, especially ones the passage flags as open.",
+            "analysis": "Go answer by answer and ask: can I point to a sentence that answers this exact question? The key is disguised: ‘pollinators rather than other visitors’ is the bees-versus-nectar-thieves argument from the first paragraph, and the passage gives Carrow’s reasons (ants are scarce and seldom climb the stalks). Most students pick (D) because the passage is full of percentages about the experiment, and 71 percent seems to answer it. It fails on one word: the 71 percent is a share of seeds, not of flowers. A single flower can get pollen from several sources and yield several seeds, so the seed figure doesn’t tell you how many flowers received foreign pollen. The LSAT is ultra specific: seeds aren’t flowers.",
             "choices": [
               {
-                "note": "CORRECT. The first paragraph gives Carrow’s reasons: the likeliest thieves, ants, are scarce in these meadows, and the few present seldom climb the stalks."
+                "note": "CORRECT. The first paragraph gives Carrow’s reasons: the likeliest thieves, ants, are scarce in these meadows and seldom climb the stalks, so ‘it must do to the bees themselves.’"
               },
               {
-                "note": "The experiment used the alkaloid only “at its natural concentration.” No threshold is given."
+                "note": "The experiment used the alkaloid only ‘at its natural concentration.’ No threshold is given."
               },
               {
                 "note": "Sparse stands come up only as an open question about bee behavior; the passage gives no alkaloid levels by stand density."
               },
               {
-                "note": "Tempting, because the experiment and seeds are discussed in detail. But the last paragraph says the team traced the parentage of seeds, “not their number.” The passage specifically doesn’t answer this."
+                "note": "Tempting, because the passage gives a precise percentage for the alkaloid plants. But that 71 percent is the share of seeds sired by other plants. The passage never says what share of flowers received foreign pollen."
               },
               {
                 "note": "The passage names ants as the likeliest thieves and mentions no others."
@@ -2624,44 +2625,44 @@
           "stem": "Which one of the following, if true, would most strengthen the proposal described in the second paragraph?",
           "choices": [
             "Bumblebees that taste the alkaloid at one Varrow lily tend to avoid all Varrow lilies for the rest of that foraging trip.",
-            "Varrow lilies whose nectar naturally contains little alkaloid have a larger share of seeds that fail to mature than do typical lilies.",
+            "Varrow lilies whose nectar is naturally low in the alkaloid set a larger share of seeds that fail than typical lilies do.",
             "The alkaloid is also present in the leaves of the Varrow lily, where it discourages grazing by deer and other mammals.",
             "In laboratory trials, bumblebees offered only alkaloid-laced nectar for several days come to drink it as readily as sweet nectar.",
-            "In the stand that Carrow studied, the Varrow lily flowered at the same time as several other plants pollinated by bumblebees."
+            "In laboratory trials, bumblebees offered both kinds of nectar chose the alkaloid-free nectar over the alkaloid-laced nectar nearly every time."
           ],
           "answer": "B",
           "types": [
             "rc-strengthen-weaken"
           ],
           "difficulty": 4,
-          "explanation": "Carrow’s chain: alkaloid → shorter visits → less pollen moved within a plant → fewer inbred seeds, which “frequently fail.” If low-alkaloid lilies have more failed seeds, the chain’s predicted payoff shows up in nature: B. A weakens the account, since a bee that shuns all Varrow lilies won’t carry pollen to another one.",
+          "explanation": "Carrow’s chain runs: alkaloid → shorter visits → less pollen moved within a plant → fewer inbred seeds, which ‘frequently fail.’ If lilies with little alkaloid set more failed seeds, the chain’s predicted payoff shows up in natural plants: B. E is the trap: it restates the laboratory avoidance the first paragraph already reports, which is where the puzzle starts; it adds nothing about shorter visits or better seed. A and D weaken the account, and C gives the alkaloid an unrelated job.",
           "breakdown": {
             "setup": [
               {
                 "label": "Task",
-                "text": "Find the fact that best supports Carrow’s visit-shortening account."
+                "text": "Find the fact that adds the most new support to Carrow’s visit-shortening account."
               },
               {
                 "label": "Where to look",
-                "text": "The second paragraph, with the experiment in the third paragraph."
+                "text": "The second paragraph (the mechanism), with the second sentence of the first paragraph (bees avoid the alkaloid in laboratory trials)."
               }
             ],
-            "analysis": "Lay out the chain: bitter → bee leaves after a sip or two → flies to another plant → more foreign pollen, fewer inbred seeds → fewer seeds that fail. A strengthener can confirm any link, or confirm the predicted outcome in natural plants. Watch for answers that cut the chain (bees leave the species entirely) or give the alkaloid some other job.",
+            "analysis": "Lay out the chain: bitter → bee leaves after a sip or two → flies to another plant → more foreign pollen, fewer inbred seeds → fewer seeds that fail. A strengthener can confirm any link or confirm the predicted payoff in natural plants. The key does the second, in the reverse form: low alkaloid → more failed seeds. Most students pick (E) because it’s the clearest pro-bitterness fact on the page: bees really do dislike it. It fails because the passage already tells you that bees avoid the alkaloid in choice trials; that’s the starting puzzle, not new evidence. Avoidance when given a choice says nothing about whether visits get shorter on a plant where every flower is bitter, or whether seeds benefit. Support for a fact already stated adds nothing.",
             "choices": [
               {
-                "note": "This weakens the account: if a repelled bee avoids every Varrow lily, it won’t carry pollen to another one, so bitterness wouldn’t increase cross-pollination."
+                "note": "This weakens the account: if a repelled bee avoids every Varrow lily, it won’t carry pollen to another one."
               },
               {
-                "note": "CORRECT. Less alkaloid → longer visits → more inbred seeds → more seeds that fail. Finding that pattern in natural plants supports the proposal’s payoff."
+                "note": "CORRECT. Less alkaloid → longer visits → more inbred seeds → more seeds that fail. Seeing that in natural plants confirms the proposal’s payoff."
               },
               {
-                "note": "An extra job for the alkaloid elsewhere in the plant tells us nothing about what it does in nectar."
+                "note": "An extra job for the alkaloid in the leaves tells us nothing about what it does in nectar."
               },
               {
                 "note": "If anything this weakens: bees that get used to the taste would stop cutting visits short."
               },
               {
-                "note": "Tempting as context, but it doesn’t bear on the mechanism. If anything, nearby alternatives raise the sparse-stand worry from the last paragraph."
+                "note": "Tempting. It sounds like strong support for bitterness mattering. But the first paragraph already says bees avoid the alkaloid in laboratory choice trials. Repeating a stated fact adds nothing about shorter visits or better seed."
               }
             ]
           }
@@ -2674,7 +2675,7 @@
           "choices": [
             "The alkaloid is likely to be present at higher concentrations in Varrow lilies that grow in sparse stands than in those that grow in dense stands.",
             "Bumblebees are unable to detect the alkaloid in Varrow lily nectar until they have already drunk a substantial amount of the nectar containing it.",
-            "In Carrow’s experiment, the alkaloid plants produced more seeds in total than did the alkaloid-free plants growing in the same meadow.",
+            "In Carrow’s experiment, the alkaloid plants produced more outcrossed seeds in total than did the alkaloid-free plants growing in the same meadow.",
             "Had bees lingered on the alkaloid plants as long as on the others, a smaller share of those plants’ seeds would probably have been outcrossed.",
             "Most of the seeds produced by the alkaloid plants in Carrow’s experiment were sired by pollen from the plants that bore them."
           ],
@@ -2683,7 +2684,7 @@
             "rc-inference"
           ],
           "difficulty": 5,
-          "explanation": "On Carrow’s account, which the author finds persuasive, outcrossing rises because bees visit fewer flowers per plant. If bees had stayed as long on alkaloid plants as on alkaloid-free ones, that cause would be removed and the outcrossed share should fall: D. C is the main trap: the passage says the team counted parentage, not seed numbers. E reverses the figures: 71 percent were sired by other plants.",
+          "explanation": "On Carrow’s account, which the author finds persuasive, the outcrossed share rises because bees visit fewer flowers per plant. Remove that cause, by having bees linger as long on alkaloid plants as on the others, and the outcrossed share should fall: D. C is the trap: it turns a share (71 percent versus 38 percent) into a total, but the team traced ‘the parentage of seeds, not their number,’ and skipped flowers may go unpollinated, so the alkaloid plants could have fewer outcrossed seeds in all. E reverses the 71 percent figure.",
           "breakdown": {
             "setup": [
               {
@@ -2692,19 +2693,19 @@
               },
               {
                 "label": "Where to look",
-                "text": "The second paragraph (the mechanism) and the third paragraph (the results)."
+                "text": "The second paragraph (the mechanism), the third paragraph (6.1 vs. 2.4 flowers; 71 vs. 38 percent), and the second sentence of the last paragraph (parentage, not number)."
               }
             ],
-            "analysis": "Hard to prephrase, so test each choice. The passage’s causal story: fewer flowers visited per plant → more foreign pollen → higher outcrossed share (71% vs. 38%). Ask what follows if you remove the cause. D does exactly that, in different words (“lingered … as long” = visited as many flowers). Watch for answers that reverse a percentage or assert something the passage says wasn’t measured.",
+            "analysis": "Hard to prephrase, so test each choice against the causal story: fewer flowers visited per plant → more foreign pollen → higher outcrossed share (71% vs. 38%). Ask what follows if you remove the cause. D does that, in different words (‘lingered … as long’ = visited as many flowers). Most students pick (C) because 71 percent outcrossed against 38 percent sounds like more outcrossed seeds. It fails on rate versus count: those are shares. The team didn’t count seeds, and the author warns that skipped flowers ‘may go unpollinated,’ so the alkaloid plants may have made fewer seeds overall. A higher percentage of a smaller total can be a smaller number.",
             "choices": [
               {
                 "note": "No data on alkaloid levels by stand density. The passage suggests the alkaloid may pay off less in sparse stands, which, if anything, points the other way."
               },
               {
-                "note": "Contradicts the passage: a bee that tastes the alkaloid takes “a sip or two and leaves,” so it notices quickly."
+                "note": "Contradicts the passage: a bee that tastes the alkaloid takes ‘a sip or two and leaves,’ so it notices quickly."
               },
               {
-                "note": "Tempting, because more outcrossing sounds like more seeds. But the last paragraph says the team traced “the parentage of seeds, not their number,” and even suggests skipped flowers may go unpollinated."
+                "note": "Tempting. 71 percent beats 38 percent, so it feels like more outcrossed seeds. But those are shares; the team traced ‘the parentage of seeds, not their number,’ and skipped flowers may set no seed. A bigger share of a smaller total can be fewer seeds."
               },
               {
                 "note": "CORRECT. Carrow’s mechanism makes the shorter visit the cause of the higher outcrossed share; remove the shorter visit and the share should drop toward the alkaloid-free plants’ level."
@@ -2889,7 +2890,7 @@
           "stimulus": "In the Marro Valley, farmers who stopped plowing their fields and instead planted directly into the previous year's crop residue found that, within a few years, their soil held considerably more water after a rain and lost less of it during dry spells. Yet in years with cool, wet springs, these farmers' fields produced smaller harvests than nearby plowed fields did.",
           "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
           "choices": [
-            "The residue left on unplowed fields keeps the soil cold in spring, and seeds sprout poorly in cold, soggy soil.",
+            "The residue left on unplowed fields keeps the soil cold in spring, and most seeds sprout poorly in cold, soggy soil.",
             "Plowed fields in the Marro Valley lose considerably more topsoil to wind and water erosion than unplowed fields do.",
             "Most Marro Valley farmers who stopped plowing did so mainly to cut the fuel and labor costs of preparing their fields.",
             "In years with hot, dry summers, unplowed fields in the Marro Valley produce larger harvests than plowed fields do.",
@@ -2999,7 +3000,7 @@
           "stimulus": "Researchers who spent two years observing capuchin monkeys in the Kessa Forest found that groups whose members spend more of each day grooming one another have fewer violent conflicts within the group than other groups do. A monkey being groomed typically lies still, often with its eyes half closed. Grooming, the researchers conclude, must ease tension among group members and thereby help prevent conflict.",
           "stem": "Which one of the following, if true, most seriously weakens the researchers' argument?",
           "choices": [
-            "Capuchin groups in several other forests also spend a large share of each day grooming one another.",
+            "Capuchin groups in several other forests also spend a large share of each day in grooming one another's fur.",
             "Grooming also allows capuchins to remove ticks and other parasites from parts of one another's bodies they cannot reach.",
             "Some violent conflicts within capuchin groups occur between monkeys that had groomed each other earlier that same day.",
             "The Kessa Forest groups that groom the most are, on average, neither larger nor smaller than the groups that groom least.",
@@ -3109,7 +3110,7 @@
           "stem": "If the statements above are true, which one of the following must also be true?",
           "choices": [
             "Holloway's shipment was inspected by a certified handler, and Holloway prepaid the express surcharge for it.",
-            "Holloway's shipment did not travel by sea, and it was not inspected by a certified handler before it was sent.",
+            "Holloway's shipment did not travel by sea, and no certified handler inspected it before it was sent.",
             "Every shipment at Tarrant Freight that has been inspected by a certified handler is sent by express air.",
             "Holloway has prepaid the express surcharge on every shipment it has ever sent through Tarrant Freight.",
             "Every shipment at Tarrant Freight for which the express surcharge was prepaid was sent by express air."
@@ -3215,7 +3216,7 @@
             "It is offered as support for the claim that many canonical poems found few readers when first published.",
             "It is a claim that the editor attributes to the anthology editors who favor adopting the proposal.",
             "It is a general principle that the editor uses to evaluate proposals about what school anthologies include.",
-            "It is an undesirable consequence that the editor claims would follow from adopting the proposal."
+            "It is an undesirable consequence that the editor says would follow if the proposal were adopted."
           ],
           "answer": "E",
           "types": [
@@ -3321,7 +3322,7 @@
           "stem": "The soil scientist's argument is flawed because it",
           "choices": [
             "fails to consider that some farmers may not care much about the long-term health of their soil",
-            "takes for granted that because excessive amounts of nitrogen fertilizer are harmful, any amount of it is harmful",
+            "takes for granted that because excessive amounts of nitrogen fertilizer are harmful, any amount of it at all is harmful",
             "draws a conclusion about the health of soil from evidence that concerns only the health of nearby streams",
             "confuses a condition that is necessary for maintaining healthy soil with one that is sufficient for doing so",
             "takes for granted that harm to soil microbes is more serious than the harm caused by algae blooms"
@@ -3379,10 +3380,10 @@
           "stem": "Which one of the following, if true, most seriously weakens the researchers' reasoning?",
           "choices": [
             "Some of the children whose parents reported little imaginative play also scored very well on the test of self-control.",
-            "The test of self-control used in the study has also been given to kindergartners in several other countries.",
+            "The test of self-control used in the study has also been given to kindergartners in a number of other countries.",
             "Imaginative play has also been found in other studies to help young children develop larger vocabularies and social skills.",
             "The parents in the study were not told in advance that their children would later be given a test of self-control.",
-            "Children who already have good self-control are better at sustaining long games of make-believe and so play them more."
+            "Children whose self-control is already good sustain long games of make-believe better and so play such games more."
           ],
           "answer": "E",
           "types": [
@@ -3434,9 +3435,9 @@
           "stimulus": "Many people believe that the hospitals with the longest emergency-room waits are the worst managed. But wait times depend heavily on how many patients arrive, and hospitals with strong reputations tend to attract patients from well beyond their own neighborhoods. Moreover, a well-run emergency room treats the most urgent cases first, which lengthens the waits of patients with minor complaints. So a long average wait at a hospital's emergency room ______.",
           "stem": "Which one of the following most logically completes the argument?",
           "choices": [
-            "is a reliable sign that the emergency room is poorly managed, whatever the hospital's reputation may be",
+            "is a reliable sign that the emergency room is poorly managed, whatever the hospital's reputation",
             "results mainly from the emergency room's failure to treat the most urgent cases before minor ones",
-            "is not, by itself, good evidence that the emergency room is poorly managed",
+            "is not, by itself, good evidence that the hospital's emergency room is poorly managed",
             "shows that the hospital has a stronger reputation than any other hospital in its region",
             "could be shortened considerably if emergency rooms stopped giving priority to the most urgent cases"
           ],
@@ -3487,7 +3488,7 @@
             "A utility's request to raise its rates should be granted if the utility's costs of supplying electricity have risen significantly.",
             "Long-term contracts at fixed prices are the most economical way for a utility to obtain the electricity it sells.",
             "Increases in fuel prices raise the costs of the companies that sell electricity to utilities under long-term contracts.",
-            "A utility's request to raise its rates should be granted only if the utility's costs of supplying electricity have risen significantly.",
+            "No utility's request to raise its rates should be granted unless the utility's costs of supplying electricity have risen significantly.",
             "Most utilities that request permission to raise their rates cite recent increases in fuel prices as their main reason."
           ],
           "answer": "D",
@@ -3503,7 +3504,7 @@
           ],
           "tags": [],
           "difficulty": 4,
-          "explanation": "The regulator establishes that Dunmore's costs have not risen significantly and concludes the request should be denied, so the needed link makes rising costs a necessary condition for granting: grant → costs rose; costs didn't rise → deny. D supplies exactly that. A is the attractive trap: it makes rising costs sufficient for granting, which says nothing about what to do when costs have not risen.",
+          "explanation": "The regulator shows Dunmore's costs haven't risen significantly and concludes the request should be denied, so the needed rule makes rising costs a requirement for approval. D states it in \"no ... unless\" form: granted → costs rose; costs didn't rise → deny. A is the trap: it reuses the stimulus's words but makes rising costs enough for approval, which says nothing about a utility whose costs haven't risen.",
           "breakdown": {
             "setup": [
               {
@@ -3515,7 +3516,7 @@
                 "text": "Dunmore buys power at fixed contract prices, so its costs of supplying electricity have not risen significantly."
               }
             ],
-            "analysis": "Premise: costs did NOT rise significantly. Conclusion: request should NOT be granted. We need a bridge: costs not risen → don't grant. Its contrapositive: grant → costs rose. In words: grant only if costs rose. Chain: no significant cost rise → (bridge) → deny. Watch for the sufficient-condition version, which looks almost identical.",
+            "analysis": "Why does \"costs haven't risen\" mean \"deny\"? Only if rising costs are a requirement for approval. Chain: costs didn't rise significantly → deny. Equivalent: granted → costs rose significantly. Watch the form: (D) says no request should be granted unless costs have risen. \"No X unless Y\" means X → Y, so that's granted → costs rose, exactly the bridge. Most students pick (A) because it uses the same words and sounds like the regulator's attitude. It fails because it runs the other way: costs rose → grant. It tells us what to do when costs rise and nothing about Dunmore, whose costs didn't.",
             "choices": [
               {
                 "note": "Tempting, because it differs from the right answer by one word. 'Grant if costs rose' tells you what to do when costs rose. Ours didn't, so this rule is silent. Using it to deny would be negating a conditional."
@@ -3527,7 +3528,7 @@
                 "note": "If anything this hints Dunmore's suppliers might raise prices later. It doesn't connect 'costs didn't rise' to 'deny.'"
               },
               {
-                "note": "CORRECT. Grant → costs rose significantly. Dunmore's costs didn't rise, so by the contrapositive the request should not be granted. The conclusion follows."
+                "note": "CORRECT. \"No request should be granted unless costs rose significantly\" translates to granted → costs rose. Contrapositive: costs didn't rise → not granted. Dunmore's costs didn't rise, so deny."
               },
               {
                 "note": "What most utilities cite tells us nothing about whether this one's request should be denied."
@@ -3542,8 +3543,8 @@
           "choices": [
             "Did the number of fragile goods the company shipped change substantially between the two six-month periods?",
             "Are molded-pulp inserts less expensive to buy and easier to dispose of than the foam inserts they replaced?",
-            "Do customers say they prefer receiving goods packed in molded pulp rather than in foam?",
-            "Have other housewares companies also switched from foam to molded-pulp inserts in the past year?",
+            "Do customers say that they would prefer receiving goods packed in molded pulp rather than in foam?",
+            "Have other housewares companies also switched from foam to molded-pulp inserts within the past year or so?",
             "Are damage claims for fragile goods more common at Garrow than damage claims for other kinds of goods?"
           ],
           "answer": "A",
@@ -3594,13 +3595,13 @@
         },
         {
           "number": 17,
-          "stimulus": "Over the past decade, the number of people holding deer-hunting licenses in Merrin State has fallen by about a third, and state wildlife officials expected the annual deer harvest to fall along with it, since fewer hunters would presumably kill fewer deer. Instead, the number of deer killed by licensed hunters in the state each year has risen steadily.",
+          "stimulus": "Over the past decade, the number of deer-hunting licenses issued each year in Merrin State has fallen by about a third, and state wildlife officials expected the annual deer harvest to fall along with it, since fewer hunters would presumably kill fewer deer. Instead, the number of deer reported killed under state hunting licenses has risen steadily each year.",
           "stem": "Each of the following, if true, helps to resolve the apparent discrepancy described above EXCEPT:",
           "choices": [
-            "The fee for a deer-hunting license in Merrin State has more than doubled over the past decade.",
+            "Many people who once bought licenses now hunt deer only on private preserves, where no state license is required.",
             "The state's deer population has grown substantially over the decade, making deer far easier for hunters to find.",
             "Over the decade the state lengthened its deer-hunting season and raised the number of deer each hunter may take.",
-            "Most of the people who stopped hunting in Merrin State were people who rarely killed a deer in any season.",
+            "A single license now covers every hunter in the license holder's household, whereas formerly each hunter needed a separate one.",
             "Hunters who remain active in Merrin State now use scopes and trail cameras that make them far more successful."
           ],
           "answer": "A",
@@ -3615,30 +3616,30 @@
           "flaws": [],
           "tags": [],
           "difficulty": 4,
-          "explanation": "The puzzle is fewer hunters but more deer killed; B, C, D, and E each give a reason the remaining hunters could kill more deer or the departing ones were not contributing many kills. A only explains why fewer people hold licenses, which is the half of the puzzle that needs no explanation, so it does nothing to resolve it. D is the tempting one to pick, but it does help: it shows the hunters who left weren't the ones killing deer.",
+          "explanation": "The puzzle is fewer licenses but more deer killed under licenses. A explains only where some former license holders went, and since they now hunt where no state license is required, their kills aren't counted, so it does nothing to explain the rise. D is the trap: it looks as if it explains only the drop in licenses, but if one license now covers a whole household, fewer licenses needn't mean fewer people hunting under licenses, which helps resolve the discrepancy.",
           "breakdown": {
             "setup": [
               {
                 "label": "Paradox",
-                "text": "The number of licensed deer hunters fell by a third, but the number of deer killed each year rose."
+                "text": "Licenses issued fell by about a third, but the number of deer reported killed under state licenses rose."
               }
             ],
-            "analysis": "In an EXCEPT question, four answers resolve the paradox and the right answer doesn't. How can fewer hunters kill more deer? More deer to find, more days or bigger limits, better gear, or the people who quit weren't killing deer anyway. Prephrase the odd one out: something that explains only one side of the puzzle, or is irrelevant. The commonest trap here is an answer that explains just the drop in hunters.",
+            "analysis": "This is an EXCEPT question: four answers explain how fewer licenses could go with more licensed kills, and the answer is the one that doesn't. Each real explanation either makes each licensed hunter more productive (more deer, longer seasons, better gear) or shows that fewer licenses doesn't mean fewer hunters. Watch the scope: the number that rose is deer killed \"under state hunting licenses.\" (A) sounds like it helps, since the former hunters are still out hunting. But they hunt where no state license is needed, so their deer aren't in the count, and (A) adds nothing that explains a rise in licensed kills. Most students pick (D) as the odd one out because it seems to explain only why licenses fell, the half that needed no explaining. It fails as the EXCEPT answer because it does more: if one license now covers a whole household, the number of people hunting under licenses may not have fallen at all, so the officials' expectation was never sound.",
             "choices": [
               {
-                "note": "CORRECT. Higher fees explain why fewer people hunt. But the drop in hunters isn't the puzzle; it's the starting fact. This says nothing about why more deer are being killed, so it doesn't resolve anything."
+                "note": "CORRECT. These people hunt without state licenses, so their kills aren't part of the number that rose. The answer explains why fewer licenses are issued, the half that needs no explaining, and does nothing about the rise in licensed kills."
               },
               {
-                "note": "Resolves it. More deer that are easier to find means each remaining hunter can kill more."
+                "note": "Helps. More deer, easier to find: each remaining hunter gets more."
               },
               {
-                "note": "Resolves it. A longer season and bigger limits let each remaining hunter take more deer."
+                "note": "Helps. A longer season and a higher limit let each licensed hunter take more deer."
               },
               {
-                "note": "Tempting to pick, because it doesn't explain a rise by itself. But it does help: if the people who quit weren't killing deer, the drop in hunters shouldn't lower the harvest, which removes the expectation the paradox rests on."
+                "note": "Tempting, as the one that seems to explain only the drop in licenses. But it does more. If one license now covers a whole household, the number of people hunting under licenses needn't have fallen at all. That knocks out the officials' reason for expecting fewer kills, so it helps resolve the puzzle."
               },
               {
-                "note": "Resolves it. Better equipment makes the remaining hunters more successful, so fewer of them can kill more deer."
+                "note": "Helps. Better equipment makes each remaining hunter more successful."
               }
             ]
           }
@@ -3650,7 +3651,7 @@
           "choices": [
             "draws a general conclusion about all Selan gibbons from observations made only in the canopy during daylight",
             "fails to consider that gibbons in other reserves might use tools in the very places where they have been observed",
-            "treats the weakness of the evidence for a conclusion as grounds for thinking that the conclusion is probably false",
+            "takes the fact that a claim has not been ruled out by the available evidence as support for that claim",
             "presumes, without providing justification, that researchers would recognize tool use by a gibbon if they happened to see it",
             "relies on the reports of other researchers whose expertise in observing and interpreting gibbon behavior has not been established"
           ],
@@ -3666,7 +3667,7 @@
           ],
           "tags": [],
           "difficulty": 4,
-          "explanation": "The primatologist correctly shows that the other researchers' evidence doesn't establish that the gibbons never use tools, but then concludes the gibbons probably do use tools, which nothing supports; C describes this. A is the attractive trap: it describes the flaw in the other researchers' reasoning, which the primatologist points out, not the primatologist's own mistake.",
+          "explanation": "The primatologist rightly shows that the other researchers' evidence can't establish that Selan gibbons never use tools, but then says the gibbons probably do use tools, resting on nothing except that the observations can't rule it out; C describes that. A is the trap: it describes the other researchers' mistake, which the primatologist points out rather than commits.",
           "breakdown": {
             "setup": [
               {
@@ -3678,7 +3679,7 @@
                 "text": "The 'no tools' conclusion rests on observation almost entirely in the daytime canopy, so it is unwarranted."
               }
             ],
-            "analysis": "The first move is fine: watching only the daytime canopy can't show gibbons never use tools. But then the primatologist jumps to 'they probably do.' Showing an argument fails doesn't prove its conclusion false. It's like saying: your evidence that my car is fine is weak, so my car is probably broken. Rebutting an argument isn't the same as proving the opposite. We need an answer that says weak evidence for 'no tools' is treated as support for 'tools.'",
+            "analysis": "The first move is fine: watching only the daytime canopy can't show gibbons never use tools. But then the primatologist jumps to 'they probably do.' Showing an argument fails doesn't prove its conclusion false. It's like saying: your evidence that my car is fine is weak, so my car is probably broken. Rebutting an argument isn't the same as proving the opposite. We need an answer that says weak evidence for 'no tools' is treated as support for 'tools.' Most students pick (A) because it names a real flaw in the passage. It fails because that flaw belongs to the other researchers; the primatologist is the one pointing it out.",
             "choices": [
               {
                 "note": "Tempting, because this is a real flaw in the story. But it's the other researchers' flaw, and the primatologist is the one pointing it out. Read the stem: we want the primatologist's mistake.",
@@ -3689,7 +3690,7 @@
                 "example": "Example of this flaw: Our gibbons never use tools, so no gibbons anywhere do."
               },
               {
-                "note": "CORRECT. The primatologist shows the 'no tools' evidence is inadequate, then treats that inadequacy as reason to think the gibbons probably do use tools. Lack of proof isn't proof of the opposite."
+                "note": "CORRECT. The observations can't rule out tool use in unwatched places, and that's all the primatologist has. Treating \"not ruled out\" as support for \"probably happens\" is the error. The answer is worded from the tool-use side, so it doesn't look like the usual \"lack of proof means false\" phrasing, but it's the same mistake."
               },
               {
                 "note": "The argument doesn't need this. Even if researchers would always recognize tool use, the leap from 'unproven' to 'probably true' would still be the problem.",
@@ -3707,7 +3708,7 @@
           "stimulus": "Every macaque troop on Pemba Ridge that forages in the farmers' orchards has learned to raid storage sheds. No troop that has learned to raid storage sheds is left unmonitored by the wildlife service. So any troop on Pemba Ridge that the wildlife service leaves unmonitored does not forage in the farmers' orchards.",
           "stem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
           "choices": [
-            "Every song on the Larkin album that was recorded before 1990 features a string section. No song that features a string section was chosen for the radio edit. So any song on the album that was chosen for the radio edit was recorded before 1990.",
+            "Every song on the Larkin album recorded before 1990 features a string section. No song featuring a string section was chosen for the radio edit. So any song on the album chosen for the radio edit was recorded before 1990.",
             "Every student in Ms. Ortega's class who completed the reading passed the quiz. Some students who passed the quiz did not attend the review session. So some student in the class who completed the reading did not attend the review session.",
             "Every vehicle in the city fleet that runs on diesel is inspected annually. Every vehicle that is inspected annually is kept in the north garage. So every diesel vehicle in the city fleet is kept in the north garage.",
             "No apprentice in the Garvey workshop is permitted to operate the lathe. Every worker who is permitted to operate the lathe has completed the workshop's safety training. So no apprentice in the workshop has completed that safety training.",
@@ -3790,7 +3791,7 @@
                 "text": "1. Every Brell parent of a 3-to-6-year-old was surveyed, one child each; 2. Most parents believe their child spends less screen time than most of the other children."
               }
             ],
-            "analysis": "Hard to prephrase until you do the math. Line the children up by screen time. A child who spends less than 'most of the others' has to be in roughly the bottom half. So at most about half the children can truly fit that description. But more than half the parents believe their child does. So some of those believers must be wrong. How many? We only know 'some.' 'Many' isn't 'all,' and 'some are wrong' isn't 'most are wrong.' We need a modest answer: at least one believer is mistaken.",
+            "analysis": "Hard to prephrase until you do the math. Line the children up by screen time. A child who spends less than 'most of the others' has to be in roughly the bottom half. So at most about half the children can truly fit that description. But more than half the parents believe their child does. So some of those believers must be wrong. How many? We only know 'some.' 'Many' isn't 'all,' and 'some are wrong' isn't 'most are wrong.' We need a modest answer: at least one believer is mistaken. Most students pick (A) because it states the surprising result in its strongest form. It fails because the numbers force only some believers to be wrong, not most parents.",
             "choices": [
               {
                 "note": "Tempting, and it's the classic trap here. If, say, 55 percent believe it and 49 percent are actually below most others, only about 6 percent need be wrong. 'Most are mistaken' doesn't follow."
@@ -3816,10 +3817,10 @@
           "stem": "Which one of the following is an assumption on which the literary scholar's argument depends?",
           "choices": [
             "The versions of Rook's early poems that were first published are of higher literary quality than the revised versions.",
-            "Rook revised his early poems many years after they were first published, when his style had already matured.",
+            "Rook's late revisions substantially changed the style of most of the early poems that he chose to revise.",
             "Most readers of Rook's collected works are unaware that many of the early poems in it were revised.",
-            "At least some of Rook's revisions altered stylistic features of the early poems he revised.",
-            "Rook's style changed more during the early part of his career than it did at any later point."
+            "Not all of Rook's revisions to his early poems were mere corrections of printers' errors or of factual mistakes.",
+            "Rook's style changed more during the early part of his career than it did at any later point in it."
           ],
           "answer": "D",
           "types": [
@@ -3831,39 +3832,39 @@
           "flaws": [],
           "tags": [],
           "difficulty": 4,
-          "explanation": "The recommendation to study the original versions makes sense only if the revisions altered the style in some way; if no revision changed any stylistic feature, the revised versions would reveal Rook's early style just as well, so D is required. B is the attractive trap: the stimulus says the revisions came late in life, but the argument doesn't depend on any particular gap in time or on his style having matured, only on the revisions' having changed the style.",
+          "explanation": "Studying the first-published versions to trace Rook's stylistic development makes sense only if the late revisions changed something that bears on style; if every revision merely fixed printers' errors or factual slips, the revised versions would show his early style just as well. D says this in negative form. B is the trap: it states the right idea at the wrong strength, since the argument needs only some stylistic change, not substantial change to most of the revised poems.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Scholars studying Rook's stylistic development should study the first-published versions of his early poems, not the revised ones."
+                "text": "To understand how Rook's style developed, scholars should study the first-published versions of his early poems, not the revised ones."
               },
               {
                 "label": "Reasoning",
                 "text": "Late in life Rook revised many early poems for his collected works; most readers know only the revised versions."
               }
             ],
-            "analysis": "Why would the originals matter for studying style? Only if the revisions changed the style. If Rook just fixed typos, the revised versions would show his early style perfectly well. We need a modest answer: the revisions changed at least some stylistic features. Then run the negation test on each choice.",
+            "analysis": "Why avoid the revised versions? Only because the revisions might hide what Rook's early style was like. That requires the revisions to have touched style at all. If Rook only fixed misprints and wrong dates, the revised poems would show his early style as well as the originals, maybe better. So we need: at least some revisions went beyond non-stylistic fixes. (D) says this in an odd, negative way: not all revisions were mere corrections of printers' errors or factual mistakes. It looks oddly specific, almost irrelevant, until you negate it. Most students pick (B) because \"the revisions changed his style\" is the prephrase. It fails on strength: \"substantially\" and \"most\" go well past what the argument needs. Test both by negation.",
             "choices": [
               {
-                "note": "Wrong dimension: quality, not style. The originals could be worse poems and still be the better record of early style. Negating it doesn't hurt.",
-                "negation": "The first-published versions are not of higher literary quality than the revised versions."
+                "note": "Irrelevant. The goal is tracing style, not judging quality. Negate it: the originals are no better than the revisions. They'd still be the right evidence of early style.",
+                "negation": "The versions of Rook's early poems that were first published are not of higher literary quality than the revised versions."
               },
               {
-                "note": "Tempting, because it echoes 'late in his life.' But the argument doesn't need a long gap or a matured style. Even revisions made soon after publication would matter, as long as they changed the style. Negating it leaves the argument standing.",
-                "negation": "Rook did not revise his early poems many years after first publication, or his style had not yet matured when he did."
+                "note": "Tempting. It's the right idea, but far too strong. Negate it: the revisions didn't substantially change the style of most revised poems. Even if they changed the style of only a few poems, or changed it slightly, the originals would still be the better guide to how his style developed. The argument survives.",
+                "negation": "Rook's late revisions did not substantially change the style of most of the early poems that he chose to revise."
               },
               {
-                "note": "What readers know is irrelevant to what scholars should study. Negating it changes nothing.",
-                "negation": "At least half of the readers of the collected works know that many early poems were revised."
+                "note": "Irrelevant. What ordinary readers know has nothing to do with what scholars should study. Negate it: most readers know about the revisions. The advice to scholars stands.",
+                "negation": "It is not the case that most readers of Rook's collected works are unaware that many of the early poems in it were revised."
               },
               {
-                "note": "CORRECT. Negate it: none of the revisions changed any stylistic feature. Then the revised versions show the early style just as well, and there's no reason to prefer the originals. The argument collapses.",
-                "negation": "None of Rook's revisions altered any stylistic feature of the poems he revised."
+                "note": "CORRECT. Negate it: every revision was a mere correction of a printer's error or a factual mistake. Then the revised poems show Rook's early style at least as well as the originals, and the recommendation has no point. The negative wording hides a simple idea: some revisions touched style.",
+                "negation": "All of Rook's revisions to his early poems were mere corrections of printers' errors or of factual mistakes."
               },
               {
-                "note": "Too strong and not needed. The scholars want to understand his development, whenever the biggest changes came. Negating it is harmless.",
-                "negation": "Rook's style changed at least as much at some later point as in the early part of his career."
+                "note": "Not needed. Negate it: his style changed just as much later on. Scholars tracing his development would still need the early versions. The argument survives.",
+                "negation": "Rook's style did not change more during the early part of his career than it did at some later point in it."
               }
             ]
           }
@@ -3873,11 +3874,11 @@
           "stimulus": "Every painting in the Ostrander collection is insured, as are about half of the sculptures in the collection. Some of the insured works in the collection are currently on loan to other museums. So some of the works now on loan are paintings, and some are sculptures.",
           "stem": "The flawed pattern of reasoning in which one of the following is most similar to that in the argument above?",
           "choices": [
-            "Every trail in Harlan Park is maintained by volunteers, as are about half of the park's campgrounds. None of the areas maintained by volunteers is open in winter. So no trail in the park is open in winter, and neither is any campground that volunteers maintain.",
+            "Every trail in Harlan Park is maintained by volunteers, as are about half of its campgrounds. No area that volunteers maintain is open in winter. So no trail is open in winter, and neither is any campground that volunteers maintain.",
             "Every sedan on Corbin's lot has a warranty, as do about half of the trucks on the lot. The vehicle that Ms. Avila bought from the lot has a warranty. So it must be either a sedan or a truck.",
-            "Most of the poems in the Brightwater anthology rhyme, and most of the poems in that same anthology are sonnets written in English. So at least some of the English sonnets in the Brightwater anthology rhyme.",
-            "Every fern in the Ashby greenhouse needs daily misting, as do about half of the orchids grown there. So about half of the plants in the Ashby greenhouse that need daily misting must be orchids.",
-            "Every apprentice at the Renfrew print shop has taken the safety course, as have about half of its delivery drivers. Some employees who have taken the course work nights. So some night workers are apprentices, and some are delivery drivers."
+            "Every sonnet in the Kessock anthology rhymes, as do about half of the anthology's other poems. So most of the poems in the anthology that rhyme must be sonnets.",
+            "Every canoe at the Tarrow boathouse needs repainting, as do about half of its rowboats. All boats needing repainting will be moved to the dry dock. So some boats moved to the dry dock will be canoes, and some will be rowboats.",
+            "Some of the Renfrew print shop's night workers have had fire-safety training. All of the shop's apprentices have had that training, as have about half of its drivers. So the night workers include both apprentices and drivers."
           ],
           "answer": "E",
           "types": [
@@ -3888,42 +3889,42 @@
             "statistical"
           ],
           "flaws": [
-            "scope-shift"
+            "quantifier"
           ],
           "tags": [],
           "difficulty": 5,
-          "explanation": "The argument assumes that because all paintings and some sculptures fall into the insured group, and some insured works are on loan, the loaned works must include both kinds; but the insured works on loan could all be paintings, or all sculptures. E repeats this exact overlap error. B is tempting because it uses the same opening premise, but its flaw is overlooking other kinds of vehicles; A and C are valid inferences, so they can't match a flawed argument.",
+          "explanation": "The argument assumes that since all paintings and some sculptures are insured, and some insured works are on loan, the loaned works must include both kinds; but the insured works on loan could all be paintings, all sculptures, or neither. E makes the same move with its premises reordered. D is the trap: it copies the original's wording almost exactly, but its third premise says ALL boats needing repainting go to the dry dock, which makes its conclusion valid.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Some loaned works are paintings, and some are sculptures."
+                "text": "Some of the works on loan are paintings and some are sculptures."
               },
               {
                 "label": "Reasoning",
-                "text": "All paintings are insured; about half the sculptures are insured; some insured works are on loan."
+                "text": "All paintings and about half of the sculptures are insured; some insured works are on loan."
               },
               {
                 "label": "Pattern",
-                "text": "All A and some B are C; some C are D; so some D are A and some D are B."
+                "text": "All A are X; some B are X; some X are L; so some L are A and some L are B."
               }
             ],
-            "analysis": "Picture the insured group: all the paintings plus half the sculptures. 'Some' of that group is on loan. Which ones? Could be only paintings. Could be only sculptures. Knowing that some members of a mixed group have a feature doesn't tell you that members of each kind have it. We need an answer with the same overlap mistake: all A and some B are C; some C are D; so some D are A and some are B.",
+            "analysis": "Does it follow? No. The insured works on loan might all be paintings, or all sculptures, or other insured pieces entirely. \"Some X are L\" tells you nothing about which X. It's like saying every guard and half the nurses have keys, some key holders came to the party, so guards and nurses both came. Maybe only the janitor did. Look for the same overlap error, not the same words. (E) reorders its premises (the \"some\" premise comes first) and words its conclusion differently, but the skeleton is identical. Most students pick (D) because it copies the original nearly word for word. It fails on one word: its third premise says ALL boats needing repainting go to the dry dock, so every canoe and the repainted rowboats really do end up there. (D) is valid, and a valid argument can't match a flawed one.",
             "choices": [
               {
-                "note": "Same opening shape, but the reasoning is valid: if no volunteer-maintained area opens in winter, every trail (all volunteer-maintained) and every volunteer-maintained campground is closed. A valid version can't match a flawed original."
+                "note": "Valid. Everything volunteers maintain is closed in winter, so the trails and the volunteer-run campgrounds are closed. No flaw to match."
               },
               {
-                "note": "Tempting, because the first sentence is a near-copy. But the flaw differs: the lot might sell vans or SUVs with warranties. That's overlooking other categories, not assuming a 'some' group contains both kinds."
+                "note": "Flawed, but differently. The warranty holder could be a van or a motorcycle; the argument overlooks other categories. It has no \"some X are L\" step and concludes about one vehicle, not about a group containing both kinds."
               },
               {
-                "note": "Valid. If more than half the poems rhyme and more than half are English sonnets, the two groups must overlap. No flaw to match."
+                "note": "Flawed, but differently. If the anthology's other poems far outnumber its sonnets, the rhyming half of them could swamp the sonnets. That's a proportion-versus-number mistake, not an overlap mistake."
               },
               {
-                "note": "Flawed, but differently: it draws a proportion ('about half') from numbers it doesn't have, with no 'some of the group' step. Different structure."
+                "note": "Tempting, because it copies the original almost word for word. But the third premise is \"all boats needing repainting,\" not \"some.\" Every canoe needs repainting and so do some rowboats, and all of those boats go to the dry dock, so both kinds really will be there. Valid, so it can't match."
               },
               {
-                "note": "CORRECT. All apprentices and half the drivers took the course; some course-takers work nights; so some night workers are apprentices and some are drivers. The night workers could all be apprentices. Same error, same shape."
+                "note": "CORRECT. Reorder it: all apprentices are trained and about half the drivers are trained (all A are X; some B are X); some trained people work nights (some X are L); so the night workers include apprentices and drivers (some L are A and some L are B). The trained night workers could all be apprentices, all drivers, or press operators. Same error."
               }
             ]
           }
@@ -3933,10 +3934,10 @@
           "stimulus": "Last winter the price of firewood in the Halvik region rose sharply. Most households in Halvik heat their homes with natural gas, and early last winter the price of natural gas rose steeply. Many of these households, facing higher gas bills, probably turned to wood stoves for heat, and it was this added demand for firewood that drove up its price.",
           "stem": "Which one of the following, if true, most strengthens the argument?",
           "choices": [
-            "The price of natural gas in Halvik fell somewhat late last winter but stayed well above its level of the year before.",
+            "Natural gas prices in Halvik eased somewhat late last winter but stayed well above the previous year's level.",
             "Some households in Halvik heat their homes with electricity rather than with either natural gas or wood.",
-            "Last winter, gas-heated Halvik households burned far more firewood than usual, while wood-only households burned their usual amount.",
-            "Last winter in Halvik was colder, and lasted longer, than any other winter in the previous decade.",
+            "Halvik households that heat only with wood bought no more firewood last winter than they had in previous winters.",
+            "Many gas-heated households in Halvik paid more for natural gas last winter than in any previous winter.",
             "Firewood prices also rose sharply last winter in neighboring regions where few households heat with natural gas."
           ],
           "answer": "C",
@@ -3951,34 +3952,34 @@
           ],
           "tags": [],
           "difficulty": 4,
-          "explanation": "C confirms the proposed mechanism: the extra firewood demand came specifically from gas-heating households, while wood-only households, unaffected by gas prices, did not increase their use. D is tempting because a cold winter would raise demand for firewood, but that is a rival explanation that does not depend on gas prices, so it weakens the argument; E likewise points to a cause other than gas prices.",
+          "explanation": "The argument blames the firewood price rise on gas households switching to wood. C rules out the main rival, a general rise in demand such as a hard winter: households that burn only wood, untouched by gas prices, used no more firewood than usual, so the extra demand most plausibly came from the gas households. D is the trap: it only confirms that gas bills rose, which the argument already grants, and record gas bills, if anything, suggest those households kept burning gas.",
           "breakdown": {
             "setup": [
               {
                 "label": "Conclusion",
-                "text": "Gas households switching to wood drove up the price of firewood."
+                "text": "Added firewood demand from gas-heated households turning to wood stoves drove up the price of firewood."
               },
               {
                 "label": "Reasoning",
-                "text": "Firewood prices rose sharply; most households heat with gas; gas prices rose steeply early in the winter; many gas households probably turned to wood."
+                "text": "Firewood prices rose sharply; most households heat with gas, and gas prices rose steeply early in the winter."
               }
             ],
-            "analysis": "The argument names a specific mechanism: gas got expensive, gas households burned wood, demand rose, price rose. What else could raise firewood prices? A cold winter, a supply problem, a regional shortage. A strong strengthener confirms the mechanism itself, showing the extra demand came from exactly the households the argument points to. Watch for answers that raise demand for a different reason; those are rival causes.",
+            "analysis": "Why else might firewood prices jump? A brutal winter would raise demand from everyone who burns wood. A supply problem would raise prices with no new demand at all. The argument needs the extra demand to come specifically from the gas households. (C) helps in a sneaky way: it talks about the group the argument ignores, wood-only households. They had no reason to care about gas prices. If a cold snap were driving demand, they'd have burned more too. They didn't, so the extra demand came from someone else, and the gas households are the obvious candidate. Most students pick (D) because it seems to confirm the motive: gas got expensive. But the argument already grants that gas bills rose, so restating it adds nothing, and record gas bills, if anything, suggest those households kept burning gas instead of switching.",
             "choices": [
               {
-                "note": "Gas stayed expensive, so this doesn't hurt. But it adds nothing either; we already know gas prices rose steeply."
+                "note": "Roughly neutral. Gas stayed expensive all winter, but the argument already says gas prices rose steeply. Nothing here shows anyone switched to wood."
               },
               {
-                "note": "Electric-heat households are outside the mechanism. Irrelevant."
+                "note": "Irrelevant. Electric-heated households are outside the story; they neither faced the gas increase nor added to firewood demand."
               },
               {
-                "note": "CORRECT. The extra wood was burned by the gas households, and the wood-only households, who didn't face higher gas bills, didn't burn more. That's the mechanism, confirmed, with a built-in comparison group."
+                "note": "CORRECT. Wood-only households were unaffected by gas prices. If something general, like a cold winter, had pushed up firewood demand, they would have bought more too. They didn't, so the extra demand likely came from the gas households, as the argument says."
               },
               {
-                "note": "Tempting, because a cold winter raises demand for firewood. But that's a rival cause that works without gas prices. It weakens the argument; it doesn't strengthen it."
+                "note": "Tempting. It sounds like support for the motive. But the argument already grants that gas bills rose, so this adds nothing. Worse, households paying record amounts for gas look like households that kept burning gas, not ones that switched to wood."
               },
               {
-                "note": "Firewood prices rose even where gas isn't used, so something other than gas prices could be at work. This weakens the argument."
+                "note": "Weakens. If firewood prices rose just as sharply where hardly anyone heats with gas, something other than gas-to-wood switching is probably driving prices."
               }
             ]
           }
@@ -3991,7 +3992,7 @@
             "Since the rule took effect, the hospital has made it considerably easier for staff to report medication errors anonymously.",
             "Pharmacists at the hospital now spend considerably more of their working time checking medication orders than they did before.",
             "Medication errors are reported more often at hospitals that do not require pharmacists to double-check orders than at hospitals that do.",
-            "Nearly all medication errors that seriously harm patients occur when drugs are administered, not when they are ordered.",
+            "Nearly all of the medication errors that seriously harm patients occur when drugs are administered, not when they are ordered.",
             "Several other hospitals in the region adopted similar double-check rules at about the same time and saw similar declines."
           ],
           "answer": "D",
@@ -4019,7 +4020,7 @@
                 "text": "Since the rule began, reported medication errors fell 40 percent."
               }
             ],
-            "analysis": "Is the number of errors really the measure of harm? One serious error can outweigh a hundred trivial ones. The evidence counts errors; the conclusion is about harm. That's a measure mismatch, counts versus severity. We need an answer showing the drop could be all in harmless errors, while the harmful ones carry on untouched.",
+            "analysis": "Is the number of errors really the measure of harm? One serious error can outweigh a hundred trivial ones. The evidence counts errors; the conclusion is about harm. That's a measure mismatch, counts versus severity. We need an answer showing the drop could be all in harmless errors, while the harmful ones carry on untouched. Most students pick (A) because a change in reporting usually spoils before-and-after error counts. It fails because easier reporting pushes reported errors up, so a 40 percent drop despite it strengthens the administrator's case.",
             "choices": [
               {
                 "note": "Tempting, because a change in reporting usually spoils before-and-after numbers. But here reporting got easier, which should push reported errors up. A 40 percent drop despite that looks even better. This strengthens."
