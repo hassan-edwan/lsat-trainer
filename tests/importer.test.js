@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { normalizeImport, normalizeTest, parseTestText, splitStimulusAndStem } from '../src/lib/importer.js';
 
-const sample = JSON.parse(fs.readFileSync(new URL('../public/samples/sample-test.json', import.meta.url)));
+const sample = JSON.parse(fs.readFileSync(new URL('./fixtures/sample-test.json', import.meta.url)));
 
 test('sample test is valid and keeps its explicit types', () => {
   const [t] = normalizeImport(sample);

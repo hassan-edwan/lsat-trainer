@@ -61,7 +61,7 @@ export default function Diagnostic() {
       <PageHeader
         eyebrow="Practice"
         title="Skill diagnostic"
-        subtitle="Each skill has five questions that climb from level 1 (easier than the LSAT) to level 5 (harder than almost anything on it). The level where you start missing is your breaking point."
+        subtitle="Each skill has five questions that climb from level 1 (a typical early-section question) to level 5 (the hardest questions on recent tests). The level where you start missing is your breaking point."
       />
       <section className="card">
         <h2>Choose skills to test</h2>

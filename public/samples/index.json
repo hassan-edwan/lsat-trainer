@@ -1,11 +1,22 @@
-[
-  "original-test-1.json",
-  "original-test-2.json",
-  "original-test-3.json",
-  "flaw-pattern-practice.json",
-  "classic-style-test-1.json",
-  "classic-style-test-2.json",
-  "classic-style-test-3.json",
-  "skill-diagnostic.json",
-  "sample-test.json"
-]
+{
+  "version": 2,
+  "notes": "Every built-in question has been rewritten in the style of PrepTests 150–159: six full tests, a new flaw-pattern set, and a new skill diagnostic, all with full breakdowns.",
+  "files": [
+    "classic-style-test-1.json",
+    "classic-style-test-2.json",
+    "classic-style-test-3.json",
+    "classic-style-test-4.json",
+    "classic-style-test-5.json",
+    "classic-style-test-6.json",
+    "flaw-pattern-practice.json",
+    "skill-diagnostic.json"
+  ],
+  "retired": [
+    "original-practice-test-1",
+    "original-practice-test-2",
+    "original-practice-test-3",
+    "sample-original-1",
+    "flaw-pattern-practice",
+    "skill-diagnostic"
+  ]
+}

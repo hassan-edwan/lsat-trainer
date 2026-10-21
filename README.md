@@ -58,8 +58,8 @@ It runs entirely in your browser. There's no account and no server, and your dat
   Inference, …). Tags come from the test file or are guessed from the wording of the question stem, and you
   can change any of them.
 - **Skill diagnostic:** every skill (17 of them, including conditional reasoning and debate/dialogue
-  questions) has a ladder of questions from level 1 (easier than the LSAT) to level 5 (harder and sneakier
-  than almost anything on it). A grid shows the level where each skill breaks, and every miss goes to the
+  questions) has a ladder of questions from level 1 (a typical early-section question) to level 5 (the hardest kind
+  of question on PrepTests 150–159). A grid shows the level where each skill breaks, and every miss goes to the
   journal so you can write up your thinking. Each skill links to a drill that starts just below its breaking
   point.
 - **Drills:**
@@ -84,22 +84,19 @@ be bundled with or redistributed through an open-source project. The official wa
 
 What's included instead is **original** material written for this project:
 
-- **Three full practice tests** in the current LSAT format (two LR sections of 25 and one RC section with four
-  passages each, 231 questions). They are deliberately **harder than the real test**: about a quarter of
-  the questions are rated level 5, with dense stimuli, stacked conditionals, indirect correct answers, and
-  near-miss traps. Every section was solved blind by a separate checker to confirm the answer key.
+All of it is written to match the style, length, and difficulty of **PrepTests 150–159** (the 2016–2019
+tests): short everyday stimuli with one clean gap, the modern stem mix and flaw phrasing, and RC sets with one
+comparative pair per section. Every section was solved blind by a separate checker to confirm the answer key.
+
+- **Six Classic-Style Tests:** full LR / RC / LR tests (462 questions) with the real section difficulty curve.
 - **A Flaw Pattern Practice Set** of 60 LR questions: five for each of twelve flaw patterns (equivocation,
   false choice, circular reasoning, straw man, bad authority, ad hominem, possible-as-certain, part vs. whole,
-  lack of evidence, sampling, flawed analogy, overreaching conclusions), at difficulty 2 through 5, so every
-  standard flaw pattern has enough questions to measure and drill.
-- **Three Classic-Style Tests:** full LR / RC / LR tests (231 questions) written to match the voice and difficulty curve of recent
-  LSATs (short everyday stimuli with one clean gap per question, the full range of standard stems, and RC
-  passages built on the classic structures), for practicing at real-test difficulty.
+  lack of evidence, sampling, flawed analogy, overreaching conclusions), at difficulty 2 through 5.
 - **The skill diagnostic** described above.
 - **A full breakdown for every built-in question:** the conclusion and reasoning (or facts, paradox, or task),
   an analysis with the prephrase, and a note on every answer choice, with example arguments for wrong flaw
   answers and negations for every necessary-assumption choice.
-- A short sample test. To practice with other material you have the right to use, import it:
+To practice with other material you have the right to use, import it:
 [docs/FORMAT.md](docs/FORMAT.md) describes the JSON format and a plain-text format that's easy to produce from
 copied text.
 

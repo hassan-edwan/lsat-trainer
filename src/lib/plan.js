@@ -62,7 +62,7 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
     id: 'stretch',
     icon: '🧗',
     title: 'Stretch set: 5 level-5 questions',
-    detail: 'The sneakiest questions in the bank, at test pace, with blind review.',
+    detail: 'The hardest questions in the bank, at test pace, with blind review.',
     done: doneToday.has('stretch'),
     action: stretch.length ? { kind: 'drill', questions: stretch, opts: { title: 'Stretch set', secondsPerQuestion: 80 } } : null,
   });

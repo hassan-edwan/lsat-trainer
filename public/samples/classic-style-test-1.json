@@ -2,7 +2,7 @@
   "format": "lsat-trainer/v1",
   "id": "classic-style-test-1",
   "name": "Classic-Style Test 1",
-  "number": 5,
+  "number": 1,
   "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
   "sections": [
     {

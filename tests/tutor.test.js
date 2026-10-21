@@ -5,7 +5,7 @@ import { normalizeImport } from '../src/lib/importer.js';
 import { buildIndex, createPTSession, finalizeSession } from '../src/lib/session.js';
 import { applyTutorNote, buildTutorPack, parseTutorNotes, tutorOrder } from '../src/lib/tutorExport.js';
 
-const [sample] = normalizeImport(JSON.parse(fs.readFileSync(new URL('../public/samples/sample-test.json', import.meta.url))));
+const [sample] = normalizeImport(JSON.parse(fs.readFileSync(new URL('./fixtures/sample-test.json', import.meta.url))));
 const index = buildIndex([sample]);
 
 function missEverything() {

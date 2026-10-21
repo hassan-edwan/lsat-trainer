@@ -5,7 +5,7 @@ import { normalizeImport } from '../src/lib/importer.js';
 import { buildIndex, createDrillSession, createPTSession, finalizeSession, flatQuestions } from '../src/lib/session.js';
 import { toCSV, toMarkdown } from '../src/lib/journal.js';
 
-const [sample] = normalizeImport(JSON.parse(fs.readFileSync(new URL('../public/samples/sample-test.json', import.meta.url))));
+const [sample] = normalizeImport(JSON.parse(fs.readFileSync(new URL('./fixtures/sample-test.json', import.meta.url))));
 const index = buildIndex([sample]);
 
 function answerAll(session, pick) {
