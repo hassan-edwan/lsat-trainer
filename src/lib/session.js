@@ -49,7 +49,7 @@ export function createPTSession(test, { sectionIds = null, blindReview = true, t
   });
 }
 
-export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill' } = {}) {
+export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill', instant = false } = {}) {
   // RC questions from the same passage are kept together so the passage is read once.
   const ordered = [];
   const seen = new Set();
@@ -65,11 +65,12 @@ export function createDrillSession(questions, { title = 'Drill', secondsPerQuest
     sections: [{
       title,
       kind: kinds.size === 1 ? [...kinds][0] : 'MIXED',
-      timeLimitSec: secondsPerQuestion ? secondsPerQuestion * ordered.length : null,
+      // Instant-feedback drills are self-paced (time per question is still shown).
+      timeLimitSec: secondsPerQuestion && !instant ? secondsPerQuestion * ordered.length : null,
       elapsedSec: 0,
       qids: ordered.map((q) => q.id),
     }],
-    settings: { blindReview, breakAfterSection: null },
+    settings: { blindReview: blindReview && !instant, instant, breakAfterSection: null },
   });
 }
 

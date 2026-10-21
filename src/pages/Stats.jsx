@@ -4,6 +4,13 @@ import { navigate } from '../lib/nav.js';
 import { buildDrill, categoryStats, formatMs, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
+import { masteryTier } from '../lib/progress.js';
+
+const TIER = { gold: '🥇', silver: '🥈', bronze: '🥉' };
+function Badge({ stats }) {
+  const t = masteryTier(stats);
+  return t ? <span className="tier" title={`${t} mastery`}>{TIER[t]}</span> : null;
+}
 
 const pct = (x) => `${Math.round(x * 100)}%`;
 
@@ -114,7 +121,7 @@ export default function Stats() {
             <tbody>
               {groupRows.map((c) => (
                 <tr key={c.type}>
-                  <td>{categoryLabel(c.type)}</td>
+                  <td>{categoryLabel(c.type)} <Badge stats={c} /></td>
                   <td>{c.n}</td>
                   <td><div className="acc"><div className="bar"><div style={{ width: pct(c.firstAccuracy) }} /></div>{pct(c.firstAccuracy)}</div></td>
                   <td>{pct(c.brAccuracy)}</td>
@@ -131,13 +138,13 @@ export default function Stats() {
       {byKind.filter((k) => k.rows.length).map((k) => (
         <section className="card" key={k.kind}>
           <h2>{SECTION_KINDS[k.kind]} by question type</h2>
-          <p className="muted">Sorted by drill priority: how often you miss the type, weighted toward recent results and by how often it appears on the LSAT.</p>
+          <p className="muted">🥉 60%+ over 5 questions · 🥈 75%+ over 10 · 🥇 90%+ over 15. Sorted by drill priority: how often you miss the type, weighted toward recent results and by how often it appears on the LSAT.</p>
           <table className="table">
             <thead><tr><th>Type</th><th>Attempts</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th><th>Avg time</th><th /></tr></thead>
             <tbody>
               {k.rows.map((r) => (
                 <tr key={r.type}>
-                  <td>{r.label}</td>
+                  <td>{r.label} <Badge stats={r.stats} /></td>
                   <td>{r.n}</td>
                   <td><div className="acc"><div className="bar"><div style={{ width: pct(r.stats.firstAccuracy) }} /></div>{pct(r.stats.firstAccuracy)}</div></td>
                   <td>{pct(r.stats.brAccuracy)}</td>

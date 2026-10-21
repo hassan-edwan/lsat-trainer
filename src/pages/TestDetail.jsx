@@ -41,7 +41,7 @@ export default function TestDetail({ id }) {
   const [open, setOpen] = useState(null);
   const [showAnswers, setShowAnswers] = useState(false);
 
-  if (!test) return <div className="card">Test not found. <a href="#/">Back to library</a></div>;
+  if (!test) return <div className="card">Test not found. <a href="#/library">Back to library</a></div>;
 
   const start = async () => {
     const session = await saveSession(createPTSession(test, { sectionIds: [...selected], timed, blindReview }));
@@ -66,7 +66,7 @@ export default function TestDetail({ id }) {
           <button className="danger small" onClick={async () => {
             if (confirm(`Delete "${test.name}" from your library? Your history and journal entries are kept.`)) {
               await deleteTest(test.id);
-              navigate('/');
+              navigate('/library');
             }
           }}>Delete test</button>
         </div>

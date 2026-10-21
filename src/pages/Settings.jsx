@@ -4,13 +4,30 @@ import { db, exportAll, importAll, STORES } from '../lib/db.js';
 import { download, today } from '../lib/download.js';
 
 export default function Settings() {
-  const { reload } = useStore();
+  const { reload, prefs, savePrefs } = useStore();
   const [msg, setMsg] = useState('');
 
   return (
     <div className="stack">
       <section className="card">
-        <h1>Settings &amp; data</h1>
+        <h1>Settings</h1>
+        <div className="form-row">
+          <label>Daily goal (questions)
+            <input type="number" min={5} max={200} value={prefs.dailyGoal}
+              onChange={(e) => savePrefs({ dailyGoal: Math.max(5, Math.min(200, Number(e.target.value) || 20)) })} />
+          </label>
+          <label className="inline">
+            <input type="checkbox" checked={prefs.gamification} onChange={(e) => savePrefs({ gamification: e.target.checked })} />
+            Show streaks, XP, levels, and achievements
+          </label>
+        </div>
+        <p className="muted small-text">
+          Your streak counts days you reach the daily goal. Every 7 goal days earns a streak freeze (up to 2), which
+          covers a missed day automatically.
+        </p>
+      </section>
+      <section className="card">
+        <h2>Data</h2>
         <p>
           Everything (your imported tests, history, and mistake journal) is stored in this browser only. Download a
           backup regularly, and use it to move your data to another computer.

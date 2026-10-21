@@ -7,6 +7,19 @@ It runs entirely in your browser. There's no account and no server, and your dat
 
 ## Features
 
+- **Today page with a daily plan:** a goal ring for the day, and a short queue built from your history: mistakes
+  due for spaced review, a drill on your current weakest category, a stretch set of level-5 questions, and one
+  bigger task (the diagnostic, journal write-ups, or a weekly full test). One **Start next** button, plus a
+  **Quick 5** for when you only have a few minutes.
+- **Motivation that tracks real progress:** a daily-goal streak (with earned streak freezes so one missed day
+  doesn't erase weeks of work), an activity calendar, XP (more for hard questions, blind-review fixes, journal
+  write-ups, and mastered mistakes), levels, 18 achievements, and bronze/silver/gold mastery badges per question
+  type and category. All of it can be switched off in Settings.
+- **Instant-feedback drills:** right/wrong and the explanation after each question, with a combo counter. Full
+  tests keep test-day rules (no feedback until blind review is done).
+- **Spaced review:** journal questions come back after 1, 3, 7, and 14 days; two correct retries in a row masters
+  them.
+
 - **Test-day interface:** two panes (passage or stimulus on the left, question on the right), a 35-minute
   section timer you can hide, a five-minute warning, a question bar with flags, crossing out answers, three
   highlighter colors and an eraser, adjustable text size, and the intermission after section 2. Keyboard:

@@ -3,6 +3,7 @@ import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import Runner from '../components/Runner.jsx';
 import Results from './Results.jsx';
+import { AchievementToaster } from '../components/ProgressWidgets.jsx';
 
 export default function SessionPage({ id }) {
   const { sessions, index, saveSession, finishSession } = useStore();
@@ -21,16 +22,17 @@ export default function SessionPage({ id }) {
   }, [session, onFinish]);
 
   if (!session) {
-    return <div className="page"><div className="card">Session not found. <a href="#/">Back to library</a></div></div>;
+    return <div className="page"><div className="card">Session not found. <a href="#/library">Back to library</a></div></div>;
   }
   if (session.phase === 'done') {
     return (
       <div className="app">
         <header className="topnav">
           <a className="brand" href="#/">LSAT Trainer</a>
-          <nav><a href="#/">Library</a><a href="#/diagnostic">Diagnostic</a><a href="#/drill">Drills</a><a href="#/journal">Mistake Journal</a><a href="#/stats">Analytics</a></nav>
+          <nav><a href="#/">Today</a><a href="#/library">Library</a><a href="#/diagnostic">Diagnostic</a><a href="#/drill">Drills</a><a href="#/journal">Mistake Journal</a><a href="#/stats">Analytics</a></nav>
         </header>
         <main className="page"><Results session={session} /></main>
+        <AchievementToaster />
       </div>
     );
   }

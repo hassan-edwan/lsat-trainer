@@ -13,7 +13,7 @@ const PACES = [
 ];
 
 export default function DrillBuilder() {
-  const { questions, index, attempts, journal, sessions, saveSession } = useStore();
+  const { questions, index, attempts, journal, sessions, progress, saveSession } = useStore();
   const [mode, setMode] = useState('smart');
   const [kinds, setKinds] = useState(['LR']);
   const [types, setTypes] = useState([]);
@@ -21,6 +21,7 @@ export default function DrillBuilder() {
   const [count, setCount] = useState(10);
   const [pace, setPace] = useState('80');
   const [blindReview, setBlindReview] = useState(true);
+  const [instant, setInstant] = useState(true);
   const [saveFresh, setSaveFresh] = useState(false);
   const [minDifficulty, setMinDifficulty] = useState(1);
 
@@ -52,9 +53,12 @@ export default function DrillBuilder() {
     let picked;
     let title;
     if (mode === 'journal') {
-      // Use the index rather than `questions` so diagnostic misses can be retried too.
-      picked = shuffle(journalOpen.map((e) => index[e.qid]).filter(Boolean)
-        .map(({ question, section, test }) => ({ ...question, kind: section.kind, testId: test.id }))).slice(0, count);
+      // Due entries first (spaced review), then the rest. Use the index rather
+      // than `questions` so diagnostic misses can be retried too.
+      const dueIds = new Set(progress.due.map((e) => e.qid));
+      const ordered = [...progress.due, ...shuffle(journalOpen.filter((e) => !dueIds.has(e.qid)))];
+      picked = ordered.map((e) => index[e.qid]).filter(Boolean)
+        .map(({ question, section, test }) => ({ ...question, kind: section.kind, testId: test.id })).slice(0, count);
       title = 'Mistake journal retry';
     } else {
       picked = buildDrill(pool, attempts, journal, { mode, types, categories: cats, kinds, count });
@@ -64,7 +68,7 @@ export default function DrillBuilder() {
       alert('No matching questions. Import more tests or change the filters.');
       return;
     }
-    const session = await saveSession(createDrillSession(picked, { title, secondsPerQuestion: Number(pace), blindReview }));
+    const session = await saveSession(createDrillSession(picked, { title, secondsPerQuestion: Number(pace), blindReview, instant }));
     navigate(`/session/${session.id}`);
   };
 
@@ -90,8 +94,8 @@ export default function DrillBuilder() {
         )}
         {mode === 'journal' && (
           <p className="muted">
-            {journalOpen.length} journal question{journalOpen.length === 1 ? '' : 's'} not yet mastered. A question counts
-            as mastered after two correct timed retries in a row.
+            {journalOpen.length} journal question{journalOpen.length === 1 ? '' : 's'} not yet mastered, {progress.due.length} due
+            for review now. Missed questions come back after 1, 3, 7, and 14 days; two correct retries in a row masters one.
           </p>
         )}
 
@@ -151,12 +155,15 @@ export default function DrillBuilder() {
               <option value={5}>Hardest only (5)</option>
             </select>
           </label>
-          <label>Timing
-            <select value={pace} onChange={(e) => setPace(e.target.value)}>
+          <label className={instant ? 'disabled' : ''}>Timing
+            <select disabled={instant} value={pace} onChange={(e) => setPace(e.target.value)}>
               {PACES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
             </select>
           </label>
-          <label className="inline"><input type="checkbox" checked={blindReview} onChange={(e) => setBlindReview(e.target.checked)} /> Blind review afterward</label>
+          <label className="inline" title="See right/wrong and the explanation after each question">
+            <input type="checkbox" checked={instant} onChange={(e) => setInstant(e.target.checked)} /> Instant feedback
+          </label>
+          <label className={`inline ${instant ? 'disabled' : ''}`}><input type="checkbox" disabled={instant} checked={blindReview && !instant} onChange={(e) => setBlindReview(e.target.checked)} /> Blind review afterward</label>
         </div>
         <button className="primary" disabled={!canStart} onClick={start}>Start drill</button>
       </section>

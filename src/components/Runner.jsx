@@ -30,6 +30,8 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   sessionRef.current = session;
 
   const isBR = session.phase === 'br';
+  // Instant-feedback drills: check each answer as you go, no blind review.
+  const instant = !!session.settings.instant;
   const isBreak = session.phase === 'break';
   const sec = session.sections[session.current.section];
   const qid = sec.qids[session.current.index];
@@ -140,7 +142,34 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
 
   const answerField = isBR ? 'br' : 'first';
   const elimField = isBR ? 'brEliminated' : 'eliminated';
-  const choose = (letter) => setResp((r) => ({ [answerField]: r[answerField] === letter && !isBR ? null : letter }));
+  const choose = (letter) => {
+    if (instant && resp?.checked) return;
+    setResp((r) => ({ [answerField]: r[answerField] === letter && !isBR ? null : letter }));
+  };
+  const allChecked = instant && sec.qids.every((id) => session.responses[id].checked);
+  const check = () => {
+    if (!instant || !resp?.first || resp.checked) return;
+    const right = resp.first === entry.question.answer;
+    update((s) => {
+      const combo = right ? (s.combo || 0) + 1 : 0;
+      return {
+        ...s,
+        combo,
+        bestCombo: Math.max(s.bestCombo || 0, combo),
+        responses: { ...s.responses, [qid]: { ...s.responses[qid], checked: true } },
+      };
+    });
+    if (right && [5, 10, 15, 20, 25].includes((session.combo || 0) + 1)) {
+      setToast(`🔥 ${(session.combo || 0) + 1} in a row!`);
+      setTimeout(() => setToast(''), 2500);
+    }
+  };
+  const nextOrFinish = () => {
+    const nextUnchecked = sec.qids.findIndex((id, i) => i > session.current.index && !session.responses[id].checked);
+    if (nextUnchecked >= 0) go(session.current.section, nextUnchecked);
+    else if (allChecked) update((x) => ({ ...x, phase: 'finishing' }));
+    else step(1);
+  };
   const toggleElim = (letter) => setResp((r) => ({
     [elimField]: r[elimField].includes(letter) ? r[elimField].filter((l) => l !== letter) : [...r[elimField], letter],
   }));
@@ -157,6 +186,10 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
       } else if (e.key === 'ArrowRight') step(1);
       else if (e.key === 'ArrowLeft') step(-1);
       else if (k === 'F') toggleFlag();
+      else if (e.key === 'Enter' && instant) {
+        e.preventDefault();
+        if (resp?.checked) nextOrFinish(); else check();
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -206,7 +239,11 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           </span>
         </div>
         <div className="exam-timer">
-          {isBR ? (
+          {instant ? (
+            <span className="combo-display" title="Correct answers in a row">
+              {session.combo ? `🔥 ${session.combo} in a row` : 'Instant feedback'} · {formatMs(resp.timeMs)}
+            </span>
+          ) : isBR ? (
             <span className="muted-on-dark">Blind review is untimed</span>
           ) : remaining == null ? (
             <span className="muted-on-dark">Untimed · {formatMs(sec.elapsedSec * 1000)}</span>
@@ -239,7 +276,8 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
             const r = session.responses[id];
             return (
               <button key={id} onClick={() => go(session.current.section, i)}
-                className={`bubble ${i === session.current.index ? 'current' : ''} ${r[answerField] ? 'answered' : ''}`}>
+                className={`bubble ${i === session.current.index ? 'current' : ''} ${r[answerField] ? 'answered' : ''} ${
+                  instant && r.checked ? (r.first === index[id]?.question.answer ? 'right' : 'wrong') : ''}`}>
                 {r.flagged && <span className="flag-dot">⚑</span>}
                 {i + 1}
               </button>
@@ -273,8 +311,10 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
             {question.choices.map((c, i) => {
               const L = LETTERS[i];
               const elim = eliminated.includes(L);
+              const reveal = instant && resp.checked
+                ? (L === question.answer ? 'reveal-right' : L === chosen ? 'reveal-wrong' : '') : '';
               return (
-                <div key={L} className={`choice ${chosen === L ? 'selected' : ''} ${elim ? 'eliminated' : ''}`}>
+                <div key={L} className={`choice ${chosen === L ? 'selected' : ''} ${elim ? 'eliminated' : ''} ${reveal}`}>
                   <button className="choice-main" onClick={() => choose(L)}>
                     <span className="radio">{L}</span>
                     <span className="choice-text">{c}</span>
@@ -284,6 +324,16 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               );
             })}
           </div>
+          {instant && resp.checked && (
+            <div className={`feedback ${chosen === question.answer ? 'good' : 'bad'}`}>
+              <div className="feedback-head">
+                {chosen === question.answer
+                  ? <>✓ Correct{(session.combo || 0) > 1 ? ` · 🔥 ${session.combo} in a row` : ''}</>
+                  : <>✗ The answer is ({question.answer}). This one goes to your mistake journal.</>}
+              </div>
+              {question.explanation && <p>{question.explanation}</p>}
+            </div>
+          )}
         </div>
       </div>
 
@@ -292,10 +342,16 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         <button className={resp.flagged ? 'flagged' : ''} onClick={toggleFlag}>⚑ {resp.flagged ? 'Flagged' : 'Flag'}</button>
         <button onClick={() => step(1)}>Next →</button>
         <span className="spacer" />
-        <span className="hint">Keys: A–E answer · Shift+A–E cross out · ←/→ move · F flag</span>
-        <button className="primary" onClick={() => setConfirmEnd(true)}>
-          {isBR ? 'Finish blind review' : session.current.section + 1 < session.sections.length ? 'End section' : 'End test'}
-        </button>
+        <span className="hint">Keys: A–E answer · Shift+A–E cross out · ←/→ move · F flag{instant ? ' · Enter check / continue' : ''}</span>
+        {instant ? (
+          resp.checked
+            ? <button className="primary" onClick={nextOrFinish}>{allChecked ? 'See results' : 'Continue →'}</button>
+            : <button className="primary" disabled={!resp.first} onClick={check}>Check</button>
+        ) : (
+          <button className="primary" onClick={() => setConfirmEnd(true)}>
+            {isBR ? 'Finish blind review' : session.current.section + 1 < session.sections.length ? 'End section' : 'End test'}
+          </button>
+        )}
       </footer>
 
       {confirmEnd && (

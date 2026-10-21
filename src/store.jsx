@@ -5,6 +5,13 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { db } from './lib/db.js';
 import { buildIndex, finalizeSession, flatQuestions } from './lib/session.js';
 import { categoriesOf } from './lib/taxonomy.js';
+import { categoryStats, outcome, typeStats } from './lib/analytics.js';
+import { ladderResults } from './lib/diagnostic.js';
+import {
+  activityByDay, dayKey, dueJournal, earnedAchievements, isWrittenUp, levelInfo, masteryTier, streakInfo, totalXp,
+} from './lib/progress.js';
+
+export const DEFAULT_PREFS = { dailyGoal: 20, gamification: true, seenAchievements: null };
 
 const StoreContext = createContext(null);
 
@@ -16,11 +23,13 @@ export function StoreProvider({ children }) {
   const [sessions, setSessions] = useState({});
   const [attempts, setAttempts] = useState([]);
   const [journal, setJournal] = useState({});
+  const [prefs, setPrefs] = useState(DEFAULT_PREFS);
 
   const reload = useCallback(async () => {
-    const [t, s, a, j] = await Promise.all([
-      db.getAll('tests'), db.getAll('sessions'), db.getAll('attempts'), db.getAll('journal'),
+    const [t, s, a, j, p] = await Promise.all([
+      db.getAll('tests'), db.getAll('sessions'), db.getAll('attempts'), db.getAll('journal'), db.get('settings', 'prefs'),
     ]);
+    setPrefs({ ...DEFAULT_PREFS, ...(p?.value || {}) });
     setTests(t.sort((x, y) => (x.number ?? 1e9) - (y.number ?? 1e9) || x.name.localeCompare(y.name)));
     setSessions(byKey(s, 'id'));
     setAttempts(a.sort((x, y) => x.at.localeCompare(y.at)));
@@ -41,8 +50,45 @@ export function StoreProvider({ children }) {
     [attempts, index],
   );
 
+  const progress = useMemo(() => {
+    const byDay = activityByDay(attempts);
+    const streak = streakInfo(byDay, prefs.dailyGoal);
+    const difficultyOf = (qid) => index[qid]?.question.difficulty;
+    const xp = totalXp(attempts, journal, difficultyOf);
+    const done = Object.values(sessions).filter((s) => s.phase === 'done');
+    const typeS = typeStats(taggedAttempts);
+    const catS = categoryStats(taggedAttempts);
+    const entries = Object.values(journal);
+    const counts = {
+      answered: attempts.length,
+      testsDone: done.filter((s) => s.kind === 'pt').length,
+      diagnosticsDone: done.filter((s) => s.kind === 'diagnostic').length,
+      bestStreak: streak.best,
+      perfectSessions: done.filter((s) => s.summary?.total >= 10 && s.summary.firstCorrect === s.summary.total).length,
+      bestCombo: Math.max(0, ...done.map((s) => s.bestCombo || 0)),
+      hardCorrect: attempts.filter((a) => difficultyOf(a.qid) === 5 && a.first === a.answer).length,
+      brFixed: attempts.filter((a) => outcome(a.first, a.br, a.answer) === 'br-fixed').length,
+      writeups: entries.filter(isWrittenUp).length,
+      mastered: entries.filter((e) => e.status === 'mastered').length,
+      laddersCleared: ladderResults(diagnosticQuestions, attempts).filter((r) => r.cleared === 5).length,
+      goldBadges: [...Object.values(typeS), ...Object.values(catS)].filter((x) => masteryTier(x) === 'gold').length,
+    };
+    const today = byDay[dayKey(Date.now())] || 0;
+    return {
+      byDay, streak, xp, level: levelInfo(xp), counts, today,
+      earned: earnedAchievements(counts), due: dueJournal(journal),
+    };
+  }, [attempts, taggedAttempts, journal, sessions, index, diagnosticQuestions, prefs.dailyGoal]);
+
   const actions = useMemo(() => ({
     reload,
+    async savePrefs(patch) {
+      setPrefs((prev) => {
+        const next = { ...prev, ...patch };
+        db.put('settings', { key: 'prefs', value: next });
+        return next;
+      });
+    },
     async addTests(newTests) {
       await db.putMany('tests', newTests);
       await reload();
@@ -89,7 +135,7 @@ export function StoreProvider({ children }) {
     },
   }), [reload, index, journal, attempts]);
 
-  const value = { loaded, tests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, ...actions };
+  const value = { loaded, tests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, prefs, progress, ...actions };
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
 

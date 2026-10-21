@@ -4,6 +4,7 @@ import { STATUSES, TRAP_TAGS, journalPatterns, toCSV, toMarkdown } from '../lib/
 import { CATEGORY_GROUPS, categoriesOf, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { download, today } from '../lib/download.js';
 import QuestionReview from '../components/QuestionReview.jsx';
+import { XP, isWrittenUp, journalDueAt } from '../lib/progress.js';
 
 const FIELDS = [
   ['myReasoning', 'My thought process', 'What were you thinking when you picked your answer, in the timed pass and in blind review?'],
@@ -11,6 +12,13 @@ const FIELDS = [
   ['correctReasoning', 'Why the right answer is right', 'Explain the correct answer in your own words, and why your answer is wrong.'],
   ['takeaway', 'Takeaway for next time', 'A rule or habit to use next time you see this kind of question.'],
 ];
+
+function dueLabel(entry) {
+  const due = journalDueAt(entry);
+  if (due === Infinity) return 'Mastered';
+  const days = Math.ceil((due - Date.now()) / 86_400_000);
+  return days <= 0 ? '🔁 Due for review' : `Review in ${days} day${days === 1 ? '' : 's'}`;
+}
 
 function snapshotEntry(e) {
   // QuestionReview expects the library shape; journal entries carry a snapshot.
@@ -42,7 +50,7 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
         </div>
         <div className="journal-meta">
           <span>Timed {entry.first ?? '—'} · BR {entry.br ?? '—'} · Correct {entry.answer}</span>
-          <span className="muted">Missed {entry.occurrences.length}× · {filled}/4 notes{entry.retries.length ? ` · retries ${entry.retries.filter((r) => r.correct).length}/${entry.retries.length}` : ''}</span>
+          <span className="muted">{dueLabel(entry)} · Missed {entry.occurrences.length}× · {filled}/4 notes{entry.retries.length ? ` · retries ${entry.retries.filter((r) => r.correct).length}/${entry.retries.length}` : ''}</span>
           <select value={entry.status} onClick={(e) => e.stopPropagation()} onChange={(e) => commit({ status: e.target.value })}>
             {STATUSES.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
@@ -51,6 +59,7 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
       {open && (
         <div className="journal-body">
           <QuestionReview entry={snapshotEntry(entry)} first={entry.first} br={entry.br} />
+          {!isWrittenUp(entry) && <div className="xp-hint">✍️ Fill in all four notes for +{XP.journalWriteup} XP. Writing it down is what makes the lesson stick.</div>}
           <div className="journal-fields">
             {FIELDS.map(([k, label, hint]) => (
               <label key={k}>

@@ -9,6 +9,8 @@ import Journal from './pages/Journal.jsx';
 import Stats from './pages/Stats.jsx';
 import Settings from './pages/Settings.jsx';
 import Diagnostic from './pages/Diagnostic.jsx';
+import Today from './pages/Today.jsx';
+import { AchievementToaster, NavProgress } from './components/ProgressWidgets.jsx';
 
 function useHashRoute() {
   const read = () => window.location.hash.replace(/^#/, '') || '/';
@@ -22,7 +24,8 @@ function useHashRoute() {
 }
 
 const NAV = [
-  ['/', 'Library'],
+  ['/', 'Today'],
+  ['/library', 'Library'],
   ['/diagnostic', 'Diagnostic'],
   ['/drill', 'Drills'],
   ['/journal', 'Mistake Journal'],
@@ -50,7 +53,8 @@ function Shell() {
   else if (section === 'journal') page = <Journal />;
   else if (section === 'stats') page = <Stats />;
   else if (section === 'settings') page = <Settings />;
-  else page = <Home />;
+  else if (section === 'library') page = <Home />;
+  else page = <Today />;
 
   return (
     <div className="app">
@@ -63,8 +67,10 @@ function Shell() {
             </a>
           ))}
         </nav>
+        <NavProgress />
       </header>
       <main className="page">{page}</main>
+      <AchievementToaster />
     </div>
   );
 }

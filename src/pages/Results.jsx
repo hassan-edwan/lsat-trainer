@@ -6,6 +6,10 @@ import { makeEntry } from '../lib/journal.js';
 import { CATEGORY_GROUPS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { createDrillSession } from '../lib/session.js';
 import QuestionReview from '../components/QuestionReview.jsx';
+import { GoalRing, LevelBar } from '../components/ProgressWidgets.jsx';
+import { attemptXp } from '../lib/progress.js';
+import { dailyPlan } from '../lib/plan.js';
+import { startTask } from './Today.jsx';
 
 export default function Results({ session }) {
   const { index, attempts, journal, questions, saveJournalEntry, saveSession } = useStore();
@@ -43,16 +47,17 @@ export default function Results({ session }) {
 
   return (
     <div className="stack">
+      <Celebration session={session} sessionAttempts={sessionAttempts} />
       <section className="card">
         <h1>{session.title} — results</h1>
         <div className="stat-row">
-          <div className="stat"><div className="stat-label">Timed</div><div className="stat-value">{scaled ?? `${s.firstCorrect}/${s.total}`}</div>{scaled && <div className="muted">{s.firstCorrect}/{s.total}</div>}</div>
+          <div className="stat"><div className="stat-label">{session.settings.blindReview ? 'Timed' : 'Score'}</div><div className="stat-value">{scaled ?? `${s.firstCorrect}/${s.total}`}</div>{scaled && <div className="muted">{s.firstCorrect}/{s.total}</div>}</div>
           {session.settings.blindReview && (
             <div className="stat"><div className="stat-label">Blind review</div><div className="stat-value">{scaledBR ?? `${s.brCorrect}/${s.total}`}</div>{scaledBR && <div className="muted">{s.brCorrect}/{s.total}</div>}</div>
           )}
-          {Object.entries(OUTCOMES).map(([k, o]) => (
+          {Object.entries(OUTCOMES).filter(([k]) => session.settings.blindReview || k === 'correct' || k === 'wrong-twice').map(([k, o]) => (
             <button key={k} className={`stat clickable oc-${k} ${filter === k ? 'on' : ''}`} onClick={() => setFilter(filter === k ? 'all' : k)}>
-              <div className="stat-label">{o.label}</div><div className="stat-value">{s.outcomes[k] || 0}</div>
+              <div className="stat-label">{!session.settings.blindReview && k === 'wrong-twice' ? 'Missed' : o.label}</div><div className="stat-value">{s.outcomes[k] || 0}</div>
             </button>
           ))}
         </div>
@@ -63,7 +68,13 @@ export default function Results({ session }) {
             each skill breaks.
           </p>
         )}
-        {session.kind !== 'diagnostic' && (s.outcomes['wrong-twice'] || 0) > 0 && (
+        {session.kind !== 'diagnostic' && !session.settings.blindReview && (s.outcomes['wrong-twice'] || 0) > 0 && (
+          <p>
+            {s.outcomes['wrong-twice']} miss{s.outcomes['wrong-twice'] === 1 ? ' is' : 'es are'} now in your <a href="#/journal">mistake journal</a> and
+            will come back for review tomorrow. Write down what tripped you up while it's fresh.
+          </p>
+        )}
+        {session.kind !== 'diagnostic' && session.settings.blindReview && (s.outcomes['wrong-twice'] || 0) > 0 && (
           <p>
             {s.outcomes['wrong-twice']} question{s.outcomes['wrong-twice'] === 1 ? ' was' : 's were'} wrong in both the timed pass and blind review and {s.outcomes['wrong-twice'] === 1 ? 'is' : 'are'} now in your{' '}
             <a href="#/journal">mistake journal</a>. Write down your thought process while it's fresh.
@@ -167,5 +178,36 @@ export default function Results({ session }) {
         </table>
       </section>
     </div>
+  );
+}
+
+/** Top-of-results summary: XP, level, goal, and the next thing to do. */
+function Celebration({ session, sessionAttempts }) {
+  const store = useStore();
+  const { index, tests, sessions, attempts, journal, questions, progress, prefs } = store;
+  const xp = sessionAttempts.reduce((sum, a) => sum + attemptXp(a, index[a.qid]?.question.difficulty), 0);
+  const plan = dailyPlan({ tests, sessions, attempts, journal, index, questions, progress });
+  const next = plan.find((t) => !t.done && t.action);
+  const s = session.summary;
+  const pct = s.total ? s.firstCorrect / s.total : 0;
+  const cheer = pct === 1 ? 'Flawless!' : pct >= 0.85 ? 'Excellent work!' : pct >= 0.7 ? 'Solid session.' : pct >= 0.5 ? 'Good reps. The misses are where the points are.' : 'Tough set. Every miss is now a lesson in your journal.';
+  return (
+    <section className="card celebrate">
+      <GoalRing value={progress.today} goal={prefs.dailyGoal} size={96} />
+      <div className="celebrate-main">
+        <h2>{cheer}</h2>
+        {prefs.gamification && (
+          <>
+            <div className="xp-gain">+{xp} XP{session.bestCombo >= 3 ? ` · best run 🔥 ${session.bestCombo}` : ''}{progress.streak.todayDone ? ` · streak ${progress.streak.current} 🔥` : ''}</div>
+            <LevelBar level={progress.level} />
+          </>
+        )}
+        <div className="row">
+          {next ? <button className="primary" onClick={() => startTask(next, store)}>▶ Next up: {next.title}</button>
+            : <a className="button primary" href="#/">Back to Today</a>}
+          <a className="button" href="#/">Today's plan</a>
+        </div>
+      </div>
+    </section>
   );
 }
