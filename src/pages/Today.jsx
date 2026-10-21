@@ -42,8 +42,8 @@ export default function Today() {
         <div className="eyebrow">👋 Welcome</div>
         <h1>Let's get you a 170+</h1>
         <p className="today-msg">
-          LSAT Trainer comes with three full practice tests, a skill diagnostic, and a flaw-pattern set, all original and
-          harder than the real thing. Load them and you'll get a personalized plan every day.
+          LSAT Trainer comes with six full practice tests (three real-feel, three extra-hard), a skill diagnostic, and a
+          flaw-pattern set, all original and fully explained. Load them and you'll get a personalized plan every day.
         </p>
         <div className="row">
           <button className="primary big" disabled={busy} onClick={async () => { setBusy(true); await loadBundledTests(addTests); setBusy(false); }}>
