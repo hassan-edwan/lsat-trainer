@@ -92,6 +92,9 @@ What's included instead is **original** material written for this project:
   false choice, circular reasoning, straw man, bad authority, ad hominem, possible-as-certain, part vs. whole,
   lack of evidence, sampling, flawed analogy, overreaching conclusions), at difficulty 2 through 5, so every
   standard flaw pattern has enough questions to measure and drill.
+- **Classic-Style Tests:** full LR / RC / LR tests written to match the voice and difficulty curve of recent
+  LSATs (short everyday stimuli with one clean gap per question, the full range of standard stems, and RC
+  passages built on the classic structures), for practicing at real-test difficulty.
 - **The skill diagnostic** described above.
 - A short sample test. To practice with other material you have the right to use, import it:
 [docs/FORMAT.md](docs/FORMAT.md) describes the JSON format and a plain-text format that's easy to produce from

@@ -1,0 +1,1744 @@
+{
+  "format": "lsat-trainer/v1",
+  "id": "classic-style-test-2",
+  "name": "Classic-Style Test 2",
+  "number": 6,
+  "source": "Original questions written for LSAT Trainer in the style and difficulty of recent LSATs. Not LSAC material. MIT licensed.",
+  "sections": [
+    {
+      "id": "lr1",
+      "kind": "LR",
+      "title": "Logical Reasoning",
+      "timeLimitMinutes": 35,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Psychologist: Among the 600 adults we surveyed, those who regularly sing in a choir reported feeling lonely far less often than those who do not. So joining a choir is an effective way for a person to reduce loneliness.",
+          "stem": "The reasoning in the psychologist's argument is flawed in that the argument",
+          "choices": [
+            "draws a conclusion about adults in general from a survey of only some adults",
+            "overlooks the possibility that people who are seldom lonely are more inclined to join a choir",
+            "takes for granted that singing in a choir is the only way to reduce loneliness",
+            "fails to consider that some choir members may still feel lonely on occasion",
+            "confuses how often people feel lonely with how intensely they feel lonely"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The argument moves from a correlation (choir singers report less loneliness) to a causal claim (joining reduces loneliness) without ruling out reversed causation: people who are already less lonely may be the ones who join choirs, which is (B). (A) is tempting, but nothing suggests a 600-person survey is unrepresentative; the problem is the causal leap, not the sample. (C) and (D) attribute claims the argument never makes."
+        },
+        {
+          "number": 2,
+          "stimulus": "Real estate agent: A house priced far below similar homes nearby is seldom the bargain it appears to be. Sellers rarely set a low price without a reason, and that reason is often a defect, such as a cracked foundation or a history of flooding, that an ordinary walkthrough will not reveal. Admittedly, some sellers simply need to sell quickly. But a buyer has no way of knowing which kind of seller he or she is dealing with.",
+          "stem": "Which one of the following most accurately expresses the conclusion drawn in the real estate agent's argument?",
+          "choices": [
+            "Sellers who set an unusually low price usually do so because the house has a hidden defect.",
+            "Some sellers price their houses low because they need to sell quickly.",
+            "A buyer cannot tell whether a low price reflects a hidden defect or a seller's haste.",
+            "A house priced far below similar nearby homes is unlikely to be a genuine bargain.",
+            "Buyers should have every low-priced house professionally inspected before making an offer."
+          ],
+          "answer": "D",
+          "types": [
+            "main-conclusion"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "rebuttal"
+          ],
+          "flaws": [],
+          "explanation": "Everything after the first sentence supports it: sellers have reasons for low prices, the reason is often a hidden defect, and the possibility of a merely hasty seller is neutralized because buyers cannot tell the difference. So the conclusion is (D). (C) is the tempting choice, but it is the final premise that answers the concession, not the point being argued for; (A) overstates 'often' as 'usually', and (E) recommends something the agent never says."
+        },
+        {
+          "number": 3,
+          "stimulus": "Entomologist: In the orchards of the Varrow Valley, the population of the native orange-banded bee has fallen sharply over the past decade, the same period during which growers there widely adopted a new fungicide. Although the fungicide is not designed to affect insects, I believe it is responsible for the bees' decline.",
+          "stem": "Which one of the following, if true, most strengthens the entomologist's argument?",
+          "choices": [
+            "In valley orchards never treated with the fungicide, orange-banded bee numbers have held steady.",
+            "The new fungicide controls orchard fungi more effectively than the products it replaced.",
+            "Orange-banded bees visit orchard blossoms less often than several other bee species do.",
+            "Over the past decade, a parasitic mite that attacks orange-banded bees has spread throughout the valley.",
+            "Some growers in the valley have recently begun planting wildflowers to attract bees."
+          ],
+          "answer": "A",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The argument rests on a coincidence in timing between the fungicide's adoption and the bees' decline. (A) supplies a comparison: where the fungicide was absent, the bees did not decline, which makes the fungicide a more likely cause. (D) is relevant to the topic but points to an alternative cause, so it weakens rather than strengthens; (B), (C), and (E) do not bear on what caused the decline."
+        },
+        {
+          "number": 4,
+          "stimulus": "The town of Merriton has two pharmacies, and they charge nearly identical prices for prescription drugs. Yet Hollins Pharmacy, which is open only on weekdays, fills far more prescriptions each month than Cardale Pharmacy, which is open seven days a week and stays open later each evening.",
+          "stem": "Which one of the following, if true, most helps to explain why Hollins Pharmacy fills more prescriptions than Cardale Pharmacy despite keeping shorter hours?",
+          "choices": [
+            "Cardale Pharmacy employs more pharmacists than Hollins Pharmacy does.",
+            "Most prescriptions in Merriton are filled on weekday afternoons.",
+            "Hollins Pharmacy is in the same building as the clinic where most Merriton residents see their doctors.",
+            "Cardale Pharmacy also sells groceries and household goods.",
+            "Some Merriton residents have their prescriptions filled by mail-order services rather than at either pharmacy."
+          ],
+          "answer": "C",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "fact-set",
+            "comparison"
+          ],
+          "flaws": [],
+          "explanation": "We need some advantage of Hollins that outweighs Cardale's longer hours and equal prices. (C) supplies one: patients leaving the clinic with a prescription can fill it in the same building. (B) is tempting, but both pharmacies are open on weekday afternoons, so it removes Cardale's advantage at most without giving Hollins one; (A) and (D) make the gap more puzzling, and (E) affects both pharmacies equally."
+        },
+        {
+          "number": 5,
+          "stimulus": "Meteorologist: Our station's new forecasting model correctly predicted whether it would rain the next day on 88 percent of days last spring. The model we used before was correct on only 74 percent of days during the previous spring. So the new model predicts next-day rain more accurately than the old one did.",
+          "stem": "Which one of the following is an assumption required by the meteorologist's argument?",
+          "choices": [
+            "The new model will be correct on at least 88 percent of days next spring.",
+            "The old model was more accurate in spring than in any other season.",
+            "No forecasting model available to the station is more accurate than the new model.",
+            "The new model requires less computing time than the old model did.",
+            "Next-day rain last spring was not substantially easier to predict than it was during the previous spring."
+          ],
+          "answer": "E",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "statistical",
+            "comparison"
+          ],
+          "flaws": [],
+          "explanation": "The models were tested in different springs, so the comparison works only if the two springs posed similar forecasting challenges. If last spring's weather was much easier to forecast, the higher score would not show that the model is better; that is (E). (A) is not required, because the conclusion concerns the model's accuracy so far, not a guarantee about next spring; (C) concerns other models, which the argument never compares."
+        },
+        {
+          "number": 6,
+          "stimulus": "At Quillon Software, an employee may work from home on a given day only if that employee's team lead has approved it in advance. Team leads approve such requests only from employees who have completed the company's security training. Moreover, an employee working from home may not access the customer database that day unless he or she uses the company's encrypted connection.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "Any Quillon employee who has completed the security training may work from home whenever he or she requests it.",
+            "Any Quillon employee who works from home on a given day has completed the company's security training.",
+            "Every Quillon employee who uses the encrypted connection is working from home.",
+            "Quillon's team leads approve most of the requests to work from home that they receive.",
+            "A Quillon employee who uses the encrypted connection need not have a team lead's approval to work from home."
+          ],
+          "answer": "B",
+          "types": [
+            "must-be-true"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "explanation": "Working from home requires advance approval, and approval is given only to employees who have completed the training, so anyone working from home has completed it: (B). (A) reverses the rules, treating completed training as enough to secure working from home rather than as a requirement. (C) likewise reverses the encrypted-connection rule, and (E) contradicts the first rule."
+        },
+        {
+          "number": 7,
+          "stimulus": "Archaeologist: At the hilltop site of Tel Varo, we found grinding stones together with charred barley grains in a layer dated to about 9,000 years ago. Since grinding stones were used to process grain, the people who lived at Tel Varo must already have been farming barley at that time.",
+          "stem": "Which one of the following, if true, most seriously weakens the archaeologist's argument?",
+          "choices": [
+            "Grinding stones found at other sites in the region are older than those found at Tel Varo.",
+            "The charred barley grains at Tel Varo were dated using a highly reliable method.",
+            "Later layers at Tel Varo contain clear evidence of cultivated barley.",
+            "Wild barley grew abundantly in the region 9,000 years ago, and people elsewhere ground wild grain long before farming began.",
+            "Barley is easier to grind than most other cereal grains."
+          ],
+          "answer": "D",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "The evidence shows that people at Tel Varo ground barley, but the conclusion is that they farmed it. (D) shows that the evidence fits equally well with gathering and grinding wild barley, so it does not establish farming. (C) may look relevant because it mentions cultivated barley, but evidence of farming in later layers says nothing about whether farming had begun 9,000 years ago; (B) supports the premise."
+        },
+        {
+          "number": 8,
+          "stimulus": "Editor: A publisher should reissue an out-of-print book only if the author, or the author's estate, consents to the reissue and any factual errors discovered in the book since its first publication can be corrected in the new edition.",
+          "stem": "The principle stated by the editor most helps to justify the reasoning in which one of the following arguments?",
+          "choices": [
+            "Grayline Press should not reissue Owen Tarr's travel memoir. Although Tarr's estate favors a reissue, the original plates cannot be altered, so the errors found in the memoir could not be corrected.",
+            "Hollis Books should reissue Meera Dahl's first novel. Dahl has consented to the reissue, and no factual errors have been found in the novel since it first appeared.",
+            "Fenwick House should not reissue its 1970s cookbook, since the original edition sold poorly and there is little reason to expect a reissue to sell better.",
+            "Arden Press should reissue Lionel Fry's chemistry textbook. Its errors have now been corrected, and that matters more than Fry's objection to the reissue.",
+            "Lattice Press should not reissue Ana Voss's field guide, because Voss has died and much of the information in the guide is now out of date."
+          ],
+          "answer": "A",
+          "types": [
+            "principle-apply"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "principle",
+            "conditional"
+          ],
+          "flaws": [],
+          "explanation": "The principle states only necessary conditions for reissuing: consent and the ability to correct errors. It therefore can justify a decision not to reissue when one condition fails, as in (A), where errors exist and cannot be corrected. (B) is the trap: both conditions are met, but meeting necessary conditions does not show that a book should be reissued. (E) fails because Voss's estate might consent and outdated information might be corrected; (D) violates the consent requirement."
+        },
+        {
+          "number": 9,
+          "stimulus": "Firefly species attract mates with species-specific patterns of flashes. Females of a few predatory firefly species, however, mimic the flash patterns of other species' females, luring males of those species and then eating them. The mimics tend to make small timing errors when they repeat a pattern, so males of prey species that respond only after watching a female's signal several times are eaten less often than males that respond at once. Thus, ______.",
+          "stem": "Which one of the following most logically completes the argument?",
+          "choices": [
+            "the females of prey species repeat their signals several times in order to help males avoid predators",
+            "males of prey species cannot distinguish the signals of their own females from those of the mimics",
+            "where such mimics are common, prey males that delay their responses probably survive at higher rates",
+            "the predatory mimics reproduce flash patterns more accurately than the females they imitate do",
+            "most males of prey species that live near the mimics are eaten before they have a chance to mate"
+          ],
+          "answer": "C",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "Males that wait are eaten less often, and that difference matters most where mimics are common, so delaying males should survive at a higher rate there: (C). (A) is attractive, but nothing indicates why females repeat their signals, let alone that they do so to protect males. (B) contradicts the claim that watching repetitions helps males avoid mimics, (D) contradicts the timing errors, and (E) is far stronger than the evidence."
+        },
+        {
+          "number": 10,
+          "stimulus": "Kemal: The city's new rule limiting short-term rentals in residential neighborhoods will lower rents. Many apartments now rented to tourists will return to the long-term market, and that added supply will push rents down.\n\nRosa: The rule will indeed send some apartments back to long-term tenants. But there will be too few to lower rents noticeably. Most of the city's short-term rentals are spare rooms in owner-occupied houses, and their owners will simply stop renting them out.",
+          "stem": "The dialogue most strongly supports the claim that Kemal and Rosa agree that",
+          "choices": [
+            "the rule will noticeably lower rents in the city",
+            "most of the city's short-term rentals are rooms in owner-occupied houses",
+            "the city should not have adopted the rule limiting short-term rentals",
+            "owners of short-term rentals will mostly oppose the city's new rule",
+            "the rule will lead some apartments now rented to tourists to become available to long-term tenants"
+          ],
+          "answer": "E",
+          "types": [
+            "point-at-issue"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "debate"
+          ],
+          "flaws": [],
+          "explanation": "Kemal says apartments will return to the long-term market, and Rosa says 'indeed' some will, so both accept (E). (A) is exactly what they disagree about. (B) is Rosa's claim alone, since Kemal says nothing about spare rooms, and neither speaker evaluates the rule, as (C) requires, or predicts owners' opposition, as (D) requires."
+        },
+        {
+          "number": 11,
+          "stimulus": "Pharmacist: Whenever a generic version of a drug becomes available, our pharmacy stocks it, provided that our suppliers can deliver it reliably. Our suppliers can reliably deliver any drug that is made in a facility that passed its most recent national inspection. A generic version of the asthma drug Brelomax has just become available. So our pharmacy will stock generic Brelomax.",
+          "stem": "The pharmacist's conclusion follows logically if which one of the following is assumed?",
+          "choices": [
+            "Generic Brelomax is made in a facility that passed its most recent national inspection.",
+            "Our suppliers can reliably deliver only drugs made in facilities that passed their most recent national inspections.",
+            "The brand-name version of Brelomax is made in a facility that passed its most recent national inspection.",
+            "Our pharmacy stocks no generic drug that our suppliers cannot deliver reliably.",
+            "Generic Brelomax is as effective as the brand-name version of the drug."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [],
+          "explanation": "The chain is: made in an inspected facility, therefore reliably deliverable; available and reliably deliverable, therefore stocked. The only missing link is that generic Brelomax comes from an inspected facility, which (A) supplies. (B) and (D) reverse the conditionals, turning sufficient conditions into necessary ones, so neither establishes that the drug will be stocked. (C) concerns the wrong version of the drug."
+        },
+        {
+          "number": 12,
+          "stimulus": "Media critic: Some newspapers now let readers vote online on which stories receive follow-up coverage. Supporters claim that this practice makes journalism more responsive to the public. In fact, it is likely to make journalism less responsive. The readers who bother to vote are mostly those already devoted to a few favorite topics, so the stories chosen will tend to reflect the interests of a small, unrepresentative group rather than those of the public at large.",
+          "stem": "The claim that the stories chosen will tend to reflect the interests of a small, unrepresentative group plays which one of the following roles in the media critic's argument?",
+          "choices": [
+            "It is the argument's main conclusion.",
+            "It is a claim made by supporters of the practice that the argument seeks to refute.",
+            "It is a premise offered in support of the claim that the readers who vote are mostly devoted to a few topics.",
+            "It is a conclusion supported by another claim in the argument and offered in support of the main conclusion.",
+            "It is a concession that the critic argues is irrelevant to the main conclusion."
+          ],
+          "answer": "D",
+          "types": [
+            "role"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "rebuttal",
+            "sampling"
+          ],
+          "flaws": [],
+          "explanation": "The critic's main conclusion is that the practice is likely to make journalism less responsive. The claim in question follows from the premise about who votes (note the 'so') and in turn explains why responsiveness will decline, making it an intermediate conclusion: (D). (A) is the tempting trap because the claim is the last sentence, but it serves the claim that the practice will make journalism less responsive. (C) reverses the direction of support."
+        },
+        {
+          "number": 13,
+          "stimulus": "Tech analyst: Brightway Software is the most profitable company in its industry. Therefore Brightway's tablet division, although it brings in only a small share of the company's revenue, must also be more profitable than the tablet divisions of Brightway's competitors.",
+          "stem": "Which one of the following most accurately describes a flaw in the tech analyst's reasoning?",
+          "choices": [
+            "It relies on a comparison between companies that operate in different industries.",
+            "It confuses a company's revenue with its profitability.",
+            "It presumes that what is true of a company as a whole is true of each of its parts.",
+            "It takes for granted that a company's most profitable division brings in most of its revenue.",
+            "It fails to consider that Brightway's competitors may become more profitable in the future."
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "comparison"
+          ],
+          "flaws": [
+            "part-whole"
+          ],
+          "explanation": "Brightway's profitability as a whole is used to draw a conclusion about one division, though a profitable company can include an unprofitable division: (C). (B) is tempting because revenue is mentioned, but the argument never treats revenue as profit; it mentions revenue only to note that the division is small. (E) concerns the future, which the argument does not address."
+        },
+        {
+          "number": 14,
+          "stimulus": "In the coastal city of Pellmouth, the number of summer days on which the temperature exceeds 35°C has risen steadily over the past thirty years. Over the same period, however, the number of people admitted to Pellmouth's hospitals each summer for heat-related illness has fallen.",
+          "stem": "Which one of the following, if true, most helps to explain how heat-related hospital admissions in Pellmouth could have fallen while very hot days became more common?",
+          "choices": [
+            "The temperature in Pellmouth rarely exceeds 35°C for more than three days in a row.",
+            "Over the past thirty years, the proportion of Pellmouth homes with air conditioning has risen from under one-fifth to nearly nine-tenths.",
+            "Heat-related illness is more common among elderly people than among younger people.",
+            "Inland cities near Pellmouth have had an even larger increase in the number of very hot days.",
+            "Most heat-related hospital admissions in Pellmouth occur on days when the temperature exceeds 35°C."
+          ],
+          "answer": "B",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "We need a change over the thirty years that reduced residents' vulnerability to heat even as heat increased. The large rise in air conditioning in (B) does exactly that. (C) is tempting, but it explains the decline only if Pellmouth's population had grown younger, which is not stated; (E) deepens the puzzle, and (A) describes a pattern with no change over time."
+        },
+        {
+          "number": 15,
+          "stimulus": "Archaeologist: Pottery from the ancient settlement of Ombra bears a distinctive spiral motif that has been found at only one other site in the region, the coastal settlement of Dessin, two hundred kilometers away. The earliest spiral-decorated pottery at Dessin is about a century younger than the earliest at Ombra. So people from Ombra probably settled at Dessin.",
+          "stem": "The answer to which one of the following questions most helps in evaluating the archaeologist's argument?",
+          "choices": [
+            "Did the people of Ombra decorate objects other than pottery with spirals?",
+            "How many pieces of pottery in total have been excavated at Ombra?",
+            "Was Ombra a larger settlement than Dessin at the height of its population?",
+            "Did the people of Dessin continue to use the spiral motif after Ombra was abandoned?",
+            "Was the spiral-decorated pottery found at Dessin made from clay found near Dessin or from clay found near Ombra?"
+          ],
+          "answer": "E",
+          "types": [
+            "evaluate"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The pottery could have reached Dessin through trade rather than through settlers from Ombra. If the Dessin pots were made of Ombra clay, trade becomes likely and the argument weakens; if they were made locally, someone at Dessin knew Ombra's style, supporting settlement. So (E) helps evaluate the argument either way. (D) is tempting, but continued use of the motif at Dessin fits both settlement and later imitation, so neither answer settles much."
+        },
+        {
+          "number": 16,
+          "stimulus": "Psychologist: A therapist should not tell a client that a treatment will work when the evidence shows only that it often works. Overstating a treatment's prospects may persuade a client to begin it, but a client who later finds the promise broken will be less willing to trust the therapist at the times when that trust matters most.",
+          "stem": "The principle underlying the psychologist's argument is most similar to the principle underlying which one of the following arguments?",
+          "choices": [
+            "A doctor should tell patients about every possible side effect of a medication, since patients surprised by side effects may stop taking it.",
+            "A salesperson should not exaggerate a product's benefits, because doing so is dishonest whether or not customers are ever harmed by it.",
+            "A coach should not assure an athlete that a training plan guarantees a team spot; the promise may motivate now, but if it proves false, the athlete will heed the coach less when it counts.",
+            "A teacher should praise students' efforts rather than their results, because students who are praised for effort tend to work harder.",
+            "A manager should not promise an employee a raise that she lacks the authority to grant, since her own supervisors may then penalize her for committing the company without permission."
+          ],
+          "answer": "C",
+          "types": [
+            "parallel"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "principle",
+            "analogy"
+          ],
+          "flaws": [],
+          "explanation": "The psychologist's principle: do not overstate the likely benefit of a course of action to get someone to adopt it, because the broken promise will erode the trust you will need later. (C) matches on every element, including the overstatement, the short-term persuasion, and the later loss of trust. (B) is the trap: it condemns the same kind of exaggeration but justifies the condemnation by dishonesty alone, not by its effect on future trust. (E) rests on harm to the promiser rather than lost trust."
+        },
+        {
+          "number": 17,
+          "stimulus": "Pharmacy analyst: Last year Medway Pharmacies began sending a text message to customers who had opted in to the service whenever one of their prescriptions was due for a refill. Among those customers, the proportion of refills picked up on time rose from 61 percent the year before to 78 percent. The messages, therefore, were responsible for the rise.",
+          "stem": "Which one of the following, if true, most strengthens the analyst's argument?",
+          "choices": [
+            "Among Medway customers who did not opt in, the on-time refill rate last year was about the same as the year before.",
+            "In a survey, most customers who received the messages described them as helpful and said they hoped the service would continue.",
+            "Before the messages began, customers who later opted in had already been picking up refills on time somewhat more often than other customers.",
+            "Last year several competing pharmacies in the area closed, and many of their customers began using Medway.",
+            "The text messages also announced discounts on nonprescription products sold at Medway."
+          ],
+          "answer": "A",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal",
+            "statistical"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The argument infers causation from a before-and-after change in one group, so it is vulnerable to a general trend (such as a change in insurance rules) that raised on-time refills for everyone. (A) supplies a control: customers who got no messages showed no rise, which makes the messages the likelier cause. (C) is the most tempting trap, but the comparison is of the same customers before and after, so their higher starting rate does not bear on what caused the rise. (B) offers only customers' impressions, which say little about whether the messages changed their behavior."
+        },
+        {
+          "number": 18,
+          "stimulus": "Developer: Apartment rents in downtown Ferrisport have risen 30 percent in just three years, while many of the downtown office buildings nearby now stand largely empty. Converting those empty office buildings into apartments would therefore be a profitable investment.",
+          "stem": "Which one of the following, if true, most seriously weakens the developer's argument?",
+          "choices": [
+            "Apartment rents in Ferrisport's suburbs have risen less over the past three years than downtown rents have.",
+            "Converting the downtown office buildings would require running new plumbing to every unit, at a cost exceeding what the apartments could earn in rent for decades.",
+            "Several of the empty downtown office buildings were built within the last fifteen years.",
+            "Ferrisport's downtown population has grown faster than its supply of housing.",
+            "Some office tenants have left downtown Ferrisport for cheaper space in the suburbs."
+          ],
+          "answer": "B",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "plan"
+          ],
+          "flaws": [],
+          "explanation": "High rents and empty buildings show that converting could earn revenue, but profitability also depends on cost. (B) shows that the conversion costs would outweigh decades of rent, undercutting the conclusion directly. (D) strengthens the case for demand, and (A), (C), and (E) do not affect whether the conversions would pay off."
+        },
+        {
+          "number": 19,
+          "stimulus": "Entomologist: On the island of Tavor, every ant species that cultivates fungus keeps the interior of its nests humid. Most of the island's ant species that keep their nests humid build those nests underground, and none of Tavor's ant species that nest underground forage at night. Several ant species on Tavor do forage at night.",
+          "stem": "If the entomologist's statements are true, which one of the following is most strongly supported by them?",
+          "choices": [
+            "None of Tavor's fungus-cultivating ant species forage at night.",
+            "Some of Tavor's ant species that forage at night cultivate fungus.",
+            "Most of Tavor's fungus-cultivating ant species build their nests underground.",
+            "Most of Tavor's ant species that keep their nests humid do not forage at night.",
+            "Several of Tavor's fungus-cultivating ant species forage at night."
+          ],
+          "answer": "D",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "explanation": "Most humid-nest species nest underground, and no underground nesters forage at night, so most humid-nest species do not forage at night: (D). (C) is the main trap. Fungus cultivators are only a subset of the humid-nest species, and that subset could fall entirely within the minority that nests above ground, so what holds for most humid-nest species need not hold for most fungus cultivators. For the same reason, (A), (B), and (E) are all left open."
+        },
+        {
+          "number": 20,
+          "stimulus": "Newspaper editor: Over the past five years, our paper has lost half of its readers under the age of thirty. Young people increasingly get their news from short online videos. So if we begin producing short news videos of our own, we will win back many of the young readers we have lost.",
+          "stem": "Which one of the following is an assumption on which the editor's argument depends?",
+          "choices": [
+            "Producing short news videos is the only way for the paper to win back young readers.",
+            "Most young people prefer short online videos to every other source of news.",
+            "Producing short news videos will not cost more than the paper can afford.",
+            "The young readers the paper has lost stopped reading it because they began getting their news from short videos.",
+            "Some of the young readers the paper has lost would watch short news videos produced by the paper."
+          ],
+          "answer": "E",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "plan",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "The editor predicts that the paper's videos will win back lost young readers, which cannot happen unless some of those particular readers would watch the paper's videos. Negate (E) and the prediction collapses. (D) is the attractive trap: those readers might have left for other reasons and still watch the paper's videos, so the argument does not need it. (C) concerns whether the plan is advisable, not the prediction actually made, and (A) and (B) are far stronger than required."
+        },
+        {
+          "number": 21,
+          "stimulus": "Ethicist: When the software firm Lumetra discovered a security flaw in its messaging app, it fixed the flaw within a week but chose not to tell users, on the grounds that there was no evidence the flaw had ever been exploited. Lumetra acted wrongly. People who sent sensitive messages during the months the flaw existed had a stake in knowing that those messages might have been exposed, even though they probably were not.",
+          "stem": "Which one of the following principles, if valid, would most help to justify the ethicist's argument?",
+          "choices": [
+            "A company should tell users about a security flaw in its product whenever there is evidence that the flaw has been exploited.",
+            "A company should fix any security flaw in its products as soon as the flaw is discovered.",
+            "Whether users are owed disclosure of a risk depends on what they had at stake, not just on how likely the risk was to materialize.",
+            "A company that conceals a security flaw from users acts wrongly only if the concealment results in actual harm to those users.",
+            "People who send sensitive messages through an app accept responsibility for the risks of doing so."
+          ],
+          "answer": "C",
+          "types": [
+            "principle-strengthen"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "principle"
+          ],
+          "flaws": [],
+          "explanation": "The ethicist rejects Lumetra's reasoning, which was that disclosure was unnecessary because exploitation was unlikely, and argues that users' stake in the information required disclosure anyway. (C) makes users' stake, rather than the probability of exposure, the deciding factor, which licenses the conclusion. (A) is the tempting trap: it requires disclosure when there is evidence of exploitation, but here there was none, so it does not apply to Lumetra's case. (D) and (E) cut against the ethicist."
+        },
+        {
+          "number": 22,
+          "stimulus": "Most of the novels that Starling House published last year were by first-time novelists. Most first-time novelists whose books were published last year received advances of less than $5,000. So most of the novels Starling House published last year earned their authors advances of less than $5,000.",
+          "stem": "The pattern of questionable reasoning in the argument above is most similar to that in which one of the following?",
+          "choices": [
+            "Most cars Dunmore Motors sold last month were electric. Most electric cars sold in the region last month cost over $40,000. So most cars Dunmore sold last month cost over $40,000.",
+            "Most of the plants in the Hadley greenhouse are orchids. Every orchid in the greenhouse requires daily misting. So most of the plants in the Hadley greenhouse require daily misting.",
+            "Most members of the Orrin hiking club are retirees. Most of the club's retirees hike every week. So at least some members of the Orrin hiking club hike every week.",
+            "Most residents of Calder own bicycles. Most residents of Calder own cars. So some residents of Calder own both a bicycle and a car.",
+            "Most applicants to the Velor fellowship are from Varn. Most of the fellowship's recipients are from Varn. So most applicants from Varn receive the fellowship."
+          ],
+          "answer": "A",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "conditional",
+            "statistical"
+          ],
+          "flaws": [
+            "quantifier"
+          ],
+          "explanation": "The argument applies a fact about first-time novelists in general to Starling's first-time novelists, though Starling's could be the minority who received large advances. (A) makes the same move: Dunmore's electric cars might be the cheaper minority of the region's electric cars. (B), (C), and (D) are attractive because they also combine 'most' statements, but each is valid: (B) uses 'every', (C) restricts the second premise to the club's own retirees, and two majorities of the same group must overlap in (D). (E) is flawed in a different way, inferring a high success rate from where most applicants and recipients come from."
+        },
+        {
+          "number": 23,
+          "stimulus": "Archaeologist: Any ancient structure aligned precisely with the sunrise on the summer solstice was built by people who tracked the sun's yearly movements over many years. People who tracked the sun's movements over that long a period must have kept some form of lasting record. The stone ring at Hallow Fen is aligned precisely with the summer solstice sunrise. Therefore, the builders of the Hallow Fen ring possessed a system of writing.",
+          "stem": "The conclusion of the archaeologist's argument can be properly drawn if which one of the following is assumed?",
+          "choices": [
+            "Any people who possessed a system of writing kept lasting records of the sun's movements.",
+            "The builders of the Hallow Fen ring tracked the sun's yearly movements over many years.",
+            "Most ancient structures aligned with the summer solstice sunrise were built by people who possessed a system of writing.",
+            "Any people who kept a lasting record of any kind possessed a system of writing.",
+            "Some ancient people who kept lasting records of the sun's movements possessed a system of writing."
+          ],
+          "answer": "D",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [],
+          "explanation": "The premises establish that the ring's builders kept some form of lasting record; the conclusion requires that they had writing. (D) bridges that gap: anyone who kept any lasting record had writing. (A) reverses the needed conditional. (C) and (E) are tempting because they link alignment or record-keeping to writing, but 'most' and 'some' cannot guarantee that these particular builders had writing. (B) merely restates something the premises already establish."
+        },
+        {
+          "number": 24,
+          "stimulus": "Climatologist: Of the severe storms that struck the Lundar coast over the past decade, 70 percent were preceded by a week of unusually warm temperatures in the adjacent sea. Hence, whenever the sea off the Lundar coast has a week of unusually warm temperatures, a severe storm will probably follow.",
+          "stem": "The reasoning in the climatologist's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "treats a correlation between two kinds of events as proof that one kind of event causes the other",
+            "infers that one kind of event is usually followed by a second kind from evidence that the second is usually preceded by the first",
+            "draws a general conclusion from data covering too short a period of time",
+            "fails to consider that some severe storms occur after weeks of normal sea temperatures",
+            "presumes that unusually warm sea temperatures are the only factor that can produce a severe storm"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "statistical",
+            "conditional"
+          ],
+          "flaws": [
+            "necessary-sufficient"
+          ],
+          "explanation": "That most storms were preceded by warm weeks does not show that most warm weeks were followed by storms; warm weeks could be common and storms rare. The argument reverses the direction of the proportion, which is (B). (A) is the very tempting trap, but the conclusion is a prediction ('will probably follow'), not a causal claim, so the argument's error lies elsewhere. (D) describes something the premise itself acknowledges (the other 30 percent), and a decade of data, as in (C), is not the problem."
+        },
+        {
+          "number": 25,
+          "stimulus": "Pharmacist: When our patients are switched from a brand-name drug to a cheaper generic version, a substantial minority call within the first week to ask whether the generic will work as well. Such calls are far less frequent when the generic pill has the same color and shape as the brand-name pill, even though the generic contains the identical active ingredient in either case.",
+          "stem": "The pharmacist's statements, if true, most strongly support which one of the following?",
+          "choices": [
+            "Generic pills that look different from the corresponding brand-name pills are less effective than those that look the same.",
+            "Patients are less likely to take a generic drug as directed when it looks different from the brand-name pill.",
+            "Pharmacies should dispense only generic drugs that resemble the brand-name drugs they replace.",
+            "Most patients who are switched to a generic drug do not notice the change.",
+            "Some patients' doubts about a generic drug's effectiveness are influenced by something other than its active ingredient."
+          ],
+          "answer": "E",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "Calls are less frequent when the pill looks the same, even though the active ingredient is identical either way, so something other than the ingredient, namely the pill's appearance, affects whether patients doubt the drug: (E). (A) is tempting but unsupported; the pharmacist reports patients' doubts, not differences in effectiveness, and in fact implies the drugs are the same. (B) goes beyond calls to whether patients take the drug as directed, and (C) adds a recommendation the facts do not support."
+        }
+      ]
+    },
+    {
+      "id": "rc1",
+      "kind": "RC",
+      "title": "Reading Comprehension",
+      "timeLimitMinutes": 35,
+      "passages": [
+        {
+          "id": "p1",
+          "title": "Participatory Budgeting",
+          "subject": "social-science",
+          "text": "Passage A\n\nParticipatory budgeting—the practice of letting residents vote directly on how a portion of a city’s capital budget will be spent—has spread widely since its origins in Brazil in the late 1980s, and its advocates describe it as a remedy for civic disengagement. Yet the arrangement raises at least three problems that its enthusiasts have been slow to confront.\n\nFirst, those who take part are not a fair sample of the city. Proposal meetings, at which residents decide which projects will appear on the ballot, are typically held on weeknight evenings, and they reward residents who have flexible schedules, reliable child care, and the confidence to speak in public. A process meant to widen participation can thus hand still more influence to the residents who already have the most.\n\nSecond, the process is biased toward the visible. Residents asked to choose among projects predictably favor new playgrounds, murals, and bike lanes—things they can point to—over replacing aging water mains or resurfacing roads that will merely stop deteriorating. Over time, a city that allocates money this way may find its least glamorous infrastructure starved.\n\nThird, participatory budgeting blurs accountability. When a poorly chosen project fails, voters cannot easily hold anyone responsible: council members can say that residents chose it, and residents chose it as a crowd. A representative system has many faults, but it at least lets citizens identify whom to remove.\n\nPassage B\n\nWhen the city of Brennick set aside 2 percent of its capital budget for residents to allocate directly in 2014, skeptics predicted that the process would be captured by the same handful of activists who dominate every public hearing. The record of the program’s first eight cycles tells a different story. Because Brennick accepted ballots by mail and at libraries and grocery stores over a two-week period, the share of votes cast by residents of its lowest-income neighborhoods has exceeded those neighborhoods’ share of the city’s population in every cycle.\n\nNor has the program crowded out the city’s ordinary obligations. Residents decide only how the set-aside is spent; the remaining 98 percent of the capital budget, including every dollar for water and sewer systems, is still allocated by the council. And the projects residents have chosen, far from being frivolous, have often addressed problems that city engineers had overlooked—a dangerous pedestrian crossing near a senior center, for example, that had never appeared in a traffic study because no one had yet been killed there.\n\nPerhaps the program’s most important effect, however, is on the participants themselves. Residents who have spent weeks weighing the cost of a new streetlight against that of a repaired sidewalk come away with a far clearer sense of the trade-offs that every budget involves. Officials who dismiss such programs as symbolic because they control only a sliver of the budget are measuring them by the wrong yardstick: the size of the sums at stake rather than what residents learn in deciding how to spend them."
+        },
+        {
+          "id": "p2",
+          "title": "Dark Eggs of the Kessin Sandpiper",
+          "subject": "natural-science",
+          "text": "For shorebirds that nest on open ground, egg color is usually the best defense. In most ground-nesting shorebirds, egg color closely matches the sand or pebbles of the nesting site, and experiments with artificial eggs confirm that well-matched eggs are found by gulls and foxes far less often than mismatched ones. The Kessin sandpiper is a striking exception. Its breeding range runs some 2,000 kilometers from temperate coastal marshes to subarctic gravel plains, and its eggs grow steadily darker toward the north—even though the pale gravel of the northern sites makes dark eggs especially easy for predators to spot.\n\nThe ornithologist Teodora Valk has proposed that the eggs’ darkness is an adaptation not for concealment but for warmth. Only the female Kessin sandpiper incubates, and because her mate does not feed her, she must leave the nest repeatedly each day to forage. While she is away, the eggs cool, and an embryo whose temperature falls below about 26°C stops developing until it is warmed again. Every such pause lengthens the incubation period, and every extra day that eggs remain in the nest is another day on which a predator or a storm can destroy them. Dark shells absorb more sunlight than pale ones and so slow the eggs’ cooling. Where breeding-season air is cold, Valk contends, this benefit is large enough that the darkness pays for itself, despite the eggs’ greater visibility.\n\nThe arithmetic is clearest at a northern colony Valk studied, where air temperatures during incubation averaged 8°C and females’ foraging trips averaged about 25 minutes. Exposed to sunlight, a pale egg there cooled from its incubation temperature of 36°C to the 26°C threshold in about 15 minutes, so on a typical trip its embryo spent roughly 10 minutes with development halted. Over the 60 or so trips of a full incubation, those pauses added up to about 10 hours. A dark egg under the same conditions took about 28 minutes to reach the threshold—long enough, on most trips, to avoid any pause at all. At the southern end of the range, by contrast, where air temperatures averaged near 20°C, even pale eggs took more than an hour to cool to 26°C; there, darkening would buy no developmental time while still making eggs easier to find.\n\nTwo further observations support Valk’s account. First, egg darkness tracks breeding-season temperature more closely than it tracks latitude: of two colonies lying at the same latitude, one on a cold, wind-scoured island and the other in a sheltered inland valley, the island colony lays markedly darker eggs. Second, in northern colonies, nests with darker clutches hatched more often overall than nests with paler ones, even though, day for day, darker clutches were found by predators somewhat more often. Valk’s account leaves some questions open—it does not explain why some northern females lay paler clutches than their neighbors—but it turns what looked like a lapse in camouflage into the predictable result of a trade-off between two dangers."
+        },
+        {
+          "id": "p3",
+          "title": "Solvang and the honest seam",
+          "text": "In The Honest Seam (1987), the architectural critic Henrik Solvang argued that when a damaged historic building is repaired, the new work should be plainly distinguishable from the old in material, tooling, or color, so that a visitor can “read the building’s wounds.” Imitative repair, which reproduces lost parts in their original manner, Solvang regarded as a quiet forgery: it presents as the testimony of one age what is in fact the product of another. His model was the chapel at Brekke, gutted by fire in 1944 and rebuilt in the 1950s with replacement limestone of a slightly cooler gray and vault ribs left deliberately unmolded. His view soon became orthodoxy among conservation architects.\n\nWhat Solvang fails to clarify is what “the old” is from which new work must be distinguished. Few buildings reach us in a single state. The Brekke chapel itself had received a new west front in the 1720s and a new roof in the 1860s, yet the 1950s repairs were set off against all earlier fabric alike, as though the 1720s front were as original as the medieval nave. The seam Solvang praises is thus one cut among many, singled out chiefly because it is the most recent. His doctrine, in effect, requires only the latest intervention to announce itself.\n\nThe doctrine also rests on two undefended assumptions. It assumes that the principal relationship between a building and the people around it is evidentiary: the building is a document, and its public consists of visitors who come to read it. And it assumes that a distinction, once made, will remain visible. At Brekke, the second assumption has not held. The cooler limestone has weathered within forty years to a near match with the surrounding stone, and the seam that was meant to testify now needs a guide to point it out.\n\nOther complications are harder still. Some building traditions treat faithful reproduction as continuity rather than deceit. The Ise Grand Shrine in Japan has for centuries been rebuilt in the same form at intervals of roughly twenty years; to insist that each rebuilding look different would be to mistake what is being preserved, which is a practice of making rather than a particular set of timbers. The stave barns of the Vestmark valley have been repaired board by board by the farmers who work them, for whom a barn is a tool to be kept in working order rather than a record to be consulted. And a conspicuous seam can mislead in its own way: a viewer who sees a sharp break may infer a catastrophe where there was only routine maintenance.\n\nNone of this shows that imitative repair is always right. Solvang was correct that a repair makes a claim about the past, and that such claims can be false. But whether a given repair deceives depends on what the building is understood to be, whether document, instrument, or continuing practice, and that question must be answered before the question of seams can be.",
+          "subject": "humanities"
+        },
+        {
+          "id": "p4",
+          "title": "Calder’s rolling beach easement",
+          "text": "Along the coast of the province of Calder, the public has long held a customary right to use the dry-sand beach, the strip between the high-water line and the line of permanent vegetation, even where that strip lies on privately titled land. The right was clear enough so long as the coast stayed put. But Calder’s shore moves. When erosion pushes the vegetation line inland, does the public’s easement move with it, onto ground that was formerly a lawn or a house lot, or does it stay fixed and vanish into the sea?\n\nThe Calder High Court answered in Ostrander v. Coastal Lands Board (1979). Borrowing from the older law of river boundaries, the court distinguished erosion, a gradual and imperceptible loss of land, from avulsion, a sudden and perceptible loss such as that caused by a single storm. The easement follows gradual change, so a beach that creeps inland over decades carries the public’s right with it. But when a storm abruptly strips away the dunes, the easement remains where it was, and the newly exposed sand stays private unless natural processes rebuild the beach to its former position. Thus an owner whose dune line retreated thirty meters in one hurricane could fence the exposed sand, whereas a neighbor who lost the same thirty meters over twenty years could not.\n\nOstrander drew criticism from several directions. Landowners argued that a rolling easement shifted the burden of public use onto land they had never surrendered. Public access advocates raised a more practical objection: if most land loss on Calder’s coast occurs in storms, the avulsion exception would swallow the rule, and within a generation fences would line the shore. Coastal geologists, for their part, doubted that the distinction could be applied at all, since much apparently gradual retreat is the cumulative work of many small storms, while a single storm’s losses are often partly reversed as sand returns in the following months. Judge Imelda Corran, dissenting, wrote that the majority had “imported a distinction made for rivers that move their channels to a shore that moves its sand.”\n\nLater developments lent support to these critics. A provincial survey in 1996 found that in counties with frequent storms, owners had fenced more than a third of the formerly public dry beach, and that much of the fenced sand had in fact partly rebuilt on its own. In Reyes v. Port Allard (2011), the court abandoned the speed-based test. It now asks only whether a shift in the vegetation line has persisted for five years: if it has, the easement moves to the new line however the shift occurred; if the line returns seaward within that period, nothing changes.\n\nThe Reyes test has critics of its own, who call the five-year period arbitrary. But it has an evidentiary virtue that Ostrander lacked: it asks courts to determine where a line has stood, not to reconstruct how quickly it got there.",
+          "subject": "law"
+        }
+      ],
+      "questions": [
+        {
+          "number": 1,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following pairs of titles would most likely be found on documents whose relationship to each other is most analogous to the relationship between passage A and passage B?",
+          "choices": [
+            "“In Defense of Open Admission” and “Three Problems with Open Admission”",
+            "“Three Problems with Open Admission” and “Three Problems with Selective Admission”",
+            "“Three Problems with Open Admission” and “Open Admission at Harlow College: What a Decade of Results Shows”",
+            "“The Origins of Open Admission” and “Open Admission at Harlow College: What a Decade of Results Shows”",
+            "“Three Problems with Open Admission” and “Why Harlow College Ended Its Experiment with Open Admission”"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-comparative",
+            "rc-analogy"
+          ],
+          "difficulty": 3,
+          "explanation": "Passage A lists numbered problems with participatory budgeting; passage B defends the practice largely through one city’s track record, which matches C’s critique followed by a case-based defense. A is the tempting trap: it has the right two kinds of document but in the reverse order. B makes the second document a critique of a different practice, D mischaracterizes passage A as a history of origins, and E makes the second document a story of failure rather than a defense."
+        },
+        {
+          "number": 2,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "According to passage A, residents choosing among proposed projects tend to favor projects that",
+          "choices": [
+            "produce results residents can readily see",
+            "cost the least to complete",
+            "benefit their own neighborhoods",
+            "have been endorsed by council members",
+            "repair or replace existing infrastructure"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 1,
+          "explanation": "The second problem in passage A is that residents ‘predictably favor’ playgrounds, murals, and bike lanes, ‘things they can point to,’ which is A. E reverses the point: passage A says such repairs, like replacing water mains, lose out. C may sound realistic, but passage A never says residents favor their own neighborhoods, and B and D are not mentioned."
+        },
+        {
+          "number": 3,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The authors of the two passages would be most likely to disagree over whether",
+          "choices": [
+            "participatory budgeting began in Brazil",
+            "the times at which participatory budgeting events are held affect who takes part",
+            "council members can avoid responsibility for projects that residents chose",
+            "allocating funds through participatory budgeting tends to divert money from basic infrastructure such as water systems",
+            "taking part in participatory budgeting gives residents a clearer understanding of budgetary trade-offs"
+          ],
+          "answer": "D",
+          "types": [
+            "rc-comparative"
+          ],
+          "difficulty": 2,
+          "explanation": "Passage A warns that a city using this process ‘may find its least glamorous infrastructure starved,’ naming water mains; passage B replies that every dollar for water and sewer systems is still allocated by the council, so the program ‘has not crowded out’ ordinary obligations. That is D. B is tempting, but passage B’s account of Brennick’s mail and library voting suggests that it accepts the point that access shapes turnout. A, C, and E are each discussed in only one passage."
+        },
+        {
+          "number": 4,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author of passage B mentions the pedestrian crossing near a senior center (middle of the second paragraph) primarily in order to",
+          "choices": [
+            "show that residents generally rank safety projects above aesthetic ones",
+            "support the claim that residents’ choices can address needs that professional planners have missed",
+            "illustrate the kind of project the council funds from the remaining 98 percent of the budget",
+            "suggest that city engineers are less competent than residents at identifying hazards",
+            "give an example of a visible project of the kind that residents tend to prefer"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 3,
+          "explanation": "The crossing is the example (‘for example’) for the claim that residents’ projects ‘have often addressed problems that city engineers had overlooked,’ which is B. D overstates this into a general comparison of competence, and A generalizes one example into a ranking of priorities that passage B never gives. E borrows passage A’s concern with visible projects, but passage B offers the example to show the projects are not frivolous, not to illustrate a taste for the visible."
+        },
+        {
+          "number": 5,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "The author of passage B suggests that the officials mentioned in the last sentence of passage B are too",
+          "choices": [
+            "generous",
+            "deferential",
+            "impatient",
+            "sentimental",
+            "narrow"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 2,
+          "explanation": "Passage B says these officials judge the programs by ‘the wrong yardstick,’ looking only at the size of the sums at stake and ignoring what residents learn. That means their standard of value is too narrow, which is E. ‘Impatient’ (C) may tempt because the officials dismiss the program, but nothing suggests they judged it too soon. The other words have no support."
+        },
+        {
+          "number": 6,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following is a criticism that the author of passage A would be likely to offer regarding the suggestion in passage B that Brennick’s program has not been captured by an unrepresentative group of residents?",
+          "choices": [
+            "Accepting ballots by mail makes it harder to verify that each ballot was cast by an eligible resident.",
+            "Figures on who cast ballots reveal little about who took part in deciding which proposals appeared on the ballot.",
+            "Even a representative body of voters cannot be held responsible when a project it chose turns out badly.",
+            "Eight budget cycles are too few to establish that a pattern of participation will persist.",
+            "Residents of low-income neighborhoods are as likely as other residents to favor projects they can point to."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-comparative",
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "Passage A’s first problem concerns the proposal meetings, ‘at which residents decide which projects will appear on the ballot,’ which favor residents with free time and confidence. Passage B’s evidence covers only who voted, so passage A would object that turnout figures leave untouched the stage it worries about. That is B. C is the strongest trap: it is passage A’s third problem, but it concedes rather than challenges that the voters were representative. D is a generic objection that passage A gives no basis for, and A and E concern issues passage A never raises about representativeness."
+        },
+        {
+          "number": 7,
+          "passageId": "p1",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately characterizes the relationship between the two passages?",
+          "choices": [
+            "Passage A raises several objections to a practice; passage B presents evidence that bears against some of those objections and identifies a benefit of the practice that passage A does not discuss.",
+            "Passage A raises several objections to a practice; passage B responds in turn to each of those objections, using evidence from a single city.",
+            "Passage A traces the origins of a practice; passage B evaluates the results of that practice in one city.",
+            "Passage A argues that a practice should be abandoned; passage B argues that the practice should be greatly expanded.",
+            "Both passages criticize a practice, but passage B confines its criticism to the version of the practice adopted in one city."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-comparative"
+          ],
+          "difficulty": 3,
+          "explanation": "Passage B answers passage A’s worries about unrepresentative participation and neglected infrastructure, and then adds a benefit passage A never mentions: what participants learn about trade-offs. That is A. B is the trap: passage B never addresses passage A’s third problem, accountability, so it does not respond to ‘each’ objection. C mistakes passage A’s opening mention of Brazil for its purpose, D attributes recommendations neither passage makes, and E misreads passage B as a criticism."
+        },
+        {
+          "number": 8,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "In ground-nesting shorebirds, egg color serves mainly to conceal eggs from predators by matching the color of the nesting site.",
+            "Valk’s measurements prove that dark eggs cool more slowly than pale ones in every shorebird species that nests in cold regions.",
+            "Kessin sandpiper eggs are darker in the north because the gravel at northern nesting sites is darker than the sand of southern marshes.",
+            "The northward darkening of Kessin sandpiper eggs, though it makes them easier for predators to find, is plausibly explained as an adaptation that limits the developmental pauses caused by cooling while the female forages.",
+            "Because only the female incubates, the Kessin sandpiper suffers higher rates of nest loss than shorebird species in which both parents share incubation."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 2,
+          "explanation": "The passage presents the puzzle of northern eggs that are dark despite pale gravel, then sets out Valk’s warming theory with a worked example and supporting evidence. D states that whole arc. A describes only the general pattern in the first paragraph that the sandpiper breaks. B overstates the claim (‘prove,’ ‘every species’), C contradicts the passage’s statement that northern gravel is pale, and E makes a comparison the passage never draws."
+        },
+        {
+          "number": 9,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "According to the passage, at the southern end of the Kessin sandpiper’s range",
+          "choices": [
+            "dark eggs are found by predators more often than they are in the north",
+            "females’ foraging trips are shorter than those of northern females",
+            "even pale eggs take more than an hour to cool to the temperature at which embryonic development stops",
+            "all of the species’ eggs are pale enough to match the surrounding sand exactly",
+            "air temperatures during incubation average about 8°C"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 2,
+          "explanation": "The third paragraph states that in the south, where the air averages near 20°C, ‘even pale eggs took more than an hour to cool to 26°C,’ the threshold at which development stops. That is C. D is tempting because southern eggs are paler, but the passage never says they are uniformly pale or match exactly. E gives the figure for the northern colony, and A and B compare things the passage never measures."
+        },
+        {
+          "number": 10,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "In using the phrase “pays for itself” (end of the second paragraph), the author most probably means that",
+          "choices": [
+            "producing dark pigment costs the female no more energy than producing pale shells does",
+            "dark eggs require the female to spend less total time incubating them",
+            "the dark color of the eggs eventually makes them harder for predators to see as the season progresses",
+            "the food the female gathers while foraging supplies the materials needed to darken the shells",
+            "in cold regions, the protection from developmental delay that dark shells provide outweighs the added risk that they will be detected"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-meaning"
+          ],
+          "difficulty": 3,
+          "explanation": "The sentence weighs ‘this benefit,’ slower cooling and therefore fewer developmental pauses, against ‘the eggs’ greater visibility,’ and says the benefit is large enough to justify it. That is E. A reads ‘pays’ as a literal metabolic cost, which the passage never discusses. B may tempt, since fewer pauses shorten incubation, but the phrase concerns weighing a benefit against a predation cost, and the passage says nothing about the female’s time on the nest."
+        },
+        {
+          "number": 11,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author mentions the two colonies “lying at the same latitude” (fourth paragraph) primarily in order to",
+          "choices": [
+            "show that egg darkness varies with the factor Valk’s theory emphasizes rather than merely with geographic position",
+            "suggest that predators are more numerous on islands than in sheltered inland valleys",
+            "provide the figures used in the worked example of the third paragraph",
+            "identify a case that Valk’s theory has not yet been able to explain",
+            "indicate that females at island colonies take longer foraging trips than those inland"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 3,
+          "explanation": "Two colonies at the same latitude but with different temperatures lay eggs of different darkness. This shows that darkness tracks breeding-season temperature, the variable Valk’s theory depends on, rather than position on the map. That is A. D is tempting because the paragraph does mention an open question, but that question concerns pale clutches among northern neighbors, not these two colonies. B and E invent differences the passage never mentions, and C misplaces the example."
+        },
+        {
+          "number": 12,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following, if true, would most call into question Valk’s theory mentioned in the second paragraph?",
+          "choices": [
+            "At northern colonies, dark eggs are found by predators more often than pale eggs would be at the same sites.",
+            "Females at southern colonies take foraging trips that are, on average, somewhat longer than those of northern females.",
+            "Several shorebird species that nest alongside the Kessin sandpiper in the north lay pale eggs, and in those species both parents take turns incubating.",
+            "Among northern colonies, eggs are no darker at sites where skies are usually clear during the breeding season than at sites that are overcast through most of it.",
+            "The pigment that darkens Kessin sandpiper eggs requires the female to use energy that she must replace by foraging."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-strengthen-weaken"
+          ],
+          "difficulty": 4,
+          "explanation": "The theory’s mechanism is that dark shells ‘absorb more sunlight’ and so cool more slowly; the worked example concerns eggs ‘exposed to sunlight.’ If darkness is equally pronounced where there is little sun to absorb, the trait does not track the benefit the theory says explains it, so D undermines the theory. A is the main trap, but greater visibility is a cost the theory already acknowledges and weighs. C actually fits the theory, since species where both parents incubate seldom leave eggs uncovered. Even longer southern trips (B) would be far shorter than the hour pale eggs take to cool there, and E names a small cost without challenging the trade-off."
+        },
+        {
+          "number": 13,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "Which one of the following is most strongly supported by the information in the passage?",
+          "choices": [
+            "The darkest Kessin sandpiper eggs are laid at the colonies farthest north in the species’ range.",
+            "If females at the northern colony Valk studied typically returned to the nest in less than 15 minutes, dark eggs there would offer little or no developmental advantage over pale ones.",
+            "Over a full incubation at the northern colony Valk studied, the embryo in a dark egg would spend no time at all with its development halted.",
+            "Kessin sandpiper eggs that are left uncovered in cold air for more than 15 minutes do not hatch.",
+            "At the southern end of the range, females spend less time away from the nest each day than females in the north do."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "At the northern colony a pale egg takes about 15 minutes to cool to the 26°C threshold. If trips were shorter than that, pale eggs would never reach the threshold, so dark shells would gain no developmental time, which is B. A is the strongest trap: eggs darken toward the north, but the fourth paragraph says darkness tracks temperature more closely than latitude, so the darkest eggs need not come from the farthest-north colonies. C is too strong, because dark eggs avoid a pause only ‘on most trips.’ D confuses a halt in development with failure to hatch, and E compares something the passage never measures."
+        },
+        {
+          "number": 14,
+          "passageId": "p2",
+          "stimulus": "",
+          "stem": "The author’s attitude toward Valk’s theory can best be described as",
+          "choices": [
+            "skepticism about the mechanism on which the theory relies",
+            "detached neutrality between the theory and the concealment view it challenges",
+            "unreserved enthusiasm for a theory regarded as settling the matter",
+            "reluctant acceptance of a theory that conflicts with established findings",
+            "favorable regard tempered by acknowledgment that some questions remain unanswered"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "difficulty": 3,
+          "explanation": "The author says that two observations ‘support Valk’s account’ and credits it with turning an apparent lapse into a predictable result. The author also notes that it ‘leaves some questions open,’ which is the mix in E. C ignores that caveat. D is tempting, but the author shows no reluctance, and the theory accepts rather than conflicts with the finding that matched eggs are better concealed. A and B do not fit the author’s explicitly supportive language."
+        },
+        {
+          "number": 15,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Solvang’s doctrine should give way to a general policy of imitative repair, which better respects the traditions within which many buildings were made and maintained.",
+            "Because new materials weather to match old ones, distinguishable repair cannot be sustained over time, and Solvang’s doctrine therefore defeats itself.",
+            "Solvang’s requirement that repairs be visibly distinct rests on an undefended conception of what a building is, and whether a repair deceives cannot be settled until that conception is.",
+            "Since few buildings reach us in a single state, conservation architects should abandon the notion of original fabric altogether.",
+            "Solvang rightly holds that repairs make claims about the past, but the rebuilding of the Brekke chapel was a poor application of his own doctrine."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 2,
+          "explanation": "The last paragraph concedes Solvang’s core insight but concludes that whether a repair deceives depends on what the building is understood to be, a question his doctrine skips, which is C. B inflates one complication (the weathering at Brekke, third paragraph) into the thesis. A is too strong, since the author says nothing shows imitative repair is always right, and E misplaces the critique, which targets the doctrine itself rather than one application of it."
+        },
+        {
+          "number": 16,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The passage suggests that Solvang’s attitude toward imitative repair can best be described as one of",
+          "choices": [
+            "indifference",
+            "disapproval",
+            "ambivalence",
+            "resignation",
+            "curiosity"
+          ],
+          "answer": "B",
+          "types": [
+            "rc-author-attitude"
+          ],
+          "difficulty": 1,
+          "explanation": "In the first paragraph Solvang calls imitative repair 'a quiet forgery' that misrepresents one age as another, a clear stance of disapproval (B). Nothing suggests he is torn about it (C) or accepts it as unavoidable (D); his whole doctrine is built to rule it out."
+        },
+        {
+          "number": 17,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The primary function of the third paragraph is to",
+          "choices": [
+            "recount the history of alterations to the building that the critic used as his principal example",
+            "present evidence that the critic’s recommended technique was carelessly executed at the building he admired",
+            "introduce the building traditions that are examined in more detail in the fourth paragraph",
+            "argue that most visitors to historic buildings take little interest in how those buildings were repaired",
+            "identify presuppositions of a view described in the first paragraph and indicate that one of them is not borne out by the critic’s own example"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-function",
+            "rc-structure"
+          ],
+          "difficulty": 3,
+          "explanation": "The third paragraph names two 'undefended assumptions' (the evidentiary relationship and lasting visibility) and shows the second failing at Brekke, Solvang’s own model, which is E. B is the trap: the seam faded through weathering over forty years, not through careless work. A describes the second paragraph, and D overstates the paragraph, which identifies the evidentiary assumption without arguing that visitors are uninterested."
+        },
+        {
+          "number": 18,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The passage raises all of the following as complications for Solvang’s doctrine EXCEPT:",
+          "choices": [
+            "the expense of obtaining replacement materials that differ visibly from a building’s existing fabric",
+            "the tendency of contrasting new material to come to resemble the surrounding material over time",
+            "the existence of traditions in which faithful reproduction is understood as a form of continuity",
+            "the possibility that a conspicuous seam will lead viewers to infer an event that never occurred",
+            "the presence in many buildings of alterations made in several different periods"
+          ],
+          "answer": "A",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 3,
+          "explanation": "Cost is never mentioned, so A is the exception. B is the weathering of the Brekke limestone (third paragraph), C is the Ise Shrine and Vestmark barns, D is the seam that suggests catastrophe where there was only maintenance (end of the fourth paragraph), and E is the point about the 1720s front and 1860s roof (second paragraph)."
+        },
+        {
+          "number": 19,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The passage suggests that Solvang’s position commits him to which one of the following views?",
+          "choices": [
+            "The 1720s west front of the Brekke chapel should be treated as new work rather than as original fabric.",
+            "Imitative repair is acceptable when a building’s earlier alterations were themselves imitative.",
+            "Buildings that are rebuilt at regular intervals in the same form are exempt from the requirement that repairs be distinguishable.",
+            "Any future repair to the parts of the Brekke chapel rebuilt in the 1950s should be distinguishable from the 1950s work.",
+            "The work done on the Brekke chapel in the 1860s has less historical value than the work done in the 1950s."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 5,
+          "explanation": "Solvang’s rule is that new work must be distinguishable from the existing fabric it repairs, and the second paragraph notes that the doctrine requires the latest intervention to announce itself. Once the 1950s work is itself old, a new repair to it must be set off from it as well, which is D. A is the trap: it echoes the author’s criticism, but the passage says Solvang in effect treated the 1720s front as though it were original, the opposite of A. C is the author’s complication, not Solvang’s commitment, and E confuses which work must announce itself with which work is more valuable."
+        },
+        {
+          "number": 20,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "The author would be most likely to identify which one of the following as the primary reason that Solvang’s doctrine is ill suited to the stave barns of the Vestmark valley?",
+          "choices": [
+            "The timber used in the barns weathers too quickly for any contrast between old and new boards to remain visible.",
+            "Those who maintain the barns understand them as tools to be kept in working order rather than as records to be read.",
+            "Unlike the Brekke chapel, the barns have no history of alterations made in earlier periods.",
+            "Imitative repair is in every case more faithful to a building’s past than distinguishable repair is.",
+            "The farmers who repair the barns lack the training needed to produce repairs in a contrasting manner."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 3,
+          "explanation": "The fourth paragraph says the farmers treat a barn as 'a tool to be kept in working order rather than a record to be consulted', and the last paragraph says whether a repair deceives depends on what the building is understood to be, so B. A borrows the weathering problem from the Brekke limestone, which the passage never applies to the barns. C is unsupported (board-by-board repair implies many alterations), and D contradicts the author’s statement that imitative repair is not always right."
+        },
+        {
+          "number": 21,
+          "passageId": "p3",
+          "stimulus": "",
+          "stem": "With which one of the following statements would the author of the passage be most likely to agree?",
+          "choices": [
+            "A repair that is plainly distinguishable from the surrounding fabric can nonetheless convey a misleading impression of a building’s history.",
+            "A repair that follows a local tradition of faithful reproduction cannot misrepresent a building’s past.",
+            "Conservation architects ought to abandon Solvang’s doctrine in favor of case-by-case judgment.",
+            "How a building should be repaired is a more fundamental question than what the building is understood to be.",
+            "Visitors to the Brekke chapel today can read its history more easily than visitors could in the 1950s."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "The end of the fourth paragraph says a conspicuous seam 'can mislead in its own way' by suggesting catastrophe where there was only routine maintenance, which supports A. B is the tempting trap, but the author says only that some traditions treat reproduction as continuity and adds that imitative repair is not always right; 'cannot misrepresent' goes beyond that. D reverses the author’s order of questions, and E reverses the weathering point, since the seam now needs a guide."
+        },
+        {
+          "number": 22,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following most accurately expresses the main point of the passage?",
+          "choices": [
+            "Because a rolling easement shifts title without compensation, the Calder High Court in Reyes sharply limited the circumstances in which the public easement may move.",
+            "Later surveys confirmed in every respect Judge Corran’s view that Ostrander had misapplied the law of river boundaries.",
+            "Distinctions drawn from the law of river boundaries cannot sensibly be applied to any coastline.",
+            "Calder’s rule tying movement of the public beach easement to the speed of shoreline change proved hard to apply and harmful to public access, and it was replaced by a test based on how long a change persists.",
+            "Despite the arbitrariness of its five-year period, the Reyes test has resolved each of the controversies that Ostrander provoked."
+          ],
+          "answer": "D",
+          "types": [
+            "rc-main-point"
+          ],
+          "difficulty": 2,
+          "explanation": "The passage moves from the problem, through the Ostrander speed-based rule and its criticisms, to the 1996 survey and its replacement by the Reyes persistence test, which D captures. A gives the landowners’ objection, which the passage does not say motivated Reyes. B ('in every respect') and E ('each of the controversies') are too extreme, and E ignores the critics of Reyes in the last paragraph."
+        },
+        {
+          "number": 23,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "The author mentions a neighbor who lost the same thirty meters over twenty years (end of the second paragraph) primarily in order to",
+          "choices": [
+            "suggest that gradual erosion is more common on Calder’s coast than storm damage",
+            "indicate that the author regards the Ostrander rule as unfair to owners who lose land gradually",
+            "illustrate that the Ostrander rule treats equal losses of land differently depending on how rapidly they occurred",
+            "show that the Ostrander court misunderstood the law of river boundaries",
+            "present a case that the Reyes test would decide differently from the Ostrander rule"
+          ],
+          "answer": "C",
+          "types": [
+            "rc-function"
+          ],
+          "difficulty": 3,
+          "explanation": "The neighbor is paired with the hurricane-struck owner to show a concrete consequence of the rule: identical thirty-meter losses come out differently depending only on speed, which is C. B is tempting, but the author is describing how the rule works, not passing judgment, at that point. E fails because under Reyes a gradual shift that persists five years also moves the easement, so the neighbor’s case comes out the same."
+        },
+        {
+          "number": 24,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "The information in the passage most helps to answer which one of the following questions?",
+          "choices": [
+            "Why did the Reyes court choose five years, rather than some other period, as its test of persistence?",
+            "How many Calder landowners sought compensation after the Ostrander decision?",
+            "Did courts in any other province adopt the rule announced in Ostrander?",
+            "What proportion of the sand fenced after Ostrander was eventually returned to public use?",
+            "What kind of event did the Ostrander court treat as an avulsion?"
+          ],
+          "answer": "E",
+          "types": [
+            "rc-detail"
+          ],
+          "difficulty": 3,
+          "explanation": "The second paragraph defines avulsion as a sudden and perceptible loss 'such as that caused by a single storm', so E is answerable. A is the trap: the passage mentions critics who call the period arbitrary but never gives the court’s reason. D confuses sand that partly rebuilt naturally (fourth paragraph) with sand returned to public use, and B and C are never addressed."
+        },
+        {
+          "number": 25,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following is most strongly supported by the information in the passage?",
+          "choices": [
+            "Under the Reyes test, the public easement may come to cover sand that was exposed by a single storm.",
+            "Under the Ostrander rule, an owner whose vegetation line retreated gradually could fence the newly exposed sand.",
+            "The Reyes court adopted its test chiefly in response to landowners’ complaint that the easement shifted onto land they had never surrendered.",
+            "Under the Reyes test, the easement moves to a new vegetation line as soon as the line shifts.",
+            "Judge Corran maintained that the public easement should remain fixed regardless of how the shoreline changes."
+          ],
+          "answer": "A",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 3,
+          "explanation": "Reyes moves the easement whenever a shift persists five years 'however the shift occurred', so a storm-exposed strip that stays exposed would come under the easement, which is A. B reverses Ostrander, which let only storm-struck owners fence. D ignores the five-year requirement, and E reads more into Corran’s quoted objection to the river analogy than it says."
+        },
+        {
+          "number": 26,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following, if true, would most strengthen the objection to Ostrander raised by public access advocates, as described in the third paragraph?",
+          "choices": [
+            "Many owners of beachfront parcels in Calder bought their land before the public’s customary right was recognized by the courts.",
+            "Sand stripped away by a storm is often partly restored by natural processes over the following months.",
+            "In the decades after Ostrander, most of the inland retreat of Calder’s vegetation line occurred during brief storms rather than through slow erosion.",
+            "The rate of gradual erosion along Calder’s coast increased substantially after 1979.",
+            "Courts in several neighboring provinces have declined to recognize any public right to use privately titled beaches."
+          ],
+          "answer": "C",
+          "types": [
+            "rc-strengthen-weaken"
+          ],
+          "difficulty": 3,
+          "explanation": "The advocates’ objection depends on the conditional premise that most land loss occurs in storms; C confirms it, so the avulsion exception would indeed cover most cases. D points the other way, since more gradual loss means more land over which the easement rolls. B is the geologists’ point and, if anything, suggests some storm losses are temporary, and A bears on the landowners’ objection rather than the advocates’."
+        },
+        {
+          "number": 27,
+          "passageId": "p4",
+          "stimulus": "",
+          "stem": "Which one of the following statements about the Reyes test is most strongly supported by the passage?",
+          "choices": [
+            "It answers the landowners’ objection that the easement could move onto land they had never surrendered.",
+            "It makes irrelevant a factual question that the coastal geologists mentioned in the third paragraph considered difficult to answer.",
+            "It moves the easement more promptly than the Ostrander rule did in cases of gradual erosion.",
+            "It was adopted by the court on the basis of the findings of the 1996 provincial survey.",
+            "It prevents landowners from fencing any portion of the sand exposed by a storm."
+          ],
+          "answer": "B",
+          "types": [
+            "rc-inference"
+          ],
+          "difficulty": 4,
+          "explanation": "The geologists doubted courts could tell gradual retreat from storm loss; Reyes asks only where the line has stood, 'not ... how quickly it got there' (last paragraph), so that question drops out, which is B. D is the strongest trap: the survey preceded Reyes and 'lent support' to the critics, but the passage never says the court relied on it. A fails because the easement still moves onto private land, and C reverses things, since Reyes waits for five years of persistence."
+        }
+      ]
+    },
+    {
+      "id": "lr2",
+      "kind": "LR",
+      "title": "Logical Reasoning",
+      "timeLimitMinutes": 35,
+      "questions": [
+        {
+          "number": 1,
+          "stimulus": "Parks director: Last spring, brighter lamps were installed along the walking paths in Fenwick Park. During the following summer, the park had nearly twice as many evening visitors as it had the summer before. Clearly, then, the brighter lamps are what drew the additional visitors to the park after dark.",
+          "stem": "The reasoning in the parks director's argument is flawed in that the argument",
+          "choices": [
+            "presumes that what is true of Fenwick Park must also be true of every other park in the city",
+            "relies on visitor counts that may have been gathered by people who favored the new lamps",
+            "overlooks the possibility that some other change could account for the increase in evening visitors",
+            "takes for granted that the lamps were installed in response to complaints from visitors",
+            "fails to establish that the additional visitors stayed in the park longer than earlier visitors did"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The director infers that the lamps caused the rise in evening visitors simply because the rise followed their installation, ignoring other possible causes such as a new event, warmer weather, or new nearby housing; C names this. A is tempting because such arguments often overgeneralize, but this one draws no conclusion about any other park. B, D, and E describe assumptions the argument never makes or needs."
+        },
+        {
+          "number": 2,
+          "stimulus": "Theater critic: The Harrow Playhouse should not abandon its practice of staging one new play by a local writer each season. Admittedly, these productions sell fewer tickets than the playhouse's revivals of familiar classics. But several plays that premiered at the Harrow have gone on to successful runs elsewhere, and that reputation for discovery is a major reason donors continue to support the playhouse.",
+          "stem": "Which one of the following most accurately expresses the conclusion drawn in the argument?",
+          "choices": [
+            "The Harrow Playhouse should continue staging one new play by a local writer each season.",
+            "The Harrow's productions of new local plays sell fewer tickets than its revivals of classics.",
+            "Several plays that premiered at the Harrow Playhouse have gone on to successful runs elsewhere.",
+            "Donors support the Harrow Playhouse mainly because of its reputation for discovering new plays.",
+            "The Harrow Playhouse should stage more new plays and fewer revivals of familiar classics."
+          ],
+          "answer": "A",
+          "types": [
+            "main-conclusion"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "rebuttal",
+            "plan"
+          ],
+          "flaws": [],
+          "explanation": "The first sentence is the conclusion: the playhouse should keep its practice of one new local play per season, and the rest of the stimulus concedes a cost and then gives reasons for keeping it, so A is correct. D distorts a premise (the critic says the reputation is 'a major reason,' not the main one), B is the conceded point, and E goes further than the critic, who argues only for keeping the current practice."
+        },
+        {
+          "number": 3,
+          "stimulus": "Ornithologists studying marsh wrens in the Teller Wetlands found that each male builds several dummy nests in addition to the nest in which eggs are laid. Building these extra nests costs the birds considerable time and energy. Yet wrens that build more dummy nests tend to raise more chicks than wrens that build fewer.",
+          "stem": "Which one of the following, if true, most helps to explain how building dummy nests could increase the number of chicks a wren raises?",
+          "choices": [
+            "Female wrens typically lay the same number of eggs regardless of how many nests the male has built.",
+            "Dummy nests are usually built from the same materials as the nests that hold eggs.",
+            "Wrens in the Teller Wetlands build more dummy nests in years when the insects they feed their chicks are plentiful.",
+            "Some other bird species in the Teller Wetlands also build nests that they never use.",
+            "Predators that find an empty dummy nest often stop searching the area before finding the nest with eggs."
+          ],
+          "answer": "E",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "causal",
+            "fact-set"
+          ],
+          "flaws": [],
+          "explanation": "The stem asks how building dummy nests could itself lead to more chicks. E supplies a mechanism: dummy nests divert predators, so more eggs and chicks survive. C is the attractive trap, but it offers a different cause (plentiful food), suggesting the link is not causal, rather than explaining how the nests help; A, if anything, rules out one possible mechanism."
+        },
+        {
+          "number": 4,
+          "stimulus": "Nutritionist: In a survey of office workers, those who ate breakfast every day reported feeling more alert during morning meetings than did those who usually skipped breakfast. Hence, eating breakfast increases a person's alertness in the morning.",
+          "stem": "Which one of the following, if true, most seriously weakens the nutritionist's argument?",
+          "choices": [
+            "Many of the office workers surveyed drank coffee during their morning meetings.",
+            "Most of the surveyed workers who usually skipped breakfast also reported getting far less sleep than the breakfast eaters.",
+            "Some foods commonly eaten at breakfast contain more sugar than nutritionists recommend.",
+            "A few of the surveyed workers who ate breakfast every day reported feeling tired and distracted during their afternoon meetings at work.",
+            "Office workers who usually skip breakfast tend to eat a noticeably larger lunch than office workers who eat breakfast."
+          ],
+          "answer": "B",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "causal",
+            "sampling"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The argument moves from a correlation to the claim that breakfast causes alertness. B offers an alternative cause: the breakfast skippers also sleep much less, which could explain their lower alertness. A would matter only if coffee drinking differed between the two groups, which it does not say; D concerns afternoons, and E concerns lunch."
+        },
+        {
+          "number": 5,
+          "stimulus": "Ruiz: The Brookfield Public Library's main branch should stay open until 10 p.m. on weekdays. Many residents work until 6 p.m. or later, and the current 7 p.m. closing time leaves them almost no chance to use the library during the week.\n\nOkafor: The library's budget is fixed, so longer hours would mean buying fewer new books. Residents who work late can still visit on Saturdays, and most of what the library offers is available online at any hour.",
+          "stem": "Ruiz and Okafor disagree over whether",
+          "choices": [
+            "many Brookfield residents work until 6 p.m. or later",
+            "most of the library's offerings can be used online at any hour",
+            "residents who work late are able to visit the library on Saturdays",
+            "the library's main branch should stay open until 10 p.m. on weekdays",
+            "the library's budget should be increased to pay for keeping the main branch open longer"
+          ],
+          "answer": "D",
+          "types": [
+            "point-at-issue"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "debate",
+            "plan"
+          ],
+          "flaws": [],
+          "explanation": "Ruiz proposes the later weekday closing, and Okafor gives reasons against adopting it (fewer books, and other ways to use the library), so they disagree about D. Okafor never disputes that many residents work late (A), and Ruiz says nothing about online offerings (B) or Saturday visits (C); C is tempting because Okafor raises it, but Ruiz's complaint is specifically about weekdays. Neither proposes a larger budget (E)."
+        },
+        {
+          "number": 6,
+          "stimulus": "At Linden Middle School's library, a student may borrow a laptop overnight only if the student has a signed permission form on file. Every student who has a signed permission form on file has also completed the library's device-care session. Rosa borrowed a laptop overnight last Tuesday.",
+          "stem": "If the statements above are true, which one of the following must also be true?",
+          "choices": [
+            "Rosa has completed the library's device-care session.",
+            "Any student who has completed the device-care session may borrow a laptop overnight.",
+            "Rosa has borrowed a laptop overnight on more than one occasion.",
+            "Some students who have signed permission forms on file have never borrowed a laptop overnight.",
+            "Students without signed permission forms on file cannot borrow anything from the library."
+          ],
+          "answer": "A",
+          "types": [
+            "must-be-true"
+          ],
+          "difficulty": 1,
+          "skills": [
+            "conditional",
+            "fact-set"
+          ],
+          "flaws": [],
+          "explanation": "Rosa borrowed a laptop overnight, so she must have a signed form on file, and everyone with a signed form has completed the device-care session; hence A. B reverses the conditions: the session and the form are required for borrowing, not enough for it. E overextends a rule about laptops to all library items, and C and D are possible but not guaranteed."
+        },
+        {
+          "number": 7,
+          "stimulus": "Geologist: A layer of volcanic ash in the cliffs above Maren Bay matches, in chemical composition, the ash produced by an eruption of Mount Askel about 9,000 years ago. Therefore, the sediment layers lying directly beneath this ash in the cliffs were deposited more than about 9,000 years ago.",
+          "stem": "Which one of the following is an assumption required by the geologist's argument?",
+          "choices": [
+            "The eruption of Mount Askel was the largest eruption in the region in the last 9,000 years.",
+            "Ash from the Mount Askel eruption can be found at many sites besides Maren Bay.",
+            "No eruption much more recent than 9,000 years ago produced ash chemically identical to the Askel ash.",
+            "The sediment layers beneath the ash at Maren Bay were deposited at a steady rate.",
+            "Volcanic ash is the most reliable means geologists have for dating sediment layers."
+          ],
+          "answer": "C",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The argument dates the ash layer by its chemical match to the Askel eruption, so it requires that the match not have some other, later source. Negate C: if a much later eruption produced identical ash, the layer could be far younger, and the dating collapses. A is the tempting trap because size seems to matter, but the eruption need not be the largest for the match to identify it; B, D, and E are not needed."
+        },
+        {
+          "number": 8,
+          "stimulus": "Utility spokesperson: Last year Coralton Electric began sending some of its customers monthly reports comparing their electricity use with that of similar nearby households. Over the following year, customers who received the reports used 4 percent less electricity than they had the year before. So the reports led those customers to reduce their electricity use.",
+          "stem": "Which one of the following, if true, most strengthens the spokesperson's argument?",
+          "choices": [
+            "Electricity prices in Coralton's service area rose noticeably during the year in which the reports were first being sent out.",
+            "Many of the customers who received the reports said they found them confusing.",
+            "On average, customers who received the reports used more electricity than the similar households they were compared with.",
+            "Several other utilities have begun sending similar reports to their customers.",
+            "Customers randomly chosen not to receive the reports used about as much electricity as they had the year before."
+          ],
+          "answer": "E",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The argument attributes a drop in use to the reports, so it is vulnerable to other causes that would have reduced everyone's use. E supplies a control group: comparable customers without reports did not cut back, which makes the reports the likely cause. A is a trap that actually weakens by offering an alternative cause (higher prices), and C and D do not bear on whether the reports caused the drop."
+        },
+        {
+          "number": 9,
+          "stimulus": "After Dunmore County raised its minimum wage last year, employment at the county's restaurants did not decline. However, the average number of hours worked per restaurant employee fell by about 10 percent, and restaurants posted fewer job openings than in previous years. Over the same period, the rate at which restaurant employees quit their jobs dropped sharply.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "The increase in the minimum wage is what caused the county's restaurants to reduce the hours their employees worked.",
+            "Fewer employees leaving their jobs may account for part of the decline in the restaurants' job openings.",
+            "Restaurant employees in Dunmore County earned less in total last year than they had the year before.",
+            "The number of people employed at the county's restaurants rose after the minimum wage was increased.",
+            "Restaurants that reduced their employees' hours posted fewer job openings than other restaurants did."
+          ],
+          "answer": "B",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "Job openings arise largely when workers leave, so a sharp drop in quitting gives a plausible partial explanation for fewer openings; B's hedged claim is well supported. A is the tempting trap, but the facts show only that hours fell after the wage rose, not that the wage increase caused it. C cannot be determined without knowing how much hourly pay rose, D goes beyond 'did not decline,' and E compares restaurants the facts never distinguish."
+        },
+        {
+          "number": 10,
+          "stimulus": "Council member Ibsen argues that the city should close the dog run in Larkspur Park because too few residents use it to justify what it costs to maintain. Yet Ibsen's own figures show that more residents use the dog run each week than use the park's tennis courts, which cost even more to maintain, and Ibsen has argued for keeping the tennis courts. So Ibsen's argument for closing the dog run should be rejected.",
+          "stem": "The argument proceeds by",
+          "choices": [
+            "questioning the accuracy of the figures on which Ibsen bases a proposal",
+            "arguing that a facility should be kept because it is more popular than any other facility in the park",
+            "criticizing Ibsen's motives rather than the substance of Ibsen's proposal",
+            "showing that the reasoning behind Ibsen's proposal, if applied consistently, would support a conclusion that Ibsen rejects",
+            "proposing a different way to reduce the cost of maintaining the park's facilities"
+          ],
+          "answer": "D",
+          "types": [
+            "method"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "rebuttal",
+            "comparison"
+          ],
+          "flaws": [],
+          "explanation": "The arguer accepts Ibsen's figures and points out that Ibsen's standard (low use relative to cost justifies closing) would condemn the tennis courts even more, yet Ibsen wants to keep them; that is D. B is tempting, but the argument compares the dog run only with the tennis courts and does not claim it is the most popular facility. A is wrong because the argument relies on Ibsen's figures rather than disputing them."
+        },
+        {
+          "number": 11,
+          "stimulus": "Energy analyst: Ten years ago, rooftop solar panels generated 5 percent of the electricity used by households in Velmont. Today they generate 9 percent. So Velmont households now use less electricity from sources other than rooftop solar than they did ten years ago.",
+          "stem": "The reasoning in the energy analyst's argument is most vulnerable to criticism on the grounds that the argument",
+          "choices": [
+            "takes for granted that a trend observed over the past decade will continue at the same pace into the next",
+            "ignores that a smaller percentage of a larger total can exceed a larger percentage of a smaller one",
+            "assumes without justification that rooftop solar panels are less costly than other sources of electricity",
+            "treats evidence about electricity used by households as though it applied to businesses as well",
+            "fails to consider whether households in other towns have experienced a similar trend"
+          ],
+          "answer": "B",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "statistical"
+          ],
+          "flaws": [
+            "percent-number"
+          ],
+          "explanation": "The non-solar share fell from 95 to 91 percent, but if total household use rose by more than about 4.4 percent, the amount drawn from non-solar sources actually increased; B describes this percent-versus-amount error. A is tempting, but the conclusion is about the present, not a prediction. D describes a confusion the argument never makes, since it concerns only households, and C and E raise matters the conclusion does not depend on."
+        },
+        {
+          "number": 12,
+          "stimulus": "Ecologist: Gray shrikes in the Ostrava Hills impale the insects they catch on thorns before eating them. One grasshopper species common in the hills carries a toxin that breaks down within two days after the insect dies. Shrikes eat most impaled prey within a few hours, but they leave impaled grasshoppers of this species on the thorns for two days or more before eating them. Thus, ______.",
+          "stem": "Which one of the following most logically completes the ecologist's argument?",
+          "choices": [
+            "shrikes impale prey on thorns chiefly in order to make toxic prey safe to eat",
+            "the toxin carried by these grasshoppers is harmful to most bird species",
+            "shrikes would eat more of these grasshoppers if their toxin broke down more quickly",
+            "shrikes in the Ostrava Hills catch more grasshoppers than any other kind of prey",
+            "the shrikes' practice of impaling prey may help protect them from the grasshoppers' toxin"
+          ],
+          "answer": "E",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "Shrikes wait just long enough for the toxin to break down before eating these grasshoppers, so impaling, which lets them store the prey, plausibly protects them from the toxin, as E cautiously states. A overreaches with 'chiefly': shrikes impale all their prey, most of which they eat within hours, so detoxifying cannot be the main purpose. B, C, and D go beyond anything the facts establish."
+        },
+        {
+          "number": 13,
+          "stimulus": "Principal: Any course that requires students to complete a substantial independent research project develops students' ability to evaluate sources. Every course in Fairview High School's new humanities sequence requires such a project. Therefore, every course in the new humanities sequence should count toward the school's information-literacy requirement.",
+          "stem": "The conclusion of the principal's argument follows logically if which one of the following is assumed?",
+          "choices": [
+            "Any course that develops students' ability to evaluate sources should count toward the school's information-literacy requirement.",
+            "Only courses that develop students' ability to evaluate sources should count toward the school's information-literacy requirement.",
+            "Students who complete independent research projects evaluate sources better than students who do not.",
+            "Every course that counts toward the information-literacy requirement requires a substantial independent research project.",
+            "Most courses outside the new humanities sequence do not develop students' ability to evaluate sources."
+          ],
+          "answer": "A",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "conditional",
+            "principle"
+          ],
+          "flaws": [],
+          "explanation": "The premises establish that every course in the sequence develops students' ability to evaluate sources; A links that property to counting toward the requirement, so the conclusion follows. B is the attractive trap but reverses the needed conditional: it makes source evaluation necessary for counting, not sufficient. D likewise reverses direction, and C and E do not connect the courses to the requirement."
+        },
+        {
+          "number": 14,
+          "stimulus": "Columnist: The Dalby Cannery cut its workers' hourly wages last month, citing recent losses. But two years ago, when the workers agreed to forgo a scheduled raise, the owners promised that wages would not be reduced so long as the cannery remained profitable over each full year. The cannery made a profit last year despite its losses in recent months. So the wage cut was unjustified.",
+          "stem": "Which one of the following principles, if valid, would most help to justify the columnist's argument?",
+          "choices": [
+            "An employer that asks its workers to forgo a scheduled raise should fully explain the financial reasons behind the request.",
+            "Wage reductions are justified only when they are genuinely needed to keep a company from going out of business.",
+            "Workers who make a concession in exchange for an employer's promise are owed that promise whenever its stated conditions are met.",
+            "A company's owners may reduce wages whenever the company's monthly costs exceed its monthly revenue, regardless of its annual results.",
+            "Promises that employers make during labor negotiations are binding only if they have been put in writing."
+          ],
+          "answer": "C",
+          "types": [
+            "principle-strengthen"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "principle"
+          ],
+          "flaws": [],
+          "explanation": "The columnist's case rests on the promise: workers gave up a raise, the promised condition (a profitable full year) held, so cutting wages broke the promise; C states exactly that principle. B is tempting, but nothing in the argument says the cut was not needed to keep the cannery open, so B could not establish the conclusion. D supports the cannery, and E would undercut the columnist unless the promise was written, which is not stated."
+        },
+        {
+          "number": 15,
+          "stimulus": "Every film shown at the Corvo Festival this year was chosen by the festival's selection jury, and the jury chose no film that had already been released commercially. The Long Field has already been released commercially, so it was not shown at the Corvo Festival this year.",
+          "stem": "The pattern of reasoning in which one of the following arguments is most similar to that in the argument above?",
+          "choices": [
+            "Every car sold at Henley Motors is inspected by Pratt, and Pratt inspects no car that has more than 100,000 miles on it. So the sedan Pratt inspected last week has fewer than 100,000 miles on it.",
+            "Every member of the choir auditioned for the director, and the director turned away no one who could read music. Since Lin can read music, Lin is a member of the choir.",
+            "All of the paintings in the east gallery were donated by Ames, and Ames donated no painting made before 1900. The Tolland portrait was made before 1900, so Ames did not donate it.",
+            "Every dish on the Corbel Café's lunch menu is prepared by its head chef, and the head chef prepares no dish that contains peanuts. The café's satay contains peanuts, so it is not on the lunch menu.",
+            "Every book in the reading room was approved by the librarian, and the librarian approves only books in good condition. This atlas is in good condition, so it must be in the reading room."
+          ],
+          "answer": "D",
+          "types": [
+            "parallel"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [],
+          "explanation": "The argument chains two rules (shown at the festival → chosen by the jury; chosen by the jury → not released commercially) and, from an item lacking the final property, concludes by contrapositive that it lacks the first: it was not shown. D matches step for step: the satay contains peanuts, so the chef did not prepare it, so it is not on the menu. C is the most tempting trap, but it concludes only that the painting was not donated by Ames, never using the gallery premise to reach a conclusion about the gallery; A runs forward from the middle term, and B and E reverse the conditionals."
+        },
+        {
+          "number": 16,
+          "stimulus": "For decades, groundwater has been pumped heavily for irrigation in the Halden Valley, and as a result the land surface over most of the valley has sunk by more than a meter. In recent years, pumping has continued at the same rate and the water table has kept falling just as fast as before, yet the land has been sinking much more slowly than it did earlier.",
+          "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy described above?",
+          "choices": [
+            "In recent years, rainfall in the Halden Valley has been greater than its long-term average.",
+            "Land sinks when the removal of groundwater allows underground layers of fine clay to compact under the weight of the material above them.",
+            "Several farms in the valley have recently switched to irrigation methods that use less water.",
+            "In a neighboring valley where less groundwater is pumped, the land has sunk by only a few centimeters.",
+            "Most of the clay beneath the valley has already compacted almost as far as it can, and the sands that remain barely compact."
+          ],
+          "answer": "E",
+          "types": [
+            "explain"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "causal",
+            "fact-set"
+          ],
+          "flaws": [],
+          "explanation": "The puzzle is why unchanged pumping and an equally fast-falling water table now produce less sinking. E explains it: the compressible clay has largely finished compacting, and the remaining sands barely compact. B is the tempting trap: it explains why pumping causes sinking at all but not why the sinking has slowed; A and C conflict with the stated facts that the water table and pumping rate are unchanged."
+        },
+        {
+          "number": 17,
+          "stimulus": "Dietitian: This year Westbrook Elementary began offering free fruit at lunch, and on average its students now eat fewer cookies and chips at lunch than they did last year. Clearly, offering free fruit leads children to eat fruit in place of snack foods.",
+          "stem": "The answer to which one of the following questions would be most useful in evaluating the dietitian's argument?",
+          "choices": [
+            "Do Westbrook students prefer some kinds of fruit, such as apples, to other kinds offered at lunch?",
+            "Did students at comparable schools without free fruit also eat fewer cookies and chips at lunch this year?",
+            "Is fruit generally more nutritious for growing children than cookies and chips are?",
+            "How much does it cost Westbrook each year to provide free fruit to students at lunch?",
+            "Do Westbrook students eat more cookies and chips at home after school than they did last year?"
+          ],
+          "answer": "B",
+          "types": [
+            "evaluate"
+          ],
+          "difficulty": 2,
+          "skills": [
+            "causal",
+            "comparison"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The dietitian credits the fruit program for a drop in snack eating, so the key question is whether something else, such as a district-wide change, caused the drop. If comparable schools without free fruit saw the same decline, the program looks irrelevant; if not, the argument is strengthened, so B is useful either way. E is tempting, but the conclusion concerns what children eat at lunch, not at home, and A, C, and D do not bear on the causal claim."
+        },
+        {
+          "number": 18,
+          "stimulus": "Parks official: Critics say that replacing the lawn in Orchard Square with native meadow plants was a mistake because the square now draws fewer visitors. But the meadow has cut the square's water use by 60 percent, and in a survey posted on the square's information board, 85 percent of respondents said they approve of the meadow. So the change has been popular with the public.",
+          "stem": "Which one of the following, if true, most undermines the parks official's defense?",
+          "choices": [
+            "Most people who stopped visiting the square after the meadow was planted did so because they preferred the lawn.",
+            "The meadow requires more frequent maintenance work by park staff than the old lawn did, which raises the square's labor costs.",
+            "Several other cities have replaced lawns in public squares with native plants.",
+            "Many of the people who responded to the survey also visit other parks in the city.",
+            "Some survey respondents said they would like benches added to the meadow."
+          ],
+          "answer": "A",
+          "types": [
+            "weaken"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "sampling",
+            "rebuttal"
+          ],
+          "flaws": [
+            "sampling"
+          ],
+          "explanation": "The survey reached only people who still come to the square, so it leaves out exactly those most likely to dislike the change. A confirms that the people who stopped coming did so because they disliked the meadow, so the 85 percent figure does not reflect the public as a whole. B is the tempting trap: it supports the critics' view that the change was a mistake, but it does not touch the official's conclusion that the change is popular."
+        },
+        {
+          "number": 19,
+          "stimulus": "Film historian: Records show that the silent film The Lantern Keeper was shown in only three cities during its original release, and few reviews of it were published. Yet its distinctive camera techniques appear in dozens of films by directors who began working in the years just after its release. These directors, then, must have seen The Lantern Keeper.",
+          "stem": "Which one of the following is an assumption on which the film historian's argument depends?",
+          "choices": [
+            "Most of the directors who used the techniques lived in or near one of the three cities where the film was shown.",
+            "The few published reviews of The Lantern Keeper praised its camera techniques.",
+            "The directors who used the techniques were more innovative than most other directors of their time.",
+            "The techniques were not described in some widely available publication before those directors began using them.",
+            "The Lantern Keeper was seen by more people than the surviving records indicate."
+          ],
+          "answer": "D",
+          "types": [
+            "necessary-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The historian infers from shared techniques that the directors must have seen the film, which requires ruling out other ways they could have learned the techniques. Negate D: if a widely available publication described the techniques, the directors could have learned them there, and 'must have seen' fails. A and E are attractive because they would make it easier for the directors to have seen the film, but the argument does not need either: a film shown in only three cities could still have reached these directors."
+        },
+        {
+          "number": 20,
+          "stimulus": "A utility should postpone shutting off a household's service for nonpayment whenever the household has made at least one partial payment within the past sixty days and, in addition, either someone in the household depends on electrically powered medical equipment or temperatures are forecast to fall below freezing during the following week.",
+          "stem": "Which one of the following judgments most closely conforms to the principle stated above?",
+          "choices": [
+            "The Garcias' last partial payment was ninety days ago, but Mr. Garcia relies on a home oxygen machine, so the utility should postpone shutting off their service.",
+            "The Whitfields made a partial payment two weeks ago, and no one in the household uses medical equipment; with mild weather forecast, the utility should postpone shutting off their service.",
+            "The Lees made a partial payment last month, and a hard freeze is forecast for next week, so the utility should postpone shutting off their service.",
+            "The Novaks have made no partial payments this year, although Ms. Novak relies on a powered wheelchair, so the utility is required to shut off their service.",
+            "The Ortegas made a partial payment last month and rely on medical equipment, so the utility should not only postpone shutting off their service but also forgive their unpaid balance."
+          ],
+          "answer": "C",
+          "types": [
+            "principle-apply"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "principle",
+            "conditional"
+          ],
+          "flaws": [],
+          "explanation": "The principle requires a partial payment within sixty days plus either medical-equipment dependence or a forecast freeze. The Lees meet both parts, so C conforms. D is the subtle trap: the Novaks fail the payment condition, but the principle says only when a shutoff should be postponed, not when one is required; A fails the sixty-day condition, B meets neither of the second conditions, and E adds forgiveness, which the principle never addresses."
+        },
+        {
+          "number": 21,
+          "stimulus": "Conservationist: Any bird species in the Pellam Islands whose nests are within reach of the introduced rats is in danger of local extinction unless it breeds more than once a year. Every bird species in danger of local extinction there should be included in the new captive-breeding program. The Pellam rail nests only on the ground, where the rats can reach its nests. So the Pellam rail should be included in the captive-breeding program.",
+          "stem": "The conclusion of the conservationist's argument can be properly drawn if which one of the following is assumed?",
+          "choices": [
+            "Only bird species whose nests are within reach of the rats should be included in the captive-breeding program.",
+            "The Pellam rail breeds less often than any other bird species in the Pellam Islands.",
+            "Any bird species that breeds only once a year is in danger of local extinction if rats can reach its nests.",
+            "Every bird species in the Pellam Islands that nests only on the ground breeds more than once a year.",
+            "Every bird species in the Pellam Islands that breeds more than once a year nests at least partly off the ground."
+          ],
+          "answer": "E",
+          "types": [
+            "sufficient-assumption"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "conditional"
+          ],
+          "flaws": [],
+          "explanation": "The rail's nests are within the rats' reach, so it is endangered (and belongs in the program) unless it breeds more than once a year; the argument needs to rule that out. By contrapositive, E says that a species nesting only on the ground does not breed more than once a year, which completes the chain. B is the most attractive trap, but breeding less often than every other species is compatible with breeding twice a year; C restates part of the first rule without saying how often the rail breeds, and D would defeat the conclusion."
+        },
+        {
+          "number": 22,
+          "stimulus": "Most of the breakfast cereals sold at Grantham Market are fortified with iron, and most of the iron-fortified cereals sold there are high in sugar. So most of the breakfast cereals sold at Grantham Market are high in sugar.",
+          "stem": "The pattern of questionable reasoning in the argument above is most similar to that in which one of the following?",
+          "choices": [
+            "Most of the employees at Dorrit Mills work the night shift, and every night-shift employee there receives a wage premium. So most of the employees at Dorrit Mills receive a wage premium.",
+            "Most of the trails in Kessel Forest are open to cyclists, and most of the forest's trails that are open to cyclists are steep. So most of the trails in Kessel Forest are steep.",
+            "Most of the novels on Ingrid's shelf are mysteries, and most mysteries are set in cities. So it is likely that at least one novel on Ingrid's shelf is set in a city.",
+            "Most of the students in Pell's class passed the exam, and most of those who passed had studied with a tutor. So most of the students who studied with a tutor passed the exam.",
+            "Most of the members of the Arden Hiking Club are retired, and the club's president is a member. So the club's president is probably retired."
+          ],
+          "answer": "B",
+          "types": [
+            "parallel-flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "conditional",
+            "statistical"
+          ],
+          "flaws": [
+            "scope-shift"
+          ],
+          "explanation": "The argument chains two 'most' statements, but most of a majority need not be a majority of the whole (60 percent of 60 percent is only 36 percent). B makes the identical error with trails, cyclists, and steepness. A is the strongest trap because it looks the same, but its second premise says 'every,' which makes the conclusion valid; D commits a different error, reversing which group is said to be 'most' of which, while C and E draw modest, reasonable probabilistic conclusions."
+        },
+        {
+          "number": 23,
+          "stimulus": "Granite boulders scattered across the Tamsin Plain are of a type found in place only in the Dovre Mountains, 200 kilometers to the north. Geologists know of only two processes able to carry boulders that far: glaciers and catastrophic floods. Boulders carried by floods are rounded and smoothed, whereas boulders carried by glaciers typically keep sharp edges and often bear parallel scratches. Most of the Dovre granite boulders on the plain have sharp edges, though a few are rounded.",
+          "stem": "The statements above, if true, most strongly support which one of the following?",
+          "choices": [
+            "At least some of the Dovre granite boulders on the Tamsin Plain were carried there by glaciers.",
+            "All of the Dovre granite boulders on the Tamsin Plain were carried there by a single glacier.",
+            "The rounded boulders on the Tamsin Plain were carried there by catastrophic floods.",
+            "Most of the Dovre granite boulders on the Tamsin Plain bear parallel scratches.",
+            "No catastrophic flood has ever swept from the Dovre Mountains to the Tamsin Plain."
+          ],
+          "answer": "A",
+          "types": [
+            "most-strongly-supported"
+          ],
+          "difficulty": 3,
+          "skills": [
+            "fact-set",
+            "causal"
+          ],
+          "flaws": [],
+          "explanation": "Flood-carried boulders are rounded, so the many sharp-edged boulders could not have come by flood; since only glaciers and floods could carry them, those boulders were carried by glaciers, as A says. C is the tempting trap: glacier-carried boulders only 'typically' keep sharp edges, so the few rounded ones could also have arrived by glacier. B and E ignore the rounded boulders' uncertain origin, and D overstates 'often bear' scratches."
+        },
+        {
+          "number": 24,
+          "stimulus": "Economist: Two years after the town of Ashby began requiring employers to list salary ranges in job postings, the gap between the average starting salaries of men and women hired by Ashby firms had narrowed considerably. The requirement probably narrowed the gap by giving applicants, many of whom had previously had little idea what a position paid, a firmer basis for negotiating their pay.",
+          "stem": "Which one of the following, if true, most strengthens the economist's argument?",
+          "choices": [
+            "Since the requirement took effect, far more women than before have applied for positions at Ashby firms of every size.",
+            "Some Ashby employers listed salary ranges in their job postings even before the requirement took effect.",
+            "Job postings in Ashby that list salary ranges attract more applicants than postings that do not.",
+            "The gap narrowed mainly for positions whose starting pay was individually negotiated, and hardly at all for positions with fixed pay scales.",
+            "Women hired by Ashby firms since the requirement took effect have, on average, more work experience than women hired before it."
+          ],
+          "answer": "D",
+          "types": [
+            "strengthen"
+          ],
+          "difficulty": 4,
+          "skills": [
+            "causal"
+          ],
+          "flaws": [
+            "causation"
+          ],
+          "explanation": "The economist claims both that the requirement narrowed the gap and that it did so by aiding negotiation. D fits that mechanism precisely: the gap shrank where pay is negotiated and not where pay is fixed, which is hard to explain unless the change worked through negotiation. A is tempting because more female applicants sounds favorable, but a changed applicant pool is an alternative explanation, not support; E likewise offers an alternative cause (more experienced hires), and B, if anything, slightly weakens."
+        },
+        {
+          "number": 25,
+          "stimulus": "Library board member: Advocates of eliminating overdue fines at Corland's public libraries claim that doing so would increase the number of books borrowed, and they cite a pilot program at the Wexley branch, where borrowing rose after fines were dropped. But the pilot coincided with the opening of a large school next door to the Wexley branch, which by itself could have increased borrowing there. So eliminating overdue fines would not increase the number of books borrowed.",
+          "stem": "The board member's reasoning is flawed in that the argument",
+          "choices": [
+            "attacks the motives of those who advocate eliminating overdue fines rather than addressing their evidence",
+            "relies on a possible explanation of the pilot results without considering whether the new school's students use the library",
+            "takes the weakness of the evidence offered for a claim as sufficient grounds for concluding that the claim is false",
+            "presumes that an increase in borrowing is the only reason anyone has offered for eliminating overdue fines",
+            "assumes that the results of a pilot program at one branch cannot reveal anything about the effects of a citywide policy"
+          ],
+          "answer": "C",
+          "types": [
+            "flaw"
+          ],
+          "difficulty": 5,
+          "skills": [
+            "causal",
+            "rebuttal"
+          ],
+          "flaws": [
+            "absence-of-evidence"
+          ],
+          "explanation": "The board member legitimately shows that the Wexley pilot does not establish its conclusion, since the new school is an uncontrolled alternative cause, but then concludes that eliminating fines would not increase borrowing; discrediting the evidence for a claim does not show the claim false, as C says. B is the main trap: offering a possible alternative explanation is enough to undercut the pilot as evidence, so the member need not prove the school's students borrow. D is also tempting, but the argument concerns only borrowing and presumes nothing about other reasons, and E misdescribes the objection, which concerns a confounding event rather than the limits of pilots."
+        }
+      ]
+    }
+  ]
+}
