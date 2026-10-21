@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
-import { createPTSession } from '../lib/session.js';
+import { createPTSession, pickUnscoredSection } from '../lib/session.js';
 import { typeLabel, typesForKind } from '../lib/taxonomy.js';
 
 export function TypeEditor({ kind, types, onChange }) {
@@ -34,18 +34,21 @@ export function TypeEditor({ kind, types, onChange }) {
 }
 
 export default function TestDetail({ id }) {
-  const { allTests: tests, saveTest, deleteTest, saveSession } = useStore();
+  const { allTests: tests, prefs, saveTest, deleteTest, saveSession } = useStore();
   const test = tests.find((t) => t.id === id);
   const [selected, setSelected] = useState(() => new Set(test?.sections.map((s) => s.id)));
   const [timed, setTimed] = useState(true);
   const [blindReview, setBlindReview] = useState(true);
+  const [withUnscored, setWithUnscored] = useState(prefs.unscoredSection);
   const [open, setOpen] = useState(null);
   const [showAnswers, setShowAnswers] = useState(false);
 
   if (!test) return <div className="card">Test not found. <a href="#/library">Back to library</a></div>;
 
   const start = async () => {
-    const session = await saveSession(createPTSession(test, { sectionIds: [...selected], timed, blindReview }));
+    const full = selected.size === test.sections.length && test.sections.length >= 3;
+    const unscored = withUnscored && full ? pickUnscoredSection(tests, test) : null;
+    const session = await saveSession(createPTSession(test, { sectionIds: [...selected], timed, blindReview, unscored }));
     navigate(`/session/${session.id}`);
   };
 
@@ -90,6 +93,7 @@ export default function TestDetail({ id }) {
         <div className="checks">
           <label><input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} /> Timed</label>
           <label><input type="checkbox" checked={blindReview} onChange={(e) => setBlindReview(e.target.checked)} /> Blind review after the timed sections</label>
+          {test.sections.length >= 3 && <label><input type="checkbox" checked={withUnscored} onChange={(e) => setWithUnscored(e.target.checked)} /> Add an unscored section like test day (full test only)</label>}
         </div>
         <button className="primary big" disabled={selected.size === 0} onClick={start}>
           Start {selected.size === test.sections.length ? 'full test' : `${selected.size} section${selected.size === 1 ? '' : 's'}`}

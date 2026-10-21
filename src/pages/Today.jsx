@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { buildDrill } from '../lib/analytics.js';
-import { createDrillSession, createPTSession } from '../lib/session.js';
+import { createDrillSession, createPTSession, pickUnscoredSection } from '../lib/session.js';
 import { dailyPlan } from '../lib/plan.js';
 import { ACHIEVEMENTS, dayKey } from '../lib/progress.js';
 import { AchievementGrid, GoalRing, Heatmap } from '../components/ProgressWidgets.jsx';
@@ -10,13 +10,16 @@ import { loadBundledTests } from '../lib/bundle.js';
 import BundleUpdate from '../components/BundleUpdate.jsx';
 
 /** Start a plan task; returns false if it has nothing to start. */
-export async function startTask(task, { tests, saveSession }) {
+export async function startTask(task, { tests, prefs, saveSession }) {
   const a = task.action;
   if (!a) return false;
   if (a.kind === 'link') { window.location.hash = a.href.replace(/^#/, ''); return true; }
   const queue = { day: dayKey(Date.now()), task: task.id };
   let session;
-  if (a.kind === 'test') session = createPTSession(tests.find((t) => t.id === a.testId));
+  if (a.kind === 'test') {
+    const test = tests.find((t) => t.id === a.testId);
+    session = createPTSession(test, { unscored: prefs?.unscoredSection ? pickUnscoredSection(tests, test) : null });
+  }
   else session = createDrillSession(a.questions, a.opts);
   const saved = await saveSession({ ...session, queue });
   navigate(`/session/${saved.id}`);

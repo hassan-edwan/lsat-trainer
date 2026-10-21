@@ -11,7 +11,7 @@ import {
   activityByDay, dayKey, dueJournal, earnedAchievements, isWrittenUp, levelInfo, masteryTier, streakInfo, totalXp,
 } from './lib/progress.js';
 
-export const DEFAULT_PREFS = { dailyGoal: 20, gamification: true, seenAchievements: null };
+export const DEFAULT_PREFS = { dailyGoal: 20, gamification: true, seenAchievements: null, unscoredSection: true };
 
 const StoreContext = createContext(null);
 

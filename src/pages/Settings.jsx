@@ -22,6 +22,10 @@ export default function Settings() {
             <input type="checkbox" checked={prefs.gamification} onChange={(e) => savePrefs({ gamification: e.target.checked })} />
             Show streaks, XP, levels, and achievements
           </label>
+          <label className="inline">
+            <input type="checkbox" checked={prefs.unscoredSection} onChange={(e) => savePrefs({ unscoredSection: e.target.checked })} />
+            Test-day mode: full tests include an unscored fourth section (LR or RC, any position)
+          </label>
         </div>
         <p className="muted small-text">
           Your streak counts days you reach the daily goal. Every 7 goal days earns a streak freeze (up to 2), which

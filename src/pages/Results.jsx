@@ -98,7 +98,7 @@ export default function Results({ session }) {
             <thead><tr><th>Section</th><th>Timed</th><th>Blind review</th><th>Time used</th></tr></thead>
             <tbody>
               {s.bySection.map((b, i) => (
-                <tr key={i}><td>{i + 1}. {b.title}</td><td>{b.firstCorrect}/{b.total}</td><td>{b.brCorrect}/{b.total}</td><td>{formatMs(session.sections[i].elapsedSec * 1000)}</td></tr>
+                <tr key={i}><td>{i + 1}. {b.title}{b.scored === false && <span className="chip" style={{ marginLeft: 6 }}>unscored</span>}</td><td>{b.firstCorrect}/{b.total}</td><td>{b.brCorrect}/{b.total}</td><td>{formatMs(session.sections[i].elapsedSec * 1000)}</td></tr>
               ))}
             </tbody>
           </table></div>

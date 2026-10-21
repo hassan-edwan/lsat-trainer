@@ -4,7 +4,8 @@ import { AllChoiceNotes, ChoiceNote } from './Breakdown.jsx';
 import { formatMs } from '../lib/analytics.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
-const HL_COLORS = ['yellow', 'pink', 'orange'];
+// Matches the August 2026 LSAT interface: four colors, each with its own underline style.
+const HL_COLORS = ['yellow', 'pink', 'green', 'blue'];
 const SAVE_EVERY_MS = 4000;
 
 function highlightKey(entry) {
@@ -22,6 +23,8 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const [tool, setTool] = useState(null);
   const [fontSize, setFontSize] = useState(() => Number(localStorage.getItem('lsat.fontSize')) || 16);
   const [hideTimer, setHideTimer] = useState(false);
+  const [masking, setMasking] = useState(false);
+  const [spacing, setSpacing] = useState(() => Number(localStorage.getItem('lsat.lineSpacing')) || 1.6);
   const [flaggedOnly, setFlaggedOnly] = useState(false);
   const [missedOnly, setMissedOnly] = useState(false);
   // Blind review circles the questions missed under time (without revealing the answer).
@@ -180,6 +183,15 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
     [elimField]: r[elimField].includes(letter) ? r[elimField].filter((l) => l !== letter) : [...r[elimField], letter],
   }));
   const toggleFlag = () => setResp((r) => ({ flagged: !r.flagged }));
+  const resetResponse = () => {
+    if (instant && resp?.checked) return;
+    setResp(() => ({ [answerField]: null, [elimField]: [] }));
+  };
+  const cycleSpacing = () => setSpacing((v) => {
+    const next = v < 1.7 ? 1.9 : v < 2 ? 2.2 : 1.6;
+    try { localStorage.setItem('lsat.lineSpacing', String(next)); } catch { /* ignore */ }
+    return next;
+  });
 
   useEffect(() => {
     const onKey = (e) => {
@@ -235,7 +247,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const unanswered = sec.qids.filter((id) => !session.responses[id][answerField]).length;
 
   return (
-    <div className="exam" style={{ '--exam-font': `${fontSize}px` }}>
+    <div className="exam" style={{ '--exam-font': `${fontSize}px`, '--exam-leading': spacing }}>
       <header className={`exam-top ${isBR ? 'br' : ''}`}>
         <div className="exam-title">
           <button className="ghost" onClick={onExit} title="Save and exit">✕</button>
@@ -254,7 +266,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           ) : remaining == null ? (
             <span className="muted-on-dark">Untimed · {formatMs(sec.elapsedSec * 1000)}</span>
           ) : hideTimer && remaining > 300 ? (
-            <button className="ghost" onClick={() => setHideTimer(false)}>Show time</button>
+            <button className="ghost timer-line" onClick={() => setHideTimer(false)} title="Show time" aria-label="Show time" />
           ) : (
             <button className={`ghost timer ${remaining <= 300 ? 'low' : ''}`} onClick={() => setHideTimer(true)} title="Click to hide">
               {formatMs(remaining * 1000)}
@@ -266,6 +278,8 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
             <button key={c} className={`tool swatch hl-${c} ${tool === c ? 'on' : ''}`} title={`Highlight (${c})`} onClick={() => setTool(tool === c ? null : c)} />
           ))}
           <button className={`tool ${tool === 'erase' ? 'on' : ''}`} title="Erase highlights: select highlighted text" onClick={() => setTool(tool === 'erase' ? null : 'erase')}>⌫</button>
+ <button className={`tool ${masking ? 'on' : ''}`} title="Response masking: click choices to gray them out" onClick={() => setMasking((m) => !m)}>{masking ? 'Masking on' : 'Masking'}</button>
+          <button className="tool" title="Line spacing" onClick={cycleSpacing}>↕</button>
           <button className="tool" title="Smaller text" onClick={() => setFontSize((f) => Math.max(12, f - 1))}>A−</button>
           <button className="tool" title="Larger text" onClick={() => setFontSize((f) => Math.min(24, f + 1))}>A+</button>
         </div>
@@ -278,18 +292,21 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           </select>
         )}
         <div className="bubbles">
-          {visible.map(({ id, i }) => {
+          {visible.map(({ id, i }, vi) => {
             const r = session.responses[id];
+            const prevId = vi > 0 ? visible[vi - 1].id : null;
+            const newPassage = prevId && index[id]?.passage && index[prevId]?.passage && index[id].passage.id !== index[prevId].passage.id;
             const missed = isBR && circleMisses && r.first !== index[id]?.question.answer;
-            return (
+            return [
+              newPassage && <span key={`${id}-div`} className="passage-divider" aria-hidden="true" />,
               <button key={id} onClick={() => go(session.current.section, i)}
                 className={`bubble ${i === session.current.index ? 'current' : ''} ${r[answerField] ? 'answered' : ''} ${
                   instant && r.checked ? (r.first === index[id]?.question.answer ? 'right' : 'wrong') : ''} ${missed ? 'missed' : ''}`}
                 title={missed ? 'Missed under time' : undefined}>
                 {r.flagged && <span className="flag-dot">⚑</span>}
                 {i + 1}
-              </button>
-            );
+              </button>,
+            ];
           })}
         </div>
         {isBR && (
@@ -330,12 +347,11 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               const reveal = instant && resp.checked
                 ? (L === question.answer ? 'reveal-right' : L === chosen ? 'reveal-wrong' : '') : '';
               return (
-                <div key={L} className={`choice ${chosen === L ? 'selected' : ''} ${elim ? 'eliminated' : ''} ${reveal}`}>
-                  <button className="choice-main" onClick={() => choose(L)}>
+                <div key={L} className={`choice ${chosen === L ? 'selected' : ''} ${elim ? 'eliminated' : ''} ${masking ? 'masking' : ''} ${reveal}`}>
+                  <button className="choice-main" onClick={() => (masking ? toggleElim(L) : choose(L))}>
                     <span className="radio">{L}</span>
                     <span className="choice-text">{c}</span>
                   </button>
-                  <button className="elim" title="Cross out (Shift+letter)" onClick={() => toggleElim(L)}>{elim ? '↺' : '⊘'}</button>
                 </div>
               );
             })}
@@ -369,8 +385,9 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         <button onClick={() => step(-1)}>← Previous</button>
         <button className={resp.flagged ? 'flagged' : ''} onClick={toggleFlag}>⚑ {resp.flagged ? 'Flagged' : 'Flag'}</button>
         <button onClick={() => step(1)}>Next →</button>
+        <button onClick={resetResponse} disabled={instant && resp.checked} title="Clear your answer and masked choices">Reset response</button>
         <span className="spacer" />
-        <span className="hint">Keys: A–E answer · Shift+A–E cross out · ←/→ move · F flag{instant ? ' · Enter check / continue' : ''}</span>
+        <span className="hint">Keys: A–E answer · Shift+A–E mask · ←/→ move · F flag{instant ? ' · Enter check / continue' : ''}</span>
         {instant ? (
           resp.checked
             ? <button className="primary" onClick={nextOrFinish}>{allChecked ? 'See results' : 'Continue →'}</button>

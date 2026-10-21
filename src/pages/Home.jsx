@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
-import { createPTSession } from '../lib/session.js';
+import { createPTSession, pickUnscoredSection } from '../lib/session.js';
 import { scaledScore } from '../lib/analytics.js';
 import { PageHeader } from '../components/Layout.jsx';
 import BundleUpdate from '../components/BundleUpdate.jsx';
@@ -17,7 +17,7 @@ function scoreText(session, test) {
 }
 
 export default function Home() {
-  const { tests, sessions, installBundle, saveSession, deleteSession } = useStore();
+  const { tests, sessions, prefs, installBundle, saveSession, deleteSession } = useStore();
   const [busy, setBusy] = useState(false);
   const all = Object.values(sessions).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const active = all.filter((s) => s.phase !== 'done');
@@ -27,7 +27,8 @@ export default function Home() {
   const hasDiagnostic = tests.length > practiceTests.length;
 
   const start = async (test) => {
-    const session = await saveSession(createPTSession(test));
+    const unscored = prefs.unscoredSection ? pickUnscoredSection(tests, test) : null;
+    const session = await saveSession(createPTSession(test, { unscored }));
     navigate(`/session/${session.id}`);
   };
 

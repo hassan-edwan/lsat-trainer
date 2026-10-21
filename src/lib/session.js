@@ -30,16 +30,29 @@ function blankResponse() {
   return { first: null, br: null, flagged: false, eliminated: [], brEliminated: [], highlights: [], timeMs: 0, brTimeMs: 0 };
 }
 
-export function createPTSession(test, { sectionIds = null, blindReview = true, timed = true, breakMinutes = 10 } = {}) {
-  const sections = test.sections
-    .filter((s) => !sectionIds || sectionIds.includes(s.id))
-    .map((s) => ({
-      title: s.title,
-      kind: s.kind,
-      timeLimitSec: timed ? s.timeLimitMinutes * 60 : null,
-      elapsedSec: 0,
-      qids: s.questions.map((q) => q.id),
-    }));
+/**
+ * Test-day mode: an unscored LR or RC section borrowed from another full test,
+ * placed at a random position. Returns { section, at } or null.
+ */
+export function pickUnscoredSection(tests, test, rand = Math.random) {
+  const pool = tests
+    .filter((t) => t.id !== test.id && !t.retired && t.purpose !== 'diagnostic' && t.sections.length >= 3)
+    .flatMap((t) => t.sections.filter((s) => s.kind === 'LR' || s.kind === 'RC'));
+  if (!pool.length) return null;
+  return { section: pool[Math.floor(rand() * pool.length)], at: Math.floor(rand() * (test.sections.length + 1)) };
+}
+
+export function createPTSession(test, { sectionIds = null, blindReview = true, timed = true, breakMinutes = 10, unscored = null } = {}) {
+  const toSession = (s, scored = true) => ({
+    title: s.title,
+    kind: s.kind,
+    timeLimitSec: timed ? s.timeLimitMinutes * 60 : null,
+    elapsedSec: 0,
+    qids: s.questions.map((q) => q.id),
+    ...(scored ? {} : { scored: false }),
+  });
+  const sections = test.sections.filter((s) => !sectionIds || sectionIds.includes(s.id)).map((s) => toSession(s));
+  if (unscored) sections.splice(Math.min(unscored.at, sections.length), 0, toSession(unscored.section, false));
   return baseSession({
     kind: 'pt',
     title: test.name,
@@ -97,7 +110,7 @@ export function finalizeSession(session, index, journal) {
   const summary = { total: 0, firstCorrect: 0, brCorrect: 0, outcomes: {}, bySection: [] };
 
   session.sections.forEach((sec) => {
-    const secSum = { title: sec.title, total: 0, firstCorrect: 0, brCorrect: 0 };
+    const secSum = { title: sec.title, total: 0, firstCorrect: 0, brCorrect: 0, ...(sec.scored === false ? { scored: false } : {}) };
     for (const qid of sec.qids) {
       const entry = index[qid];
       if (!entry) continue;
@@ -106,7 +119,7 @@ export function finalizeSession(session, index, journal) {
       const br = session.settings.blindReview ? r.br ?? r.first : r.first;
       const oc = outcome(r.first, br, question.answer);
       // Experimental (unscored) sections count in the section table and stats, not the score.
-      const scored = section.scored !== false;
+      const scored = section.scored !== false && sec.scored !== false;
       secSum.total += 1;
       if (r.first === question.answer) secSum.firstCorrect += 1;
       if (br === question.answer) secSum.brCorrect += 1;
