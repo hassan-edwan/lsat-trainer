@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import HighlightText from './HighlightText.jsx';
 import { AllChoiceNotes, ChoiceNote } from './Breakdown.jsx';
 import { formatMs } from '../lib/analytics.js';
+import { readingKey } from '../lib/session.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 // Matches the August 2026 LSAT interface: four colors, each with its own underline style.
@@ -26,6 +27,12 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const [masking, setMasking] = useState(false);
   // A clock for the question on screen. Not on the real test, so it can be turned off.
   const [qClock, setQClock] = useState(() => localStorage.getItem('lsat.qClock') !== 'off');
+  // RC: read each passage with the question clock stopped, then start the questions.
+  const [readPause, setReadPause] = useState(() => localStorage.getItem('lsat.rcReadPause') !== 'off');
+  const readPauseRef = useRef(readPause);
+  readPauseRef.current = readPause;
+  const indexRef = useRef(index);
+  indexRef.current = index;
   const [spacing, setSpacing] = useState(() => Number(localStorage.getItem('lsat.lineSpacing')) || 1.6);
   const [flaggedOnly, setFlaggedOnly] = useState(false);
   const [missedOnly, setMissedOnly] = useState(false);
@@ -118,6 +125,11 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         const sections = prev.phase === 'timed'
           ? prev.sections.map((x, i) => (i === prev.current.section ? { ...x, elapsedSec: x.elapsedSec + 1 } : x))
           : prev.sections;
+        const rk = prev.phase === 'timed' && readPauseRef.current ? readingKey(prev.current.section, indexRef.current[q]) : null;
+        if (rk && !prev.reading?.[rk]?.done) {
+          const cur = prev.reading?.[rk] || { ms: 0, done: false };
+          return { ...prev, sections, reading: { ...(prev.reading || {}), [rk]: { ...cur, ms: cur.ms + 1000 } } };
+        }
         return { ...prev, sections, responses: { ...prev.responses, [q]: { ...r, [timeField]: r[timeField] + 1000 } } };
       });
     }, 1000);
@@ -155,6 +167,17 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const setResp = useCallback((patch) => update((s) => ({
     ...s, responses: { ...s.responses, [qid]: { ...s.responses[qid], ...patch(s.responses[qid]) } },
   })), [update, qid]);
+
+  const rKey = session.phase === 'timed' && readPause ? readingKey(session.current.section, entry) : null;
+  const reading = !!rKey && !session.reading?.[rKey]?.done;
+  const readMs = rKey ? session.reading?.[rKey]?.ms || 0 : 0;
+  const startQuestions = () => update((s) => ({
+    ...s, reading: { ...(s.reading || {}), [rKey]: { ms: s.reading?.[rKey]?.ms || 0, done: true } },
+  }));
+  const toggleReadPause = () => setReadPause((on) => {
+    try { localStorage.setItem('lsat.rcReadPause', on ? 'off' : 'on'); } catch { /* ignore */ }
+    return !on;
+  });
 
   const answerField = isBR ? 'br' : 'first';
   const elimField = isBR ? 'brEliminated' : 'eliminated';
@@ -209,6 +232,12 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
       if (e.target.closest?.('textarea, select, input:not([type=checkbox])') || e.metaKey || e.ctrlKey || isBreak) return;
       const k = e.key.toUpperCase();
       const n = entry?.question.choices.length ?? 5;
+      if (reading) {
+        if (e.key === 'Enter') { e.preventDefault(); startQuestions(); }
+        else if (e.key === 'ArrowRight') step(1);
+        else if (e.key === 'ArrowLeft') step(-1);
+        return;
+      }
       if (LETTERS.slice(0, n).includes(k)) {
         e.preventDefault();
         if (e.shiftKey) toggleElim(k); else choose(k);
@@ -283,7 +312,10 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               {formatMs(remaining * 1000)}
             </button>
           )}
-          {qClock && !instant && !isBreak && (() => {
+          {qClock && !instant && !isBreak && reading && (
+            <span className="q-clock reading" title="Reading time for this passage. The question clock is stopped.">Reading {formatMs(readMs)}</span>
+          )}
+          {qClock && !instant && !isBreak && !reading && (() => {
             const ms = isBR ? resp.brTimeMs : resp.timeMs;
             const over = !isBR && targetSec && ms / 1000 > targetSec;
             return (
@@ -300,6 +332,9 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           <button className={`tool ${tool === 'erase' ? 'on' : ''}`} title="Erase highlights: select highlighted text" onClick={() => setTool(tool === 'erase' ? null : 'erase')}>⌫</button>
  <button className={`tool ${masking ? 'on' : ''}`} title="Response masking: click choices to gray them out" onClick={() => setMasking((m) => !m)}>{masking ? 'Masking on' : 'Masking'}</button>
           <button className={`tool ${qClock ? 'on' : ''}`} title="Show time on this question (not on the real test)" onClick={toggleQClock}>⏱</button>
+          {sec.kind === 'RC' && !isBR && (
+            <button className={`tool ${readPause ? 'on' : ''}`} title="Reading pause: read each passage first with the question clock stopped" onClick={toggleReadPause}>📖</button>
+          )}
           <button className="tool" title="Line spacing" onClick={cycleSpacing}>↕</button>
           <button className="tool" title="Smaller text" onClick={() => setFontSize((f) => Math.max(12, f - 1))}>A−</button>
           <button className="tool" title="Larger text" onClick={() => setFontSize((f) => Math.min(24, f + 1))}>A+</button>
@@ -359,6 +394,15 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               {circleMisses && resp.first !== question.answer && <span className="br-missed"> · ◯ missed under time. Rethink it before you change anything.</span>}
             </div>
           )}
+          {reading ? (
+            <div className="reading-card">
+              <div className="q-number">Reading the passage</div>
+              <div className="reading-time">{formatMs(readMs)}</div>
+              <p>Your question clock is stopped while you read. The section clock keeps running, as on test day.</p>
+              <button className="primary big" onClick={startQuestions}>Start the questions ▶</button>
+              <p className="muted small-text">Enter also starts. Turn this off with the 📖 button.</p>
+            </div>
+          ) : (<>
           <div className="q-number">Question {session.current.index + 1}</div>
           <div className="stem">{question.stem}</div>
           <div className="choices">
@@ -399,6 +443,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               ) : question.explanation && <p>{question.explanation}</p>}
             </div>
           )}
+          </>)}
         </div>
       </div>
 
@@ -408,7 +453,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         <button onClick={() => step(1)}>Next →</button>
         <button onClick={resetResponse} disabled={instant && resp.checked} title="Clear your answer and masked choices">Reset response</button>
         <span className="spacer" />
-        <span className="hint">Keys: A–E answer · Shift+A–E mask · ←/→ move · F flag{instant ? ' · Enter check / continue' : ''}</span>
+        <span className="hint">{reading ? 'Keys: Enter start the questions · ←/→ move' : `Keys: A–E answer · Shift+A–E mask · ←/→ move · F flag${instant ? ' · Enter check / continue' : ''}`}</span>
         {instant ? (
           resp.checked
             ? <button className="primary" onClick={nextOrFinish}>{allChecked ? 'See results' : 'Continue →'}</button>

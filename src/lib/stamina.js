@@ -71,7 +71,9 @@ export function staminaReport(session, index, expected) {
       accuracy: pts(mean(rs.map((r) => r.right))),
       vsExpected: pts(mean(rs.map((r) => r.resid))),
       lateThird: pts((mean(rs.filter((r) => r.qi >= third).map((r) => r.resid)) ?? 0) - (mean(rs.filter((r) => r.qi < third).map((r) => r.resid)) ?? 0)),
-      secPerQuestion: Math.round(mean(rs.map((r) => r.timeMs)) / 1000),
+      // RC reading-pause time is stored per passage; count it toward the section's pace.
+      secPerQuestion: Math.round((rs.reduce((t, r) => t + r.timeMs, 0) + Object.entries(session.reading || {})
+        .filter(([k]) => k.startsWith(`${si}:`)).reduce((t, [, v]) => t + v.ms, 0)) / Math.max(1, rs.length) / 1000),
       targetSec: sec.timeLimitSec ? Math.round(sec.timeLimitSec / sec.qids.length) : null,
       unanswered: rs.filter((r) => !r.answered).length,
     };

@@ -21,6 +21,11 @@ export function buildIndex(tests) {
   return index;
 }
 
+/** Key for a passage's reading time (RC reading pause): one per passage per section, or null for LR. */
+export function readingKey(sectionIdx, entry) {
+  return entry?.passage ? `${sectionIdx}:${entry.passage.id}` : null;
+}
+
 /** Flat list for drill building: question fields plus section kind. */
 export function flatQuestions(tests) {
   return tests.flatMap((t) => t.sections.flatMap((s) => s.questions.map((q) => ({ ...q, kind: s.kind, testId: t.id, purpose: t.purpose || 'test' }))));

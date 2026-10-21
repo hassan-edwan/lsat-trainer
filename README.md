@@ -78,6 +78,10 @@ It runs entirely in your browser. There's no account and no server, and your dat
   question's time and blind-review time, a "slowest first" sort, and a Timing card. That card compares your
   average with the pace, splits time on questions you got right and wrong, lists the five slowest questions and
   totals each reading passage (reading time included).
+- **Reading pause for RC:** when you reach a new passage, the question pane shows a reading card instead of the
+  question. Your reading time is recorded separately, the question clock stays stopped, and you press *Start the
+  questions* (or Enter) when you're done reading. The section clock keeps running as on test day. Results split
+  each passage into reading and answering time. The 📖 button turns it off.
 - **Stamina training:** a five-level ladder of longer and longer timed sittings: one section, two back to
   back, three straight with reading last, a full four-section test with the break, and a five-section
   "overtime" session. After every long session (ladder or full test) the app measures your *late fade*: how much

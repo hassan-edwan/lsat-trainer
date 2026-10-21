@@ -650,3 +650,9 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 .time-bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-left: 0.4rem; opacity: 0.55; }
 .time-bar.slow { background: var(--warn); opacity: 0.9; }
 .nowrap { white-space: nowrap; }
+
+/* RC reading pause */
+.reading-card { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; padding: 1.25rem; border: 1px dashed var(--border-strong); border-radius: var(--radius); background: var(--accent-soft); }
+.reading-card .reading-time { font-size: 2.2rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.reading-card p { margin: 0; }
+.q-clock.reading { color: #c9c4ff; background: rgba(140, 130, 255, 0.18); }

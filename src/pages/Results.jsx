@@ -5,7 +5,7 @@ import { navigate } from '../lib/nav.js';
 import { OUTCOMES, buildDrill, categoryStats, formatMs, outcome, scaledScore, typeStats } from '../lib/analytics.js';
 import { makeEntry } from '../lib/journal.js';
 import { CATEGORY_GROUPS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
-import { createDrillSession } from '../lib/session.js';
+import { createDrillSession, readingKey } from '../lib/session.js';
 import QuestionReview from '../components/QuestionReview.jsx';
 import { GoalRing, LevelBar } from '../components/ProgressWidgets.jsx';
 import { attemptXp } from '../lib/progress.js';
@@ -26,8 +26,9 @@ export default function Results({ session }) {
     const r = session.responses[qid];
     const br = session.settings.blindReview ? r.br ?? r.first : r.first;
     const targetSec = sec.timeLimitSec ? sec.timeLimitSec / sec.qids.length : null;
-    // RC: the first question of a passage carries the reading time, so it isn't flagged on its own.
-    const firstOfPassage = !!entry?.passage && (qi === 0 || index[sec.qids[qi - 1]]?.passage?.id !== entry.passage.id);
+    // RC without the reading pause: the first question of a passage carries the reading time, so it isn't flagged.
+    const readKey = readingKey(si, entry);
+    const firstOfPassage = !!entry?.passage && !session.reading?.[readKey] && (qi === 0 || index[sec.qids[qi - 1]]?.passage?.id !== entry.passage.id);
     const slow = !!targetSec && !firstOfPassage && r.timeMs / 1000 > targetSec * 1.5;
     return { qid, si, qi, sec, entry, r, br, targetSec, slow, oc: entry ? outcome(r.first, br, entry.question.answer) : null };
   })), [session, index]);
@@ -115,7 +116,7 @@ export default function Results({ session }) {
         </section>
       )}
 
-      <TimingCard rows={rows} onOpen={(qid) => {
+      <TimingCard rows={rows} reading={session.reading || {}} onOpen={(qid) => {
         setFilter('all');
         setOpen(qid);
         setTimeout(() => document.getElementById(`q-${qid}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
@@ -244,8 +245,9 @@ function Celebration({ session, sessionAttempts }) {
 }
 
 /** Where the time went: pace vs. target, time on right vs. wrong answers, the slowest questions, RC by passage. */
-function TimingCard({ rows, onOpen }) {
+function TimingCard({ rows, reading, onOpen }) {
   const timed = rows.filter((x) => x.entry && x.r.timeMs > 0);
+  const readings = Object.values(reading).filter((x) => x.ms > 0);
   if (timed.length < 3) return null;
   const avg = (xs) => (xs.length ? xs.reduce((t, x) => t + x.r.timeMs, 0) / xs.length : null);
   const right = timed.filter((x) => x.r.first === x.entry.question.answer);
@@ -259,7 +261,7 @@ function TimingCard({ rows, onOpen }) {
     if (!x.entry?.passage) continue;
     const key = `${x.si}:${x.entry.passage.id}`;
     let p = passages.find((y) => y.key === key);
-    if (!p) passages.push(p = { key, si: x.si, first: x.qi + 1, n: 0, ms: 0, right: 0, target: 0 });
+    if (!p) passages.push(p = { key, si: x.si, first: x.qi + 1, n: 0, ms: 0, readMs: reading[key]?.ms ?? null, right: 0, target: 0 });
     p.n += 1; p.ms += x.r.timeMs || 0; p.target += x.targetSec || 0;
     if (x.r.first === x.entry.question.answer) p.right += 1;
   }
@@ -271,6 +273,9 @@ function TimingCard({ rows, onOpen }) {
         <div className="stat"><div className="stat-label">Average per question</div><div className="stat-value">{formatMs(avg(timed))}</div>{pace && <div className="muted">pace {formatMs(pace * 1000)}</div>}</div>
         <div className="stat"><div className="stat-label">On questions you got right</div><div className="stat-value">{right.length ? formatMs(avg(right)) : '—'}</div><div className="muted">{right.length} question{right.length === 1 ? '' : 's'}</div></div>
         <div className="stat"><div className="stat-label">On questions you missed</div><div className="stat-value">{wrong.length ? formatMs(avg(wrong)) : '—'}</div><div className="muted">{wrong.length} question{wrong.length === 1 ? '' : 's'}</div></div>
+        {readings.length > 0 && (
+          <div className="stat"><div className="stat-label">Reading per passage</div><div className="stat-value">{formatMs(readings.reduce((t, x) => t + x.ms, 0) / readings.length)}</div><div className="muted">{readings.length} passage{readings.length === 1 ? '' : 's'}</div></div>
+        )}
         <div className="stat"><div className="stat-label">2 minutes or more</div><div className="stat-value">{overTwo}</div><div className="muted">questions</div></div>
       </div>
       <h3>Slowest questions</h3>
@@ -290,15 +295,17 @@ function TimingCard({ rows, onOpen }) {
       {passages.length > 0 && (
         <>
           <h3>Reading passages</h3>
-          <p className="card-sub">Includes reading time. Pace is the section time divided evenly across its questions.</p>
+          <p className="card-sub">Total includes reading. Reading is timed separately when the reading pause (📖) is on. Pace is the section time divided evenly across its questions.</p>
           <div className="table-wrap"><table className="table">
-            <thead><tr><th>Passage</th><th>Questions</th><th>Time</th><th>Pace</th><th>Right</th></tr></thead>
+            <thead><tr><th>Passage</th><th>Questions</th><th>Reading</th><th>Answering</th><th>Total</th><th>Pace</th><th>Right</th></tr></thead>
             <tbody>
               {passages.map((p) => (
                 <tr key={p.key}>
                   <td>Section {p.si + 1}, from #{p.first}</td>
                   <td>{p.n}</td>
-                  <td className={p.target && p.ms / 1000 > p.target * 1.25 ? 'time-slow' : ''}>{formatMs(p.ms)}</td>
+                  <td>{p.readMs != null ? formatMs(p.readMs) : '—'}</td>
+                  <td>{p.readMs != null ? formatMs(p.ms) : '—'}</td>
+                  <td className={p.target && (p.ms + (p.readMs || 0)) / 1000 > p.target * 1.25 ? 'time-slow' : ''}>{formatMs(p.ms + (p.readMs || 0))}</td>
                   <td className="muted">{p.target ? formatMs(p.target * 1000) : '—'}</td>
                   <td>{p.right}/{p.n}</td>
                 </tr>
