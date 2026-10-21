@@ -36,9 +36,10 @@ export const QUESTION_TYPES = {
   // Reading Comprehension
   'rc-main-point': { kind: 'RC', label: 'Main Point / Primary Purpose', weight: 0.12 },
   'rc-detail': { kind: 'RC', label: 'Detail / Specific Reference', weight: 0.2 },
-  'rc-inference': { kind: 'RC', label: 'Inference', weight: 0.25 },
+  'rc-inference': { kind: 'RC', label: 'Inference', weight: 0.21 },
   'rc-author-attitude': { kind: 'RC', label: 'Author Attitude', weight: 0.07 },
-  'rc-function': { kind: 'RC', label: 'Function / Purpose of Part', weight: 0.12 },
+  'rc-function': { kind: 'RC', label: 'Function / Purpose of Part', weight: 0.11 },
+  'rc-meaning': { kind: 'RC', label: 'Meaning in Context', weight: 0.05 },
   'rc-structure': { kind: 'RC', label: 'Organization / Structure', weight: 0.04 },
   'rc-analogy': { kind: 'RC', label: 'Analogy / Application', weight: 0.06 },
   'rc-strengthen-weaken': { kind: 'RC', label: 'Strengthen / Weaken', weight: 0.06 },
@@ -86,6 +87,7 @@ const LR_RULES = [
 ];
 
 const RC_RULES = [
+  ['rc-meaning', /most (probably|likely) means|in using the (word|phrase|term)|by (characterizing|describing|calling|referring to) .{0,80} as .{0,40}(the author )?(most likely|most probably) means|the (word|phrase|term) .{0,40} (refers to|is used to mean)/],
   ['rc-comparative', /both passages|passage a and passage b|passages a and b|relationship between (the two )?passages|(passage a|passage b)/],
   ['rc-main-point', /main (point|idea)|primary purpose|central (idea|claim|thesis)|most accurately (summarizes|expresses|states) the|best title|primarily concerned with|overall purpose/],
   ['rc-author-attitude', /attitude|author'?s? (stance|view|position) (toward|regarding|of)|tone|would most likely (characterize|describe)/],
@@ -133,7 +135,8 @@ export const FAMILIES = {
   structure: { label: 'Structure family', kind: 'LR', types: ['main-conclusion', 'role', 'method', 'parallel'] },
   explanation: { label: 'Explanation (paradox)', kind: 'LR', types: ['explain'] },
   'rc-global': { label: 'RC global (main point, structure, attitude)', kind: 'RC', types: ['rc-main-point', 'rc-structure', 'rc-author-attitude'] },
-  'rc-specific': { label: 'RC specific (detail, function)', kind: 'RC', types: ['rc-detail', 'rc-function'] },
+
+  'rc-specific': { label: 'RC specific (detail, function, meaning)', kind: 'RC', types: ['rc-detail', 'rc-function', 'rc-meaning'] },
   'rc-extended': { label: 'RC extended (inference, analogy, strengthen/weaken)', kind: 'RC', types: ['rc-inference', 'rc-analogy', 'rc-strengthen-weaken', 'rc-comparative'] },
 };
 

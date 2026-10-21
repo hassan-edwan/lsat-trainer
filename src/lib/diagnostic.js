@@ -23,7 +23,7 @@ export const LADDERS = [
   { id: 'rc-big-picture', title: 'RC: Main Point & Structure', kind: 'RC', drill: { types: ['rc-main-point', 'rc-structure'] } },
   { id: 'rc-detail', title: 'RC: Detail', kind: 'RC', drill: { types: ['rc-detail'] } },
   { id: 'rc-inference', title: 'RC: Inference & Analogy', kind: 'RC', drill: { types: ['rc-inference', 'rc-analogy'] } },
-  { id: 'rc-author', title: 'RC: Author & Function', kind: 'RC', drill: { types: ['rc-author-attitude', 'rc-function'] } },
+  { id: 'rc-author', title: 'RC: Author & Function', kind: 'RC', drill: { types: ['rc-author-attitude', 'rc-function', 'rc-meaning'] } },
 ];
 
 export function ladderOf(question) {

@@ -86,3 +86,8 @@ test('classifies classic stem variants', () => {
   ];
   assert.deepEqual(cases.map(([s, t]) => ({ s, t, got: classifyStem(s, 'LR')[0] })).filter((c) => c.got !== c.t), []);
 });
+
+test('classifies RC meaning-in-context stems', () => {
+  assert.deepEqual(classifyStem('In using the phrase "something for display," the author most probably means art that', 'RC'), ['rc-meaning']);
+  assert.deepEqual(classifyStem('By characterizing certain inscriptions as "abstract," the author most likely means that', 'RC'), ['rc-meaning']);
+});
