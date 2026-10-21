@@ -44,6 +44,7 @@ export function makeEntry(question, ctx, { first, br, source = 'auto', sessionId
     choices: [...question.choices],
     answer: question.answer,
     explanation: question.explanation || '',
+    ...(question.breakdown ? { breakdown: question.breakdown } : {}),
     difficulty: question.difficulty ?? null,
     first: first ?? null,
     br: br ?? null,

@@ -72,3 +72,13 @@ test('parses the notes block and merges without overwriting the student', () => 
   assert.deepEqual(applyTutorNote(merged, note).takeaway, merged.takeaway);
   assert.throws(() => parseTutorNotes('no block here'), /lsat-trainer-notes/);
 });
+
+test('pack includes per-choice breakdown notes in the tutor-only section', () => {
+  const [e] = missEverything();
+  const breakdown = { setup: [{ label: 'Conclusion', text: 'Streetlights everywhere will cut burglary.' }], analysis: 'Sample may not be representative.', choices: ['a', 'b', 'c', 'd', 'e'].map((x) => ({ note: `note ${x}`, example: x === 'b' ? 'Ex B' : undefined })) };
+  const md = buildTutorPack([{ ...e, breakdown }]);
+  const tutor = md.slice(md.indexOf('**TUTOR ONLY'));
+  assert.match(tutor, /Analysis: Sample may not be representative\./);
+  assert.match(tutor, /\(B\) note b/);
+  assert.match(tutor, /Example of that reasoning: Ex B/);
+});

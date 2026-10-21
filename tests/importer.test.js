@@ -63,3 +63,14 @@ test('splits a single-paragraph LR question at the final question sentence', () 
   assert.equal(r.stimulus, 'Cats purr. Dogs bark.');
   assert.equal(r.stem, 'Which one of the following must be true?');
 });
+
+test('keeps a valid breakdown and drops a malformed one', () => {
+  const base = { stem: 'Which one of the following, if true, most weakens the argument?', choices: ['a', 'b', 'c', 'd', 'e'], answer: 'B' };
+  const good = { setup: [{ label: 'Conclusion', text: 'X' }], analysis: 'Y', choices: [1, 2, 3, 4, 5].map((n) => ({ note: `n${n}`, negation: n === 1 ? 'neg' : '' })) };
+  const t = normalizeTest({ name: 'B', sections: [{ kind: 'LR', questions: [{ ...base, breakdown: good }, { ...base, number: 2, breakdown: { choices: [{ note: 'only one' }] } }] }] });
+  const [q1, q2] = t.sections[0].questions;
+  assert.equal(q1.breakdown.choices.length, 5);
+  assert.equal(q1.breakdown.choices[0].negation, 'neg');
+  assert.equal(q1.breakdown.choices[1].negation, undefined);
+  assert.equal(q2.breakdown, undefined);
+});

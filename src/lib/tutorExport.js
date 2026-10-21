@@ -121,7 +121,7 @@ export function tutorOrder(entries) {
   return [...entries].sort((a, b) => score(b) - score(a) || b.occurrences.length - a.occurrences.length);
 }
 
-export function buildTutorPack(entries, { mode = 'socratic', profile = null, explanationOf = () => '' } = {}) {
+export function buildTutorPack(entries, { mode = 'socratic', profile = null, explanationOf = () => '', breakdownOf = () => null } = {}) {
   const ordered = tutorOrder(entries);
   const out = [
     '# LSAT tutoring session: my mistakes',
@@ -171,6 +171,17 @@ export function buildTutorPack(entries, { mode = 'socratic', profile = null, exp
     out.push('**TUTOR ONLY (do not show until the student has explained their reasoning):**', '');
     out.push(`- Correct answer: (${e.answer}) ${e.choices[L.indexOf(e.answer)] ?? ''}`);
     if (explanation) out.push(`- Official explanation: ${explanation}`);
+    const bd = e.breakdown || breakdownOf(e.qid);
+    if (bd) {
+      for (const st of bd.setup || []) out.push(`- ${st.label}: ${st.text}`);
+      if (bd.analysis) out.push(`- Analysis: ${bd.analysis}`);
+      out.push('- Why each choice is right or wrong:');
+      bd.choices.forEach((c, ci) => {
+        out.push(`  - (${L[ci]}) ${c.note}`);
+        if (c.example) out.push(`    - Example of that reasoning: ${c.example}`);
+        if (c.negation) out.push(`    - Negation: ${c.negation}`);
+      });
+    }
     out.push('', '---', '');
   });
   out.push('Please start with Question 1.');

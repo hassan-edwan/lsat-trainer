@@ -24,6 +24,24 @@ function slug(s) {
  * Missing question types are filled in by the stem classifier and marked
  * `autoTagged: true`.
  */
+/**
+ * A full answer breakdown: { setup: [{label, text}], analysis, choices: [{note, example?, negation?}] }.
+ * Malformed breakdowns are dropped (the short explanation still shows).
+ */
+export function normalizeBreakdown(b, nChoices) {
+  if (!b || typeof b !== 'object' || !Array.isArray(b.choices) || b.choices.length !== nChoices) return null;
+  const str = (x) => (typeof x === 'string' ? x.trim() : '');
+  return {
+    setup: (Array.isArray(b.setup) ? b.setup : []).filter((x) => x && str(x.label) && str(x.text)).map((x) => ({ label: str(x.label), text: str(x.text) })),
+    analysis: str(b.analysis),
+    choices: b.choices.map((c) => ({
+      note: str(c?.note),
+      ...(str(c?.example) ? { example: str(c.example) } : {}),
+      ...(str(c?.negation) ? { negation: str(c.negation) } : {}),
+    })),
+  };
+}
+
 export function normalizeTest(raw) {
   const errors = [];
   if (!raw || typeof raw !== 'object') throw new Error('Test must be a JSON object.');
@@ -86,6 +104,7 @@ export function normalizeTest(raw) {
         tags,
         difficulty,
         explanation: q.explanation ? String(q.explanation) : '',
+        ...(normalizeBreakdown(q.breakdown, choices.length) ? { breakdown: normalizeBreakdown(q.breakdown, choices.length) } : {}),
       };
     });
     return {

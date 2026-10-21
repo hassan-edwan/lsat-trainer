@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { BreakdownHead, ChoiceNote } from './Breakdown.jsx';
+import { typeLabel } from '../lib/taxonomy.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 
@@ -6,6 +8,7 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 export default function QuestionReview({ entry, first, br, showAnswer = true }) {
   const [showPassage, setShowPassage] = useState(false);
   const { question, passage } = entry;
+  const bd = question.breakdown;
   return (
     <div className="q-review">
       {passage && (
@@ -18,6 +21,7 @@ export default function QuestionReview({ entry, first, br, showAnswer = true }) 
       )}
       {question.stimulus && <div className="pre stimulus">{question.stimulus}</div>}
       <div className="stem">{question.stem}</div>
+      {showAnswer && bd && <BreakdownHead breakdown={bd} typeLabel={(question.types || []).map(typeLabel).join(', ')} />}
       <ul className="review-choices">
         {question.choices.map((c, i) => {
           const L = LETTERS[i];
@@ -31,11 +35,12 @@ export default function QuestionReview({ entry, first, br, showAnswer = true }) 
               <span className="radio">{L}</span>
               <span className="choice-text">{c}</span>
               {marks.length > 0 && <span className="your-mark">your {marks.join(' & ')} answer</span>}
+              {showAnswer && bd && <ChoiceNote note={bd.choices[i]} isAnswer={L === question.answer} />}
             </li>
           );
         })}
       </ul>
-      {showAnswer && question.explanation && <div className="explanation"><strong>Explanation:</strong> {question.explanation}</div>}
+      {showAnswer && !bd && question.explanation && <div className="explanation"><strong>Explanation:</strong> {question.explanation}</div>}
     </div>
   );
 }

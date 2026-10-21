@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import HighlightText from './HighlightText.jsx';
+import { AllChoiceNotes, ChoiceNote } from './Breakdown.jsx';
 import { formatMs } from '../lib/analytics.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
@@ -331,7 +332,19 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
                   ? <>✓ Correct{(session.combo || 0) > 1 ? ` · 🔥 ${session.combo} in a row` : ''}</>
                   : <>✗ The answer is ({question.answer}). This one goes to your mistake journal.</>}
               </div>
-              {question.explanation && <p>{question.explanation}</p>}
+              {question.breakdown ? (
+                <>
+                  {question.breakdown.analysis && <p>{question.breakdown.analysis}</p>}
+                  {chosen !== question.answer && (
+                    <div className="bd-pair"><strong>Your answer ({chosen}):</strong> <ChoiceNote note={question.breakdown.choices[LETTERS.indexOf(chosen)]} /></div>
+                  )}
+                  <div className="bd-pair"><strong>({question.answer}):</strong> <ChoiceNote note={question.breakdown.choices[LETTERS.indexOf(question.answer)]} isAnswer /></div>
+                  <details className="bd-all">
+                    <summary>Why every other choice is wrong</summary>
+                    <AllChoiceNotes breakdown={question.breakdown} answer={question.answer} />
+                  </details>
+                </>
+              ) : question.explanation && <p>{question.explanation}</p>}
             </div>
           )}
         </div>

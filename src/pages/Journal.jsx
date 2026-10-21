@@ -52,15 +52,15 @@ function dueLabel(entry) {
   return days <= 0 ? '🔁 Due for review' : `Review in ${days} day${days === 1 ? '' : 's'}`;
 }
 
-function snapshotEntry(e) {
+function snapshotEntry(e, breakdownOf = () => undefined) {
   // QuestionReview expects the library shape; journal entries carry a snapshot.
   return {
-    question: { stimulus: e.stimulus, stem: e.stem, choices: e.choices, answer: e.answer },
+    question: { stimulus: e.stimulus, stem: e.stem, choices: e.choices, answer: e.answer, types: e.types, explanation: e.explanation, breakdown: e.breakdown || breakdownOf(e.qid) },
     passage: e.passage ? { text: e.passage } : null,
   };
 }
 
-function EntryCard({ entry, onSave, onDelete, defaultOpen, onCopyForAI }) {
+function EntryCard({ entry, onSave, onDelete, defaultOpen, onCopyForAI, breakdownOf }) {
   const [open, setOpen] = useState(defaultOpen);
   const [draft, setDraft] = useState(entry);
   useEffect(() => { setDraft(entry); }, [entry]);
@@ -90,7 +90,7 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen, onCopyForAI }) {
       </div>
       {open && (
         <div className="journal-body">
-          <QuestionReview entry={snapshotEntry(entry)} first={entry.first} br={entry.br} />
+          <QuestionReview entry={snapshotEntry(entry, breakdownOf)} first={entry.first} br={entry.br} />
           {!isWrittenUp(entry) && <div className="xp-hint">✍️ Fill in all four notes for +{XP.journalWriteup} XP. Writing it down is what makes the lesson stick.</div>}
           <div className="journal-fields">
             {FIELDS.map(([k, label, hint]) => (
@@ -156,7 +156,7 @@ export default function Journal() {
     noticeTimer.current = setTimeout(() => setNotice(''), 4000);
   };
   const explanationOf = (qid) => index[qid]?.question.explanation || '';
-  const pack = (list) => buildTutorPack(list, { mode, profile, explanationOf });
+  const pack = (list) => buildTutorPack(list, { mode, profile, explanationOf, breakdownOf: (qid) => index[qid]?.question.breakdown });
   const packEntries = entries.slice(0, limit);
   const importNotes = async () => {
     try {
@@ -291,7 +291,7 @@ export default function Journal() {
           <div className="empty-icon">{all.length ? '🔍' : '📓'}</div>
           {all.length ? 'No entries match these filters.' : 'Nothing here yet. Questions you miss will show up here, ready to review.'}
         </section>
-      ) : entries.map((e, i) => <EntryCard key={e.qid} entry={e} defaultOpen={i === 0} onSave={saveJournalEntry} onDelete={deleteJournalEntry}
+      ) : entries.map((e, i) => <EntryCard key={e.qid} entry={e} defaultOpen={i === 0} onSave={saveJournalEntry} onDelete={deleteJournalEntry} breakdownOf={(qid) => index[qid]?.question.breakdown}
         onCopyForAI={async (entry) => { await copyText(pack([entry])); flash('Copied this question with tutor instructions. Paste it into your AI chat.'); }} />)}
       {notice && <p className="notice" role="status">{notice}</p>}
     </div>

@@ -574,3 +574,19 @@ mark.hl-orange { background: var(--hl-orange); }
   .today-hero h1 { font-size: 1.6rem; }
   .plan-item { padding: 0.8rem; gap: 0.75rem; }
 }
+
+/* ---- answer breakdowns ---------------------------------------------------- */
+.bd-head { display: flex; flex-direction: column; gap: 0.45rem; background: var(--surface-2); border-radius: 12px; padding: 0.9rem 1rem; }
+.bd-row { display: grid; grid-template-columns: 130px 1fr; gap: 0.75rem; font-size: 0.92rem; line-height: 1.5; }
+@media (max-width: 600px) { .bd-row { grid-template-columns: 1fr; gap: 0.1rem; } }
+.bd-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding-top: 0.15rem; }
+.bd-analysis p { margin: 0.3rem 0 0; line-height: 1.6; }
+.review-choices li { flex-wrap: wrap; }
+.bd-note { flex-basis: 100%; margin: 0.35rem 0 0 2.1rem; font-size: 0.88rem; color: var(--text-2); line-height: 1.55; }
+.bd-note.right .bd-verdict { color: var(--good); }
+.bd-extra { margin-top: 0.35rem; padding: 0.4rem 0.6rem; border-left: 3px solid var(--border-strong); background: var(--surface-2); border-radius: 0 8px 8px 0; font-size: 0.85rem; }
+.bd-pair { margin-top: 0.6rem; font-size: 0.92rem; }
+.bd-pair .bd-note { margin: 0.15rem 0 0; display: inline; }
+.bd-all { margin-top: 0.75rem; }
+.bd-choices { margin: 0.5rem 0 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.bd-choices .bd-note { margin: 0.1rem 0 0; display: inline; }
