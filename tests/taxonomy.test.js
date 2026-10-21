@@ -91,3 +91,7 @@ test('classifies RC meaning-in-context stems', () => {
   assert.deepEqual(classifyStem('In using the phrase "something for display," the author most probably means art that', 'RC'), ['rc-meaning']);
   assert.deepEqual(classifyStem('By characterizing certain inscriptions as "abstract," the author most likely means that', 'RC'), ['rc-meaning']);
 });
+
+test('classifies comparative RC disagreement stems', () => {
+  assert.deepEqual(classifyStem('The authors of the passages would be most likely to disagree over whether', 'RC'), ['rc-comparative']);
+});

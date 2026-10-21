@@ -88,7 +88,7 @@ const LR_RULES = [
 
 const RC_RULES = [
   ['rc-meaning', /most (probably|likely) means|in using the (word|phrase|term)|by (characterizing|describing|calling|referring to) .{0,80} as .{0,40}(the author )?(most likely|most probably) means|the (word|phrase|term) .{0,40} (refers to|is used to mean)/],
-  ['rc-comparative', /both passages|passage a and passage b|passages a and b|relationship between (the two )?passages|(passage a|passage b)/],
+  ['rc-comparative', /both passages|(authors of the passages|the two authors).{0,40}(disagree|agree)|relationship between the (two )?passages|passage a and passage b|passages a and b|relationship between (the two )?passages|(passage a|passage b)/],
   ['rc-main-point', /main (point|idea)|primary purpose|central (idea|claim|thesis)|most accurately (summarizes|expresses|states) the|best title|primarily concerned with|overall purpose/],
   ['rc-author-attitude', /attitude|author'?s? (stance|view|position) (toward|regarding|of)|tone|would most likely (characterize|describe)/],
   ['rc-structure', /organiz|structure of the passage|describes the (organization|structure)|sequence/],
