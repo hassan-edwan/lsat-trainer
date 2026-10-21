@@ -372,3 +372,8 @@ label.disabled { opacity: 0.5; }
 @media (prefers-reduced-motion: reduce) {
   .streak-big .flame.lit, .ach-toast, .xp-gain { animation: none; }
 }
+.tutor-card { border-color: var(--accent); }
+.tutor-import { margin-top: 0.75rem; }
+.tutor-import summary { cursor: pointer; font-weight: 600; }
+.tutor-import textarea { margin: 0.5rem 0; }
+.notice { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 40; box-shadow: 0 6px 18px rgba(0,0,0,0.15); background: var(--good-soft); border: 1px solid var(--good); border-radius: 6px; padding: 0.5rem 0.75rem; }

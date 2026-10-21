@@ -1,10 +1,41 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { STATUSES, TRAP_TAGS, journalPatterns, toCSV, toMarkdown } from '../lib/journal.js';
 import { CATEGORY_GROUPS, categoriesOf, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { download, today } from '../lib/download.js';
 import QuestionReview from '../components/QuestionReview.jsx';
 import { XP, isWrittenUp, journalDueAt } from '../lib/progress.js';
+import { TUTOR_MODES, applyTutorNote, buildTutorPack, parseTutorNotes } from '../lib/tutorExport.js';
+import { categoryStats, typeStats } from '../lib/analytics.js';
+import { ladderResults } from '../lib/diagnostic.js';
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    // Fallback for browsers that block the async clipboard API.
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    ta.remove();
+  }
+}
+
+/** The student's weak spots, for the tutor pack's profile section. */
+function useTutorProfile() {
+  const { attempts, diagnosticQuestions } = useStore();
+  return useMemo(() => {
+    const byWeakness = (stats) => Object.values(stats).filter((x) => x.n >= 3).sort((a, b) => a.firstAccuracy - b.firstAccuracy).slice(0, 5);
+    const cats = Object.fromEntries(Object.entries(categoryStats(attempts)).filter(([k]) => !k.startsWith('family:') && !k.startsWith('subject:')));
+    return {
+      weakCategories: byWeakness(cats),
+      weakTypes: byWeakness(typeStats(attempts)),
+      ladders: ladderResults(diagnosticQuestions, attempts).filter((r) => r.breaksAt),
+    };
+  }, [attempts, diagnosticQuestions]);
+}
 
 const FIELDS = [
   ['myReasoning', 'My thought process', 'What were you thinking when you picked your answer, in the timed pass and in blind review?'],
@@ -28,7 +59,7 @@ function snapshotEntry(e) {
   };
 }
 
-function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
+function EntryCard({ entry, onSave, onDelete, defaultOpen, onCopyForAI }) {
   const [open, setOpen] = useState(defaultOpen);
   const [draft, setDraft] = useState(entry);
   useEffect(() => { setDraft(entry); }, [entry]);
@@ -81,7 +112,10 @@ function EntryCard({ entry, onSave, onDelete, defaultOpen }) {
           </div>
           <div className="row spread">
             <span className="muted small-text">Added {new Date(entry.addedAt).toLocaleDateString()} ({{ auto: 'wrong twice', diagnostic: 'missed in diagnostic', manual: 'added by hand' }[entry.source] || entry.source})</span>
-            <button className="danger small" onClick={() => confirm('Remove this question from your journal?') && onDelete(entry.qid)}>Remove</button>
+            <div className="row">
+              <button className="small" onClick={() => onCopyForAI(entry)} title="Copy this mistake with tutor instructions, to paste into an AI chat">🤖 Copy for AI</button>
+              <button className="danger small" onClick={() => confirm('Remove this question from your journal?') && onDelete(entry.qid)}>Remove</button>
+            </div>
           </div>
         </div>
       )}
@@ -108,6 +142,37 @@ export default function Journal() {
   const patterns = journalPatterns(all.filter((e) => e.status !== 'mastered'));
   const allTypes = [...new Set(all.flatMap((e) => e.types))];
   const allCats = new Set(all.flatMap((e) => categoriesOf(e)));
+
+  const profile = useTutorProfile();
+  const [mode, setMode] = useState('socratic');
+  const [limit, setLimit] = useState(8);
+  const [notice, setNotice] = useState('');
+  const [pasted, setPasted] = useState('');
+  const noticeTimer = useRef(null);
+  const flash = (msg) => {
+    clearTimeout(noticeTimer.current);
+    setNotice(msg);
+    noticeTimer.current = setTimeout(() => setNotice(''), 4000);
+  };
+  const explanationOf = (qid) => index[qid]?.question.explanation || '';
+  const pack = (list) => buildTutorPack(list, { mode, profile, explanationOf });
+  const packEntries = entries.slice(0, limit);
+  const importNotes = async () => {
+    try {
+      const notes = parseTutorNotes(pasted);
+      let n = 0;
+      for (const note of notes) {
+        const e = journal[note.id];
+        if (!e) continue;
+        await saveJournalEntry(applyTutorNote(e, note));
+        n += 1;
+      }
+      setPasted('');
+      flash(n ? `Added tutor notes to ${n} journal entr${n === 1 ? 'y' : 'ies'}.` : 'None of those ids are in your journal.');
+    } catch (err) {
+      flash(err.message);
+    }
+  };
 
   return (
     <div className="stack">
@@ -158,6 +223,46 @@ export default function Journal() {
         </div>
       </section>
 
+      {all.length > 0 && (
+        <section className="card tutor-card">
+          <h2>🤖 Study with an AI tutor</h2>
+          <p>
+            Download a tutoring pack and paste it into ChatGPT, Claude, Gemini, or any AI chat (or attach the file). It
+            tells the AI how to tutor you: hear your reasoning first, pinpoint the exact gap, teach it, test you on a
+            fresh question, and lock in a takeaway. It includes the correct answers, hidden from you until you've
+            explained your thinking, and your weak-spot profile.
+          </p>
+          <div className="form-row">
+            <label>Teaching style
+              <select value={mode} onChange={(e) => setMode(e.target.value)}>
+                {Object.entries(TUTOR_MODES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+              </select>
+            </label>
+            <label>Questions per session
+              <input type="number" min={1} max={50} value={limit} onChange={(e) => setLimit(Math.max(1, Math.min(50, Number(e.target.value) || 1)))} />
+            </label>
+          </div>
+          <div className="row">
+            <button className="primary" disabled={!packEntries.length} onClick={() => download(`lsat-tutor-session-${today()}.md`, pack(packEntries), 'text/markdown')}>
+              Download tutor pack ({packEntries.length})
+            </button>
+            <button disabled={!packEntries.length} onClick={async () => { await copyText(pack(packEntries)); flash('Copied. Paste it into your AI chat as the first message.'); }}>
+              Copy to clipboard
+            </button>
+            <span className="muted small-text">Uses the first {packEntries.length} of the {entries.length} entries matching your filters. Filter by category to work on one weakness.</span>
+          </div>
+          <details className="tutor-import">
+            <summary>Bring the tutor's notes back into your journal</summary>
+            <p className="muted small-text">
+              At the end of the session (or when you say "wrap up"), the tutor writes a <code>lsat-trainer-notes</code> block.
+              Paste its final message here to add the reasoning, takeaways, and trap tags to these entries.
+            </p>
+            <textarea rows={5} className="code" value={pasted} onChange={(e) => setPasted(e.target.value)} placeholder="Paste the tutor's final message here" />
+            <button disabled={!pasted.trim()} onClick={importNotes}>Add notes to journal</button>
+          </details>
+        </section>
+      )}
+
       {all.length > 0 && (patterns.types.length > 0) && (
         <section className="card">
           <h2>Patterns in what you miss</h2>
@@ -182,7 +287,9 @@ export default function Journal() {
 
       {entries.length === 0 ? (
         <section className="card muted">{all.length ? 'No entries match these filters.' : 'Nothing here yet. Questions you miss in both the timed pass and blind review will show up here.'}</section>
-      ) : entries.map((e, i) => <EntryCard key={e.qid} entry={e} defaultOpen={i === 0} onSave={saveJournalEntry} onDelete={deleteJournalEntry} />)}
+      ) : entries.map((e, i) => <EntryCard key={e.qid} entry={e} defaultOpen={i === 0} onSave={saveJournalEntry} onDelete={deleteJournalEntry}
+        onCopyForAI={async (entry) => { await copyText(pack([entry])); flash('Copied this question with tutor instructions. Paste it into your AI chat.'); }} />)}
+      {notice && <p className="notice" role="status">{notice}</p>}
     </div>
   );
 }

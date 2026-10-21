@@ -43,6 +43,8 @@ export function makeEntry(question, ctx, { first, br, source = 'auto', sessionId
     stem: question.stem,
     choices: [...question.choices],
     answer: question.answer,
+    explanation: question.explanation || '',
+    difficulty: question.difficulty ?? null,
     first: first ?? null,
     br: br ?? null,
     source,

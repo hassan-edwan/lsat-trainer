@@ -31,6 +31,14 @@ It runs entirely in your browser. There's no account and no server, and your dat
   automatically. Each entry has fields for your thought process, what was tricky, why the right answer is
   right, and your takeaway, plus trap tags ("scope shift", "reversed conditional", …). Download them as
   Markdown, CSV, or JSON, with the full question text included.
+- **AI tutor packs:** from the journal, download (or copy) a Markdown "tutor pack" and paste it into any AI chat
+  (ChatGPT, Claude, Gemini). It contains instructions that turn the AI into an LSAT tutor: it asks for your
+  reasoning before revealing anything, classifies the gap (misread, method gap, trap, logic gap, or timing),
+  teaches it Socratically or directly (your choice), tests you on a fresh question of the same kind, and has you
+  state the takeaway. The pack includes your weak-spot profile, each question with your answers and notes, and
+  the correct answer and explanation in a section marked tutor-only. At the end the AI outputs a
+  `lsat-trainer-notes` block; paste it back into the journal to save its reasoning, your takeaways, and trap tags.
+  Each journal entry also has a **Copy for AI** button for a single question.
 - **Standard categories:** besides its type, every question is tagged the way LSAT prep courses categorize
   questions, so you can see what you're weak at from several angles:
   - *Question family:* Assumption, Inference, Structure, and Explanation for LR; global, specific, and extended
