@@ -1,5 +1,6 @@
 import { Fragment, useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { OUTCOMES, buildDrill, categoryStats, formatMs, outcome, scaledScore, typeStats } from '../lib/analytics.js';
 import { makeEntry } from '../lib/journal.js';
@@ -47,9 +48,13 @@ export default function Results({ session }) {
 
   return (
     <div className="stack">
+      <PageHeader
+        eyebrow={`${session.kind === 'pt' ? 'Practice test' : session.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'} results · ${new Date(session.finishedAt || session.updatedAt).toLocaleDateString()}`}
+        title={session.title}
+      />
       <Celebration session={session} sessionAttempts={sessionAttempts} />
       <section className="card">
-        <h1>{session.title} — results</h1>
+        <h2>Score</h2>
         <div className="stat-row">
           <div className="stat"><div className="stat-label">{session.settings.blindReview ? 'Timed' : 'Score'}</div><div className="stat-value">{scaled ?? `${s.firstCorrect}/${s.total}`}</div>{scaled && <div className="muted">{s.firstCorrect}/{s.total}</div>}</div>
           {session.settings.blindReview && (
@@ -89,20 +94,20 @@ export default function Results({ session }) {
       {session.sections.length > 1 && (
         <section className="card">
           <h2>By section</h2>
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>Section</th><th>Timed</th><th>Blind review</th><th>Time used</th></tr></thead>
             <tbody>
               {s.bySection.map((b, i) => (
                 <tr key={i}><td>{i + 1}. {b.title}</td><td>{b.firstCorrect}/{b.total}</td><td>{b.brCorrect}/{b.total}</td><td>{formatMs(session.sections[i].elapsedSec * 1000)}</td></tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         </section>
       )}
 
       <section className="card">
         <h2>By question type</h2>
-        <table className="table">
+        <div className="table-wrap"><table className="table">
           <thead><tr><th>Type</th><th>Questions</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th><th>Avg time</th></tr></thead>
           <tbody>
             {byType.map((t) => (
@@ -112,13 +117,13 @@ export default function Results({ session }) {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       {byCategory.length > 0 && (
         <section className="card">
           <h2>By category</h2>
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>Category</th><th>Group</th><th>Questions</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th></tr></thead>
             <tbody>
               {byCategory.map((c) => (
@@ -129,7 +134,7 @@ export default function Results({ session }) {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         </section>
       )}
 
@@ -142,7 +147,7 @@ export default function Results({ session }) {
             {Object.entries(OUTCOMES).map(([k, o]) => <option key={k} value={k}>{o.label}</option>)}
           </select>
         </div>
-        <table className="table results-table">
+        <div className="table-wrap"><table className="table results-table">
           <thead><tr><th>Sec</th><th>#</th><th>Type</th><th>Timed</th><th>BR</th><th>Correct</th><th>Time</th><th>Result</th><th /></tr></thead>
           <tbody>
             {shown.map((row) => {
@@ -175,7 +180,7 @@ export default function Results({ session }) {
               );
             })}
           </tbody>
-        </table>
+        </table></div>
       </section>
     </div>
   );

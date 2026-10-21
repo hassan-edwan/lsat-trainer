@@ -3,7 +3,14 @@ import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { allocate, buildDrill, shuffle, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
+import { PageHeader } from '../components/Layout.jsx';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoriesOf, categoryLabel, typeLabel, typesForKind } from '../lib/taxonomy.js';
+
+const MODES = [
+  { id: 'smart', icon: '🎯', title: 'Smart drill', desc: 'Picks questions from the types you miss most, weighted by how often they appear on the LSAT.' },
+  { id: 'types', icon: '🧩', title: 'Choose what to drill', desc: 'Pick specific question types or categories, like Flaw or conditional logic.' },
+  { id: 'journal', icon: '🔁', title: 'Retry mistakes', desc: 'Questions from your journal, due ones first.' },
+];
 
 const PACES = [
   ['80', 'Test pace (1:20 per question)'],
@@ -77,28 +84,23 @@ export default function DrillBuilder() {
 
   return (
     <div className="stack">
+      <PageHeader
+        eyebrow="Practice"
+        title="Drills"
+        subtitle="Short, focused sets. Pick how questions are chosen, then set the length and pacing."
+      />
+      <div className="mode-cards" role="radiogroup" aria-label="Drill type">
+        {MODES.map((m) => (
+          <button key={m.id} role="radio" aria-checked={mode === m.id} className={`mode-card ${mode === m.id ? 'active' : ''}`} onClick={() => setMode(m.id)}>
+            <span className="mode-icon">{m.icon}</span>
+            <strong>{m.title}</strong>
+            <span>{m.id === 'journal' ? `${journalOpen.length} unmastered · ${progress.due.length} due now. ${m.desc}` : m.desc}</span>
+          </button>
+        ))}
+      </div>
       <section className="card">
-        <h1>Drills</h1>
-        <div className="tabs">
-          {[['smart', 'Smart drill'], ['types', 'By type or category'], ['journal', 'Retry journal questions']].map(([m, l]) => (
-            <button key={m} className={mode === m ? 'tab active' : 'tab'} onClick={() => setMode(m)}>{l}</button>
-          ))}
-        </div>
 
-        {mode === 'smart' && (
-          <p className="muted">
-            Smart drills give more questions to the types you miss most, especially ones you still miss after blind
-            review, weighted by how often each type appears on the LSAT. Recent results count more than old ones.
-            Within each type, journal questions come first, then questions you haven't seen.
-          </p>
-        )}
-        {mode === 'journal' && (
-          <p className="muted">
-            {journalOpen.length} journal question{journalOpen.length === 1 ? '' : 's'} not yet mastered, {progress.due.length} due
-            for review now. Missed questions come back after 1, 3, 7, and 14 days; two correct retries in a row masters one.
-          </p>
-        )}
-
+        {mode !== 'journal' && <div className="section-title">Sections</div>}
         {mode !== 'journal' && (
           <div className="checks">
             {['LR', 'RC'].map((k) => (
@@ -111,9 +113,7 @@ export default function DrillBuilder() {
         )}
 
         {mode === 'types' && (
-          <p className="muted">
-            Pick any mix of question types and categories; a question qualifies if it matches any of them.
-          </p>
+          <div className="callout info">Pick any mix of question types and categories. A question qualifies if it matches any of them; the numbers show how many are available.</div>
         )}
         {mode === 'types' && CATEGORY_GROUPS.map((g) => {
           const entries = Object.entries(g.entries).filter(([id]) => typeCounts[`${g.id}:${id}`]);
@@ -145,6 +145,7 @@ export default function DrillBuilder() {
           </div>
         ))}
 
+        <div className="section-title">Length &amp; pacing</div>
         <div className="form-row">
           <label>Questions <input type="number" min={1} max={100} value={count} onChange={(e) => setCount(Math.max(1, Number(e.target.value) || 1))} /></label>
           <label>Difficulty
@@ -165,12 +166,13 @@ export default function DrillBuilder() {
           </label>
           <label className={`inline ${instant ? 'disabled' : ''}`}><input type="checkbox" disabled={instant} checked={blindReview && !instant} onChange={(e) => setBlindReview(e.target.checked)} /> Blind review afterward</label>
         </div>
-        <button className="primary" disabled={!canStart} onClick={start}>Start drill</button>
+        <button className="primary big" disabled={!canStart} onClick={start}>▶ Start drill</button>
       </section>
 
       {mode === 'smart' && (
         <section className="card">
           <h2>What a smart drill of {count} would focus on</h2>
+          <p className="card-sub">Higher priority means you miss it more often and it shows up more on the test.</p>
           <table className="table">
             <thead><tr><th>Type</th><th>Your attempts</th><th>Miss rate</th><th>Wrong after BR</th><th>Exam share</th><th>Priority</th><th>Questions</th></tr></thead>
             <tbody>

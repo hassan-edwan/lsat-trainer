@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { buildDrill } from '../lib/analytics.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
@@ -45,9 +46,9 @@ export default function Diagnostic() {
 
   if (!ladders.length) {
     return (
-      <section className="card">
-        <h1>Skill diagnostic</h1>
-        <p>The diagnostic isn't loaded yet.</p>
+      <section className="card empty-state">
+        <div className="empty-icon">🩺</div>
+        <h2>The diagnostic isn't loaded yet</h2>
         <button className="primary" onClick={() => loadBundledTests(addTests)}>Load the built-in tests</button>
       </section>
     );
@@ -57,19 +58,18 @@ export default function Diagnostic() {
 
   return (
     <div className="stack">
+      <PageHeader
+        eyebrow="Practice"
+        title="Skill diagnostic"
+        subtitle="Each skill has five questions that climb from level 1 (easier than the LSAT) to level 5 (harder than almost anything on it). The level where you start missing is your breaking point."
+      />
       <section className="card">
-        <h1>Skill diagnostic</h1>
-        <p>
-          Each skill has a ladder of questions that get harder and sneakier from level 1 (easier than the LSAT) to
-          level 5 (harder than almost anything on it). The diagnostic runs every level 1 first, then every level 2,
-          and so on, so the grid below shows where each skill breaks down.
-        </p>
-        <p className="muted">
-          Every question you miss on the timed pass goes to your <a href="#/journal">mistake journal</a>. Write down
-          what you were thinking for each one; that's how you find the pattern behind the misses.
+        <h2>Choose skills to test</h2>
+        <p className="card-sub">
+          Levels run in order: every level 1 first, then level 2, and so on. Every miss goes to your <a href="#/journal">mistake journal</a> so you can write up your thinking.
         </p>
         <div className="type-grid">
-          <h3>Skills to test ({count} questions)</h3>
+          <h3>{count} questions selected</h3>
           {ladders.map((l) => (
             <label key={l.id}>
               <input type="checkbox" checked={selected.has(l.id)} onChange={() => {
@@ -95,7 +95,8 @@ export default function Diagnostic() {
 
       <section className="card">
         <h2>Where each skill breaks</h2>
-        <table className="table ladder-grid">
+        <p className="card-sub">Your most recent result at each level. Start drilling one level below the breaking point.</p>
+        <div className="table-wrap"><table className="table ladder-grid">
           <thead>
             <tr><th>Skill</th>{LEVELS.map((l) => <th key={l} className="center">L{l}</th>)}<th>Breaks at</th><th /></tr>
           </thead>
@@ -120,7 +121,7 @@ export default function Diagnostic() {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
         <p className="muted small-text">✓ correct · ½ missed but fixed in blind review · ✗ missed both times · · not tried yet. The breaking point is the first level missed on the timed pass.</p>
       </section>
 

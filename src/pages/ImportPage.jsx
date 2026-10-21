@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { normalizeImport, parseTestText } from '../lib/importer.js';
 import { typeLabel } from '../lib/taxonomy.js';
@@ -63,9 +64,9 @@ export default function ImportPage() {
 
   return (
     <div className="stack">
+      <PageHeader title="Import tests" subtitle="Add tests you have the right to use. Everything stays in this browser." />
       <section className="card">
-        <h1>Import tests</h1>
-        <p>
+        <p style={{ marginTop: 0 }}>
           Import tests in the <a href="https://github.com/hassan-edwan/lsat-trainer/blob/main/docs/FORMAT.md" target="_blank" rel="noreferrer">LSAT Trainer format</a> (JSON),
           or paste plain text and it will be converted. Questions without types are tagged automatically from the
           wording of the question; you can change any tag later.

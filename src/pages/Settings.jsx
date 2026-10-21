@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { db, exportAll, importAll, STORES } from '../lib/db.js';
 import { download, today } from '../lib/download.js';
 
@@ -9,8 +10,9 @@ export default function Settings() {
 
   return (
     <div className="stack">
+      <PageHeader title="Settings" subtitle="Your daily goal, motivation features, and your data." />
       <section className="card">
-        <h1>Settings</h1>
+        <h2>Study preferences</h2>
         <div className="form-row">
           <label>Daily goal (questions)
             <input type="number" min={5} max={200} value={prefs.dailyGoal}

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { STATUSES, TRAP_TAGS, journalPatterns, toCSV, toMarkdown } from '../lib/journal.js';
 import { CATEGORY_GROUPS, categoriesOf, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { download, today } from '../lib/download.js';
@@ -176,53 +177,18 @@ export default function Journal() {
 
   return (
     <div className="stack">
-      <section className="card">
-        <div className="row spread">
-          <h1>Mistake journal</h1>
-          <div className="row">
-            <button disabled={!entries.length} onClick={() => download(`lsat-mistakes-${today()}.md`, toMarkdown(entries), 'text/markdown')}>Download Markdown</button>
-            <button disabled={!entries.length} onClick={() => download(`lsat-mistakes-${today()}.csv`, toCSV(entries), 'text/csv')}>CSV</button>
-            <button disabled={!entries.length} onClick={() => download(`lsat-mistakes-${today()}.json`, JSON.stringify(entries, null, 2), 'application/json')}>JSON</button>
-          </div>
-        </div>
-        <p className="muted">
-          Questions you get wrong in both the timed pass and blind review are added here automatically. For each one,
-          write down how you were thinking and what tricked you. Downloads include the full question text and only
-          the entries matching your current filters.
-        </p>
-        <div className="form-row">
-          <label>Status
-            <select value={status} onChange={(e) => setStatus(e.target.value)}>
-              <option value="open">Not mastered</option><option value="all">All</option>
-              {STATUSES.map((s) => <option key={s} value={s}>{s}</option>)}
-            </select>
-          </label>
-          <label>Type or category
-            <select value={type} onChange={(e) => setType(e.target.value)}>
-              <option value="">All types</option>
-              <optgroup label="Question type">
-                {allTypes.map((t) => <option key={t} value={t}>{typeLabel(t)}</option>)}
-              </optgroup>
-              {CATEGORY_GROUPS.map((g) => {
-                const keys = Object.keys(g.entries).map((id) => `${g.id}:${id}`).filter((k) => allCats.has(k));
-                return keys.length ? (
-                  <optgroup key={g.id} label={g.label}>
-                    {keys.map((k) => <option key={k} value={k}>{categoryLabel(k)}</option>)}
-                  </optgroup>
-                ) : null;
-              })}
-            </select>
-          </label>
-          <label>Trap
-            <select value={trap} onChange={(e) => setTrap(e.target.value)}>
-              <option value="">Any</option>
-              {TRAP_TAGS.map((t) => <option key={t} value={t}>{t}</option>)}
-            </select>
-          </label>
-          <label>Search <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="text or notes" /></label>
-        </div>
-      </section>
-
+      <PageHeader
+        eyebrow="Review"
+        title="Mistake journal"
+        subtitle="Every question you got wrong after blind review lands here. Write down how you were thinking, then review on schedule until it's mastered."
+        actions={(
+          <>
+            <button className="small" disabled={!entries.length} onClick={() => download(`lsat-mistakes-${today()}.md`, toMarkdown(entries), 'text/markdown')}>Export .md</button>
+            <button className="small" disabled={!entries.length} onClick={() => download(`lsat-mistakes-${today()}.csv`, toCSV(entries), 'text/csv')}>.csv</button>
+            <button className="small" disabled={!entries.length} onClick={() => download(`lsat-mistakes-${today()}.json`, JSON.stringify(entries, null, 2), 'application/json')}>.json</button>
+          </>
+        )}
+      />
       {all.length > 0 && (
         <section className="card tutor-card">
           <h2>🤖 Study with an AI tutor</h2>
@@ -263,6 +229,41 @@ export default function Journal() {
         </section>
       )}
 
+      <section className="card">
+        <h2>Filter</h2>
+        <div className="form-row">
+          <label>Status
+            <select value={status} onChange={(e) => setStatus(e.target.value)}>
+              <option value="open">Not mastered</option><option value="all">All</option>
+              {STATUSES.map((s) => <option key={s} value={s}>{s}</option>)}
+            </select>
+          </label>
+          <label>Type or category
+            <select value={type} onChange={(e) => setType(e.target.value)}>
+              <option value="">All types</option>
+              <optgroup label="Question type">
+                {allTypes.map((t) => <option key={t} value={t}>{typeLabel(t)}</option>)}
+              </optgroup>
+              {CATEGORY_GROUPS.map((g) => {
+                const keys = Object.keys(g.entries).map((id) => `${g.id}:${id}`).filter((k) => allCats.has(k));
+                return keys.length ? (
+                  <optgroup key={g.id} label={g.label}>
+                    {keys.map((k) => <option key={k} value={k}>{categoryLabel(k)}</option>)}
+                  </optgroup>
+                ) : null;
+              })}
+            </select>
+          </label>
+          <label>Trap
+            <select value={trap} onChange={(e) => setTrap(e.target.value)}>
+              <option value="">Any</option>
+              {TRAP_TAGS.map((t) => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </label>
+          <label>Search <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="text or notes" /></label>
+        </div>
+      </section>
+
       {all.length > 0 && (patterns.types.length > 0) && (
         <section className="card">
           <h2>Patterns in what you miss</h2>
@@ -286,7 +287,10 @@ export default function Journal() {
       )}
 
       {entries.length === 0 ? (
-        <section className="card muted">{all.length ? 'No entries match these filters.' : 'Nothing here yet. Questions you miss in both the timed pass and blind review will show up here.'}</section>
+        <section className="card empty-state">
+          <div className="empty-icon">{all.length ? '🔍' : '📓'}</div>
+          {all.length ? 'No entries match these filters.' : 'Nothing here yet. Questions you miss will show up here, ready to review.'}
+        </section>
       ) : entries.map((e, i) => <EntryCard key={e.qid} entry={e} defaultOpen={i === 0} onSave={saveJournalEntry} onDelete={deleteJournalEntry}
         onCopyForAI={async (entry) => { await copyText(pack([entry])); flash('Copied this question with tutor instructions. Paste it into your AI chat.'); }} />)}
       {notice && <p className="notice" role="status">{notice}</p>}

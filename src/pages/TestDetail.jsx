@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { createPTSession } from '../lib/session.js';
 import { typeLabel, typesForKind } from '../lib/taxonomy.js';
@@ -60,18 +61,20 @@ export default function TestDetail({ id }) {
 
   return (
     <div className="stack">
+      <PageHeader
+        eyebrow={<a href="#/library">← Practice tests</a>}
+        title={test.name}
+        subtitle={test.source}
+        actions={<button className="danger small" onClick={async () => {
+          if (confirm(`Delete "${test.name}" from your library? Your history and journal entries are kept.`)) {
+            await deleteTest(test.id);
+            navigate('/library');
+          }
+        }}>Delete test</button>}
+      />
       <section className="card">
-        <div className="row spread">
-          <h1>{test.name}</h1>
-          <button className="danger small" onClick={async () => {
-            if (confirm(`Delete "${test.name}" from your library? Your history and journal entries are kept.`)) {
-              await deleteTest(test.id);
-              navigate('/library');
-            }
-          }}>Delete test</button>
-        </div>
-        {test.source && <p className="muted">{test.source}</p>}
-        <h3>Start</h3>
+        <h2>Start this test</h2>
+        <p className="card-sub">Take every section for the full experience, or pick sections to practice.</p>
         <div className="checks">
           {test.sections.map((s, i) => (
             <label key={s.id}>
@@ -88,7 +91,7 @@ export default function TestDetail({ id }) {
           <label><input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} /> Timed</label>
           <label><input type="checkbox" checked={blindReview} onChange={(e) => setBlindReview(e.target.checked)} /> Blind review after the timed sections</label>
         </div>
-        <button className="primary" disabled={selected.size === 0} onClick={start}>
+        <button className="primary big" disabled={selected.size === 0} onClick={start}>
           Start {selected.size === test.sections.length ? 'full test' : `${selected.size} section${selected.size === 1 ? '' : 's'}`}
         </button>
       </section>
@@ -100,7 +103,7 @@ export default function TestDetail({ id }) {
             <p className="muted">Question types are tagged automatically when no type is given. Fix any tag here; your stats update right away.</p>
             <label className="inline"><input type="checkbox" checked={showAnswers} onChange={(e) => setShowAnswers(e.target.checked)} /> Show answers</label>
           </div>
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>#</th><th>Question</th><th>Type</th><th>Ans</th></tr></thead>
             <tbody>
               {s.questions.map((q) => (
@@ -123,7 +126,7 @@ export default function TestDetail({ id }) {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         </section>
       ))}
     </div>

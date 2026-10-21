@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
+import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { buildDrill, categoryStats, formatMs, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
@@ -47,13 +48,19 @@ export default function Stats() {
   };
 
   if (!attempts.length) {
-    return <section className="card"><h1>Analytics</h1><p className="muted">Finish a test or drill to see your stats by question type.</p></section>;
+    return (
+      <div className="stack">
+        <PageHeader eyebrow="Review" title="Progress" subtitle="Your accuracy by question type and category, so you know exactly what to work on." />
+        <section className="card empty-state"><div className="empty-icon">📊</div>Finish a test or drill and your stats will show up here.</section>
+      </div>
+    );
   }
 
   return (
     <div className="stack">
+      <PageHeader eyebrow="Review" title="Progress" subtitle="Your accuracy by question type and category, weakest first. Every row has a drill button." />
       <section className="card">
-        <h1>Analytics</h1>
+        <h2>Overview</h2>
         <div className="stat-row">
           <div className="stat"><div className="stat-label">Questions answered</div><div className="stat-value">{attempts.length}</div></div>
           {byKind.filter((k) => k.n).map((k) => (
@@ -90,7 +97,7 @@ export default function Stats() {
         <section className="card">
           <h2>Weakest categories</h2>
           <p className="muted">Across question families, reasoning types, flaw patterns, and RC subjects, ranked by timed accuracy (categories with at least 3 attempts).</p>
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>Category</th><th>Group</th><th>Attempts</th><th>Timed</th><th>Blind review</th><th /></tr></thead>
             <tbody>
               {weakestCats.map((c) => (
@@ -104,7 +111,7 @@ export default function Stats() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         </section>
       )}
 
@@ -116,7 +123,7 @@ export default function Stats() {
           ))}
         </div>
         {groupRows.length === 0 ? <p className="muted">No attempts in this group yet.</p> : (
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>Category</th><th>Attempts</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th><th>Avg time</th><th /></tr></thead>
             <tbody>
               {groupRows.map((c) => (
@@ -131,7 +138,7 @@ export default function Stats() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         )}
       </section>
 
@@ -139,7 +146,7 @@ export default function Stats() {
         <section className="card" key={k.kind}>
           <h2>{SECTION_KINDS[k.kind]} by question type</h2>
           <p className="muted">🥉 60%+ over 5 questions · 🥈 75%+ over 10 · 🥇 90%+ over 15. Sorted by drill priority: how often you miss the type, weighted toward recent results and by how often it appears on the LSAT.</p>
-          <table className="table">
+          <div className="table-wrap"><table className="table">
             <thead><tr><th>Type</th><th>Attempts</th><th>Timed</th><th>Blind review</th><th>Wrong twice</th><th>Avg time</th><th /></tr></thead>
             <tbody>
               {k.rows.map((r) => (
@@ -154,7 +161,7 @@ export default function Stats() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table></div>
         </section>
       ))}
     </div>
