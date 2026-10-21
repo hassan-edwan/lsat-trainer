@@ -72,6 +72,12 @@ It runs entirely in your browser. There's no account and no server, and your dat
     retries in a row.
   - Drills keep RC passage questions together, and you can limit them to tests you've already taken so fresh
     tests stay fresh.
+- **Per-question timing:** a small clock beside the section timer shows how long you've spent on the question in
+  front of you (time from every visit adds up). It turns orange once you pass the section's pace (35 minutes ÷ the
+  number of questions). The real test has no such clock, so the ⏱ button turns it off. Results show each
+  question's time and blind-review time, a "slowest first" sort, and a Timing card. That card compares your
+  average with the pace, splits time on questions you got right and wrong, lists the five slowest questions and
+  totals each reading passage (reading time included).
 - **Stamina training:** a five-level ladder of longer and longer timed sittings: one section, two back to
   back, three straight with reading last, a full four-section test with the break, and a five-section
   "overtime" session. After every long session (ladder or full test) the app measures your *late fade*: how much

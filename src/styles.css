@@ -501,7 +501,9 @@ details summary { cursor: pointer; font-weight: 600; }
 .exam-title { display: flex; gap: 0.75rem; align-items: center; min-width: 0; white-space: nowrap; overflow: hidden; }
 .exam-title > span:first-of-type { font-weight: 700; overflow: hidden; text-overflow: ellipsis; }
 .muted-on-dark { color: #aeb6cc; font-size: 0.86rem; }
-.exam-timer { text-align: center; }
+.exam-timer { display: flex; justify-content: center; align-items: center; gap: 0.5rem; }
+.q-clock { font-size: 0.9rem; font-weight: 700; font-variant-numeric: tabular-nums; color: #cfd5e6; background: rgba(255, 255, 255, 0.06); padding: 0.3rem 0.6rem; border-radius: 8px; }
+.q-clock.over { color: #ffd59a; background: rgba(255, 170, 60, 0.16); }
 .exam-timer .timer { font-size: 1.2rem; font-weight: 800; font-variant-numeric: tabular-nums; color: #fff; background: rgba(255, 255, 255, 0.08); padding: 0.35rem 0.85rem; border-radius: 10px; }
 .exam-timer .timer.low { color: #ffb3a8; background: rgba(255, 90, 70, 0.18); }
 .exam-top button.ghost { color: #fff; }
@@ -642,3 +644,9 @@ mark.hl-blue { background-image: linear-gradient(var(--hl-blue), var(--hl-blue))
 .stamina-step .step-body { flex: 1; display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .stamina-step .step-body .muted { font-size: 0.85rem; }
 ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; }
+
+/* Per-question timing */
+.time-slow { color: var(--warn); font-weight: 700; }
+.time-bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-left: 0.4rem; opacity: 0.55; }
+.time-bar.slow { background: var(--warn); opacity: 0.9; }
+.nowrap { white-space: nowrap; }

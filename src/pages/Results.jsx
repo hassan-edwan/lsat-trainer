@@ -17,6 +17,7 @@ export default function Results({ session }) {
   const { index, attempts, journal, questions, saveJournalEntry, saveSession } = useStore();
   const [open, setOpen] = useState(null);
   const [filter, setFilter] = useState('all');
+  const [sortBy, setSortBy] = useState('order');
   const test = session.testId ? index[session.sections[0]?.qids[0]]?.test : null;
   const s = session.summary;
 
@@ -24,8 +25,13 @@ export default function Results({ session }) {
     const entry = index[qid];
     const r = session.responses[qid];
     const br = session.settings.blindReview ? r.br ?? r.first : r.first;
-    return { qid, si, qi, sec, entry, r, br, oc: entry ? outcome(r.first, br, entry.question.answer) : null };
+    const targetSec = sec.timeLimitSec ? sec.timeLimitSec / sec.qids.length : null;
+    // RC: the first question of a passage carries the reading time, so it isn't flagged on its own.
+    const firstOfPassage = !!entry?.passage && (qi === 0 || index[sec.qids[qi - 1]]?.passage?.id !== entry.passage.id);
+    const slow = !!targetSec && !firstOfPassage && r.timeMs / 1000 > targetSec * 1.5;
+    return { qid, si, qi, sec, entry, r, br, targetSec, slow, oc: entry ? outcome(r.first, br, entry.question.answer) : null };
   })), [session, index]);
+  const maxTimeMs = Math.max(1, ...rows.map((x) => x.r.timeMs || 0));
 
   const sessionAttempts = attempts.filter((a) => a.sessionId === session.id);
   const byType = Object.values(typeStats(sessionAttempts)).sort((a, b) => a.firstAccuracy - b.firstAccuracy);
@@ -34,6 +40,7 @@ export default function Results({ session }) {
     .filter((c) => !c.type.startsWith('family:'))
     .sort((a, b) => a.firstAccuracy - b.firstAccuracy || b.n - a.n);
   const shown = rows.filter((row) => filter === 'all' || row.oc === filter || (filter === 'missed' && row.oc !== 'correct'));
+  if (sortBy === 'time') shown.sort((a, b) => (b.r.timeMs || 0) - (a.r.timeMs || 0));
 
   const scaled = scaledScore(test, s.firstCorrect);
   const scaledBR = scaledScore(test, s.brCorrect);
@@ -108,6 +115,12 @@ export default function Results({ session }) {
         </section>
       )}
 
+      <TimingCard rows={rows} onOpen={(qid) => {
+        setFilter('all');
+        setOpen(qid);
+        setTimeout(() => document.getElementById(`q-${qid}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
+      }} />
+
       <section className="card">
         <h2>By question type</h2>
         <div className="table-wrap"><table className="table">
@@ -144,14 +157,20 @@ export default function Results({ session }) {
       <section className="card">
         <div className="row spread">
           <h2>Questions</h2>
+          <div className="row">
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} aria-label="Sort">
+            <option value="order">Test order</option>
+            <option value="time">Slowest first</option>
+          </select>
           <select value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option value="all">All</option>
             <option value="missed">Missed in either pass</option>
             {Object.entries(OUTCOMES).map(([k, o]) => <option key={k} value={k}>{o.label}</option>)}
           </select>
+          </div>
         </div>
         <div className="table-wrap"><table className="table results-table">
-          <thead><tr><th>Sec</th><th>#</th><th>Type</th><th>Timed</th><th>BR</th><th>Correct</th><th>Time</th><th>Result</th><th /></tr></thead>
+          <thead><tr><th>Sec</th><th>#</th><th>Type</th><th>Timed</th><th>BR</th><th>Correct</th><th>Time</th>{session.settings.blindReview && <th>BR time</th>}<th>Result</th><th /></tr></thead>
           <tbody>
             {shown.map((row) => {
               const { qid, si, qi, entry, r, br, oc } = row;
@@ -159,14 +178,18 @@ export default function Results({ session }) {
               const inJournal = !!journal[qid];
               return (
                 <Fragment key={qid}>
-                  <tr className={`clickable oc-row-${oc}`} onClick={() => setOpen(open === qid ? null : qid)}>
+                  <tr id={`q-${qid}`} className={`clickable oc-row-${oc}`} onClick={() => setOpen(open === qid ? null : qid)}>
                     <td>{si + 1}</td>
                     <td>{qi + 1}{r.flagged ? ' ⚑' : ''}</td>
                     <td>{entry.question.types.map(typeLabel).join(', ')}</td>
                     <td>{r.first ?? '—'}</td>
                     <td>{session.settings.blindReview ? br ?? '—' : ''}</td>
                     <td>{entry.question.answer}</td>
-                    <td>{formatMs(r.timeMs)}</td>
+                    <td className={`nowrap ${row.slow ? 'time-slow' : ''}`} title={row.targetSec ? `Pace: ${formatMs(row.targetSec * 1000)} per question` : undefined}>
+                      {formatMs(r.timeMs)}
+                      <span className={`time-bar ${row.slow ? 'slow' : ''}`} style={{ width: `${Math.round(40 * (r.timeMs || 0) / maxTimeMs)}px` }} />
+                    </td>
+                    {session.settings.blindReview && <td className="muted">{r.brTimeMs ? formatMs(r.brTimeMs) : ''}</td>}
                     <td><span className={`badge oc-${oc}`}>{OUTCOMES[oc].label}</span></td>
                     <td className="right" onClick={(e) => e.stopPropagation()}>
                       {inJournal ? <a href="#/journal" className="small-text">In journal</a> : (
@@ -177,7 +200,7 @@ export default function Results({ session }) {
                     </td>
                   </tr>
                   {open === qid && (
-                    <tr className="expanded"><td colSpan={9}><QuestionReview entry={entry} first={r.first} br={session.settings.blindReview ? br : null} /></td></tr>
+                    <tr className="expanded"><td colSpan={session.settings.blindReview ? 10 : 9}><QuestionReview entry={entry} first={r.first} br={session.settings.blindReview ? br : null} /></td></tr>
                   )}
                 </Fragment>
               );
@@ -216,6 +239,74 @@ function Celebration({ session, sessionAttempts }) {
           <a className="button" href="#/">Today's plan</a>
         </div>
       </div>
+    </section>
+  );
+}
+
+/** Where the time went: pace vs. target, time on right vs. wrong answers, the slowest questions, RC by passage. */
+function TimingCard({ rows, onOpen }) {
+  const timed = rows.filter((x) => x.entry && x.r.timeMs > 0);
+  if (timed.length < 3) return null;
+  const avg = (xs) => (xs.length ? xs.reduce((t, x) => t + x.r.timeMs, 0) / xs.length : null);
+  const right = timed.filter((x) => x.r.first === x.entry.question.answer);
+  const wrong = timed.filter((x) => x.r.first !== x.entry.question.answer);
+  const targets = timed.filter((x) => x.targetSec);
+  const pace = targets.length ? targets.reduce((t, x) => t + x.targetSec, 0) / targets.length : null;
+  const slowest = [...timed].sort((a, b) => b.r.timeMs - a.r.timeMs).slice(0, 5);
+  const overTwo = timed.filter((x) => x.r.timeMs >= 120_000).length;
+  const passages = [];
+  for (const x of rows) {
+    if (!x.entry?.passage) continue;
+    const key = `${x.si}:${x.entry.passage.id}`;
+    let p = passages.find((y) => y.key === key);
+    if (!p) passages.push(p = { key, si: x.si, first: x.qi + 1, n: 0, ms: 0, right: 0, target: 0 });
+    p.n += 1; p.ms += x.r.timeMs || 0; p.target += x.targetSec || 0;
+    if (x.r.first === x.entry.question.answer) p.right += 1;
+  }
+  return (
+    <section className="card">
+      <h2>Timing</h2>
+      <p className="card-sub">Time on each question counts every visit to it. Questions over 1.5× the section pace are marked in orange in the table below.</p>
+      <div className="stat-row">
+        <div className="stat"><div className="stat-label">Average per question</div><div className="stat-value">{formatMs(avg(timed))}</div>{pace && <div className="muted">pace {formatMs(pace * 1000)}</div>}</div>
+        <div className="stat"><div className="stat-label">On questions you got right</div><div className="stat-value">{right.length ? formatMs(avg(right)) : '—'}</div><div className="muted">{right.length} question{right.length === 1 ? '' : 's'}</div></div>
+        <div className="stat"><div className="stat-label">On questions you missed</div><div className="stat-value">{wrong.length ? formatMs(avg(wrong)) : '—'}</div><div className="muted">{wrong.length} question{wrong.length === 1 ? '' : 's'}</div></div>
+        <div className="stat"><div className="stat-label">2 minutes or more</div><div className="stat-value">{overTwo}</div><div className="muted">questions</div></div>
+      </div>
+      <h3>Slowest questions</h3>
+      <div className="table-wrap"><table className="table">
+        <thead><tr><th>Question</th><th>Type</th><th>Time</th><th>Result</th></tr></thead>
+        <tbody>
+          {slowest.map((x) => (
+            <tr key={x.qid} className="clickable" onClick={() => onOpen(x.qid)}>
+              <td>Section {x.si + 1}, #{x.qi + 1}</td>
+              <td>{x.entry.question.types.map(typeLabel).join(', ')}</td>
+              <td className={x.slow ? 'time-slow' : ''}>{formatMs(x.r.timeMs)}</td>
+              <td>{x.r.first === x.entry.question.answer ? 'Right' : 'Missed'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table></div>
+      {passages.length > 0 && (
+        <>
+          <h3>Reading passages</h3>
+          <p className="card-sub">Includes reading time. Pace is the section time divided evenly across its questions.</p>
+          <div className="table-wrap"><table className="table">
+            <thead><tr><th>Passage</th><th>Questions</th><th>Time</th><th>Pace</th><th>Right</th></tr></thead>
+            <tbody>
+              {passages.map((p) => (
+                <tr key={p.key}>
+                  <td>Section {p.si + 1}, from #{p.first}</td>
+                  <td>{p.n}</td>
+                  <td className={p.target && p.ms / 1000 > p.target * 1.25 ? 'time-slow' : ''}>{formatMs(p.ms)}</td>
+                  <td className="muted">{p.target ? formatMs(p.target * 1000) : '—'}</td>
+                  <td>{p.right}/{p.n}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table></div>
+        </>
+      )}
     </section>
   );
 }

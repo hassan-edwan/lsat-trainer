@@ -24,6 +24,8 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const [fontSize, setFontSize] = useState(() => Number(localStorage.getItem('lsat.fontSize')) || 16);
   const [hideTimer, setHideTimer] = useState(false);
   const [masking, setMasking] = useState(false);
+  // A clock for the question on screen. Not on the real test, so it can be turned off.
+  const [qClock, setQClock] = useState(() => localStorage.getItem('lsat.qClock') !== 'off');
   const [spacing, setSpacing] = useState(() => Number(localStorage.getItem('lsat.lineSpacing')) || 1.6);
   const [flaggedOnly, setFlaggedOnly] = useState(false);
   const [missedOnly, setMissedOnly] = useState(false);
@@ -123,6 +125,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   }, [session.phase]);
 
   const remaining = sec.timeLimitSec != null ? sec.timeLimitSec - sec.elapsedSec : null;
+  const targetSec = sec.timeLimitSec ? Math.round(sec.timeLimitSec / sec.qids.length) : null;
   useEffect(() => {
     if (session.phase !== 'timed' || remaining == null) return;
     const key = session.current.section;
@@ -191,6 +194,10 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
     if (instant && resp?.checked) return;
     setResp(() => ({ [answerField]: null, [elimField]: [] }));
   };
+  const toggleQClock = () => setQClock((on) => {
+    try { localStorage.setItem('lsat.qClock', on ? 'off' : 'on'); } catch { /* ignore */ }
+    return !on;
+  });
   const cycleSpacing = () => setSpacing((v) => {
     const next = v < 1.7 ? 1.9 : v < 2 ? 2.2 : 1.6;
     try { localStorage.setItem('lsat.lineSpacing', String(next)); } catch { /* ignore */ }
@@ -276,6 +283,15 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               {formatMs(remaining * 1000)}
             </button>
           )}
+          {qClock && !instant && !isBreak && (() => {
+            const ms = isBR ? resp.brTimeMs : resp.timeMs;
+            const over = !isBR && targetSec && ms / 1000 > targetSec;
+            return (
+              <span className={`q-clock ${over ? 'over' : ''}`} title={isBR ? 'Time on this question in blind review' : `Time on this question (pace: ${formatMs(targetSec * 1000)} each)`}>
+                Q {formatMs(ms)}
+              </span>
+            );
+          })()}
         </div>
         <div className="exam-tools">
           {HL_COLORS.map((c) => (
@@ -283,6 +299,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           ))}
           <button className={`tool ${tool === 'erase' ? 'on' : ''}`} title="Erase highlights: select highlighted text" onClick={() => setTool(tool === 'erase' ? null : 'erase')}>⌫</button>
  <button className={`tool ${masking ? 'on' : ''}`} title="Response masking: click choices to gray them out" onClick={() => setMasking((m) => !m)}>{masking ? 'Masking on' : 'Masking'}</button>
+          <button className={`tool ${qClock ? 'on' : ''}`} title="Show time on this question (not on the real test)" onClick={toggleQClock}>⏱</button>
           <button className="tool" title="Line spacing" onClick={cycleSpacing}>↕</button>
           <button className="tool" title="Smaller text" onClick={() => setFontSize((f) => Math.max(12, f - 1))}>A−</button>
           <button className="tool" title="Larger text" onClick={() => setFontSize((f) => Math.min(24, f + 1))}>A+</button>
