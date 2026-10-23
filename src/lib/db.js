@@ -1,14 +1,15 @@
-// Minimal promise wrapper around IndexedDB. All data stays in the browser.
+// Minimal promise wrapper around IndexedDB. When the app runs from the dev or
+// preview server, every write is also saved to the project's data/ folder
+// (see fileSync.js).
+
+import { markDirty } from './fileSync.js';
+import { KEYS } from './merge.js';
 
 const DB_NAME = 'lsat-trainer';
 const DB_VERSION = 1;
-export const STORES = {
-  tests: 'id', // imported tests
-  sessions: 'id', // PT / drill sessions (in progress and finished)
-  attempts: 'key', // one row per question answered in a finished session
-  journal: 'qid', // mistake journal
-  settings: 'key',
-};
+// tests: imported tests · sessions: PT / drill sessions (in progress and finished) ·
+// attempts: one row per question answered in a finished session · journal: mistake journal · settings
+export const STORES = KEYS;
 
 let dbPromise = null;
 
@@ -42,14 +43,16 @@ function tx(store, mode, fn) {
   );
 }
 
+const then = (p, fn) => p.then((r) => { fn(); return r; });
+
 export const db = {
   getAll: (store) => tx(store, 'readonly', (s) => s.getAll()),
   get: (store, key) => tx(store, 'readonly', (s) => s.get(key)),
-  put: (store, value) => tx(store, 'readwrite', (s) => { s.put(value); }),
-  putMany: (store, values) => tx(store, 'readwrite', (s) => { values.forEach((v) => s.put(v)); }),
-  delete: (store, key) => tx(store, 'readwrite', (s) => { s.delete(key); }),
-  deleteMany: (store, keys) => tx(store, 'readwrite', (s) => { keys.forEach((k) => s.delete(k)); }),
-  clear: (store) => tx(store, 'readwrite', (s) => { s.clear(); }),
+  put: (store, value) => then(tx(store, 'readwrite', (s) => { s.put(value); }), () => markDirty(store)),
+  putMany: (store, values) => then(tx(store, 'readwrite', (s) => { values.forEach((v) => s.put(v)); }), () => markDirty(store)),
+  delete: (store, key) => then(tx(store, 'readwrite', (s) => { s.delete(key); }), () => markDirty(store, { deleted: [key] })),
+  deleteMany: (store, keys) => then(tx(store, 'readwrite', (s) => { keys.forEach((k) => s.delete(k)); }), () => markDirty(store, { deleted: keys })),
+  clear: (store) => then(tx(store, 'readwrite', (s) => { s.clear(); }), () => markDirty(store, { replace: true })),
 };
 
 /** Full backup of every store, for download. */

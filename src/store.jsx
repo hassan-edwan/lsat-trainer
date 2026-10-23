@@ -3,6 +3,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { db } from './lib/db.js';
+import { initFileSync } from './lib/fileSync.js';
 import { buildIndex, finalizeSession, flatQuestions } from './lib/session.js';
 import { categoriesOf } from './lib/taxonomy.js';
 import { categoryStats, outcome, typeStats } from './lib/analytics.js';
@@ -37,7 +38,8 @@ export function StoreProvider({ children }) {
     setLoaded(true);
   }, []);
 
-  useEffect(() => { reload(); }, [reload]);
+  // Merge with the project's data/ folder first (when running locally), then load.
+  useEffect(() => { initFileSync(db).catch(() => false).finally(reload); }, [reload]);
 
   // Retired tests (replaced by a newer built-in set) stay indexed so old results still render,
   // but they're left out of the library, drills, and plans.
@@ -88,7 +90,7 @@ export function StoreProvider({ children }) {
     reload,
     async savePrefs(patch) {
       setPrefs((prev) => {
-        const next = { ...prev, ...patch };
+        const next = { ...prev, ...patch, updatedAt: new Date().toISOString() };
         db.put('settings', { key: 'prefs', value: next });
         return next;
       });
@@ -110,7 +112,7 @@ export function StoreProvider({ children }) {
         else await db.delete('tests', t.id);
       }
       const p = (await db.get('settings', 'prefs'))?.value || {};
-      await db.put('settings', { key: 'prefs', value: { ...DEFAULT_PREFS, ...p, bundleVersion: version } });
+      await db.put('settings', { key: 'prefs', value: { ...DEFAULT_PREFS, ...p, bundleVersion: version, updatedAt: new Date().toISOString() } });
       await reload();
     },
     async deleteTest(id) {
@@ -137,11 +139,12 @@ export function StoreProvider({ children }) {
       const done = { ...session, phase: 'done', finishedAt: new Date().toISOString(), summary };
       await db.put('sessions', done);
       await db.putMany('attempts', rows);
-      await db.putMany('journal', journalPuts);
+      await db.putMany('journal', journalPuts.map((e) => ({ ...e, updatedAt: done.finishedAt })));
       await reload();
       return done;
     },
-    async saveJournalEntry(entry) {
+    async saveJournalEntry(raw) {
+      const entry = { ...raw, updatedAt: new Date().toISOString() };
       setJournal((prev) => ({ ...prev, [entry.qid]: entry }));
       await db.put('journal', entry);
     },

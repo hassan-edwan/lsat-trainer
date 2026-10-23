@@ -106,6 +106,12 @@ It runs entirely in your browser. There's no account and no server, and your dat
   three days.
 - **Analytics:** timed and blind-review accuracy by section and question type, average time per type, and a
   trend of recent sessions.
+- **Your progress is saved in the project folder:** while `npm run dev` is running, every change is saved to
+  `data/` a moment after you make it. That includes answers, sessions, journal, settings and imported tests, and a
+  snapshot is kept for each of the last 30 days. When the app starts, it merges `data/` with the browser, keeping the
+  newest version of each record. So a new port, a new browser or cleared browser data doesn't lose anything, and
+  `git pull` never touches the folder. `data/` is excluded from git, so your data is never committed. The dev
+  server is pinned to port 5173, so your browser data no longer ends up split across addresses.
 - **Backups:** download all your data as one file and restore it on another computer.
 
 ## About test content

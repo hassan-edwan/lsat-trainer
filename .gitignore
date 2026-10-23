@@ -7,3 +7,6 @@ dist
 # Keep imported test content out of the repo — it may be copyrighted.
 private/
 *.private.json
+# Your progress, saved locally by the dev server. Personal: never committed.
+data/*
+!data/README.md

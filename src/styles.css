@@ -671,3 +671,9 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 .chip.dx-solid, .chip.dx-strong { background: var(--good-soft); color: var(--good); }
 .training-levels { display: flex; gap: 0.4rem; margin: 0.75rem 0; }
 @media (max-width: 640px) { .focus-item { flex-direction: column; align-items: stretch; } }
+
+/* Data folder status (Settings) */
+.sync-box { display: flex; flex-direction: column; gap: 0.3rem; align-items: flex-start; padding: 0.8rem 1rem; border-radius: var(--radius-sm); margin-bottom: 0.75rem; }
+.sync-box.good { background: var(--good-soft); }
+.sync-box.bad { background: var(--bad-soft); }
+.sync-box code { word-break: break-all; }
