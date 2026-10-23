@@ -12,6 +12,7 @@ import { attemptXp } from '../lib/progress.js';
 import { dailyPlan } from '../lib/plan.js';
 import { startTask } from './Today.jsx';
 import StaminaCard from '../components/StaminaCard.jsx';
+import TrainingCard from '../components/TrainingCard.jsx';
 
 export default function Results({ session }) {
   const { index, attempts, journal, questions, saveJournalEntry, saveSession } = useStore();
@@ -99,6 +100,8 @@ export default function Results({ session }) {
           <button onClick={drillMisses}>Drill the types I missed</button>
         </div>
       </section>
+
+      {session.training && <TrainingCard session={session} />}
 
       {(session.kind === 'stamina' || (session.kind === 'pt' && session.sections.length > 1)) && <StaminaCard session={session} />}
 

@@ -57,11 +57,26 @@ It runs entirely in your browser. There's no account and no server, and your dat
 - **Question-type tagging:** every question is tagged with its type (Flaw, Necessary Assumption, MSS, RC
   Inference, …). Tags come from the test file or are guessed from the wording of the question stem, and you
   can change any of them.
-- **Skill diagnostic:** every skill (17 of them, including conditional reasoning and debate/dialogue
-  questions) has a ladder of questions from level 1 (a typical early-section question) to level 5 (the hardest kind
-  of question on PrepTests 150–159). A grid shows the level where each skill breaks, and every miss goes to the
-  journal so you can write up your thinking. Each skill links to a drill that starts just below its breaking
-  point.
+- **Skills: diagnostic, predicted score and mastery path:**
+  - *Diagnostic ladders:* every skill (17 of them, including conditional reasoning and debate/dialogue
+    questions) has a ladder of questions from level 1 (a typical early-section question) to level 5 (the hardest
+    kind of question on PrepTests 150–159). A skill *breaks* at the first level you still miss after blind review.
+    A miss you fix in blind review is shown as a slip (½), not a weakness.
+  - *Skill model:* every answer to a question that trains a skill (diagnostic, drills, practice tests) feeds a
+    per-skill ability estimate that weighs how hard each question was and counts recent answers more. Each skill has
+    two levels: under time (your first answer) and after blind review (what you understand). Skills with little data
+    lean on your overall ability, so one misread doesn't sink a skill. A skill is a *skill gap* when you still miss
+    its questions after blind review. It's an *execution* problem when you fix them in blind review but miss them
+    under time. Journal tags like "Misread the stem" are shown alongside.
+  - *Predicted score:* the skill estimates applied to a current-format test (two scored LR sections and one RC
+    section), with a likely range. A second number shows your score with no execution slips.
+  - *What to work on:* genuine gaps first, then execution problems, each ranked by how many scaled points one level
+    of improvement is worth.
+  - *Mastery path:* train each skill one level at a time with 8-question sets: mostly at your level, one below, two
+    above, with journal misses mixed in. A level is mastered when 3 of your last 4 answers there are right under time
+    and none is still wrong after blind review. Levels your results already cover are placed out. After each set,
+    the results page shows your progress and starts the next one. Once you've taken the diagnostic, the daily plan
+    trains your top-priority skill.
 - **Drills:**
   - *Smart drill* gives more questions to the types you miss most, especially ones you still miss after blind
     review. It's weighted by how often each type appears on the LSAT, and recent results count more than old

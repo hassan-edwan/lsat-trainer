@@ -77,7 +77,7 @@ export function createSectionsSession(sections, { kind, title, breakAfterSection
   });
 }
 
-export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill', instant = false } = {}) {
+export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill', instant = false, training = null } = {}) {
   // RC questions from the same passage are kept together so the passage is read once.
   const ordered = [];
   const seen = new Set();
@@ -87,7 +87,7 @@ export function createDrillSession(questions, { title = 'Drill', secondsPerQuest
     group.sort((a, b) => a.number - b.number).forEach((x) => { seen.add(x.id); ordered.push(x); });
   }
   const kinds = new Set(ordered.map((q) => q.kind));
-  return baseSession({
+  const session = baseSession({
     kind,
     title,
     sections: [{
@@ -100,6 +100,8 @@ export function createDrillSession(questions, { title = 'Drill', secondsPerQuest
     }],
     settings: { blindReview: blindReview && !instant, instant, breakAfterSection: null },
   });
+  // A mastery-path training set records the skill and level it trains.
+  return training ? { ...session, training } : session;
 }
 
 function baseSession({ kind, title, testId = null, sections, settings }) {
@@ -148,7 +150,7 @@ export function finalizeSession(session, index, journal) {
       attempts.push({
         key: `${session.id}:${qid}`, sessionId: session.id, sessionKind: session.kind, qid,
         types: [...question.types], kind: section.kind, first: r.first, br, answer: question.answer,
-        timeMs: r.timeMs, flagged: r.flagged, at,
+        timeMs: r.timeMs, flagged: r.flagged, reviewed: !!session.settings.blindReview, at,
       });
 
       const existing = journal[qid];

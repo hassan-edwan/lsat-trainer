@@ -11,13 +11,14 @@ const ladder = (id, kind = 'LR') => [1, 2, 3, 4, 5].map((level) => ({
 }));
 const att = (qid, first, br = first) => ({ qid, first, br, answer: 'A', at });
 
-test('breaking point is the first level missed on the timed pass', () => {
+test('breaking point is the first level still missed after blind review', () => {
   const qs = ladder('flaw');
   const attempts = [att('flaw-1', 'A'), att('flaw-2', 'A'), att('flaw-3', 'B', 'A'), att('flaw-4', 'B'), att('flaw-5', 'A')];
   const [r] = ladderResults(qs, attempts);
   assert.equal(r.id, 'flaw');
   assert.deepEqual(r.levels.map((x) => x.status), ['correct', 'correct', 'br-fixed', 'wrong', 'correct']);
-  assert.equal(r.breaksAt, 3);
+  assert.equal(r.breaksAt, 4);
+  assert.equal(r.slipsAt, 3);
   assert.equal(r.cleared, 2);
   assert.equal(r.complete, true);
 });

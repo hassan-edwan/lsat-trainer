@@ -4,6 +4,7 @@ import { buildDrill, categoryStats, shuffle } from './analytics.js';
 import { categoryLabel } from './taxonomy.js';
 import { dayKey, isWrittenUp } from './progress.js';
 import { STAMINA_LEVELS, currentLevel, staminaHistory } from './stamina.js';
+import { masteryTrack, priorities, skillProfile, trainingPool, trainingSet } from './mastery.js';
 
 const DAY_MS = 86_400_000;
 const WEEK_MS = 7 * DAY_MS;
@@ -42,19 +43,43 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
     } : null,
   });
 
-  // 2. Weak-spot drill on the weakest category (or a smart drill before there's data).
-  const weak = weakestCategory(attempts);
-  const weakQs = weak
-    ? buildDrill(questions, attempts, journal, { mode: 'types', categories: [weak.type], kinds: ['LR', 'RC'], count: 10 })
-    : buildDrill(questions, attempts, journal, { mode: 'smart', kinds: ['LR'], count: 10 });
-  tasks.push({
-    id: 'weakness',
-    icon: '🎯',
-    title: weak ? `Weak spot: ${categoryLabel(weak.type)}` : 'Starter drill',
-    detail: weak ? `You're at ${Math.round(weak.firstAccuracy * 100)}% here. 10 questions with instant feedback.` : '10 mixed questions with instant feedback to find your weak spots.',
-    done: doneToday.has('weakness'),
-    action: weakQs.length ? { kind: 'drill', questions: weakQs, opts: { title: weak ? `Weak spot: ${categoryLabel(weak.type)}` : 'Starter drill', instant: true } } : null,
-  });
+  // 2. After the diagnostic: the next mastery-path set for the skill worth the most points.
+  //    Before it: a weak-spot drill on the weakest category (or a smart drill before there's data).
+  const diagnosed = Object.values(sessions).some((s) => s.phase === 'done' && s.kind === 'diagnostic');
+  let training = null;
+  if (diagnosed) {
+    const profile = skillProfile({ attempts, index, sessions, journal, now });
+    const focus = priorities(profile).find((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution');
+    const level = focus && (masteryTrack(focus, profile.rows, trainingPool(focus.id, questions)).next ?? 5);
+    const set = focus ? trainingSet(focus.id, level, { questions, attempts, journal }) : [];
+    if (set.length) {
+      training = {
+        id: 'weakness',
+        icon: '🎯',
+        title: `Train ${focus.title}: level ${level}`,
+        detail: focus.diagnosis === 'gap'
+          ? 'Your biggest skill gap by points. 8 questions at test pace, then blind review.'
+          : 'You fix these in blind review but miss them under time. 8 questions at test pace: read every stem twice.',
+        done: doneToday.has('weakness'),
+        action: { kind: 'drill', questions: set, opts: { title: `Train ${focus.title}: level ${level}`, secondsPerQuestion: 80, training: { skill: focus.id, level } } },
+      };
+    }
+  }
+  if (training) tasks.push(training);
+  else {
+    const weak = weakestCategory(attempts);
+    const weakQs = weak
+      ? buildDrill(questions, attempts, journal, { mode: 'types', categories: [weak.type], kinds: ['LR', 'RC'], count: 10 })
+      : buildDrill(questions, attempts, journal, { mode: 'smart', kinds: ['LR'], count: 10 });
+    tasks.push({
+      id: 'weakness',
+      icon: '🎯',
+      title: weak ? `Weak spot: ${categoryLabel(weak.type)}` : 'Starter drill',
+      detail: weak ? `You're at ${Math.round(weak.firstAccuracy * 100)}% here. 10 questions with instant feedback.` : '10 mixed questions with instant feedback to find your weak spots.',
+      done: doneToday.has('weakness'),
+      action: weakQs.length ? { kind: 'drill', questions: weakQs, opts: { title: weak ? `Weak spot: ${categoryLabel(weak.type)}` : 'Starter drill', instant: true } } : null,
+    });
+  }
 
   // 3. Stretch set: the hardest questions, timed, with blind review.
   const seen = new Set(attempts.map((a) => a.qid));

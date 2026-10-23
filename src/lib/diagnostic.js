@@ -43,9 +43,10 @@ export function ladderQuestions(questions) {
 }
 
 /**
- * Latest result per ladder and level, plus the breaking point: the first
- * level missed on the timed pass. `cleared` is the highest level reached
- * with every level up to it correct.
+ * Latest result per ladder and level. The breaking point is the first level
+ * still missed after blind review: a genuine gap. `slipsAt` is the first
+ * level missed under time but fixed in blind review (a misread or rushing).
+ * `cleared` is the highest level reached with every level up to it correct.
  */
 export function ladderResults(questions, attempts) {
   const byLadder = ladderQuestions(questions);
@@ -65,13 +66,14 @@ export function ladderResults(questions, attempts) {
           : 'wrong';
       return { level, status, questions: qs, attempts: tried };
     });
-    const firstMiss = levels.find((x) => x.status === 'br-fixed' || x.status === 'wrong');
+    const firstMiss = levels.find((x) => x.status === 'wrong');
+    const firstSlip = levels.find((x) => x.status === 'br-fixed');
     const tried = levels.filter((x) => x.status !== 'untried' && x.status !== 'none');
     let cleared = 0;
     for (const x of levels) {
       if (x.status === 'correct') cleared = x.level; else break;
     }
-    return { ...l, levels, breaksAt: firstMiss?.level ?? null, cleared, complete: tried.length === levels.filter((x) => x.status !== 'none').length };
+    return { ...l, levels, breaksAt: firstMiss?.level ?? null, slipsAt: firstSlip?.level ?? null, cleared, complete: tried.length === levels.filter((x) => x.status !== 'none').length };
   });
 }
 

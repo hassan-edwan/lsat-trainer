@@ -1,0 +1,90 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import {
+  estimateTheta, evidenceOf, masteryTrack, predictScore, priorities, scoreFromPct, skillProfile, trainingPool, trainingSet,
+} from '../src/lib/mastery.js';
+
+const at = '2026-10-20T00:00:00Z';
+const now = new Date('2026-10-21T00:00:00Z').getTime();
+
+// A small library: flaw and weaken LR questions at every level, plus a diagnostic ladder question.
+function library() {
+  const questions = [];
+  for (const type of ['flaw', 'weaken', 'necessary-assumption']) {
+    for (const d of [1, 2, 3, 4, 5]) {
+      for (let i = 0; i < 6; i++) questions.push({ id: `${type}-${d}-${i}`, kind: 'LR', types: [type], tags: [], difficulty: d, answer: 'A', number: i + 1 });
+    }
+  }
+  questions.push({ id: 'ladder-flaw-3', kind: 'LR', types: ['flaw'], tags: ['ladder:flaw'], difficulty: 3, answer: 'A', purpose: 'diagnostic', number: 1 });
+  const index = Object.fromEntries(questions.map((q) => [q.id, { question: q, section: { kind: 'LR' }, test: {} }]));
+  return { questions, index };
+}
+const att = (qid, first, br = first, extra = {}) => ({ qid, first, br, answer: 'A', at, sessionId: 's1', reviewed: true, ...extra });
+
+test('evidence: a blind-review fix is an execution slip, a miss that survives it is a genuine gap', () => {
+  assert.equal(evidenceOf({ first: 'A', br: 'A', answer: 'A' }, true), 'correct');
+  assert.equal(evidenceOf({ first: 'B', br: 'A', answer: 'A' }, true), 'execution');
+  assert.equal(evidenceOf({ first: 'B', br: 'B', answer: 'A' }, true), 'genuine');
+  assert.equal(evidenceOf({ first: 'B', br: 'B', answer: 'A' }, false), 'unreviewed');
+  assert.equal(evidenceOf({ first: 'A', br: 'C', answer: 'A' }, true), 'br-broke');
+});
+
+test('ability rises with harder questions answered right', () => {
+  const B = [-2, -1, 0, 1, 2];
+  const low = estimateTheta(B.map((b, i) => ({ b, y: i < 2 ? 1 : 0, w: 1 })), 0, 1.5);
+  const high = estimateTheta(B.map((b, i) => ({ b, y: i < 4 ? 1 : 0, w: 1 })), 0, 1.5);
+  assert.ok(high.theta > low.theta + 0.5);
+  assert.ok(low.se > 0 && low.se < 1.5);
+  assert.ok(scoreFromPct(0.53) > 154 && scoreFromPct(0.53) < 156);
+  assert.equal(scoreFromPct(1), 180);
+});
+
+test('misses fixed in blind review read as execution, not a skill gap', () => {
+  const { questions, index } = library();
+  const attempts = [];
+  // Flaw: right on levels 1-2, levels 3-5 missed under time but fixed in blind review.
+  for (const d of [1, 2, 3, 4, 5]) for (let i = 0; i < 3; i++) attempts.push(d <= 2 ? att(`flaw-${d}-${i}`, 'A') : att(`flaw-${d}-${i}`, 'B', 'A'));
+  // Weaken: levels 3-5 still wrong after blind review.
+  for (const d of [1, 2, 3, 4, 5]) for (let i = 0; i < 3; i++) attempts.push(d <= 2 ? att(`weaken-${d}-${i}`, 'A') : att(`weaken-${d}-${i}`, 'B', 'C'));
+  const p = skillProfile({ attempts, index, now });
+  const flaw = p.skills.find((s) => s.id === 'flaw');
+  const weaken = p.skills.find((s) => s.id === 'weaken');
+  assert.equal(flaw.diagnosis, 'execution');
+  assert.equal(weaken.diagnosis, 'gap');
+  assert.ok(flaw.understanding.theta > weaken.understanding.theta + 1);
+  assert.equal(flaw.counts.execution, 9);
+  // Fixing the slips would raise the score.
+  assert.ok(predictScore(p, { field: 'understanding' }).score > predictScore(p).score);
+  // The genuine gap ranks ahead of the execution problem.
+  const order = priorities(p).map((s) => s.id);
+  assert.ok(order.indexOf('weaken') < order.indexOf('flaw'));
+});
+
+test('a level is mastered at 3 of the last 4 right with none still wrong after blind review', () => {
+  const { questions, index } = library();
+  const attempts = [
+    att('flaw-1-0', 'B', 'B', { at: '2026-10-01T00:00:00Z' }),
+    att('flaw-1-1', 'A'), att('flaw-1-2', 'A'), att('flaw-1-3', 'B', 'A'), att('flaw-1-4', 'A'),
+    att('flaw-2-0', 'A'), att('flaw-2-1', 'B', 'B'), att('flaw-2-2', 'A'), att('flaw-2-3', 'A'),
+  ];
+  const p = skillProfile({ attempts, index, now });
+  const flaw = { ...p.skills.find((s) => s.id === 'flaw'), n: 0 }; // no placement, so every level is earned
+  const t = masteryTrack(flaw, p.rows, trainingPool('flaw', questions));
+  assert.equal(t.levels[0].status, 'mastered'); // old genuine miss fell out of the window; 3 of 4 right with a slip
+  assert.equal(t.levels[1].status, 'working'); // a genuine miss in the window
+  assert.equal(t.through, 1);
+  assert.equal(t.next, 2);
+});
+
+test('training sets centre on the level, skip diagnostic questions, and lead with journal misses', () => {
+  const { questions } = library();
+  const journal = { 'flaw-2-5': { status: 'new' } };
+  const set = trainingSet('flaw', 3, { questions, attempts: [], journal });
+  assert.equal(set.length, 8);
+  assert.ok(set.some((q) => q.id === 'flaw-2-5'));
+  assert.ok(!set.some((q) => q.purpose === 'diagnostic'));
+  assert.ok(set.every((q) => q.types.includes('flaw')));
+  const byLevel = set.reduce((m, q) => ({ ...m, [q.difficulty]: (m[q.difficulty] || 0) + 1 }), {});
+  assert.equal(byLevel[4], 2);
+  assert.ok(byLevel[3] >= 4);
+});

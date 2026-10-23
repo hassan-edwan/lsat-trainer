@@ -8,7 +8,7 @@ import { AchievementToaster, LevelBar } from './ProgressWidgets.jsx';
 const PRACTICE = [
   { path: '/', label: 'Today', icon: Sun, hint: 'Your daily plan' },
   { path: '/drill', label: 'Drills', icon: Dumbbell, hint: 'Practice by type or weakness' },
-  { path: '/diagnostic', label: 'Skill diagnostic', icon: Stethoscope, hint: 'Find where each skill breaks' },
+  { path: '/diagnostic', label: 'Skills', icon: Stethoscope, hint: 'Diagnostic, predicted score, mastery path' },
   { path: '/stamina', label: 'Stamina', icon: Hourglass, hint: 'Build up to test length' },
   { path: '/library', label: 'Practice tests', icon: BookOpen, hint: 'Full timed tests' },
 ];

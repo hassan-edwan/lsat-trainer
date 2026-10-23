@@ -2,30 +2,67 @@ import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
-import { buildDrill } from '../lib/analytics.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
+import { DIAGNOSIS, masteryTrack, predictScore, priorities, skillProfile, trainingPool, trainingSet } from '../lib/mastery.js';
 import { createDrillSession } from '../lib/session.js';
 import { loadBundledTests } from '../lib/bundle.js';
 
 const CELL = {
   correct: { label: '✓', title: 'Correct on the timed pass' },
-  'br-fixed': { label: '½', title: 'Missed on the timed pass, fixed in blind review' },
-  wrong: { label: '✗', title: 'Missed on the timed pass and in blind review' },
+  'br-fixed': { label: '½', title: 'Missed under time, fixed in blind review: a slip, not a skill gap' },
+  wrong: { label: '✗', title: 'Still wrong after blind review: a genuine gap' },
   untried: { label: '·', title: 'Not attempted yet' },
   none: { label: '', title: 'No question at this level' },
 };
 
+const MASTERY_CELL = {
+  mastered: { label: '★', title: 'Mastered: 3 of your last 4 right under time, none still wrong after blind review' },
+  placed: { label: '✓', title: 'Placed out: your results say you get these right' },
+  working: { label: '…', title: 'In progress' },
+  new: { label: '·', title: 'Not started' },
+  none: { label: '', title: 'No training questions at this level yet' },
+};
+
 const PACES = [['90', '1:30 per question'], ['80', 'Test pace (1:20)'], ['0', 'Untimed']];
+const MIN_FOR_SCORE = 15;
+
+export function useSkillProfile() {
+  const { attempts, index, sessions, journal } = useStore();
+  return useMemo(() => skillProfile({ attempts, index, sessions, journal }), [attempts, index, sessions, journal]);
+}
+
+/** Start a training set for a skill at its next mastery level. */
+export async function startTraining(skill, level, { questions, attempts, journal, saveSession }) {
+  const picked = trainingSet(skill.id, level, { questions, attempts, journal });
+  if (!picked.length) { alert('No training questions for this skill yet.'); return; }
+  const s = await saveSession(createDrillSession(picked, {
+    title: `Train ${skill.title}: level ${level}`, secondsPerQuestion: 80, training: { skill: skill.id, level },
+  }));
+  navigate(`/session/${s.id}`);
+}
+
+function evidenceLine(s) {
+  const parts = [`${s.counts.correct + s.counts['br-broke']} right`];
+  if (s.counts.execution) parts.push(`${s.counts.execution} fixed in blind review`);
+  if (s.counts.genuine) parts.push(`${s.counts.genuine} still wrong after blind review`);
+  if (s.counts.unreviewed) parts.push(`${s.counts.unreviewed} missed without blind review`);
+  const traps = Object.entries(s.traps).map(([t, n]) => `${n} tagged “${t.toLowerCase()}”`);
+  return `${s.n} answer${s.n === 1 ? '' : 's'}: ${parts.join(' · ')}${traps.length ? ` (${traps.join(', ')})` : ''}`;
+}
 
 export default function Diagnostic() {
-  const { diagnosticQuestions, questions, attempts, journal, installBundle, saveSession } = useStore();
+  const store = useStore();
+  const { diagnosticQuestions, questions, attempts, journal, installBundle, saveSession } = store;
   const available = useMemo(() => ladderQuestions(diagnosticQuestions), [diagnosticQuestions]);
   const ladders = LADDERS.filter((l) => available[l.id]);
   const [selected, setSelected] = useState(() => new Set(LADDERS.map((l) => l.id)));
   const [pace, setPace] = useState('90');
   const results = useMemo(() => ladderResults(diagnosticQuestions, attempts), [diagnosticQuestions, attempts]);
-  const tried = results.filter((r) => r.levels.some((x) => x.attempts));
-  const weakest = [...tried].sort((a, b) => (a.breaksAt ?? 6) - (b.breaksAt ?? 6) || a.cleared - b.cleared).slice(0, 5);
+  const profile = useSkillProfile();
+  const ranked = useMemo(() => priorities(profile), [profile]);
+  const prediction = useMemo(() => predictScore(profile), [profile]);
+  const potential = useMemo(() => predictScore(profile, { field: 'understanding' }), [profile]);
+  const tracks = useMemo(() => Object.fromEntries(profile.skills.map((s) => [s.id, masteryTrack(s, profile.rows, trainingPool(s.id, questions))])), [profile, questions]);
 
   const start = async (ids) => {
     const picked = diagnosticOrder(diagnosticQuestions, ids);
@@ -34,14 +71,9 @@ export default function Diagnostic() {
     const s = await saveSession(createDrillSession(picked, { title, secondsPerQuestion: Number(pace), kind: 'diagnostic' }));
     navigate(`/session/${s.id}`);
   };
-
-  const drill = async (ladder, fromLevel) => {
-    const minLevel = Math.max(1, fromLevel - 1);
-    const pool = questions.filter((q) => q.kind === ladder.kind && (q.difficulty == null || q.difficulty >= minLevel));
-    const picked = buildDrill(pool, attempts, journal, { mode: 'types', types: ladder.drill.types || [], skills: ladder.drill.skills || [], kinds: [ladder.kind], count: 10 });
-    if (!picked.length) { alert('No practice-test questions for this skill yet.'); return; }
-    const s = await saveSession(createDrillSession(picked, { title: `Drill: ${ladder.title} (level ${minLevel}+)` }));
-    navigate(`/session/${s.id}`);
+  const train = (skill) => {
+    const t = tracks[skill.id];
+    return startTraining(skill, t.next ?? 5, store);
   };
 
   if (!ladders.length) {
@@ -55,18 +87,112 @@ export default function Diagnostic() {
   }
 
   const count = diagnosticOrder(diagnosticQuestions, [...selected]).length;
+  const enough = prediction.n >= MIN_FOR_SCORE;
+  const focus = ranked.filter((s) => s.diagnosis !== 'strong' && s.diagnosis !== 'solid').slice(0, 5);
 
   return (
     <div className="stack">
       <PageHeader
         eyebrow="Practice"
-        title="Skill diagnostic"
-        subtitle="Each skill has five questions that climb from level 1 (a typical early-section question) to level 5 (the hardest questions on recent tests). The level where you start missing is your breaking point."
+        title="Skills"
+        subtitle="Find where each skill breaks, see what it means for your score, and train each skill level by level until it's mastered."
       />
+
       <section className="card">
-        <h2>Choose skills to test</h2>
+        <h2>Predicted score</h2>
+        {enough ? (
+          <>
+            <div className="stat-row">
+              <div className="stat"><div className="stat-label">Under time, today</div><div className="stat-value">{prediction.score}</div><div className="muted">likely {prediction.low}–{prediction.high}</div></div>
+              <div className="stat"><div className="stat-label">With no execution slips</div><div className="stat-value">{potential.score}</div><div className="muted">if every miss you fix in blind review were right</div></div>
+              <div className="stat"><div className="stat-label">Points lost to slips</div><div className="stat-value">{Math.max(0, potential.score - prediction.score)}</div><div className="muted">misreads and rushing</div></div>
+            </div>
+            <p className="muted small-text">
+              Based on {prediction.n} answers from the diagnostic, drills and practice tests, with recent answers counting more. Each skill's
+              ability is estimated from how hard the questions you got right and wrong were, then applied to a test with two scored LR sections
+              and one RC section. The range narrows as you answer more. It's an estimate, not an official score.
+            </p>
+          </>
+        ) : (
+          <p className="muted">Answer at least {MIN_FOR_SCORE} questions (the full diagnostic is {count}) to see a prediction. {prediction.n ? `${prediction.n} so far.` : ''}</p>
+        )}
+      </section>
+
+      {enough && (
+        <section className="card">
+          <h2>What to work on</h2>
+          <p className="card-sub">
+            Ranked by how many points one level of improvement is worth, with genuine gaps (still wrong after blind review) ahead of
+            execution slips (fixed in blind review). Misses you fix in blind review count as slips, not as a weak skill.
+          </p>
+          {focus.length === 0 ? <p className="muted">Every skill with data is solid or strong. Keep training at higher levels below.</p> : (
+            <div className="focus-list">
+              {focus.map((s) => (
+                <div key={s.id} className="focus-item">
+                  <div className="focus-main">
+                    <div className="row">
+                      <strong>{s.title}</strong>
+                      <span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span>
+                      {s.gain != null && s.diagnosis !== 'no-data' && <span className="muted small-text">+{s.gain.toFixed(1)} pts per level</span>}
+                    </div>
+                    <div className="small-text">
+                      {s.diagnosis !== 'no-data' && <>Skill level {s.level.toFixed(1)} after blind review · {s.timedLevel.toFixed(1)} under time. </>}
+                      {DIAGNOSIS[s.diagnosis].tip}
+                    </div>
+                    {s.n > 0 && <div className="muted small-text">{evidenceLine(s)}</div>}
+                  </div>
+                  <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}>
+                    {s.diagnosis === 'no-data' ? 'Take ladder' : `Train level ${tracks[s.id].next ?? 5}`}
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      <section className="card">
+        <h2>Mastery path</h2>
         <p className="card-sub">
-          Levels run in order: every level 1 first, then level 2, and so on. Every miss goes to your <a href="#/journal">mistake journal</a> so you can write up your thinking.
+          Train one level at a time. A level is mastered when 3 of your last 4 answers there are right under time and none is still wrong
+          after blind review. Each set has 8 questions: mostly at your level, one below to keep it solid, and two above as a stretch, with
+          your journal misses mixed in. Diagnostic ladder questions are kept out so retests stay fresh.
+        </p>
+        <div className="table-wrap"><table className="table ladder-grid">
+          <thead><tr><th>Skill</th>{LEVELS.map((l) => <th key={l} className="center">L{l}</th>)}<th>Level</th><th /></tr></thead>
+          <tbody>
+            {profile.skills.map((s) => {
+              const t = tracks[s.id];
+              return (
+                <tr key={s.id}>
+                  <td>{s.title}</td>
+                  {t.levels.map((x) => (
+                    <td key={x.level} className="center">
+                      <span className={`ladder-cell mc-${x.status}`} title={`${MASTERY_CELL[x.status].title}${x.recent ? ` · ${x.right} of last ${x.recent} right` : ''}${x.available ? ` · ${x.available} questions` : ''}`}>
+                        {x.status === 'working' ? `${x.right}/${x.recent}` : MASTERY_CELL[x.status].label}
+                      </span>
+                    </td>
+                  ))}
+                  <td>{s.n >= 3 ? s.level.toFixed(1) : <span className="muted">—</span>}</td>
+                  <td className="right">
+                    {t.complete
+                      ? <span className="oc-correct">Mastered</span>
+                      : <button className="small" onClick={() => train(s)}>Train L{t.next}</button>}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table></div>
+        <p className="muted small-text">★ mastered · ✓ placed out · 2/3 right of your recent answers at that level · · not started. Skill level is where you'd get about half right after blind review (1–5).</p>
+      </section>
+
+      <section className="card">
+        <h2>Take the diagnostic</h2>
+        <p className="card-sub">
+          Each skill has a ladder of five questions from level 1 (a typical early-section question) to level 5 (the hardest on recent tests).
+          Levels run in order: every level 1 first, then level 2, and so on. Every miss goes to your <a href="#/journal">mistake journal</a>.
+          Tag misreads there (“Misread the stem”) so they show up as slips.
         </p>
         <div className="type-grid">
           <h3>{count} questions selected</h3>
@@ -94,8 +220,8 @@ export default function Diagnostic() {
       </section>
 
       <section className="card">
-        <h2>Where each skill breaks</h2>
-        <p className="card-sub">Your most recent result at each level. Start drilling one level below the breaking point.</p>
+        <h2>Diagnostic ladders</h2>
+        <p className="card-sub">Your most recent ladder result at each level. A skill breaks at the first level you still miss after blind review. A miss you fix in blind review (½) is a slip.</p>
         <div className="table-wrap"><table className="table ladder-grid">
           <thead>
             <tr><th>Skill</th>{LEVELS.map((l) => <th key={l} className="center">L{l}</th>)}<th>Breaks at</th><th /></tr>
@@ -111,34 +237,17 @@ export default function Diagnostic() {
                 ))}
                 <td>
                   {r.breaksAt ? <strong className="oc-wrong-twice">Level {r.breaksAt}</strong>
-                    : r.complete && r.levels.some((x) => x.attempts) ? <span className="oc-correct">Cleared</span>
-                      : <span className="muted">—</span>}
+                    : r.complete && r.levels.some((x) => x.attempts) ? <span className="oc-correct">Cleared{r.slipsAt ? ' (with a slip)' : ''}</span>
+                      : r.slipsAt ? <span className="muted">Slip at L{r.slipsAt}</span>
+                        : <span className="muted">—</span>}
                 </td>
-                <td className="right">
-                  <button className="small" onClick={() => start([r.id])}>Take ladder</button>{' '}
-                  {r.breaksAt && <button className="small primary" onClick={() => drill(r, r.breaksAt)}>Drill from L{Math.max(1, r.breaksAt - 1)}</button>}
-                </td>
+                <td className="right"><button className="small" onClick={() => start([r.id])}>{r.levels.some((x) => x.attempts) ? 'Retake' : 'Take'} ladder</button></td>
               </tr>
             ))}
           </tbody>
         </table></div>
-        <p className="muted small-text">✓ correct · ½ missed but fixed in blind review · ✗ missed both times · · not tried yet. The breaking point is the first level missed on the timed pass.</p>
+        <p className="muted small-text">✓ correct · ½ missed under time, fixed in blind review · ✗ still wrong after blind review · · not tried yet. Retaking reuses the same five questions, so it's most useful after a few weeks of training.</p>
       </section>
-
-      {weakest.some((r) => r.breaksAt) && (
-        <section className="card">
-          <h2>Your weakest skills</h2>
-          <ol>
-            {weakest.filter((r) => r.breaksAt).map((r) => (
-              <li key={r.id}><strong>{r.title}</strong>: breaks at level {r.breaksAt}{r.cleared ? `, solid through level ${r.cleared}` : ''}.</li>
-            ))}
-          </ol>
-          <p className="muted">
-            Start each drill one level below the breaking point, then write up every miss in the journal. Retaking a
-            ladder reuses the same questions, so it's most useful after a few weeks.
-          </p>
-        </section>
-      )}
     </div>
   );
 }
