@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "notes": "Adds the Skill Builder Set: 154 new questions (108 LR, 8 RC passage sets) that fill every level of the mastery path on the Skills page, so each skill can be trained from level 1 to level 5.",
+  "version": 8,
+  "notes": "Adds Skill Builder Set 2: 314 new hard questions (levels 3–5): 230 LR and 84 RC across 13 passage sets. Every skill now has at least 15 questions at each hard level, so mixed sets and the mastery path keep finding fresh, difficult questions.",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
@@ -10,7 +10,8 @@
     "classic-style-test-6.json",
     "flaw-pattern-practice.json",
     "skill-diagnostic.json",
-    "skill-builder.json"
+    "skill-builder.json",
+    "skill-builder-2.json"
   ],
   "retired": [
     "original-practice-test-1",

@@ -95,7 +95,7 @@ export async function startMixed({ questions, attempts, index, sessions, journal
   if (!mix.questions.length) { alert('There are no questions left that you haven\'t seen.'); return; }
   const title = (id) => LADDERS.find((l) => l.id === id)?.title;
   const s = await saveSession({
-    ...createDrillSession(mix.questions, { title: `Mixed set: ${mix.weak.map(title).join(', ')} + variety`, secondsPerQuestion: 80 }),
+    ...createDrillSession(mix.questions, { title: mix.weak.length ? `Mixed set: ${mix.weak.map(title).join(', ')} + variety` : 'Mixed set', secondsPerQuestion: 80 }),
     mix: { weak: mix.weak, variety: mix.variety },
     ...extra,
   });

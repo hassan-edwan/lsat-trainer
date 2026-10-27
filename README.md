@@ -137,6 +137,9 @@ comparative pair per section. Every section was solved blind by a separate check
 - **A Skill Builder Set** of 154 questions (108 LR and 8 RC passage sets) written to fill the mastery path, so
   every skill has at least five training questions at every level from 1 to 5. Each was blind-solved by a
   separate checker before going in.
+- **Skill Builder Set 2** of 314 hard questions (levels 3–5: 230 LR and 13 RC passage sets), so every skill has at
+  least 15 questions at each of levels 3, 4 and 5 for mixed sets and the mastery path. Every set was blind-solved by a
+  separate checker, and any item with a weak or giveaway wrong answer was rewritten and re-checked.
 - **The skill diagnostic** described above.
 - **A full breakdown for every built-in question:** the conclusion and reasoning (or facts, paradox, or task),
   an analysis with the prephrase, and a note on every answer choice, with example arguments for wrong flaw
