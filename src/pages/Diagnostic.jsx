@@ -3,7 +3,7 @@ import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
-import { DIAGNOSIS, masteryTrack, predictScore, priorities, skillProfile, trainingPool, trainingSet } from '../lib/mastery.js';
+import { DIAGNOSIS, masteryTrack, predictScore, priorities, shownEntries, skillProfile, trainingPool, trainingSet } from '../lib/mastery.js';
 import { createDrillSession } from '../lib/session.js';
 import { loadBundledTests } from '../lib/bundle.js';
 
@@ -35,18 +35,50 @@ export function useSkillProfile() {
 export const pendingQids = (sessions) => Object.values(sessions)
   .filter((s) => s.phase !== 'done').flatMap((s) => s.sections.flatMap((sec) => sec.qids));
 
-/** Start a training set for a skill at its next mastery level, or resume the unfinished one. */
-export async function startTraining(skill, level, { questions, attempts, journal, sessions, saveSession }) {
-  const open = Object.values(sessions).find((s) => s.phase !== 'done' && s.training?.skill === skill.id && s.training.level === level);
-  if (open) { navigate(`/session/${open.id}`); return; }
-  const picked = trainingSet(skill.id, level, { questions, attempts, journal, pending: pendingQids(sessions) });
+/** Unfinished training sets for a skill. */
+export const openTraining = (sessions, skillId) => Object.values(sessions)
+  .filter((s) => s.phase !== 'done' && s.training?.skill === skillId)
+  .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
+
+/** Reopen the most recent unfinished set for a skill. */
+export function resumeTraining(skill, { sessions }) {
+  const open = openTraining(sessions, skill.id)[0];
+  if (open) navigate(`/session/${open.id}`);
+}
+
+/**
+ * Start a new training set of questions you haven't seen. Unfinished sets for
+ * the skill are closed first: the questions you answered are scored (without
+ * blind review if you never reached it), and none of their questions, answered
+ * or not, go into the new set.
+ */
+export async function startTraining(skill, level, { questions, attempts, sessions, saveSession, finishSession }, extra = {}) {
+  const seenInOpen = [];
+  for (const old of openTraining(sessions, skill.id)) {
+    old.sections.forEach((sec) => seenInOpen.push(...sec.qids));
+    const answered = (id) => old.responses[id]?.first;
+    const shownQids = old.sections.flatMap((sec) => sec.qids);
+    const kept = old.sections.map((sec) => ({ ...sec, qids: sec.qids.filter(answered) })).filter((sec) => sec.qids.length);
+    if (!kept.length) {
+      // Nothing answered: keep a record of what it showed you, hidden from history.
+      await saveSession({ ...old, phase: 'done', abandoned: true, finishedAt: new Date().toISOString(), shownQids,
+        summary: { total: 0, firstCorrect: 0, brCorrect: 0, outcomes: {}, bySection: [] } });
+      continue;
+    }
+    const reviewed = old.phase === 'br' && old.settings.blindReview;
+    await finishSession({ ...old, sections: kept, shownQids, settings: { ...old.settings, blindReview: reviewed } });
+  }
+  const closed = new Set(openTraining(sessions, skill.id).map((x) => x.id));
+  const pending = [...pendingQids(Object.fromEntries(Object.entries(sessions).filter(([id]) => !closed.has(id)))), ...seenInOpen];
+  const picked = trainingSet(skill.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending });
   if (!picked.length) {
-    alert(`You've answered every ${skill.title} question near level ${level} in the last two weeks. They come back after two weeks (and journal misses on their review dates). Train another skill in the meantime.`);
+    alert(`You've answered every ${skill.title} question near level ${level}. Questions you answered at least two weeks ago come back after that; until then, train another skill.`);
     return;
   }
-  const s = await saveSession(createDrillSession(picked, {
-    title: `Train ${skill.title}: level ${level}`, secondsPerQuestion: 80, training: { skill: skill.id, level },
-  }));
+  const s = await saveSession({
+    ...createDrillSession(picked, { title: `Train ${skill.title}: level ${level}`, secondsPerQuestion: 80, training: { skill: skill.id, level } }),
+    ...extra,
+  });
   navigate(`/session/${s.id}`);
 }
 
@@ -84,7 +116,7 @@ export default function Diagnostic() {
     const t = tracks[skill.id];
     return startTraining(skill, t.next ?? 5, store);
   };
-  const openSet = (skill) => Object.values(store.sessions).some((x) => x.phase !== 'done' && x.training?.skill === skill.id && x.training.level === (tracks[skill.id].next ?? 5));
+  const openSet = (skill) => openTraining(store.sessions, skill.id).length > 0;
   const unseenAt = (skill) => tracks[skill.id].levels[(tracks[skill.id].next ?? 5) - 1].unseen;
 
   if (!ladders.length) {
@@ -153,9 +185,13 @@ export default function Diagnostic() {
                     {s.n > 0 && <div className="muted small-text">{evidenceLine(s)}</div>}
                   </div>
                   <div className="focus-action">
-                    <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}>
-                      {s.diagnosis === 'no-data' ? 'Take ladder' : `${openSet(s) ? 'Resume' : 'Train'} level ${tracks[s.id].next ?? 5}`}
-                    </button>
+                    <div className="row">
+                      {openSet(s) && <button className="small" onClick={() => resumeTraining(s, store)} title="Go back to the set you didn't finish">Resume</button>}
+                      <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}
+                        title={openSet(s) ? 'Scores what you answered in your unfinished set and starts new questions' : undefined}>
+                        {s.diagnosis === 'no-data' ? 'Take ladder' : `${openSet(s) ? 'New set' : 'Train'} · level ${tracks[s.id].next ?? 5}`}
+                      </button>
+                    </div>
                     {s.diagnosis !== 'no-data' && <span className="muted small-text">{unseenAt(s)} new at this level</span>}
                   </div>
                 </div>
@@ -169,9 +205,9 @@ export default function Diagnostic() {
         <h2>Mastery path</h2>
         <p className="card-sub">
           Train one level at a time. A level is mastered when 3 of your last 4 answers there are right under time and none is still wrong
-          after blind review. Questions you've answered in the last two weeks are left out of new sets, and repeats within two weeks
-          don't count toward mastery, since by then you remember the answer. Each set has 8 questions: mostly at your level, one below to keep it solid, and two above as a stretch, with
-          your journal misses mixed in. Diagnostic ladder questions are kept out so retests stay fresh.
+          after blind review. Every set is new questions you haven't answered. Repeats come back only once a skill's nearby questions are all
+          used, and never within two weeks. A repeat within two weeks also doesn't count toward mastery. Each set has 8 questions: mostly at
+          your level, one below to keep it solid, and two above as a stretch. Diagnostic ladder questions are kept out so retests stay fresh, and journal misses come back in the daily mistake review.
         </p>
         <div className="table-wrap"><table className="table ladder-grid">
           <thead><tr><th>Skill</th>{LEVELS.map((l) => <th key={l} className="center">L{l}</th>)}<th>Level</th><th /></tr></thead>
@@ -192,7 +228,12 @@ export default function Diagnostic() {
                   <td className="right">
                     {t.complete
                       ? <span className="oc-correct">Mastered</span>
-                      : <button className="small" onClick={() => train(s)} title={`${t.levels[t.next - 1].unseen} new questions at level ${t.next}`}>{openSet(s) ? 'Resume' : 'Train'} L{t.next}</button>}
+                      : (
+                        <span className="row" style={{ justifyContent: 'flex-end' }}>
+                          {openSet(s) && <button className="small" onClick={() => resumeTraining(s, store)}>Resume</button>}
+                          <button className="small" onClick={() => train(s)} title={`${t.levels[t.next - 1].unseen} new questions at level ${t.next}`}>{openSet(s) ? 'New' : 'Train'} L{t.next}</button>
+                        </span>
+                      )}
                   </td>
                 </tr>
               );

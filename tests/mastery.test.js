@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  estimateTheta, evidenceOf, masteryTrack, predictScore, priorities, scoreFromPct, skillProfile, trainingPool, trainingSet,
+  estimateTheta, evidenceOf, masteryTrack, predictScore, priorities, scoreFromPct, shownEntries, skillProfile, trainingPool, trainingSet,
 } from '../src/lib/mastery.js';
 
 const at = '2026-10-20T00:00:00Z';
@@ -76,12 +76,10 @@ test('a level is mastered at 3 of the last 4 right with none still wrong after b
   assert.equal(t.next, 2);
 });
 
-test('training sets centre on the level, skip diagnostic questions, and lead with journal misses', () => {
+test('training sets centre on the level and skip diagnostic questions', () => {
   const { questions } = library();
-  const journal = { 'flaw-2-5': { status: 'new', addedAt: '2026-09-01T00:00:00Z' } };
-  const set = trainingSet('flaw', 3, { questions, attempts: [], journal });
+  const set = trainingSet('flaw', 3, { questions, attempts: [] });
   assert.equal(set.length, 8);
-  assert.ok(set.some((q) => q.id === 'flaw-2-5'));
   assert.ok(!set.some((q) => q.purpose === 'diagnostic'));
   assert.ok(set.every((q) => q.types.includes('flaw')));
   const byLevel = set.reduce((m, q) => ({ ...m, [q.difficulty]: (m[q.difficulty] || 0) + 1 }), {});
@@ -89,22 +87,28 @@ test('training sets centre on the level, skip diagnostic questions, and lead wit
   assert.ok(byLevel[3] >= 4);
 });
 
-test('training sets skip questions answered recently, undue journal misses, and unfinished sets', () => {
+test('every set is questions you have never answered, until a skill runs out', () => {
   const { questions } = library();
   const nowMs = new Date('2026-10-21T00:00:00Z').getTime();
-  const recent = ['flaw-3-0', 'flaw-3-1', 'flaw-3-2'].map((qid) => att(qid, 'A', 'A', { at: '2026-10-20T00:00:00Z' }));
-  const old = att('flaw-3-3', 'A', 'A', { at: '2026-08-01T00:00:00Z' });
-  const journal = {
-    'flaw-3-0': { status: 'new', addedAt: '2026-10-20T12:00:00Z', retries: [] }, // just missed: review not due yet
-    'flaw-2-0': { status: 'new', addedAt: '2026-10-01T00:00:00Z', retries: [] }, // due
-  };
-  const set = trainingSet('flaw', 3, { questions, attempts: [...recent, old], journal, pending: ['flaw-3-4'], now: nowMs });
-  const ids = set.map((q) => q.id);
-  for (const id of ['flaw-3-0', 'flaw-3-1', 'flaw-3-2', 'flaw-3-4']) assert.ok(!ids.includes(id), id);
-  assert.ok(ids.includes('flaw-2-0'));
-  // With every nearby question answered yesterday, the set is empty rather than a repeat.
-  const everything = questions.filter((q) => q.types.includes('flaw')).map((q) => att(q.id, 'A', 'A', { at: '2026-10-20T00:00:00Z' }));
-  assert.equal(trainingSet('flaw', 3, { questions, attempts: everything, now: nowMs }).length, 0);
+  // Answered long ago, answered yesterday, and sitting in an unfinished set: all skipped while new ones remain.
+  const attempts = [att('flaw-3-0', 'A', 'A', { at: '2026-06-01T00:00:00Z' }), att('flaw-3-1', 'A', 'A', { at: '2026-10-20T00:00:00Z' })];
+  const ids = trainingSet('flaw', 3, { questions, attempts, pending: ['flaw-3-2'], now: nowMs }).map((q) => q.id);
+  for (const id of ['flaw-3-0', 'flaw-3-1', 'flaw-3-2']) assert.ok(!ids.includes(id), id);
+  // Back-to-back sets never repeat while unanswered questions remain (30 flaw questions here).
+  const seen = new Set();
+  let history = [];
+  for (let round = 0; round < 3; round++) {
+    const set = trainingSet('flaw', 3, { questions, attempts: history, now: nowMs });
+    assert.equal(set.length, 8);
+    for (const q of set) { assert.ok(!seen.has(q.id), `repeat ${q.id}`); seen.add(q.id); }
+    history = [...history, ...set.map((q) => att(q.id, 'A', 'A', { at: '2026-10-20T00:00:00Z' }))];
+  }
+  // Everything answered yesterday: nothing to offer rather than a repeat.
+  const all = questions.filter((q) => q.types.includes('flaw')).map((q) => att(q.id, 'A', 'A', { at: '2026-10-20T00:00:00Z' }));
+  assert.equal(trainingSet('flaw', 3, { questions, attempts: all, now: nowMs }).length, 0);
+  // Everything answered long ago: the oldest come back.
+  const longAgo = questions.filter((q) => q.types.includes('flaw')).map((q, i) => att(q.id, 'A', 'A', { at: new Date(Date.UTC(2026, 0, 1 + i)).toISOString() }));
+  assert.equal(trainingSet('flaw', 3, { questions, attempts: longAgo, now: nowMs }).length, 8);
 });
 
 test('a question repeated within two weeks does not count toward mastery', () => {
@@ -121,4 +125,12 @@ test('a question repeated within two weeks does not count toward mastery', () =>
   assert.equal(t.levels[0].recent, 1);
   assert.notEqual(t.levels[0].status, 'mastered');
   assert.equal(t.levels[0].unseen, 5);
+});
+
+test('questions a closed set showed you count as seen', () => {
+  const { questions } = library();
+  const nowMs = new Date('2026-10-21T00:00:00Z').getTime();
+  const sessions = { s1: { phase: 'done', finishedAt: '2026-10-20T00:00:00Z', shownQids: ['flaw-3-0', 'flaw-3-1', 'flaw-3-2', 'flaw-3-3'] } };
+  const ids = trainingSet('flaw', 3, { questions, attempts: shownEntries(sessions), now: nowMs }).map((q) => q.id);
+  for (const id of sessions.s1.shownQids) assert.ok(!ids.includes(id), id);
 });

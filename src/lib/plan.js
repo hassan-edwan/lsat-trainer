@@ -4,7 +4,7 @@ import { buildDrill, categoryStats, shuffle } from './analytics.js';
 import { categoryLabel } from './taxonomy.js';
 import { dayKey, isWrittenUp } from './progress.js';
 import { STAMINA_LEVELS, currentLevel, staminaHistory } from './stamina.js';
-import { masteryTrack, priorities, skillProfile, trainingPool, trainingSet } from './mastery.js';
+import { masteryTrack, priorities, shownEntries, skillProfile, trainingPool, trainingSet } from './mastery.js';
 
 const DAY_MS = 86_400_000;
 const WEEK_MS = 7 * DAY_MS;
@@ -24,7 +24,7 @@ export function weakestCategory(attempts) {
 export function dailyPlan({ tests, sessions, attempts, journal, index, questions, progress, now = Date.now() }) {
   const today = dayKey(now);
   const doneToday = new Set(Object.values(sessions)
-    .filter((s) => s.phase === 'done' && s.queue?.day === today)
+    .filter((s) => s.phase === 'done' && !s.abandoned && s.queue?.day === today)
     .map((s) => s.queue.task));
   const tasks = [];
 
@@ -52,7 +52,7 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
     const focus = priorities(profile).find((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution');
     const level = focus && (masteryTrack(focus, profile.rows, trainingPool(focus.id, questions)).next ?? 5);
     const pending = Object.values(sessions).filter((x) => x.phase !== 'done').flatMap((x) => x.sections.flatMap((sec) => sec.qids));
-    const set = focus ? trainingSet(focus.id, level, { questions, attempts, journal, pending, now }) : [];
+    const set = focus ? trainingSet(focus.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending, now }) : [];
     if (set.length) {
       training = {
         id: 'weakness',

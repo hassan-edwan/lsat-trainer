@@ -21,7 +21,7 @@ export default function Home() {
   const [busy, setBusy] = useState(false);
   const all = Object.values(sessions).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const active = all.filter((s) => s.phase !== 'done');
-  const done = all.filter((s) => s.phase === 'done');
+  const done = all.filter((s) => s.phase === 'done' && !s.abandoned);
   const testById = Object.fromEntries(tests.map((t) => [t.id, t]));
   const practiceTests = tests.filter((t) => t.purpose !== 'diagnostic');
   const hasDiagnostic = tests.length > practiceTests.length;

@@ -14,8 +14,7 @@
 
 import { LADDERS, ladderOf } from './diagnostic.js';
 import { QUESTION_TYPES } from './taxonomy.js';
-import { groupBy, prioritize, shuffle } from './analytics.js';
-import { journalDueAt } from './progress.js';
+import { shuffle } from './analytics.js';
 
 export const LEVELS = [1, 2, 3, 4, 5];
 const B = { 1: -2, 2: -1, 3: 0, 4: 1, 5: 2 };
@@ -278,24 +277,40 @@ export function masteryTrack(skill, rows, pool, now = Date.now()) {
 }
 
 /**
- * A training set for one skill at one level: journal misses whose spaced
- * review is due first, then mostly questions at the level, one from the level
- * below to keep it solid, and a couple from the level above as a stretch.
- * Questions answered in the last two weeks, or sitting in an unfinished set
- * (`pending`), are skipped unless their review is due; when too few are left
- * the set is shorter rather than repeating what you just did.
+ * Questions a closed training set showed you without your answering them,
+ * as { qid, at } entries, so new sets treat them as seen.
  */
-export function trainingSet(skillId, level, { questions, attempts, journal = {}, pending = [], count = 8, now = Date.now(), rng = Math.random }) {
+export function shownEntries(sessions) {
+  return Object.values(sessions)
+    .filter((s) => s.phase === 'done' && s.shownQids)
+    .flatMap((s) => s.shownQids.map((qid) => ({ qid, at: s.finishedAt })));
+}
+
+/**
+ * A training set for one skill at one level: mostly questions at the level,
+ * one from the level below to keep it solid, and a couple from the level
+ * above as a stretch. Only questions you've never answered (and that aren't
+ * sitting in an unfinished set, `pending`) are used, widening to nearby levels
+ * when a level runs out. Only once every nearby question has been answered
+ * does it fall back to the ones you answered longest ago (never within
+ * RECENT_DAYS). Journal misses aren't mixed in: they come back in the daily
+ * mistake review on their own schedule.
+ */
+export function trainingSet(skillId, level, { questions, attempts, pending = [], count = 8, now = Date.now(), rng = Math.random }) {
   const pool = trainingPool(skillId, questions);
-  const attemptsByQid = groupBy(attempts, (a) => a.qid);
-  const due = Object.fromEntries(Object.entries(journal).filter(([, e]) => journalDueAt(e) <= now));
-  const recent = new Set(pending);
-  for (const a of attempts) if (now - new Date(a.at).getTime() < RECENT_DAYS * DAY_MS) recent.add(a.qid);
-  const usable = pool.filter((q) => due[q.id] || !recent.has(q.id));
+  const lastAt = new Map();
+  for (const a of attempts) {
+    const t = new Date(a.at).getTime();
+    if (!(lastAt.get(a.qid) >= t)) lastAt.set(a.qid, t);
+  }
+  const held = new Set(pending);
+  const never = pool.filter((q) => !lastAt.has(q.id) && !held.has(q.id));
+  const old = pool.filter((q) => lastAt.has(q.id) && !held.has(q.id) && now - lastAt.get(q.id) >= RECENT_DAYS * DAY_MS)
+    .sort((a, b) => lastAt.get(a.id) - lastAt.get(b.id));
   const used = new Set();
   const picked = [];
   const take = (cands, n) => {
-    for (const q of prioritize(cands, { attemptsByQid, journal: due, rng })) {
+    for (const q of cands) {
       if (n <= 0) break;
       if (used.has(q.id)) continue;
       used.add(q.id);
@@ -304,15 +319,22 @@ export function trainingSet(skillId, level, { questions, attempts, journal = {},
     }
     return n;
   };
-  const at = (d) => usable.filter((q) => (q.difficulty ?? 3) === d);
-  const misses = usable.filter((q) => due[q.id] && (q.difficulty ?? 3) <= level + 1);
-  take(misses, 2);
-  const stretch = level < 5 ? 2 : 0;
-  const review = level > 1 ? 1 : 0;
-  let left = take(at(level), count - picked.length - stretch - review);
-  left += take(at(level + 1), stretch) + take(at(level - 1), review);
-  // Not enough at this level: widen to the nearest levels.
-  for (const d of [level + 1, level - 1, level + 2, level - 2]) if (left > 0 && d >= 1 && d <= 5) left = take(at(d), left);
+  const near = [level + 1, level - 1, level + 2, level - 2].filter((d) => d >= 1 && d <= 5);
+  const fill = (cands, n, ordered) => {
+    const at = (d) => {
+      const xs = cands.filter((q) => (q.difficulty ?? 3) === d);
+      return ordered ? xs : shuffle(xs, rng);
+    };
+    if (n <= 0) return 0;
+    const stretch = level < 5 ? Math.min(2, n) : 0;
+    const review = level > 1 && n > stretch + 1 ? 1 : 0;
+    let left = take(at(level), n - stretch - review);
+    left += take(at(level + 1), stretch) + take(at(level - 1), review);
+    for (const d of near) if (left > 0) left = take(at(d), left);
+    return left;
+  };
+  const left = fill(never, count, false);
+  fill(old, left, true);
   // Keep RC passage questions together, LR shuffled.
   const rc = picked.filter((q) => q.passageId).sort((a, b) => (a.passageId < b.passageId ? -1 : a.passageId > b.passageId ? 1 : a.number - b.number));
   return [...shuffle(picked.filter((q) => !q.passageId), rng), ...rc];

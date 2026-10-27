@@ -17,7 +17,7 @@ const pct = (x) => `${Math.round(x * 100)}%`;
 
 export default function Stats() {
   const { attempts, sessions, questions, journal, saveSession } = useStore();
-  const done = Object.values(sessions).filter((s) => s.phase === 'done').sort((a, b) => a.finishedAt.localeCompare(b.finishedAt));
+  const done = Object.values(sessions).filter((s) => s.phase === 'done' && !s.abandoned).sort((a, b) => a.finishedAt.localeCompare(b.finishedAt));
 
   const byKind = useMemo(() => ['LR', 'RC'].map((kind) => {
     const rows = weaknessScores(attempts, { kinds: [kind] }).filter((r) => r.n > 0);

@@ -8,14 +8,23 @@ import { ACHIEVEMENTS, dayKey } from '../lib/progress.js';
 import { AchievementGrid, GoalRing, Heatmap } from '../components/ProgressWidgets.jsx';
 import { loadBundledTests } from '../lib/bundle.js';
 import BundleUpdate from '../components/BundleUpdate.jsx';
+import { startTraining } from './Diagnostic.jsx';
+import { LADDERS } from '../lib/diagnostic.js';
 import { createStaminaSession } from '../lib/stamina.js';
 
 /** Start a plan task; returns false if it has nothing to start. */
-export async function startTask(task, { tests, attempts, prefs, saveSession }) {
+export async function startTask(task, store) {
+  const { tests, attempts, prefs, saveSession } = store;
   const a = task.action;
   if (!a) return false;
   if (a.kind === 'link') { window.location.hash = a.href.replace(/^#/, ''); return true; }
   const queue = { day: dayKey(Date.now()), task: task.id };
+  // Skill training goes through the mastery path so it closes unfinished sets and never repeats questions.
+  if (a.kind === 'drill' && a.opts?.training) {
+    const { skill, level } = a.opts.training;
+    await startTraining(LADDERS.find((l) => l.id === skill), level, store, { queue });
+    return true;
+  }
   let session;
   if (a.kind === 'test') {
     const test = tests.find((t) => t.id === a.testId);
