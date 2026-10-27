@@ -51,7 +51,8 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
     const profile = skillProfile({ attempts, index, sessions, journal, now });
     const focus = priorities(profile).find((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution');
     const level = focus && (masteryTrack(focus, profile.rows, trainingPool(focus.id, questions)).next ?? 5);
-    const set = focus ? trainingSet(focus.id, level, { questions, attempts, journal }) : [];
+    const pending = Object.values(sessions).filter((x) => x.phase !== 'done').flatMap((x) => x.sections.flatMap((sec) => sec.qids));
+    const set = focus ? trainingSet(focus.id, level, { questions, attempts, journal, pending, now }) : [];
     if (set.length) {
       training = {
         id: 'weakness',

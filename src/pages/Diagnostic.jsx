@@ -31,10 +31,19 @@ export function useSkillProfile() {
   return useMemo(() => skillProfile({ attempts, index, sessions, journal }), [attempts, index, sessions, journal]);
 }
 
-/** Start a training set for a skill at its next mastery level. */
-export async function startTraining(skill, level, { questions, attempts, journal, saveSession }) {
-  const picked = trainingSet(skill.id, level, { questions, attempts, journal });
-  if (!picked.length) { alert('No training questions for this skill yet.'); return; }
+/** Questions sitting in unfinished sessions, so a new set doesn't repeat them. */
+export const pendingQids = (sessions) => Object.values(sessions)
+  .filter((s) => s.phase !== 'done').flatMap((s) => s.sections.flatMap((sec) => sec.qids));
+
+/** Start a training set for a skill at its next mastery level, or resume the unfinished one. */
+export async function startTraining(skill, level, { questions, attempts, journal, sessions, saveSession }) {
+  const open = Object.values(sessions).find((s) => s.phase !== 'done' && s.training?.skill === skill.id && s.training.level === level);
+  if (open) { navigate(`/session/${open.id}`); return; }
+  const picked = trainingSet(skill.id, level, { questions, attempts, journal, pending: pendingQids(sessions) });
+  if (!picked.length) {
+    alert(`You've answered every ${skill.title} question near level ${level} in the last two weeks. They come back after two weeks (and journal misses on their review dates). Train another skill in the meantime.`);
+    return;
+  }
   const s = await saveSession(createDrillSession(picked, {
     title: `Train ${skill.title}: level ${level}`, secondsPerQuestion: 80, training: { skill: skill.id, level },
   }));
@@ -75,6 +84,8 @@ export default function Diagnostic() {
     const t = tracks[skill.id];
     return startTraining(skill, t.next ?? 5, store);
   };
+  const openSet = (skill) => Object.values(store.sessions).some((x) => x.phase !== 'done' && x.training?.skill === skill.id && x.training.level === (tracks[skill.id].next ?? 5));
+  const unseenAt = (skill) => tracks[skill.id].levels[(tracks[skill.id].next ?? 5) - 1].unseen;
 
   if (!ladders.length) {
     return (
@@ -141,9 +152,12 @@ export default function Diagnostic() {
                     </div>
                     {s.n > 0 && <div className="muted small-text">{evidenceLine(s)}</div>}
                   </div>
-                  <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}>
-                    {s.diagnosis === 'no-data' ? 'Take ladder' : `Train level ${tracks[s.id].next ?? 5}`}
-                  </button>
+                  <div className="focus-action">
+                    <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}>
+                      {s.diagnosis === 'no-data' ? 'Take ladder' : `${openSet(s) ? 'Resume' : 'Train'} level ${tracks[s.id].next ?? 5}`}
+                    </button>
+                    {s.diagnosis !== 'no-data' && <span className="muted small-text">{unseenAt(s)} new at this level</span>}
+                  </div>
                 </div>
               ))}
             </div>
@@ -155,7 +169,8 @@ export default function Diagnostic() {
         <h2>Mastery path</h2>
         <p className="card-sub">
           Train one level at a time. A level is mastered when 3 of your last 4 answers there are right under time and none is still wrong
-          after blind review. Each set has 8 questions: mostly at your level, one below to keep it solid, and two above as a stretch, with
+          after blind review. Questions you've answered in the last two weeks are left out of new sets, and repeats within two weeks
+          don't count toward mastery, since by then you remember the answer. Each set has 8 questions: mostly at your level, one below to keep it solid, and two above as a stretch, with
           your journal misses mixed in. Diagnostic ladder questions are kept out so retests stay fresh.
         </p>
         <div className="table-wrap"><table className="table ladder-grid">
@@ -168,7 +183,7 @@ export default function Diagnostic() {
                   <td>{s.title}</td>
                   {t.levels.map((x) => (
                     <td key={x.level} className="center">
-                      <span className={`ladder-cell mc-${x.status}`} title={`${MASTERY_CELL[x.status].title}${x.recent ? ` · ${x.right} of last ${x.recent} right` : ''}${x.available ? ` · ${x.available} questions` : ''}`}>
+                      <span className={`ladder-cell mc-${x.status}`} title={`${MASTERY_CELL[x.status].title}${x.recent ? ` · ${x.right} of last ${x.recent} right` : ''}${x.available ? ` · ${x.unseen} of ${x.available} questions not answered in the last two weeks` : ''}`}>
                         {x.status === 'working' ? `${x.right}/${x.recent}` : MASTERY_CELL[x.status].label}
                       </span>
                     </td>
@@ -177,7 +192,7 @@ export default function Diagnostic() {
                   <td className="right">
                     {t.complete
                       ? <span className="oc-correct">Mastered</span>
-                      : <button className="small" onClick={() => train(s)}>Train L{t.next}</button>}
+                      : <button className="small" onClick={() => train(s)} title={`${t.levels[t.next - 1].unseen} new questions at level ${t.next}`}>{openSet(s) ? 'Resume' : 'Train'} L{t.next}</button>}
                   </td>
                 </tr>
               );

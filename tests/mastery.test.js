@@ -78,7 +78,7 @@ test('a level is mastered at 3 of the last 4 right with none still wrong after b
 
 test('training sets centre on the level, skip diagnostic questions, and lead with journal misses', () => {
   const { questions } = library();
-  const journal = { 'flaw-2-5': { status: 'new' } };
+  const journal = { 'flaw-2-5': { status: 'new', addedAt: '2026-09-01T00:00:00Z' } };
   const set = trainingSet('flaw', 3, { questions, attempts: [], journal });
   assert.equal(set.length, 8);
   assert.ok(set.some((q) => q.id === 'flaw-2-5'));
@@ -87,4 +87,38 @@ test('training sets centre on the level, skip diagnostic questions, and lead wit
   const byLevel = set.reduce((m, q) => ({ ...m, [q.difficulty]: (m[q.difficulty] || 0) + 1 }), {});
   assert.equal(byLevel[4], 2);
   assert.ok(byLevel[3] >= 4);
+});
+
+test('training sets skip questions answered recently, undue journal misses, and unfinished sets', () => {
+  const { questions } = library();
+  const nowMs = new Date('2026-10-21T00:00:00Z').getTime();
+  const recent = ['flaw-3-0', 'flaw-3-1', 'flaw-3-2'].map((qid) => att(qid, 'A', 'A', { at: '2026-10-20T00:00:00Z' }));
+  const old = att('flaw-3-3', 'A', 'A', { at: '2026-08-01T00:00:00Z' });
+  const journal = {
+    'flaw-3-0': { status: 'new', addedAt: '2026-10-20T12:00:00Z', retries: [] }, // just missed: review not due yet
+    'flaw-2-0': { status: 'new', addedAt: '2026-10-01T00:00:00Z', retries: [] }, // due
+  };
+  const set = trainingSet('flaw', 3, { questions, attempts: [...recent, old], journal, pending: ['flaw-3-4'], now: nowMs });
+  const ids = set.map((q) => q.id);
+  for (const id of ['flaw-3-0', 'flaw-3-1', 'flaw-3-2', 'flaw-3-4']) assert.ok(!ids.includes(id), id);
+  assert.ok(ids.includes('flaw-2-0'));
+  // With every nearby question answered yesterday, the set is empty rather than a repeat.
+  const everything = questions.filter((q) => q.types.includes('flaw')).map((q) => att(q.id, 'A', 'A', { at: '2026-10-20T00:00:00Z' }));
+  assert.equal(trainingSet('flaw', 3, { questions, attempts: everything, now: nowMs }).length, 0);
+});
+
+test('a question repeated within two weeks does not count toward mastery', () => {
+  const { questions, index } = library();
+  const attempts = [
+    att('flaw-1-0', 'B', 'B', { at: '2026-10-18T00:00:00Z' }),
+    att('flaw-1-0', 'A', 'A', { at: '2026-10-19T00:00:00Z' }),
+    att('flaw-1-0', 'A', 'A', { at: '2026-10-19T01:00:00Z' }),
+    att('flaw-1-0', 'A', 'A', { at: '2026-10-19T02:00:00Z' }),
+  ];
+  const p = skillProfile({ attempts, index, now });
+  const flaw = { ...p.skills.find((s) => s.id === 'flaw'), n: 0 };
+  const t = masteryTrack(flaw, p.rows, trainingPool('flaw', questions), now);
+  assert.equal(t.levels[0].recent, 1);
+  assert.notEqual(t.levels[0].status, 'mastered');
+  assert.equal(t.levels[0].unseen, 5);
 });

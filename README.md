@@ -74,7 +74,7 @@ It runs entirely in your browser. There's no account and no server, and your dat
     of improvement is worth.
   - *Mastery path:* train each skill one level at a time with 8-question sets: mostly at your level, one below, two
     above, with journal misses mixed in. A level is mastered when 3 of your last 4 answers there are right under time
-    and none is still wrong after blind review. Levels your results already cover are placed out. After each set,
+    and none is still wrong after blind review. Levels your results already cover are placed out. Questions you've answered in the last two weeks stay out of new sets (journal misses come back on their review dates), unfinished sets resume instead of starting over, and a repeat within two weeks doesn't count toward mastery. After each set,
     the results page shows your progress and starts the next one. Once you've taken the diagnostic, the daily plan
     trains your top-priority skill.
 - **Drills:**

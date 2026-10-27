@@ -15,6 +15,7 @@
 import { LADDERS, ladderOf } from './diagnostic.js';
 import { QUESTION_TYPES } from './taxonomy.js';
 import { groupBy, prioritize, shuffle } from './analytics.js';
+import { journalDueAt } from './progress.js';
 
 export const LEVELS = [1, 2, 3, 4, 5];
 const B = { 1: -2, 2: -1, 3: 0, 4: 1, 5: 2 };
@@ -91,12 +92,17 @@ export function estimateTheta(items, mu = 0, sd = 1) {
 /** Level on the 1–5 scale where your chance of getting a question right is 50%. */
 export const thetaToLevel = (theta) => Math.max(0.5, Math.min(5.5, theta + 3));
 
+// A question answered again sooner than this is remembered, not re-solved.
+export const RECENT_DAYS = 14;
+
 /**
  * Evidence for every answer, with how much it counts: recent answers count
- * more, and a repeat of a question you've seen counts less.
+ * more, and a repeat of a question you've seen counts less. `fresh` is false
+ * for a repeat within RECENT_DAYS of the last attempt at that question.
  */
 export function evidenceRows({ attempts, index, sessions = {}, now = Date.now() }) {
   const seen = new Set();
+  const lastAt = new Map();
   const sorted = [...attempts].sort((a, b) => (a.at < b.at ? -1 : 1));
   const rows = [];
   for (const a of sorted) {
@@ -108,8 +114,11 @@ export function evidenceRows({ attempts, index, sessions = {}, now = Date.now() 
     const reviewed = a.reviewed ?? sessions[a.sessionId]?.settings?.blindReview ?? true;
     const age = Math.max(0, (now - new Date(a.at).getTime()) / DAY_MS);
     const w = Math.pow(0.5, age / HALF_LIFE_DAYS) * (seen.has(a.qid) ? 0.5 : 1);
+    const prev = lastAt.get(a.qid);
+    const fresh = prev == null || new Date(a.at) - prev >= RECENT_DAYS * DAY_MS;
     seen.add(a.qid);
-    rows.push({ a, q, kind, d: q.difficulty ?? 3, skills: skillsOf(q, kind), ev: evidenceOf(a, reviewed), w });
+    lastAt.set(a.qid, new Date(a.at).getTime());
+    rows.push({ a, q, kind, d: q.difficulty ?? 3, skills: skillsOf(q, kind), ev: evidenceOf(a, reviewed), w, fresh });
   }
   return rows;
 }
@@ -236,23 +245,29 @@ export function trainingPool(skillId, questions) {
 /**
  * Mastery status at each level of a skill. A level is mastered when, of your
  * last four answers at that level, at least three were right under time and
- * none was still wrong after blind review. Levels below where your timed
- * ability says you'd get about 70% right are placed out.
+ * none was still wrong after blind review. Only fresh answers count: a
+ * question repeated within two weeks is remembered, not re-solved. Levels
+ * below where your timed ability says you'd get about 70% right are placed out.
+ * `unseen` counts the level's questions you haven't answered in two weeks.
  */
-export function masteryTrack(skill, rows, pool) {
-  const mine = rows.filter((r) => r.skills.includes(skill.id));
+export function masteryTrack(skill, rows, pool, now = Date.now()) {
+  const all = rows.filter((r) => r.skills.includes(skill.id));
+  const mine = all.filter((r) => r.fresh);
+  const recentIds = new Set(all.filter((r) => now - new Date(r.a.at).getTime() < RECENT_DAYS * DAY_MS).map((r) => r.a.qid));
   const placement = skill.n >= 3 ? Math.max(1, Math.min(5, Math.round(skill.timed.theta + 3 - 0.85))) : 1;
   const levels = LEVELS.map((level) => {
     const recent = mine.filter((r) => r.d === level).slice(-MASTERY_WINDOW);
     const right = recent.filter((r) => r.ev === 'correct' || r.ev === 'br-broke').length;
     const genuine = recent.filter((r) => r.ev === 'genuine' || r.ev === 'unreviewed').length;
-    const available = pool.filter((q) => (q.difficulty ?? 3) === level).length;
+    const atLevel = pool.filter((q) => (q.difficulty ?? 3) === level);
+    const available = atLevel.length;
+    const unseen = atLevel.filter((q) => !recentIds.has(q.id)).length;
     let status;
     if (recent.length >= 3 && right >= Math.ceil(0.75 * recent.length) && genuine === 0) status = 'mastered';
     else if (level < placement) status = 'placed';
     else if (!available && !recent.length) status = 'none';
     else status = recent.length ? 'working' : 'new';
-    return { level, status, recent: recent.length, right, genuine, available };
+    return { level, status, recent: recent.length, right, genuine, available, unseen };
   });
   let through = 0;
   for (const x of levels) {
@@ -263,17 +278,24 @@ export function masteryTrack(skill, rows, pool) {
 }
 
 /**
- * A training set for one skill at one level: due journal misses first, then
- * mostly questions at the level, one from the level below to keep it solid,
- * and a couple from the level above as a stretch.
+ * A training set for one skill at one level: journal misses whose spaced
+ * review is due first, then mostly questions at the level, one from the level
+ * below to keep it solid, and a couple from the level above as a stretch.
+ * Questions answered in the last two weeks, or sitting in an unfinished set
+ * (`pending`), are skipped unless their review is due; when too few are left
+ * the set is shorter rather than repeating what you just did.
  */
-export function trainingSet(skillId, level, { questions, attempts, journal = {}, count = 8, rng = Math.random }) {
+export function trainingSet(skillId, level, { questions, attempts, journal = {}, pending = [], count = 8, now = Date.now(), rng = Math.random }) {
   const pool = trainingPool(skillId, questions);
   const attemptsByQid = groupBy(attempts, (a) => a.qid);
+  const due = Object.fromEntries(Object.entries(journal).filter(([, e]) => journalDueAt(e) <= now));
+  const recent = new Set(pending);
+  for (const a of attempts) if (now - new Date(a.at).getTime() < RECENT_DAYS * DAY_MS) recent.add(a.qid);
+  const usable = pool.filter((q) => due[q.id] || !recent.has(q.id));
   const used = new Set();
   const picked = [];
   const take = (cands, n) => {
-    for (const q of prioritize(cands, { attemptsByQid, journal, rng })) {
+    for (const q of prioritize(cands, { attemptsByQid, journal: due, rng })) {
       if (n <= 0) break;
       if (used.has(q.id)) continue;
       used.add(q.id);
@@ -282,8 +304,8 @@ export function trainingSet(skillId, level, { questions, attempts, journal = {},
     }
     return n;
   };
-  const at = (d) => pool.filter((q) => (q.difficulty ?? 3) === d);
-  const misses = pool.filter((q) => journal[q.id] && journal[q.id].status !== 'mastered' && (q.difficulty ?? 3) <= level + 1);
+  const at = (d) => usable.filter((q) => (q.difficulty ?? 3) === d);
+  const misses = usable.filter((q) => due[q.id] && (q.difficulty ?? 3) <= level + 1);
   take(misses, 2);
   const stretch = level < 5 ? 2 : 0;
   const review = level > 1 ? 1 : 0;
