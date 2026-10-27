@@ -3,7 +3,9 @@ import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
-import { DIAGNOSIS, masteryTrack, predictScore, priorities, shownEntries, skillProfile, trainingPool, trainingSet } from '../lib/mastery.js';
+import {
+  DIAGNOSIS, freshHardCount, masteryTrack, mixedSet, predictScore, priorities, seenIds, shownEntries, skillProfile, trainingPool, trainingSet,
+} from '../lib/mastery.js';
 import { createDrillSession } from '../lib/session.js';
 import { loadBundledTests } from '../lib/bundle.js';
 
@@ -52,7 +54,7 @@ export function resumeTraining(skill, { sessions }) {
  * blind review if you never reached it), and none of their questions, answered
  * or not, go into the new set.
  */
-export async function startTraining(skill, level, { questions, attempts, sessions, saveSession, finishSession }, extra = {}) {
+export async function startTraining(skill, level, { questions, attempts, sessions, saveSession, finishSession }, extra = {}, count = 8) {
   const seenInOpen = [];
   for (const old of openTraining(sessions, skill.id)) {
     old.sections.forEach((sec) => seenInOpen.push(...sec.qids));
@@ -70,7 +72,7 @@ export async function startTraining(skill, level, { questions, attempts, session
   }
   const closed = new Set(openTraining(sessions, skill.id).map((x) => x.id));
   const pending = [...pendingQids(Object.fromEntries(Object.entries(sessions).filter(([id]) => !closed.has(id)))), ...seenInOpen];
-  const picked = trainingSet(skill.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending });
+  const picked = trainingSet(skill.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending, count });
   if (!picked.length) {
     alert(`You've answered every ${skill.title} question near level ${level}. Questions you answered at least two weeks ago come back after that; until then, train another skill.`);
     return;
@@ -81,6 +83,27 @@ export async function startTraining(skill, level, { questions, attempts, session
   });
   navigate(`/session/${s.id}`);
 }
+
+/**
+ * Start a mixed set: about 60% from your weak spots and 40% variety (skills you
+ * haven't practiced in a while first), all questions you've never seen, mostly level 3+.
+ */
+export async function startMixed({ questions, attempts, index, sessions, journal, saveSession }, extra = {}) {
+  const profile = skillProfile({ attempts, index, sessions, journal });
+  const tracks = Object.fromEntries(profile.skills.map((x) => [x.id, masteryTrack(x, profile.rows, trainingPool(x.id, questions))]));
+  const mix = mixedSet({ profile, tracks, questions, seen: seenIds({ attempts, sessions }) });
+  if (!mix.questions.length) { alert('There are no questions left that you haven\'t seen.'); return; }
+  const title = (id) => LADDERS.find((l) => l.id === id)?.title;
+  const s = await saveSession({
+    ...createDrillSession(mix.questions, { title: `Mixed set: ${mix.weak.map(title).join(', ')} + variety`, secondsPerQuestion: 80 }),
+    mix: { weak: mix.weak, variety: mix.variety },
+    ...extra,
+  });
+  navigate(`/session/${s.id}`);
+}
+
+const ago = (s) => (s.daysSince == null ? 'never practiced'
+  : `last practiced ${s.daysSince < 1 ? 'today' : `${Math.floor(s.daysSince)} day${Math.floor(s.daysSince) === 1 ? '' : 's'} ago`}, ${s.answersSince} answer${s.answersSince === 1 ? '' : 's'} ago`);
 
 function evidenceLine(s) {
   const parts = [`${s.counts.correct + s.counts['br-broke']} right`];
@@ -117,6 +140,8 @@ export default function Diagnostic() {
     return startTraining(skill, t.next ?? 5, store);
   };
   const openSet = (skill) => openTraining(store.sessions, skill.id).length > 0;
+  const seen = useMemo(() => seenIds({ attempts, sessions: store.sessions }), [attempts, store.sessions]);
+  const freshHard = (skill) => freshHardCount(skill.id, questions, seen);
   const unseenAt = (skill) => tracks[skill.id].levels[(tracks[skill.id].next ?? 5) - 1].unseen;
 
   if (!ladders.length) {
@@ -132,6 +157,9 @@ export default function Diagnostic() {
   const count = diagnosticOrder(diagnosticQuestions, [...selected]).length;
   const enough = prediction.n >= MIN_FOR_SCORE;
   const focus = ranked.filter((s) => s.diagnosis !== 'strong' && s.diagnosis !== 'solid').slice(0, 5);
+  const focusIds = new Set(focus.map((s) => s.id));
+  const stale = profile.skills.filter((s) => s.stale && !focusIds.has(s.id))
+    .sort((a, b) => (b.answersSince ?? 0) - (a.answersSince ?? 0)).slice(0, 4);
 
   return (
     <div className="stack">
@@ -168,6 +196,13 @@ export default function Diagnostic() {
             Ranked by how many points one level of improvement is worth, with genuine gaps (still wrong after blind review) ahead of
             execution slips (fixed in blind review). Misses you fix in blind review count as slips, not as a weak skill.
           </p>
+          <div className="mix-box">
+            <div>
+              <strong>Mixed set</strong>
+              <div className="small-text">10 questions you've never seen, mostly level 3–5: about 6 from your weak spots below and 4 for variety, led by skills you haven't practiced in a while.</div>
+            </div>
+            <button className="primary" onClick={() => startMixed(store)}>▶ Start mixed set</button>
+          </div>
           {focus.length === 0 ? <p className="muted">Every skill with data is solid or strong. Keep training at higher levels below.</p> : (
             <div className="focus-list">
               {focus.map((s) => (
@@ -182,7 +217,7 @@ export default function Diagnostic() {
                       {s.diagnosis !== 'no-data' && <>Skill level {s.level.toFixed(1)} after blind review · {s.timedLevel.toFixed(1)} under time. </>}
                       {DIAGNOSIS[s.diagnosis].tip}
                     </div>
-                    {s.n > 0 && <div className="muted small-text">{evidenceLine(s)}</div>}
+                    {s.n > 0 && <div className="muted small-text">{evidenceLine(s)} · {ago(s)}</div>}
                   </div>
                   <div className="focus-action">
                     <div className="row">
@@ -192,11 +227,30 @@ export default function Diagnostic() {
                         {s.diagnosis === 'no-data' ? 'Take ladder' : `${openSet(s) ? 'New set' : 'Train'} · level ${tracks[s.id].next ?? 5}`}
                       </button>
                     </div>
-                    {s.diagnosis !== 'no-data' && <span className="muted small-text">{unseenAt(s)} new at this level</span>}
+                    {s.diagnosis !== 'no-data' && <span className="muted small-text">{unseenAt(s)} new at this level · {freshHard(s)} new at level 3+</span>}
                   </div>
                 </div>
               ))}
             </div>
+          )}
+          {stale.length > 0 && (
+            <>
+              <h3>Keep fresh</h3>
+              <p className="card-sub">Skills you haven't practiced in a while. A quick 4-question check-in keeps them sharp, or shows they've slipped.</p>
+              <div className="focus-list">
+                {stale.map((s) => (
+                  <div key={s.id} className="focus-item">
+                    <div className="focus-main">
+                      <div className="row"><strong>{s.title}</strong><span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span></div>
+                      <div className="muted small-text">Skill level {s.level.toFixed(1)} · {ago(s)} · {freshHard(s)} new at level 3+</div>
+                    </div>
+                    <div className="focus-action">
+                      <button className="small" onClick={() => startTraining(s, Math.max(3, tracks[s.id].next ?? 5), store, {}, 4)}>Check in</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
           )}
         </section>
       )}

@@ -8,7 +8,7 @@ import { ACHIEVEMENTS, dayKey } from '../lib/progress.js';
 import { AchievementGrid, GoalRing, Heatmap } from '../components/ProgressWidgets.jsx';
 import { loadBundledTests } from '../lib/bundle.js';
 import BundleUpdate from '../components/BundleUpdate.jsx';
-import { startTraining } from './Diagnostic.jsx';
+import { startMixed, startTraining } from './Diagnostic.jsx';
 import { LADDERS } from '../lib/diagnostic.js';
 import { createStaminaSession } from '../lib/stamina.js';
 
@@ -19,6 +19,7 @@ export async function startTask(task, store) {
   if (!a) return false;
   if (a.kind === 'link') { window.location.hash = a.href.replace(/^#/, ''); return true; }
   const queue = { day: dayKey(Date.now()), task: task.id };
+  if (a.kind === 'mixed') { await startMixed(store, { queue }); return true; }
   // Skill training goes through the mastery path so it closes unfinished sets and never repeats questions.
   if (a.kind === 'drill' && a.opts?.training) {
     const { skill, level } = a.opts.training;

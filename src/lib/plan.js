@@ -4,7 +4,7 @@ import { buildDrill, categoryStats, shuffle } from './analytics.js';
 import { categoryLabel } from './taxonomy.js';
 import { dayKey, isWrittenUp } from './progress.js';
 import { STAMINA_LEVELS, currentLevel, staminaHistory } from './stamina.js';
-import { masteryTrack, priorities, shownEntries, skillProfile, trainingPool, trainingSet } from './mastery.js';
+import { priorities, seenIds, skillProfile } from './mastery.js';
 
 const DAY_MS = 86_400_000;
 const WEEK_MS = 7 * DAY_MS;
@@ -19,7 +19,7 @@ export function weakestCategory(attempts) {
 /**
  * Tasks for today. Each has { id, icon, title, detail, done, action } where
  * action is { kind: 'drill', questions, opts } | { kind: 'test', testId } |
- * { kind: 'link', href } | { kind: 'stamina', level }.
+ * { kind: 'link', href } | { kind: 'stamina', level } | { kind: 'mixed' }.
  */
 export function dailyPlan({ tests, sessions, attempts, journal, index, questions, progress, now = Date.now() }) {
   const today = dayKey(now);
@@ -43,26 +43,23 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
     } : null,
   });
 
-  // 2. After the diagnostic: the next mastery-path set for the skill worth the most points.
-  //    Before it: a weak-spot drill on the weakest category (or a smart drill before there's data).
+  // 2. After the diagnostic: a mixed set of fresh, mostly hard questions (about 60% weak spots,
+  //    40% variety). Before it: a weak-spot drill on the weakest category (or a smart drill).
   const diagnosed = Object.values(sessions).some((s) => s.phase === 'done' && s.kind === 'diagnostic');
   let training = null;
   if (diagnosed) {
     const profile = skillProfile({ attempts, index, sessions, journal, now });
-    const focus = priorities(profile).find((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution');
-    const level = focus && (masteryTrack(focus, profile.rows, trainingPool(focus.id, questions)).next ?? 5);
-    const pending = Object.values(sessions).filter((x) => x.phase !== 'done').flatMap((x) => x.sections.flatMap((sec) => sec.qids));
-    const set = focus ? trainingSet(focus.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending, now }) : [];
-    if (set.length) {
+    const weakest = priorities(profile).filter((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution').slice(0, 2);
+    const seen = seenIds({ attempts, sessions });
+    const fresh = questions.some((q) => !seen.has(q.id));
+    if (fresh) {
       training = {
         id: 'weakness',
         icon: '🎯',
-        title: `Train ${focus.title}: level ${level}`,
-        detail: focus.diagnosis === 'gap'
-          ? 'Your biggest skill gap by points. 8 questions at test pace, then blind review.'
-          : 'You fix these in blind review but miss them under time. 8 questions at test pace: read every stem twice.',
+        title: weakest.length ? `Mixed set: ${weakest.map((s) => s.title).join(', ')} + variety` : 'Mixed set',
+        detail: '10 questions you haven\'t seen, mostly level 3–5: about 6 from your weak spots and 4 for variety, led by skills you haven\'t practiced in a while.',
         done: doneToday.has('weakness'),
-        action: { kind: 'drill', questions: set, opts: { title: `Train ${focus.title}: level ${level}`, secondsPerQuestion: 80, training: { skill: focus.id, level } } },
+        action: { kind: 'mixed' },
       };
     }
   }

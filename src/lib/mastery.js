@@ -93,6 +93,9 @@ export const thetaToLevel = (theta) => Math.max(0.5, Math.min(5.5, theta + 3));
 
 // A question answered again sooner than this is remembered, not re-solved.
 export const RECENT_DAYS = 14;
+// A skill you haven't practiced for this many answers or days is due a check-in.
+export const STALE_ANSWERS = 100;
+export const STALE_DAYS = 10;
 
 /**
  * Evidence for every answer, with how much it counts: recent answers count
@@ -156,7 +159,14 @@ export function skillProfile({ attempts, index, sessions = {}, journal = {}, now
     else if (gap >= 0.6 && counts.execution >= 2) diagnosis = 'execution';
     else if (timedLevel >= 4.5) diagnosis = 'strong';
     else diagnosis = 'solid';
-    return { ...l, n: rs.length, counts, traps, timed, understanding, level, timedLevel, diagnosis };
+    // How long since you last practiced it, in answers and days.
+    let lastIdx = -1;
+    for (let i = rows.length - 1; i >= 0; i--) if (rows[i].skills.includes(l.id)) { lastIdx = i; break; }
+    const lastAt = lastIdx >= 0 ? rows[lastIdx].a.at : null;
+    const answersSince = lastIdx >= 0 ? rows.length - 1 - lastIdx : null;
+    const daysSince = lastAt ? (now - new Date(lastAt).getTime()) / DAY_MS : null;
+    const stale = rs.length >= 3 && (answersSince >= STALE_ANSWERS || daysSince >= STALE_DAYS);
+    return { ...l, n: rs.length, counts, traps, timed, understanding, level, timedLevel, diagnosis, lastAt, answersSince, daysSince, stale };
   });
   return { global, skills, rows };
 }
@@ -338,4 +348,85 @@ export function trainingSet(skillId, level, { questions, attempts, pending = [],
   // Keep RC passage questions together, LR shuffled.
   const rc = picked.filter((q) => q.passageId).sort((a, b) => (a.passageId < b.passageId ? -1 : a.passageId > b.passageId ? 1 : a.number - b.number));
   return [...shuffle(picked.filter((q) => !q.passageId), rng), ...rc];
+}
+
+// ---- mixed sets -------------------------------------------------------------
+
+/** Ids of every question you've answered, been shown in a closed set, or have in an unfinished one. */
+export function seenIds({ attempts, sessions = {} }) {
+  const ids = new Set(attempts.map((a) => a.qid));
+  for (const s of Object.values(sessions)) {
+    if (s.phase !== 'done') s.sections.forEach((sec) => sec.qids.forEach((id) => ids.add(id)));
+    (s.shownQids || []).forEach((id) => ids.add(id));
+  }
+  return ids;
+}
+
+/** How many questions training a skill you've never seen, at level 3 and above. */
+export function freshHardCount(skillId, questions, seen) {
+  return trainingPool(skillId, questions).filter((q) => (q.difficulty ?? 3) >= 3 && !seen.has(q.id)).length;
+}
+
+/**
+ * A short mixed set of questions you've never seen, mostly hard: about 60% from
+ * your weak spots (genuine gaps first, then execution problems) at or above
+ * each one's mastery level, and 40% variety, led by skills you haven't
+ * practiced in a while. Reading questions come with up to two fresh questions
+ * from the same passage so a passage isn't read for one question.
+ */
+export function mixedSet({ profile, tracks, questions, seen, count = 10, weakShare = 0.6, rng = Math.random }) {
+  const ranked = priorities(profile);
+  let weak = ranked.filter((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution').slice(0, 3);
+  if (!weak.length) weak = [...profile.skills].filter((s) => s.n >= 3).sort((a, b) => a.level - b.level).slice(0, 2);
+  const weakIds = new Set(weak.map((s) => s.id));
+  // Variety: skills overdue for a check-in first, then ones with little data, then the least recently practiced.
+  const varietyRank = (x) => (x.stale ? 0 : x.n < 3 ? 1 : 2);
+  const variety = profile.skills.filter((x) => !weakIds.has(x.id))
+    .sort((a, b) => varietyRank(a) - varietyRank(b) || (a.lastAt || '').localeCompare(b.lastAt || ''));
+  const used = new Set();
+  const picked = [];
+  const tag = new Map();
+  const fresh = (q) => !seen.has(q.id) && !used.has(q.id);
+  const add = (q, role) => { used.add(q.id); picked.push(q); tag.set(q.id, role); };
+
+  // One question for a skill, as hard as its level allows, never seen.
+  const takeOne = (skill, role, room) => {
+    const target = Math.max(3, tracks[skill.id]?.next ?? Math.round(skill.timedLevel) ?? 3);
+    const pool = trainingPool(skill.id, questions).filter(fresh);
+    const order = [target, target + 1, target - 1, target + 2, 5, 4, 3].filter((d, i, a) => d >= 3 && d <= 5 && a.indexOf(d) === i);
+    let cands = [];
+    for (const d of order) { cands = shuffle(pool.filter((q) => (q.difficulty ?? 3) === d), rng); if (cands.length) break; }
+    if (!cands.length) cands = shuffle(pool, rng);
+    const q = cands[0];
+    if (!q) return 0;
+    add(q, role);
+    let n = 1;
+    if (q.passageId) {
+      const siblings = questions.filter((x) => x.passageId === q.passageId && x.testId === q.testId && fresh(x))
+        .sort((a, b) => (b.difficulty ?? 3) - (a.difficulty ?? 3));
+      for (const x of siblings.slice(0, Math.max(0, Math.min(2, room - 1)))) { add(x, role); n += 1; }
+    }
+    return n;
+  };
+  const fill = (skills, role, slots) => {
+    let left = slots;
+    let idle = 0;
+    for (let i = 0; left > 0 && skills.length && idle < skills.length; i = (i + 1) % skills.length) {
+      const got = takeOne(skills[i], role, left);
+      if (got) { left -= got; idle = 0; } else idle += 1;
+    }
+    return left;
+  };
+  const nWeak = Math.round(count * weakShare);
+  const weakLeft = fill(weak, 'weak', nWeak);
+  const varLeft = fill(variety, 'variety', count - nWeak + weakLeft);
+  if (varLeft > 0) fill(weak, 'weak', varLeft);
+  const lr = shuffle(picked.filter((q) => !q.passageId), rng);
+  const rc = picked.filter((q) => q.passageId).sort((a, b) => (a.passageId < b.passageId ? -1 : a.passageId > b.passageId ? 1 : a.number - b.number));
+  return {
+    questions: [...lr, ...rc],
+    weak: weak.map((s) => s.id),
+    variety: [...new Set(picked.filter((q) => tag.get(q.id) === 'variety').flatMap((q) => skillsOf(q, q.kind).filter((id) => !weakIds.has(id)).slice(0, 1)))],
+    counts: { weak: picked.filter((q) => tag.get(q.id) === 'weak').length, variety: picked.filter((q) => tag.get(q.id) === 'variety').length },
+  };
 }

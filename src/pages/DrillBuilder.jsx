@@ -4,6 +4,7 @@ import { navigate } from '../lib/nav.js';
 import { allocate, buildDrill, shuffle, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
 import { PageHeader } from '../components/Layout.jsx';
+import { startMixed } from './Diagnostic.jsx';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoriesOf, categoryLabel, typeLabel, typesForKind } from '../lib/taxonomy.js';
 
 const MODES = [
@@ -20,7 +21,8 @@ const PACES = [
 ];
 
 export default function DrillBuilder() {
-  const { questions, index, attempts, journal, sessions, progress, saveSession } = useStore();
+  const store = useStore();
+  const { questions, index, attempts, journal, sessions, progress, saveSession } = store;
   const [mode, setMode] = useState('smart');
   const [kinds, setKinds] = useState(['LR']);
   const [types, setTypes] = useState([]);
@@ -89,6 +91,13 @@ export default function DrillBuilder() {
         title="Drills"
         subtitle="Short, focused sets. Pick how questions are chosen, then set the length and pacing."
       />
+      <div className="mix-box">
+        <div>
+          <strong>Mixed set</strong>
+          <div className="small-text">10 questions you've never seen, mostly level 3–5: about 6 from your weak spots and 4 for variety, led by skills you haven't practiced in a while.</div>
+        </div>
+        <button className="primary" onClick={() => startMixed(store)}>▶ Start mixed set</button>
+      </div>
       <div className="mode-cards" role="radiogroup" aria-label="Drill type">
         {MODES.map((m) => (
           <button key={m.id} role="radio" aria-checked={mode === m.id} className={`mode-card ${mode === m.id ? 'active' : ''}`} onClick={() => setMode(m.id)}>

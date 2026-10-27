@@ -679,3 +679,5 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 .sync-box code { word-break: break-all; }
 .focus-action { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }
 @media (max-width: 640px) { .focus-action { align-items: stretch; } }
+.mix-box { display: flex; gap: 1rem; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; border-radius: var(--radius-sm); background: var(--accent-soft); margin: 0.5rem 0 0.75rem; }
+@media (max-width: 640px) { .mix-box { flex-direction: column; align-items: stretch; } }

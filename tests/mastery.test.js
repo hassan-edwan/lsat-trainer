@@ -134,3 +134,36 @@ test('questions a closed set showed you count as seen', () => {
   const ids = trainingSet('flaw', 3, { questions, attempts: shownEntries(sessions), now: nowMs }).map((q) => q.id);
   for (const id of sessions.s1.shownQids) assert.ok(!ids.includes(id), id);
 });
+
+test('mixed sets are about 60% weak spots and 40% variety, all unseen and mostly hard', async () => {
+  const { mixedSet, seenIds } = await import('../src/lib/mastery.js');
+  const { questions, index } = library();
+  // Weaken: still wrong after blind review (a gap). Flaw and NA: answered well.
+  const attempts = [];
+  for (const d of [1, 2, 3]) for (let i = 0; i < 2; i++) {
+    attempts.push(att(`weaken-${d}-${i}`, 'B', 'C'));
+    attempts.push(att(`flaw-${d}-${i}`, 'A'));
+    attempts.push(att(`necessary-assumption-${d}-${i}`, 'A'));
+  }
+  const p = skillProfile({ attempts, index, now });
+  const tracks = Object.fromEntries(p.skills.map((s) => [s.id, masteryTrack(s, p.rows, trainingPool(s.id, questions), now)]));
+  const seen = seenIds({ attempts });
+  const mix = mixedSet({ profile: p, tracks, questions, seen });
+  assert.equal(mix.questions.length, 10);
+  assert.deepEqual(mix.weak, ['weaken']);
+  assert.equal(mix.counts.weak, 6);
+  assert.equal(mix.counts.variety, 4);
+  assert.ok(mix.questions.every((q) => !seen.has(q.id)));
+  assert.ok(mix.questions.filter((q) => q.difficulty >= 3).length >= 9);
+  assert.equal(mix.questions.filter((q) => q.types.includes('weaken')).length, 6);
+});
+
+test('a skill not practiced for 100 answers or 10 days is due a check-in', () => {
+  const { index } = library();
+  const old = ['flaw-1-0', 'flaw-2-0', 'flaw-3-0'].map((qid) => att(qid, 'A', 'A', { at: '2026-10-01T00:00:00Z' }));
+  const fresh = ['weaken-1-0', 'weaken-2-0', 'weaken-3-0'].map((qid) => att(qid, 'A', 'A', { at: '2026-10-20T00:00:00Z' }));
+  const p = skillProfile({ attempts: [...old, ...fresh], index, now });
+  assert.equal(p.skills.find((s) => s.id === 'flaw').stale, true);
+  assert.equal(p.skills.find((s) => s.id === 'weaken').stale, false);
+  assert.equal(p.skills.find((s) => s.id === 'flaw').answersSince, 3);
+});

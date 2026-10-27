@@ -72,6 +72,10 @@ It runs entirely in your browser. There's no account and no server, and your dat
     section), with a likely range. A second number shows your score with no execution slips.
   - *What to work on:* genuine gaps first, then execution problems, each ranked by how many scaled points one level
     of improvement is worth.
+  - *Mixed sets:* 10 questions you've never seen, mostly level 3–5: about 6 from your weak spots and 4 for variety,
+    led by skills you haven't practiced in a while. They're on the Skills page, on the Drills page, and in the daily plan.
+  - *Keep fresh:* a skill you haven't practiced in 100 answers or 10 days gets a 4-question check-in, so a skill you've
+    stopped drilling stays sharp or shows that it has slipped.
   - *Mastery path:* train each skill one level at a time with 8-question sets: mostly at your level, one below, two
     above, with journal misses mixed in. A level is mastered when 3 of your last 4 answers there are right under time
     and none is still wrong after blind review. Levels your results already cover are placed out. Every set is questions you haven't seen. Anything a set showed you counts as seen, answered or not. Questions only come back once a skill's nearby levels are used up, oldest first and never within two weeks, and a repeat within two weeks doesn't count toward mastery. An unfinished set can be resumed, or replaced with a new set, which scores what you'd answered. Journal misses return in the daily mistake review, not in training sets. After each set,
