@@ -8,6 +8,13 @@ import { paceSec } from '../lib/passages.js';
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 // Matches the August 2026 LSAT interface: four colors, each with its own underline style.
 const HL_COLORS = ['yellow', 'pink', 'green', 'blue'];
+// A color system for reading passages, shown on the reading card and in the highlight buttons' tooltips.
+const RC_KEY = {
+  yellow: { label: "Author's view", hint: 'main point, conclusions' },
+  pink: { label: 'Other views', hint: 'who claims what' },
+  green: { label: 'Turns and tone', hint: 'however, recently, unfortunately' },
+  blue: { label: 'Details to find again', hint: 'definitions, lists, examples' },
+};
 const SAVE_EVERY_MS = 4000;
 
 function highlightKey(entry) {
@@ -348,7 +355,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         </div>
         <div className="exam-tools">
           {HL_COLORS.map((c) => (
-            <button key={c} className={`tool swatch hl-${c} ${tool === c ? 'on' : ''}`} title={`Highlight (${c})`} onClick={() => setTool(tool === c ? null : c)} />
+            <button key={c} className={`tool swatch hl-${c} ${tool === c ? 'on' : ''}`} title={sec.kind === 'RC' ? `Highlight ${c}: ${RC_KEY[c].label.toLowerCase()} (${RC_KEY[c].hint})` : `Highlight (${c})`} onClick={() => setTool(tool === c ? null : c)} />
           ))}
           <button className={`tool ${tool === 'erase' ? 'on' : ''}`} title="Erase highlights: select highlighted text" onClick={() => setTool(tool === 'erase' ? null : 'erase')}>⌫</button>
  <button className={`tool ${masking ? 'on' : ''}`} title="Response masking: click choices to gray them out" onClick={() => setMasking((m) => !m)}>{masking ? 'Masking on' : 'Masking'}</button>
@@ -432,6 +439,15 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
               <div className="q-number">Reading the passage</div>
               <div className="reading-time">{formatMs(readMs)}</div>
               <p>Your question clock is stopped while you read. The section clock keeps running, as on test day.</p>
+              <div className="hl-key" role="group" aria-label="Highlight colors">
+                {HL_COLORS.map((c) => (
+                  <button key={c} className={`hl-key-item ${tool === c ? 'on' : ''}`} onClick={() => setTool(tool === c ? null : c)} title={`Highlight in ${c}`}>
+                    <span className={`hl-key-swatch hl-${c}`} aria-hidden="true" />
+                    <span><strong>{RC_KEY[c].label}</strong> <span className="muted">{RC_KEY[c].hint}</span></span>
+                  </button>
+                ))}
+              </div>
+              <p className="muted small-text">Keep it to 1–3 short phrases per paragraph. Pick a color here or in the toolbar, then select text in the passage.</p>
               <button className="primary big" onClick={startQuestions}>Start the questions ▶</button>
               <p className="muted small-text">Enter also starts. Turn this off with the 📖 button.</p>
             </div>

@@ -112,6 +112,9 @@ It runs entirely in your browser. There's no account and no server, and your dat
   question. Your reading time is recorded separately, the question clock stays stopped, and you press *Start the
   questions* (or Enter) when you're done reading. The section clock keeps running as on test day. Results split
   each passage into reading and answering time. The 📖 button turns it off.
+- **Highlight key for RC:** the reading card shows what each color is for: yellow for the author's view, pink for other
+  views, green for turns and tone words, blue for details to find again. Click a row to pick that highlighter; in
+  RC the toolbar colors' tooltips say the same.
 - **Pause:** the ⏸ button (or the P key) stops the section clock and the question clock and hides the question
   until you press *Resume* (or P, Enter or Space). A pause survives closing the app. The real test has no pause, so
   stamina results list how many times and how long you paused.
