@@ -77,6 +77,11 @@ export function createSectionsSession(sections, { kind, title, breakAfterSection
   });
 }
 
+// RC pace on the real test: 35 minutes for about 4 passages and 27 questions, which is roughly
+// 3.5 minutes to read each passage plus about 47 seconds per question (at the default 80-second LR pace).
+const RC_READ_SEC = 210;
+const RC_QUESTION_SEC = 47;
+
 export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill', instant = false, training = null } = {}) {
   // RC questions from the same passage are kept together so the passage is read once.
   const ordered = [];
@@ -86,18 +91,28 @@ export function createDrillSession(questions, { title = 'Drill', secondsPerQuest
     const group = q.passageId ? questions.filter((x) => x.passageId === q.passageId && x.testId === q.testId) : [q];
     group.sort((a, b) => a.number - b.number).forEach((x) => { seen.add(x.id); ordered.push(x); });
   }
-  const kinds = new Set(ordered.map((q) => q.kind));
+  // LR and RC run as separate sections with their own clocks: RC needs reading time per
+  // passage, so a single per-question pace would be too generous for LR and too tight for RC.
+  const lr = ordered.filter((q) => !q.passageId);
+  const rc = ordered.filter((q) => q.passageId);
+  const groups = [lr, rc].filter((g) => g.length);
+  const scale = secondsPerQuestion / 80;
+  const limit = (g) => {
+    if (!secondsPerQuestion || instant) return null; // instant-feedback drills are self-paced
+    if (!g[0].passageId) return Math.round(secondsPerQuestion * g.length);
+    const passages = new Set(g.map((q) => `${q.testId}:${q.passageId}`)).size;
+    return Math.round(scale * (RC_READ_SEC * passages + RC_QUESTION_SEC * g.length));
+  };
   const session = baseSession({
     kind,
     title,
-    sections: [{
-      title,
-      kind: kinds.size === 1 ? [...kinds][0] : 'MIXED',
-      // Instant-feedback drills are self-paced (time per question is still shown).
-      timeLimitSec: secondsPerQuestion && !instant ? secondsPerQuestion * ordered.length : null,
+    sections: groups.map((g) => ({
+      title: groups.length > 1 ? (g[0].passageId ? 'Reading Comprehension' : 'Logical Reasoning') : title,
+      kind: g[0].passageId ? 'RC' : (g[0].kind || 'LR'),
+      timeLimitSec: limit(g),
       elapsedSec: 0,
-      qids: ordered.map((q) => q.id),
-    }],
+      qids: g.map((q) => q.id),
+    })),
     settings: { blindReview: blindReview && !instant, instant, breakAfterSection: null },
   });
   // A mastery-path training set records the skill and level it trains.

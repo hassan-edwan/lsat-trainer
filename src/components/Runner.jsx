@@ -206,6 +206,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const nextOrFinish = () => {
     const nextUnchecked = sec.qids.findIndex((id, i) => i > session.current.index && !session.responses[id].checked);
     if (nextUnchecked >= 0) go(session.current.section, nextUnchecked);
+    else if (allChecked && session.current.section + 1 < session.sections.length) go(session.current.section + 1, 0);
     else if (allChecked) update((x) => ({ ...x, phase: 'finishing' }));
     else step(1);
   };
@@ -456,7 +457,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
         <span className="hint">{reading ? 'Keys: Enter start the questions · ←/→ move' : `Keys: A–E answer · Shift+A–E mask · ←/→ move · F flag${instant ? ' · Enter check / continue' : ''}`}</span>
         {instant ? (
           resp.checked
-            ? <button className="primary" onClick={nextOrFinish}>{allChecked ? 'See results' : 'Continue →'}</button>
+            ? <button className="primary" onClick={nextOrFinish}>{allChecked ? (session.current.section + 1 < session.sections.length ? 'Next section →' : 'See results') : 'Continue →'}</button>
             : <button className="primary" disabled={!resp.first} onClick={check}>Check</button>
         ) : (
           <button className="primary" onClick={() => setConfirmEnd(true)}>

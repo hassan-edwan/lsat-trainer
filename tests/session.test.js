@@ -55,11 +55,20 @@ test('drill sessions keep RC passage questions together', () => {
   const rc = qs.filter((q) => q.kind === 'RC');
   const lr = qs.filter((q) => q.kind === 'LR').slice(0, 2);
   const s = createDrillSession([rc[3], lr[0], rc[1], lr[1]]);
-  const ids = s.sections[0].qids;
-  const rcPositions = ids.map((id, i) => (index[id].passage ? i : -1)).filter((i) => i >= 0);
-  assert.equal(rcPositions.length, 2);
-  assert.equal(rcPositions[1] - rcPositions[0], 1);
-  assert.equal(s.sections[0].timeLimitSec, 4 * 80);
+  // LR and RC get separate sections and clocks: LR first at 80s a question, then RC with reading time per passage.
+  assert.deepEqual(s.sections.map((x) => x.kind), ['LR', 'RC']);
+  assert.deepEqual(s.sections.map((x) => x.title), ['Logical Reasoning', 'Reading Comprehension']);
+  assert.deepEqual(s.sections[0].qids, [lr[0].id, lr[1].id]);
+  const ids = s.sections[1].qids;
+  assert.equal(ids.length, 2);
+  assert.ok(ids.every((id) => index[id].passage));
+  const passages = new Set(ids.map((id) => index[id].passage.id)).size;
+  assert.equal(s.sections[0].timeLimitSec, 2 * 80);
+  assert.equal(s.sections[1].timeLimitSec, 210 * passages + 47 * 2);
+  // A single-kind drill stays one section under the drill's own title.
+  const lrOnly = createDrillSession(lr, { title: 'Flaw drill' });
+  assert.equal(lrOnly.sections.length, 1);
+  assert.equal(lrOnly.sections[0].title, 'Flaw drill');
 });
 
 test('journal exports include notes and question text', () => {

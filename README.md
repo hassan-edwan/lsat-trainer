@@ -81,6 +81,9 @@ It runs entirely in your browser. There's no account and no server, and your dat
     and none is still wrong after blind review. Levels your results already cover are placed out. Every set is questions you haven't seen. Anything a set showed you counts as seen, answered or not. Questions only come back once a skill's nearby levels are used up, oldest first and never within two weeks, and a repeat within two weeks doesn't count toward mastery. An unfinished set can be resumed, or replaced with a new set, which scores what you'd answered. Journal misses return in the daily mistake review, not in training sets. After each set,
     the results page shows your progress and starts the next one. Once you've taken the diagnostic, the daily plan
     trains your top-priority skill.
+- **LR and RC drilled separately:** any drill that has both becomes two sections, LR first and then RC, each with its
+  own clock. LR runs at the drill's pace per question. RC follows the real test's ratio: about 3½ minutes to read each
+  passage plus about 47 seconds per question, so a reading passage never eats into LR time or the other way round.
 - **Drills:**
   - *Smart drill* gives more questions to the types you miss most, especially ones you still miss after blind
     review. It's weighted by how often each type appears on the LSAT, and recent results count more than old
