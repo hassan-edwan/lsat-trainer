@@ -1,6 +1,7 @@
 // Session construction and finalization (pure functions).
 
 import { outcome } from './analytics.js';
+import { RC_QUESTION_SEC, RC_READ_SEC } from './passages.js';
 import { makeEntry, recordRepeat, recordRetry } from './journal.js';
 
 export function uid() {
@@ -77,10 +78,6 @@ export function createSectionsSession(sections, { kind, title, breakAfterSection
   });
 }
 
-// RC pace on the real test: 35 minutes for about 4 passages and 27 questions, which is roughly
-// 3.5 minutes to read each passage plus about 47 seconds per question (at the default 80-second LR pace).
-const RC_READ_SEC = 210;
-const RC_QUESTION_SEC = 47;
 
 export function createDrillSession(questions, { title = 'Drill', secondsPerQuestion = 80, blindReview = true, kind = 'drill', instant = false, training = null } = {}) {
   // RC questions from the same passage are kept together so the passage is read once.

@@ -2,6 +2,7 @@
 // Everything here is pure so it can be unit-tested without a browser.
 
 import { QUESTION_TYPES, inCategory } from './taxonomy.js';
+import { wholePassages } from './passages.js';
 
 export const OUTCOMES = {
   'correct': { label: 'Correct', short: '✓' },
@@ -147,7 +148,7 @@ export function prioritize(questions, { attemptsByQid = {}, journal = {}, rng = 
  * opts.mode: 'types' (use opts.types) or 'smart' (weakness-weighted)
  */
 export function buildDrill(questions, attempts, journal, opts) {
-  const { mode = 'smart', types = [], skills = [], categories = [], kinds = ['LR'], count = 10, difficulty = null, rng = Math.random } = opts;
+  const { mode = 'smart', types = [], skills = [], categories = [], kinds = ['LR'], count = 10, difficulty = null, rng = Math.random, all = questions } = opts;
   const attemptsByQid = groupBy(attempts, (a) => a.qid);
   const pool = questions.filter(
     (q) => kinds.includes(q.kind) && (!difficulty || q.difficulty == null || difficulty.includes(q.difficulty)),
@@ -179,7 +180,15 @@ export function buildDrill(questions, attempts, journal, opts) {
     }
     if (shortfall > 0) take(pool, shortfall);
   }
-  return shuffle(picked, rng);
+  const rcPicked = picked.filter((q) => q.passageId);
+  if (!rcPicked.length) return shuffle(picked, rng);
+  // Reading questions come as whole passages (one passage with all its questions), favoring
+  // passages you haven't seen any of, then ones with the most questions of the picked types.
+  const pickedTypes = new Set(rcPicked.flatMap((q) => q.types));
+  const more = prioritize(pool.filter((q) => q.passageId && !used.has(q.id) && q.types.some((t) => pickedTypes.has(t))), { attemptsByQid, journal, rng });
+  const rc = wholePassages([...rcPicked, ...more], all, { count: rcPicked.length, seen: new Set(Object.keys(attemptsByQid)) }).questions;
+  const lr = shuffle(picked.filter((q) => !q.passageId), rng);
+  return [...lr, ...rc];
 }
 
 export function groupBy(list, keyFn) {

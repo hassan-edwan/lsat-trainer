@@ -70,7 +70,7 @@ export default function DrillBuilder() {
         .map(({ question, section, test }) => ({ ...question, kind: section.kind, testId: test.id })).slice(0, count);
       title = 'Mistake journal retry';
     } else {
-      picked = buildDrill(pool, attempts, journal, { mode, types, categories: cats, kinds, count });
+      picked = buildDrill(pool, attempts, journal, { mode, types, categories: cats, kinds, count, all: questions });
       title = mode === 'smart' ? 'Smart drill' : `Drill: ${[...cats.map(categoryLabel), ...types.map(typeLabel)].join(', ')}`;
     }
     if (!picked.length) {
@@ -119,6 +119,9 @@ export default function DrillBuilder() {
               <input type="checkbox" checked={saveFresh} onChange={(e) => setSaveFresh(e.target.checked)} /> Only use tests I've already taken
             </label>
           </div>
+        )}
+        {mode !== 'journal' && kinds.includes('RC') && (
+          <p className="muted small-text">Reading Comprehension comes as whole passages, one passage with all its questions (usually 5 to 8), so the question count rounds to full passages. It runs on its own clock: about 3.5 minutes to read plus 47 seconds per question at test pace.</p>
         )}
 
         {mode === 'types' && (

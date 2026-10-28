@@ -3,6 +3,7 @@ import HighlightText from './HighlightText.jsx';
 import { AllChoiceNotes, ChoiceNote } from './Breakdown.jsx';
 import { formatMs } from '../lib/analytics.js';
 import { readingKey } from '../lib/session.js';
+import { paceSec } from '../lib/passages.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 // Matches the August 2026 LSAT interface: four colors, each with its own underline style.
@@ -150,7 +151,8 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   }), [update]);
 
   const remaining = sec.timeLimitSec != null ? sec.timeLimitSec - sec.elapsedSec : null;
-  const targetSec = sec.timeLimitSec ? Math.round(sec.timeLimitSec / sec.qids.length) : null;
+  // In RC the pace leaves out reading time, which has its own clock.
+  const targetSec = useMemo(() => paceSec(sec, index), [sec, index]);
   useEffect(() => {
     if (session.phase !== 'timed' || remaining == null) return;
     const key = session.current.section;

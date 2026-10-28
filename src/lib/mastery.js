@@ -15,6 +15,7 @@
 import { LADDERS, ladderOf } from './diagnostic.js';
 import { QUESTION_TYPES } from './taxonomy.js';
 import { shuffle } from './analytics.js';
+import { passageKey, passageMap, wholePassages } from './passages.js';
 
 export const LEVELS = [1, 2, 3, 4, 5];
 const B = { 1: -2, 2: -1, 3: 0, 4: 1, 5: 2 };
@@ -314,6 +315,7 @@ export function trainingSet(skillId, level, { questions, attempts, pending = [],
     if (!(lastAt.get(a.qid) >= t)) lastAt.set(a.qid, t);
   }
   const held = new Set(pending);
+  if (pool.some((q) => q.passageId)) return passageTrainingSet(pool, level, { questions, lastAt, held, count, now });
   const never = pool.filter((q) => !lastAt.has(q.id) && !held.has(q.id));
   const old = pool.filter((q) => lastAt.has(q.id) && !held.has(q.id) && now - lastAt.get(q.id) >= RECENT_DAYS * DAY_MS)
     .sort((a, b) => lastAt.get(a.id) - lastAt.get(b.id));
@@ -350,6 +352,27 @@ export function trainingSet(skillId, level, { questions, attempts, pending = [],
   return [...shuffle(picked.filter((q) => !q.passageId), rng), ...rc];
 }
 
+/**
+ * Reading training: one whole passage with all its questions (more only if the set is long),
+ * chosen for the most questions of the skill near the level. Passages you've never seen any of
+ * come first; once those run out, passages whose every question you last answered at least
+ * RECENT_DAYS ago, oldest first. A passage with a question in an unfinished set is skipped.
+ */
+function passageTrainingSet(pool, level, { questions, lastAt, held, count, now }) {
+  const near = (q) => Math.abs((q.difficulty ?? 3) - level) + ((q.difficulty ?? 3) < level ? 0.5 : 0);
+  const cands = [...pool].sort((a, b) => near(a) - near(b));
+  const neverSeen = (qs) => qs.every((q) => !lastAt.has(q.id) && !held.has(q.id));
+  let { questions: out } = wholePassages(cands, questions, { count, ok: neverSeen });
+  if (!out.length) {
+    const lastOf = (qs) => Math.max(...qs.map((q) => lastAt.get(q.id) ?? 0));
+    const oldEnough = (qs) => qs.every((q) => !held.has(q.id)) && now - lastOf(qs) >= RECENT_DAYS * DAY_MS;
+    const map = passageMap(questions);
+    const byAge = [...cands].sort((a, b) => lastOf(map.get(passageKey(a))) - lastOf(map.get(passageKey(b))));
+    out = wholePassages(byAge, questions, { count, ok: oldEnough }).questions;
+  }
+  return out;
+}
+
 // ---- mixed sets -------------------------------------------------------------
 
 /** Ids of every question you've answered, been shown in a closed set, or have in an unfinished one. */
@@ -371,8 +394,8 @@ export function freshHardCount(skillId, questions, seen) {
  * A short mixed set of questions you've never seen, mostly hard: about 60% from
  * your weak spots (genuine gaps first, then execution problems) at or above
  * each one's mastery level, and 40% variety, led by skills you haven't
- * practiced in a while. Reading questions come with up to two fresh questions
- * from the same passage so a passage isn't read for one question.
+ * practiced in a while. Reading comes as one whole passage (all its questions,
+ * usually 5 to 8), never seen before, and at most one per set.
  */
 export function mixedSet({ profile, tracks, questions, seen, count = 10, weakShare = 0.6, rng = Math.random }) {
   const ranked = priorities(profile);
@@ -388,25 +411,27 @@ export function mixedSet({ profile, tracks, questions, seen, count = 10, weakSha
   const tag = new Map();
   const fresh = (q) => !seen.has(q.id) && !used.has(q.id);
   const add = (q, role) => { used.add(q.id); picked.push(q); tag.set(q.id, role); };
+  // Reading comes as one whole passage you've never seen any of, at most one per set.
+  const passages = passageMap(questions);
+  let passageTaken = false;
 
   // One question for a skill, as hard as its level allows, never seen.
   const takeOne = (skill, role, room) => {
     const target = Math.max(3, tracks[skill.id]?.next ?? Math.round(skill.timedLevel) ?? 3);
-    const pool = trainingPool(skill.id, questions).filter(fresh);
+    const reading = LADDERS.find((x) => x.id === skill.id)?.kind === 'RC';
+    if (reading && (passageTaken || room < 4)) return 0;
+    const pool = trainingPool(skill.id, questions).filter((q) => (reading ? passages.get(passageKey(q))?.every(fresh) : fresh(q)));
     const order = [target, target + 1, target - 1, target + 2, 5, 4, 3].filter((d, i, a) => d >= 3 && d <= 5 && a.indexOf(d) === i);
     let cands = [];
     for (const d of order) { cands = shuffle(pool.filter((q) => (q.difficulty ?? 3) === d), rng); if (cands.length) break; }
     if (!cands.length) cands = shuffle(pool, rng);
     const q = cands[0];
     if (!q) return 0;
-    add(q, role);
-    let n = 1;
-    if (q.passageId) {
-      const siblings = questions.filter((x) => x.passageId === q.passageId && x.testId === q.testId && fresh(x))
-        .sort((a, b) => (b.difficulty ?? 3) - (a.difficulty ?? 3));
-      for (const x of siblings.slice(0, Math.max(0, Math.min(2, room - 1)))) { add(x, role); n += 1; }
-    }
-    return n;
+    if (!q.passageId) { add(q, role); return 1; }
+    const whole = passages.get(passageKey(q));
+    whole.forEach((x) => add(x, role));
+    passageTaken = true;
+    return whole.length;
   };
   const fill = (skills, role, slots) => {
     let left = slots;

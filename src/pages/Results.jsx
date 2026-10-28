@@ -6,6 +6,7 @@ import { OUTCOMES, buildDrill, categoryStats, formatMs, outcome, scaledScore, ty
 import { makeEntry } from '../lib/journal.js';
 import { CATEGORY_GROUPS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { createDrillSession, readingKey } from '../lib/session.js';
+import { paceSec } from '../lib/passages.js';
 import QuestionReview from '../components/QuestionReview.jsx';
 import { GoalRing, LevelBar } from '../components/ProgressWidgets.jsx';
 import { attemptXp } from '../lib/progress.js';
@@ -23,17 +24,18 @@ export default function Results({ session }) {
   const test = session.testId ? index[session.sections[0]?.qids[0]]?.test : null;
   const s = session.summary;
 
-  const rows = useMemo(() => session.sections.flatMap((sec, si) => sec.qids.map((qid, qi) => {
+  const rows = useMemo(() => session.sections.flatMap((sec, si) => { const pace = paceSec(sec, index); return sec.qids.map((qid, qi) => {
     const entry = index[qid];
     const r = session.responses[qid];
     const br = session.settings.blindReview ? r.br ?? r.first : r.first;
-    const targetSec = sec.timeLimitSec ? sec.timeLimitSec / sec.qids.length : null;
+    const targetSec = pace;
+    const shareSec = sec.timeLimitSec ? sec.timeLimitSec / sec.qids.length : null;
     // RC without the reading pause: the first question of a passage carries the reading time, so it isn't flagged.
     const readKey = readingKey(si, entry);
     const firstOfPassage = !!entry?.passage && !session.reading?.[readKey] && (qi === 0 || index[sec.qids[qi - 1]]?.passage?.id !== entry.passage.id);
     const slow = !!targetSec && !firstOfPassage && r.timeMs / 1000 > targetSec * 1.5;
-    return { qid, si, qi, sec, entry, r, br, targetSec, slow, oc: entry ? outcome(r.first, br, entry.question.answer) : null };
-  })), [session, index]);
+    return { qid, si, qi, sec, entry, r, br, targetSec, shareSec, slow, oc: entry ? outcome(r.first, br, entry.question.answer) : null };
+  }); }), [session, index]);
   const maxTimeMs = Math.max(1, ...rows.map((x) => x.r.timeMs || 0));
 
   const sessionAttempts = attempts.filter((a) => a.sessionId === session.id);
@@ -51,7 +53,7 @@ export default function Results({ session }) {
   const drillMisses = async () => {
     const types = [...new Set(rows.filter((x) => x.oc && x.oc !== 'correct').flatMap((x) => x.entry.question.types))];
     const kinds = [...new Set(rows.map((x) => x.sec.kind).filter((k) => k !== 'MIXED'))];
-    const picked = buildDrill(questions.filter((q) => !session.responses[q.id]), attempts, journal, { mode: 'types', types, kinds, count: 10 });
+    const picked = buildDrill(questions.filter((q) => !session.responses[q.id]), attempts, journal, { mode: 'types', types, kinds, count: 10, all: questions });
     if (!picked.length) { alert('No unseen questions of these types in your library yet.'); return; }
     const d = await saveSession(createDrillSession(picked, { title: `Drill: ${types.map(typeLabel).slice(0, 3).join(', ')}` }));
     navigate(`/session/${d.id}`);
@@ -266,7 +268,7 @@ function TimingCard({ rows, reading, onOpen }) {
     const key = `${x.si}:${x.entry.passage.id}`;
     let p = passages.find((y) => y.key === key);
     if (!p) passages.push(p = { key, si: x.si, first: x.qi + 1, n: 0, ms: 0, readMs: reading[key]?.ms ?? null, right: 0, target: 0 });
-    p.n += 1; p.ms += x.r.timeMs || 0; p.target += x.targetSec || 0;
+    p.n += 1; p.ms += x.r.timeMs || 0; p.target += x.shareSec || 0;
     if (x.r.first === x.entry.question.answer) p.right += 1;
   }
   return (
@@ -299,7 +301,7 @@ function TimingCard({ rows, reading, onOpen }) {
       {passages.length > 0 && (
         <>
           <h3>Reading passages</h3>
-          <p className="card-sub">Total includes reading. Reading is timed separately when the reading pause (📖) is on. Pace is the section time divided evenly across its questions.</p>
+          <p className="card-sub">Total includes reading. Reading is timed separately when the reading pause (📖) is on. Pace is the passage's share of the section time, reading included. The per-question pace in RC leaves reading out.</p>
           <div className="table-wrap"><table className="table">
             <thead><tr><th>Passage</th><th>Questions</th><th>Reading</th><th>Answering</th><th>Total</th><th>Pace</th><th>Right</th></tr></thead>
             <tbody>

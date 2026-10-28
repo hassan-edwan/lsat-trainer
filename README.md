@@ -84,6 +84,10 @@ It runs entirely in your browser. There's no account and no server, and your dat
 - **LR and RC drilled separately:** any drill that has both becomes two sections, LR first and then RC, each with its
   own clock. LR runs at the drill's pace per question. RC follows the real test's ratio: about 3½ minutes to read each
   passage plus about 47 seconds per question, so a reading passage never eats into LR time or the other way round.
+- **RC is always whole passages:** every RC drill, training set and mixed set uses one passage with all its
+  questions (usually 5 to 8), never a few questions cut out of one, and favors passages you haven't seen any of. A
+  passage gets about 3½ minutes plus 47 seconds per question (an 8-question passage gets 9:46, close to the real
+  test's 35 minutes for four passages). The per-question pace in RC is the 47 seconds, since reading has its own clock.
 - **Drills:**
   - *Smart drill* gives more questions to the types you miss most, especially ones you still miss after blind
     review. It's weighted by how often each type appears on the LSAT, and recent results count more than old
