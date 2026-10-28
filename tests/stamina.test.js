@@ -72,3 +72,29 @@ test('createStaminaSession picks distinct, unseen sections of the right kinds', 
   assert.equal(four.sections.length, 4);
   assert.equal(four.settings.breakAfterSection, 1);
 });
+
+test('long drills show a fade, short ones do not, and drills never move the ladder', async () => {
+  const { isLongSitting, staminaHistory, unfinishedStamina } = await import('../src/lib/stamina.js');
+  const { tests, index } = fixture();
+  const sec = (s, limit) => ({ title: s.title, kind: s.kind, timeLimitSec: limit, elapsedSec: limit * 0.9, qids: s.questions.map((q) => q.id) });
+  assert.equal(isLongSitting({ kind: 'drill', sections: [sec(tests[0].sections[0], 2100), sec(tests[0].sections[2], 1200)] }), true);
+  assert.equal(isLongSitting({ kind: 'drill', sections: [sec(tests[0].sections[0], 800)] }), false);
+  assert.equal(isLongSitting({ kind: 'diagnostic', sections: [sec(tests[0].sections[0], 3000)] }), true);
+  const longDrill = { ...session(tests[0].sections.slice(0, 2), () => true), kind: 'drill', stamina: undefined, id: 'd1' };
+  longDrill.sections = longDrill.sections.map((x) => ({ ...x, timeLimitSec: 2100, elapsedSec: 2000 }));
+  const history = staminaHistory({ d1: longDrill }, [], index);
+  assert.equal(history.length, 1);
+  assert.equal(currentLevel(history), 1);
+  const open = { id: 'u1', kind: 'stamina', phase: 'br', updatedAt: '2026-10-20' };
+  assert.deepEqual(unfinishedStamina({ u1: open, d1: longDrill }).map((x) => x.id), ['u1']);
+});
+
+test('a session with a few blanks at the end still counts', () => {
+  const { tests, index } = fixture();
+  const s = session(tests[0].sections.slice(0, 2), (k) => k % 5 !== 0);
+  // Ran out of time: last 8 of 50 unanswered (84% answered).
+  const ids = s.sections.flatMap((x) => x.qids);
+  ids.slice(-8).forEach((id) => { s.responses[id].first = null; });
+  const r = staminaReport(s, index, expectedByDifficulty([], index));
+  assert.equal(r.counts, true);
+});

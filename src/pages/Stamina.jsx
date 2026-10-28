@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { PageHeader } from '../components/Layout.jsx';
-import { STAMINA_LEVELS, createStaminaSession, currentLevel, staminaHistory } from '../lib/stamina.js';
+import { STAMINA_LEVELS, createStaminaSession, currentLevel, staminaHistory, unfinishedStamina } from '../lib/stamina.js';
 
 const signed = (n) => `${n > 0 ? '+' : ''}${n}`;
 
@@ -15,7 +15,7 @@ const TIPS = [
 ];
 
 export default function Stamina() {
-  const { tests, sessions, attempts, index, saveSession } = useStore();
+  const { tests, sessions, attempts, index, saveSession, finishSession } = useStore();
   const history = useMemo(() => staminaHistory(sessions, attempts, index), [sessions, attempts, index]);
   const level = currentLevel(history);
 
@@ -25,6 +25,12 @@ export default function Stamina() {
     const saved = await saveSession(s);
     navigate(`/session/${saved.id}`);
   };
+
+  const unfinished = unfinishedStamina(sessions);
+  // Score a session that was left unfinished. If blind review was never reached, it's scored on the timed answers.
+  const scoreNow = (s) => finishSession({ ...s, settings: { ...s.settings, blindReview: s.phase === 'br' && s.settings.blindReview } });
+  const answered = (s) => s.sections.flatMap((x) => x.qids).filter((id) => s.responses[id]?.first).length;
+  const total = (s) => s.sections.reduce((t, x) => t + x.qids.length, 0);
 
   const passedLevels = new Set(history.filter((h) => h.report.passed && h.session.stamina).map((h) => h.session.stamina.level));
   const recent = history.slice(0, 8);
@@ -36,6 +42,32 @@ export default function Stamina() {
         title="Stamina"
         subtitle="Test day is four 35-minute sections and a 10-minute break. Build up to it one level at a time, and watch how much your accuracy fades late in a long sitting."
       />
+
+      {unfinished.length > 0 && (
+        <section className="card">
+          <h2>Unfinished stamina sessions</h2>
+          <p className="card-sub">
+            A session counts once it's scored, after blind review and Finish and score. These were left before that, so they
+            aren't in your history yet. Resume to finish, or score one now as it stands.
+          </p>
+          <div className="focus-list">
+            {unfinished.map((u) => (
+              <div key={u.id} className="focus-item">
+                <div className="focus-main">
+                  <strong>{u.title}</strong>
+                  <div className="muted small-text">
+                    {u.phase === 'br' ? 'In blind review' : `Section ${u.current.section + 1} of ${u.sections.length}`} · {answered(u)} of {total(u)} answered · started {new Date(u.createdAt).toLocaleDateString()}
+                  </div>
+                </div>
+                <div className="row">
+                  <button className="small" onClick={() => navigate(`/session/${u.id}`)}>Resume</button>
+                  <button className="small primary" onClick={() => scoreNow(u)} title={u.phase === 'br' ? 'Score with your blind-review answers so far' : 'Score on your timed answers; unanswered questions count as misses'}>Score now</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="card">
         <h2>Next: level {level}, {STAMINA_LEVELS[level - 1].title}</h2>
@@ -64,7 +96,7 @@ export default function Stamina() {
 
       <section className="card">
         <h2>Your fade over time</h2>
-        <p className="card-sub">Late fade = (late accuracy − your usual at that difficulty) minus (early accuracy − your usual). Full practice tests count too.</p>
+        <p className="card-sub">Late fade = (late accuracy − your usual at that difficulty) minus (early accuracy − your usual). Full practice tests and any long timed drill (two timed sections or 45+ minutes) show their fade here; only stamina sessions and full tests move you up the ladder.</p>
         {recent.length === 0 ? (
           <p className="muted">No long sessions yet. Start level {level} or take a full practice test.</p>
         ) : (
@@ -77,7 +109,7 @@ export default function Stamina() {
                   <td className="muted">{new Date(session.finishedAt).toLocaleDateString()}</td>
                   <td>{session.sections.length}</td>
                   <td className={report.passed || !report.counts ? '' : 'bad-text'}>{signed(report.fade)} pts</td>
-                  <td>{!report.counts ? 'Didn\'t count' : report.passed ? 'Held steady' : 'Faded'}</td>
+                  <td>{!report.counts ? 'Didn\'t count' : report.passed ? 'Held steady' : 'Faded'}{session.kind !== 'stamina' && session.kind !== 'pt' ? <span className="muted small-text"> · drill</span> : null}</td>
                 </tr>
               ))}
             </tbody>

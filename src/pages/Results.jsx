@@ -12,6 +12,7 @@ import { attemptXp } from '../lib/progress.js';
 import { dailyPlan } from '../lib/plan.js';
 import { startTask } from './Today.jsx';
 import StaminaCard from '../components/StaminaCard.jsx';
+import { isLongSitting } from '../lib/stamina.js';
 import TrainingCard from '../components/TrainingCard.jsx';
 
 export default function Results({ session }) {
@@ -103,7 +104,7 @@ export default function Results({ session }) {
 
       {session.training && <TrainingCard session={session} />}
 
-      {(session.kind === 'stamina' || (session.kind === 'pt' && session.sections.length > 1)) && <StaminaCard session={session} />}
+      {isLongSitting(session) && <StaminaCard session={session} />}
 
       {session.sections.length > 1 && (
         <section className="card">

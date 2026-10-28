@@ -108,8 +108,10 @@ It runs entirely in your browser. There's no account and no server, and your dat
   back, three straight with reading last, a full four-section test with the break, and a five-section
   "overtime" session. After every long session (ladder or full test) the app measures your *late fade*: how much
   your accuracy in the last 40% of questions drops compared with the first 60%, after adjusting for how hard the
-  questions were relative to your own record. You move up a level when the fade stays under 6 points. Rushed or
-  mostly blank sessions don't count. The daily plan adds a stamina session when you haven't done a long one in
+  questions were relative to your own record. You move up a level when the fade stays under 6 points. Rushed sessions
+  (under 40% of the time) or ones with more than a quarter left blank don't count; a few blanks at the end just count
+  as misses. Any long timed drill (two timed sections or 45+ minutes) also shows its fade, though only stamina sessions
+  and full tests move you up the ladder. Unfinished stamina sessions are listed with Resume and Score now buttons. The daily plan adds a stamina session when you haven't done a long one in
   three days.
 - **Analytics:** timed and blind-review accuracy by section and question type, average time per type, and a
   trend of recent sessions.

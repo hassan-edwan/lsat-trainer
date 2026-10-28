@@ -3,7 +3,7 @@
 import { buildDrill, categoryStats, shuffle } from './analytics.js';
 import { categoryLabel } from './taxonomy.js';
 import { dayKey, isWrittenUp } from './progress.js';
-import { STAMINA_LEVELS, currentLevel, staminaHistory } from './stamina.js';
+import { STAMINA_LEVELS, currentLevel, isLongSitting, staminaHistory } from './stamina.js';
 import { priorities, seenIds, skillProfile } from './mastery.js';
 
 const DAY_MS = 86_400_000;
@@ -106,7 +106,7 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
     tasks.push({ id: 'test', icon: '📝', title: `Weekly full test: ${fresh.name}`, detail: 'Test-day conditions, then blind review.', done: false, action: { kind: 'test', testId: fresh.id } });
   } else {
     // Midweek: a long sitting if there hasn't been one (stamina or full test) in the last 3 days.
-    const long = done.filter((s) => s.kind === 'stamina' || (s.kind === 'pt' && s.sections.length >= 2));
+    const long = done.filter((s) => !s.abandoned && isLongSitting(s));
     const recentLong = long.some((s) => now - new Date(s.finishedAt).getTime() < 3 * DAY_MS);
     if (!recentLong || doneToday.has('stamina')) {
       const level = currentLevel(staminaHistory(sessions, attempts, index));

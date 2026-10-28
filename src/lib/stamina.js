@@ -7,7 +7,9 @@ import { createSectionsSession } from './session.js';
 // Accuracy a typical student gets at each difficulty, used until there is enough of the user's own history.
 const PRIOR = { 1: 0.9, 2: 0.82, 3: 0.7, 4: 0.55, 5: 0.4 };
 const PRIOR_WEIGHT = 5;
-const PASS_FADE = -6; // points; a late drop no worse than this passes a level
+const PASS_FADE = -6;
+const MIN_ANSWERED = 0.75; // share of questions answered for a session to count
+const LONG_MINUTES = 45; // a timed sitting at least this long shows its fade // points; a late drop no worse than this passes a level
 
 export const STAMINA_LEVELS = [
   { level: 1, title: 'One section', kinds: () => ['LR'], breakAfter: null,
@@ -82,13 +84,14 @@ export function staminaReport(session, index, expected) {
   // A rushed or mostly blank session says nothing about stamina, so it can't pass a level.
   const limit = session.sections.reduce((t, s) => t + (s.timeLimitSec || 0), 0);
   const used = session.sections.reduce((t, s) => t + (s.elapsedSec || 0), 0);
-  const counts = rows.filter((r) => r.answered).length >= 0.9 * rows.length && (!limit || used >= 0.4 * limit);
+  // Running out of time late is itself the stamina signal, so blanks count as misses rather than voiding the session.
+  const counts = rows.filter((r) => r.answered).length >= MIN_ANSWERED * rows.length && (!limit || used >= 0.4 * limit);
   return { fade, early: pts(mean(early.map((r) => r.resid))), late: pts(mean(late.map((r) => r.resid))), sections, counts, passed: counts && fade >= PASS_FADE };
 }
 
 export function verdict(report) {
   if (!report) return '';
-  if (!report.counts) return 'This session doesn\'t count toward the ladder: answer at least 90% of the questions and use at least 40% of the time, as you would on test day.';
+  if (!report.counts) return 'This session doesn\'t count toward the ladder: answer at least 75% of the questions and use at least 40% of the time, as you would on test day.';
   const f = report.fade;
   if (f >= 3) return 'You got stronger as the session went on. Your stamina is not the limiting factor here.';
   if (f >= PASS_FADE) return 'You held steady: your late accuracy stayed close to your early accuracy after adjusting for difficulty.';
@@ -96,19 +99,32 @@ export function verdict(report) {
   return 'You faded sharply late. Build up with shorter back-to-back sessions before going longer.';
 }
 
-/** Long sessions (stamina ladder or full tests) with their reports, newest first. */
+/**
+ * A long timed sitting: a stamina session, a practice test with two or more sections, or any other
+ * timed session with two or more timed sections or at least 45 minutes on the clock.
+ */
+export function isLongSitting(s) {
+  if (s.kind === 'stamina') return true;
+  const timed = s.sections.filter((sec) => sec.timeLimitSec);
+  if (s.kind === 'pt') return s.sections.length >= 2;
+  const minutes = timed.reduce((t, sec) => t + sec.timeLimitSec, 0) / 60;
+  return timed.length >= 2 || minutes >= LONG_MINUTES;
+}
+
+/** Finished long sittings with their reports, newest first. */
 export function staminaHistory(sessions, attempts, index) {
   return Object.values(sessions)
-    .filter((s) => s.phase === 'done' && (s.kind === 'stamina' || (s.kind === 'pt' && s.sections.length >= 2)))
+    .filter((s) => s.phase === 'done' && !s.abandoned && isLongSitting(s))
     .sort((a, b) => (b.finishedAt || '').localeCompare(a.finishedAt || ''))
     .map((s) => ({ session: s, report: staminaReport(s, index, expectedByDifficulty(attempts, index, s.id)) }))
     .filter((x) => x.report);
 }
 
-/** The next level to train: one above the highest level passed. Full tests count as level 4. */
+/** The next level to train: one above the highest level passed. Full tests count as level 4; drills don't move the ladder. */
 export function currentLevel(history) {
   let best = 0;
   for (const { session, report } of history) {
+    if (session.kind !== 'stamina' && session.kind !== 'pt') continue;
     const lvl = session.stamina?.level ?? (session.kind === 'pt' && session.sections.length >= 4 ? 4 : session.sections.length >= 3 ? 3 : 2);
     if (report.passed) best = Math.max(best, lvl);
   }
@@ -137,4 +153,10 @@ export function createStaminaSession(level, tests, attempts) {
     breakAfterSection: picked.length >= 4 ? spec.breakAfter : null,
   });
   return { ...session, stamina: { level } };
+}
+
+/** Stamina sessions that were started but never scored (left during the test or blind review). */
+export function unfinishedStamina(sessions) {
+  return Object.values(sessions).filter((s) => s.kind === 'stamina' && s.phase !== 'done')
+    .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
 }
