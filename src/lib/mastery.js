@@ -30,7 +30,7 @@ const GLOBAL_SD = 1.5;
 export const EXECUTION_TRAPS = ['Misread the stem', 'Misread the stimulus', 'Ran out of time / rushed'];
 
 // Approximate percent-correct to scaled-score curve from PrepTests 140–159.
-const CURVE = [[0, 120], [0.18, 130], [0.27, 140], [0.35, 145], [0.44, 150], [0.53, 155], [0.63, 160], [0.73, 165], [0.82, 170], [0.9, 175], [0.98, 180], [1, 180]];
+export const CURVE = [[0, 120], [0.18, 130], [0.27, 140], [0.35, 145], [0.44, 150], [0.53, 155], [0.63, 160], [0.73, 165], [0.82, 170], [0.9, 175], [0.98, 180], [1, 180]];
 
 // Which skill a question type draws on, for the score prediction.
 const TYPE_SKILL = {
@@ -217,9 +217,63 @@ export function predictScore(profile, { field = 'timed', bump = {} } = {}) {
   const pct = at(0);
   return {
     pct, exact: scoreFromPct(pct), score: Math.round(scoreFromPct(pct)),
+    lrPct: sectionAccuracy(profile, 'LR', field, bump), rcPct: sectionAccuracy(profile, 'RC', field, bump),
+    lowPct: at(-se), highPct: at(se), scored: SCORED,
     low: Math.round(scoreFromPct(at(-se))), high: Math.round(scoreFromPct(at(se))),
     n: profile.global.LR.n + profile.global.RC.n,
   };
+}
+
+/** Chance of getting a question right under time, from the skills it draws on. */
+export function chanceRight(profile, q, kind = q.kind) {
+  const byId = Object.fromEntries(profile.skills.map((s) => [s.id, s]));
+  const ids = skillsOf(q, kind).filter((id) => byId[id]);
+  const theta = ids.length ? ids.reduce((t, id) => t + byId[id].timed.theta, 0) / ids.length : profile.global[kind]?.timed.theta ?? 0;
+  return sigmoid(theta - (B[q.difficulty ?? 3] ?? 0));
+}
+
+const dayEnd = (at) => { const d = new Date(at); d.setHours(23, 59, 59, 999); return d.getTime(); };
+
+/**
+ * The predicted score as it stood at the end of each day you practiced (at most `max` days,
+ * spread evenly, always including the latest), using only answers up to that day.
+ */
+export function predictionHistory({ attempts, index, sessions = {}, minAnswers = 20, max = 24 }) {
+  const days = [...new Set(attempts.map((a) => dayEnd(a.at)))].sort((a, b) => a - b);
+  const keep = days.length <= max ? days : Array.from({ length: max }, (_, i) => days[Math.round(i * (days.length - 1) / (max - 1))]);
+  const out = [];
+  for (const t of [...new Set(keep)]) {
+    const upto = attempts.filter((a) => new Date(a.at).getTime() <= t);
+    const profile = skillProfile({ attempts: upto, index, sessions, now: t });
+    const p = predictScore(profile);
+    if (p.n >= minAnswers) out.push({ at: t, score: p.score, exact: p.exact, low: p.low, high: p.high, n: p.n });
+  }
+  return out;
+}
+
+/**
+ * How past predictions held up: for each finished session (newest `max`), the accuracy the
+ * model expected on its exact questions, using only answers from before it started, next to
+ * the accuracy you got. Sessions need `minQuestions` LR/RC questions and `minPrior` earlier answers.
+ */
+export function trackRecord({ attempts, index, sessions = {}, minQuestions = 8, minPrior = 20, max = 10 }) {
+  const done = Object.values(sessions)
+    .filter((s) => s.phase === 'done' && !s.abandoned && s.finishedAt)
+    .sort((a, b) => b.finishedAt.localeCompare(a.finishedAt));
+  const out = [];
+  for (const s of done) {
+    if (out.length >= max) break;
+    const mine = attempts.filter((a) => a.sessionId === s.id && index[a.qid] && ['LR', 'RC'].includes(index[a.qid].section?.kind || a.kind));
+    if (mine.length < minQuestions) continue;
+    const start = new Date(s.createdAt || s.finishedAt).getTime();
+    const before = attempts.filter((a) => a.sessionId !== s.id && new Date(a.at).getTime() < start);
+    if (before.length < minPrior) continue;
+    const profile = skillProfile({ attempts: before, index, sessions, now: start });
+    const expected = mine.reduce((t, a) => t + chanceRight(profile, index[a.qid].question, index[a.qid].section?.kind || a.kind), 0) / mine.length;
+    const actual = mine.filter((a) => a.first === a.answer).length / mine.length;
+    out.push({ id: s.id, title: s.title, kind: s.kind, at: s.finishedAt, n: mine.length, expected, actual });
+  }
+  return out;
 }
 
 /** Skills ranked by how many scaled points one level of improvement is worth. */

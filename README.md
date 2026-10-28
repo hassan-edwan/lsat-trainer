@@ -70,6 +70,10 @@ It runs entirely in your browser. There's no account and no server, and your dat
     under time. Journal tags like "Misread the stem" are shown alongside.
   - *Predicted score:* the skill estimates applied to a current-format test (two scored LR sections and one RC
     section), with a likely range. A second number shows your score with no execution slips.
+    Charts show the work: where the score and its range sit on the 120–180 scale; the steps from LR and RC accuracy to
+    the scaled score, on the score curve; how the prediction has moved day by day as its range narrows; and a track
+    record. The track record shows, for each recent session, the accuracy predicted beforehand from earlier answers
+    only, next to what you actually got.
   - *What to work on:* genuine gaps first, then execution problems, each ranked by how many scaled points one level
     of improvement is worth.
   - *Mixed sets:* 10 questions you've never seen, mostly level 3–5: about 6 from your weak spots and 4 for variety,

@@ -167,3 +167,29 @@ test('a skill not practiced for 100 answers or 10 days is due a check-in', () =>
   assert.equal(p.skills.find((s) => s.id === 'weaken').stale, false);
   assert.equal(p.skills.find((s) => s.id === 'flaw').answersSince, 3);
 });
+
+test('prediction history uses only answers up to each day, and the track record only earlier answers', async () => {
+  const { predictionHistory, trackRecord } = await import('../src/lib/mastery.js');
+  const { questions, index } = library();
+  for (const id of Object.keys(index)) index[id].section = { kind: 'LR' };
+  const lr = questions.filter((q) => !q.purpose);
+  const days = ['2026-10-01T12:00:00Z', '2026-10-05T12:00:00Z', '2026-10-09T12:00:00Z'];
+  const attempts = [];
+  const sessions = {};
+  days.forEach((at, d) => {
+    const qs = lr.slice(d * 30, d * 30 + 30);
+    // Early days mostly wrong, later days mostly right.
+    qs.forEach((q, i) => attempts.push({ qid: q.id, first: (i % 10) < 3 + d * 3 ? 'A' : 'B', br: 'B', answer: 'A', at, sessionId: `s${d}`, reviewed: true, kind: 'LR' }));
+    sessions[`s${d}`] = { id: `s${d}`, kind: 'drill', phase: 'done', title: `Drill ${d}`, createdAt: at, finishedAt: at };
+  });
+  const h = predictionHistory({ attempts, index, sessions });
+  assert.equal(h.length, 3);
+  assert.deepEqual(h.map((x) => x.n), [30, 60, 90]);
+  assert.ok(h[2].score > h[0].score);
+  assert.ok(h.every((x) => x.low <= x.score && x.score <= x.high));
+  const rec = trackRecord({ attempts, index, sessions });
+  // The first session has nothing before it, so only the later two are judged.
+  assert.deepEqual(rec.map((r) => r.id), ['s2', 's1']);
+  assert.ok(rec.every((r) => r.expected > 0 && r.expected < 1 && r.n === 30));
+  assert.equal(rec[0].actual, 0.9);
+});

@@ -4,9 +4,10 @@ import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
 import {
-  DIAGNOSIS, freshHardCount, masteryTrack, mixedSet, predictScore, priorities, seenIds, shownEntries, skillProfile, trainingPool, trainingSet,
+  DIAGNOSIS, freshHardCount, predictionHistory, trackRecord, masteryTrack, mixedSet, predictScore, priorities, seenIds, shownEntries, skillProfile, trainingPool, trainingSet,
 } from '../lib/mastery.js';
 import { createDrillSession } from '../lib/session.js';
+import { PredictionHistory, ScoreCurve, ScoreRange, ScoreSteps, TrackRecord } from '../components/ScoreCharts.jsx';
 import { loadBundledTests } from '../lib/bundle.js';
 
 const CELL = {
@@ -114,6 +115,20 @@ function evidenceLine(s) {
   return `${s.n} answer${s.n === 1 ? '' : 's'}: ${parts.join(' · ')}${traps.length ? ` (${traps.join(', ')})` : ''}`;
 }
 
+/** One line on how close past predictions came: the typical gap and how many landed within 10 points. */
+function TrackSummary({ rows }) {
+  const gaps = rows.map((r) => Math.abs(r.actual - r.expected) * 100);
+  const avg = Math.round(gaps.reduce((a, b) => a + b, 0) / gaps.length);
+  const within = gaps.filter((g) => g <= 10).length;
+  const bias = Math.round(rows.reduce((t, r) => t + (r.actual - r.expected), 0) / rows.length * 100);
+  return (
+    <strong>
+      Off by {avg} point{avg === 1 ? '' : 's'} of accuracy on average; within 10 points in {within} of {rows.length} sessions
+      {Math.abs(bias) >= 5 ? (bias > 0 ? ', and you tend to beat it.' : ', and it tends to run high, so read it as a ceiling.') : '.'}
+    </strong>
+  );
+}
+
 export default function Diagnostic() {
   const store = useStore();
   const { diagnosticQuestions, questions, attempts, journal, installBundle, saveSession } = store;
@@ -126,6 +141,8 @@ export default function Diagnostic() {
   const ranked = useMemo(() => priorities(profile), [profile]);
   const prediction = useMemo(() => predictScore(profile), [profile]);
   const potential = useMemo(() => predictScore(profile, { field: 'understanding' }), [profile]);
+  const history = useMemo(() => predictionHistory({ attempts, index: store.index, sessions: store.sessions, minAnswers: MIN_FOR_SCORE }), [attempts, store.index, store.sessions]);
+  const record = useMemo(() => trackRecord({ attempts, index: store.index, sessions: store.sessions }), [attempts, store.index, store.sessions]);
   const tracks = useMemo(() => Object.fromEntries(profile.skills.map((s) => [s.id, masteryTrack(s, profile.rows, trainingPool(s.id, questions))])), [profile, questions]);
 
   const start = async (ids) => {
@@ -173,16 +190,57 @@ export default function Diagnostic() {
         <h2>Predicted score</h2>
         {enough ? (
           <>
+            <div className="score-hero">
+              <span className="hero-value">{prediction.score}</span>
+              <span className="muted">likely {prediction.low}–{prediction.high} if you sat a test today</span>
+            </div>
+            <ScoreRange prediction={prediction} potential={potential} />
             <div className="stat-row">
-              <div className="stat"><div className="stat-label">Under time, today</div><div className="stat-value">{prediction.score}</div><div className="muted">likely {prediction.low}–{prediction.high}</div></div>
               <div className="stat"><div className="stat-label">With no execution slips</div><div className="stat-value">{potential.score}</div><div className="muted">if every miss you fix in blind review were right</div></div>
               <div className="stat"><div className="stat-label">Points lost to slips</div><div className="stat-value">{Math.max(0, potential.score - prediction.score)}</div><div className="muted">misreads and rushing</div></div>
+              <div className="stat"><div className="stat-label">Based on</div><div className="stat-value">{prediction.n}</div><div className="muted">answers ({profile.global.LR.n} LR, {profile.global.RC.n} RC)</div></div>
             </div>
-            <p className="muted small-text">
-              Based on {prediction.n} answers from the diagnostic, drills and practice tests, with recent answers counting more. Each skill's
-              ability is estimated from how hard the questions you got right and wrong were, then applied to a test with two scored LR sections
-              and one RC section. The range narrows as you answer more. It's an estimate, not an official score.
-            </p>
+
+            <div className="score-block">
+              <h3>How it's worked out</h3>
+              <p className="card-sub">
+                Each skill gets an ability estimate from how hard the questions you got right and wrong were, with recent answers counting
+                more. Those give the share you'd get right on a test-day mix of questions in each section, two scored LR sections and one RC.
+                The total goes through the score curve below.
+              </p>
+              <div className="score-explain">
+                <ScoreSteps prediction={prediction} />
+                <ScoreCurve prediction={prediction} />
+              </div>
+            </div>
+
+            {history.length >= 2 && (
+              <div className="score-block">
+                <h3>How it has moved</h3>
+                <p className="card-sub">
+                  The prediction at the end of each day you practiced, using only the answers you had by then. The shaded band is the likely
+                  range; it narrows as answers add up, so a narrow band means a steadier estimate.
+                </p>
+                <PredictionHistory points={history} />
+              </div>
+            )}
+
+            <div className="score-block">
+              <h3>Has it been right?</h3>
+              {record.length ? (
+                <>
+                  <p className="card-sub">
+                    Before each recent session, the model used only your earlier answers to predict how many of that session's exact
+                    questions you'd get right under time, harder questions included. Here's that prediction next to what you got.
+                    {' '}<TrackSummary rows={record} />
+                  </p>
+                  <TrackRecord rows={record} />
+                </>
+              ) : (
+                <p className="muted">Once you finish a few more sessions, this shows how the prediction made before each one compared with your result.</p>
+              )}
+            </div>
+            <p className="muted small-text">It's an estimate from your practice, not an official score, and it assumes test-day conditions like your timed practice.</p>
           </>
         ) : (
           <p className="muted">Answer at least {MIN_FOR_SCORE} questions (the full diagnostic is {count}) to see a prediction. {prediction.n ? `${prediction.n} so far.` : ''}</p>
