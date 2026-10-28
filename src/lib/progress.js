@@ -2,7 +2,7 @@
 // achievements, category mastery, and spaced review of journal entries.
 // Everything is derived from history, so it is always consistent with it.
 
-import { outcome } from './analytics.js';
+import { isAnswered, outcome } from './analytics.js';
 
 const DAY_MS = 86_400_000;
 
@@ -21,6 +21,7 @@ function addDays(key, n) {
 export function activityByDay(attempts) {
   const out = {};
   for (const a of attempts) {
+    if (!isAnswered(a)) continue;
     const k = dayKey(a.at);
     out[k] = (out[k] || 0) + 1;
   }
@@ -76,6 +77,7 @@ export const XP = {
 };
 
 export function attemptXp(a, difficulty) {
+  if (!isAnswered(a)) return 0;
   const oc = outcome(a.first, a.br, a.answer);
   let xp = XP.attempt;
   if (oc === 'correct' || oc === 'br-broke') xp += XP.correct + XP.hardBonus * Math.max(0, (difficulty ?? 3) - 3);

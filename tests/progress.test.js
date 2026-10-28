@@ -9,7 +9,7 @@ const day = (y, m, d, h = 12) => new Date(y, m - 1, d, h).getTime();
 const days = (list, n = 25) => Object.fromEntries(list.map((k) => [k, n]));
 
 test('activity groups attempts by local day', () => {
-  const by = activityByDay([{ at: new Date(day(2026, 10, 1, 9)).toISOString() }, { at: new Date(day(2026, 10, 1, 22)).toISOString() }]);
+  const by = activityByDay([{ first: 'A', at: new Date(day(2026, 10, 1, 9)).toISOString() }, { first: 'B', at: new Date(day(2026, 10, 1, 22)).toISOString() }, { first: null, at: new Date(day(2026, 10, 1, 23)).toISOString() }]);
   assert.deepEqual(by, { '2026-10-01': 2 });
 });
 

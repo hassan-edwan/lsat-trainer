@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
-import { buildDrill, categoryStats, formatMs, weaknessScores } from '../lib/analytics.js';
+import { buildDrill, categoryStats, formatMs, isAnswered, wasSeen, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { masteryTier } from '../lib/progress.js';
@@ -21,7 +21,7 @@ export default function Stats() {
 
   const byKind = useMemo(() => ['LR', 'RC'].map((kind) => {
     const rows = weaknessScores(attempts, { kinds: [kind] }).filter((r) => r.n > 0);
-    const list = attempts.filter((a) => a.kind === kind);
+    const list = attempts.filter((a) => a.kind === kind && wasSeen(a));
     const first = list.filter((a) => a.first === a.answer).length;
     const br = list.filter((a) => a.br === a.answer).length;
     return { kind, rows, n: list.length, first, br };
@@ -62,7 +62,15 @@ export default function Stats() {
       <section className="card">
         <h2>Overview</h2>
         <div className="stat-row">
-          <div className="stat"><div className="stat-label">Questions answered</div><div className="stat-value">{attempts.length}</div></div>
+          <div className="stat">
+            <div className="stat-label">Questions answered</div>
+            <div className="stat-value">{attempts.filter(isAnswered).length}</div>
+            {attempts.some((a) => !isAnswered(a)) && (
+              <div className="muted" title="Questions in scored sessions you didn't answer. Ones you opened count as misses in your accuracy; ones you never reached don't count at all.">
+                plus {attempts.filter((a) => !isAnswered(a)).length} left blank
+              </div>
+            )}
+          </div>
           {byKind.filter((k) => k.n).map((k) => (
             <div className="stat" key={k.kind}>
               <div className="stat-label">{SECTION_KINDS[k.kind]}</div>

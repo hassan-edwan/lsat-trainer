@@ -34,6 +34,12 @@ function recencyWeight(at, now) {
  * Aggregate attempt history by question type.
  * attempts: [{ qid, types, kind, first, br, answer, timeMs, at }]
  */
+// Every question in a scored session gets an attempt row, blanks included.
+/** You picked an answer. Only these count as questions answered (totals, goals, streaks, XP). */
+export const isAnswered = (a) => a.first != null && a.first !== '';
+/** You at least opened the question. A blank you saw counts as a miss; one you never reached says nothing. */
+export const wasSeen = (a) => isAnswered(a) || a.timeMs > 0;
+
 export function typeStats(attempts, now = Date.now()) {
   return statsBy(attempts, (a) => a.types || [], now);
 }
@@ -46,6 +52,7 @@ export function categoryStats(attempts, now = Date.now()) {
 function statsBy(attempts, keysOf, now) {
   const stats = {};
   for (const a of attempts) {
+    if (!wasSeen(a)) continue;
     const oc = outcome(a.first, a.br, a.answer);
     const w = recencyWeight(a.at, now);
     for (const t of keysOf(a)) {

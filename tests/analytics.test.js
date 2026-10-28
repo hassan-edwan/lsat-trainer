@@ -68,3 +68,21 @@ test('buildDrill: smart mode fills the requested count when the pool allows', ()
   assert.equal(picked.length, 12);
   assert.equal(new Set(picked.map((q) => q.id)).size, 12);
 });
+
+test('blank questions are not counted as answered, and ones never opened say nothing about accuracy', async () => {
+  const { isAnswered, wasSeen, typeStats } = await import('../src/lib/analytics.js');
+  const { activityByDay, attemptXp } = await import('../src/lib/progress.js');
+  const at = '2026-10-20T12:00:00';
+  const rows = [
+    { qid: 'a', first: 'A', br: 'A', answer: 'A', types: ['flaw'], at, timeMs: 60000 },
+    { qid: 'b', first: null, br: null, answer: 'A', types: ['flaw'], at, timeMs: 30000 }, // opened, left blank
+    { qid: 'c', first: null, br: null, answer: 'A', types: ['flaw'], at, timeMs: 0 }, // never reached
+  ];
+  assert.deepEqual(rows.map(isAnswered), [true, false, false]);
+  assert.deepEqual(rows.map(wasSeen), [true, true, false]);
+  assert.equal(Object.values(activityByDay(rows))[0], 1);
+  assert.equal(attemptXp(rows[2], 3), 0);
+  const s = typeStats(rows).flaw;
+  assert.equal(s.n, 2);
+  assert.equal(s.firstCorrect, 1);
+});

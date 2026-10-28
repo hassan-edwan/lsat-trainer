@@ -14,7 +14,7 @@
 
 import { LADDERS, ladderOf } from './diagnostic.js';
 import { QUESTION_TYPES } from './taxonomy.js';
-import { shuffle } from './analytics.js';
+import { shuffle, wasSeen } from './analytics.js';
 import { passageKey, passageMap, wholePassages } from './passages.js';
 
 export const LEVELS = [1, 2, 3, 4, 5];
@@ -110,7 +110,7 @@ export function evidenceRows({ attempts, index, sessions = {}, now = Date.now() 
   const rows = [];
   for (const a of sorted) {
     const entry = index[a.qid];
-    if (!entry) continue;
+    if (!entry || !wasSeen(a)) continue;
     const q = entry.question;
     const kind = entry.section?.kind || a.kind;
     if (kind !== 'LR' && kind !== 'RC') continue;
