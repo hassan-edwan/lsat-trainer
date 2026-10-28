@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { PageHeader } from '../components/Layout.jsx';
-import { STAMINA_LEVELS, createStaminaSession, ladderStatus, staminaHistory, unfinishedStamina } from '../lib/stamina.js';
+import { STAMINA_LEVELS, createStaminaSession, ladderStatus, staminaHistory, staminaSupply, unfinishedStamina } from '../lib/stamina.js';
 
 const signed = (n) => `${n > 0 ? '+' : ''}${n}`;
 
@@ -18,12 +18,14 @@ export default function Stamina() {
   const { tests, sessions, attempts, index, saveSession, finishSession } = useStore();
   const history = useMemo(() => staminaHistory(sessions, attempts, index), [sessions, attempts, index]);
   const ladder = useMemo(() => ladderStatus(history), [history]);
+  const supply = useMemo(() => staminaSupply(tests, attempts, sessions), [tests, attempts, sessions]);
   const level = ladder.next;
   const repeatAdvice = ladder.levels[level - 1].completed && !ladder.levels[level - 1].passed && ladder.unlocked > level;
 
   const start = async (lvl) => {
     const s = createStaminaSession(lvl, tests, attempts, sessions);
     if (!s) return;
+    if (s.stamina.repeats && !confirm(`You've used up the fresh questions for this level: ${s.stamina.repeats} of these questions are ones you answered at least two weeks ago. Start anyway?`)) return;
     const saved = await saveSession(s);
     navigate(`/session/${saved.id}`);
   };
@@ -85,6 +87,13 @@ export default function Stamina() {
           {repeatAdvice && <button className="big" onClick={() => start(ladder.unlocked)} disabled={!tests.length}>Go on to level {ladder.unlocked}</button>}
         </div>
         {!tests.length && <p className="muted">Load the practice tests first.</p>}
+        {tests.length > 0 && (
+          <p className="muted small-text">
+            Every stamina session uses questions you've never seen, including ones you saw in a session you discarded.
+            Fresh questions left: about {supply.LR} LR section{supply.LR === 1 ? '' : 's'} and {supply.RC} RC section{supply.RC === 1 ? '' : 's'} of four unread passages.
+            {(supply.LR < 2 || supply.RC < 1) && ' The bank is running low. Once it runs out, sessions reuse questions you answered at least two weeks ago and tell you before starting.'}
+          </p>
+        )}
       </section>
 
       <section className="card">

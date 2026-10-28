@@ -114,6 +114,9 @@ It runs entirely in your browser. There's no account and no server, and your dat
 - **Stamina sessions are always new questions:** each section is a whole built-in section you haven't touched if
   one is left; otherwise it's assembled from questions you've never seen (a 25-question LR section in a real section's
   difficulty mix, or an RC section of four whole unread passages), so repeating a level never repeats questions.
+  Questions in an unfinished session, or one you discarded after seeing part of it, count as seen. The Stamina page
+  shows how many fresh sections are left. If the bank runs out, a session reuses only questions you answered at least
+  two weeks ago and asks before starting.
 - **Stamina training:** a five-level ladder of longer and longer timed sittings: one section, two back to
   back, three straight with reading last, a full four-section test with the break, and a five-section
   "overtime" session. After every long session (ladder or full test) the app measures your *late fade*: how much

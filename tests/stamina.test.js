@@ -128,3 +128,38 @@ test('repeating a stamina level gives questions you have not seen', () => {
     attempts = [...attempts, ...qids.map((qid) => ({ qid, first: 'A', answer: 'A', at: '2026-10-01' }))];
   }
 });
+
+test('back to back, repeated: both sections are new each time until the bank runs out, and repeats are counted', () => {
+  const { tests } = fixture();
+  let attempts = [];
+  const seen = new Set();
+  const answer = (s) => { attempts = [...attempts, ...s.sections.flatMap((x) => x.qids).map((qid) => ({ qid, first: 'A', answer: 'A', at: '2026-10-01' }))]; };
+  for (let i = 0; i < 2; i++) {
+    const s = createStaminaSession(2, tests, attempts);
+    const qids = s.sections.flatMap((x) => x.qids);
+    assert.deepEqual([...s.sections.map((x) => x.kind)].sort(), ['LR', 'RC']);
+    assert.ok(qids.every((id) => !seen.has(id)), `repeat in back to back ${i + 1}`);
+    assert.equal(s.stamina.repeats, undefined);
+    qids.forEach((id) => seen.add(id));
+    answer(s);
+  }
+  // Both RC sections are used up: the third one has to repeat and says so.
+  const third = createStaminaSession(2, tests, attempts);
+  assert.ok(third.stamina.repeats > 0);
+});
+
+test('a discarded session keeps the questions it showed you marked as seen', async () => {
+  const { viewedQids } = await import('../src/lib/session.js');
+  const { seenIds } = await import('../src/lib/mastery.js');
+  const { tests, index } = fixture();
+  const s = createStaminaSession(1, tests, []);
+  const [a, b] = s.sections[0].qids;
+  s.responses[a] = { ...s.responses[a], first: 'B', timeMs: 40_000 };
+  s.current = { section: 0, index: 1 };
+  const shown = viewedQids(s, index);
+  assert.deepEqual(shown.sort(), [a, b].sort());
+  const abandoned = { ...s, phase: 'done', abandoned: true, shownQids: shown };
+  const next = createStaminaSession(1, tests, [], { [s.id]: abandoned });
+  assert.ok(!next.sections[0].qids.includes(a) && !next.sections[0].qids.includes(b));
+  assert.ok(seenIds({ attempts: [], sessions: { [s.id]: abandoned } }).has(a));
+});

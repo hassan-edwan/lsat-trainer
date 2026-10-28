@@ -129,6 +129,24 @@ function baseSession({ kind, title, testId = null, sections, settings }) {
 }
 
 /**
+ * Questions a session showed you: any you spent time on or answered, the one it was open on,
+ * and every question of a passage you started reading (a read passage is spent).
+ */
+export function viewedQids(session, index) {
+  const ids = new Set();
+  session.sections.forEach((sec, si) => sec.qids.forEach((id, qi) => {
+    const r = session.responses[id];
+    const here = session.current.section === si && session.current.index === qi;
+    if (here || r?.first || r?.timeMs > 0 || session.reading?.[readingKey(si, index[id])]) ids.add(id);
+  }));
+  for (const sec of session.sections) {
+    const read = new Set(sec.qids.filter((id) => ids.has(id)).map((id) => index[id]?.passage?.id).filter(Boolean));
+    sec.qids.forEach((id) => { if (read.has(index[id]?.passage?.id)) ids.add(id); });
+  }
+  return [...ids];
+}
+
+/**
  * Turn a finished session into attempt rows and journal changes.
  * Returns { attempts, journalPuts, summary }.
  */

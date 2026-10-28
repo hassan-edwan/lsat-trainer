@@ -4,7 +4,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { db } from './lib/db.js';
 import { initFileSync } from './lib/fileSync.js';
-import { buildIndex, finalizeSession, flatQuestions } from './lib/session.js';
+import { buildIndex, finalizeSession, flatQuestions, viewedQids } from './lib/session.js';
 import { categoriesOf } from './lib/taxonomy.js';
 import { categoryStats, outcome, typeStats } from './lib/analytics.js';
 import { ladderResults } from './lib/diagnostic.js';
@@ -128,6 +128,16 @@ export function StoreProvider({ children }) {
       setSessions((prev) => ({ ...prev, [next.id]: next }));
       await db.put('sessions', next);
       return next;
+    },
+    // Discard an unfinished session. Questions it already showed you stay marked as seen (in a
+    // hidden, abandoned record), so later drills and stamina sessions don't hand them back as new.
+    async discardSession(id) {
+      const s = sessions[id];
+      const shownQids = s ? viewedQids(s, index) : [];
+      if (!shownQids.length) { await db.delete('sessions', id); await reload(); return; }
+      await db.put('sessions', { ...s, phase: 'done', abandoned: true, finishedAt: new Date().toISOString(), updatedAt: new Date().toISOString(), shownQids,
+        summary: { total: 0, firstCorrect: 0, brCorrect: 0, outcomes: {}, bySection: [] } });
+      await reload();
     },
     async deleteSession(id) {
       await db.delete('sessions', id);

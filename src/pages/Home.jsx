@@ -17,7 +17,7 @@ function scoreText(session, test) {
 }
 
 export default function Home() {
-  const { tests, sessions, prefs, installBundle, saveSession, deleteSession } = useStore();
+  const { tests, sessions, prefs, installBundle, saveSession, discardSession } = useStore();
   const [busy, setBusy] = useState(false);
   const all = Object.values(sessions).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const active = all.filter((s) => s.phase !== 'done');
@@ -74,7 +74,7 @@ export default function Home() {
                   </span>
                 </div>
                 <button className="primary small" onClick={() => navigate(`/session/${s.id}`)}>Resume</button>
-                <button className="small" onClick={() => confirm('Discard this session?') && deleteSession(s.id)}>Discard</button>
+                <button className="small" onClick={() => confirm('Discard this session? Questions you already saw in it stay marked as seen.') && discardSession(s.id)}>Discard</button>
               </div>
             ))}
           </div>

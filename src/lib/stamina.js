@@ -3,7 +3,7 @@
 
 import { shuffle } from './analytics.js';
 import { createSectionsSession, flatQuestions } from './session.js';
-import { seenIds } from './mastery.js';
+import { RECENT_DAYS, seenIds } from './mastery.js';
 
 // Accuracy a typical student gets at each difficulty, used until there is enough of the user's own history.
 const PRIOR = { 1: 0.9, 2: 0.82, 3: 0.7, 4: 0.55, 5: 0.4 };
@@ -209,14 +209,41 @@ function freshRCSection(questions, seen, rng) {
 }
 
 /**
+ * Questions that are spent for stamina only recently: seen ones, minus questions whose last
+ * answer is at least RECENT_DAYS old (and that aren't waiting in an unfinished session).
+ */
+function recentlySeen(seen, attempts, sessions, now) {
+  const lastAt = new Map();
+  for (const a of attempts) { const t = new Date(a.at).getTime(); if (!(lastAt.get(a.qid) >= t)) lastAt.set(a.qid, t); }
+  const held = seenIds({ attempts: [], sessions });
+  return new Set([...seen].filter((id) => held.has(id) || !lastAt.has(id) || now - lastAt.get(id) < RECENT_DAYS * 86_400_000));
+}
+
+/** How many more fresh sections the bank can build: { LR, RC }, counting only questions you've never seen. */
+export function staminaSupply(tests, attempts, sessions = {}) {
+  const seen = seenIds({ attempts, sessions });
+  const questions = flatQuestions(tests.filter((t) => !t.retired && t.purpose !== 'diagnostic'));
+  const passages = {};
+  for (const q of questions) if (q.kind === 'RC' && q.passageId) (passages[`${q.testId}:${q.passageId}`] ||= []).push(q);
+  const freshPassages = Object.values(passages).filter((g) => g.length >= 4 && g.every((q) => !seen.has(q.id))).length;
+  return {
+    LR: Math.floor(questions.filter((q) => q.kind === 'LR' && !seen.has(q.id)).length / 25),
+    RC: Math.floor(freshPassages / 4),
+  };
+}
+
+/**
  * Build a stamina session for `level`. Each section is a whole real section you haven't touched
  * if one is left; otherwise it's assembled from questions you've never seen (LR in a real
  * section's difficulty mix, RC as four whole unread passages), so a repeated level is always new.
- * Falls back to the least-seen real section only if the bank runs out.
+ * Only if the bank runs out does it reuse questions, and then only ones you last answered at
+ * least RECENT_DAYS ago; `stamina.repeats` counts them.
  */
-export function createStaminaSession(level, tests, attempts, sessions = {}, rng = Math.random) {
+export function createStaminaSession(level, tests, attempts, sessions = {}, rng = Math.random, now = Date.now()) {
   const spec = STAMINA_LEVELS[level - 1];
   const seen = seenIds({ attempts, sessions });
+  const everSeen = new Set(seen);
+  const recent = recentlySeen(seen, attempts, sessions, now);
   const live = tests.filter((t) => !t.retired && t.purpose !== 'diagnostic');
   const questions = flatQuestions(live);
   const real = live.filter((t) => t.sections.length >= 3)
@@ -226,12 +253,12 @@ export function createStaminaSession(level, tests, attempts, sessions = {}, rng 
   const picked = [];
   for (const kind of spec.kinds()) {
     const untouched = shuffle(real.filter((x) => x.s.kind === kind && x.fresh === 1 && !used.has(x.s)), rng)[0];
-    let section = untouched?.s
-      || (kind === 'LR' ? freshLRSection(questions, seen, rng) : freshRCSection(questions, seen, rng));
+    const build = (spent) => (kind === 'LR' ? freshLRSection(questions, spent, rng) : freshRCSection(questions, spent, rng));
+    let section = untouched?.s || build(seen) || build(recent);
     if (!section) section = shuffle(real.filter((x) => x.s.kind === kind && !used.has(x.s)), rng).sort((a, b) => b.fresh - a.fresh)[0]?.s;
     if (!section) continue;
     used.add(section);
-    section.questions.forEach((q) => seen.add(q.id));
+    section.questions.forEach((q) => { seen.add(q.id); recent.add(q.id); });
     picked.push(section);
   }
   if (!picked.length) return null;
@@ -240,7 +267,8 @@ export function createStaminaSession(level, tests, attempts, sessions = {}, rng 
     title: `Stamina ${level}: ${spec.title}`,
     breakAfterSection: picked.length >= 4 ? spec.breakAfter : null,
   });
-  return { ...session, stamina: { level } };
+  const repeats = picked.flatMap((x) => x.questions).filter((q) => everSeen.has(q.id)).length;
+  return { ...session, stamina: { level, ...(repeats ? { repeats } : {}) } };
 }
 
 /** Stamina sessions that were started but never scored (left during the test or blind review). */
