@@ -88,3 +88,17 @@ test('achievements unlock from counts', () => {
 test('dayKey uses local dates', () => {
   assert.equal(dayKey(new Date(2026, 0, 5, 23, 30)), '2026-01-05');
 });
+
+test('all-time answered adds up the sessions in History, skipping blanks and hidden abandoned sets', async () => {
+  const { answeredFromHistory, sessionAnswered } = await import('../src/lib/progress.js');
+  const s = (id, firsts, extra = {}) => ({ id, phase: 'done', sections: [{ qids: firsts.map((_, i) => `${id}-${i}`) }],
+    responses: Object.fromEntries(firsts.map((f, i) => [`${id}-${i}`, { first: f }])), ...extra });
+  const sessions = {
+    a: s('a', ['A', 'B', null]),
+    b: s('b', ['C', 'D']),
+    c: s('c', ['A'], { abandoned: true }),
+    d: s('d', ['A'], { phase: 'timed' }),
+  };
+  assert.equal(sessionAnswered(sessions.a), 2);
+  assert.equal(answeredFromHistory(sessions), 4);
+});

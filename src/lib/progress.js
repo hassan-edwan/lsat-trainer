@@ -17,6 +17,19 @@ function addDays(key, n) {
   return dayKey(new Date(y, m - 1, d + n));
 }
 
+/** Questions you answered (picked an answer for) in one session. */
+export function sessionAnswered(s) {
+  return s.sections.reduce((t, sec) => t + sec.qids.filter((id) => s.responses?.[id]?.first).length, 0);
+}
+
+/**
+ * All-time questions answered, added up from your history: every finished session that shows in
+ * History (abandoned ones hidden there don't count), so the total always matches that list.
+ */
+export function answeredFromHistory(sessions) {
+  return Object.values(sessions).filter((s) => s.phase === 'done' && !s.abandoned).reduce((t, s) => t + sessionAnswered(s), 0);
+}
+
 /** Questions answered per local day: { "2026-10-21": 34, ... } */
 export function activityByDay(attempts) {
   const out = {};

@@ -6,6 +6,7 @@ import { scaledScore } from '../lib/analytics.js';
 import { PageHeader } from '../components/Layout.jsx';
 import BundleUpdate from '../components/BundleUpdate.jsx';
 import { loadBundledTests } from '../lib/bundle.js';
+import { sessionAnswered } from '../lib/progress.js';
 
 function scoreText(session, test) {
   const s = session.summary;
@@ -19,9 +20,12 @@ function scoreText(session, test) {
 export default function Home() {
   const { tests, sessions, prefs, installBundle, saveSession, discardSession } = useStore();
   const [busy, setBusy] = useState(false);
+  const [showAll, setShowAll] = useState(false);
   const all = Object.values(sessions).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const active = all.filter((s) => s.phase !== 'done');
   const done = all.filter((s) => s.phase === 'done' && !s.abandoned);
+  const answeredTotal = done.reduce((t, s) => t + sessionAnswered(s), 0);
+  const questionCount = (s) => s.sections.reduce((t, x) => t + x.qids.length, 0);
   const testById = Object.fromEntries(tests.map((t) => [t.id, t]));
   const practiceTests = tests.filter((t) => t.purpose !== 'diagnostic');
   const hasDiagnostic = tests.length > practiceTests.length;
@@ -124,16 +128,20 @@ export default function Home() {
       {done.length > 0 && (
         <section className="card">
           <h2>History</h2>
-          <p className="card-sub">Every finished test, drill, and diagnostic. Scores show timed → after blind review.</p>
+          <p className="card-sub">
+            Every finished test, drill, and diagnostic: {done.length} session{done.length === 1 ? '' : 's'}, {answeredTotal} questions answered.
+            Scores show timed → after blind review.
+          </p>
           <div className="table-wrap">
             <table className="table">
-              <thead><tr><th>Session</th><th>Type</th><th>Finished</th><th>Score</th><th /></tr></thead>
+              <thead><tr><th>Session</th><th>Type</th><th>Finished</th><th>Answered</th><th>Score</th><th /></tr></thead>
               <tbody>
-                {done.slice(0, 30).map((s) => (
+                {(showAll ? done : done.slice(0, 30)).map((s) => (
                   <tr key={s.id}>
                     <td>{s.title}</td>
                     <td><span className="chip">{s.kind === 'pt' ? 'Test' : s.kind === 'stamina' ? 'Stamina' : s.kind === 'diagnostic' ? 'Diagnostic' : 'Drill'}</span></td>
                     <td className="muted">{new Date(s.finishedAt || s.updatedAt).toLocaleDateString()}</td>
+                    <td className="muted">{sessionAnswered(s)}{sessionAnswered(s) < questionCount(s) ? ` of ${questionCount(s)}` : ''}</td>
                     <td>{scoreText(s, testById[s.testId])}</td>
                     <td className="right"><a className="button small" href={`#/session/${s.id}`}>Review</a></td>
                   </tr>
@@ -141,6 +149,9 @@ export default function Home() {
               </tbody>
             </table>
           </div>
+          {done.length > 30 && (
+            <button className="small" onClick={() => setShowAll((v) => !v)}>{showAll ? 'Show the latest 30' : `Show all ${done.length}`}</button>
+          )}
         </section>
       )}
     </div>

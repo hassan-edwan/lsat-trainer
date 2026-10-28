@@ -173,10 +173,14 @@ export default function Diagnostic() {
 
   const count = diagnosticOrder(diagnosticQuestions, [...selected]).length;
   const enough = prediction.n >= MIN_FOR_SCORE;
-  const focus = ranked.filter((s) => s.diagnosis !== 'strong' && s.diagnosis !== 'solid').slice(0, 5);
-  const focusIds = new Set(focus.map((s) => s.id));
-  const stale = profile.skills.filter((s) => s.stale && !focusIds.has(s.id))
-    .sort((a, b) => (b.answersSince ?? 0) - (a.answersSince ?? 0)).slice(0, 4);
+  // LR and RC are ranked separately, so a section never crowds the other out of the list.
+  const sections = ['LR', 'RC'].map((kind) => {
+    const focus = ranked.filter((s) => s.kind === kind && s.diagnosis !== 'strong' && s.diagnosis !== 'solid').slice(0, 4);
+    const focusIds = new Set(focus.map((s) => s.id));
+    const stale = profile.skills.filter((s) => s.kind === kind && s.stale && !focusIds.has(s.id))
+      .sort((a, b) => (b.answersSince ?? 0) - (a.answersSince ?? 0)).slice(0, 3);
+    return { kind, title: kind === 'LR' ? 'Logical Reasoning' : 'Reading Comprehension', focus, stale };
+  });
 
   return (
     <div className="stack">
@@ -261,55 +265,60 @@ export default function Diagnostic() {
             </div>
             <button className="primary" onClick={() => startMixed(store)}>▶ Start mixed set</button>
           </div>
-          {focus.length === 0 ? <p className="muted">Every skill with data is solid or strong. Keep training at higher levels below.</p> : (
-            <div className="focus-list">
-              {focus.map((s) => (
-                <div key={s.id} className="focus-item">
-                  <div className="focus-main">
-                    <div className="row">
-                      <strong>{s.title}</strong>
-                      <span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span>
-                      {s.gain != null && s.diagnosis !== 'no-data' && <span className="muted small-text">+{s.gain.toFixed(1)} pts per level</span>}
+          {sections.map(({ kind, title, focus, stale }) => (
+            <div key={kind} className="work-section">
+              <h3>{title}</h3>
+              {focus.length === 0 ? <p className="muted">Every {title} skill with data is solid or strong. Keep training at higher levels below.</p> : (
+                <div className="focus-list">
+                  {focus.map((s) => (
+                    <div key={s.id} className="focus-item">
+                      <div className="focus-main">
+                        <div className="row">
+                          <strong>{s.title}</strong>
+                          <span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span>
+                          {s.gain != null && s.diagnosis !== 'no-data' && <span className="muted small-text">+{s.gain.toFixed(1)} pts per level</span>}
+                        </div>
+                        <div className="small-text">
+                          {s.diagnosis !== 'no-data' && <>Skill level {s.level.toFixed(1)} after blind review · {s.timedLevel.toFixed(1)} under time. </>}
+                          {DIAGNOSIS[s.diagnosis].tip}
+                        </div>
+                        {s.n > 0 && <div className="muted small-text">{evidenceLine(s)} · {ago(s)}</div>}
+                      </div>
+                      <div className="focus-action">
+                        <div className="row">
+                          {openSet(s) && <button className="small" onClick={() => resumeTraining(s, store)} title="Go back to the set you didn't finish">Resume</button>}
+                          <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}
+                            title={openSet(s) ? 'Scores what you answered in your unfinished set and starts new questions' : undefined}>
+                            {s.diagnosis === 'no-data' ? 'Take ladder' : `${openSet(s) ? 'New set' : 'Train'} · level ${tracks[s.id].next ?? 5}`}
+                          </button>
+                        </div>
+                        {s.diagnosis !== 'no-data' && <span className="muted small-text">{unseenAt(s)} new at this level · {freshHard(s)} new at level 3+</span>}
+                      </div>
                     </div>
-                    <div className="small-text">
-                      {s.diagnosis !== 'no-data' && <>Skill level {s.level.toFixed(1)} after blind review · {s.timedLevel.toFixed(1)} under time. </>}
-                      {DIAGNOSIS[s.diagnosis].tip}
-                    </div>
-                    {s.n > 0 && <div className="muted small-text">{evidenceLine(s)} · {ago(s)}</div>}
-                  </div>
-                  <div className="focus-action">
-                    <div className="row">
-                      {openSet(s) && <button className="small" onClick={() => resumeTraining(s, store)} title="Go back to the set you didn't finish">Resume</button>}
-                      <button className="primary small" onClick={() => (s.diagnosis === 'no-data' ? start([s.id]) : train(s))}
-                        title={openSet(s) ? 'Scores what you answered in your unfinished set and starts new questions' : undefined}>
-                        {s.diagnosis === 'no-data' ? 'Take ladder' : `${openSet(s) ? 'New set' : 'Train'} · level ${tracks[s.id].next ?? 5}`}
-                      </button>
-                    </div>
-                    {s.diagnosis !== 'no-data' && <span className="muted small-text">{unseenAt(s)} new at this level · {freshHard(s)} new at level 3+</span>}
-                  </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          )}
-          {stale.length > 0 && (
-            <>
-              <h3>Keep fresh</h3>
-              <p className="card-sub">Skills you haven't practiced in a while. A quick 4-question check-in keeps them sharp, or shows they've slipped.</p>
-              <div className="focus-list">
-                {stale.map((s) => (
-                  <div key={s.id} className="focus-item">
-                    <div className="focus-main">
-                      <div className="row"><strong>{s.title}</strong><span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span></div>
-                      <div className="muted small-text">Skill level {s.level.toFixed(1)} · {ago(s)} · {freshHard(s)} new at level 3+</div>
-                    </div>
-                    <div className="focus-action">
-                      <button className="small" onClick={() => startTraining(s, Math.max(3, tracks[s.id].next ?? 5), store, {}, 4)}>Check in</button>
-                    </div>
+              )}
+              {stale.length > 0 && (
+                <>
+                  <h4>Keep fresh</h4>
+                  <p className="card-sub">Skills you haven't practiced in a while. A quick 4-question check-in keeps them sharp, or shows they've slipped.</p>
+                  <div className="focus-list">
+                    {stale.map((s) => (
+                      <div key={s.id} className="focus-item">
+                        <div className="focus-main">
+                          <div className="row"><strong>{s.title}</strong><span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span></div>
+                          <div className="muted small-text">Skill level {s.level.toFixed(1)} · {ago(s)} · {freshHard(s)} new at level 3+</div>
+                        </div>
+                        <div className="focus-action">
+                          <button className="small" onClick={() => startTraining(s, Math.max(3, tracks[s.id].next ?? 5), store, {}, 4)}>Check in</button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </>
-          )}
+                </>
+              )}
+            </div>
+          ))}
         </section>
       )}
 

@@ -6,10 +6,10 @@ import { db } from './lib/db.js';
 import { initFileSync } from './lib/fileSync.js';
 import { buildIndex, finalizeSession, flatQuestions, viewedQids } from './lib/session.js';
 import { categoriesOf } from './lib/taxonomy.js';
-import { categoryStats, isAnswered, outcome, typeStats } from './lib/analytics.js';
+import { categoryStats, outcome, typeStats } from './lib/analytics.js';
 import { ladderResults } from './lib/diagnostic.js';
 import {
-  activityByDay, dayKey, dueJournal, earnedAchievements, isWrittenUp, levelInfo, masteryTier, streakInfo, totalXp,
+  activityByDay, answeredFromHistory, dayKey, dueJournal, earnedAchievements, isWrittenUp, levelInfo, masteryTier, streakInfo, totalXp,
 } from './lib/progress.js';
 
 export const DEFAULT_PREFS = { dailyGoal: 20, gamification: true, seenAchievements: null, unscoredSection: true };
@@ -65,7 +65,7 @@ export function StoreProvider({ children }) {
     const catS = categoryStats(taggedAttempts);
     const entries = Object.values(journal);
     const counts = {
-      answered: attempts.filter(isAnswered).length,
+      answered: answeredFromHistory(sessions),
       testsDone: done.filter((s) => s.kind === 'pt').length,
       diagnosticsDone: done.filter((s) => s.kind === 'diagnostic').length,
       bestStreak: streak.best,

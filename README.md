@@ -74,8 +74,8 @@ It runs entirely in your browser. There's no account and no server, and your dat
     the scaled score, on the score curve; how the prediction has moved day by day as its range narrows; and a track
     record. The track record shows, for each recent session, the accuracy predicted beforehand from earlier answers
     only, next to what you actually got.
-  - *What to work on:* genuine gaps first, then execution problems, each ranked by how many scaled points one level
-    of improvement is worth.
+  - *What to work on:* split into Logical Reasoning and Reading Comprehension, each with its own ranking: genuine
+    gaps first, then execution problems, ranked by how many scaled points one level of improvement is worth.
   - *Mixed sets:* 10 questions you've never seen, mostly level 3–5: about 6 from your weak spots and 4 for variety,
     led by skills you haven't practiced in a while. They're on the Skills page, on the Drills page, and in the daily plan.
   - *Keep fresh:* a skill you haven't practiced in 100 answers or 10 days gets a 4-question check-in, so a skill you've

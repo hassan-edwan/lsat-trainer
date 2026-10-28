@@ -2,10 +2,10 @@ import { useMemo, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
-import { buildDrill, categoryStats, formatMs, isAnswered, wasSeen, weaknessScores } from '../lib/analytics.js';
+import { buildDrill, categoryStats, formatMs, wasSeen, weaknessScores } from '../lib/analytics.js';
 import { createDrillSession } from '../lib/session.js';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
-import { masteryTier } from '../lib/progress.js';
+import { answeredFromHistory, masteryTier, sessionAnswered } from '../lib/progress.js';
 
 const TIER = { gold: '🥇', silver: '🥈', bronze: '🥉' };
 function Badge({ stats }) {
@@ -64,12 +64,11 @@ export default function Stats() {
         <div className="stat-row">
           <div className="stat">
             <div className="stat-label">Questions answered</div>
-            <div className="stat-value">{attempts.filter(isAnswered).length}</div>
-            {attempts.some((a) => !isAnswered(a)) && (
-              <div className="muted" title="Questions in scored sessions you didn't answer. Ones you opened count as misses in your accuracy; ones you never reached don't count at all.">
-                plus {attempts.filter((a) => !isAnswered(a)).length} left blank
-              </div>
-            )}
+            <div className="stat-value">{answeredFromHistory(sessions)}</div>
+            <div className="muted" title="Added up from every session in History. Questions left blank aren't counted; ones you opened count as misses in your accuracy, ones you never reached don't count at all.">
+              across {done.length} session{done.length === 1 ? '' : 's'} in History
+              {(() => { const blank = done.reduce((t, s) => t + s.sections.reduce((n, x) => n + x.qids.length, 0) - sessionAnswered(s), 0); return blank ? `, plus ${blank} left blank` : ''; })()}
+            </div>
           </div>
           {byKind.filter((k) => k.n).map((k) => (
             <div className="stat" key={k.kind}>
