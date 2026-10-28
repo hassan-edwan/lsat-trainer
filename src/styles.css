@@ -682,3 +682,7 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 .mix-box { display: flex; gap: 1rem; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; border-radius: var(--radius-sm); background: var(--accent-soft); margin: 0.5rem 0 0.75rem; }
 @media (max-width: 640px) { .mix-box { flex-direction: column; align-items: stretch; } }
 .stamina-step.done .step-num { background: var(--warn-soft); color: var(--warn); }
+
+/* Pause */
+.pause-screen { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: var(--bg); padding: 16px; }
+.pause-screen .card { max-width: 460px; }

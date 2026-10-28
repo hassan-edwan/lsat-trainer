@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useStore } from '../store.jsx';
+import { formatMs } from '../lib/analytics.js';
 import { expectedByDifficulty, staminaReport, verdict } from '../lib/stamina.js';
 
 const signed = (n) => (n == null ? '—' : `${n > 0 ? '+' : ''}${n}`);
@@ -30,6 +31,12 @@ export default function StaminaCard({ session }) {
             : <> Repeat level {session.stamina.level} until the fade is under 6 points.</>)}
         </p>
       </div>
+      {session.pauses?.length > 0 && (
+        <p className="muted">
+          ⏸ Paused {session.pauses.length} time{session.pauses.length === 1 ? '' : 's'} for {formatMs(session.pauses.reduce((t, x) => t + (x.ms || 0), 0))} in total.
+          The real test has no pause, so the fade may look better than it would on test day.
+        </p>
+      )}
       <div className="table-wrap"><table className="table">
         <thead><tr><th>Section</th><th>Accuracy</th><th>vs. your usual</th><th>Last third vs. first two thirds</th><th>Pace (sec/question)</th><th>Blank</th></tr></thead>
         <tbody>

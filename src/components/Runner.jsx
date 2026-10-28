@@ -109,6 +109,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   // ---- timer --------------------------------------------------------------
   useEffect(() => {
     if (session.phase !== 'timed' && session.phase !== 'br' && session.phase !== 'break') return undefined;
+    if (session.pausedAt && session.phase !== 'break') return undefined;
     const id = setInterval(() => {
       setSession((prev) => {
         if (prev.phase === 'break') {
@@ -134,7 +135,19 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
       });
     }, 1000);
     return () => clearInterval(id);
-  }, [session.phase]);
+  }, [session.phase, session.pausedAt]);
+
+  // ---- pause ---------------------------------------------------------------
+  // Stops the section and question clocks and hides the question. Each pause is logged
+  // (the real test has no pause), so long-sitting results can say how often you stopped.
+  const paused = !!session.pausedAt && session.phase !== 'break';
+  const canPause = session.phase === 'timed' || session.phase === 'br';
+  const pause = useCallback(() => update((s) => (s.pausedAt ? s : { ...s, pausedAt: new Date().toISOString() })), [update]);
+  const resume = useCallback(() => update((s) => {
+    if (!s.pausedAt) return s;
+    const ms = Date.now() - new Date(s.pausedAt).getTime();
+    return { ...s, pausedAt: null, pauses: [...(s.pauses || []), { at: s.pausedAt, ms, phase: s.phase }] };
+  }), [update]);
 
   const remaining = sec.timeLimitSec != null ? sec.timeLimitSec - sec.elapsedSec : null;
   const targetSec = sec.timeLimitSec ? Math.round(sec.timeLimitSec / sec.qids.length) : null;
@@ -231,6 +244,11 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   useEffect(() => {
     const onKey = (e) => {
       if (e.target.closest?.('textarea, select, input:not([type=checkbox])') || e.metaKey || e.ctrlKey || isBreak) return;
+      if (paused) {
+        if (e.key === 'p' || e.key === 'P' || e.key === 'Enter' || e.key === ' ') { e.preventDefault(); resume(); }
+        return;
+      }
+      if ((e.key === 'p' || e.key === 'P') && canPause) { e.preventDefault(); pause(); return; }
       const k = e.key.toUpperCase();
       const n = entry?.question.choices.length ?? 5;
       if (reading) {
@@ -336,6 +354,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           {sec.kind === 'RC' && !isBR && (
             <button className={`tool ${readPause ? 'on' : ''}`} title="Reading pause: read each passage first with the question clock stopped" onClick={toggleReadPause}>📖</button>
           )}
+          {canPause && <button className="tool" title="Pause (P): stops the clock and hides the question" onClick={pause}>⏸</button>}
           <button className="tool" title="Line spacing" onClick={cycleSpacing}>↕</button>
           <button className="tool" title="Smaller text" onClick={() => setFontSize((f) => Math.max(12, f - 1))}>A−</button>
           <button className="tool" title="Larger text" onClick={() => setFontSize((f) => Math.min(24, f + 1))}>A+</button>
@@ -379,6 +398,17 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
       </div>
 
       {toast && <div className="toast">{toast}</div>}
+
+      {paused && (
+        <div className="pause-screen" role="dialog" aria-label="Paused">
+          <div className="card center">
+            <h1>Paused</h1>
+            <p>The clock is stopped{remaining != null && !isBR ? ` with ${formatMs(remaining * 1000)} left in this section` : ''}. The question is hidden until you resume.</p>
+            <button className="primary big" onClick={resume} autoFocus>▶ Resume</button>
+            <p className="muted small-text">P, Enter or Space also resumes. The real test has no pause, so long-sitting results note how often you paused.</p>
+          </div>
+        </div>
+      )}
 
       <div className={`exam-body ${leftText ? '' : 'single'}`}>
         {leftText && (
