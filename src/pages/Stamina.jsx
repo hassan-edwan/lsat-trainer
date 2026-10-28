@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { PageHeader } from '../components/Layout.jsx';
-import { STAMINA_LEVELS, createStaminaSession, currentLevel, staminaHistory, unfinishedStamina } from '../lib/stamina.js';
+import { STAMINA_LEVELS, createStaminaSession, ladderStatus, staminaHistory, unfinishedStamina } from '../lib/stamina.js';
 
 const signed = (n) => `${n > 0 ? '+' : ''}${n}`;
 
@@ -17,7 +17,9 @@ const TIPS = [
 export default function Stamina() {
   const { tests, sessions, attempts, index, saveSession, finishSession } = useStore();
   const history = useMemo(() => staminaHistory(sessions, attempts, index), [sessions, attempts, index]);
-  const level = currentLevel(history);
+  const ladder = useMemo(() => ladderStatus(history), [history]);
+  const level = ladder.next;
+  const repeatAdvice = ladder.levels[level - 1].completed && !ladder.levels[level - 1].passed && ladder.unlocked > level;
 
   const start = async (lvl) => {
     const s = createStaminaSession(lvl, tests, attempts);
@@ -32,7 +34,6 @@ export default function Stamina() {
   const answered = (s) => s.sections.flatMap((x) => x.qids).filter((id) => s.responses[id]?.first).length;
   const total = (s) => s.sections.reduce((t, x) => t + x.qids.length, 0);
 
-  const passedLevels = new Set(history.filter((h) => h.report.passed && h.session.stamina).map((h) => h.session.stamina.level));
   const recent = history.slice(0, 8);
 
   return (
@@ -70,27 +71,45 @@ export default function Stamina() {
       )}
 
       <section className="card">
-        <h2>Next: level {level}, {STAMINA_LEVELS[level - 1].title}</h2>
-        <p className="card-sub">{STAMINA_LEVELS[level - 1].detail} You pass a level when your late accuracy drops by less than 6 points after adjusting for difficulty.</p>
-        <button className="primary big" onClick={() => start(level)} disabled={!tests.length}>▶ Start level {level}</button>
+        <h2>{repeatAdvice ? 'Suggested: repeat' : 'Next:'} level {level}, {STAMINA_LEVELS[level - 1].title}</h2>
+        {repeatAdvice ? (
+          <p className="card-sub">
+            You finished this level, but your late accuracy faded {Math.abs(ladder.levels[level - 1].last.fade)} points (passing is under 6). Repeating it
+            builds the habit before going longer. Level {ladder.unlocked} is unlocked if you'd rather move on.
+          </p>
+        ) : (
+          <p className="card-sub">{STAMINA_LEVELS[level - 1].detail} Finishing a level unlocks the next. You pass it when your late accuracy drops by less than 6 points after adjusting for difficulty.</p>
+        )}
+        <div className="row">
+          <button className="primary big" onClick={() => start(level)} disabled={!tests.length}>▶ {repeatAdvice ? 'Repeat' : 'Start'} level {level}</button>
+          {repeatAdvice && <button className="big" onClick={() => start(ladder.unlocked)} disabled={!tests.length}>Go on to level {ladder.unlocked}</button>}
+        </div>
         {!tests.length && <p className="muted">Load the practice tests first.</p>}
       </section>
 
       <section className="card">
         <h2>The ladder</h2>
         <div className="stamina-ladder">
-          {STAMINA_LEVELS.map((l) => (
-            <div key={l.level} className={`stamina-step ${passedLevels.has(l.level) ? 'passed' : ''} ${l.level === level ? 'current' : ''}`}>
-              <div className="step-num">{passedLevels.has(l.level) ? '✓' : l.level}</div>
-              <div className="step-body">
-                <strong>{l.title}</strong>
-                <span className="muted">{l.detail}</span>
+          {STAMINA_LEVELS.map((l) => {
+            const st = ladder.levels[l.level - 1];
+            const locked = l.level > ladder.unlocked;
+            const status = st.passed ? 'Passed: held steady'
+              : st.completed ? `Done, faded ${Math.abs(st.last.fade)} pts: repeat to pass`
+                : st.attempts ? 'Tried, but didn\'t count (rushed or mostly blank)' : null;
+            return (
+              <div key={l.level} className={`stamina-step ${st.passed ? 'passed' : st.completed ? 'done' : ''} ${l.level === level ? 'current' : ''}`}>
+                <div className="step-num">{st.passed ? '✓' : st.completed ? '↻' : l.level}</div>
+                <div className="step-body">
+                  <strong>{l.title}</strong>
+                  <span className="muted">{l.detail}</span>
+                  {status && <span className="small-text">{status}{st.attempts > 1 ? ` · ${st.attempts} attempts` : ''}</span>}
+                </div>
+                <button className={l.level === level ? 'primary small' : 'small'} onClick={() => start(l.level)} disabled={!tests.length || locked}>
+                  {locked ? 'Locked' : st.attempts ? 'Repeat' : 'Start'}
+                </button>
               </div>
-              <button className={l.level === level ? 'primary small' : 'small'} onClick={() => start(l.level)} disabled={!tests.length || l.level > level}>
-                {l.level > level ? 'Locked' : passedLevels.has(l.level) ? 'Repeat' : 'Start'}
-              </button>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

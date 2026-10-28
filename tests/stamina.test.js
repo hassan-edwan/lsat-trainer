@@ -50,12 +50,28 @@ test('staminaReport needs at least 10 questions', () => {
   assert.equal(staminaReport(s, index, expectedByDifficulty([], index)), null);
 });
 
-test('currentLevel: one above the highest level passed; a full test counts as 4', () => {
+test('finishing a level unlocks the next; a level you faded on is suggested again', async () => {
+  const { ladderStatus } = await import('../src/lib/stamina.js');
+  const h = (level, { passed = false, counts = true, fade = passed ? 0 : -10, kind = 'stamina', at = '2026-10-01' } = {}) => ({
+    session: { stamina: level ? { level } : undefined, sections: [1, 2, 3, 4], kind, finishedAt: at },
+    report: { passed: passed && counts, counts, fade },
+  });
   assert.equal(currentLevel([]), 1);
-  const h = (level, passed, extra = {}) => ({ session: { stamina: level ? { level } : undefined, sections: [1, 2, 3, 4], kind: 'stamina', ...extra }, report: { passed } });
-  assert.equal(currentLevel([h(1, true), h(2, false)]), 2);
-  assert.equal(currentLevel([h(null, true, { kind: 'pt' })]), 5);
-  assert.equal(currentLevel([h(5, true)]), 5);
+  // Finished level 1 but faded: level 2 unlocks, level 1 is suggested again.
+  let st = ladderStatus([h(1)]);
+  assert.equal(st.unlocked, 2);
+  assert.equal(st.next, 1);
+  assert.equal(st.levels[0].completed, true);
+  assert.equal(st.levels[0].passed, false);
+  // Rushed sessions don't unlock anything.
+  assert.equal(ladderStatus([h(1, { counts: false })]).unlocked, 1);
+  // Passed 1, faded on 2: suggest 2, with 3 unlocked.
+  st = ladderStatus([h(2, { at: '2026-10-02' }), h(1, { passed: true })]);
+  assert.deepEqual([st.next, st.unlocked], [2, 3]);
+  // A passed full test counts as level 4 and covers the levels below it.
+  st = ladderStatus([h(null, { passed: true, kind: 'pt' })]);
+  assert.deepEqual([st.next, st.unlocked], [5, 5]);
+  assert.equal(currentLevel([h(5, { passed: true })]), 5);
 });
 
 test('createStaminaSession picks distinct, unseen sections of the right kinds', () => {

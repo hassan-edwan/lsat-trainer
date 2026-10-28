@@ -120,15 +120,42 @@ export function staminaHistory(sessions, attempts, index) {
     .filter((x) => x.report);
 }
 
-/** The next level to train: one above the highest level passed. Full tests count as level 4; drills don't move the ladder. */
-export function currentLevel(history) {
-  let best = 0;
-  for (const { session, report } of history) {
+const ladderLevel = (session) => session.stamina?.level
+  ?? (session.kind === 'pt' && session.sections.length >= 4 ? 4 : session.sections.length >= 3 ? 3 : 2);
+
+/**
+ * Where you are on the ladder. Finishing a level (a session that counts) unlocks the next one;
+ * holding steady (fade under 6 points) passes it. `next` is the level to do now: the first
+ * unlocked level you haven't passed, so a level you faded on is suggested again, but the
+ * next one stays open. Full tests count as level 4; drills don't move the ladder.
+ */
+export function ladderStatus(history) {
+  const levels = STAMINA_LEVELS.map((l) => ({ level: l.level, attempts: 0, completed: false, passed: false, last: null }));
+  // history is newest first; walk oldest first so `last` ends up as the latest attempt.
+  for (const { session, report } of [...history].reverse()) {
     if (session.kind !== 'stamina' && session.kind !== 'pt') continue;
-    const lvl = session.stamina?.level ?? (session.kind === 'pt' && session.sections.length >= 4 ? 4 : session.sections.length >= 3 ? 3 : 2);
-    if (report.passed) best = Math.max(best, lvl);
+    const x = levels[ladderLevel(session) - 1];
+    if (!x) continue;
+    x.attempts += 1;
+    x.last = { fade: report.fade, counts: report.counts, passed: report.passed, at: session.finishedAt };
+    if (report.counts) x.completed = true;
+    if (report.passed) x.passed = true;
   }
-  return Math.min(5, best + 1);
+  // Passing or finishing a longer sitting covers the shorter levels below it.
+  for (let i = levels.length - 2; i >= 0; i--) {
+    levels[i].passed ||= levels[i + 1].passed;
+    levels[i].completed ||= levels[i + 1].completed;
+  }
+  let unlocked = 1;
+  for (const x of levels) if (x.completed) unlocked = Math.max(unlocked, x.level + 1);
+  unlocked = Math.min(5, unlocked);
+  const next = levels.find((x) => x.level <= unlocked && !x.passed)?.level ?? unlocked;
+  return { levels, unlocked, next };
+}
+
+/** The level to train next (see ladderStatus). */
+export function currentLevel(history) {
+  return ladderStatus(history).next;
 }
 
 /** Build a stamina session for `level` from the library, preferring sections not seen before. */
