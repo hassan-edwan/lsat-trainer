@@ -104,6 +104,9 @@ It runs entirely in your browser. There's no account and no server, and your dat
   question. Your reading time is recorded separately, the question clock stays stopped, and you press *Start the
   questions* (or Enter) when you're done reading. The section clock keeps running as on test day. Results split
   each passage into reading and answering time. The 📖 button turns it off.
+- **Stamina sessions are always new questions:** each section is a whole built-in section you haven't touched if
+  one is left; otherwise it's assembled from questions you've never seen (a 25-question LR section in a real section's
+  difficulty mix, or an RC section of four whole unread passages), so repeating a level never repeats questions.
 - **Stamina training:** a five-level ladder of longer and longer timed sittings: one section, two back to
   back, three straight with reading last, a full four-section test with the break, and a five-section
   "overtime" session. After every long session (ladder or full test) the app measures your *late fade*: how much

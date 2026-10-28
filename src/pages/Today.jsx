@@ -32,7 +32,7 @@ export async function startTask(task, store) {
     session = createPTSession(test, { unscored: prefs?.unscoredSection ? pickUnscoredSection(tests, test) : null });
   }
   else if (a.kind === 'stamina') {
-    session = createStaminaSession(a.level, tests, attempts || []);
+    session = createStaminaSession(a.level, tests, attempts || [], store.sessions);
     if (!session) return false;
   }
   else session = createDrillSession(a.questions, a.opts);

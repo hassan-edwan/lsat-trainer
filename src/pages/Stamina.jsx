@@ -22,7 +22,7 @@ export default function Stamina() {
   const repeatAdvice = ladder.levels[level - 1].completed && !ladder.levels[level - 1].passed && ladder.unlocked > level;
 
   const start = async (lvl) => {
-    const s = createStaminaSession(lvl, tests, attempts);
+    const s = createStaminaSession(lvl, tests, attempts, sessions);
     if (!s) return;
     const saved = await saveSession(s);
     navigate(`/session/${saved.id}`);

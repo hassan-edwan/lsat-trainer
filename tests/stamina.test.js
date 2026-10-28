@@ -114,3 +114,17 @@ test('a session with a few blanks at the end still counts', () => {
   const r = staminaReport(s, index, expectedByDifficulty([], index));
   assert.equal(r.counts, true);
 });
+
+test('repeating a stamina level gives questions you have not seen', () => {
+  const { tests } = fixture();
+  let attempts = [];
+  const seen = new Set();
+  for (let i = 0; i < 4; i++) {
+    const s = createStaminaSession(1, tests, attempts);
+    const qids = s.sections.flatMap((x) => x.qids);
+    assert.equal(qids.length, 25);
+    assert.ok(qids.every((id) => !seen.has(id)), `repeat in session ${i + 1}`);
+    qids.forEach((id) => seen.add(id));
+    attempts = [...attempts, ...qids.map((qid) => ({ qid, first: 'A', answer: 'A', at: '2026-10-01' }))];
+  }
+});

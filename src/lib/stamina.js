@@ -2,7 +2,8 @@
 // longer and longer sessions to build it.
 
 import { shuffle } from './analytics.js';
-import { createSectionsSession } from './session.js';
+import { createSectionsSession, flatQuestions } from './session.js';
+import { seenIds } from './mastery.js';
 
 // Accuracy a typical student gets at each difficulty, used until there is enough of the user's own history.
 const PRIOR = { 1: 0.9, 2: 0.82, 3: 0.7, 4: 0.55, 5: 0.4 };
@@ -158,20 +159,80 @@ export function currentLevel(history) {
   return ladderStatus(history).next;
 }
 
-/** Build a stamina session for `level` from the library, preferring sections not seen before. */
-export function createStaminaSession(level, tests, attempts) {
+// A real LR section's difficulty mix (25 questions), easiest first with the hardest late.
+const LR_MIX = { 1: 4, 2: 6, 3: 7, 4: 5, 5: 3 };
+const MAX_SAME_TYPE = 4;
+
+/** A 25-question LR section of questions you've never seen, shaped like a real one. */
+function freshLRSection(questions, seen, rng) {
+  const pool = questions.filter((q) => q.kind === 'LR' && !seen.has(q.id));
+  const picked = [];
+  const typeCount = {};
+  const take = (cands, n) => {
+    for (const q of shuffle(cands, rng)) {
+      if (n <= 0) break;
+      const t = q.types?.[0] || 'other';
+      if (picked.includes(q) || (typeCount[t] || 0) >= MAX_SAME_TYPE) continue;
+      picked.push(q);
+      typeCount[t] = (typeCount[t] || 0) + 1;
+      n -= 1;
+    }
+    return n;
+  };
+  let short = 0;
+  for (const [d, n] of Object.entries(LR_MIX)) short += take(pool.filter((q) => (q.difficulty ?? 3) === Number(d)), n);
+  if (short > 0) take(pool, short);
+  if (picked.length < 20) return null;
+  // Easiest first with some overlap between neighbouring levels, as on the real test.
+  const ordered = picked.map((q) => ({ q, k: (q.difficulty ?? 3) + rng() * 1.5 })).sort((x, y) => x.k - y.k).map((x) => x.q);
+  return { title: 'Logical Reasoning', kind: 'LR', timeLimitMinutes: 35, questions: ordered };
+}
+
+/** An RC section of four whole passages (about 27 questions) you've never read. */
+function freshRCSection(questions, seen, rng) {
+  const groups = {};
+  for (const q of questions) if (q.kind === 'RC' && q.passageId) (groups[`${q.testId}:${q.passageId}`] ||= []).push(q);
+  const fresh = Object.values(groups).filter((g) => g.length >= 4 && g.every((q) => !seen.has(q.id)));
+  const picked = [];
+  let count = 0;
+  for (const g of shuffle(fresh, rng)) {
+    if (picked.length === 4) break;
+    if (count + g.length > 30) continue;
+    picked.push(g);
+    count += g.length;
+  }
+  if (picked.length < 3) return null;
+  return {
+    title: 'Reading Comprehension', kind: 'RC', timeLimitMinutes: 35,
+    questions: picked.flatMap((g) => [...g].sort((x, y) => x.number - y.number)),
+  };
+}
+
+/**
+ * Build a stamina session for `level`. Each section is a whole real section you haven't touched
+ * if one is left; otherwise it's assembled from questions you've never seen (LR in a real
+ * section's difficulty mix, RC as four whole unread passages), so a repeated level is always new.
+ * Falls back to the least-seen real section only if the bank runs out.
+ */
+export function createStaminaSession(level, tests, attempts, sessions = {}, rng = Math.random) {
   const spec = STAMINA_LEVELS[level - 1];
-  const seen = new Set(attempts.map((a) => a.qid));
-  const pool = tests
-    .filter((t) => !t.retired && t.purpose !== 'diagnostic' && t.sections.length >= 3)
-    .flatMap((t) => t.sections.filter((s) => s.timeLimitMinutes >= 35 && s.questions.length >= 22).map((s) => ({ s, fresh: s.questions.filter((q) => !seen.has(q.id)).length / s.questions.length })));
+  const seen = seenIds({ attempts, sessions });
+  const live = tests.filter((t) => !t.retired && t.purpose !== 'diagnostic');
+  const questions = flatQuestions(live);
+  const real = live.filter((t) => t.sections.length >= 3)
+    .flatMap((t) => t.sections.filter((s) => s.timeLimitMinutes >= 35 && s.questions.length >= 22)
+      .map((s) => ({ s, fresh: s.questions.filter((q) => !seen.has(q.id)).length / s.questions.length })));
   const used = new Set();
   const picked = [];
   for (const kind of spec.kinds()) {
-    const options = shuffle(pool.filter((x) => x.s.kind === kind && !used.has(x.s))).sort((a, b) => b.fresh - a.fresh);
-    if (!options.length) continue;
-    used.add(options[0].s);
-    picked.push(options[0].s);
+    const untouched = shuffle(real.filter((x) => x.s.kind === kind && x.fresh === 1 && !used.has(x.s)), rng)[0];
+    let section = untouched?.s
+      || (kind === 'LR' ? freshLRSection(questions, seen, rng) : freshRCSection(questions, seen, rng));
+    if (!section) section = shuffle(real.filter((x) => x.s.kind === kind && !used.has(x.s)), rng).sort((a, b) => b.fresh - a.fresh)[0]?.s;
+    if (!section) continue;
+    used.add(section);
+    section.questions.forEach((q) => seen.add(q.id));
+    picked.push(section);
   }
   if (!picked.length) return null;
   const session = createSectionsSession(picked, {
