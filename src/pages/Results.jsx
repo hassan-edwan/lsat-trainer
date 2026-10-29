@@ -6,7 +6,7 @@ import { OUTCOMES, buildDrill, categoryStats, formatMs, outcome, scaledScore, ty
 import { makeEntry } from '../lib/journal.js';
 import { CATEGORY_GROUPS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { createDrillSession, readingKey } from '../lib/session.js';
-import { paceSec } from '../lib/passages.js';
+import { paceSec, readTargetSec } from '../lib/passages.js';
 import QuestionReview from '../components/QuestionReview.jsx';
 import { GoalRing, LevelBar } from '../components/ProgressWidgets.jsx';
 import { attemptXp } from '../lib/progress.js';
@@ -122,7 +122,7 @@ export default function Results({ session }) {
         </section>
       )}
 
-      <TimingCard rows={rows} reading={session.reading || {}} onOpen={(qid) => {
+      <TimingCard rows={rows} index={index} reading={session.reading || {}} onOpen={(qid) => {
         setFilter('all');
         setOpen(qid);
         setTimeout(() => document.getElementById(`q-${qid}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
@@ -251,7 +251,7 @@ function Celebration({ session, sessionAttempts }) {
 }
 
 /** Where the time went: pace vs. target, time on right vs. wrong answers, the slowest questions, RC by passage. */
-function TimingCard({ rows, reading, onOpen }) {
+function TimingCard({ rows, index, reading, onOpen }) {
   const timed = rows.filter((x) => x.entry && x.r.timeMs > 0);
   const readings = Object.values(reading).filter((x) => x.ms > 0);
   if (timed.length < 3) return null;
@@ -267,7 +267,7 @@ function TimingCard({ rows, reading, onOpen }) {
     if (!x.entry?.passage) continue;
     const key = `${x.si}:${x.entry.passage.id}`;
     let p = passages.find((y) => y.key === key);
-    if (!p) passages.push(p = { key, si: x.si, first: x.qi + 1, n: 0, ms: 0, readMs: reading[key]?.ms ?? null, right: 0, target: 0 });
+    if (!p) passages.push(p = { key, si: x.si, first: x.qi + 1, n: 0, ms: 0, readMs: reading[key]?.ms ?? null, readTarget: readTargetSec(x.sec, index), right: 0, target: 0 });
     p.n += 1; p.ms += x.r.timeMs || 0; p.target += x.shareSec || 0;
     if (x.r.first === x.entry.question.answer) p.right += 1;
   }
@@ -301,7 +301,7 @@ function TimingCard({ rows, reading, onOpen }) {
       {passages.length > 0 && (
         <>
           <h3>Reading passages</h3>
-          <p className="card-sub">Total includes reading. Reading is timed separately when the reading pause (📖) is on. Pace is the passage's share of the section time, reading included. The per-question pace in RC leaves reading out.</p>
+          <p className="card-sub">Total includes reading. Reading is timed separately when the reading pause (📖) is on, against a target of about 3:30 a passage at test pace (orange when over). Pace is the passage's share of the section time, reading included. The per-question pace in RC leaves reading out.</p>
           <div className="table-wrap"><table className="table">
             <thead><tr><th>Passage</th><th>Questions</th><th>Reading</th><th>Answering</th><th>Total</th><th>Pace</th><th>Right</th></tr></thead>
             <tbody>
@@ -309,7 +309,9 @@ function TimingCard({ rows, reading, onOpen }) {
                 <tr key={p.key}>
                   <td>Section {p.si + 1}, from #{p.first}</td>
                   <td>{p.n}</td>
-                  <td>{p.readMs != null ? formatMs(p.readMs) : '—'}</td>
+                  <td className={p.readMs != null && p.readMs / 1000 > p.readTarget ? 'time-slow' : ''} title={`Target ${formatMs(p.readTarget * 1000)}`}>
+                    {p.readMs != null ? formatMs(p.readMs) : '—'}{p.readMs != null && <span className="muted"> / {formatMs(p.readTarget * 1000)}</span>}
+                  </td>
                   <td>{p.readMs != null ? formatMs(p.ms) : '—'}</td>
                   <td className={p.target && (p.ms + (p.readMs || 0)) / 1000 > p.target * 1.25 ? 'time-slow' : ''}>{formatMs(p.ms + (p.readMs || 0))}</td>
                   <td className="muted">{p.target ? formatMs(p.target * 1000) : '—'}</td>

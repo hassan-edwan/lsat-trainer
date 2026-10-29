@@ -6,6 +6,8 @@ import { buildDrill, categoryStats, formatMs, wasSeen, weaknessScores } from '..
 import { createDrillSession } from '../lib/session.js';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoryLabel, typeLabel } from '../lib/taxonomy.js';
 import { answeredFromHistory, masteryTier, sessionAnswered } from '../lib/progress.js';
+import { RC_READ_SEC, readingHistory } from '../lib/passages.js';
+import { ReadingTrend } from '../components/ScoreCharts.jsx';
 
 const TIER = { gold: '🥇', silver: '🥈', bronze: '🥉' };
 function Badge({ stats }) {
@@ -16,7 +18,8 @@ function Badge({ stats }) {
 const pct = (x) => `${Math.round(x * 100)}%`;
 
 export default function Stats() {
-  const { attempts, sessions, questions, journal, saveSession } = useStore();
+  const { attempts, sessions, questions, journal, saveSession, index } = useStore();
+  const reads = useMemo(() => readingHistory(sessions, index), [sessions, index]);
   const done = Object.values(sessions).filter((s) => s.phase === 'done' && !s.abandoned).sort((a, b) => a.finishedAt.localeCompare(b.finishedAt));
 
   const byKind = useMemo(() => ['LR', 'RC'].map((kind) => {
@@ -122,6 +125,8 @@ export default function Stats() {
         </section>
       )}
 
+      {reads.length > 0 && <ReadingPace reads={reads} />}
+
       <section className="card">
         <h2>By category</h2>
         <div className="tabs">
@@ -172,5 +177,31 @@ export default function Stats() {
         </section>
       ))}
     </div>
+  );
+}
+
+const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
+
+/** RC reading time per passage over time against the 3:30 target, with accuracy alongside. */
+function ReadingPace({ reads }) {
+  const avg = (xs) => xs.reduce((t, r) => t + r.ms / 1000, 0) / xs.length;
+  const acc = (xs) => Math.round(100 * xs.reduce((t, r) => t + r.right, 0) / Math.max(1, xs.reduce((t, r) => t + r.n, 0)));
+  const recent = reads.slice(-4);
+  const first = reads.slice(0, Math.min(4, reads.length));
+  const gap = Math.round(avg(recent) - RC_READ_SEC);
+  return (
+    <section className="card">
+      <h2>Reading pace</h2>
+      <p className="card-sub">
+        How long you take to read each RC passage, timed by the reading pause (📖). The test leaves about 3:30 a passage; cut the time
+        from reading, not from the questions, and check that accuracy holds as it comes down.
+      </p>
+      <div className="stat-row">
+        <div className="stat"><div className="stat-label">Last {recent.length} passages</div><div className="stat-value">{mmss(avg(recent))}</div><div className="muted">{gap > 0 ? `${mmss(gap)} over the 3:30 target` : 'at or under the 3:30 target'}</div></div>
+        {reads.length > 4 && <div className="stat"><div className="stat-label">First {first.length} passages</div><div className="stat-value">{mmss(avg(first))}</div><div className="muted">{Math.round(avg(first) - avg(recent)) > 0 ? `${mmss(avg(first) - avg(recent))} faster now` : 'no faster yet'}</div></div>}
+        <div className="stat"><div className="stat-label">Accuracy, last {recent.length}</div><div className="stat-value">{acc(recent)}%</div><div className="muted">{reads.length > 4 ? `${acc(first)}% on the first ${first.length}` : 'on those passages\' questions'}</div></div>
+      </div>
+      <ReadingTrend passages={reads} targetSec={RC_READ_SEC} />
+    </section>
   );
 }

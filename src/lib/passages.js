@@ -62,3 +62,40 @@ export function paceSec(sec, index) {
   if (!passages) return Math.round(sec.timeLimitSec / n);
   return Math.round(sec.timeLimitSec * RC_QUESTION_SEC * n / (RC_READ_SEC * passages + RC_QUESTION_SEC * n) / n);
 }
+
+/**
+ * Seconds to aim for when reading a passage in this section: the real test's 3.5 minutes,
+ * scaled by the section's pace (a relaxed drill gives more, a fast one less).
+ */
+export function readTargetSec(sec, index) {
+  if (!sec?.timeLimitSec) return RC_READ_SEC;
+  const n = sec.qids.length;
+  const passages = new Set(sec.qids.map((id) => index?.[id]?.passage && `${index[id].test.id}:${index[id].passage.id}`).filter(Boolean)).size;
+  if (!passages) return RC_READ_SEC;
+  return Math.round(RC_READ_SEC * sec.timeLimitSec / (RC_READ_SEC * passages + RC_QUESTION_SEC * n));
+}
+
+/**
+ * Every passage you read with the reading pause on, in finished sessions, oldest first:
+ * { at, sessionId, title, ms, targetSec, n, right }. Passages read for under 30 seconds
+ * (skipped, or the clock barely ran) are left out.
+ */
+export function readingHistory(sessions, index) {
+  const out = [];
+  const done = Object.values(sessions).filter((s) => s.phase === 'done' && !s.abandoned && s.reading)
+    .sort((a, b) => (a.finishedAt || '').localeCompare(b.finishedAt || ''));
+  for (const s of done) {
+    for (const [key, v] of Object.entries(s.reading)) {
+      if (!v.done || v.ms < 30_000) continue;
+      const [si, pid] = [Number(key.slice(0, key.indexOf(':'))), key.slice(key.indexOf(':') + 1)];
+      const sec = s.sections[si];
+      if (!sec) continue;
+      const qids = sec.qids.filter((id) => index[id]?.passage?.id === pid);
+      if (!qids.length) continue;
+      const right = qids.filter((id) => s.responses[id]?.first === index[id].question.answer).length;
+      out.push({ at: s.finishedAt, sessionId: s.id, title: s.title, ms: v.ms, targetSec: readTargetSec(sec, index), n: qids.length, right, order: sec.qids.indexOf(qids[0]) });
+    }
+  }
+  // Passages within a session in the order you read them.
+  return out.sort((a, b) => a.at.localeCompare(b.at) || (a.sessionId === b.sessionId ? a.order - b.order : 0));
+}

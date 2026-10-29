@@ -65,3 +65,21 @@ test('RC pace leaves reading time out; LR pace is the section time per question'
   assert.equal(rc.timeLimitSec, 210 + 6 * 47);
   assert.equal(paceSec(rc, index), 47);
 });
+
+test('reading target is 3:30 at test pace, scaled by the drill pace; history lists each passage read', async () => {
+  const { readTargetSec, readingHistory } = await import('../src/lib/passages.js');
+  const qs = library();
+  const index = Object.fromEntries(qs.map((q) => [q.id, { question: q, test: { id: q.testId }, passage: q.passageId ? { id: q.passageId } : null }]));
+  const six = qs.slice(0, 6);
+  const atPace = createDrillSession(six, { secondsPerQuestion: 80 }).sections[0];
+  const relaxed = createDrillSession(six, { secondsPerQuestion: 100 }).sections[0];
+  assert.equal(readTargetSec(atPace, index), 210);
+  assert.ok(readTargetSec(relaxed, index) > 250);
+  const s = createDrillSession(six, { secondsPerQuestion: 80 });
+  s.phase = 'done'; s.finishedAt = '2026-10-29T12:00:00Z';
+  s.reading = { '0:p0': { ms: 250_000, done: true }, '0:p9': { ms: 10_000, done: true } };
+  six.forEach((q, i) => { s.responses[q.id].first = i < 5 ? 'A' : 'B'; });
+  const h = readingHistory({ [s.id]: s }, index);
+  assert.equal(h.length, 1);
+  assert.deepEqual([h[0].ms, h[0].n, h[0].right, h[0].targetSec], [250_000, 6, 5, 210]);
+});

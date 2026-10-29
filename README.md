@@ -112,6 +112,9 @@ It runs entirely in your browser. There's no account and no server, and your dat
   question. Your reading time is recorded separately, the question clock stays stopped, and you press *Start the
   questions* (or Enter) when you're done reading. The section clock keeps running as on test day. Results split
   each passage into reading and answering time. The 📖 button turns it off.
+- **Reading target:** the reading card shows your time against a target of about 3:30 a passage (scaled to the drill's
+  pace), with a bar that turns orange and a nudge to start the questions once you pass it. The Progress page charts
+  reading time per passage over time, with accuracy alongside, and the results page marks passages read over target.
 - **Highlight key for RC:** the reading card shows what each color is for: yellow for the author's view, pink for other
   views, green for turns and tone words, blue for details to find again. Click a row to pick that highlighter; in
   RC the toolbar colors' tooltips say the same.

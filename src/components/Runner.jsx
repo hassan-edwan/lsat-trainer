@@ -3,7 +3,7 @@ import HighlightText from './HighlightText.jsx';
 import { AllChoiceNotes, ChoiceNote } from './Breakdown.jsx';
 import { formatMs } from '../lib/analytics.js';
 import { readingKey } from '../lib/session.js';
-import { paceSec } from '../lib/passages.js';
+import { paceSec, readTargetSec } from '../lib/passages.js';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 // Matches the August 2026 LSAT interface: four colors, each with its own underline style.
@@ -193,6 +193,9 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const rKey = session.phase === 'timed' && readPause ? readingKey(session.current.section, entry) : null;
   const reading = !!rKey && !session.reading?.[rKey]?.done;
   const readMs = rKey ? session.reading?.[rKey]?.ms || 0 : 0;
+  // Reading target for this section: 3:30 at test pace, scaled to the drill's pace.
+  const readTarget = useMemo(() => readTargetSec(sec, index), [sec, index]);
+  const readState = readMs / 1000 > readTarget * 1.4 ? 'way-over' : readMs / 1000 > readTarget ? 'over' : readMs / 1000 > readTarget * 0.8 ? 'near' : 'ok';
   const startQuestions = () => update((s) => ({
     ...s, reading: { ...(s.reading || {}), [rKey]: { ms: s.reading?.[rKey]?.ms || 0, done: true } },
   }));
@@ -341,7 +344,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
             </button>
           )}
           {qClock && !instant && !isBreak && reading && (
-            <span className="q-clock reading" title="Reading time for this passage. The question clock is stopped.">Reading {formatMs(readMs)}</span>
+            <span className={`q-clock reading ${readState === 'over' || readState === 'way-over' ? 'over' : ''}`} title={`Reading time for this passage (target ${formatMs(readTarget * 1000)}). The question clock is stopped.`}>Reading {formatMs(readMs)}</span>
           )}
           {qClock && !instant && !isBreak && !reading && (() => {
             const ms = isBR ? resp.brTimeMs : resp.timeMs;
@@ -435,9 +438,15 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
             </div>
           )}
           {reading ? (
-            <div className="reading-card">
+            <div className={`reading-card read-${readState}`}>
               <div className="q-number">Reading the passage</div>
-              <div className="reading-time">{formatMs(readMs)}</div>
+              <div className="reading-time">{formatMs(readMs)} <span className="reading-target">/ {formatMs(readTarget * 1000)} target</span></div>
+              <div className="read-meter" role="meter" aria-label="Reading time against target" aria-valuemin={0} aria-valuemax={readTarget} aria-valuenow={Math.round(readMs / 1000)}>
+                <div style={{ width: `${Math.min(100, (readMs / 10 / readTarget))}%` }} />
+              </div>
+              {readState === 'near' && <p className="read-note">Nearly at your target. Slow down only for turns, viewpoints and the author's opinion.</p>}
+              {readState === 'over' && <p className="read-note warn">⚠ Past your target. Finish the paragraph you're on, then start the questions: they'll send you back to any detail you need.</p>}
+              {readState === 'way-over' && <p className="read-note warn">⚠ Well past your target. Start the questions now. You don't need every detail; you need the structure.</p>}
               <p>Your question clock is stopped while you read. The section clock keeps running, as on test day.</p>
               <div className="hl-key" role="group" aria-label="Highlight colors">
                 {HL_COLORS.map((c) => (

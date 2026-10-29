@@ -303,3 +303,88 @@ export function TrackRecord({ rows }) {
     </div>
   );
 }
+
+const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
+
+/**
+ * Reading time for every passage, oldest to newest: a dot per passage, a line for the average of
+ * the last four, and the 3:30 test-pace target. Accuracy on each passage is in the tooltip and table.
+ */
+export function ReadingTrend({ passages, targetSec = 210 }) {
+  const [ref, w] = useWidth();
+  const [hi, setHi] = useState(null);
+  if (passages.length < 2) return null;
+  const h = 210;
+  const m = { l: 40, r: 64, t: 16, b: 26 };
+  const secs = passages.map((p) => p.ms / 1000);
+  const maxY = Math.max(targetSec + 60, ...secs) + 15;
+  const minY = Math.max(0, Math.min(targetSec - 60, ...secs) - 15);
+  const x = (i) => m.l + (passages.length === 1 ? 0 : (i / (passages.length - 1)) * (w - m.l - m.r));
+  const y = (v) => m.t + (1 - (v - minY) / (maxY - minY)) * (h - m.t - m.b);
+  const avg = secs.map((_, i) => { const win = secs.slice(Math.max(0, i - 3), i + 1); return win.reduce((a, b) => a + b, 0) / win.length; });
+  const line = avg.map((v, i) => `${i ? 'L' : 'M'}${x(i)},${y(v)}`).join(' ');
+  const ticks = [];
+  for (let v = Math.ceil(minY / 60) * 60; v <= maxY; v += 60) ticks.push(v);
+  const cur = hi != null ? passages[hi] : null;
+  const nearest = (clientX, rect) => {
+    const px = clientX - rect.left;
+    let best = 0;
+    passages.forEach((_, i) => { if (Math.abs(x(i) - px) < Math.abs(x(best) - px)) best = i; });
+    return best;
+  };
+  const last = avg[avg.length - 1];
+  return (
+    <div ref={ref} className="viz">
+      <div className="viz-legend">
+        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4" className="viz-dot faint" /></svg> one passage</span>
+        <span><svg width="18" height="10" aria-hidden="true"><line x1="1" x2="17" y1="5" y2="5" className="viz-line" /></svg> average of the last 4</span>
+        <span><svg width="18" height="10" aria-hidden="true"><line x1="1" x2="17" y1="5" y2="5" className="viz-target" /></svg> {mmss(targetSec)} target</span>
+      </div>
+      <svg width={w} height={h} role="img" tabIndex={0}
+        aria-label={`Reading time per passage for ${passages.length} passages, latest average ${mmss(last)} against a ${mmss(targetSec)} target. Use the arrow keys to step through passages.`}
+        onPointerMove={(e) => setHi(nearest(e.clientX, e.currentTarget.getBoundingClientRect()))}
+        onPointerLeave={() => setHi(null)}
+        onBlur={() => setHi(null)}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowRight') setHi((i) => Math.min(passages.length - 1, (i ?? -1) + 1));
+          if (e.key === 'ArrowLeft') setHi((i) => Math.max(0, (i ?? passages.length) - 1));
+        }}>
+        {ticks.map((v) => (
+          <g key={v}>
+            <line x1={m.l} x2={w - m.r} y1={y(v)} y2={y(v)} className="viz-grid" />
+            <text x={m.l - 6} y={y(v) + 4} className="viz-tick" textAnchor="end">{mmss(v)}</text>
+          </g>
+        ))}
+        <line x1={m.l} x2={w - m.r} y1={y(targetSec)} y2={y(targetSec)} className="viz-target" />
+        <text x={w - m.r + 6} y={y(targetSec) + 4} className="viz-label">target</text>
+        <text x={m.l} y={h - 6} className="viz-tick">{shortDate(passages[0].at)}</text>
+        <text x={w - m.r} y={h - 6} className="viz-tick" textAnchor="end">{shortDate(passages[passages.length - 1].at)}</text>
+        {secs.map((v, i) => <circle key={i} cx={x(i)} cy={y(v)} r={4} className="viz-dot faint" />)}
+        <path d={line} className="viz-line" />
+        <circle cx={x(avg.length - 1)} cy={y(last)} r={5} className="viz-dot" />
+        <text x={x(avg.length - 1) + 8} y={y(last) + 4} className="viz-label strong">{mmss(last)}</text>
+        {cur && (
+          <g pointerEvents="none">
+            <line x1={x(hi)} x2={x(hi)} y1={m.t} y2={h - m.b} className="viz-cross" />
+            <circle cx={x(hi)} cy={y(secs[hi])} r={6} className="viz-dot" />
+          </g>
+        )}
+      </svg>
+      {cur && (
+        <div className="viz-tip" style={{ left: Math.min(w - 170, Math.max(0, x(hi) - 80)) }}>
+          <strong>{mmss(cur.ms / 1000)}</strong> <span className="muted">reading · {cur.right}/{cur.n} right</span>
+          <div className="muted small-text">{shortDate(cur.at)} · {cur.title}</div>
+        </div>
+      )}
+      <details className="viz-table">
+        <summary>Show as a table</summary>
+        <div className="table-wrap"><table className="table">
+          <thead><tr><th>Date</th><th>Session</th><th>Reading</th><th>Target</th><th>Right</th></tr></thead>
+          <tbody>{[...passages].reverse().map((p, i) => (
+            <tr key={i}><td>{shortDate(p.at)}</td><td>{p.title}</td><td>{mmss(p.ms / 1000)}</td><td>{mmss(p.targetSec)}</td><td>{p.right}/{p.n}</td></tr>
+          ))}</tbody>
+        </table></div>
+      </details>
+    </div>
+  );
+}
