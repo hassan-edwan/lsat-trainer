@@ -2,6 +2,7 @@
 // longer and longer sessions to build it.
 
 import { shuffle } from './analytics.js';
+import { QUESTION_TYPES } from './taxonomy.js';
 import { createSectionsSession, flatQuestions } from './session.js';
 import { RECENT_DAYS, seenIds } from './mastery.js';
 
@@ -46,10 +47,15 @@ export function expectedByDifficulty(attempts, index, excludeSessionId = null) {
 
 const mean = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null);
 
+const MAX_BLANK = 0.1; // more blanks than this is a pacing problem, and the level isn't passed
+const READ_TARGET_SEC = 210; // about 3.5 minutes to read an RC passage at test pace
+
 /**
  * Difficulty-adjusted stamina report for one session. `fade` is the change in
- * (actual − expected) accuracy, in points, from the first 60% of the questions
- * (in the order they were taken) to the last 40%. Negative = you faded.
+ * (actual − expected) accuracy, in points, from the first 60% of the answered questions
+ * (in the order they were taken) to the last 40%. Negative = you faded. Blanks are left out
+ * of the fade and counted in `blank`: running out of time is a pacing problem, and counting
+ * blanks as late misses would read slow reading as fading focus.
  */
 export function staminaReport(session, index, expected) {
   const rows = [];
@@ -61,9 +67,10 @@ export function staminaReport(session, index, expected) {
     rows.push({ si, qi, n: sec.qids.length, right, resid: right - (expected[q.difficulty] ?? 0.7), timeMs: r.timeMs || 0, answered: !!r.first });
   }));
   if (rows.length < 10) return null;
-  const cut = Math.round(rows.length * 0.6);
-  const early = rows.slice(0, cut);
-  const late = rows.slice(cut);
+  const answered = rows.filter((r) => r.answered);
+  const cut = Math.round(answered.length * 0.6);
+  const early = answered.slice(0, cut);
+  const late = answered.slice(cut);
   const pts = (x) => (x == null ? null : Math.round(x * 100));
   const sections = session.sections.map((sec, si) => {
     const rs = rows.filter((r) => r.si === si);
@@ -79,21 +86,37 @@ export function staminaReport(session, index, expected) {
         .filter(([k]) => k.startsWith(`${si}:`)).reduce((t, [, v]) => t + v.ms, 0)) / Math.max(1, rs.length) / 1000),
       targetSec: sec.timeLimitSec ? Math.round(sec.timeLimitSec / sec.qids.length) : null,
       unanswered: rs.filter((r) => !r.answered).length,
+      readSec: (() => {
+        const reads = Object.entries(session.reading || {}).filter(([k, v]) => k.startsWith(`${si}:`) && v.ms > 30_000);
+        return reads.length ? Math.round(reads.reduce((t, [, v]) => t + v.ms, 0) / reads.length / 1000) : null;
+      })(),
+      readTargetSec: sec.kind === 'RC' ? READ_TARGET_SEC : null,
     };
   });
-  const fade = pts(mean(late.map((r) => r.resid)) - mean(early.map((r) => r.resid)));
+  const fade = answered.length >= 10 ? pts(mean(late.map((r) => r.resid)) - mean(early.map((r) => r.resid))) : null;
+  const blank = rows.length - answered.length;
   // A rushed or mostly blank session says nothing about stamina, so it can't pass a level.
   const limit = session.sections.reduce((t, s) => t + (s.timeLimitSec || 0), 0);
   const used = session.sections.reduce((t, s) => t + (s.elapsedSec || 0), 0);
-  // Running out of time late is itself the stamina signal, so blanks count as misses rather than voiding the session.
-  const counts = rows.filter((r) => r.answered).length >= MIN_ANSWERED * rows.length && (!limit || used >= 0.4 * limit);
-  return { fade, early: pts(mean(early.map((r) => r.resid))), late: pts(mean(late.map((r) => r.resid))), sections, counts, passed: counts && fade >= PASS_FADE };
+  const counts = answered.length >= MIN_ANSWERED * rows.length && (!limit || used >= 0.4 * limit);
+  const paced = blank <= MAX_BLANK * rows.length;
+  return {
+    fade, blank, paced, early: pts(mean(early.map((r) => r.resid))), late: pts(mean(late.map((r) => r.resid))), sections, counts,
+    passed: counts && paced && fade != null && fade >= PASS_FADE,
+  };
 }
 
 export function verdict(report) {
   if (!report) return '';
   if (!report.counts) return 'This session doesn\'t count toward the ladder: answer at least 75% of the questions and use at least 40% of the time, as you would on test day.';
   const f = report.fade;
+  const pace = report.paced ? '' : ` You left ${report.blank} blank, though: that's pacing, not stamina, and a level isn't passed with more than 10% blank.`;
+  const slowRead = report.sections.find((x) => x.readSec && x.readSec > x.readTargetSec * 1.15);
+  const read = !report.paced && slowRead ? ` Your RC reading averaged ${Math.floor(slowRead.readSec / 60)}:${String(slowRead.readSec % 60).padStart(2, '0')} a passage against a 3:30 target.` : '';
+  return fadeText(f) + pace + read;
+}
+
+function fadeText(f) {
   if (f >= 3) return 'You got stronger as the session went on. Your stamina is not the limiting factor here.';
   if (f >= PASS_FADE) return 'You held steady: your late accuracy stayed close to your early accuracy after adjusting for difficulty.';
   if (f >= -12) return 'You faded late. Your accuracy in the last stretch dropped more than the harder questions explain.';
@@ -138,7 +161,7 @@ export function ladderStatus(history) {
     const x = levels[ladderLevel(session) - 1];
     if (!x) continue;
     x.attempts += 1;
-    x.last = { fade: report.fade, counts: report.counts, passed: report.passed, at: session.finishedAt };
+    x.last = { fade: report.fade, blank: report.blank, paced: report.paced, counts: report.counts, passed: report.passed, at: session.finishedAt };
     if (report.counts) x.completed = true;
     if (report.passed) x.passed = true;
   }
@@ -161,27 +184,38 @@ export function currentLevel(history) {
 
 // A real LR section's difficulty mix (25 questions), easiest first with the hardest late.
 const LR_MIX = { 1: 4, 2: 6, 3: 7, 4: 5, 5: 3 };
-const MAX_SAME_TYPE = 4;
 
-/** A 25-question LR section of questions you've never seen, shaped like a real one. */
+/** How many of each LR question type a 25-question section has, from how often each appears on the LSAT. */
+function typeQuotas(n = 25) {
+  const types = Object.entries(QUESTION_TYPES).filter(([t, m]) => m.kind === 'LR' && t !== 'lr-other');
+  const total = types.reduce((t, [, m]) => t + m.weight, 0);
+  const raw = types.map(([t, m]) => ({ t, x: (m.weight / total) * n }));
+  const out = Object.fromEntries(raw.map((r) => [r.t, Math.floor(r.x)]));
+  let left = n - Object.values(out).reduce((a, b) => a + b, 0);
+  for (const r of [...raw].sort((a, b) => (b.x % 1) - (a.x % 1))) { if (left <= 0) break; out[r.t] += 1; left -= 1; }
+  return out;
+}
+
+/**
+ * A 25-question LR section of questions you've never seen, shaped like a real one: question
+ * types in their usual test proportions (about 4 flaw, 2 each of the assumption, strengthen and
+ * weaken types, and so on) and a real section's difficulty mix, easiest first.
+ */
 function freshLRSection(questions, seen, rng) {
-  const pool = questions.filter((q) => q.kind === 'LR' && !seen.has(q.id));
+  const pool = shuffle(questions.filter((q) => q.kind === 'LR' && !seen.has(q.id)), rng);
   const picked = [];
-  const typeCount = {};
-  const take = (cands, n) => {
-    for (const q of shuffle(cands, rng)) {
-      if (n <= 0) break;
-      const t = q.types?.[0] || 'other';
-      if (picked.includes(q) || (typeCount[t] || 0) >= MAX_SAME_TYPE) continue;
-      picked.push(q);
-      typeCount[t] = (typeCount[t] || 0) + 1;
-      n -= 1;
-    }
-    return n;
-  };
-  let short = 0;
-  for (const [d, n] of Object.entries(LR_MIX)) short += take(pool.filter((q) => (q.difficulty ?? 3) === Number(d)), n);
-  if (short > 0) take(pool, short);
+  const used = new Set();
+  const diffLeft = { ...LR_MIX };
+  const take = (q) => { used.add(q.id); picked.push(q); const d = q.difficulty ?? 3; if (diffLeft[d] > 0) diffLeft[d] -= 1; };
+  // Prefer a question whose difficulty still has room in the mix.
+  const best = (cands) => cands.find((q) => !used.has(q.id) && diffLeft[q.difficulty ?? 3] > 0) || cands.find((q) => !used.has(q.id));
+  const quotas = Object.entries(typeQuotas()).sort((a, b) => b[1] - a[1]);
+  for (const [t, k] of quotas) {
+    const cands = pool.filter((q) => q.types?.[0] === t);
+    for (let i = 0; i < k; i++) { const q = best(cands); if (q) take(q); }
+  }
+  // Types the bank ran out of are filled from whatever fits the difficulty mix.
+  while (picked.length < 25) { const q = best(pool); if (!q) break; take(q); }
   if (picked.length < 20) return null;
   // Easiest first with some overlap between neighbouring levels, as on the real test.
   const ordered = picked.map((q) => ({ q, k: (q.difficulty ?? 3) + rng() * 1.5 })).sort((x, y) => x.k - y.k).map((x) => x.q);

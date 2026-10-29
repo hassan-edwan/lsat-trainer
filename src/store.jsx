@@ -4,7 +4,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { db } from './lib/db.js';
 import { initFileSync } from './lib/fileSync.js';
-import { buildIndex, finalizeSession, flatQuestions, viewedQids } from './lib/session.js';
+import { buildIndex, finalizeSession, flatQuestions, staleSessions, viewedQids } from './lib/session.js';
 import { categoriesOf } from './lib/taxonomy.js';
 import { categoryStats, outcome, typeStats } from './lib/analytics.js';
 import { ladderResults } from './lib/diagnostic.js';
@@ -40,6 +40,29 @@ export function StoreProvider({ children }) {
 
   // Merge with the project's data/ folder first (when running locally), then load.
   useEffect(() => { initFileSync(db).catch(() => false).finally(reload); }, [reload]);
+
+  // Once loaded, close drills and diagnostics left open for a day (see staleSessions), once per launch.
+  const [closedStale, setClosedStale] = useState(false);
+  useEffect(() => {
+    if (!loaded || closedStale) return;
+    setClosedStale(true);
+    const idx = buildIndex(allTests);
+    const stale = staleSessions(sessions, idx);
+    if (!stale.length) return;
+    (async () => {
+      let jr = journal;
+      for (const { finish, abandon } of stale) {
+        if (abandon) { await db.put('sessions', abandon); continue; }
+        const { attempts: rows, journalPuts, summary } = finalizeSession(finish, idx, jr);
+        const finishedAt = new Date().toISOString();
+        await db.put('sessions', { ...finish, phase: 'done', finishedAt, updatedAt: finishedAt, summary });
+        await db.putMany('attempts', rows);
+        await db.putMany('journal', journalPuts.map((e) => ({ ...e, updatedAt: finishedAt })));
+        jr = { ...jr, ...Object.fromEntries(journalPuts.map((e) => [e.qid, e])) };
+      }
+      await reload();
+    })();
+  }, [loaded, closedStale, sessions, allTests, journal, reload]);
 
   // Retired tests (replaced by a newer built-in set) stay indexed so old results still render,
   // but they're left out of the library, drills, and plans.

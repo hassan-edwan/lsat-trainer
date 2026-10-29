@@ -154,18 +154,21 @@ export function ScoreCurve({ prediction }) {
   );
 }
 
-/** The predicted score over time, with its likely range shaded; it should narrow as answers add up. */
-export function PredictionHistory({ points }) {
+/**
+ * The predicted score over time, with its likely range shaded; it should narrow as answers add up.
+ * `official` scores you logged from real PrepTests show as separate dots, the check on the prediction.
+ */
+export function PredictionHistory({ points, official = [] }) {
   const [ref, w] = useWidth();
   const [hi, setHi] = useState(null);
   if (points.length < 2) return null;
   const h = 200;
   const m = { l: 36, r: 46, t: 14, b: 26 };
-  const t0 = points[0].at;
-  const t1 = points[points.length - 1].at;
+  const t0 = Math.min(points[0].at, ...official.map((o) => o.at));
+  const t1 = Math.max(points[points.length - 1].at, ...official.map((o) => o.at));
   const x = (t) => m.l + ((t - t0) / (t1 - t0 || 1)) * (w - m.l - m.r);
-  const minS = Math.max(120, Math.floor((Math.min(...points.map((p) => p.low)) - 2) / 5) * 5);
-  const maxS = Math.min(180, Math.ceil((Math.max(...points.map((p) => p.high)) + 2) / 5) * 5);
+  const minS = Math.max(120, Math.floor((Math.min(...points.map((p) => p.low), ...official.map((o) => o.score)) - 2) / 5) * 5);
+  const maxS = Math.min(180, Math.ceil((Math.max(...points.map((p) => p.high), ...official.map((o) => o.score)) + 2) / 5) * 5);
   const y = (s) => m.t + (1 - (s - minS) / (maxS - minS || 1)) * (h - m.t - m.b);
   const step = maxS - minS > 30 ? 10 : 5;
   const ticks = [];
@@ -182,6 +185,12 @@ export function PredictionHistory({ points }) {
   const cur = hi != null ? points[hi] : null;
   return (
     <div ref={ref} className="viz">
+      {official.length > 0 && (
+        <div className="viz-legend">
+          <span><svg width="18" height="10" aria-hidden="true"><line x1="1" x2="17" y1="5" y2="5" className="viz-line" /></svg> predicted</span>
+          <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" className="viz-actual" /></svg> official PrepTest</span>
+        </div>
+      )}
       <svg width={w} height={h} role="img" tabIndex={0}
         aria-label={`Predicted score over time, from ${points[0].score} on ${shortDate(t0)} to ${last.score} on ${shortDate(t1)}. Use the arrow keys to step through days.`}
         onPointerMove={(e) => setHi(nearest(e.clientX, e.currentTarget.getBoundingClientRect()))}
@@ -201,6 +210,13 @@ export function PredictionHistory({ points }) {
         <text x={w - m.r} y={h - 6} className="viz-tick" textAnchor="end">{shortDate(t1)}</text>
         <path d={band} className="viz-area" />
         <path d={line} className="viz-line" />
+        {official.map((o) => (
+          <g key={o.id}>
+            <title>{`Official ${o.label || 'PrepTest'}: ${o.score} on ${shortDate(o.at)}`}</title>
+            <circle cx={x(o.at)} cy={y(o.score)} r={6} className="viz-actual" />
+            <text x={x(o.at)} y={y(o.score) - 10} className="viz-label" textAnchor="middle">{o.score}</text>
+          </g>
+        ))}
         <circle cx={x(last.at)} cy={y(last.exact)} r={5} className="viz-dot" />
         <text x={x(last.at) + 8} y={y(last.exact) + 4} className="viz-label strong">{last.score}</text>
         {cur && (

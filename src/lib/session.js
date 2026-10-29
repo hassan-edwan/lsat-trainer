@@ -146,6 +146,35 @@ export function viewedQids(session, index) {
   return [...ids];
 }
 
+// Drills, training sets and diagnostics left open this long are closed when the app starts,
+// so answers you gave don't sit uncounted in a set you never finished.
+export const STALE_SESSION_MS = 24 * 3_600_000;
+
+/**
+ * Close a session you left open. Answered questions are scored. If you were in blind review,
+ * it counts only for questions you spent time on there (`partialReview`); the rest are scored as
+ * unreviewed. Questions you saw but didn't answer stay marked as seen (`shownQids`); untouched
+ * ones are released. Returns { finish } to score, or { abandon } when nothing was answered.
+ */
+export function closeOut(s, index, now = new Date().toISOString()) {
+  const kept = s.sections.map((sec) => ({ ...sec, qids: sec.qids.filter((id) => s.responses[id]?.first) })).filter((sec) => sec.qids.length);
+  const shownQids = viewedQids(s, index);
+  if (!kept.length) {
+    return { abandon: { ...s, phase: 'done', abandoned: true, autoClosed: true, finishedAt: now, updatedAt: now, shownQids,
+      summary: { total: 0, firstCorrect: 0, brCorrect: 0, outcomes: {}, bySection: [] } } };
+  }
+  const inReview = s.phase === 'br' && !!s.settings.blindReview;
+  return { finish: { ...s, sections: kept, shownQids, autoClosed: true, partialReview: inReview, settings: { ...s.settings, blindReview: inReview } } };
+}
+
+/** Open drills, training sets and diagnostics untouched for STALE_SESSION_MS, closed out (see closeOut). */
+export function staleSessions(sessions, index, now = Date.now()) {
+  return Object.values(sessions)
+    .filter((s) => s.phase !== 'done' && (s.kind === 'drill' || s.kind === 'diagnostic')
+      && now - new Date(s.updatedAt || s.createdAt).getTime() >= STALE_SESSION_MS)
+    .map((s) => closeOut(s, index, new Date(now).toISOString()));
+}
+
 /**
  * Turn a finished session into attempt rows and journal changes.
  * Returns { attempts, journalPuts, summary }.
@@ -180,7 +209,9 @@ export function finalizeSession(session, index, journal) {
       attempts.push({
         key: `${session.id}:${qid}`, sessionId: session.id, sessionKind: session.kind, qid,
         types: [...question.types], kind: section.kind, first: r.first, br, answer: question.answer,
-        timeMs: r.timeMs, flagged: r.flagged, reviewed: !!session.settings.blindReview, at,
+        timeMs: r.timeMs, flagged: r.flagged, at,
+        // A set closed partway through blind review only counts the questions you reviewed.
+        reviewed: !!session.settings.blindReview && (!session.partialReview || r.brTimeMs > 0),
       });
 
       const existing = journal[qid];

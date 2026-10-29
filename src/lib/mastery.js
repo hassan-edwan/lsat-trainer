@@ -29,8 +29,10 @@ const SKILL_SD = 0.9; // how far one skill can sit from your overall ability, a 
 const GLOBAL_SD = 1.5;
 export const EXECUTION_TRAPS = ['Misread the stem', 'Misread the stimulus', 'Ran out of time / rushed'];
 
-// Approximate percent-correct to scaled-score curve from PrepTests 140–159.
-export const CURVE = [[0, 120], [0.18, 130], [0.27, 140], [0.35, 145], [0.44, 150], [0.53, 155], [0.63, 160], [0.73, 165], [0.82, 170], [0.9, 175], [0.98, 180], [1, 180]];
+// Approximate percent-correct to scaled-score curve, from typical published conversions: about 55%
+// right for 150, 72% for 160, 80% for 165, 87–88% for 170 and 94% for 175. Below about 20% (chance on
+// five choices) is 120. Real curves shift a point or two from test to test.
+export const CURVE = [[0, 120], [0.2, 120], [0.3, 130], [0.4, 140], [0.47, 145], [0.55, 150], [0.64, 155], [0.72, 160], [0.8, 165], [0.875, 170], [0.94, 175], [0.99, 180], [1, 180]];
 
 // Which skill a question type draws on, for the score prediction.
 const TYPE_SKILL = {
@@ -41,7 +43,8 @@ const TYPE_SKILL = {
   'parallel': ['parallel'], 'method': ['structure'], 'role': ['structure'], 'main-conclusion': ['structure'],
   'point-at-issue': ['debate'], 'evaluate': ['evaluate'],
   'rc-main-point': ['rc-big-picture'], 'rc-structure': ['rc-big-picture'], 'rc-detail': ['rc-detail'],
-  'rc-inference': ['rc-inference'], 'rc-analogy': ['rc-inference'], 'rc-author-attitude': ['rc-author'],
+  'rc-inference': ['rc-inference'], 'rc-analogy': ['rc-inference'], 'rc-strengthen-weaken': ['rc-inference'],
+  'rc-comparative': ['rc-big-picture'], 'rc-author-attitude': ['rc-author'],
   'rc-function': ['rc-author'], 'rc-meaning': ['rc-author'],
 };
 
@@ -50,9 +53,12 @@ const sigmoid = (x) => 1 / (1 + Math.exp(-x));
 /** Ladder ids a question trains (a question can train more than one, e.g. Flaw + Conditional). */
 export function skillsOf(question, kind = question.kind) {
   const own = ladderOf(question);
-  return LADDERS.filter((l) => l.kind === kind && (own === l.id
+  const ids = LADDERS.filter((l) => l.kind === kind && (own === l.id
     || question.types?.some((t) => (l.drill.types || []).includes(t))
     || (question.tags || []).some((t) => (l.drill.skills || []).includes(t)))).map((l) => l.id);
+  // "Comparative" marks a two-passage set; on its own (how the passages relate) it's a big-picture question.
+  if (!ids.length && kind === 'RC' && question.types?.includes('rc-comparative')) ids.push('rc-big-picture');
+  return ids;
 }
 
 /**
@@ -88,6 +94,9 @@ export function estimateTheta(items, mu = 0, sd = 1) {
   }
   return { theta, se: 1 / Math.sqrt(-hess) };
 }
+
+/** Chance of getting a question at difficulty level `d` right, at ability theta. */
+export const chanceAt = (theta, d) => sigmoid(theta - B[d]);
 
 /** Level on the 1–5 scale where your chance of getting a question right is 50%. */
 export const thetaToLevel = (theta) => Math.max(0.5, Math.min(5.5, theta + 3));

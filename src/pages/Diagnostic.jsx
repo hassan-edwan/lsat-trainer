@@ -4,7 +4,7 @@ import { PageHeader } from '../components/Layout.jsx';
 import { navigate } from '../lib/nav.js';
 import { LADDERS, LEVELS, diagnosticOrder, ladderQuestions, ladderResults } from '../lib/diagnostic.js';
 import {
-  DIAGNOSIS, freshHardCount, predictionHistory, trackRecord, masteryTrack, mixedSet, predictScore, priorities, seenIds, shownEntries, skillProfile, trainingPool, trainingSet,
+  DIAGNOSIS, chanceAt, freshHardCount, predictionHistory, trackRecord, masteryTrack, mixedSet, predictScore, priorities, seenIds, shownEntries, skillProfile, trainingPool, trainingSet,
 } from '../lib/mastery.js';
 import { createDrillSession } from '../lib/session.js';
 import { PredictionHistory, ScoreCurve, ScoreRange, ScoreSteps, TrackRecord } from '../components/ScoreCharts.jsx';
@@ -113,6 +113,74 @@ function evidenceLine(s) {
   if (s.counts.unreviewed) parts.push(`${s.counts.unreviewed} missed without blind review`);
   const traps = Object.entries(s.traps).map(([t, n]) => `${n} tagged “${t.toLowerCase()}”`);
   return `${s.n} answer${s.n === 1 ? '' : 's'}: ${parts.join(' · ')}${traps.length ? ` (${traps.join(', ')})` : ''}`;
+}
+
+/**
+ * A skill's level in words. Past level 5 the 1–5 scale tops out, so it says how many of the
+ * hardest questions you'd get right instead, which still tells strong skills apart.
+ */
+function levelText(s) {
+  if (s.level < 5) return `Skill level ${s.level.toFixed(1)} after blind review · ${s.timedLevel.toFixed(1)} under time.`;
+  const pct = (th) => Math.round(chanceAt(th, 5) * 100);
+  return `Past level 5: about ${pct(s.timed.theta)}% of level-5 questions right under time, ${pct(s.understanding.theta)}% after blind review.`;
+}
+
+/** Official PrepTest scores you logged, each next to what the prediction said that day. */
+function OfficialScores({ store, history }) {
+  const list = [...(store.prefs.officialScores || [])].sort((a, b) => b.at - a.at);
+  const today = new Date().toISOString().slice(0, 10);
+  const [date, setDate] = useState(today);
+  const [score, setScore] = useState('');
+  const [label, setLabel] = useState('');
+  const n = Number(score);
+  const valid = Number.isInteger(n) && n >= 120 && n <= 180 && date;
+  const add = () => {
+    if (!valid) return;
+    const entry = { id: `${Date.now()}`, at: new Date(`${date}T12:00:00`).getTime(), score: n, label: label.trim() };
+    store.savePrefs({ officialScores: [...(store.prefs.officialScores || []), entry] });
+    setScore(''); setLabel('');
+  };
+  const remove = (id) => confirm('Remove this score?') && store.savePrefs({ officialScores: (store.prefs.officialScores || []).filter((o) => o.id !== id) });
+  // The prediction as of that day: the latest day's estimate on or before it.
+  const predictedOn = (t) => [...history].reverse().find((p) => p.at <= new Date(t).setHours(23, 59, 59, 999));
+  const gaps = list.map((o) => ({ o, p: predictedOn(o.at) })).filter((x) => x.p).map((x) => x.p.score - x.o.score);
+  const avg = gaps.length ? Math.round(gaps.reduce((a, b) => a + b, 0) / gaps.length) : null;
+  return (
+    <>
+      <div className="row official-form">
+        <label>Date <input type="date" value={date} max={today} onChange={(e) => setDate(e.target.value)} /></label>
+        <label>Score <input type="number" min="120" max="180" placeholder="e.g. 165" value={score} onChange={(e) => setScore(e.target.value)} /></label>
+        <label>Test <input type="text" placeholder="PrepTest 141 (optional)" value={label} onChange={(e) => setLabel(e.target.value)} /></label>
+        <button className="primary small" disabled={!valid} onClick={add}>Log score</button>
+      </div>
+      {list.length > 0 && (
+        <>
+          {avg != null && (
+            <p><strong>{avg === 0 ? 'The prediction matched your official scores on average.' : `The prediction ran ${Math.abs(avg)} point${Math.abs(avg) === 1 ? '' : 's'} ${avg > 0 ? 'high' : 'low'} on average${avg > 0 ? ', so read it as a ceiling for now' : ''}.`}</strong></p>
+          )}
+          <div className="table-wrap"><table className="table">
+            <thead><tr><th>Date</th><th>Test</th><th>Official</th><th>Predicted that day</th><th>Gap</th><th /></tr></thead>
+            <tbody>
+              {list.map((o) => {
+                const p = predictedOn(o.at);
+                const gap = p ? p.score - o.score : null;
+                return (
+                  <tr key={o.id}>
+                    <td>{new Date(o.at).toLocaleDateString()}</td>
+                    <td>{o.label || 'PrepTest'}</td>
+                    <td><strong>{o.score}</strong></td>
+                    <td>{p ? `${p.score} (${p.low}–${p.high})` : '—'}</td>
+                    <td>{gap == null ? '—' : gap === 0 ? '0' : `${gap > 0 ? '+' : ''}${gap}`}</td>
+                    <td className="right"><button className="small" onClick={() => remove(o.id)}>Remove</button></td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table></div>
+        </>
+      )}
+    </>
+  );
 }
 
 /** One line on how close past predictions came: the typical gap and how many landed within 10 points. */
@@ -225,7 +293,7 @@ export default function Diagnostic() {
                   The prediction at the end of each day you practiced, using only the answers you had by then. The shaded band is the likely
                   range; it narrows as answers add up, so a narrow band means a steadier estimate.
                 </p>
-                <PredictionHistory points={history} />
+                <PredictionHistory points={history} official={store.prefs.officialScores || []} />
               </div>
             )}
 
@@ -243,6 +311,14 @@ export default function Diagnostic() {
               ) : (
                 <p className="muted">Once you finish a few more sessions, this shows how the prediction made before each one compared with your result.</p>
               )}
+            </div>
+            <div className="score-block">
+              <h3>Check it against a real test</h3>
+              <p className="card-sub">
+                Every question here is written in the LSAT's style, not taken from an official test, so the best check is a real one. Take an official
+                PrepTest (LawHub has free ones), log the score here, and see how far the prediction was from it.
+              </p>
+              <OfficialScores store={store} history={history} />
             </div>
             <p className="muted small-text">It's an estimate from your practice, not an official score, and it assumes test-day conditions like your timed practice.</p>
           </>
@@ -279,7 +355,7 @@ export default function Diagnostic() {
                           {s.gain != null && s.diagnosis !== 'no-data' && <span className="muted small-text">+{s.gain.toFixed(1)} pts per level</span>}
                         </div>
                         <div className="small-text">
-                          {s.diagnosis !== 'no-data' && <>Skill level {s.level.toFixed(1)} after blind review · {s.timedLevel.toFixed(1)} under time. </>}
+                          {s.diagnosis !== 'no-data' && <>{levelText(s)} </>}
                           {DIAGNOSIS[s.diagnosis].tip}
                         </div>
                         {s.n > 0 && <div className="muted small-text">{evidenceLine(s)} · {ago(s)}</div>}
@@ -307,7 +383,7 @@ export default function Diagnostic() {
                       <div key={s.id} className="focus-item">
                         <div className="focus-main">
                           <div className="row"><strong>{s.title}</strong><span className={`chip dx-${s.diagnosis}`}>{DIAGNOSIS[s.diagnosis].label}</span></div>
-                          <div className="muted small-text">Skill level {s.level.toFixed(1)} · {ago(s)} · {freshHard(s)} new at level 3+</div>
+                          <div className="muted small-text">{levelText(s)} · {ago(s)} · {freshHard(s)} new at level 3+</div>
                         </div>
                         <div className="focus-action">
                           <button className="small" onClick={() => startTraining(s, Math.max(3, tracks[s.id].next ?? 5), store, {}, 4)}>Check in</button>

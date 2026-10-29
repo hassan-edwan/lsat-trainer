@@ -163,3 +163,20 @@ test('a discarded session keeps the questions it showed you marked as seen', asy
   assert.ok(!next.sections[0].qids.includes(a) && !next.sections[0].qids.includes(b));
   assert.ok(seenIds({ attempts: [], sessions: { [s.id]: abandoned } }).has(a));
 });
+
+test('blanks are pacing, not fade: left out of the fade, counted separately, and too many fail the level', () => {
+  const { tests, index } = fixture();
+  const s = session(tests[0].sections.slice(0, 2), () => true);
+  const ids = s.sections.flatMap((x) => x.qids);
+  ids.slice(-8).forEach((id) => { s.responses[id].first = null; });
+  const r = staminaReport(s, index, expectedByDifficulty([], index));
+  assert.equal(r.blank, 8);
+  assert.equal(r.fade, 0);
+  assert.equal(r.paced, false);
+  assert.equal(r.passed, false);
+  ids.slice(-8, -4).forEach((id) => { s.responses[id].first = 'A'; });
+  const r2 = staminaReport(s, index, expectedByDifficulty([], index));
+  assert.equal(r2.blank, 4);
+  assert.equal(r2.paced, true);
+  assert.equal(r2.passed, true);
+});

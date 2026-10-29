@@ -76,8 +76,10 @@ export default function Stamina() {
         <h2>{repeatAdvice ? 'Suggested: repeat' : 'Next:'} level {level}, {STAMINA_LEVELS[level - 1].title}</h2>
         {repeatAdvice ? (
           <p className="card-sub">
-            You finished this level, but your late accuracy faded {Math.abs(ladder.levels[level - 1].last.fade)} points (passing is under 6). Repeating it
-            builds the habit before going longer. Level {ladder.unlocked} is unlocked if you'd rather move on.
+            {ladder.levels[level - 1].last.paced === false
+              ? <>You finished this level, but left {ladder.levels[level - 1].last.blank} questions blank, which is pacing rather than stamina (passing allows up to 10%). Repeat it aiming to answer everything, reading RC passages in about 3:30.</>
+              : <>You finished this level, but your late accuracy faded {Math.abs(ladder.levels[level - 1].last.fade)} points (passing is under 6). Repeating it builds the habit before going longer.</>}
+            {' '}Level {ladder.unlocked} is unlocked if you'd rather move on.
           </p>
         ) : (
           <p className="card-sub">{STAMINA_LEVELS[level - 1].detail} Finishing a level unlocks the next. You pass it when your late accuracy drops by less than 6 points after adjusting for difficulty.</p>
@@ -103,7 +105,7 @@ export default function Stamina() {
             const st = ladder.levels[l.level - 1];
             const locked = l.level > ladder.unlocked;
             const status = st.passed ? 'Passed: held steady'
-              : st.completed ? `Done, faded ${Math.abs(st.last.fade)} pts: repeat to pass`
+              : st.completed ? (st.last.paced === false ? `Done, ${st.last.blank} left blank: repeat to pass` : `Done, faded ${Math.abs(st.last.fade)} pts: repeat to pass`)
                 : st.attempts ? 'Tried, but didn\'t count (rushed or mostly blank)' : null;
             return (
               <div key={l.level} className={`stamina-step ${st.passed ? 'passed' : st.completed ? 'done' : ''} ${l.level === level ? 'current' : ''}`}>

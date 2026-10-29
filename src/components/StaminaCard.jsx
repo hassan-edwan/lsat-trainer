@@ -22,13 +22,13 @@ export default function StaminaCard({ session }) {
       <div className="stamina-head">
         <div className={`stamina-fade ${!report.counts ? 'neutral' : report.passed ? 'good' : 'bad'}`}>
           <div className="mini-value">{signed(report.fade)} pts</div>
-          <div className="mini-label">late fade (last 40% vs first 60%)</div>
+          <div className="mini-label">late fade on answered questions (last 40% vs first 60%)</div>
         </div>
         <p>
           {verdict(report)}
           {session.stamina && report.counts && (report.passed
             ? <> <strong>Level {session.stamina.level} passed.</strong></>
-            : <> Repeat level {session.stamina.level} until the fade is under 6 points.</>)}
+            : <> Repeat level {session.stamina.level} until the fade is under 6 points{report.paced ? '' : ' and no more than 10% is blank'}.</>)}
         </p>
       </div>
       {session.pauses?.length > 0 && (
@@ -38,7 +38,7 @@ export default function StaminaCard({ session }) {
         </p>
       )}
       <div className="table-wrap"><table className="table">
-        <thead><tr><th>Section</th><th>Accuracy</th><th>vs. your usual</th><th>Last third vs. first two thirds</th><th>Pace (sec/question)</th><th>Blank</th></tr></thead>
+        <thead><tr><th>Section</th><th>Accuracy</th><th>vs. your usual</th><th>Last third vs. first two thirds</th><th>Pace (sec/question)</th><th>Reading / passage</th><th>Blank</th></tr></thead>
         <tbody>
           {report.sections.map((s, i) => (
             <tr key={i}>
@@ -47,7 +47,8 @@ export default function StaminaCard({ session }) {
               <td className={s.vsExpected < -5 ? 'bad-text' : ''}>{signed(s.vsExpected)}</td>
               <td className={s.lateThird < -10 ? 'bad-text' : ''}>{signed(s.lateThird)}</td>
               <td>{s.secPerQuestion}{s.targetSec ? ` / ${s.targetSec}` : ''}</td>
-              <td>{s.unanswered || ''}</td>
+              <td className={s.readSec > s.readTargetSec * 1.15 ? 'bad-text' : ''}>{s.readSec ? `${Math.floor(s.readSec / 60)}:${String(s.readSec % 60).padStart(2, '0')} / 3:30` : ''}</td>
+              <td className={s.unanswered ? 'bad-text' : ''}>{s.unanswered || ''}</td>
             </tr>
           ))}
         </tbody>

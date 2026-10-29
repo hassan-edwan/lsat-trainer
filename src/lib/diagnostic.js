@@ -22,7 +22,8 @@ export const LADDERS = [
   { id: 'structure', title: 'Argument Structure', kind: 'LR', drill: { types: ['main-conclusion', 'role', 'method'] } },
   { id: 'rc-big-picture', title: 'RC: Main Point & Structure', kind: 'RC', drill: { types: ['rc-main-point', 'rc-structure'] } },
   { id: 'rc-detail', title: 'RC: Detail', kind: 'RC', drill: { types: ['rc-detail'] } },
-  { id: 'rc-inference', title: 'RC: Inference & Analogy', kind: 'RC', drill: { types: ['rc-inference', 'rc-analogy'] } },
+  // Strengthen/weaken questions in RC extend the passage's reasoning to new facts, like analogy and inference.
+  { id: 'rc-inference', title: 'RC: Inference, Analogy & Strengthen/Weaken', kind: 'RC', drill: { types: ['rc-inference', 'rc-analogy', 'rc-strengthen-weaken'] } },
   { id: 'rc-author', title: 'RC: Author & Function', kind: 'RC', drill: { types: ['rc-author-attitude', 'rc-function', 'rc-meaning'] } },
 ];
 

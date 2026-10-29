@@ -745,3 +745,8 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 .hl-key-swatch.hl-pink { background: #fbc5dc; }
 .hl-key-swatch.hl-green { background: #c8f0c0; }
 .hl-key-swatch.hl-blue { background: #c4defc; }
+
+.official-form { flex-wrap: wrap; gap: 0.75rem; align-items: flex-end; margin-bottom: 0.75rem; }
+.official-form label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; color: var(--text-2); }
+.official-form input { min-width: 0; width: 11rem; }
+.official-form input[type=number] { width: 7rem; }

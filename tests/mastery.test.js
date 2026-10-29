@@ -35,7 +35,9 @@ test('ability rises with harder questions answered right', () => {
   const high = estimateTheta(B.map((b, i) => ({ b, y: i < 4 ? 1 : 0, w: 1 })), 0, 1.5);
   assert.ok(high.theta > low.theta + 0.5);
   assert.ok(low.se > 0 && low.se < 1.5);
-  assert.ok(scoreFromPct(0.53) > 154 && scoreFromPct(0.53) < 156);
+  assert.equal(Math.round(scoreFromPct(0.72)), 160);
+  assert.equal(Math.round(scoreFromPct(0.875)), 170);
+  assert.equal(scoreFromPct(0.1), 120);
   assert.equal(scoreFromPct(1), 180);
 });
 
@@ -192,4 +194,35 @@ test('prediction history uses only answers up to each day, and the track record 
   assert.deepEqual(rec.map((r) => r.id), ['s2', 's1']);
   assert.ok(rec.every((r) => r.expected > 0 && r.expected < 1 && r.n === 30));
   assert.equal(rec[0].actual, 0.9);
+});
+
+test('RC strengthen/weaken and comparative questions count toward a skill', async () => {
+  const { skillsOf } = await import('../src/lib/mastery.js');
+  assert.deepEqual(skillsOf({ kind: 'RC', types: ['rc-strengthen-weaken'] }, 'RC'), ['rc-inference']);
+  assert.deepEqual(skillsOf({ kind: 'RC', types: ['rc-comparative'] }, 'RC'), ['rc-big-picture']);
+  assert.deepEqual(skillsOf({ kind: 'RC', types: ['rc-comparative', 'rc-detail'] }, 'RC'), ['rc-detail']);
+});
+
+test('sets left open for a day are closed: answers scored, blind review only where you reviewed', async () => {
+  const { staleSessions, finalizeSession } = await import('../src/lib/session.js');
+  const q = (id) => ({ id, answer: 'A', types: ['flaw'], difficulty: 3, stem: '', choices: [] });
+  const section = { kind: 'LR', questions: ['q1', 'q2', 'q3'].map(q) };
+  const test = { id: 't', name: 'T', sections: [section] };
+  const index = Object.fromEntries(section.questions.map((x) => [x.id, { question: x, section, test, passage: null }]));
+  const base = { kind: 'drill', settings: { blindReview: true }, current: { section: 0, index: 0 }, sections: [{ kind: 'LR', qids: ['q1', 'q2', 'q3'] }] };
+  const old = '2026-10-20T00:00:00Z';
+  const sessions = {
+    br: { ...base, id: 'br', phase: 'br', updatedAt: old, responses: { q1: { first: 'B', br: 'A', brTimeMs: 20000 }, q2: { first: 'B', br: 'B', brTimeMs: 0 }, q3: { first: null } } },
+    empty: { ...base, id: 'empty', phase: 'timed', updatedAt: old, responses: { q1: { first: null, timeMs: 0 }, q2: { first: null }, q3: { first: null } } },
+    fresh: { ...base, id: 'fresh', phase: 'br', updatedAt: new Date().toISOString(), responses: {} },
+  };
+  const out = staleSessions(sessions, index, new Date('2026-10-22T00:00:00Z').getTime());
+  assert.equal(out.length, 2);
+  const fin = out.find((x) => x.finish).finish;
+  assert.deepEqual(fin.sections[0].qids, ['q1', 'q2']);
+  const rows = finalizeSession(fin, index, {}).attempts;
+  assert.deepEqual(rows.map((a) => [a.qid, a.reviewed]), [['q1', true], ['q2', false]]);
+  const ab = out.find((x) => x.abandon).abandon;
+  assert.equal(ab.abandoned, true);
+  assert.deepEqual(ab.shownQids, ['q1']); // only the question it was open on
 });

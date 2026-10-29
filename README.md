@@ -143,6 +143,23 @@ It runs entirely in your browser. There's no account and no server, and your dat
   server is pinned to port 5173, so your browser data no longer ends up split across addresses.
 - **Backups:** download all your data as one file and restore it on another computer.
 
+
+## How scores and skills are measured
+
+- **Every answer counts.** Drills, training sets and diagnostics left open for a day are closed when the app starts:
+  answered questions are scored, blind review counts only for the questions you spent time reviewing, and questions
+  you saw but didn't answer stay marked as seen. Practice tests and stamina sessions stay open until you score them.
+- **Every question type maps to a skill.** RC strengthen/weaken questions train *RC: Inference, Analogy &
+  Strengthen/Weaken*; a comparative-passage question about how the passages relate is *Main Point & Structure*.
+- **Score curve.** Percent right converts to a scaled score using typical published conversions: about 55% for 150,
+  72% for 160, 80% for 165, 87–88% for 170 and 94% for 175.
+- **Past level 5.** The 1–5 scale tops out, so a skill above it shows the share of level-5 questions you'd get right.
+- **Checking against real tests.** Log official PrepTest scores on the Skills page; they show on the prediction chart
+  next to what the prediction said that day.
+- **Stamina.** The fade is measured on questions you answered. Blanks are pacing and are reported separately (with
+  RC reading time per passage against 3:30); a level isn't passed with more than 10% blank. Assembled LR sections
+  follow a real section's mix of question types.
+
 ## About test content
 
 **This app doesn't include official LSAC PrepTests.** LSAC holds the copyright to its PrepTests, so they can't
