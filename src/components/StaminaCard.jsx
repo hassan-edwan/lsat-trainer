@@ -17,13 +17,20 @@ export default function StaminaCard({ session }) {
     <section className="card">
       <h2>Stamina</h2>
       <p className="card-sub">
-        Accuracy is compared with what you usually get at each difficulty, so harder late questions don't count against you.
+        Each section's last stretch is compared with its own start, against what you usually get in that kind of section at each
+        difficulty, so harder late questions (or RC simply being harder for you than LR) don't count against you.
       </p>
       <div className="stamina-head">
         <div className={`stamina-fade ${!report.counts ? 'neutral' : report.passed ? 'good' : 'bad'}`}>
           <div className="mini-value">{signed(report.fade)} pts</div>
-          <div className="mini-label">late fade on answered questions (last 40% vs first 60%)</div>
+          <div className="mini-label">accuracy late vs early (last 40% vs first 60% of each section)</div>
         </div>
+        {report.slowdown != null && (
+          <div className={`stamina-fade ${report.slowdown >= 15 ? 'warn' : 'neutral'}`}>
+            <div className="mini-value">{report.slowdown > 0 ? '+' : ''}{report.slowdown}%</div>
+            <div className="mini-label">time per question late vs early, beyond what harder questions explain</div>
+          </div>
+        )}
         <p>
           {verdict(report)}
           {session.stamina && report.counts && (report.passed

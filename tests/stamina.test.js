@@ -185,3 +185,28 @@ test('blanks are pacing, not fade: left out of the fade, counted separately, and
   assert.equal(r2.paced, true);
   assert.equal(r2.passed, true);
 });
+
+test('fade is measured within each section: a weaker RC section after a perfect LR one is not fading', () => {
+  const { tests, index } = fixture();
+  const lr = tests[0].sections[0];
+  const rc = tests[0].sections[2];
+  // LR all right; RC misses early (questions 2, 4, 6), right afterwards.
+  const s = session([lr, rc], (k) => !(k >= 25 && [26, 28, 30].includes(k)));
+  const r = staminaReport(s, index, expectedByDifficulty([], index));
+  assert.ok(r.fade >= 0, `fade ${r.fade}`);
+  assert.equal(r.passed, true);
+  // The same misses late in the RC section are a real fade.
+  const late = session([lr, rc], (k) => !(k >= 25 && [45, 47, 49].includes(k)));
+  assert.ok(staminaReport(late, index, expectedByDifficulty([], index)).fade < -6);
+});
+
+test('slowing down late is reported separately from accuracy', async () => {
+  const { verdict } = await import('../src/lib/stamina.js');
+  const { tests, index } = fixture();
+  const s = session(tests[0].sections.slice(0, 2), () => true);
+  s.sections.forEach((sec) => sec.qids.forEach((id, qi) => { s.responses[id].timeMs = qi < 15 ? 70_000 : 110_000; }));
+  const r = staminaReport(s, index, expectedByDifficulty([], index));
+  assert.ok(r.slowdown >= 40, `slowdown ${r.slowdown}`);
+  assert.equal(r.passed, true);
+  assert.match(verdict(r), /slowed down late/);
+});

@@ -130,7 +130,7 @@ export default function Stamina() {
 
       <section className="card">
         <h2>Your fade over time</h2>
-        <p className="card-sub">Late fade = (late accuracy − your usual at that difficulty) minus (early accuracy − your usual). Full practice tests and any long timed drill (two timed sections or 45+ minutes) show their fade here; only stamina sessions and full tests move you up the ladder.</p>
+        <p className="card-sub">Late fade = (late accuracy − your usual at that difficulty) minus (early accuracy − your usual), measured within each section so an LR/RC difference doesn't count as fading. Full practice tests and any long timed drill (two timed sections or 45+ minutes) show their fade here; only stamina sessions and full tests move you up the ladder.</p>
         {recent.length === 0 ? (
           <p className="muted">No long sessions yet. Start level {level} or take a full practice test.</p>
         ) : (

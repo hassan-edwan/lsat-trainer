@@ -26,23 +26,38 @@ export const STAMINA_LEVELS = [
     detail: 'Five sections, one more than the real test, so test day feels short.' },
 ];
 
-/** Expected first-pass accuracy by difficulty, from the user's history blended with a prior. */
+// Typical answering seconds per question by difficulty (reading excluded), until there's history.
+const PRIOR_SEC = { LR: { 1: 60, 2: 70, 3: 82, 4: 95, 5: 105 }, RC: { 1: 35, 2: 40, 3: 47, 4: 55, 5: 62 } };
+
+/**
+ * What to expect from you on each question, from your own history blended with a prior, separately
+ * for LR and RC (your accuracy in the two sections can differ a lot, and that isn't stamina):
+ * `{ LR: {1..5}, RC: {1..5} }` accuracy, `time: { LR: {1..5}, RC: {1..5} }` seconds, and the
+ * combined accuracy under the bare keys 1–5.
+ */
 export function expectedByDifficulty(attempts, index, excludeSessionId = null) {
   const tally = {};
   for (const a of attempts) {
     if (a.sessionId === excludeSessionId) continue;
-    const d = index[a.qid]?.question.difficulty;
-    if (!d) continue;
-    tally[d] ||= { n: 0, right: 0 };
-    tally[d].n += 1;
-    if (a.first === a.answer) tally[d].right += 1;
+    const e = index[a.qid];
+    const d = e?.question.difficulty;
+    if (!d || !a.first) continue;
+    for (const k of ['all', e.section?.kind || a.kind]) {
+      const t = ((tally[k] ||= {})[d] ||= { n: 0, right: 0, sec: 0, timed: 0 });
+      t.n += 1;
+      if (a.first === a.answer) t.right += 1;
+      if (a.timeMs > 0 && a.timeMs < 600_000) { t.sec += a.timeMs / 1000; t.timed += 1; }
+    }
   }
-  const out = {};
-  for (const d of [1, 2, 3, 4, 5]) {
-    const t = tally[d] || { n: 0, right: 0 };
-    out[d] = (t.right + PRIOR_WEIGHT * PRIOR[d]) / (t.n + PRIOR_WEIGHT);
-  }
-  return out;
+  const acc = (k) => Object.fromEntries([1, 2, 3, 4, 5].map((d) => {
+    const t = tally[k]?.[d] || { n: 0, right: 0 };
+    return [d, (t.right + PRIOR_WEIGHT * PRIOR[d]) / (t.n + PRIOR_WEIGHT)];
+  }));
+  const time = (k) => Object.fromEntries([1, 2, 3, 4, 5].map((d) => {
+    const t = tally[k]?.[d] || { sec: 0, timed: 0 };
+    return [d, (t.sec + PRIOR_WEIGHT * PRIOR_SEC[k][d]) / (t.timed + PRIOR_WEIGHT)];
+  }));
+  return { ...acc('all'), LR: acc('LR'), RC: acc('RC'), time: { LR: time('LR'), RC: time('RC') } };
 }
 
 const mean = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null);
@@ -51,11 +66,15 @@ const MAX_BLANK = 0.1; // more blanks than this is a pacing problem, and the lev
 const READ_TARGET_SEC = 210; // about 3.5 minutes to read an RC passage at test pace
 
 /**
- * Difficulty-adjusted stamina report for one session. `fade` is the change in
- * (actual − expected) accuracy, in points, from the first 60% of the answered questions
- * (in the order they were taken) to the last 40%. Negative = you faded. Blanks are left out
- * of the fade and counted in `blank`: running out of time is a pacing problem, and counting
- * blanks as late misses would read slow reading as fading focus.
+ * Difficulty-adjusted stamina report for one session. `fade` is the change in (actual − expected)
+ * accuracy, in points, from the first 60% of each section's answered questions to its last 40%,
+ * averaged over sections. It's measured within sections because an LR and an RC section differ in
+ * more than stamina: a session that runs LR then RC would otherwise read an RC weakness as fading.
+ * Expected accuracy comes from your history in that section type at that difficulty. Negative =
+ * you faded. `slowdown` is the same comparison for answering time (relative to your usual time at
+ * each difficulty, reading excluded), in percent: positive = slower late than the harder questions
+ * explain. Blanks are left out of both and counted in `blank`: running out of time is a pacing
+ * problem, and counting blanks as late misses would read slow reading as fading focus.
  */
 export function staminaReport(session, index, expected) {
   const rows = [];
@@ -64,13 +83,25 @@ export function staminaReport(session, index, expected) {
     if (!q) return;
     const r = session.responses[qid] || {};
     const right = r.first === q.answer ? 1 : 0;
-    rows.push({ si, qi, n: sec.qids.length, right, resid: right - (expected[q.difficulty] ?? 0.7), timeMs: r.timeMs || 0, answered: !!r.first });
+    const kind = sec.kind === 'RC' || index[qid]?.passage ? 'RC' : 'LR';
+    const exp = expected[kind]?.[q.difficulty] ?? expected[q.difficulty] ?? 0.7;
+    const expSec = expected.time?.[kind]?.[q.difficulty] ?? PRIOR_SEC[kind][q.difficulty] ?? 80;
+    rows.push({ si, qi, n: sec.qids.length, right, resid: right - exp, timeMs: r.timeMs || 0, pace: (r.timeMs || 0) / 1000 / expSec, answered: !!r.first });
   }));
   if (rows.length < 10) return null;
   const answered = rows.filter((r) => r.answered);
-  const cut = Math.round(answered.length * 0.6);
-  const early = answered.slice(0, cut);
-  const late = answered.slice(cut);
+  // Each section split into its first 60% and last 40% of answered questions.
+  const parts = session.sections.map((_, si) => {
+    const rs = answered.filter((r) => r.si === si);
+    const cut = Math.round(rs.length * 0.6);
+    return { n: rs.length, early: rs.slice(0, cut), late: rs.slice(cut) };
+  }).filter((x) => x.n >= 5);
+  const early = parts.flatMap((x) => x.early);
+  const late = parts.flatMap((x) => x.late);
+  const weighted = (f) => {
+    const n = parts.reduce((t, x) => t + x.n, 0);
+    return n ? parts.reduce((t, x) => t + f(x) * x.n, 0) / n : null;
+  };
   const pts = (x) => (x == null ? null : Math.round(x * 100));
   const sections = session.sections.map((sec, si) => {
     const rs = rows.filter((r) => r.si === si);
@@ -93,7 +124,11 @@ export function staminaReport(session, index, expected) {
       readTargetSec: sec.kind === 'RC' ? READ_TARGET_SEC : null,
     };
   });
-  const fade = answered.length >= 10 ? pts(mean(late.map((r) => r.resid)) - mean(early.map((r) => r.resid))) : null;
+  const fade = answered.length >= 10 ? pts(weighted((x) => mean(x.late.map((r) => r.resid)) - mean(x.early.map((r) => r.resid)))) : null;
+  const timed = (rs) => rs.filter((r) => r.timeMs > 0);
+  const slowdown = answered.length >= 10
+    ? Math.round(100 * (weighted((x) => (mean(timed(x.late).map((r) => r.pace)) ?? 1) / (mean(timed(x.early).map((r) => r.pace)) || 1)) - 1))
+    : null;
   const blank = rows.length - answered.length;
   // A rushed or mostly blank session says nothing about stamina, so it can't pass a level.
   const limit = session.sections.reduce((t, s) => t + (s.timeLimitSec || 0), 0);
@@ -101,7 +136,7 @@ export function staminaReport(session, index, expected) {
   const counts = answered.length >= MIN_ANSWERED * rows.length && (!limit || used >= 0.4 * limit);
   const paced = blank <= MAX_BLANK * rows.length;
   return {
-    fade, blank, paced, early: pts(mean(early.map((r) => r.resid))), late: pts(mean(late.map((r) => r.resid))), sections, counts,
+    fade, slowdown, blank, paced, early: pts(mean(early.map((r) => r.resid))), late: pts(mean(late.map((r) => r.resid))), sections, counts,
     passed: counts && paced && fade != null && fade >= PASS_FADE,
   };
 }
@@ -113,7 +148,12 @@ export function verdict(report) {
   const pace = report.paced ? '' : ` You left ${report.blank} blank, though: that's pacing, not stamina, and a level isn't passed with more than 10% blank.`;
   const slowRead = report.sections.find((x) => x.readSec && x.readSec > x.readTargetSec * 1.15);
   const read = !report.paced && slowRead ? ` Your RC reading averaged ${Math.floor(slowRead.readSec / 60)}:${String(slowRead.readSec % 60).padStart(2, '0')} a passage against a 3:30 target.` : '';
-  return fadeText(f) + pace + read;
+  // Accuracy held but answering slowed: say both, without calling stamina a non-issue.
+  const slowed = report.slowdown >= 15 && f != null && f >= PASS_FADE;
+  const lead = slowed
+    ? `Your accuracy ${f >= 3 ? 'got better' : 'held steady'} as the session went on, but you slowed down late: about ${report.slowdown}% more time per question than the harder questions explain. That's often the first sign of fatigue, before accuracy slips.`
+    : fadeText(f);
+  return lead + pace + read;
 }
 
 function fadeText(f) {
@@ -222,23 +262,29 @@ function freshLRSection(questions, seen, rng) {
   return { title: 'Logical Reasoning', kind: 'LR', timeLimitMinutes: 35, questions: ordered };
 }
 
-/** An RC section of four whole passages (about 27 questions) you've never read. */
+/**
+ * An RC section of four whole passages you've never read, 26–28 questions like a real section
+ * (27 is typical). If no four unread passages add up to that, the closest total from 24 to 30.
+ */
 function freshRCSection(questions, seen, rng) {
   const groups = {};
   for (const q of questions) if (q.kind === 'RC' && q.passageId) (groups[`${q.testId}:${q.passageId}`] ||= []).push(q);
-  const fresh = Object.values(groups).filter((g) => g.length >= 4 && g.every((q) => !seen.has(q.id)));
-  const picked = [];
-  let count = 0;
-  for (const g of shuffle(fresh, rng)) {
-    if (picked.length === 4) break;
-    if (count + g.length > 30) continue;
-    picked.push(g);
-    count += g.length;
+  const fresh = shuffle(Object.values(groups).filter((g) => g.length >= 4 && g.every((q) => !seen.has(q.id))), rng);
+  if (fresh.length < 4) return null;
+  let best = null;
+  const score = (n) => (n === 27 ? 0 : n >= 26 && n <= 28 ? 1 : 2 + Math.abs(27 - n));
+  // Random draws of four passages; keep the one closest to 27 questions.
+  for (let tries = 0; tries < 400; tries++) {
+    const pick = shuffle(fresh, rng).slice(0, 4);
+    const n = pick.reduce((t, g) => t + g.length, 0);
+    if (n < 24 || n > 30) continue;
+    if (!best || score(n) < score(best.n)) best = { pick, n };
+    if (score(n) === 0) break;
   }
-  if (picked.length < 4) return null;
+  if (!best) return null;
   return {
     title: 'Reading Comprehension', kind: 'RC', timeLimitMinutes: 35,
-    questions: picked.flatMap((g) => [...g].sort((x, y) => x.number - y.number)),
+    questions: best.pick.flatMap((g) => [...g].sort((x, y) => x.number - y.number)),
   };
 }
 

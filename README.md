@@ -164,7 +164,7 @@ It runs entirely in your browser. There's no account and no server, and your dat
 - **Past level 5.** The 1–5 scale tops out, so a skill above it shows the share of level-5 questions you'd get right.
 - **Checking against real tests.** Log official PrepTest scores on the Skills page; they show on the prediction chart
   next to what the prediction said that day.
-- **Stamina.** The fade is measured on questions you answered. Blanks are pacing and are reported separately (with
+- **Stamina.** The fade is measured within each section (its last 40% against its own first 60%), against your usual accuracy in that kind of section at each difficulty, so RC being harder for you than LR never reads as fading. A separate slowdown figure says whether you got slower late than the harder questions explain. The fade uses only questions you answered. Blanks are pacing and are reported separately (with
   RC reading time per passage against 3:30); a level isn't passed with more than 10% blank. Assembled LR sections
   follow a real section's mix of question types.
 

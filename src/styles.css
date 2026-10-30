@@ -765,3 +765,4 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 
 .read-note-input { display: flex; flex-direction: column; gap: 0.3rem; width: 100%; font-size: 0.9rem; font-weight: 600; }
 .read-note-input input { font-weight: 400; }
+.stamina-fade.warn { background: var(--warn-soft); color: var(--warn); }
