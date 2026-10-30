@@ -181,6 +181,14 @@ tests): short everyday stimuli with one clean gap, the modern stem mix and flaw 
 comparative pair per section. Every section was solved blind by a separate checker to confirm the answer key.
 
 - **Six Classic-Style Tests:** full LR / RC / LR tests (462 questions) with the real section difficulty curve.
+- **Reading Comprehension Sections:** four full RC sections (16 passages, 108 questions) built to the measured
+  blueprint of real sections, not just their length. Passages center on real subjects (Chevron deference, the
+  collateral source rule, trademark genericide, the hearsay excited-utterance exception, Göbekli Tepe, ego
+  depletion, adult neurogenesis, the Mpemba effect, Anna Atkins's cyanotypes, renga, and more), with law in every
+  section, humanities first and science late. Each has a real passage structure, the real question mix and order,
+  stock stems with word locators, near-miss trap answers, and a natural answer key. One section uses the 2026 format
+  with no comparative set. Every key was confirmed by three or four independent blind solvers, and each question's
+  difficulty is the average of the writer's and the solvers' ratings.
 - **A Flaw Pattern Practice Set** of 60 LR questions: five for each of twelve flaw patterns (equivocation,
   false choice, circular reasoning, straw man, bad authority, ad hominem, possible-as-certain, part vs. whole,
   lack of evidence, sampling, flawed analogy, overreaching conclusions), at difficulty 2 through 5.

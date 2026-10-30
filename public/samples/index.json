@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "notes": "Adds Skill Builder Set 2: 314 new hard questions (levels 3–5): 230 LR and 84 RC across 13 passage sets. Every skill now has at least 15 questions at each hard level, so mixed sets and the mastery path keep finding fresh, difficult questions.",
+  "version": 9,
+  "notes": "Adds Reading Comprehension Sections: four new full RC sections (16 passages, 108 questions) built to match real PrepTests and the current test, from subject mix and passage structure to question order, stem wording, trap answers and difficulty. One uses the 2026 format with no comparative set. More fresh passages for stamina sessions and reading drills.",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
@@ -11,7 +11,8 @@
     "flaw-pattern-practice.json",
     "skill-diagnostic.json",
     "skill-builder.json",
-    "skill-builder-2.json"
+    "skill-builder-2.json",
+    "rc-sections.json"
   ],
   "retired": [
     "original-practice-test-1",
