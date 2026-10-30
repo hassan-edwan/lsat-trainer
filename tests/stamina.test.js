@@ -129,7 +129,7 @@ test('repeating a stamina level gives questions you have not seen', () => {
   }
 });
 
-test('back to back, repeated: both sections are new each time until the bank runs out, and repeats are counted', () => {
+test('back to back, repeated: every attempt is all new questions, and it stops rather than repeat', () => {
   const { tests } = fixture();
   let attempts = [];
   const seen = new Set();
@@ -143,9 +143,14 @@ test('back to back, repeated: both sections are new each time until the bank run
     qids.forEach((id) => seen.add(id));
     answer(s);
   }
-  // Both RC sections are used up: the third one has to repeat and says so.
+  // Both RC sections are used up: stamina never reuses questions, so the third can't be built.
   const third = createStaminaSession(2, tests, attempts);
-  assert.ok(third.stamina.repeats > 0);
+  assert.deepEqual(third.outOf, ['RC']);
+  // Long ago or not, a seen question never comes back.
+  const old = attempts.map((a) => ({ ...a, at: '2025-01-01' }));
+  assert.deepEqual(createStaminaSession(2, tests, old).outOf, ['RC']);
+  // One section still fits: level 1 is LR only.
+  assert.ok(createStaminaSession(1, tests, attempts).sections);
 });
 
 test('a discarded session keeps the questions it showed you marked as seen', async () => {

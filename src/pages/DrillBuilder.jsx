@@ -5,6 +5,9 @@ import { allocate, buildDrill, shuffle, weaknessScores } from '../lib/analytics.
 import { createDrillSession } from '../lib/session.js';
 import { PageHeader } from '../components/Layout.jsx';
 import { startMixed } from './Diagnostic.jsx';
+import { seenIds } from '../lib/mastery.js';
+import { nextReadingTarget, readingDrillPassages } from '../lib/readingDrill.js';
+import { staminaSupply } from '../lib/stamina.js';
 import { CATEGORY_GROUPS, SECTION_KINDS, categoriesOf, categoryLabel, typeLabel, typesForKind } from '../lib/taxonomy.js';
 
 const MODES = [
@@ -19,6 +22,24 @@ const PACES = [
   ['60', 'Fast (1:00 per question)'],
   ['0', 'Untimed'],
 ];
+
+const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
+
+/**
+ * Start a reading drill: two whole passages you've never read, timed against your next reading
+ * target (the drill's pace is scaled so the passage clock and question time match that target).
+ */
+export async function startReadingDrill({ questions, attempts, sessions, index, saveSession }, count = 2) {
+  const picked = readingDrillPassages(questions, seenIds({ attempts, sessions }), count);
+  if (!picked.length) {
+    alert('Every reading passage in the bank has been read. Add more passages to keep drilling reading.');
+    return;
+  }
+  const targetSec = nextReadingTarget(sessions, index);
+  const s = createDrillSession(picked, { title: `Reading drill: ${mmss(targetSec)} target`, secondsPerQuestion: (80 * targetSec) / 210, blindReview: true });
+  const saved = await saveSession({ ...s, readingDrill: { targetSec } });
+  navigate(`/session/${saved.id}`);
+}
 
 export default function DrillBuilder() {
   const store = useStore();
@@ -98,6 +119,7 @@ export default function DrillBuilder() {
         </div>
         <button className="primary" onClick={() => startMixed(store)}>▶ Start mixed set</button>
       </div>
+      <ReadingDrillBox store={store} />
       <div className="mode-cards" role="radiogroup" aria-label="Drill type">
         {MODES.map((m) => (
           <button key={m.id} role="radio" aria-checked={mode === m.id} className={`mode-card ${mode === m.id ? 'active' : ''}`} onClick={() => setMode(m.id)}>
@@ -204,6 +226,25 @@ export default function DrillBuilder() {
           {attempts.length === 0 && <p className="muted">No history yet, so the mix follows how often each type appears on the LSAT. Take a test or drill to personalize it.</p>}
         </section>
       )}
+    </div>
+  );
+}
+
+/** The reading drill entry: your next target and how many unread passages are left. */
+export function ReadingDrillBox({ store }) {
+  const target = useMemo(() => nextReadingTarget(store.sessions, store.index), [store.sessions, store.index]);
+  const left = useMemo(() => staminaSupply(store.tests, store.attempts, store.sessions).passages, [store.tests, store.attempts, store.sessions]);
+  return (
+    <div className="mix-box">
+      <div>
+        <strong>Reading drill · target {mmss(target)}</strong>
+        <div className="small-text">
+          Two passages you've never read. Read each against the target, say the main point in a few words, then answer its questions.
+          Meet the target with 75% or more right and the next drill aims 15 seconds faster, down to the test's 3:30.
+        </div>
+        <div className="muted small-text">{left} unread passage{left === 1 ? '' : 's'} left; each RC stamina section needs 4.</div>
+      </div>
+      <button className="primary" disabled={left === 0} onClick={() => startReadingDrill(store)}>▶ Start reading drill</button>
     </div>
   );
 }

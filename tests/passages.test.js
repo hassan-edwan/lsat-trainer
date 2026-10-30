@@ -83,3 +83,29 @@ test('reading target is 3:30 at test pace, scaled by the drill pace; history lis
   assert.equal(h.length, 1);
   assert.deepEqual([h[0].ms, h[0].n, h[0].right, h[0].targetSec], [250_000, 6, 5, 210]);
 });
+
+test('reading drill: unread passages only, targets step down 15s when met with 75%+, and hold otherwise', async () => {
+  const { nextReadingTarget, readingDrillPassages, readingDrillResult } = await import('../src/lib/readingDrill.js');
+  const qs = library();
+  const index = Object.fromEntries(qs.map((q) => [q.id, { question: q, test: { id: q.testId }, passage: q.passageId ? { id: q.passageId } : null }]));
+  const seen = new Set(qs.filter((q) => q.passageId === 'p0' || q.id === 'p1-q3').map((q) => q.id));
+  const picked = readingDrillPassages(qs, seen, 2);
+  const pids = [...new Set(picked.map((q) => q.passageId))];
+  assert.equal(pids.length, 2);
+  assert.ok(!pids.includes('p0') && !pids.includes('p1'));
+  for (const pid of pids) assert.equal(picked.filter((q) => q.passageId === pid).length, qs.filter((q) => q.passageId === pid).length);
+  // No history: 4:00 to start.
+  assert.equal(nextReadingTarget({}, index), 240);
+  const drill = (targetSec, readSec, rightOf) => {
+    const s = createDrillSession(qs.filter((q) => q.passageId === 'p2'), { secondsPerQuestion: 80 });
+    Object.assign(s, { phase: 'done', finishedAt: '2026-10-30T12:00:00Z', readingDrill: { targetSec }, reading: { '0:p2': { ms: readSec * 1000, done: true } } });
+    s.sections[0].qids.forEach((id, i) => { s.responses[id].first = i < rightOf ? 'A' : 'B'; });
+    return s;
+  };
+  assert.equal(readingDrillResult(drill(240, 230, 7), index).nextSec, 225); // met, 7/7
+  assert.equal(readingDrillResult(drill(240, 260, 7), index).nextSec, 240); // too slow
+  assert.equal(readingDrillResult(drill(240, 230, 4), index).nextSec, 240); // fast but 4/7
+  assert.equal(readingDrillResult(drill(215, 200, 7), index).nextSec, 210); // never below 3:30
+  const s = drill(240, 230, 7);
+  assert.equal(nextReadingTarget({ [s.id]: s }, index), 225);
+});

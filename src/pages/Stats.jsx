@@ -8,6 +8,7 @@ import { CATEGORY_GROUPS, SECTION_KINDS, categoryLabel, typeLabel } from '../lib
 import { answeredFromHistory, masteryTier, sessionAnswered } from '../lib/progress.js';
 import { RC_READ_SEC, readingHistory } from '../lib/passages.js';
 import { ReadingTrend } from '../components/ScoreCharts.jsx';
+import { ReadingDrillBox } from './DrillBuilder.jsx';
 
 const TIER = { gold: '🥇', silver: '🥈', bronze: '🥉' };
 function Badge({ stats }) {
@@ -18,7 +19,8 @@ function Badge({ stats }) {
 const pct = (x) => `${Math.round(x * 100)}%`;
 
 export default function Stats() {
-  const { attempts, sessions, questions, journal, saveSession, index } = useStore();
+  const store = useStore();
+  const { attempts, sessions, questions, journal, saveSession, index } = store;
   const reads = useMemo(() => readingHistory(sessions, index), [sessions, index]);
   const done = Object.values(sessions).filter((s) => s.phase === 'done' && !s.abandoned).sort((a, b) => a.finishedAt.localeCompare(b.finishedAt));
 
@@ -125,7 +127,7 @@ export default function Stats() {
         </section>
       )}
 
-      {reads.length > 0 && <ReadingPace reads={reads} />}
+      <ReadingPace reads={reads} store={store} />
 
       <section className="card">
         <h2>By category</h2>
@@ -183,7 +185,14 @@ export default function Stats() {
 const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
 
 /** RC reading time per passage over time against the 3:30 target, with accuracy alongside. */
-function ReadingPace({ reads }) {
+function ReadingPace({ reads, store }) {
+  if (!reads.length) return (
+    <section className="card">
+      <h2>Reading pace</h2>
+      <p className="card-sub">Read an RC passage with the reading pause (📖) on and your reading time per passage shows here.</p>
+      <ReadingDrillBox store={store} />
+    </section>
+  );
   const avg = (xs) => xs.reduce((t, r) => t + r.ms / 1000, 0) / xs.length;
   const acc = (xs) => Math.round(100 * xs.reduce((t, r) => t + r.right, 0) / Math.max(1, xs.reduce((t, r) => t + r.n, 0)));
   const recent = reads.slice(-4);
@@ -202,6 +211,7 @@ function ReadingPace({ reads }) {
         <div className="stat"><div className="stat-label">Accuracy, last {recent.length}</div><div className="stat-value">{acc(recent)}%</div><div className="muted">{reads.length > 4 ? `${acc(first)}% on the first ${first.length}` : 'on those passages\' questions'}</div></div>
       </div>
       <ReadingTrend passages={reads} targetSec={RC_READ_SEC} />
+      <ReadingDrillBox store={store} />
     </section>
   );
 }

@@ -37,8 +37,10 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
   const [qClock, setQClock] = useState(() => localStorage.getItem('lsat.qClock') !== 'off');
   // RC: read each passage with the question clock stopped, then start the questions.
   const [readPause, setReadPause] = useState(() => localStorage.getItem('lsat.rcReadPause') !== 'off');
-  const readPauseRef = useRef(readPause);
-  readPauseRef.current = readPause;
+  // A reading drill always reads with the pause on: timing the reading is the point.
+  const readOn = readPause || !!initial.readingDrill;
+  const readPauseRef = useRef(readOn);
+  readPauseRef.current = readOn;
   const indexRef = useRef(index);
   indexRef.current = index;
   const [spacing, setSpacing] = useState(() => Number(localStorage.getItem('lsat.lineSpacing')) || 1.6);
@@ -190,11 +192,13 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
     ...s, responses: { ...s.responses, [qid]: { ...s.responses[qid], ...patch(s.responses[qid]) } },
   })), [update, qid]);
 
-  const rKey = session.phase === 'timed' && readPause ? readingKey(session.current.section, entry) : null;
+  const rKey = session.phase === 'timed' && readOn ? readingKey(session.current.section, entry) : null;
   const reading = !!rKey && !session.reading?.[rKey]?.done;
   const readMs = rKey ? session.reading?.[rKey]?.ms || 0 : 0;
   // Reading target for this section: 3:30 at test pace, scaled to the drill's pace.
-  const readTarget = useMemo(() => readTargetSec(sec, index), [sec, index]);
+  const readTarget = useMemo(() => session.readingDrill?.targetSec ?? readTargetSec(sec, index), [session.readingDrill, sec, index]);
+  const readNote = rKey ? session.readingNotes?.[rKey] || '' : '';
+  const setReadNote = (text) => update((s) => ({ ...s, readingNotes: { ...(s.readingNotes || {}), [rKey]: text } }), false);
   const readState = readMs / 1000 > readTarget * 1.4 ? 'way-over' : readMs / 1000 > readTarget ? 'over' : readMs / 1000 > readTarget * 0.8 ? 'near' : 'ok';
   const startQuestions = () => update((s) => ({
     ...s, reading: { ...(s.reading || {}), [rKey]: { ms: s.reading?.[rKey]?.ms || 0, done: true } },
@@ -363,7 +367,7 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
           <button className={`tool ${tool === 'erase' ? 'on' : ''}`} title="Erase highlights: select highlighted text" onClick={() => setTool(tool === 'erase' ? null : 'erase')}>⌫</button>
  <button className={`tool ${masking ? 'on' : ''}`} title="Response masking: click choices to gray them out" onClick={() => setMasking((m) => !m)}>{masking ? 'Masking on' : 'Masking'}</button>
           <button className={`tool ${qClock ? 'on' : ''}`} title="Show time on this question (not on the real test)" onClick={toggleQClock}>⏱</button>
-          {sec.kind === 'RC' && !isBR && (
+          {sec.kind === 'RC' && !isBR && !session.readingDrill && (
             <button className={`tool ${readPause ? 'on' : ''}`} title="Reading pause: read each passage first with the question clock stopped" onClick={toggleReadPause}>📖</button>
           )}
           {canPause && <button className="tool" title="Pause (P): stops the clock and hides the question" onClick={pause}>⏸</button>}
@@ -457,6 +461,13 @@ export default function Runner({ initial, index, onSave, onFinish, onExit }) {
                 ))}
               </div>
               <p className="muted small-text">Keep it to 1–3 short phrases per paragraph. Pick a color here or in the toolbar, then select text in the passage.</p>
+              {session.readingDrill && (
+                <label className="read-note-input">
+                  <span>Before you start: the main point, in a few words</span>
+                  <input type="text" value={readNote} placeholder="e.g. telegraph, not seed, ended the famines; credit mattered too"
+                    onChange={(e) => setReadNote(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); startQuestions(); } }} />
+                </label>
+              )}
               <button className="primary big" onClick={startQuestions}>Start the questions ▶</button>
               <p className="muted small-text">Enter also starts. Turn this off with the 📖 button.</p>
             </div>

@@ -10,7 +10,7 @@ import { loadBundledTests } from '../lib/bundle.js';
 import BundleUpdate from '../components/BundleUpdate.jsx';
 import { startMixed, startTraining } from './Diagnostic.jsx';
 import { LADDERS } from '../lib/diagnostic.js';
-import { createStaminaSession } from '../lib/stamina.js';
+import { createStaminaSession, outOfText } from '../lib/stamina.js';
 
 /** Start a plan task; returns false if it has nothing to start. */
 export async function startTask(task, store) {
@@ -33,7 +33,7 @@ export async function startTask(task, store) {
   }
   else if (a.kind === 'stamina') {
     session = createStaminaSession(a.level, tests, attempts || [], store.sessions);
-    if (!session) return false;
+    if (session.outOf) { alert(outOfText(session.outOf)); return false; }
   }
   else session = createDrillSession(a.questions, a.opts);
   const saved = await saveSession({ ...session, queue });

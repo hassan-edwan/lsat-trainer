@@ -4,7 +4,7 @@
 import { shuffle } from './analytics.js';
 import { QUESTION_TYPES } from './taxonomy.js';
 import { createSectionsSession, flatQuestions } from './session.js';
-import { RECENT_DAYS, seenIds } from './mastery.js';
+import { seenIds } from './mastery.js';
 
 // Accuracy a typical student gets at each difficulty, used until there is enough of the user's own history.
 const PRIOR = { 1: 0.9, 2: 0.82, 3: 0.7, 4: 0.55, 5: 0.4 };
@@ -20,9 +20,9 @@ export const STAMINA_LEVELS = [
     detail: 'Two sections, 70 minutes, no break. The second section is where focus first starts to fade.' },
   { level: 3, title: 'Three straight', kinds: () => ['LR', 'LR', 'RC'], breakAfter: null,
     detail: 'Three sections, 105 minutes, no break, with reading last so you practice it tired.' },
-  { level: 4, title: 'Test day', kinds: () => shuffle(['LR', 'LR', 'RC', Math.random() < 0.5 ? 'LR' : 'RC']), breakAfter: 1,
+  { level: 4, title: 'Test day', kinds: () => shuffle(['LR', 'LR', 'RC', 'any']), breakAfter: 1,
     detail: 'Four sections with the 10-minute break after section 2, exactly like the real test.' },
-  { level: 5, title: 'Overtime', kinds: () => [...shuffle(['LR', 'LR', 'RC', Math.random() < 0.5 ? 'LR' : 'RC']), 'LR'], breakAfter: 1,
+  { level: 5, title: 'Overtime', kinds: () => [...shuffle(['LR', 'LR', 'RC', 'any']), 'LR'], breakAfter: 1,
     detail: 'Five sections, one more than the real test, so test day feels short.' },
 ];
 
@@ -235,22 +235,11 @@ function freshRCSection(questions, seen, rng) {
     picked.push(g);
     count += g.length;
   }
-  if (picked.length < 3) return null;
+  if (picked.length < 4) return null;
   return {
     title: 'Reading Comprehension', kind: 'RC', timeLimitMinutes: 35,
     questions: picked.flatMap((g) => [...g].sort((x, y) => x.number - y.number)),
   };
-}
-
-/**
- * Questions that are spent for stamina only recently: seen ones, minus questions whose last
- * answer is at least RECENT_DAYS old (and that aren't waiting in an unfinished session).
- */
-function recentlySeen(seen, attempts, sessions, now) {
-  const lastAt = new Map();
-  for (const a of attempts) { const t = new Date(a.at).getTime(); if (!(lastAt.get(a.qid) >= t)) lastAt.set(a.qid, t); }
-  const held = seenIds({ attempts: [], sessions });
-  return new Set([...seen].filter((id) => held.has(id) || !lastAt.has(id) || now - lastAt.get(id) < RECENT_DAYS * 86_400_000));
 }
 
 /** How many more fresh sections the bank can build: { LR, RC }, counting only questions you've never seen. */
@@ -263,46 +252,61 @@ export function staminaSupply(tests, attempts, sessions = {}) {
   return {
     LR: Math.floor(questions.filter((q) => q.kind === 'LR' && !seen.has(q.id)).length / 25),
     RC: Math.floor(freshPassages / 4),
+    passages: freshPassages,
   };
 }
 
 /**
- * Build a stamina session for `level`. Each section is a whole real section you haven't touched
- * if one is left; otherwise it's assembled from questions you've never seen (LR in a real
- * section's difficulty mix, RC as four whole unread passages), so a repeated level is always new.
- * Only if the bank runs out does it reuse questions, and then only ones you last answered at
- * least RECENT_DAYS ago; `stamina.repeats` counts them.
+ * Build a stamina session for `level`, every question new to you: no question you've answered,
+ * been shown, or have waiting in an unfinished session, and no passage you've read any of. Each
+ * section is a whole real section you haven't touched if one is left; otherwise it's assembled from
+ * questions you've never seen (LR in a real section's type and difficulty mix, RC as whole unread
+ * passages). Nothing is ever reused: if the bank can't fill a section, this returns
+ * { outOf: ['RC'] } (or 'LR') instead of a session.
  */
-export function createStaminaSession(level, tests, attempts, sessions = {}, rng = Math.random, now = Date.now()) {
+export function createStaminaSession(level, tests, attempts, sessions = {}, rng = Math.random) {
   const spec = STAMINA_LEVELS[level - 1];
   const seen = seenIds({ attempts, sessions });
-  const everSeen = new Set(seen);
-  const recent = recentlySeen(seen, attempts, sessions, now);
   const live = tests.filter((t) => !t.retired && t.purpose !== 'diagnostic');
   const questions = flatQuestions(live);
   const real = live.filter((t) => t.sections.length >= 3)
-    .flatMap((t) => t.sections.filter((s) => s.timeLimitMinutes >= 35 && s.questions.length >= 22)
-      .map((s) => ({ s, fresh: s.questions.filter((q) => !seen.has(q.id)).length / s.questions.length })));
+    .flatMap((t) => t.sections.filter((s) => s.timeLimitMinutes >= 35 && s.questions.length >= 22));
   const used = new Set();
   const picked = [];
-  for (const kind of spec.kinds()) {
-    const untouched = shuffle(real.filter((x) => x.s.kind === kind && x.fresh === 1 && !used.has(x.s)), rng)[0];
-    const build = (spent) => (kind === 'LR' ? freshLRSection(questions, spent, rng) : freshRCSection(questions, spent, rng));
-    let section = untouched?.s || build(seen) || build(recent);
-    if (!section) section = shuffle(real.filter((x) => x.s.kind === kind && !used.has(x.s)), rng).sort((a, b) => b.fresh - a.fresh)[0]?.s;
-    if (!section) continue;
+  const outOf = new Set();
+  const build = (kind) => {
+    const untouched = shuffle(real.filter((s) => s.kind === kind && !used.has(s) && s.questions.every((q) => !seen.has(q.id))), rng)[0];
+    return untouched || (kind === 'LR' ? freshLRSection(questions, seen, rng) : freshRCSection(questions, seen, rng));
+  };
+  for (const want of spec.kinds()) {
+    // Test day's fourth section can be either kind; it's LR when no fresh reading is left.
+    let section = null;
+    if (want === 'any') section = rng() < 0.5 ? build('RC') || build('LR') : build('LR') || build('RC');
+    else section = build(want);
+    if (!section) { outOf.add(want === 'any' ? 'LR' : want); continue; }
     used.add(section);
-    section.questions.forEach((q) => { seen.add(q.id); recent.add(q.id); });
+    section.questions.forEach((q) => seen.add(q.id));
     picked.push(section);
   }
-  if (!picked.length) return null;
+  if (outOf.size) return { outOf: [...outOf] };
   const session = createSectionsSession(picked, {
     kind: 'stamina',
     title: `Stamina ${level}: ${spec.title}`,
     breakAfterSection: picked.length >= 4 ? spec.breakAfter : null,
   });
-  const repeats = picked.flatMap((x) => x.questions).filter((q) => everSeen.has(q.id)).length;
-  return { ...session, stamina: { level, ...(repeats ? { repeats } : {}) } };
+  return { ...session, stamina: { level } };
+}
+
+/** Fresh sections a level needs: { LR, RC } (Test day's either-kind section counts as LR, its fallback). */
+export function staminaNeeds(level) {
+  const kinds = STAMINA_LEVELS[level - 1].kinds();
+  return { LR: kinds.filter((k) => k !== 'RC').length, RC: kinds.filter((k) => k === 'RC').length };
+}
+
+/** Why a stamina level can't be built, in words. */
+export function outOfText(outOf) {
+  const what = outOf.map((k) => (k === 'RC' ? 'unread reading passages' : 'new LR questions')).join(' or ');
+  return `There aren't enough ${what} left for a completely new session at this level, and stamina sessions never reuse questions. Add more questions to the bank, or train a level that fits what's left.`;
 }
 
 /** Stamina sessions that were started but never scored (left during the test or blind review). */

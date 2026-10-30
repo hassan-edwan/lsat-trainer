@@ -112,6 +112,11 @@ It runs entirely in your browser. There's no account and no server, and your dat
   question. Your reading time is recorded separately, the question clock stays stopped, and you press *Start the
   questions* (or Enter) when you're done reading. The section clock keeps running as on test day. Results split
   each passage into reading and answering time. The 📖 button turns it off.
+- **Reading drill:** two RC passages you've never read, each read against a target that starts 15 seconds under your
+  recent average (4:00 with no history) and steps down 15 seconds each time you meet it with 75% or more right, to
+  the test's 3:30. You note the main point in a few words before the questions; the results show each passage's time,
+  accuracy and your note. It's on the Drills page and the Progress page's Reading pace card, and it uses skill-builder
+  passages first so the practice tests' reading sections stay whole.
 - **Reading target:** the reading card shows your time against a target of about 3:30 a passage (scaled to the drill's
   pace), with a bar that turns orange and a nudge to start the questions once you pass it. The Progress page charts
   reading time per passage over time, with accuracy alongside, and the results page marks passages read over target.
@@ -124,9 +129,9 @@ It runs entirely in your browser. There's no account and no server, and your dat
 - **Stamina sessions are always new questions:** each section is a whole built-in section you haven't touched if
   one is left; otherwise it's assembled from questions you've never seen (a 25-question LR section in a real section's
   difficulty mix, or an RC section of four whole unread passages), so repeating a level never repeats questions.
-  Questions in an unfinished session, or one you discarded after seeing part of it, count as seen. The Stamina page
-  shows how many fresh sections are left. If the bank runs out, a session reuses only questions you answered at least
-  two weeks ago and asks before starting.
+  Questions in an unfinished session, or one you discarded after seeing part of it, count as seen, and no question
+  ever comes back, however long ago you saw it. The Stamina page shows how many fresh sections are left; a level
+  the bank can't fill with never-seen questions shows *Out of new questions* instead of starting.
 - **Stamina training:** a five-level ladder of longer and longer timed sittings: one section, two back to
   back, three straight with reading last, a full four-section test with the break, and a five-section
   "overtime" session. After every long session (ladder or full test) the app measures your *late fade*: how much

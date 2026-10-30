@@ -762,3 +762,6 @@ ul.tips { margin: 0.5rem 0 0; padding-left: 1.2rem; display: flex; flex-directio
 .q-clock.reading.over { color: #ffd59a; background: rgba(255, 170, 60, 0.16); }
 .viz-dot.faint { fill: var(--accent); opacity: 0.45; stroke: var(--surface); stroke-width: 2; }
 .viz-target { stroke: var(--text-2); stroke-width: 1.5; }
+
+.read-note-input { display: flex; flex-direction: column; gap: 0.3rem; width: 100%; font-size: 0.9rem; font-weight: 600; }
+.read-note-input input { font-weight: 400; }

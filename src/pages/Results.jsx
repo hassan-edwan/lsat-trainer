@@ -15,6 +15,7 @@ import { startTask } from './Today.jsx';
 import StaminaCard from '../components/StaminaCard.jsx';
 import { isLongSitting } from '../lib/stamina.js';
 import TrainingCard from '../components/TrainingCard.jsx';
+import ReadingDrillCard from '../components/ReadingDrillCard.jsx';
 
 export default function Results({ session }) {
   const { index, attempts, journal, questions, saveJournalEntry, saveSession } = useStore();
@@ -105,6 +106,7 @@ export default function Results({ session }) {
       </section>
 
       {session.training && <TrainingCard session={session} />}
+      {session.readingDrill && <ReadingDrillCard session={session} />}
 
       {isLongSitting(session) && <StaminaCard session={session} />}
 

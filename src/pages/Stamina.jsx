@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useStore } from '../store.jsx';
 import { navigate } from '../lib/nav.js';
 import { PageHeader } from '../components/Layout.jsx';
-import { STAMINA_LEVELS, createStaminaSession, ladderStatus, staminaHistory, staminaSupply, unfinishedStamina } from '../lib/stamina.js';
+import { STAMINA_LEVELS, createStaminaSession, ladderStatus, outOfText, staminaHistory, staminaNeeds, staminaSupply, unfinishedStamina } from '../lib/stamina.js';
 
 const signed = (n) => `${n > 0 ? '+' : ''}${n}`;
 
@@ -19,13 +19,14 @@ export default function Stamina() {
   const history = useMemo(() => staminaHistory(sessions, attempts, index), [sessions, attempts, index]);
   const ladder = useMemo(() => ladderStatus(history), [history]);
   const supply = useMemo(() => staminaSupply(tests, attempts, sessions), [tests, attempts, sessions]);
+  // A level fits when the bank has enough never-seen questions for an all-new session.
+  const fits = (lvl) => { const n = staminaNeeds(lvl); return supply.LR >= n.LR && supply.RC >= n.RC; };
   const level = ladder.next;
   const repeatAdvice = ladder.levels[level - 1].completed && !ladder.levels[level - 1].passed && ladder.unlocked > level;
 
   const start = async (lvl) => {
     const s = createStaminaSession(lvl, tests, attempts, sessions);
-    if (!s) return;
-    if (s.stamina.repeats && !confirm(`You've used up the fresh questions for this level: ${s.stamina.repeats} of these questions are ones you answered at least two weeks ago. Start anyway?`)) return;
+    if (s.outOf) { alert(outOfText(s.outOf)); return; }
     const saved = await saveSession(s);
     navigate(`/session/${saved.id}`);
   };
@@ -85,15 +86,17 @@ export default function Stamina() {
           <p className="card-sub">{STAMINA_LEVELS[level - 1].detail} Finishing a level unlocks the next. You pass it when your late accuracy drops by less than 6 points after adjusting for difficulty.</p>
         )}
         <div className="row">
-          <button className="primary big" onClick={() => start(level)} disabled={!tests.length}>▶ {repeatAdvice ? 'Repeat' : 'Start'} level {level}</button>
-          {repeatAdvice && <button className="big" onClick={() => start(ladder.unlocked)} disabled={!tests.length}>Go on to level {ladder.unlocked}</button>}
+          <button className="primary big" onClick={() => start(level)} disabled={!tests.length || !fits(level)}>▶ {repeatAdvice ? 'Repeat' : 'Start'} level {level}</button>
+          {repeatAdvice && <button className="big" onClick={() => start(ladder.unlocked)} disabled={!tests.length || !fits(ladder.unlocked)}>Go on to level {ladder.unlocked}</button>}
         </div>
         {!tests.length && <p className="muted">Load the practice tests first.</p>}
+        {tests.length > 0 && !fits(level) && <p className="bad-text">Not enough never-seen questions left for an all-new level {level}: {supply.RC < staminaNeeds(level).RC ? 'no four unread passages for its reading section' : 'too few new LR questions'}.</p>}
         {tests.length > 0 && (
           <p className="muted small-text">
             Every stamina session uses questions you've never seen, including ones you saw in a session you discarded.
             Fresh questions left: about {supply.LR} LR section{supply.LR === 1 ? '' : 's'} and {supply.RC} RC section{supply.RC === 1 ? '' : 's'} of four unread passages.
-            {(supply.LR < 2 || supply.RC < 1) && ' The bank is running low. Once it runs out, sessions reuse questions you answered at least two weeks ago and tell you before starting.'}
+            {' '}Stamina never reuses a question: once a kind runs out, levels that need it can't start until more questions are added.
+            {supply.RC < 2 && ' Unread RC passages are running low.'}
           </p>
         )}
       </section>
@@ -115,8 +118,9 @@ export default function Stamina() {
                   <span className="muted">{l.detail}</span>
                   {status && <span className="small-text">{status}{st.attempts > 1 ? ` · ${st.attempts} attempts` : ''}</span>}
                 </div>
-                <button className={l.level === level ? 'primary small' : 'small'} onClick={() => start(l.level)} disabled={!tests.length || locked}>
-                  {locked ? 'Locked' : st.attempts ? 'Repeat' : 'Start'}
+                <button className={l.level === level ? 'primary small' : 'small'} onClick={() => start(l.level)} disabled={!tests.length || locked || !fits(l.level)}
+                  title={!locked && !fits(l.level) ? 'Not enough never-seen questions left for an all-new session' : undefined}>
+                  {locked ? 'Locked' : !fits(l.level) ? 'Out of new questions' : st.attempts ? 'Repeat' : 'Start'}
                 </button>
               </div>
             );
