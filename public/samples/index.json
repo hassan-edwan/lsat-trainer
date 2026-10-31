@@ -1,6 +1,6 @@
 {
-  "version": 9,
-  "notes": "Adds Reading Comprehension Sections: four new full RC sections (16 passages, 108 questions) built to match real PrepTests and the current test, from subject mix and passage structure to question order, stem wording, trap answers and difficulty. One uses the 2026 format with no comparative set. More fresh passages for stamina sessions and reading drills.",
+  "version": 10,
+  "notes": "Rewrites the six Classic-Style Tests and both Skill Builder sets to match the real test more closely. Independent expert reviewers checked every section against PrepTests 140–159: question-type mix and positions, stem wording, how right and wrong answers are built, answer-length and letter patterns, and difficulty. Reading passages now center on real subjects. Every answer key was confirmed blind, and difficulty labels were re-calibrated against the reviewers' ratings. Your past attempts stay attached to the earlier versions.",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
@@ -36,6 +36,14 @@
     "classic-style-test-5-v3",
     "classic-style-test-6-v3",
     "flaw-pattern-practice-v3",
-    "skill-diagnostic-v3"
+    "skill-diagnostic-v3",
+    "classic-style-test-1-v4",
+    "classic-style-test-2-v4",
+    "classic-style-test-3-v4",
+    "classic-style-test-4-v4",
+    "classic-style-test-5-v4",
+    "classic-style-test-6-v4",
+    "skill-builder-v1",
+    "skill-builder-2-v1"
   ]
 }

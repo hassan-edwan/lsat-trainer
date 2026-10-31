@@ -321,6 +321,7 @@ export function trainingPool(skillId, questions) {
  * none was still wrong after blind review. Only fresh answers count: a
  * question repeated within two weeks is remembered, not re-solved. Levels
  * below where your timed ability says you'd get about 70% right are placed out.
+ * A level with fewer than three questions can't be mastered, so it's skipped.
  * `unseen` counts the level's questions you haven't answered in two weeks.
  */
 export function masteryTrack(skill, rows, pool, now = Date.now()) {
@@ -338,7 +339,8 @@ export function masteryTrack(skill, rows, pool, now = Date.now()) {
     let status;
     if (recent.length >= 3 && right >= Math.ceil(0.75 * recent.length) && genuine === 0) status = 'mastered';
     else if (level < placement) status = 'placed';
-    else if (!available && !recent.length) status = 'none';
+    // A level needs at least three questions to be masterable; with fewer it's skipped.
+    else if (available < 3) status = 'none';
     else status = recent.length ? 'working' : 'new';
     return { level, status, recent: recent.length, right, genuine, available, unseen };
   });

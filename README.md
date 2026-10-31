@@ -180,7 +180,16 @@ All of it is written to match the style, length, and difficulty of **PrepTests 1
 tests): short everyday stimuli with one clean gap, the modern stem mix and flaw phrasing, and RC sets with one
 comparative pair per section. Every section was solved blind by a separate checker to confirm the answer key.
 
-- **Six Classic-Style Tests:** full LR / RC / LR tests (462 questions) with the real section difficulty curve.
+- **Six Classic-Style Tests:** full LR / RC / LR tests (467 questions) with the real section difficulty curve.
+  Every section was audited by independent expert reviewers against PrepTests 140–159. The audit compared the
+  type mix and where each type sits, stem wording, how the right answer and the traps are built, answer-length and
+  letter patterns, topic spread, and how hard each question plays. Each section was then rewritten until a fresh
+  blind solver confirmed every key: some sections run 26 questions, keys follow no pattern, and RC passages center
+  on real subjects (Kafka's *The Trial*, the Venice Charter, Manson v. Brathwaite, the penalty doctrine, varve
+  dating, stamp scrip, and more). Each difficulty label is the average of the writer's rating and the last blind
+  solver's. Expert solvers with unlimited time tend to rate questions a little easier than test-takers find them,
+  and the solvers still rated the hardest late questions about half a level below real tests, so treat a level-5
+  label as a real test's hard end, not beyond it.
 - **Reading Comprehension Sections:** four full RC sections (16 passages, 108 questions) built to the measured
   blueprint of real sections, not just their length. Passages center on real subjects (Chevron deference, the
   collateral source rule, trademark genericide, the hearsay excited-utterance exception, Göbekli Tepe, ego
@@ -192,12 +201,14 @@ comparative pair per section. Every section was solved blind by a separate check
 - **A Flaw Pattern Practice Set** of 60 LR questions: five for each of twelve flaw patterns (equivocation,
   false choice, circular reasoning, straw man, bad authority, ad hominem, possible-as-certain, part vs. whole,
   lack of evidence, sampling, flawed analogy, overreaching conclusions), at difficulty 2 through 5.
-- **A Skill Builder Set** of 154 questions (108 LR and 8 RC passage sets) written to fill the mastery path, so
-  every skill has at least five training questions at every level from 1 to 5. Each was blind-solved by a
-  separate checker before going in.
-- **Skill Builder Set 2** of 314 hard questions (levels 3–5: 230 LR and 13 RC passage sets), so every skill has at
-  least 15 questions at each of levels 3, 4 and 5 for mixed sets and the mastery path. Every set was blind-solved by a
-  separate checker, and any item with a weak or giveaway wrong answer was rewritten and re-checked.
+- **A Skill Builder Set** of 154 questions (108 LR and 8 RC passage sets) written to fill the mastery path, to
+  give every skill training questions across levels 1 to 5.
+- **Skill Builder Set 2** of 314 harder questions (230 LR and 13 RC passage sets) for mixed sets and the mastery
+  path.
+- Both Skill Builder sets went through the same audit as the tests: repeated templates, giveaway answers and
+  invented RC subjects were rewritten, every key was re-confirmed blind, and difficulty labels were re-calibrated.
+  The honest labels left a few skills with only one or two questions at their top or bottom level. The mastery path
+  skips a level with fewer than three questions rather than getting stuck on it.
 - **The skill diagnostic** described above.
 - **A full breakdown for every built-in question:** the conclusion and reasoning (or facts, paradox, or task),
   an analysis with the prephrase, and a note on every answer choice, with example arguments for wrong flaw

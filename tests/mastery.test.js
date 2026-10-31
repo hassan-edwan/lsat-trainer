@@ -226,3 +226,14 @@ test('sets left open for a day are closed: answers scored, blind review only whe
   assert.equal(ab.abandoned, true);
   assert.deepEqual(ab.shownQids, ['q1']); // only the question it was open on
 });
+
+test('a level with fewer than three questions is skipped, so the path can still finish', () => {
+  const { questions, index } = library();
+  const p = skillProfile({ attempts: [], index, now });
+  const flaw = { ...p.skills.find((s) => s.id === 'flaw'), n: 0 };
+  const pool = trainingPool('flaw', questions);
+  const sparse = pool.filter((q) => q.difficulty !== 5).concat(pool.filter((q) => q.difficulty === 5).slice(0, 2));
+  const t = masteryTrack(flaw, p.rows, sparse);
+  assert.equal(t.levels[4].status, 'none');
+  assert.equal(t.levels[4].available, 2);
+});
