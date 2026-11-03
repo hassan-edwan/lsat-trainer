@@ -21,7 +21,7 @@ export function weakestCategory(attempts) {
  * action is { kind: 'drill', questions, opts } | { kind: 'test', testId } |
  * { kind: 'link', href } | { kind: 'stamina', level } | { kind: 'mixed' }.
  */
-export function dailyPlan({ tests, sessions, attempts, journal, index, questions, progress, now = Date.now() }) {
+export function dailyPlan({ tests, allTests = tests, sessions, attempts, journal, index, questions, progress, now = Date.now() }) {
   const today = dayKey(now);
   const doneToday = new Set(Object.values(sessions)
     .filter((s) => s.phase === 'done' && !s.abandoned && s.queue?.day === today)
@@ -50,7 +50,7 @@ export function dailyPlan({ tests, sessions, attempts, journal, index, questions
   if (diagnosed) {
     const profile = skillProfile({ attempts, index, sessions, journal, now });
     const weakest = priorities(profile).filter((s) => s.diagnosis === 'gap' || s.diagnosis === 'execution').slice(0, 2);
-    const seen = seenIds({ attempts, sessions });
+    const seen = seenIds({ attempts, sessions, tests: allTests });
     const fresh = questions.some((q) => !seen.has(q.id));
     if (fresh) {
       training = {

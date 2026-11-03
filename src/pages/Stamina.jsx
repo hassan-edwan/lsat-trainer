@@ -15,17 +15,17 @@ const TIPS = [
 ];
 
 export default function Stamina() {
-  const { tests, sessions, attempts, index, saveSession, finishSession } = useStore();
+  const { allTests, sessions, attempts, index, saveSession, finishSession } = useStore();
   const history = useMemo(() => staminaHistory(sessions, attempts, index), [sessions, attempts, index]);
   const ladder = useMemo(() => ladderStatus(history), [history]);
-  const supply = useMemo(() => staminaSupply(tests, attempts, sessions), [tests, attempts, sessions]);
+  const supply = useMemo(() => staminaSupply(allTests, attempts, sessions), [allTests, attempts, sessions]);
   // A level fits when the bank has enough never-seen questions for an all-new session.
   const fits = (lvl) => { const n = staminaNeeds(lvl); return supply.LR >= n.LR && supply.RC >= n.RC; };
   const level = ladder.next;
   const repeatAdvice = ladder.levels[level - 1].completed && !ladder.levels[level - 1].passed && ladder.unlocked > level;
 
   const start = async (lvl) => {
-    const s = createStaminaSession(lvl, tests, attempts, sessions);
+    const s = createStaminaSession(lvl, allTests, attempts, sessions);
     if (s.outOf) { alert(outOfText(s.outOf)); return; }
     const saved = await saveSession(s);
     navigate(`/session/${saved.id}`);

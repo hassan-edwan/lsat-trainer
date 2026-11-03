@@ -55,7 +55,7 @@ export function resumeTraining(skill, { sessions }) {
  * blind review if you never reached it), and none of their questions, answered
  * or not, go into the new set.
  */
-export async function startTraining(skill, level, { questions, attempts, sessions, saveSession, finishSession }, extra = {}, count = 8) {
+export async function startTraining(skill, level, { questions, attempts, sessions, saveSession, finishSession, allTests }, extra = {}, count = 8) {
   const seenInOpen = [];
   for (const old of openTraining(sessions, skill.id)) {
     old.sections.forEach((sec) => seenInOpen.push(...sec.qids));
@@ -73,7 +73,7 @@ export async function startTraining(skill, level, { questions, attempts, session
   }
   const closed = new Set(openTraining(sessions, skill.id).map((x) => x.id));
   const pending = [...pendingQids(Object.fromEntries(Object.entries(sessions).filter(([id]) => !closed.has(id)))), ...seenInOpen];
-  const picked = trainingSet(skill.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending, count });
+  const picked = trainingSet(skill.id, level, { questions, attempts: [...attempts, ...shownEntries(sessions)], pending, count, tests: allTests });
   if (!picked.length) {
     alert(`You've answered every ${skill.title} question near level ${level}. Questions you answered at least two weeks ago come back after that; until then, train another skill.`);
     return;
@@ -89,10 +89,10 @@ export async function startTraining(skill, level, { questions, attempts, session
  * Start a mixed set: about 60% from your weak spots and 40% variety (skills you
  * haven't practiced in a while first), all questions you've never seen, mostly level 3+.
  */
-export async function startMixed({ questions, attempts, index, sessions, journal, saveSession }, extra = {}) {
+export async function startMixed({ questions, attempts, index, sessions, journal, saveSession, allTests }, extra = {}) {
   const profile = skillProfile({ attempts, index, sessions, journal });
   const tracks = Object.fromEntries(profile.skills.map((x) => [x.id, masteryTrack(x, profile.rows, trainingPool(x.id, questions))]));
-  const mix = mixedSet({ profile, tracks, questions, seen: seenIds({ attempts, sessions }) });
+  const mix = mixedSet({ profile, tracks, questions, seen: seenIds({ attempts, sessions, tests: allTests }) });
   if (!mix.questions.length) { alert('There are no questions left that you haven\'t seen.'); return; }
   const title = (id) => LADDERS.find((l) => l.id === id)?.title;
   const s = await saveSession({
@@ -225,7 +225,7 @@ export default function Diagnostic() {
     return startTraining(skill, t.next ?? 5, store);
   };
   const openSet = (skill) => openTraining(store.sessions, skill.id).length > 0;
-  const seen = useMemo(() => seenIds({ attempts, sessions: store.sessions }), [attempts, store.sessions]);
+  const seen = useMemo(() => seenIds({ attempts, sessions: store.sessions, tests: store.allTests }), [attempts, store.sessions, store.allTests]);
   const freshHard = (skill) => freshHardCount(skill.id, questions, seen);
   const unseenAt = (skill) => tracks[skill.id].levels[(tracks[skill.id].next ?? 5) - 1].unseen;
 

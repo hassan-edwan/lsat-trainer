@@ -32,7 +32,7 @@ export async function startTask(task, store) {
     session = createPTSession(test, { unscored: prefs?.unscoredSection ? pickUnscoredSection(tests, test) : null });
   }
   else if (a.kind === 'stamina') {
-    session = createStaminaSession(a.level, tests, attempts || [], store.sessions);
+    session = createStaminaSession(a.level, store.allTests, attempts || [], store.sessions);
     if (session.outOf) { alert(outOfText(session.outOf)); return false; }
   }
   else session = createDrillSession(a.questions, a.opts);
@@ -46,7 +46,7 @@ export default function Today() {
   const { tests, sessions, attempts, journal, index, questions, progress, prefs, installBundle, saveSession } = store;
   const [busy, setBusy] = useState(false);
   const plan = useMemo(
-    () => dailyPlan({ tests, sessions, attempts, journal, index, questions, progress }),
+    () => dailyPlan({ tests, allTests: store.allTests, sessions, attempts, journal, index, questions, progress }),
     [tests, sessions, attempts, journal, index, questions, progress],
   );
   const next = plan.find((t) => !t.done && t.action);

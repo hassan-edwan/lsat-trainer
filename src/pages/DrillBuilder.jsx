@@ -29,8 +29,8 @@ const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).pa
  * Start a reading drill: two whole passages you've never read, timed against your next reading
  * target (the drill's pace is scaled so the passage clock and question time match that target).
  */
-export async function startReadingDrill({ questions, attempts, sessions, index, saveSession }, count = 2) {
-  const picked = readingDrillPassages(questions, seenIds({ attempts, sessions }), count);
+export async function startReadingDrill({ questions, attempts, sessions, index, saveSession, allTests }, count = 2) {
+  const picked = readingDrillPassages(questions, seenIds({ attempts, sessions, tests: allTests }), count);
   if (!picked.length) {
     alert('Every reading passage in the bank has been read. Add more passages to keep drilling reading.');
     return;
@@ -233,7 +233,7 @@ export default function DrillBuilder() {
 /** The reading drill entry: your next target and how many unread passages are left. */
 export function ReadingDrillBox({ store }) {
   const target = useMemo(() => nextReadingTarget(store.sessions, store.index), [store.sessions, store.index]);
-  const left = useMemo(() => staminaSupply(store.tests, store.attempts, store.sessions).passages, [store.tests, store.attempts, store.sessions]);
+  const left = useMemo(() => staminaSupply(store.allTests, store.attempts, store.sessions).passages, [store.allTests, store.attempts, store.sessions]);
   return (
     <div className="mix-box">
       <div>

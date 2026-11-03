@@ -226,7 +226,7 @@ function Celebration({ session, sessionAttempts }) {
   const store = useStore();
   const { index, tests, sessions, attempts, journal, questions, progress, prefs } = store;
   const xp = sessionAttempts.reduce((sum, a) => sum + attemptXp(a, index[a.qid]?.question.difficulty), 0);
-  const plan = dailyPlan({ tests, sessions, attempts, journal, index, questions, progress });
+  const plan = dailyPlan({ tests, allTests: store.allTests, sessions, attempts, journal, index, questions, progress });
   const next = plan.find((t) => !t.done && t.action);
   const s = session.summary;
   const pct = s.total ? s.firstCorrect / s.total : 0;

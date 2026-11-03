@@ -290,7 +290,7 @@ function freshRCSection(questions, seen, rng) {
 
 /** How many more fresh sections the bank can build: { LR, RC }, counting only questions you've never seen. */
 export function staminaSupply(tests, attempts, sessions = {}) {
-  const seen = seenIds({ attempts, sessions });
+  const seen = seenIds({ attempts, sessions, tests });
   const questions = flatQuestions(tests.filter((t) => !t.retired && t.purpose !== 'diagnostic'));
   const passages = {};
   for (const q of questions) if (q.kind === 'RC' && q.passageId) (passages[`${q.testId}:${q.passageId}`] ||= []).push(q);
@@ -312,7 +312,7 @@ export function staminaSupply(tests, attempts, sessions = {}) {
  */
 export function createStaminaSession(level, tests, attempts, sessions = {}, rng = Math.random) {
   const spec = STAMINA_LEVELS[level - 1];
-  const seen = seenIds({ attempts, sessions });
+  const seen = seenIds({ attempts, sessions, tests });
   const live = tests.filter((t) => !t.retired && t.purpose !== 'diagnostic');
   const questions = flatQuestions(live);
   const real = live.filter((t) => t.sections.length >= 3)

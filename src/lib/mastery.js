@@ -16,6 +16,7 @@ import { LADDERS, ladderOf } from './diagnostic.js';
 import { QUESTION_TYPES } from './taxonomy.js';
 import { shuffle, wasSeen } from './analytics.js';
 import { passageKey, passageMap, wholePassages } from './passages.js';
+import { contentLinks, withLinked } from './lineage.js';
 
 export const LEVELS = [1, 2, 3, 4, 5];
 const B = { 1: -2, 2: -1, 3: 0, 4: 1, 5: 2 };
@@ -372,12 +373,14 @@ export function shownEntries(sessions) {
  * RECENT_DAYS). Journal misses aren't mixed in: they come back in the daily
  * mistake review on their own schedule.
  */
-export function trainingSet(skillId, level, { questions, attempts, pending = [], count = 8, now = Date.now(), rng = Math.random }) {
+export function trainingSet(skillId, level, { questions, attempts, pending = [], count = 8, now = Date.now(), rng = Math.random, tests }) {
   const pool = trainingPool(skillId, questions);
   const lastAt = new Map();
+  const links = tests?.length ? contentLinks(tests) : new Map();
   for (const a of attempts) {
     const t = new Date(a.at).getTime();
-    if (!(lastAt.get(a.qid) >= t)) lastAt.set(a.qid, t);
+    // The same question in another version of a test counts as answered then too.
+    for (const id of [a.qid, ...(links.get(a.qid) || [])]) if (!(lastAt.get(id) >= t)) lastAt.set(id, t);
   }
   const held = new Set(pending);
   if (pool.some((q) => q.passageId)) return passageTrainingSet(pool, level, { questions, lastAt, held, count, now });
@@ -440,14 +443,17 @@ function passageTrainingSet(pool, level, { questions, lastAt, held, count, now }
 
 // ---- mixed sets -------------------------------------------------------------
 
-/** Ids of every question you've answered, been shown in a closed set, or have in an unfinished one. */
-export function seenIds({ attempts, sessions = {} }) {
+/**
+ * Ids of every question you've answered, been shown in a closed set, or have in an unfinished one.
+ * Pass `tests` (all of them, retired included) to also count the same question in other versions of a test.
+ */
+export function seenIds({ attempts, sessions = {}, tests }) {
   const ids = new Set(attempts.map((a) => a.qid));
   for (const s of Object.values(sessions)) {
     if (s.phase !== 'done') s.sections.forEach((sec) => sec.qids.forEach((id) => ids.add(id)));
     (s.shownQids || []).forEach((id) => ids.add(id));
   }
-  return ids;
+  return withLinked(ids, tests);
 }
 
 /** How many questions training a skill you've never seen, at level 3 and above. */
