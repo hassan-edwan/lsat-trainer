@@ -1,6 +1,6 @@
 {
  "format": "lsat-trainer/v1",
- "id": "overdrive-1",
+ "id": "overdrive-1-v2",
  "name": "Overdrive: Harder Than the LSAT",
  "number": 90,
  "purpose": "overdrive",
@@ -13,14 +13,14 @@
    "timeLimitMinutes": 35,
    "questions": [
     {
-     "stimulus": "Director of the Orrin Choral Society: Here is what I know about all of our current members, as of this season's official roster. Everyone who sings in our chamber ensemble can sight-read music fluently. No member who joined the society after 2020 can sight-read fluently unless that member has completed the society's music theory course. Every member who has completed the theory course was recruited by me personally, though not everyone I recruited has taken it. Most of our sopranos sing in the chamber ensemble, and some of our sopranos joined after 2020. I personally recruited several of our altos and tenors, but none of our sopranos. Finally, a few members who joined before 2020 cannot sight-read fluently either, since our entrance audition did not test sight-reading at all until 2019.",
+     "stimulus": "Director of the Orrin Choral Society: Everyone who sings in our chamber ensemble can sight-read music fluently. Among members who have joined the society within the past three years, none can sight-read fluently unless they have completed our music theory course, and every member who has completed that course was recruited by me personally, though not everyone I have recruited has taken it. Most of our sopranos sing in the chamber ensemble, and some of our sopranos joined within the past three years. I have recruited several of our altos and tenors, but none of our sopranos. Nor should anyone assume that our longer-standing members all read fluently; until recently, our entrance audition did not test sight-reading at all.",
      "stem": "Which one of the following is most strongly supported by the director's statements?",
      "choices": [
-      "No member of the chamber ensemble joined the society after 2020.",
+      "No member of the chamber ensemble joined the society within the past three years.",
       "Most of the members who can sight-read fluently are sopranos.",
-      "Some members who joined after 2020 have completed the music theory course.",
-      "Every soprano who joined the society before 2020 sings in the chamber ensemble.",
-      "Fewer than half of the society's sopranos joined the society after 2020."
+      "Some members who joined within the past three years have completed the music theory course.",
+      "Every soprano who joined the society more than three years ago sings in the chamber ensemble.",
+      "Fewer than half of the society's sopranos joined the society within the past three years."
      ],
      "answer": "E",
      "types": [
@@ -32,30 +32,30 @@
       "fact-set"
      ],
      "flaws": [],
-     "explanation": "No soprano was recruited by the director, so no soprano has taken the theory course, so no soprano who joined after 2020 can sight-read, so none of them is in the ensemble. Since most sopranos are in the ensemble, most sopranos did not join after 2020: fewer than half did, as (E) says. (A) is the near-miss: it's true of sopranos, but a non-soprano who joined after 2020 and took the course could sight-read and sing in the ensemble. The rest are unsupported quantity or 'every' claims.",
+     "explanation": "No soprano was recruited by the director, so no soprano has taken the theory course, so no soprano who joined in the past three years can sight-read, so none of them is in the ensemble. Since most sopranos are in the ensemble, most sopranos are longer-standing members: fewer than half joined recently, as (E) says. (A) is the near-miss: it's true of sopranos, but a recent alto who was recruited by the director and took the course could sight-read and sing in the ensemble. The rest are unsupported 'most', 'some' or 'every' claims.",
      "breakdown": {
       "setup": [
        {
         "label": "Facts",
-        "text": "1. Ensemble -> sight-reads; 2. Joined after 2020 and sight-reads -> took theory course; 3. Took course -> recruited by director; 4. Most sopranos in ensemble; some sopranos joined after 2020; 5. Director recruited no sopranos."
+        "text": "1. Ensemble -> sight-reads; 2. Joined within past three years and sight-reads -> took theory course; 3. Took course -> recruited by director; 4. Most sopranos in ensemble; some sopranos joined recently; 5. Director recruited no sopranos."
        }
       ],
-      "analysis": "Chain the sopranos through: not recruited -> no course -> (if joined after 2020) can't sight-read -> not in ensemble. So the after-2020 sopranos are all outside the ensemble. 'Most sopranos are in the ensemble' then forces the after-2020 sopranos to be a minority of sopranos. The last sentence about pre-2020 members is filler. Watch the scope: the chain works for sopranos only, because only they are known to have skipped the course.",
+      "analysis": "Chain the sopranos through: not recruited -> no course -> (if recent) can't sight-read -> not in ensemble. So the recent sopranos are all outside the ensemble. 'Most sopranos are in the ensemble' then forces the recent sopranos to be a minority of sopranos. The last sentence about longer-standing members is filler. Watch the scope: the chain works for sopranos only, because only they are known to have skipped the course.",
       "choices": [
        {
-        "note": "Near-miss on scope. True for sopranos, but nothing stops an alto who joined in 2022, was recruited by the director and took the course, from sight-reading and singing in the ensemble."
+        "note": "Near-miss on scope. True for sopranos, but nothing stops an alto who joined last year, was recruited by the director and took the course, from sight-reading and singing in the ensemble."
        },
        {
         "note": "No counts of sight-readers outside the soprano section are given. Altos and tenors could make up most of them."
        },
        {
-        "note": "Possible but not supported. Every course-taker was recruited by the director, but nothing says any of them joined after 2020."
+        "note": "Possible but not supported. Every course-taker was recruited by the director, but nothing says any of them joined recently."
        },
        {
-        "note": "Only 'most' sopranos are in the ensemble; some pre-2020 sopranos (including the ones who can't sight-read) may sing elsewhere."
+        "note": "Only 'most' sopranos are in the ensemble; some longer-standing sopranos (who may not read fluently, as the last sentence warns) may sing elsewhere."
        },
        {
-        "note": "CORRECT. Sopranos who joined after 2020 can't sight-read (no soprano took the course), so none is in the ensemble. Most sopranos are in the ensemble, so the after-2020 sopranos must be fewer than half."
+        "note": "CORRECT. Recent sopranos can't sight-read (no soprano took the course), so none is in the ensemble. Most sopranos are in the ensemble, so the recent sopranos must be fewer than half."
        }
       ]
      },
@@ -1107,53 +1107,49 @@
      "number": 21
     },
     {
-     "stimulus": "Archivist: A letter in the Holm collection, signed by the merchant Ilse Varga, refers to \"the new bridge at Kestel.\" Kestel's first bridge was completed in 1612 and was called the new bridge only until a second bridge opened in 1640, after which it was known as the old bridge. Parish records show that Varga died in 1638. The letter, however, is written on paper bearing a watermark used by the Dorn paper mill, which was founded in 1644 and began using that watermark in 1645. Some scholars have concluded that the letter is a forgery. But a forger working after 1645 would have had to know that the bridge was once called the new bridge, a usage that appears in no published source and that had long since fallen out of speech. So the most reasonable conclusion is that ______",
-     "stem": "Which one of the following most logically completes the archivist's argument?",
+     "stimulus": "Art historian: Every surviving altarpiece from the Vell workshop was commissioned by a religious confraternity, and every one of them was paid for in full. Confraternity contracts in the region specified which pigments a painter could use, and any violation of a contract's terms cost the painter the entire payment. Contracts drawn up before 1550 invariably forbade imported ultramarine, insisting on cheaper local blues; of those drawn up from 1550 onward, roughly half permitted it. Chemical analysis has detected imported ultramarine in several Vell altarpieces. Admittedly, restorers in later centuries sometimes added ultramarine to old paintings, but in each of these several altarpieces the ultramarine lies beneath the original varnish, which has never been removed. The workshop's account books, which survive only for the years 1540 to 1555, record no purchases of ultramarine of any kind.",
+     "stem": "Which one of the following is most strongly supported by the information above?",
      "choices": [
-      "the document in the Holm collection was written out by Varga herself sometime between 1612 and 1638.",
-      "the document in the Holm collection is a copy, made no earlier than 1645, of a letter Varga composed before her death.",
-      "the Dorn mill must have used its watermark on some paper before 1645.",
-      "the forger of the letter had access to unpublished records from Kestel.",
-      "the bridge completed in 1612 was still sometimes called the new bridge after 1640."
+      "At least some of the Vell workshop's surviving altarpieces were painted under contracts drawn up no earlier than 1550.",
+      "The Vell workshop bought imported ultramarine at some time after 1555.",
+      "No altarpiece painted by the Vell workshop before 1550 contains imported ultramarine.",
+      "Most of the Vell workshop's surviving altarpieces were painted under confraternity contracts that permitted the use of imported ultramarine.",
+      "Restorers never added imported ultramarine to any of the Vell workshop's altarpieces."
      ],
-     "answer": "B",
+     "answer": "A",
      "types": [
       "most-strongly-supported"
      ],
      "difficulty": 6,
      "skills": [
-      "rebuttal",
+      "conditional",
       "fact-set"
      ],
      "flaws": [],
-     "explanation": "The wording ('new bridge') points to composition before 1640, and Varga's death puts it before 1638; the watermark puts the physical document after 1645. The only way to honor both, while rejecting forgery as the archivist does, is that the surviving sheet is a later copy of a genuine letter, as (B) says. (A) is the near-miss: it gets the composition date right but has Varga herself writing out this very sheet, which the 1645 paper rules out. (C) and (E) contradict the stated facts, and (D) adopts the forgery view the archivist rejects.",
+     "explanation": "Several Vell altarpieces have original ultramarine (it lies under the untouched original varnish). All were paid in full, so none broke its contract, so each of those contracts permitted ultramarine, and only contracts from 1550 onward ever did. So at least some were painted under contracts from 1550 or later: (A). (B) is the trap: the books show no purchase from 1540 to 1555, but the pigment could have been supplied by the confraternity.",
      "breakdown": {
       "setup": [
        {
         "label": "Facts",
-        "text": "Bridge called 'new' only 1612-1640; Varga died 1638; the paper's watermark dates from 1645 or later; the 'new bridge' usage was unpublished and obsolete after 1640."
-       },
-       {
-        "label": "Conclusion",
-        "text": "Blank: the most reasonable conclusion, given that the forgery hypothesis is rejected."
+        "text": "All surviving Vell altarpieces: confraternity commissions, paid in full. Violating a contract forfeited payment. Pre-1550 contracts banned imported ultramarine; about half from 1550 on allowed it. Several Vell altarpieces contain original ultramarine. Account books (1540 to 1555) show no ultramarine purchases."
        }
       ],
-      "analysis": "Two dates pull in opposite directions: the words say before 1638, the paper says after 1645. The archivist has just argued against forgery, so the blank must reconcile genuine words with late paper. Separate the text from the physical sheet: a genuine text can survive on later paper if someone copied it. Watch for answers that settle one date by contradicting the other fact.",
+      "analysis": "Chain the facts: original ultramarine, plus full payment, means the contract allowed it, which means the contract was from 1550 or later. That reaches 'several', no more. The traps will push past what the chain gives: to 'most', to 'no altarpiece ever', or to a claim about purchases that assumes the workshop had to buy the pigment itself. The modest answer is the one the chain reaches.",
       "choices": [
        {
-        "note": "Near-miss. The text was composed then, but this sheet can't have been written out by Varga at all: its paper didn't exist until 1645, seven years after her death. The choice ignores the watermark the archivist must account for."
+        "note": "CORRECT. The several altarpieces with original ultramarine were paid in full, so their contracts allowed it, and no contract before 1550 did. So at least those were painted under contracts from 1550 or later."
        },
        {
-        "note": "CORRECT. A later copy explains the 1645 paper while preserving Varga's genuine wording, which the archivist has just argued no later forger could have produced."
+        "note": "The near-miss. It assumes the workshop had to buy its own ultramarine. The confraternity that allowed the pigment could have supplied it, so the books' silence proves nothing about a later purchase."
        },
        {
-        "note": "Contradicts the facts: the mill didn't even exist before 1644, and the archivist states it began using the watermark in 1645."
+        "note": "Too broad. Restorers sometimes added ultramarine, and a pre-1550 Vell work (surviving or lost) could contain restorer-added pigment. The facts cover only the original paint in surviving works."
        },
        {
-        "note": "This rescues the forgery hypothesis, the opposite of where the archivist is heading."
+        "note": "'Several' altarpieces with original ultramarine doesn't make most. We aren't told how many survive."
        },
        {
-        "note": "Contradicts the stated fact that the bridge was called the old bridge after 1640, and even if true, Varga died in 1638, so it wouldn't explain the 1645 paper."
+        "note": "We know only that restorers didn't add the ultramarine in those several altarpieces. Restorers could have added it to others."
        }
       ]
      },
@@ -1347,7 +1343,7 @@
      "id": "od-p4",
      "title": "The democratic peace and its sources",
      "subject": "social-science",
-     "text": "Passage A\n\nFew findings in the study of international politics have proved as durable as the observation that established democracies have almost never fought wars against one another. Michael Doyle, who drew attention to the pattern in the early 1980s, traced the underlying idea to Kant's sketch of a federation of republics in Perpetual Peace, and since Doyle's work Bruce Russett and others subjected it to systematic test, the regularity has survived repeated disputes over how democracy and war should be defined: the few apparent exceptions involve states whose democratic credentials were doubtful or hostilities too limited to count as war by the conventional threshold of battle deaths. Notably, democracies are not in general less warlike than other states; they fight nondemocracies about as often as other states do. The peace is a property of the pair, not of the regime.\n\nOne must ask whether something other than regime type produces the pattern. Wealth, alliance ties, and geographic distance are all correlated with democracy, and each may independently reduce the risk of conflict between two states. Yet in studies that control for these factors, the estimated effect of joint democracy shrinks without disappearing. Some of the raw association, in other words, belongs to democracy's companions; a substantial remainder does not, and it is the remainder that requires explanation. Two mechanisms have been proposed to explain it: leaders answerable to voters who bear the costs of war face institutional obstacles to fighting, and democracies extend to one another the norms of negotiated compromise they practice at home. Their relative weight remains unsettled, and neither accounts for every case. But an association that persists under such controls warrants the expectation that a world containing more democracies will see fewer wars among them.\n\nPassage B\n\nThat pairs of democracies have rarely fought one another is not in dispute; what the fact shows is. In an influential 1995 study, Henry Farber and Joanne Gowa found that the pacific effect of joint democracy is confined largely to the years after 1945. Before the First World War, democratic pairs were not significantly less likely than other pairs to become embroiled in militarized disputes, even if few of those disputes escalated to war. After 1945 the effect is strong—but this was a period in which most democracies shared an overriding interest in opposing the Soviet Union, and states united against a common adversary have compelling reasons not to fight one another whatever their constitutions. Controlling for formal alliances does not resolve the difficulty, because common interests extend well beyond treaty commitments. Alliances are only the most visible expression of a shared stake in a particular international order, and states may hold such a stake, and act on it, without having signed anything that a researcher could code.\n\nNone of this shows that democracy is irrelevant to peace, and Farber and Gowa did not claim that it does; their argument concerns what the post-1945 evidence can be made to prove. Accountability to electorates and habits of domestic compromise may well make democratic leaders slower to fight than autocrats. The question is whether those dispositions would suffice to keep democracies at peace with one another once the interests that bound them together diverged. The record of a single era in which institutions and interests coincided cannot settle it, and policies that promote democracy abroad in the expectation of peace rest on an answer the evidence does not yet supply."
+     "text": "Passage A\n\nFew findings in the study of international politics have proved as durable as the observation that established democracies have almost never fought wars against one another. Michael Doyle, who drew attention to the pattern in the early 1980s, traced the underlying idea to Kant's sketch of a federation of republics in Perpetual Peace, and in the decades since, as Bruce Russett and others have subjected it to systematic test, the regularity has survived repeated disputes over how democracy and war should be defined: the few apparent exceptions involve states whose democratic credentials were doubtful or hostilities too limited to count as war by the conventional threshold of battle deaths. Notably, democracies are not in general less warlike than other states; they fight nondemocracies about as often as other states do. The peace is a property of the pair, not of the regime.\n\nOne must ask whether something other than regime type produces the pattern. Wealth, alliance ties, and geographic distance are all correlated with democracy, and each may independently reduce the risk of conflict between two states. Yet in studies that control for these factors, the estimated effect of joint democracy shrinks without disappearing. Some of the raw association, in other words, belongs to democracy's companions; a substantial remainder does not, and it is the remainder that requires explanation. Two mechanisms have been proposed to explain it: leaders answerable to voters who bear the costs of war face institutional obstacles to fighting, and democracies extend to one another the norms of negotiated compromise they practice at home. Their relative weight remains unsettled, and neither accounts for every case. But an association that persists under such controls warrants the expectation that a world containing more democracies will see fewer wars among them.\n\nPassage B\n\nThat pairs of democracies have rarely fought one another is not in dispute; what the fact shows is. In an influential 1995 study, Henry Farber and Joanne Gowa found that the pacific effect of joint democracy is confined largely to the years after 1945. Before the First World War, democratic pairs were not significantly less likely than other pairs to become embroiled in militarized disputes, even if few of those disputes escalated to war. After 1945 the effect is strong—but this was a period in which most democracies shared an overriding interest in opposing the Soviet Union, and states united against a common adversary have compelling reasons not to fight one another whatever their constitutions. Controlling for formal alliances does not resolve the difficulty, because common interests extend well beyond treaty commitments. Alliances are only the most visible expression of a shared stake in a particular international order, and states may hold such a stake, and act on it, without having signed anything that a researcher could code.\n\nNone of this shows that democracy is irrelevant to peace, and Farber and Gowa did not claim that it does; their argument concerns what the post-1945 evidence can be made to prove. Accountability to electorates and habits of domestic compromise may well make democratic leaders slower to fight than autocrats. The question is whether those dispositions would suffice to keep democracies at peace with one another once the interests that bound them together diverged. The record of a single era in which institutions and interests coincided cannot settle it, and policies that promote democracy abroad in the expectation of peace rest on an answer the evidence does not yet supply."
     }
    ],
    "questions": [
@@ -1472,7 +1468,7 @@
      "difficulty": 6,
      "skills": [],
      "flaws": [],
-     "explanation": "The sentence follows the author's 'Yet' (paragraph 3, fourth sentence): making assumed responsibility the general test 'would invite the very uncertainty' Hadley was meant to curb. The reference to a 'comparable' test that American courts abandoned and the UCC rejected backs that reservation, which is A. C is the near miss: the Holmes test came after Hadley, and the passage presents it as the outcome to avoid, not as what Hadley was devised against.",
+     "explanation": "The sentence follows the author's 'Yet' (paragraph 3, fourth sentence): making assumed responsibility the general test 'would invite the very uncertainty' Hadley was meant to curb. The reference to a 'comparable' test that American courts abandoned and the UCC rejected backs that reservation, which is A. C is the near miss: it borrows the preceding sentence's phrase, but the passage cites the abandoned test as evidence that a test like Hoffmann's does not last, not as an example of the uncertainty Hadley was meant to curb; the passage never says what problems that test caused.",
      "breakdown": {
       "setup": [
        {
@@ -1493,7 +1489,7 @@
         "note": "'Comparable' is not 'borrowed from'. The passage says nothing about where Hoffmann's reasoning came from."
        },
        {
-        "note": "Near miss. It borrows the phrase from the preceding sentence, but Hadley (1854) could not have been devised against a later test, and the passage never says the tacit-agreement test produced uncertainty. The reference supports a prediction about Hoffmann's test; it doesn't illustrate Hadley's purpose."
+        "note": "Near miss (shell game). It borrows 'the very uncertainty that the Hadley formula was devised to curb' from the preceding sentence and attaches it to the wrong idea. The passage never says what difficulties the tacit-agreement test produced; it cites only the test's fate (abandoned, expressly rejected) as evidence that making assumed responsibility the general test is unwise. The reference supports a prediction about Hoffmann's test; it doesn't illustrate Hadley's purpose."
        },
        {
         "note": "Unsupported. The passage says only that American courts abandoned one test; it doesn't say what they adopted or compare them with English courts."
@@ -2186,7 +2182,7 @@
      "difficulty": 6,
      "skills": [],
      "flaws": [],
-     "explanation": "Paragraph 3 says that 'once the reflection is understood as an image of a painted image, nothing obliges us to suppose that the picture is painted from the couple's place, and Searle's paradox dissolves.' A change in what we take the mirror to reflect removes the paradox, so the paradox depends on an assumption about the reflection. C is ruled out by the dates (Foucault 1966, Searle 1980); D attributes to Snyder and Cohen a view about viewers that the passage gives only to the author.",
+     "explanation": "Paragraph 3 says that 'once the reflection is understood as an image of a painted image, nothing obliges us to suppose that the picture is painted from the couple's place, and Searle's paradox dissolves.' A change in what we take the mirror to reflect removes the paradox, so the paradox depends on an assumption about the reflection. C has no support: the passage presents Foucault's reading and Searle's puzzle as separate accounts and never says either responded to the other (Searle 'turned the same configuration' into a puzzle, after Foucault had written); D attributes to Snyder and Cohen a view about viewers that the passage gives only to the author.",
      "breakdown": {
       "setup": [
        {
@@ -2198,7 +2194,7 @@
         "text": "Paragraph 2 (Searle) and paragraph 3, especially its fourth sentence."
        }
       ],
-      "analysis": "Searle's puzzle needs the picture to be painted 'from the place of the royal couple.' What made that seem so? The mirror appearing to show them standing where we stand. Snyder and Cohen's move is to reinterpret the reflection, and with it the paradox 'dissolves.' So the paradox rests on a reading of the mirror. Check each trap against dates and against who says what.",
+      "analysis": "Searle's puzzle needs the picture to be painted 'from the place of the royal couple.' What made that seem so? The mirror appearing to show them standing where we stand. Snyder and Cohen's move is to reinterpret the reflection, and with it the paradox 'dissolves.' So the paradox rests on a reading of the mirror. Check each trap against who says what, and against what the passage actually reports.",
       "choices": [
        {
         "note": "CORRECT. Reinterpreting the reflection as 'an image of a painted image' is enough to make 'Searle's paradox dissolve' (paragraph 3, sentence 4). The paradox therefore rests on an assumption about what the mirror reflects."
@@ -2207,7 +2203,7 @@
         "note": "Opposite. Snyder and Cohen hold that the large canvas 'therefore depicts the king and queen'; the couple are depicted, on the canvas within the picture and in its reflection."
        },
        {
-        "note": "Chronology rules it out: Foucault's analysis is from 1966 and Searle's from 1980. Foucault cannot have been responding to Searle."
+        "note": "Out of scope. The passage presents Foucault's analysis and Searle's puzzle as separate accounts of the same configuration and never says either responded to the other; Searle is introduced as turning 'the same configuration' into a puzzle of his own. (The passage's dates, which put Foucault first, only confirm this; the answer doesn't depend on them.)"
        },
        {
         "note": "The passage never reports Snyder and Cohen's view of how viewers perceive the mirror; the claim that 'almost every viewer' errs is the author's, drawn from their analysis. If anything, the author's reading implies viewers err."
@@ -2684,7 +2680,7 @@
      "stem": "Which one of the following, if true, would most seriously undermine the position taken by the author of passage B?",
      "choices": [
       "During the Cold War, nondemocratic states aligned with the Western democracies seldom engaged in militarized disputes with one another or with their democratic allies.",
-      "Before the First World War, relatively few states met the criteria for democracy used in most statistical studies.",
+      "Since the Cold War ended, democracies have continued to cooperate closely on a wide range of international issues and have not fought wars against one another.",
       "Voters in democracies frequently support wars at their outset and withdraw support only as casualties mount.",
       "Since the Cold War ended, democratic pairs with sharply divergent foreign-policy interests have been no more prone to militarized disputes than closely aligned democratic pairs.",
       "During the Cold War, democracies fought wars against nondemocracies about as often as nondemocracies fought wars against one another."
@@ -2696,7 +2692,7 @@
      "difficulty": 6,
      "skills": [],
      "flaws": [],
-     "explanation": "B's position is that the post-1945 peace may reflect shared interests, and that whether democratic dispositions would keep the peace 'once the interests that bound them together diverged' is unsettled. D supplies evidence from outside the single era B criticizes: democracies with divergent interests remain as peaceful with each other as aligned ones, so interests aren't doing the work. A supports B by showing aligned nondemocracies also kept the peace.",
+     "explanation": "B's position is that the post-1945 peace may reflect shared interests, and that whether democratic dispositions would keep the peace 'once the interests that bound them together diverged' is unsettled. D supplies evidence from outside the single era B criticizes: democracies with divergent interests remain as peaceful with each other as aligned ones, so interests aren't doing the work. A supports B by showing aligned nondemocracies also kept the peace. B is the near miss: the post-Cold War peace it describes is among democracies that still cooperate closely, so interests and institutions still coincide, and B's doubt is untouched.",
      "breakdown": {
       "setup": [
        {
@@ -2714,7 +2710,7 @@
         "note": "Strengthens B: aligned states keep the peace whatever their regime, as B's interest explanation predicts."
        },
        {
-        "note": "Consistent with B and, if anything, explains why the pre-1914 evidence is thin; it doesn't touch B's argument about post-1945 interests."
+        "note": "The trap. It looks like evidence from outside the Cold War era, since the peace outlasted the Soviet threat. But these democracies still cooperate closely, i.e. still share a stake in an international order, which is exactly what passage B says can keep states at peace 'without having signed anything that a researcher could code.' Interests and regime still coincide, so the evidence can't separate them. Half right."
        },
        {
         "note": "Cuts against one of A's proposed mechanisms, and so if anything weakens the case B is questioning; it doesn't undermine B."
@@ -3059,7 +3055,7 @@
       "The state fractions test was revised last year to give greater weight to problems that involve visual models of fractions.",
       "In surveys conducted last year, most parents in both districts rated their children's fractions instruction as satisfactory.",
       "Halden's student-teacher ratio has for many years been somewhat higher than Marrow's.",
-      "Most Marrow fifth-graders who fail the state fractions test do so because of reading difficulties that neither curriculum addresses."
+      "Most of the Marrow fifth-graders who do not score proficient on the state fractions test fall short because of reading difficulties that neither curriculum addresses."
      ],
      "answer": "E",
      "types": [
@@ -3099,56 +3095,60 @@
         "note": "The official's point is that ratios didn't change. A long-standing higher ratio in Halden would, if anything, make its larger gain more impressive. Doesn't weaken."
        },
        {
-        "note": "CORRECT. If most of Marrow's remaining failures stem from a reading problem neither curriculum touches, Marrow had little room for any fractions curriculum to improve. Its smaller gain then says nothing about Visual being less effective than Stepwise."
+        "note": "CORRECT. If most of Marrow's remaining non-proficient students fall short because of a reading problem neither curriculum touches, Marrow had little room for any fractions curriculum to improve. Its smaller gain then says nothing about Visual being less effective than Stepwise."
        }
       ]
      },
      "number": 6
     },
     {
-     "stimulus": "Art historian: Every surviving altarpiece from the Vell workshop was commissioned by a religious confraternity, and every one of them was paid for in full. Confraternity contracts in the region specified which pigments a painter could use, and any violation of a contract's terms cost the painter the entire payment. Contracts drawn up before 1550 invariably forbade imported ultramarine, insisting on cheaper local blues; of those drawn up from 1550 onward, roughly half permitted it. Chemical analysis has detected imported ultramarine in several Vell altarpieces. Admittedly, restorers in later centuries sometimes added ultramarine to old paintings, but in each of these several altarpieces the ultramarine lies beneath the original varnish, which has never been removed. The workshop's account books, which survive only for the years 1540 to 1555, record no purchases of ultramarine of any kind.",
-     "stem": "Which one of the following is most strongly supported by the information above?",
+     "stimulus": "Archivist: A letter in the Holm collection, signed by the merchant Ilse Varga, refers to \"the new bridge at Kestel.\" Kestel's first bridge was called the new bridge only until a second bridge opened in 1640, after which it was known as the old bridge. Parish records show that Varga died in 1638. The letter, however, is written on paper bearing a watermark that the Dorn paper mill first used in 1645. Some scholars have concluded that the letter is a forgery. But a forger working after 1645 would have had to know that the bridge was once called the new bridge, a usage that appears in no published source and that had long since fallen out of speech. So the most reasonable conclusion is that ______",
+     "stem": "Which one of the following most logically completes the archivist's argument?",
      "choices": [
-      "At least some of the Vell workshop's surviving altarpieces were painted under contracts drawn up no earlier than 1550.",
-      "The Vell workshop bought imported ultramarine at some time after 1555.",
-      "No altarpiece painted by the Vell workshop before 1550 contains imported ultramarine.",
-      "Most of the Vell workshop's surviving altarpieces were painted under confraternity contracts that permitted the use of imported ultramarine.",
-      "Restorers never added imported ultramarine to any of the Vell workshop's altarpieces."
+      "the document in the Holm collection was written out by Varga herself at some time before her death.",
+      "the document in the Holm collection is a copy, made no earlier than 1645, of a letter Varga composed before her death.",
+      "the Dorn mill must have used its watermark on some paper before 1645.",
+      "the forger of the letter had access to unpublished records from Kestel.",
+      "the bridge was still sometimes called the new bridge after 1640."
      ],
-     "answer": "A",
+     "answer": "B",
      "types": [
       "most-strongly-supported"
      ],
      "difficulty": 6,
      "skills": [
-      "conditional",
+      "rebuttal",
       "fact-set"
      ],
      "flaws": [],
-     "explanation": "Several Vell altarpieces have original ultramarine (it lies under the untouched original varnish). All were paid in full, so none broke its contract, so each of those contracts permitted ultramarine, and only contracts from 1550 onward ever did. So at least some were painted under contracts from 1550 or later: (A). (B) is the trap: the books show no purchase from 1540 to 1555, but the pigment could have been supplied by the confraternity.",
+     "explanation": "The wording ('new bridge') points to composition before 1640, and Varga's death puts it before 1638; the watermark puts the physical document in 1645 or later. The only way to honor both, while rejecting forgery as the archivist does, is that the surviving sheet is a later copy of a genuine letter, as (B) says. (A) is the near-miss: it gets the composition right but has Varga herself writing out this very sheet, which the 1645 paper rules out. (C) and (E) contradict the stated facts, and (D) adopts the forgery view the archivist rejects.",
      "breakdown": {
       "setup": [
        {
         "label": "Facts",
-        "text": "All surviving Vell altarpieces: confraternity commissions, paid in full. Violating a contract forfeited payment. Pre-1550 contracts banned imported ultramarine; about half from 1550 on allowed it. Several Vell altarpieces contain original ultramarine. Account books (1540 to 1555) show no ultramarine purchases."
+        "text": "Bridge called 'new' only until 1640; Varga died 1638; the paper's watermark dates from 1645 or later; the 'new bridge' usage was unpublished and obsolete after 1640."
+       },
+       {
+        "label": "Conclusion",
+        "text": "Blank: the most reasonable conclusion, given that the forgery hypothesis is rejected."
        }
       ],
-      "analysis": "Chain the facts: original ultramarine, plus full payment, means the contract allowed it, which means the contract was from 1550 or later. That reaches 'several', no more. The traps will push past what the chain gives: to 'most', to 'no altarpiece ever', or to a claim about purchases that assumes the workshop had to buy the pigment itself. The modest answer is the one the chain reaches.",
+      "analysis": "Two dates pull in opposite directions: the words say before 1638, the paper says after 1645. The archivist has just argued against forgery, so the blank must reconcile genuine words with late paper. Separate the text from the physical sheet: a genuine text can survive on later paper if someone copied it. Watch for answers that settle one date by contradicting the other fact.",
       "choices": [
        {
-        "note": "CORRECT. The several altarpieces with original ultramarine were paid in full, so their contracts allowed it, and no contract before 1550 did. So at least those were painted under contracts from 1550 or later."
+        "note": "Near-miss. The text was composed in Varga's lifetime, but this sheet can't have been written out by her at all: its paper dates from 1645 or later, after her death. The choice ignores the watermark the archivist must account for."
        },
        {
-        "note": "The near-miss. It assumes the workshop had to buy its own ultramarine. The confraternity that allowed the pigment could have supplied it, so the books' silence proves nothing about a later purchase."
+        "note": "CORRECT. A later copy explains the 1645 paper while preserving Varga's genuine wording, which the archivist has just argued no later forger could have produced."
        },
        {
-        "note": "Too broad. Restorers sometimes added ultramarine, and a pre-1550 Vell work (surviving or lost) could contain restorer-added pigment. The facts cover only the original paint in surviving works."
+        "note": "Contradicts the facts: the archivist states the mill first used the watermark in 1645."
        },
        {
-        "note": "'Several' altarpieces with original ultramarine doesn't make most. We aren't told how many survive."
+        "note": "This rescues the forgery hypothesis, the opposite of where the archivist is heading."
        },
        {
-        "note": "We know only that restorers didn't add the ultramarine in those several altarpieces. Restorers could have added it to others."
+        "note": "Contradicts the stated fact that the bridge was called the old bridge after 1640, and even if true, Varga died in 1638, so it wouldn't explain the 1645 paper."
        }
       ]
      },
@@ -3885,14 +3885,14 @@
      "number": 21
     },
     {
-     "stimulus": "Health analyst: Last year, Dunmore's two public hospitals, Northgate and Riverside, together performed 2,000 knee replacements, 1,500 of them at Northgate. Within a year of surgery, 3 percent of Northgate's knee-replacement patients needed a second operation on the same knee, compared with 5 percent of Riverside's. Riverside's administrators argue that this comparison is unfair: under city policy, every knee replacement on a patient over the age of seventy-five is performed at Northgate, and such patients accounted for 40 percent of Northgate's knee replacements last year. But Northgate's record holds up even when those patients are set aside. Among its knee-replacement patients aged seventy-five or younger, only 2 percent needed a second operation within a year, a figure well below Riverside's rate for patients who, under the city's policy, all fall in that same age group.",
-     "stem": "If the statements above are true, which one of the following is most strongly supported by them?",
+     "stimulus": "Health analyst: Last year, Dunmore's two public hospitals, Northgate and Riverside, performed nearly all of the city's knee replacements. Within a year of surgery, 3 percent of Northgate's knee-replacement patients needed a second operation on the same knee, compared with 5 percent of Riverside's. Riverside's administrators argue that this comparison flatters Northgate: under city policy, every knee replacement on a patient over the age of seventy-five is performed at Northgate, such patients made up a sizable share of its knee replacements last year, and in the administrators' view older patients, being less active, are less likely to wear out a new knee. But Northgate's record holds up even when those patients are set aside. Among its knee-replacement patients aged seventy-five or younger, only 2 percent needed a second operation within a year, a figure well below Riverside's rate for patients who, under the city's policy, all fall in that same age group.",
+     "stem": "The statements above, if true, most strongly support which one of the following?",
      "choices": [
-      "Most of the knee replacements performed in Dunmore last year that were followed by a second operation within a year had been performed on patients over seventy-five.",
-      "Had Riverside performed the knee replacements on patients over seventy-five, its overall rate of second operations would have exceeded 5 percent.",
-      "Riverside performed more knee replacements on patients aged seventy-five or younger than Northgate did.",
-      "Among Northgate's patients, the rate of second operations for those over seventy-five was more than twice the hospital's overall rate.",
-      "Northgate's knee-replacement patients over seventy-five needed a second operation at a lower rate than Riverside's knee-replacement patients did."
+      "Northgate performed more knee replacements on patients over seventy-five than on patients aged seventy-five or younger.",
+      "Had city policy sent knee-replacement patients over seventy-five to Riverside instead of Northgate, Riverside's overall rate of second operations would have been lower than 5 percent.",
+      "Northgate's knee-replacement patients over seventy-five needed a second operation within a year at a higher rate than Riverside's knee-replacement patients did.",
+      "Among Northgate's knee-replacement patients, those over seventy-five were less likely than those aged seventy-five or younger to need a second operation within a year.",
+      "Northgate's knee-replacement patients over seventy-five needed a second operation within a year at a higher rate than did Northgate's knee-replacement patients as a whole."
      ],
      "answer": "E",
      "types": [
@@ -3904,30 +3904,30 @@
       "comparison"
      ],
      "flaws": [],
-     "explanation": "Work out the numbers: Northgate had 600 patients over seventy-five and 900 aged seventy-five or younger. Its 45 second operations (3 percent of 1,500) include 18 among the younger group (2 percent of 900), so 27 were among the older group: 27 of 600 is 4.5 percent, which is below Riverside's 5 percent. That's (E). (A) is the trap: 27 of the city's 70 second operations is well under half.",
+     "explanation": "Northgate's overall 3 percent is an average of its two age groups. Its younger patients came in below that average, at 2 percent, and the older group was a sizable share, so the older patients must have come in above it. That's (E). (C) is the near-miss: the older group's rate is above 3 percent, but nothing says it's above Riverside's 5 percent, because we don't know how big a share of Northgate's patients the older group was.",
      "breakdown": {
       "setup": [
        {
         "label": "Facts",
-        "text": "2,000 knee replacements: 1,500 at Northgate (3 percent second operations), 500 at Riverside (5 percent). All patients over 75 go to Northgate, making up 40 percent of its cases. Northgate's 75-and-under rate is 2 percent."
+        "text": "Second-operation rates: Northgate 3 percent overall, Riverside 5 percent. All patients over 75 go to Northgate and are a sizable share of its cases. Northgate's rate among patients 75 or younger is 2 percent; all of Riverside's patients are 75 or younger. Riverside's administrators think older patients need fewer second operations."
        }
       ],
-      "analysis": "Build the table before reading the choices. Northgate: 600 over 75, 900 aged 75 or younger. Second operations: 45 total, 18 among the younger, so 27 among the older (4.5 percent). Riverside: 500 patients, all 75 or younger, 25 second operations. City total: 70. Then test each choice against the table. Intuition says older patients do worse than everyone, but the numbers don't bear that out against Riverside.",
+      "analysis": "An overall rate is an average of its subgroups' rates. If one subgroup sits below the average, the other must sit above it. Northgate's younger patients (2 percent) are below its overall 3 percent, so its older patients are above 3 percent, which also cuts against the administrators' view, at least at Northgate. How far above depends on the mix, and the mix isn't given, so any answer that needs a specific figure (above 5 percent, more younger than older patients) can't be supported. No calculation is needed or possible.",
       "choices": [
        {
-        "note": "Second operations among patients over seventy-five: 27. City total: 45 + 25 = 70. 27 is not most of 70. The tempting arithmetic trap."
+        "note": "The mix is exactly what's not given. We know the older patients were a sizable share, not a majority. Unsupported."
        },
        {
-        "note": "We know nothing about how Riverside would do with older patients. This is speculation the data can't support."
+        "note": "A hypothetical about how Riverside would fare with older patients. It echoes the administrators' view, but Northgate's numbers, if anything, point the other way, and nothing tells us how Riverside's surgeons would do. Unsupported."
        },
        {
-        "note": "Northgate performed 900 operations on patients aged seventy-five or younger; Riverside performed 500. The reverse is true."
+        "note": "The near-miss. Northgate's older patients must be above 3 percent, but whether they are above 5 percent depends on how big a share they were, which isn't given. Too strong."
        },
        {
-        "note": "The older patients' rate is 4.5 percent; Northgate's overall rate is 3 percent. 4.5 is one and a half times 3, not more than twice."
+        "note": "The opposite of what follows. Since the younger group's 2 percent is below Northgate's overall 3 percent, the older group's rate must be above it, so older patients were more likely to need a second operation."
        },
        {
-        "note": "CORRECT. Northgate's 45 second operations minus the 18 among its 900 younger patients leaves 27 among its 600 older patients: 4.5 percent, which is below Riverside's 5 percent."
+        "note": "CORRECT. Northgate's 3 percent is an average of its two age groups. The younger group is below it at 2 percent, and the older group is a sizable share, so the older group must be above 3 percent."
        }
       ]
      },

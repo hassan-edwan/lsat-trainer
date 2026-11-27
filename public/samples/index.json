@@ -1,6 +1,6 @@
 {
-  "version": 11,
-  "notes": "Adds Overdrive: Harder Than the LSAT, a full LR / RC / LR test (78 questions) written to be harder than the real test, so real questions feel easy by comparison. It stays out of automatic drills and plans; take it from the library or the Overdrive box on the Drills page.",
+  "version": 12,
+  "notes": "Overdrive questions were audited for fidelity to the real test: each turns on a real LSAT skill, uses the test's stem wording and trap types, and gets its difficulty from the test's sources rather than arithmetic or date-tracking. Seven questions were revised.",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
@@ -45,6 +45,7 @@
     "classic-style-test-5-v4",
     "classic-style-test-6-v4",
     "skill-builder-v1",
-    "skill-builder-2-v1"
+    "skill-builder-2-v1",
+    "overdrive-1"
   ]
 }
