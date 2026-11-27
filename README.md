@@ -209,10 +209,23 @@ comparative pair per section. Every section was solved blind by a separate check
   invented RC subjects were rewritten, every key was re-confirmed blind, and difficulty labels were re-calibrated.
   The honest labels left a few skills with only one or two questions at their top or bottom level. The mastery path
   skips a level with fewer than three questions rather than getting stuck on it.
+- **Overdrive: Harder Than the LSAT:** a full LR / RC / LR test (78 questions) written to be harder than anything
+  on the real test, so real questions feel easy by comparison. Same question types and stem wording as the test,
+  with longer stimuli, four- and five-link conditional chains, mix-effect statistics, EXCEPT stems, two strong
+  contenders per question, and 550–650-word passages (contract damages after *The Achilleas*, the Hubble tension,
+  *Las Meninas* and its mirror, the democratic peace). They're labeled level 6, kept out of automatic drills,
+  stamina and plans, and the skill model counts a miss there as weak evidence, so they don't drag your predicted
+  score down. Take the test from the library, or drill 8 LR questions or one passage from the Overdrive box on the
+  Drills page. Every key was confirmed by an independent blind solver.
 - **The skill diagnostic** described above.
 - **A full breakdown for every built-in question:** the conclusion and reasoning (or facts, paradox, or task),
   an analysis with the prephrase, and a note on every answer choice, with example arguments for wrong flaw
   answers and negations for every necessary-assumption choice.
+[docs/QUESTION-WRITING.md](docs/QUESTION-WRITING.md) is the brief for writing new questions, by hand or with an
+AI: every question type and how often it appears, the real test's stem wording, how keys and traps are built, the
+JSON, and how to write Overdrive questions. Paste it into the prompt. The AI tutor pack carries the same stem
+wording, so the practice questions the tutor writes read like the test.
+
 To practice with other material you have the right to use, import it:
 [docs/FORMAT.md](docs/FORMAT.md) describes the JSON format and a plain-text format that's easy to produce from
 copied text.
