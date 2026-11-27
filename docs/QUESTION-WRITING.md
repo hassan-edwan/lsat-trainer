@@ -207,3 +207,53 @@ What makes a question harder without making it unfair:
 What not to do: no trick questions, no ambiguity, no specialist knowledge, no deliberately confusing grammar beyond
 what careful legal and academic prose uses. If a strong student who has the answer explained says "that's
 unfair" rather than "I see it now", rewrite it. Every key must survive an independent blind solve.
+
+## Fidelity check: does it break you the way the LSAT does?
+
+Hard isn't the goal; hard *in the LSAT's way* is. Run every question, Overdrive included, through this check. A
+question that's hard for a reason the real test never uses trains the wrong thing and fails, however good it is.
+
+**1. The crux is a real LSAT skill.** Name the one move the question turns on. It must be one the test rewards:
+
+- finding the conclusion and telling it apart from premises, intermediate conclusions, concessions and opposing views
+- spotting the gap between premises and conclusion (new term in the conclusion, a shift in scope or strength)
+- conditional logic: sufficient vs. necessary, contrapositives, "unless", "only if", "no…except", chaining
+- quantifiers: what "most", "some", "all", "none" do and don't let you combine
+- causal reasoning: alternative causes, reverse causation, coincidence, correlation treated as cause
+- samples and studies: representativeness, self-selection, control groups, what was actually measured
+- numbers: rates vs. totals, percentages of different wholes, averages over a changing mix (reasoned about, not calculated)
+- analogies, comparisons, plans (will it work? at what cost?), principles (do all conditions apply?), authority and source attacks
+- RC: the passage's structure, the author's view vs. other views, what a sentence is for, what the author would accept
+
+**2. The difficulty comes from the LSAT's sources**, not from somewhere else. Real hard questions are hard
+because of dense but natural prose, a conclusion that's easy to misidentify, a gap that's subtle, an answer
+phrased abstractly, a correct answer that sounds weak, and a trap that's nearly right. They are *not* hard because
+of arithmetic (if solving needs pencil computation of an exact figure, rewrite it so the numbers can be reasoned
+about), outside knowledge, puzzle-like rule sets that read like a logic game, ambiguous grammar, double meanings
+the test-maker didn't intend, dates or names you must track for their own sake, or a key that depends on a
+debatable reading.
+
+**3. The traps are the LSAT's traps.** Each wrong answer should be a recognizable LSAT trap:
+
+- *reversal:* confuses sufficient and necessary, or reverses cause and effect
+- *too strong / too weak:* right idea, wrong degree ("all" for "some", "must" for "could", "proves" for "suggests")
+- *out of scope:* a new topic, group, time or comparison the stimulus never reaches
+- *irrelevant truth:* true or plausible but doesn't touch the gap
+- *premise restatement:* repeats what's already given (in strengthen, assumption and flaw questions)
+- *opposite:* strengthens in a weaken question, or the reverse
+- *wrong conclusion:* addresses an intermediate conclusion, a concession, or the opponent's claim
+- *half right:* the first half fits, the second half doesn't
+- *shell game:* the stimulus's own words, attached to the wrong idea
+- *real flaw, wrong argument:* a genuine flaw pattern the argument doesn't commit (flaw questions)
+- RC: *wrong position-holder* (someone else's view given to the author), *true but doesn't answer the stem*,
+  *distortion* of what the passage says, *too extreme* an attitude
+
+**4. It reads like the test.** A standard stem from the lists above; a speaker label where the test would use one
+("Economist:"); conclusion and premise indicators used the way the test uses them; answer choices in the test's
+register (flaw answers start with verbs like "takes for granted", "fails to consider", "confuses"); RC locators
+by paragraph and sentence.
+
+**5. It's fair.** A strong student who sees the explanation says "I see it now", not "that's unfair".
+
+A reviewer records, for each question: the crux (from list 1), each wrong answer's trap type (from list 3), and a
+verdict: *pass*, or *revise* with the reason. Revised questions get a fresh blind solve.
