@@ -2,7 +2,7 @@
 // into an LSAT tutor for the student's own mistakes, plus a parser for the
 // notes block the tutor hands back at the end.
 
-import { categoriesOf, categoryLabel, typeLabel } from './taxonomy.js';
+import { QUESTION_TYPES, STEMS, categoriesOf, categoryLabel, difficultyLabel, typeLabel } from './taxonomy.js';
 import { TRAP_TAGS, journalPatterns } from './journal.js';
 
 const L = ['A', 'B', 'C', 'D', 'E'];
@@ -44,8 +44,12 @@ For each question, in the order given:
    *timing/pressure* (they got it in blind review but not under time). Say which one you think it is and why.
 ${teach}
 5. **Check transfer.** Write ONE new, original LSAT-style question (do not copy real LSAC questions) that
-   tests the same gap in a different scenario. Have the student answer it and explain their choice, then give
-   feedback. If they miss it, do one more.
+   tests the same gap in a different scenario. Make it a real LSAT question in every way: the same question type,
+   a stem worded the way the real test words it (see *How the real test words its questions* below), five
+   choices (A)–(E) with exactly one defensible answer, and wrong answers built from the traps real questions use
+   (out of scope, too strong, reversed conditional, right fact but irrelevant, half right). Match the original's
+   difficulty; never make it easier. Have the student answer it and explain their choice, then give feedback. If
+   they miss it, do one more.
 6. **Lock it in.** Ask the student to state the lesson as a one-sentence rule in their own words; tighten it if
    needed.
 
@@ -106,6 +110,40 @@ function profileSection(profile, entries) {
   return lines.join('\n');
 }
 
+/**
+ * The real test's question types and stem wording, for the types in this pack (and the rest of their section), so
+ * the tutor's practice questions read like the test.
+ */
+export function stemSection(entries) {
+  const kinds = new Set(entries.flatMap((e) => e.types.map((t) => QUESTION_TYPES[t]?.kind)).filter(Boolean));
+  if (!kinds.size) kinds.add('LR');
+  const here = new Set(entries.flatMap((e) => e.types));
+  const lines = ['## How the real test words its questions', '',
+    'Use this when you write a practice question. Every LSAT question belongs to one of these types, and the real test',
+    'words each stem in a fixed, formal way. Use these wordings (adjusting the speaker\'s name), not paraphrases. Types',
+    'in **bold** are the ones in this session. The share is roughly how often the type appears in its section.', ''];
+  const groups = [['LR', 'Logical Reasoning (two scored sections of 25–26 questions)'], ['RC', 'Reading Comprehension (one scored section: four passages, one usually a comparative pair, 5–8 questions each)']];
+  for (const [kind, title] of groups) {
+    if (!kinds.has(kind)) continue;
+    lines.push(`**${title}:**`, '');
+    const types = Object.entries(QUESTION_TYPES).filter(([id, t]) => t.kind === kind && STEMS[id]).sort((a, b) => b[1].weight - a[1].weight);
+    for (const [id, t] of types) {
+      const name = here.has(id) ? `**${t.label}**` : t.label;
+      lines.push(`- ${name} (~${Math.round(t.weight * 100)}%): ${STEMS[id].map((s) => `"${s}"`).join(' · ')}`);
+    }
+    lines.push('');
+  }
+  if (kinds.has('LR')) {
+    lines.push('Flaw answers start with verbs ("takes for granted that…", "presumes, without providing justification, that…",',
+      '"fails to consider the possibility that…", "confuses…with…"). Correct answers are often modest and paraphrased; traps',
+      'are often stronger, reversed, or out of scope.', '');
+  }
+  if (kinds.has('RC')) {
+    lines.push('RC stems point to places by paragraph and sentence ("second sentence of the third paragraph"), not line numbers.', '');
+  }
+  return lines.join('\n');
+}
+
 function quote(text) {
   return String(text || '').split('\n').map((l) => `> ${l}`).join('\n');
 }
@@ -131,6 +169,7 @@ export function buildTutorPack(entries, { mode = 'socratic', profile = null, exp
     '',
     instructions(mode),
     profileSection(profile, ordered),
+    stemSection(ordered),
     '## Questions',
     '',
   ];
@@ -139,7 +178,7 @@ export function buildTutorPack(entries, { mode = 'socratic', profile = null, exp
     const cats = categoriesOf(e).filter((c) => !c.startsWith('family:')).map(categoryLabel);
     out.push(`### Question ${i + 1} (id: \`${e.qid}\`)`, '');
     out.push(`- Source: ${e.testName}, ${e.sectionTitle}, question ${e.number}`);
-    out.push(`- Type: ${e.types.map(typeLabel).join(', ')}${e.difficulty ? ` · difficulty ${e.difficulty}/5` : ''}`);
+    out.push(`- Type: ${e.types.map(typeLabel).join(', ')}${e.difficulty ? ` · difficulty ${difficultyLabel(e.difficulty)}` : ''}`);
     if (cats.length) out.push(`- Categories: ${cats.join(', ')}`);
     out.push(`- Student's answer: (${e.first ?? 'none'}) under time${e.br && e.br !== e.first ? `, changed to (${e.br}) in blind review` : e.br ? ', kept in blind review' : ''}`);
     out.push(`- Missed ${e.occurrences.length} time${e.occurrences.length === 1 ? '' : 's'}${e.retries?.length ? `; retries: ${e.retries.map((r) => (r.correct ? 'right' : 'wrong')).join(', ')}` : ''}`);

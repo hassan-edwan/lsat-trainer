@@ -93,7 +93,7 @@ export default function Home() {
             return (
               <article key={t.id} className="test-card">
                 <div>
-                  <h3>{t.name}</h3>
+                  <h3>{t.name}{t.purpose === 'overdrive' && <span className="badge warn" title="Written to be harder than the real LSAT. Kept out of automatic drills.">Overdrive</span>}</h3>
                   <div className="meta" style={{ marginTop: '0.5rem' }}>
                     {Object.entries(t.sections.reduce((acc, s) => ({ ...acc, [s.kind]: (acc[s.kind] || 0) + 1 }), {})).map(([k, n]) => (
                       <span key={k} className="chip">{KIND[k] || k}{n > 1 ? ` ×${n}` : ''}</span>

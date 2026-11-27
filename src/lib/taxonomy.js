@@ -52,6 +52,46 @@ export const QUESTION_TYPES = {
   'ar-hybrid': { kind: 'AR', label: 'Hybrid / Other', weight: 0.2 },
 };
 
+// How the real test words each type's stem, taken from the stems used across the built-in tests (audited
+// against PrepTests 140–159). Used to brief an AI writing practice questions, so they sound like the test.
+// docs/QUESTION-WRITING.md has the full writer's brief.
+export const STEMS = {
+  'flaw': ['The reasoning in the argument is most vulnerable to criticism on the grounds that the argument', 'The reasoning in the argument is flawed in that the argument'],
+  'necessary-assumption': ['Which one of the following is an assumption on which the argument depends?', 'Which one of the following is an assumption required by the argument?'],
+  'sufficient-assumption': ['The conclusion of the argument follows logically if which one of the following is assumed?', 'Which one of the following, if assumed, enables the conclusion above to be properly drawn?'],
+  'strengthen': ['Which one of the following, if true, most strengthens the argument?', 'Each of the following, if true, strengthens the argument EXCEPT:'],
+  'weaken': ['Which one of the following, if true, most seriously weakens the argument?', 'Each of the following, if true, weakens the argument EXCEPT:'],
+  'most-strongly-supported': ['The statements above, if true, most strongly support which one of the following?', 'Which one of the following most logically completes the argument?'],
+  'must-be-true': ['If the statements above are true, which one of the following must also be true?'],
+  'must-be-false': ['If the statements above are true, which one of the following CANNOT be true?'],
+  'explain': ['Which one of the following, if true, most helps to resolve the apparent discrepancy described above?', 'Each of the following, if true, helps to resolve the apparent discrepancy described above EXCEPT:'],
+  'principle-strengthen': ["Which one of the following principles, if valid, most helps to justify the editor's reasoning?"],
+  'principle-apply': ['Which one of the following judgments most closely conforms to the principle stated above?', 'The principle stated above, if valid, most helps to justify the reasoning in which one of the following arguments?'],
+  'parallel': ['Which one of the following arguments is most similar in its pattern of reasoning to the argument above?'],
+  'parallel-flaw': ['Which one of the following arguments exhibits a flawed pattern of reasoning most similar to that exhibited by the argument above?'],
+  'method': ["The historian's argument proceeds by", 'The ethicist responds to the critic by'],
+  'role': ['The claim that … plays which one of the following roles in the argument?', 'Which one of the following most accurately describes the role played in the argument by the claim that …?'],
+  'main-conclusion': ['Which one of the following most accurately expresses the main conclusion drawn in the argument?'],
+  'point-at-issue': ['Ana and Ben disagree over whether', 'Ana and Ben are committed to agreeing with which one of the following?'],
+  'evaluate': ['The answer to which one of the following questions would be most useful to know in order to evaluate the argument?'],
+  'rc-main-point': ['Which one of the following most accurately expresses the main point of the passage?', 'The primary purpose of the passage is to'],
+  'rc-detail': ['According to the passage, …', 'The passage provides information that most helps to answer which one of the following questions?'],
+  'rc-inference': ['The author would be most likely to agree with which one of the following statements?', 'Which one of the following is most strongly supported by the passage?'],
+  'rc-author-attitude': ["The author's attitude toward … can most accurately be described as"],
+  'rc-function': ['The author mentions … (second paragraph) primarily in order to', 'The primary function of the third paragraph is to'],
+  'rc-meaning': ['By "…" (last sentence of the second paragraph), the author most probably means'],
+  'rc-structure': ['Which one of the following most accurately describes the organization of the passage?'],
+  'rc-analogy': ['Which one of the following is most analogous to …?', 'Based on the passage, in which one of the following situations would …?'],
+  'rc-strengthen-weaken': ['Which one of the following, if true, would most call into question …?', 'Which one of the following, if true, would most strengthen …?'],
+  'rc-comparative': ['Both passages are primarily concerned with', 'The authors of the two passages would be most likely to disagree over whether'],
+};
+
+/** Difficulty as text: 1–5 is the real test's range; 6 is Overdrive, harder than the real test. */
+export function difficultyLabel(d) {
+  if (d == null) return '';
+  return d >= 6 ? 'Overdrive (harder than the real test)' : `${d}/5`;
+}
+
 export function typeLabel(id) {
   return QUESTION_TYPES[id]?.label ?? id;
 }

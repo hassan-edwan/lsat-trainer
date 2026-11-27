@@ -90,7 +90,7 @@ export function normalizeTest(raw) {
         ...(Array.isArray(q.flaws) ? q.flaws : detectFlaws({ types, choices, answer })).filter((f) => FLAWS[f]).map((f) => `flaw:${f}`),
         ...(passage?.subject && SUBJECTS[passage.subject] ? [`subject:${passage.subject}`] : []),
       ]));
-      const difficulty = q.difficulty == null ? null : Math.max(1, Math.min(5, Number(q.difficulty)));
+      const difficulty = q.difficulty == null ? null : Math.max(1, Math.min(6, Number(q.difficulty)));
       return {
         id: questionId(id, sectionId, number),
         number,
@@ -124,7 +124,7 @@ export function normalizeTest(raw) {
     id,
     name,
     number: raw.number != null ? Number(raw.number) : null,
-    purpose: raw.purpose === 'diagnostic' ? 'diagnostic' : 'test',
+    purpose: ['diagnostic', 'overdrive'].includes(raw.purpose) ? raw.purpose : 'test',
     source: raw.source ? String(raw.source) : '',
     sections,
     scoreConversion: raw.scoreConversion && typeof raw.scoreConversion === 'object' ? raw.scoreConversion : null,

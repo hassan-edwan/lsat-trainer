@@ -19,7 +19,8 @@ import { passageKey, passageMap, wholePassages } from './passages.js';
 import { contentLinks, withLinked } from './lineage.js';
 
 export const LEVELS = [1, 2, 3, 4, 5];
-const B = { 1: -2, 2: -1, 3: 0, 4: 1, 5: 2 };
+// Level 6 is Overdrive: questions written to be harder than the real test.
+const B = { 1: -2, 2: -1, 3: 0, 4: 1, 5: 2, 6: 3 };
 // Rough share of each difficulty level on a recent test.
 const TEST_MIX = { 1: 0.15, 2: 0.25, 3: 0.3, 4: 0.2, 5: 0.1 };
 // Scored questions on the current LSAT: two LR sections and one RC section.

@@ -42,7 +42,7 @@ function blankResponse() {
  */
 export function pickUnscoredSection(tests, test, rand = Math.random) {
   const pool = tests
-    .filter((t) => t.id !== test.id && !t.retired && t.purpose !== 'diagnostic' && t.sections.length >= 3)
+    .filter((t) => t.id !== test.id && !t.retired && (t.purpose || 'test') === 'test' && t.sections.length >= 3)
     .flatMap((t) => t.sections.filter((s) => s.kind === 'LR' || s.kind === 'RC'));
   if (!pool.length) return null;
   return { section: pool[Math.floor(rand() * pool.length)], at: Math.floor(rand() * (test.sections.length + 1)) };

@@ -97,7 +97,7 @@ export function dailyPlan({ tests, allTests = tests, sessions, attempts, journal
   const pendingWriteups = Object.values(journal).filter((e) => e.status !== 'mastered' && !isWrittenUp(e)).length;
   const recentTest = done.some((s) => s.kind === 'pt' && now - new Date(s.finishedAt).getTime() < WEEK_MS);
   const takenIds = new Set(done.filter((s) => s.kind === 'pt').map((s) => s.testId));
-  const fresh = tests.find((t) => t.purpose !== 'diagnostic' && !takenIds.has(t.id) && t.sections.length >= 3);
+  const fresh = tests.find((t) => (t.purpose || 'test') === 'test' && !takenIds.has(t.id) && t.sections.length >= 3);
   if (!done.some((s) => s.kind === 'diagnostic')) {
     tasks.push({ id: 'diagnostic', icon: '🩺', title: 'Take the skill diagnostic', detail: 'Find the level where each skill breaks. Pick a few ladders if you are short on time.', done: false, action: { kind: 'link', href: '#/diagnostic' } });
   } else if (pendingWriteups > 0) {

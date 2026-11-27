@@ -120,6 +120,7 @@ export default function DrillBuilder() {
         <button className="primary" onClick={() => startMixed(store)}>▶ Start mixed set</button>
       </div>
       <ReadingDrillBox store={store} />
+      <OverdriveBox store={store} />
       <div className="mode-cards" role="radiogroup" aria-label="Drill type">
         {MODES.map((m) => (
           <button key={m.id} role="radio" aria-checked={mode === m.id} className={`mode-card ${mode === m.id ? 'active' : ''}`} onClick={() => setMode(m.id)}>
@@ -245,6 +246,54 @@ export function ReadingDrillBox({ store }) {
         <div className="muted small-text">{left} unread passage{left === 1 ? '' : 's'} left; each RC stamina section needs 4.</div>
       </div>
       <button className="primary" disabled={left === 0} onClick={() => startReadingDrill(store)}>▶ Start reading drill</button>
+    </div>
+  );
+}
+
+/**
+ * Overdrive: questions written to be harder than anything on the real test, so real questions feel easy by
+ * comparison. They never show up in automatic drills; this box (or the Overdrive test) is the only way in.
+ * Picks questions you haven't seen first, LR or RC, at a pace a little looser than the test's.
+ */
+export function OverdriveBox({ store }) {
+  const { overdriveQuestions = [], attempts, sessions, allTests, saveSession } = store;
+  const seen = useMemo(() => seenIds({ attempts, sessions, tests: allTests }), [attempts, sessions, allTests]);
+  const fresh = (kind) => overdriveQuestions.filter((q) => q.kind === kind && !seen.has(q.id));
+  if (!overdriveQuestions.length) return null;
+  const freshLR = fresh('LR').length;
+  const freshPassages = new Set(fresh('RC').map((q) => q.passageId)).size;
+
+  const startOverdrive = async (kind) => {
+    const pool = overdriveQuestions.filter((q) => q.kind === kind);
+    const unseen = shuffle(pool.filter((q) => !seen.has(q.id)));
+    const rest = shuffle(pool.filter((q) => seen.has(q.id)));
+    let picked;
+    if (kind === 'LR') picked = [...unseen, ...rest].slice(0, 8);
+    else {
+      const pid = [...unseen, ...rest][0]?.passageId;
+      picked = pool.filter((q) => q.passageId === pid);
+    }
+    if (!picked.length) return;
+    const s = createDrillSession(picked, { title: `Overdrive ${kind === 'LR' ? 'LR' : 'reading'}`, secondsPerQuestion: 100, blindReview: true });
+    const saved = await saveSession(s);
+    navigate(`/session/${saved.id}`);
+  };
+
+  return (
+    <div className="mix-box">
+      <div>
+        <strong>Overdrive <span className="badge warn">harder than the LSAT</span></strong>
+        <div className="small-text">
+          Questions built to be harder than anything on the real test: longer stimuli, deeper conditional chains,
+          two strong contenders. Same question types and wording as the test, so real questions feel easy afterward.
+          They stay out of your other drills, and missing them barely moves your predicted score.
+        </div>
+        <div className="muted small-text">{freshLR} unseen LR question{freshLR === 1 ? '' : 's'} · {freshPassages} unread passage{freshPassages === 1 ? '' : 's'}</div>
+      </div>
+      <div className="row">
+        <button className="primary" onClick={() => startOverdrive('LR')}>▶ 8 LR</button>
+        <button onClick={() => startOverdrive('RC')}>▶ 1 passage</button>
+      </div>
     </div>
   );
 }

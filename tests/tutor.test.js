@@ -82,3 +82,13 @@ test('pack includes per-choice breakdown notes in the tutor-only section', () =>
   assert.match(tutor, /\(B\) note b/);
   assert.match(tutor, /Example of that reasoning: Ex B/);
 });
+
+test('pack tells the tutor how the real test words its questions', () => {
+  const entries = missEverything();
+  const md = buildTutorPack(entries);
+  assert.match(md, /## How the real test words its questions/);
+  assert.match(md, /most vulnerable to criticism on the grounds that/);
+  assert.match(md, /a stem worded the way the real test words it/);
+  // The section sits before the questions, so the tutor reads it first.
+  assert.ok(md.indexOf('## How the real test words its questions') < md.indexOf('## Questions'));
+});

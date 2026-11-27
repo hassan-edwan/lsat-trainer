@@ -69,8 +69,10 @@ export function StoreProvider({ children }) {
   const tests = useMemo(() => allTests.filter((t) => !t.retired), [allTests]);
   const index = useMemo(() => buildIndex(allTests), [allTests]);
   const allQuestions = useMemo(() => flatQuestions(tests), [tests]);
-  // Diagnostic questions are kept out of drills so retakes stay fresh.
-  const questions = useMemo(() => allQuestions.filter((q) => q.purpose !== 'diagnostic'), [allQuestions]);
+  // Diagnostic questions are kept out of drills so retakes stay fresh. Overdrive questions (harder than the
+  // real test) are kept out too: they're only served when you ask for them.
+  const questions = useMemo(() => allQuestions.filter((q) => q.purpose !== 'diagnostic' && q.purpose !== 'overdrive'), [allQuestions]);
+  const overdriveQuestions = useMemo(() => allQuestions.filter((q) => q.purpose === 'overdrive'), [allQuestions]);
   const diagnosticQuestions = useMemo(() => allQuestions.filter((q) => q.purpose === 'diagnostic'), [allQuestions]);
   // Use each question's current tags, so retagging updates past stats too.
   const taggedAttempts = useMemo(
@@ -94,7 +96,7 @@ export function StoreProvider({ children }) {
       bestStreak: streak.best,
       perfectSessions: done.filter((s) => s.summary?.total >= 10 && s.summary.firstCorrect === s.summary.total).length,
       bestCombo: Math.max(0, ...done.map((s) => s.bestCombo || 0)),
-      hardCorrect: attempts.filter((a) => difficultyOf(a.qid) === 5 && a.first === a.answer).length,
+      hardCorrect: attempts.filter((a) => difficultyOf(a.qid) >= 5 && a.first === a.answer).length,
       brFixed: attempts.filter((a) => outcome(a.first, a.br, a.answer) === 'br-fixed').length,
       writeups: entries.filter(isWrittenUp).length,
       mastered: entries.filter((e) => e.status === 'mastered').length,
@@ -191,7 +193,7 @@ export function StoreProvider({ children }) {
     },
   }), [reload, index, journal, attempts, sessions, allTests]);
 
-  const value = { loaded, tests, allTests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, prefs, progress, ...actions };
+  const value = { loaded, tests, allTests, sessions, attempts: taggedAttempts, journal, index, questions, diagnosticQuestions, overdriveQuestions, prefs, progress, ...actions };
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
 
