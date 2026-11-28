@@ -240,6 +240,8 @@ export const INTERESTS = {
   'islamic-thought': 'Islamic thought',
   theism: 'Theism & philosophy of religion',
   law: 'Law',
+  economics: 'Economics & economic history',
+  politics: 'Politics & how the world order came to be',
 };
 
 export const CATEGORY_GROUPS = [
