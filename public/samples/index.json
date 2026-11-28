@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "notes": "Adds six more Reading Through Ideas sections: Said and Lewis, contrapuntal reading, Darwish and exile, late style, the Thousand and One Nights, Hayy ibn Yaqzan and Crusoe, Dante and the mi'raj, the maqama, Conrad and Salih, the Arabic novel, Attar, the Shahnameh, Pamuk, Borges and Averroes, Genji, Cide Hamete, and twelve passages on live questions in philosophy (consciousness, fine-tuning, moral realism, free will, AI and understanding, personal identity, evil, divine hiddenness).",
+  "version": 15,
+  "notes": "Adds four more Reading Through Ideas sections: Anscombe and natural goodness, the extended mind, meaning in life, religious disagreement, Iqbal on ijtihad, Iqbal and Nietzsche, Iqbal and Bergson, the Javid Nama, Said on the intellectual and on music, and the making of the modern world order (Westphalia, Bretton Woods, the Great Divergence, colonial institutions, Polanyi and Hayek, the origin of money).",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
