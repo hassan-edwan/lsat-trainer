@@ -242,6 +242,7 @@ export const INTERESTS = {
   law: 'Law',
   economics: 'Economics & economic history',
   politics: 'Politics & how the world order came to be',
+  'arab-world': 'Modern Arab history & politics',
 };
 
 export const CATEGORY_GROUPS = [
