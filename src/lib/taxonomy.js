@@ -234,6 +234,7 @@ export const INTERESTS = {
   epistemology: 'Epistemology',
   etymology: 'Etymology & language',
   poetry: 'Poetry',
+  literature: 'Literature & the novel',
   history: 'History',
   mathematics: 'Mathematics & its implications',
   'islamic-thought': 'Islamic thought',
