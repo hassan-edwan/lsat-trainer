@@ -243,6 +243,7 @@ export const INTERESTS = {
   economics: 'Economics & economic history',
   politics: 'Politics & how the world order came to be',
   'arab-world': 'Modern Arab history & politics',
+  'palestine-history': 'Ottoman & Mandate Palestine',
   science: 'Science & the history of science',
   arts: 'Art, architecture & music',
 };
