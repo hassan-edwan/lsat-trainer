@@ -243,6 +243,8 @@ export const INTERESTS = {
   economics: 'Economics & economic history',
   politics: 'Politics & how the world order came to be',
   'arab-world': 'Modern Arab history & politics',
+  science: 'Science & the history of science',
+  arts: 'Art, architecture & music',
 };
 
 export const CATEGORY_GROUPS = [
