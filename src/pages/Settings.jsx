@@ -1,3 +1,4 @@
+import { INTERESTS } from '../lib/taxonomy.js';
 import { useEffect, useState } from 'react';
 import { useStore } from '../store.jsx';
 import { PageHeader } from '../components/Layout.jsx';
@@ -34,6 +35,25 @@ export default function Settings() {
           Your streak counts days you reach the daily goal. Every 7 goal days earns a streak freeze (up to 2), which
           covers a missed day automatically.
         </p>
+      </section>
+      <section className="card">
+        <h2>Reading interests</h2>
+        <p className="muted small-text">
+          Reading drills serve unread passages on these topics first. Passages that have them list their sources, so
+          you can read further once you've answered the questions.
+        </p>
+        <div className="checks">
+          {Object.entries(INTERESTS).map(([id, label]) => {
+            const on = (prefs.readingInterests || []).includes(id);
+            return (
+              <label key={id}>
+                <input type="checkbox" checked={on} onChange={() => savePrefs({
+                  readingInterests: on ? prefs.readingInterests.filter((x) => x !== id) : [...(prefs.readingInterests || []), id],
+                })} /> {label}
+              </label>
+            );
+          })}
+        </div>
       </section>
       <section className="card">
         <h2>Data</h2>

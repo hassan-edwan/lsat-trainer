@@ -55,13 +55,16 @@ export function nextReadingTarget(sessions, index) {
 }
 
 /**
- * Whole passages you've never read any of, for a reading drill. Skill-builder passages come
- * first, so the practice tests' reading sections stay whole for stamina and full tests.
+ * Whole passages you've never read any of, for a reading drill. Passages on your reading interests
+ * come first; then skill-builder passages, so the practice tests' reading sections stay whole for
+ * stamina and full tests.
  */
-export function readingDrillPassages(questions, seen, count = 2, rng = Math.random) {
+export function readingDrillPassages(questions, seen, count = 2, rng = Math.random, interests = []) {
   const groups = [...passageMap(questions.filter((q) => q.kind === 'RC')).values()]
     .filter((g) => g.length >= 4 && g.every((q) => !seen.has(q.id)));
+  const wanted = new Set(interests);
+  const interest = (g) => ((g[0].passageTopics || []).some((t) => wanted.has(t)) ? 0 : 1);
   const practice = (g) => (g[0].testId.startsWith('skill-builder') ? 0 : 1);
-  const ordered = shuffle(groups, rng).sort((a, b) => practice(a) - practice(b));
+  const ordered = shuffle(groups, rng).sort((a, b) => interest(a) - interest(b) || practice(a) - practice(b));
   return ordered.slice(0, count).flat();
 }

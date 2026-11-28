@@ -29,7 +29,13 @@ export function readingKey(sectionIdx, entry) {
 
 /** Flat list for drill building: question fields plus section kind. */
 export function flatQuestions(tests) {
-  return tests.flatMap((t) => t.sections.flatMap((s) => s.questions.map((q) => ({ ...q, kind: s.kind, testId: t.id, purpose: t.purpose || 'test' }))));
+  return tests.flatMap((t) => t.sections.flatMap((s) => {
+    const topics = Object.fromEntries((s.passages || []).filter((p) => p.topics).map((p) => [p.id, p.topics]));
+    return s.questions.map((q) => ({
+      ...q, kind: s.kind, testId: t.id, purpose: t.purpose || 'test',
+      ...(q.passageId && topics[q.passageId] ? { passageTopics: topics[q.passageId] } : {}),
+    }));
+  }));
 }
 
 function blankResponse() {

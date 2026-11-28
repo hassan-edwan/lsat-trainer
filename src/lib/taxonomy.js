@@ -227,6 +227,20 @@ export const SUBJECTS = {
   humanities: 'Humanities',
 };
 
+// Reading interests: what an RC passage is about, beyond its broad subject. Passages carry these as `topics`,
+// and the reading drill serves passages on the topics you pick in Settings first.
+export const INTERESTS = {
+  philosophy: 'Philosophy',
+  epistemology: 'Epistemology',
+  etymology: 'Etymology & language',
+  poetry: 'Poetry',
+  history: 'History',
+  mathematics: 'Mathematics & its implications',
+  'islamic-thought': 'Islamic thought',
+  theism: 'Theism & philosophy of religion',
+  law: 'Law',
+};
+
 export const CATEGORY_GROUPS = [
   { id: 'family', label: 'Question family', entries: Object.fromEntries(Object.entries(FAMILIES).map(([k, v]) => [k, v.label])) },
   { id: 'reasoning', label: 'Reasoning type', entries: REASONING },

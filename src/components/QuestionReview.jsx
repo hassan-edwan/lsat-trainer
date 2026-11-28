@@ -17,6 +17,7 @@ export default function QuestionReview({ entry, first, br, showAnswer = true }) 
             {showPassage ? 'Hide passage' : 'Show passage'}
           </button>
           {showPassage && <div className="pre passage-box">{passage.text}</div>}
+          {showAnswer && passage.sources?.length > 0 && <FurtherReading sources={passage.sources} />}
         </div>
       )}
       {question.stimulus && <div className="pre stimulus">{question.stimulus}</div>}
@@ -42,5 +43,22 @@ export default function QuestionReview({ entry, first, br, showAnswer = true }) 
       </ul>
       {showAnswer && !bd && question.explanation && <div className="explanation"><strong>Explanation:</strong> {question.explanation}</div>}
     </div>
+  );
+}
+
+/** The works a passage draws on, to read further once the questions are done. */
+export function FurtherReading({ sources }) {
+  return (
+    <details className="further-reading">
+      <summary>📚 Further reading ({sources.length})</summary>
+      <ul>
+        {sources.map((s, i) => (
+          <li key={i}>
+            {s.author && <>{s.author}, </>}<em>{s.title}</em>{s.year && <> ({s.year})</>}
+            {s.note && <div className="muted small-text">{s.note}</div>}
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }

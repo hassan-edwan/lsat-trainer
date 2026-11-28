@@ -62,6 +62,8 @@ export function normalizeTest(raw) {
       title: p.title ? String(p.title) : '',
       text: String(p.text || ''),
       ...(p.subject ? { subject: String(p.subject) } : {}),
+      ...(Array.isArray(p.topics) && p.topics.length ? { topics: p.topics.map(String) } : {}),
+      ...(Array.isArray(p.sources) && p.sources.length ? { sources: normalizeSources(p.sources) } : {}),
     }));
     const passageIds = new Set(passages.map((p) => p.id));
     if (!Array.isArray(s.questions) || s.questions.length === 0) {
@@ -130,6 +132,18 @@ export function normalizeTest(raw) {
     scoreConversion: raw.scoreConversion && typeof raw.scoreConversion === 'object' ? raw.scoreConversion : null,
     importedAt: raw.importedAt || new Date().toISOString(),
   };
+}
+
+/** Further-reading entries for a passage: [{ author, title, year, note }], dropping any without a title. */
+function normalizeSources(list) {
+  return list
+    .filter((s) => s && s.title)
+    .map((s) => ({
+      title: String(s.title),
+      ...(s.author ? { author: String(s.author) } : {}),
+      ...(s.year != null ? { year: String(s.year) } : {}),
+      ...(s.note ? { note: String(s.note) } : {}),
+    }));
 }
 
 const SECTION_TITLE = { LR: 'Logical Reasoning', RC: 'Reading Comprehension', AR: 'Analytical Reasoning' };

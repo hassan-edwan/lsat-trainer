@@ -29,8 +29,8 @@ const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).pa
  * Start a reading drill: two whole passages you've never read, timed against your next reading
  * target (the drill's pace is scaled so the passage clock and question time match that target).
  */
-export async function startReadingDrill({ questions, attempts, sessions, index, saveSession, allTests }, count = 2) {
-  const picked = readingDrillPassages(questions, seenIds({ attempts, sessions, tests: allTests }), count);
+export async function startReadingDrill({ questions, attempts, sessions, index, saveSession, allTests, prefs }, count = 2) {
+  const picked = readingDrillPassages(questions, seenIds({ attempts, sessions, tests: allTests }), count, Math.random, prefs?.readingInterests || []);
   if (!picked.length) {
     alert('Every reading passage in the bank has been read. Add more passages to keep drilling reading.');
     return;
@@ -242,6 +242,7 @@ export function ReadingDrillBox({ store }) {
         <div className="small-text">
           Two passages you've never read. Read each against the target, say the main point in a few words, then answer its questions.
           Meet the target with 75% or more right and the next drill aims 15 seconds faster, down to the test's 3:30.
+          {store.prefs?.readingInterests?.length ? ' Passages on your reading interests come first.' : ' Pick reading interests in Settings to get passages on topics you like first.'}
         </div>
         <div className="muted small-text">{left} unread passage{left === 1 ? '' : 's'} left; each RC stamina section needs 4.</div>
       </div>
