@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "notes": "Adds Reading Through Ideas: original RC passages from real scholarship in philosophy, epistemology, etymology, poetry, literature, history, mathematics, Islamic thought and law, each with sources for further reading. Pick your reading interests in Settings and reading drills serve those passages first.",
+  "version": 14,
+  "notes": "Adds six more Reading Through Ideas sections: Said and Lewis, contrapuntal reading, Darwish and exile, late style, the Thousand and One Nights, Hayy ibn Yaqzan and Crusoe, Dante and the mi'raj, the maqama, Conrad and Salih, the Arabic novel, Attar, the Shahnameh, Pamuk, Borges and Averroes, Genji, Cide Hamete, and twelve passages on live questions in philosophy (consciousness, fine-tuning, moral realism, free will, AI and understanding, personal identity, evil, divine hiddenness).",
   "files": [
     "classic-style-test-1.json",
     "classic-style-test-2.json",
