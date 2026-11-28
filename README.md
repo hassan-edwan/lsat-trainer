@@ -217,6 +217,13 @@ comparative pair per section. Every section was solved blind by a separate check
   stamina and plans, and the skill model counts a miss there as weak evidence, so they don't drag your predicted
   score down. Take the test from the library, or drill 8 LR questions or one passage from the Overdrive box on the
   Drills page. Every key was confirmed by an independent blind solver.
+- **Reading Through Ideas:** RC sections built from real scholarship in the fields a reader picks under *Reading
+  interests* in Settings: philosophy and epistemology, etymology and language, Arabic, Persian and world poetry and
+  literature, history, the implications of mathematics, Islamic thought and law, economics and politics, and modern
+  Arab and Palestinian history. Each passage presents real scholars' arguments in their own terms, with short
+  quotations checked against the sources, and lists those sources as further reading after you answer. Questions
+  are real-test difficulty and each is built on a named RC skill. Every key was confirmed by a blind solver and every
+  passage checked for accuracy. More sections are added as they're verified.
 - **The skill diagnostic** described above.
 - **A full breakdown for every built-in question:** the conclusion and reasoning (or facts, paradox, or task),
   an analysis with the prephrase, and a note on every answer choice, with example arguments for wrong flaw
